@@ -1,0 +1,59 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header $
+
+*magus-live-1.3.1 (03 May 2009)
+
+  10 Mar 2010; Martin Väth <martin@mvath.de> :
+  magus-live-1.3.1-r6.ebuild: Fix monotone dependency.
+
+  08 Jan 2010; Martin Väth <martin@mvath.de> :
+  magus-live-1.3.1-r6.ebuild: Fix postgresql dependency.
+
+  04 Jan 2010; Martin Väth <martin@mvath.de> :
+  magus-live-1.3.1-r6.ebuild: Select latest head.
+  Remove useless static libs and .la files by default;
+  can be overridden by EXTRA_ECONF=--enable-static
+
+  03 Jan 2010; Martin Väth <martin@mvath.de> :
+  magus-live-1.3.1-r5.ebuild: Select Christoph's head.
+
+  10 May 2009; Martin Väth <martin@mvath.de> :
+  magus-live-1.3.1-r4.ebuild: Support gcc-4.4
+
+  03 May 2009; Martin Väth <martin@mvath.de> :
+  magus-live-1.3.1-r3.ebuild: Switch to EAPI=2
+
+  03 Dec 2008; Martin Väth <martin@mvath.de> :
+  Useflag seamonkey. Put inherit at begin.
+  Patch build system to work with --as-needed.
+
+  20 Sep 2008; Martin Väth <martin@mvath.de> :
+  Useflag postgres (instead of sqlite with inverted meaning).
+  Use firefox/kde as default browser. Introduce USE firefox/kde for dependency.
+  Install icons. Use doins -r for doc installing.
+  Introduce metadata.xml to explain useflags.
+
+  24 Aug 2008; Martin Väth <martin@mvath.de> :
+  Support for sqlite. Warn if patches are not necessary anymore.
+  Split configure and make so that separate phases can be used for EAPI=2
+  if upstream supports it.
+
+  11 Jul 2008; Martin Väth <martin@mvath.de> :
+  Support autotools eclass and filter some bad flags
+
+  22 Dec 2007; Martin Väth <martin@mvath.de> :
+  Rather complete rewrite for monotone
+
+  31 Aug 2007; Martin Väth <martin@mvath.de> :
+  Patch german gpl tex to use modern style {inputenc} which works with texlive
+
+  20 Nov 2005; Martin Väth <martin@mvath.de> :
+  Dependency to media-gfx/pngcrush and compile dependency to virtual/tetex
+
+  19 Nov 2005; Martin Väth <martin@mvath.de> :
+  Honor useflag postgres to make dependency on dev-db/postgresql optional
+
+  03 May 2005; Martin Väth <martin@mvath.de> :
+  Initial version from scratch
+

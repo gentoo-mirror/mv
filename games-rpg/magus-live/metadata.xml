@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+  <maintainer>
+    <email>martin@mvath.de</email>
+    <name>Martin Väth</name>
+  </maintainer>
+  <use>
+    <flag name="postgres">Use postgresql instead of sqlite</flag>
+    <flag name="seamonkey">Depend on seamonkey (without seamonkey/firefox/kde you are responsible to install/configure a browser)</flag>
+    <flag name="firefox">Depend on firefox; this overrides seamonkey</flag>
+    <flag name="kde">Depend on konqueror; this overrides seamonkey and firefox</flag>
+    <flag name="pdf">Depend on acroread (otherwise you are responsible to install/configure a pdf viewer)</flag>
+  </use>
+</pkgmetadata>

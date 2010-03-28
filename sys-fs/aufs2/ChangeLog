@@ -1,0 +1,26 @@
+# ChangeLog for sys-fs/aufs2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+  17 Mar 2010; Martin Väth <martin@mvath.de>
+  Update git dependency according to package move.
+
+  04 Mar 2010; Martin Väth <martin@mvath.de>
+  Support ESCM_OFFLINE/EGIT_OFFLINE in the same sense as git.eclass.
+  Output corresponding message only if *_OFFLINE is nonempty.
+
+  16 Jan 2010; Martin Väth <martin@mvath.de>
+  Remove patch again since git.eclass is now fixed:
+  http://bugs.gentoo.org/show_bug.cgi?id=299204
+
+  29 Dec 2009; Martin Väth <martin@mvath.de>
+  Patch for broken git.eclass 1.33 2009/12/29
+
+  17 Dec 2009; Martin Väth <martin@mvath.de>
+  Adapt for new git.eclass 1.32 2009/12/16
+
+  14 Oct 2009; Martin Väth <martin@mvath.de>
+  Patch automatically instead of informing the user
+
+  04 Apr 2009; Martin Väth <martin@mvath.de>
+  aufs2-99999999.ebuild: Initial ebuild.

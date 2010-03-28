@@ -1,0 +1,8 @@
+# ChangeLog for net-print/foo2zjs
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+  28 Mar 2010; Martin Väth <martin@mvath.de>
+  foo2zjs-20081129.ebuild:
+  import with minor changes from a personal overlay.
+  The change from the tree is the fixing of bug 271079

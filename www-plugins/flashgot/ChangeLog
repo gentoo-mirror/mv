@@ -1,0 +1,7 @@
+# ChangeLog for www-plugins/flashgot
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+  28 Mar 2010; Martin Väth <martin@mvath.de>
+  flashgot-1.1.9.8.ebuild:
+  import with minor changes from a personal overlay.
