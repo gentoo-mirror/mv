@@ -2,6 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
+*less-select-436-r1.ebuild (30 Mar 2010)
+
+  30 Mar 2010; Martin Väth <martin@mvath.de> :
+  -less-select-436.ebuild +less-select-436-r1.ebuild files/lesspipe.sh:
+  Update lesspipe.sh and related changes of sys-apps/less in portage tree.
+
   22 Jul 2009; Martin Väth <martin@mvath.de> :
   Version bump to less-436
 
