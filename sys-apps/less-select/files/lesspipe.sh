@@ -5,16 +5,18 @@
 
 # TODO: handle compressed files better
 
+[[ -n ${LESSDEBUG} ]] && set -x
+
 trap 'exit 0' PIPE
 
 guesscompress() {
 	case "$1" in
-		*.gz|*.z) echo "gunzip -c" ;;
-		*.bz2)    echo "bunzip2 -c" ;;
-		*.lz)     echo "lzip -c" ;;
-		*.lzma)   echo "unlzma -c" ;;
-		*.xz)     echo "xzdec" ;;
-		*)        echo "cat" ;;
+		*.gz|*.z)   echo "gunzip -c" ;;
+		*.bz2|*.bz) echo "bunzip2 -c" ;;
+		*.lz)       echo "lzip -c" ;;
+		*.lzma)     echo "unlzma -c" ;;
+		*.xz)       echo "xzdec" ;;
+		*)          echo "cat" ;;
 	esac
 }
 
@@ -101,11 +103,12 @@ lesspipe() {
 
 	### Tar files ###
 	*.tar|\
-	*.tar.bz2|*.tbz2|*.tbz|\
-	*.tar.gz|*.tgz|*.tar.z|\
+	*.tar.bz2|*.tar.bz|*.tar.gz|*.tar.z|\
 	*.tar.lz|*.tar.tlz|\
 	*.tar.lzma|*.tar.xz)
 		${DECOMPRESSOR} -- "$1" | tar tvvf -;;
+	*.tbz2|*.tbz|*.tgz|*.tlz)
+		lesspipe "$1" "$1".tar.${1##*.t} ;;
 
 	### Misc archives ###
 	*.bz2|\
@@ -120,7 +123,7 @@ lesspipe() {
 	*.cab)        cabextract -l -- "$1" ;;
 	*.lha|*.lzh)  lha v "$1" ;;
 	*.zoo)        zoo -list "$1" || unzoo -l "$1" ;;
-	*.7z)         7z l -- "$1" || 7za l -- "$1" ;;
+	*.7z|*.exe)   7z l -- "$1" || 7za l -- "$1" ;;
 	*.a)          ar tv "$1" ;;
 	*.elf)        readelf -a -- "$1" ;;
 	*.so)         readelf -h -d -s -- "$1" ;;
@@ -141,6 +144,9 @@ lesspipe() {
 			ar p "$1" data.tar.gz | tar tzvvf -
 		fi
 		;;
+
+	### Filesystems ###
+	*.squashfs)   unsquashfs -s "$1" && unsquashfs -ll "$1" ;;
 
 	### Media ###
 	*.bmp|*.gif|*.jpeg|*.jpg|*.ico|*.pcd|*.pcx|*.png|*.ppm|*.tga|*.tiff|*.tif)
@@ -169,34 +175,6 @@ lesspipe() {
 		isoinfo -l ${iso_opts} -i "$1"
 		;;
 
-	### Source code ###
-	*.awk|*.groff|*.java|*.js|*.m4|*.php|*.pl|*.pm|*.pod|*.sh|\
-	*.ad[asb]|*.asm|*.inc|*.[ch]|*.[ch]pp|*.[ch]xx|*.cc|*.hh|\
-	*.lsp|*.l|*.pas|*.p|*.xml|*.xps|*.xsl|*.axp|*.ppd|*.pov|\
-	*.diff|*.patch|*.py|*.rb|*.sql|*.ebuild|*.eclass)
-
-		# Allow people to flip color off if they dont want it
-		case ${LESSCOLOR} in
-			always)              LESSCOLOR=2;;
-			[yY][eE][sS]|1|true) LESSCOLOR=1;;
-			[nN][oO]|0|false)    LESSCOLOR=0;;
-			*)                   LESSCOLOR=0;; # default to no color #188835
-		esac
-		[[ ${LESSCOLORIZER+set} != "set" ]] && LESSCOLORIZER=code2color
-		if [[ ${LESSCOLOR} == "0" ]] || [[ -z ${LESSCOLORIZER} ]] ; then
-			# let less itself handle these files
-			exit 0
-		fi
-
-		# 2: Only colorize if user forces it ...
-		# 1: ... or we know less will handle raw codes -- this will
-		#    not detect -seiRM, so set LESSCOLORIZER yourself
-		if [[ ${LESSCOLOR} == "2" ]] || [[ " ${LESS} " == *" -"[rR]" "* ]] ; then
-			${LESSCOLORIZER} "$1"
-			exit 0
-		fi
-		;;
-
 # May not be such a good idea :)
 #	### Device nodes ###
 #	/dev/[hs]d[a-z]*)
@@ -220,6 +198,29 @@ lesspipe() {
 			lesspipe_file "$1"
 		fi
 
+		# So no matches from above ... finally fall back to an external
+		# coloring package.  No matching here so we don't have to worry
+		# about keeping in sync with random packages.  Any coloring tool
+		# you use should not output errors about unsupported files to
+		# stdout.  If it does, it's your problem.
+
+		# Allow people to flip color off if they dont want it
+		case ${LESSCOLOR} in
+			always)                   LESSCOLOR=2;;
+			[yY][eE][sS]|[yY]|1|true) LESSCOLOR=1;;
+			[nN][oO]|[nN]|0|false)    LESSCOLOR=0;;
+			*)                        LESSCOLOR=0;; # default to no color #188835
+		esac
+		if [[ ${LESSCOLOR} != "0" ]] && [[ -n ${LESSCOLORIZER=code2color} ]] ; then
+			# 2: Only colorize if user forces it ...
+			# 1: ... or we know less will handle raw codes -- this will
+			#    not detect -seiRM, so set LESSCOLORIZER yourself
+			if [[ ${LESSCOLOR} == "2" ]] || [[ " ${LESS} " == *" -"[rR]" "* ]] ; then
+				${LESSCOLORIZER} "$1"
+			fi
+		fi
+
+		# Nothing left to do but let less deal
 		exit 0
 		;;
 	esac
@@ -229,10 +230,9 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.35 2009/04/11 23:20:51 vapier Exp $"
 	cat <<-EOF
-		$cvsid
-		Copyright 2001-2009 Gentoo Foundation
+		$Id: lesspipe.sh,v 1.40 2010/03/23 20:54:13 vapier Exp $
+		Copyright 2001-2010 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
 
@@ -263,5 +263,7 @@ elif [[ -d $1 ]] ; then
 	ls -alF -- "$1"
 else
 	recur=0
-	lesspipe "$1" 2> /dev/null
+	[[ -n ${LESSDEBUG} ]] \
+		&& lesspipe "$1" \
+		|| lesspipe "$1" 2> /dev/null
 fi

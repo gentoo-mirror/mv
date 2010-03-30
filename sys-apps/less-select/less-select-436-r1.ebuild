@@ -11,7 +11,7 @@ SRC_URI="http://www.greenwoodsoftware.com/less/less-${PV}.tar.gz
 	http://www-zeuthen.desy.de/~friebel/unix/less/code2color
 	http://www.mathematik.uni-wuerzburg.de/~vaeth/download/less-select-patch-${PATCHVER}.tar.gz"
 
-LICENSE="|| ( GPL-3 less )"
+LICENSE="|| ( GPL-3 BSD-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="unicode dummy-less"
@@ -53,8 +53,10 @@ src_install() {
 	emake install DESTDIR="${D}" || die
 
 	dobin code2color || die "dobin"
-	newbin "${FILESDIR}"/lesspipe.sh lesspipe.sh || die "newbin"
-	echo 'LESS="-sFR -iMX --shift 5"' > 70less
+	newbin "${FILESDIR}"/lesspipe.sh lesspipe || die "newbin"
+	dosym lesspipe /usr/bin/lesspipe.sh
+	echo 'LESSOPEN="|lesspipe.sh %s"
+LESS="-sFR -iMX --shift 5"' > 70less
 	doenvd 70less
 
 	dodoc NEWS README* "${FILESDIR}"/README.Gentoo "${MYSUBDIR}"/README.less-select
@@ -66,4 +68,8 @@ src_install() {
 	newins less-select-key.bin less-select-key.bin
 	newins "${MYSUBDIR}/less-normal-key.src" lesskey.src
 	newins "${MYSUBDIR}/less-select-key.src" less-select-key.src
+}
+
+pkg_postinst() {
+	einfo "lesspipe offers colorization options.  Run 'lesspipe.sh -h' for info."
 }
