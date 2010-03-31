@@ -2,6 +2,20 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
+*magus-1.3.1 (03 May 2009)
+
+  31 Mar 2010; Martin Väth <martin@mvath.de> :
+  +magus-1.3.1.ebuild +magus-99999999.ebuild -magus-live-1.3.1-r6.ebuild:
+  Rename magus-live into magus: Since now some tarball is available and the
+  monotone repository is too often inaccessible, we do not install the
+  live-version by default. If you want to install the live version unmask
+  the magus-99999999 ebuild with
+  echo 'games-rpg/magus **' >>/etc/portage/package.keywords
+  Note that you can prevent the live version from fetching the monotone
+  repository by setting ESCM_OFFLINE=1 or EMTN_OFFLINE=1 (temporarily in the
+  environment or permanently in /etc/make.conf); the former will influence all
+  live ebuilds, the latter only those which use monotone (currently only magus)
+
 *magus-live-1.3.1 (03 May 2009)
 
   10 Mar 2010; Martin Väth <martin@mvath.de> :

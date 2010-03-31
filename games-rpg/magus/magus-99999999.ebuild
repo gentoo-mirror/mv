@@ -10,7 +10,7 @@ HOMEPAGE="http://midgard.berlios.de"
 SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="firefox seamonkey kde pdf postgres"
 PROPERTIES="live"
 
@@ -23,8 +23,8 @@ DEPENDCOMMON=">=dev-libs/libsigc++-2.0.1
 DEPEND="${DEPENDCOMMON}
 	media-gfx/pngcrush
 	dev-vcs/monotone
-	!games-rpg/magus
-	!games-rpg/magus-cvs"
+	!games-rpg/magus-cvs
+	!games-rpg/magus-live"
 
 RDEPEND="${DEPENDCOMMON}
 	firefox? ( || ( www-client/mozilla-firefox www-client/mozilla-firefox-bin ) )
