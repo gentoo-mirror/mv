@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  01 Apr 2010; Martin Väth <martin@mvath.de>
+  Update tarball without revbump (remove ebuild from tarball).
+
   28 Mar 2010; Martin Väth <martin@mvath.de>
   squash_dir-10.2.ebuild:
   import with minor changes from a personal overlay.

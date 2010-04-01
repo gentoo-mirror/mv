@@ -17,8 +17,7 @@ IUSE="hack-squash-utils +unionfs-fuse"
 
 RDEPEND="sys-fs/squashfs-tools
 	unionfs-fuse? ( sys-fs/unionfs-fuse )"
-DEPEND=">=sys-devel/autoconf-2.65
-	>=sys-devel/automake-1.10"
+DEPEND=">=sys-devel/autoconf-2.65"
 
 src_prepare () {
 	eautoreconf
