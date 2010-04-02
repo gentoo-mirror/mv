@@ -2,6 +2,14 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*flashgot-1.2.1.18 (02 Apr 2010)
+
+  02 Apr 2010; Martin Väth <martin@mvath.de>
+  +flashgot-1.2.1.18.ebuild -flashgot-1.1.9.8.ebuild:
+  Version bump, remove old ebuild.
+
+*flashgot-1.1.9.8 (28 Mar 2010)
+
   28 Mar 2010; Martin Väth <martin@mvath.de>
   flashgot-1.1.9.8.ebuild:
   import with minor changes from a personal overlay.

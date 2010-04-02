@@ -1,0 +1,8 @@
+# ChangeLog for www-plugins/noscript
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+*noscript-1.9.9.57 (02 Apr 2010)
+
+  02 Apr 2010; Martin Väth <martin@mvath.de>
+  Version bump from the portage tree; clearing previous ChangeLog.
