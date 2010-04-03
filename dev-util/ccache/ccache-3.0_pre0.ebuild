@@ -7,7 +7,7 @@ inherit multilib
 DESCRIPTION="fast compiler cache"
 HOMEPAGE="http://ccache.samba.org/"
 MY_P="${P/_/}"
-SRC_URI="http://samba.org/ftp/ccache/${MY_P}.tar.gz"
+SRC_URI="http://samba.org/ftp/ccache/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
