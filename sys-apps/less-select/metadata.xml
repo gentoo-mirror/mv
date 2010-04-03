@@ -2,11 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-  <maintainer>
-    <email>martin@mvath.de</email>
-    <name>Martin Väth</name>
-  </maintainer>
-  <use>
-    <flag name="dummy-less">Set this if you use /etc/portage/env/sys-apps/less to install only a dummy version of less. Only useful if you want to get informed about new less ebuilds by portage despite using less-select.</flag>
-  </use>
+<maintainer>
+	<email>martin@mvath.de</email>
+	<name>Martin Väth</name>
+</maintainer>
+<use>
+	<flag name="dummy-less">Set this if you use /etc/portage/env/sys-apps/less to install only a dummy version of less. Only useful if you want to get informed about new less ebuilds by portage despite using less-select.</flag>
+</use>
 </pkgmetadata>

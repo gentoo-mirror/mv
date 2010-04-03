@@ -2,13 +2,13 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-  <maintainer>
-    <email>martin@mvath.de</email>
-    <name>Martin Väth</name>
+<maintainer>
+	<email>martin@mvath.de</email>
+	<name>Martin Väth</name>
 	<description>Upstream developer</description>
-  </maintainer>
-  <use>
+</maintainer>
+<use>
 	<flag name="hack-squash-utils">Activate hackishly a patch to emerge squashfs-utils next time with redirection of progress bar to stderr.</flag>
 	<flag name="unionfs-fuse">Depend on unionfs-fuse (used by default if aufs/aufs2 is not available).</flag>
-  </use>
+</use>
 </pkgmetadata>

@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-  <maintainer>
-    <email>martin@mvath.de</email>
-    <name>Martin Väth</name>
-  </maintainer>
+<maintainer>
+	<email>martin@mvath.de</email>
+	<name>Martin Väth</name>
+</maintainer>
 </pkgmetadata>

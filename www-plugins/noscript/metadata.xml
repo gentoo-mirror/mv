@@ -2,10 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-  <maintainer>
-    <email>martin@mvath.de</email>
-    <name>Martin Väth</name>
-  </maintainer>
+<maintainer>
+	<email>martin@mvath.de</email>
+	<name>Martin Väth</name>
+</maintainer>
 </pkgmetadata>
 <longdescription lang="en">Noscript is a plugin for firefox that handles
 javascript in webpages. Giving you full control over their ability to run.
