@@ -71,10 +71,10 @@ pkg_postinst() {
 	elog "# ccache -M 2G"
 
 	case "${PORTAGE_TMPDIR}/portage/*" in
-		${CCACHE_BASEDIR:-none}/*) :;;
+		"${CCACHE_BASEDIR:-none}"/*) :;;
 		*)
-ewarn "To make optimal use of the new direct mode, please set"
-ewarn "	CCACHE_BASEDIR=\"\${PORTAGE_TMPDIR}/portage\""
-ewarn "in your /etc/make.conf";;
+		ewarn "To make optimal use of the new direct mode, please set"
+		ewarn "	CCACHE_BASEDIR=\"\${PORTAGE_TMPDIR}/portage\""
+		ewarn "in your /etc/make.conf";;
 	esac
 }
