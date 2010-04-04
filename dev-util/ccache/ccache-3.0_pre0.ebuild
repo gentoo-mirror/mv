@@ -69,6 +69,9 @@ pkg_postinst() {
 	elog "no additional steps.  If this is your first install of ccache, type"
 	elog "something like this to set a maximum cache size of 2GB:"
 	elog "# ccache -M 2G"
+	elog
+	elog "If you are upgrading from an older version than 3.x you should run"
+	elog "# CCACHE_DIR=\"${CCACHE_DIR:-${PORTAGE_TMPDIR}/ccache}\" ccache -C"
 
 	case "${PORTAGE_TMPDIR}/portage/*" in
 		"${CCACHE_BASEDIR:-none}"/*) :;;
