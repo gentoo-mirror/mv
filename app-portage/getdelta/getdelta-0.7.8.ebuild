@@ -12,7 +12,7 @@ SRC_URI="http://linux01.gwdg.de/~nlissne/${P}.tar.bz2"
 SLOT="0"
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="app-portage/deltup
 	dev-util/bdelta"
