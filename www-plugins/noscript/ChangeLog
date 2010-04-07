@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  07 Apr 2010; Martin Väth <martin@mvath.de>
+  Add RESTRICT="mirror"
+
 *noscript-1.9.9.57 (02 Apr 2010)
 
   02 Apr 2010; Martin Väth <martin@mvath.de>

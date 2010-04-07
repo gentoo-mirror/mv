@@ -3,6 +3,7 @@
 # $Header $
 
 inherit mozextension multilib
+RESTRICT="mirror"
 
 DESCRIPTION="Restrict active contents in your web browser"
 HOMEPAGE="http://noscript.net/"

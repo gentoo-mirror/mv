@@ -2,6 +2,9 @@
 # Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  07 Apr 2010; Martin Väth <martin@mvath.de>
+  Add RESTRICT="mirror"
+
 *ccache-3.0-pre0 (03 Apr 2010)
 
   03 Apr 2010; Martin Väth <martin@mvath.de>
