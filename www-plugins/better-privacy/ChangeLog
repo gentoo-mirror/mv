@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*better-privacy-1.47.4 (22 Apr 2010)
+
+  22 Apr 2010; Martin Väth <martin@mvath.de>
+  +better-privacy-1.47.4.ebuild -better-privacy-1.47.ebuild:
+  Version bump, remove old ebuild.
+
 *better-privacy-1.47 (02 Apr 2010)
 
   02 Apr 2010; Martin Väth <martin@mvath.de>
