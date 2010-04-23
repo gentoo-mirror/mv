@@ -1,0 +1,8 @@
+# ChangeLog for dev-tex/chkltex
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+*chkltex-2.4 (23 Apr 2010)
+
+  23 Apr 2010; Martin Väth <martin@mvath.de>
+  Build from scratch
