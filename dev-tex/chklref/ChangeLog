@@ -4,5 +4,8 @@
 
 *chkltex-2.4 (23 Apr 2010)
 
+  24 Apr 2010; Martin Väth <martin@mvath.de>
+  Add RESTRICT="mirror"
+
   23 Apr 2010; Martin Väth <martin@mvath.de>
   Build from scratch
