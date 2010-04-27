@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-*magus-1.3.1 (03 May 2009)
+*magus-1.3.1 (10 Mar 2010)
 
   31 Mar 2010; Martin Väth <martin@mvath.de> :
   +magus-1.3.1.ebuild +magus-99999999.ebuild -magus-live-1.3.1-r6.ebuild:
@@ -16,7 +16,7 @@
   environment or permanently in /etc/make.conf); the former will influence all
   live ebuilds, the latter only those which use monotone (currently only magus)
 
-*magus-live-1.3.1 (03 May 2009)
+*magus-live-1.3.1 (03 May 2010)
 
   10 Mar 2010; Martin Väth <martin@mvath.de> :
   magus-live-1.3.1-r6.ebuild: Fix monotone dependency.
