@@ -4,6 +4,9 @@
 
 *chkltex-2.4 (23 Apr 2010)
 
+  27 Apr 2010; Martin Väth <martin@mvath.de>
+  Use ${ED} in install phase
+
   24 Apr 2010; Martin Väth <martin@mvath.de>
   Add RESTRICT="mirror"
 

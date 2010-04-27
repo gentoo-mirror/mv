@@ -28,5 +28,5 @@ src_compile() {
 }
 
 src_install() {
-	emake prefix="${D}/${EPREFIX}/usr" install || die "emake install failed"
+	emake prefix="${ED}/usr" install || die "emake install failed"
 }
