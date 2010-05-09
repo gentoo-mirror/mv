@@ -1,0 +1,188 @@
+--- ez-ipupdate.c
++++ ez-ipupdate.c
+@@ -175,6 +175,11 @@
+ #  ifdef HAVE_SYS_SOCKIO_H
+ #    include <sys/sockio.h>
+ #  endif
++#  ifdef __linux__
++#    include <linux/if.h>
++#    include <linux/netlink.h>
++#    include <linux/rtnetlink.h>
++#  endif
+ #endif
+ 
+ #include <dprintf.h>
+@@ -1382,6 +1387,33 @@
+ }
+ 
+ /*
++ * socketbind
++ *
++ * open a socket and bind() it
++ */
++void socketbind(int *sock)
++{
++#ifdef __linux__
++	static struct sockaddr_nl local;
++	*sock = socket(AF_NETLINK, SOCK_RAW, NETLINK_ROUTE);
++	if(*sock < 0) {
++		perror("socket");
++		exit(1);
++	}
++	local.nl_family = AF_NETLINK;
++	local.nl_pad = 0;
++	local.nl_pid = getpid();
++	local.nl_groups = 0;
++	if(bind(*sock, (struct sockaddr*) &local, sizeof(local)) < 0) {
++		perror("bind");
++		exit(1);
++	}
++#else
++	*sock = socket(AF_INET, SOCK_STREAM, 0);
++#endif
++}
++
++/*
+  * do_connect
+  *
+  * connect a socket and return the file descriptor
+@@ -1612,6 +1644,92 @@
+ int get_if_addr(int sock, char *name, struct sockaddr_in *sin)
+ {
+ #ifdef IF_LOOKUP
++#ifdef __linux__
++	struct {
++		struct nlmsghdr nlmsg_info;
++		struct ifaddrmsg ifaddrmsg_info;
++		char buffer[2048];
++	} req;
++	struct nlmsghdr *curr;
++	int len;
++	char buf[8192];
++
++	memset(&req, 0, sizeof(req));
++	req.nlmsg_info.nlmsg_len = NLMSG_LENGTH(sizeof(struct ifaddrmsg));
++	req.nlmsg_info.nlmsg_flags = NLM_F_REQUEST | NLM_F_DUMP;
++	req.nlmsg_info.nlmsg_type = RTM_GETADDR;
++	req.nlmsg_info.nlmsg_pid = getpid();
++	req.ifaddrmsg_info.ifa_family = AF_INET;
++	if(send(sock, &req, req.nlmsg_info.nlmsg_len, 0) < 0) {
++		perror("sendmsg(sock)");
++		return -1;
++	}
++
++	len = recv(sock, buf, sizeof(buf), 0);
++	if(len < 0) {
++		perror("recv");
++		return -1;
++	} else if(len == 0) {
++		dprintf((stderr, "No interfaces found"));
++		return -1;
++	}
++
++	/* Initialize sin except for address */
++	bzero(sin, sizeof(struct sockaddr_in));
++	sin->sin_family = AF_INET;
++
++	/* We take the last non-private IP with matching name */
++	int found = 0;
++	curr = (struct nlmsghdr *) buf;
++	for(; NLMSG_OK(curr, len); curr = NLMSG_NEXT(curr, len)) {
++		struct ifaddrmsg *curraddr = (struct ifaddrmsg *) NLMSG_DATA(curr);
++		struct rtattr *datalist = (struct rtattr *) IFA_RTA(curraddr);
++		int datalen = IFA_PAYLOAD(curr);
++		int mystat = 0;
++		struct in_addr sin_addr;
++		in_addr_t addr;
++		for(; RTA_OK(datalist, datalen); datalist = RTA_NEXT(datalist, datalen)) {
++			switch(datalist->rta_type) {
++			case IFA_LABEL:
++				if(strcmp((char *)RTA_DATA(datalist), name) != 0)
++					mystat = -1;
++				break;
++			case IFA_LOCAL:
++				addr = ((struct in_addr *)RTA_DATA(datalist))->s_addr;
++				/* addr: 192.168.0.0/16 || 172.16.0.0/12 || 10.0.0.0/8 */
++				if(((addr & 0xFFFF) == 0xA8C0)
++				||	((addr & 0xF0FF) == 0x10AC)
++				||	((addr & 0xFF) == 0x0A)) {
++					mystat = -1;
++				}
++				else {
++				/* We must not store yet sin->sin_addr, since name might not match */
++					sin_addr = *((struct in_addr *)RTA_DATA(datalist));
++					mystat = 1;
++				}
++				break;
++			default:
++				break;
++			}
++			if(mystat < 0)
++				break;
++		}
++		if(mystat > 0) {
++			sin->sin_addr = sin_addr;
++			found = 1;
++			/* If you want to take the first non-private IP with matching name
++			   uncomment the next break command:
++			break; */
++		}
++	}
++	if(found) {
++		dprintf((stderr, "%s: %s\n", name, inet_ntoa(sin->sin_addr)));
++		return 0;
++	}
++	dprintf((stderr, "%s: %s\n", name, "has no non-private address"));
++	return -1;
++#else
++/* ifndef __linux__ */
+   struct ifreq ifr;
+ 
+   memset(&ifr, 0, sizeof(ifr));
+@@ -1645,7 +1763,10 @@
+     return -1;
+   }
+   return -1;
++#endif
++/* endif __linux__ */
+ #else
++/* ifndef IF_LOOKUP */
+   return -1;
+ #endif
+ }
+@@ -4497,7 +4618,7 @@
+ #ifdef IF_LOOKUP
+   if(options & OPT_DAEMON)
+   {
+-    sock = socket(AF_INET, SOCK_STREAM, 0);
++    socketbind(&sock);
+   }
+ #endif
+ 
+@@ -4754,7 +4875,7 @@
+           struct sockaddr_in sin;
+           int sock;
+ 
+-          sock = socket(AF_INET, SOCK_STREAM, 0);
++          socketbind(&sock);
+           if(get_if_addr(sock, interface, &sin) != 0)
+           {
+             exit(1);
+@@ -4800,7 +4921,7 @@
+         struct sockaddr_in sin;
+         int sock;
+ 
+-        sock = socket(AF_INET, SOCK_STREAM, 0);
++        socketbind(&sock);
+         if(get_if_addr(sock, interface, &sin) == 0)
+         {
+           if(address) { free(address); }
+@@ -4855,7 +4976,7 @@
+           struct sockaddr_in sin;
+           int sock;
+ 
+-          sock = socket(AF_INET, SOCK_STREAM, 0);
++          socketbind(&sock);
+           if(get_if_addr(sock, interface, &sin) != 0)
+           {
+             exit(1);

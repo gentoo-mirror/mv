@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+	<email>martin@mvath.de</email>
+	<name>Martin Väth</name>
+</maintainer>
+<longdescription lang="en">
+	Ez-ipupdate is a client for the dynamic IP service offered by
+	http://www.ez-ip.net. It has several options and is quite complete.
+	It is written in pure C and supports a daemon mode.
+	The current version is patched to make it work with iproute2/dhcpcd
+	under linux.
+</longdescription>
+</pkgmetadata>

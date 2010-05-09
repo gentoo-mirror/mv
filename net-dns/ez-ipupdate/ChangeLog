@@ -1,0 +1,7 @@
+# ChangeLog for net-dns/ez-ipupdate
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+  03 Apr 2010; Martin Väth <martin@mvath.de>
+  Copy from http://bugs.gentoo.org/show_bug.cgi?id=288275
+  Add ez-ipupdate-linux.patch to make it work with iproute2/dhcpcd
