@@ -1,6 +1,6 @@
 --- ez-ipupdate.c
 +++ ez-ipupdate.c
-@@ -175,6 +175,11 @@
+@@ -172,6 +172,17 @@
  #  ifdef HAVE_SYS_SOCKIO_H
  #    include <sys/sockio.h>
  #  endif
@@ -8,45 +8,17 @@
 +#    include <linux/if.h>
 +#    include <linux/netlink.h>
 +#    include <linux/rtnetlink.h>
++/* Under Linux, we reopen socket in get_if_addr() every time */
++#    define socketopen(sock)
++#    define socketclose(sock)
++#  else
++#    define socketopen(sock) sock = socket(AF_INET, SOCK_STREAM, 0)
++#    define socketclose(sock) close(sock)
 +#  endif
  #endif
  
  #include <dprintf.h>
-@@ -1382,6 +1387,33 @@
- }
- 
- /*
-+ * socketbind
-+ *
-+ * open a socket and bind() it
-+ */
-+void socketbind(int *sock)
-+{
-+#ifdef __linux__
-+	static struct sockaddr_nl local;
-+	*sock = socket(AF_NETLINK, SOCK_RAW, NETLINK_ROUTE);
-+	if(*sock < 0) {
-+		perror("socket");
-+		exit(1);
-+	}
-+	local.nl_family = AF_NETLINK;
-+	local.nl_pad = 0;
-+	local.nl_pid = getpid();
-+	local.nl_groups = 0;
-+	if(bind(*sock, (struct sockaddr*) &local, sizeof(local)) < 0) {
-+		perror("bind");
-+		exit(1);
-+	}
-+#else
-+	*sock = socket(AF_INET, SOCK_STREAM, 0);
-+#endif
-+}
-+
-+/*
-  * do_connect
-  *
-  * connect a socket and return the file descriptor
-@@ -1612,6 +1644,92 @@
+@@ -1605,6 +1616,114 @@
  int get_if_addr(int sock, char *name, struct sockaddr_in *sin)
  {
  #ifdef IF_LOOKUP
@@ -60,6 +32,26 @@
 +	int len;
 +	char buf[8192];
 +
++	/* open a socket and bind it.
++	   Under non-linux, the socket can be kept open, but it seems under
++	   linux we cannot use the same socket for several requests reliable
++	   [although sometimes it works...] */
++	static struct sockaddr_nl local;
++	sock = socket(AF_NETLINK, SOCK_RAW, NETLINK_ROUTE);
++	if(sock < 0) {
++		perror("socket");
++		return -1;
++	}
++	local.nl_family = AF_NETLINK;
++	local.nl_pad = 0;
++	local.nl_pid = getpid();
++	local.nl_groups = 0;
++	if(bind(sock, (struct sockaddr*) &local, sizeof(local)) < 0) {
++		perror("bind");
++		close(sock);
++		return -1;
++	}
++
 +	memset(&req, 0, sizeof(req));
 +	req.nlmsg_info.nlmsg_len = NLMSG_LENGTH(sizeof(struct ifaddrmsg));
 +	req.nlmsg_info.nlmsg_flags = NLM_F_REQUEST | NLM_F_DUMP;
@@ -68,10 +60,12 @@
 +	req.ifaddrmsg_info.ifa_family = AF_INET;
 +	if(send(sock, &req, req.nlmsg_info.nlmsg_len, 0) < 0) {
 +		perror("sendmsg(sock)");
++		close(sock);
 +		return -1;
 +	}
 +
 +	len = recv(sock, buf, sizeof(buf), 0);
++	close(sock);
 +	if(len < 0) {
 +		perror("recv");
 +		return -1;
@@ -139,7 +133,7 @@
    struct ifreq ifr;
  
    memset(&ifr, 0, sizeof(ifr));
-@@ -1645,7 +1763,10 @@
+@@ -1638,7 +1757,10 @@
      return -1;
    }
    return -1;
@@ -150,39 +144,69 @@
    return -1;
  #endif
  }
-@@ -4497,7 +4618,7 @@
+@@ -4490,7 +4612,7 @@
  #ifdef IF_LOOKUP
    if(options & OPT_DAEMON)
    {
 -    sock = socket(AF_INET, SOCK_STREAM, 0);
-+    socketbind(&sock);
++    socketopen(sock);
    }
  #endif
  
-@@ -4754,7 +4875,7 @@
+@@ -4745,12 +4867,12 @@
            struct sockaddr_in sin;
            int sock;
  
 -          sock = socket(AF_INET, SOCK_STREAM, 0);
-+          socketbind(&sock);
++          socketopen(sock);
            if(get_if_addr(sock, interface, &sin) != 0)
            {
              exit(1);
-@@ -4800,7 +4921,7 @@
+           }
+-          close(sock);
++          socketclose(sock);
+           snprintf(ipbuf, sizeof(ipbuf), "%s", inet_ntoa(sin.sin_addr));
+ #else
+           fprintf(stderr, "interface lookup not enabled at compile time\n");
+@@ -4791,7 +4913,7 @@
          struct sockaddr_in sin;
          int sock;
  
 -        sock = socket(AF_INET, SOCK_STREAM, 0);
-+        socketbind(&sock);
++        socketopen(sock);
          if(get_if_addr(sock, interface, &sin) == 0)
          {
            if(address) { free(address); }
-@@ -4855,7 +4976,7 @@
+@@ -4802,7 +4924,7 @@
+           show_message("could not resolve ip address for %s.\n", interface);
+           exit(1);
+         }
+-        close(sock);
++        socketclose(sock);
+       }
+ 
+       for(i=0; i<ntrys; i++)
+@@ -4846,12 +4968,12 @@
            struct sockaddr_in sin;
            int sock;
  
 -          sock = socket(AF_INET, SOCK_STREAM, 0);
-+          socketbind(&sock);
++          socketopen(sock);
            if(get_if_addr(sock, interface, &sin) != 0)
            {
              exit(1);
+           }
+-          close(sock);
++          socketclose(sock);
+           snprintf(ipbuf, sizeof(ipbuf), "%s", inet_ntoa(sin.sin_addr));
+ #else
+           fprintf(stderr, "interface lookup not enabled at compile time\n");
+@@ -4878,7 +5000,7 @@
+   }
+ 
+ #ifdef IF_LOOKUP
+-  if(sock > 0) { close(sock); }
++  if(sock > 0) { socketclose(sock); }
+ #endif
+ 
+   if(address) { free(address); }
