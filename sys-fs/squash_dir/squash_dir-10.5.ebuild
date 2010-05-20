@@ -18,7 +18,7 @@ IUSE="readonly"
 RDEPEND="sys-fs/squashfs-tools
 	!readonly? ( || (
 		sys-fs/aufs2
-		sys-fs/unionfs-fuse
+		>sys-fs/unionfs-fuse-0.24
 		sys-fs/funionfs
 		sys-fs/unionfs
 		sys-fs/aufs

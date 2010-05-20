@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  20 May 2010; Martin Väth <martin@mvath.de>
+  +squash_dir-10.5.ebuild -squash_dir-10.4.ebuild:
+  Version bump. Depend on >unionfs-fuse-0.24
+
   28 Apr 2010; Martin Väth <martin@mvath.de>
   +squash_dir-10.4.ebuild -squash_dir-10.3.ebuild:
   Version bump because of a stupid automake bug.
