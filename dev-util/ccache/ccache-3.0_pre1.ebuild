@@ -11,10 +11,13 @@ MY_P="${P/_/}"
 SRC_URI="http://samba.org/ftp/ccache/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+RDEPEND="sys-libs/zlib"
+DEPEND="${RDEPEND}"
 
 # Note: this version is designed to be auto-detected and used if
 # you happen to have Portage 2.0.X+ installed.
@@ -27,9 +30,11 @@ do_links() {
 }
 
 src_install() {
+	echo "CCACHE_COMPRESS=true" >"${S}/99ccache"
+	doenvd "${S}/99ccache"
 	dobin ccache || die
 	doman ccache.1
-	dodoc README
+	dodoc README.txt NEWS.txt
 
 	diropts -m0755
 	dodir /usr/$(get_libdir)/ccache/bin

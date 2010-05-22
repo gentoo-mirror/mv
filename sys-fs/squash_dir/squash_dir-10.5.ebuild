@@ -18,7 +18,7 @@ IUSE="readonly"
 RDEPEND="sys-fs/squashfs-tools
 	!readonly? ( || (
 		sys-fs/aufs2
-		>sys-fs/unionfs-fuse-0.24
+		sys-fs/unionfs-fuse
 		sys-fs/funionfs
 		sys-fs/unionfs
 		sys-fs/aufs
@@ -51,10 +51,17 @@ check_for_obsolete () {
 }
 
 pkg_postinst () {
-	check_for_obsolete && \
-		! has_version sys-fs/squashfs-tools[progress-redirect] || return 0
-	ewarn "For better output of ${PN}, it is recommended to install"
-	ewarn "sys-fs/squashfs-tools from the mv overlay with USE=progress-redirect"
+	if check_for_obsolete && \
+		! has_version sys-fs/squashfs-tools[progress-redirect]
+	then	ewarn "For better output of ${PN}, it is recommended to install"
+		ewarn "sys-fs/squashfs-tools from the mv overlay with USE=progress-redirect"
+	fi
+	if has_version "<sys-fs/unionfs-fuse-0.25_alpha"
+	then	ewarn "It is recommended to use >=unionfs-fuse-0.25_alpha"
+		ewarn "Otherwise, if you use squash_dir with unionfs-fuse for the portage tree, put"
+		ewarn "PORTAGE_RSYNC_EXTRA_OPTS=\"\${PORTAGE_RSYNC_EXTRA_OPTS} --exclude=/.unionfs\""
+		ewarn "into your /etc/make.conf"
+	fi
 	:
 }
 

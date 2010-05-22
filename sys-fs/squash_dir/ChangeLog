@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  22 May 2010; Martin Väth <martin@mvath.de>
+  Do not require >=unionfs-fuse-0.25_alpha, but print a message
+  recommending it an earlier version is used.
+
   20 May 2010; Martin Väth <martin@mvath.de>
   +squash_dir-10.5.ebuild -squash_dir-10.4.ebuild:
   Version bump. Depend on >unionfs-fuse-0.24
