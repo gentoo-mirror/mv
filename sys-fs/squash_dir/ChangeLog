@@ -3,6 +3,10 @@
 # $Header $
 
   23 May 2010; Martin Väth <martin@mvath.de>
+  +squash_dir-10.7.ebuild -squash_dir-10.6.ebuild:
+  Version bump to fix regression.
+
+  23 May 2010; Martin Väth <martin@mvath.de>
   +squash_dir-10.6.ebuild -squash_dir-10.5.ebuild:
   Version bump. Now "stop" (umount) should be more reliable, and a second
   "stop" might succeed, making "zap" unnecessary in many cases.
