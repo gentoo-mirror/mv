@@ -2,6 +2,11 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  06 Jun 2010; Martin Väth <martin@mvath.de>
+  +video-downloadhelper-4.7.3-r1.ebuild -video-downloadhelper-4.7.3.ebuild:
+  Switch to new mv_mozextension.eclass:
+  Installs also for other mozilla variants like seamonkey.
+
 *video-downloadhelper-4.7.3 (22 Apr 2010)
 
   22 Apr 2010; Martin Väth <martin@mvath.de>
