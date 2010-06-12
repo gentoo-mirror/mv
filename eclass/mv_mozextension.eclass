@@ -168,7 +168,7 @@ xpi_install () {
 	x="${1}"
 	cd -- "${x}"
 	# determine id for extension
-	emid="$(sed -n -e '/install-manifest/,$ { /<\?em:id>\?/!d; s/.*\([\"{].*[}\"]\).*/\1/; s/\"//g; p; q }' "${x}"/install.rdf)" \
+	emid="$(sed -n -e '/install-manifest/,$ { /<\?em:id>\?/!d; /{.*}/!d; s/.*\([\"{].*[}\"]\).*/\1/; s/\"//g; p; q }' "${x}"/install.rdf)" \
 		&& [ -n "${emid}" ] || die "failed to determine extension id"
 	insinto "${MOZILLA_FIVE_HOME}/extensions/${emid}"
 	doins -r "${x}"/* || die "failed to copy extension"

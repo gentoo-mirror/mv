@@ -4,6 +4,9 @@
 
 *less-select-436-r1.ebuild (30 Mar 2010)
 
+  12 Jun 2010; Martin Väth <martin@mvath.de> :
+  Remove unneeded files/less.envd. Remove arches which I never tested.
+
   30 Mar 2010; Martin Väth <martin@mvath.de> :
   -less-select-436.ebuild +less-select-436-r1.ebuild files/lesspipe.sh:
   Update lesspipe.sh and related changes of sys-apps/less in portage tree.

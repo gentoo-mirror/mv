@@ -13,7 +13,7 @@ SRC_URI="http://www.greenwoodsoftware.com/less/less-${PV}.tar.gz
 
 LICENSE="|| ( GPL-3 BSD-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86"
 IUSE="unicode dummy-less"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -24,17 +24,15 @@ S="${WORKDIR}/less-${PV}"
 MYSUBDIR="${S}/less-select-patch-${PATCHVER}"
 
 src_unpack() {
-	cd "${WORKDIR}"
 	unpack "less-${PV}.tar.gz"
 	cd "${S}"
 	cp "${DISTDIR}"/code2color "${S}"/
 	epatch "${FILESDIR}"/code2color.patch
 	unpack "less-select-patch-${PATCHVER}.tar.gz"
 	mv "${MYSUBDIR}/INSTALL" "${MYSUBDIR}/README.less-select"
-	if [ -e "${MYSUBDIR}/less-${PV}-select.patch" ]; then
-		epatch "${MYSUBDIR}/less-${PV}-select.patch" || die "Patch less-${PV}-select failed"
-	else
-		epatch "${MYSUBDIR}/less-${PATCHVER}-select.patch" || die "Patch less-${PATCHVER}-select failed"
+	if test -e "${MYSUBDIR}/less-${PV}-select.patch"
+	then	epatch "${MYSUBDIR}/less-${PV}-select.patch" || die "Patch less-${PV}-select failed"
+	else	epatch "${MYSUBDIR}/less-${PATCHVER}-select.patch" || die "Patch less-${PATCHVER}-select failed"
 	fi
 	"${MYSUBDIR}"/after-patch || die "${MYSUBDIR}/after-patch failed"
 }
