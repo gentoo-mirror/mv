@@ -7,7 +7,7 @@ MOZILLAS="firefox icecat"
 inherit mv_mozextension
 RESTRICT="mirror"
 
-DESCRIPTION="Adds buttom to clear URL"
+DESCRIPTION="Firefox plugin: button to clear URL"
 HOMEPAGE="https://addons.mozilla.org/firefox/addon/13078/"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/13078/${P}-fx.xpi"
 

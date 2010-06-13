@@ -6,7 +6,7 @@ EAPI="3"
 inherit mv_mozextension
 RESTRICT="mirror"
 
-DESCRIPTION="Firefox plugin to modify style of certain web pages, in particular of gentoo forums"
+DESCRIPTION="Video-downloadmanager as mozilla plugin"
 HOMEPAGE="https://addons.mozilla.org/firefox/addon/3006"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/3006/${P#*-}-fx+sm.xpi"
 

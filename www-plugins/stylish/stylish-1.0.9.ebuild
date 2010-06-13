@@ -6,7 +6,7 @@ EAPI="3"
 inherit mv_mozextension
 RESTRICT="mirror"
 
-DESCRIPTION="Firefox plugin to modify style of certain web pages, in particular of gentoo forums"
+DESCRIPTION="Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)"
 HOMEPAGE="https://addons.mozilla.org/firefox/addon/2108"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/2108/${P}-fx+tb+sm.xpi"
 

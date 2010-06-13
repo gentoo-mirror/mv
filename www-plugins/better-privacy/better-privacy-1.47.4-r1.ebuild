@@ -6,7 +6,7 @@ EAPI="3"
 inherit mv_mozextension
 RESTRICT="mirror"
 
-DESCRIPTION="Firefox plugin for long time cookies like ~/.adobe/Flash_Player/AssetCache/*/*"
+DESCRIPTION="Let mozilla clear long time cookies like ~/.adobe/Flash_Player/AssetCache/*/*"
 HOMEPAGE="https://addons.mozilla.org/firefox/addon/6623"
 MY_P="${P/-/}"
 MY_P="${MY_P%_alpha*}"

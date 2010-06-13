@@ -6,7 +6,7 @@ EAPI="3"
 inherit mv_mozextension
 RESTRICT="mirror"
 
-DESCRIPTION="Restrict active contents in your web browser"
+DESCRIPTION="Mozilla plugin: Restrict active contents like java/javascript/flash"
 HOMEPAGE="http://noscript.net/"
 SRC_URI="http://software.informaction.com/data/releases/${P}.xpi"
 

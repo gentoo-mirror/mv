@@ -6,7 +6,7 @@ EAPI="3"
 inherit mv_mozextension
 RESTRICT="mirror"
 
-DESCRIPTION="Firefox plugin: download manager"
+DESCRIPTION="Yet another video download manager as mozilla plugin"
 HOMEPAGE="http://flashgot.net/"
 SRC_URI="http://software.informaction.com/data/releases/${P}.xpi"
 
