@@ -1,0 +1,8 @@
+# ChangeLog for www-plugins/fillform
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+*fillform-1.0.6 (13 Jun 2010)
+
+  13 Jun 2010; Martin Väth <martin@mvath.de>
+  New ebuild.

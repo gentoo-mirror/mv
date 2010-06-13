@@ -1,0 +1,8 @@
+# ChangeLog for www-plugins/xclear
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+*xclear-1.3 (13 Jun 2010)
+
+  13 Jun 2010; Martin Väth <martin@mvath.de>
+  New ebuild.

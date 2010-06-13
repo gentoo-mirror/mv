@@ -13,7 +13,7 @@ MY_P="${MY_P%_alpha*}"
 MY_P="${MY_P%_beta*}"
 MY_P="${MY_P}-sm+fx"
 FILENAME="${MY_P}.xpi"
-SRC_URI="https://addons.mozilla.org/de/firefox/downloads/latest/6623/${FILENAME}"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/6623/${FILENAME}"
 case "${PV}" in
 *_alpha*|*_beta*)
 SRC_URI="https://addons.mozilla.org/de/firefox/downloads/file/76929/${FILENAME}?confirmed -> ${FILENAME}"

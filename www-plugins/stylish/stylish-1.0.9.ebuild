@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="Firefox plugin to modify style of certain web pages, in particular of gentoo forums"
 HOMEPAGE="https://addons.mozilla.org/firefox/addon/2108"
-SRC_URI="https://addons.mozilla.org/de/firefox/downloads/latest/2108/${P}-fx+tb+sm.xpi"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/2108/${P}-fx+tb+sm.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"
