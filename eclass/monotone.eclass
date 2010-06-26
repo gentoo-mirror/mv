@@ -124,7 +124,7 @@ monotone_fetch () {
 		einfo "Fetching ${db} from remote ${repo_uri}" && \
 		eval "${EMTN_PULL_CMD} \"\${repo_uri}\" \"\${glob}\""
 	)
-	elif [ -n "${EMTN_OFFLINE}" ]
+	elif [ -z "${EMTN_OFFLINE}" ]
 	then	( addwrite "${PWD}"
 		einfo "Updating ${db} from remote ${repo_uri}"
 		eval "${EMTN_PULL_CMD}"
@@ -174,7 +174,8 @@ monotone_co () {
 	then	eval "set -- ${EMTN_REVISIONARGS}"
 	fi
 	if [ "${1}" = "head" ]
-	then	if r=`eval "${EMTN_PRINT_HEADS_CMD}" | tail -n1` && [ -n "${r}" ]
+	then	if r=`eval "${EMTN_PRINT_HEADS_CMD} \"\${modulepath}\"" \
+		| tail -n1` && [ -n "${r}" ]
 		then set -- -r "${r}"
 		else set --
 		fi
