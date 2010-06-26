@@ -24,9 +24,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+flash"
 
-ALL_DEPEND="flash? ( www-plugins/adobe-flash )"
-RDEPEND="${RDEPEND}
-${ALL_DEPEND}"
-DEPEND="${DEPEND}
-${ALL_DEPEND}"
+COMMON_DEPEND="flash? ( www-plugins/adobe-flash )"
+RDEPEND="${COMMON_DEPEND}"
+DEPEND="${COMMON_DEPEND}"
 

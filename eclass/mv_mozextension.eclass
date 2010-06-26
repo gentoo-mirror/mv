@@ -113,8 +113,8 @@ mv_mozextension_pkg_postinst () {
 	do	elog "	${i}"
 	done
 	elog
-	elog "After installing other mozilla ebuilds, if you want to use it with them,"
-	elog "reemerge ${CATEGORY}/${PN}"
+	elog "When you install or upgrade some of: ${MOZILLAS}"
+	elog "you might need to reemerge ${CATEGORY}/${PN}"
 }
 
 EXPORT_FUNCTIONS src_install pkg_postinst
