@@ -4,5 +4,8 @@
 
 *getdelta-0.7.8 (07 Apr 2010)
 
+  29 Jun 2010; Martin Väth <martin@mvath.de>
+  Bump to force upgrade.
+
   07 Apr 2010; Martin Väth <martin@mvath.de>
   Copy from the portage tree and add eapi2.patch; clear previous ChangeLog.

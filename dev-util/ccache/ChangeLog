@@ -4,6 +4,10 @@
 
 *ccache-3.0 (22 Jun 2010)
 
+  29 Jun 2010; Martin Väth <martin@mvath.de>
+  Set also CCACHE_SLOPPINESS in /etc/env.d; bump to force upgrade.
+  Make CCACHE_BASEDIR warning clearer.
+
   22 Jun 2010; Martin Väth <martin@mvath.de>
   revbump; remove old.
 

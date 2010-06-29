@@ -27,13 +27,16 @@ src_install () {
 }
 
 pkg_postinst() {
+	local a b
 	elog "You need to put"
-	elog "FETCHCOMMAND=\"/usr/bin/getdelta.sh \\\${URI}\""
+	elog "FETCHCOMMAND=\"/usr/bin/getdelta.sh \\\"\\\${URI}\\\" \\\"\\\${FILE}\\\""
 	elog "into your /etc/make.conf to make use of getdelta"
 
 	# make sure permissions are ok
-	touch "${ROOT}"/var/log/getdelta.log
-	mkdir -p "${ROOT}"/etc/deltup
-	chown -R portage:portage "${ROOT}"/{var/log/getdelta.log,etc/deltup}
-	chmod -R ug+rwX "${ROOT}"/{var/log/getdelta.log,etc/deltup}
+	a="${ROOT}"/var/log/getdelta.log
+	b="${ROOT}"/etc/deltup
+	test -f "${a}" || touch -- "${a}"
+	mkdir -p -- "${b}"
+	chown -R portage:portage -- "${a}" "${b}"
+	chmod -R ug+rwX -- "${a}" "${b}"
 }

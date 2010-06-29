@@ -30,7 +30,8 @@ do_links() {
 }
 
 src_install() {
-	echo "CCACHE_COMPRESS=true" >"${S}/99ccache"
+	echo 'CCACHE_SLOPPINESS="file_macro,time_macros,include_file_mtime"
+CCACHE_COMPRESS=true' >"${S}/99ccache"
 	doenvd "${S}/99ccache"
 	dobin ccache || die
 	doman ccache.1
@@ -82,7 +83,7 @@ pkg_postinst() {
 	case "${PORTAGE_TMPDIR}/portage/*" in
 		"${CCACHE_BASEDIR:-none}"/*) :;;
 		*)
-		ewarn "To make optimal use of the new direct mode, please set"
+		ewarn "To make optimal use of ccache with portage, please set"
 		ewarn "	CCACHE_BASEDIR=\"\${PORTAGE_TMPDIR}/portage\""
 		ewarn "in your /etc/make.conf";;
 	esac
