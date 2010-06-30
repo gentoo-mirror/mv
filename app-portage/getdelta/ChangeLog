@@ -4,6 +4,9 @@
 
 *getdelta-0.7.8 (07 Apr 2010)
 
+  30 Jun 2010; Martin Väth <martin@mvath.de>
+  Fix typo in FETCHCOMMAND description
+
   29 Jun 2010; Martin Väth <martin@mvath.de>
   Bump to force upgrade.
 

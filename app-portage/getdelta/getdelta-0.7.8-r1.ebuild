@@ -29,7 +29,7 @@ src_install () {
 pkg_postinst() {
 	local a b
 	elog "You need to put"
-	elog "FETCHCOMMAND=\"/usr/bin/getdelta.sh \\\"\\\${URI}\\\" \\\"\\\${FILE}\\\""
+	elog "FETCHCOMMAND=\"/usr/bin/getdelta.sh \\\"\\\${URI}\\\" \\\"\\\${FILE}\\\"\""
 	elog "into your /etc/make.conf to make use of getdelta"
 
 	# make sure permissions are ok
