@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  03 Jul 2010; Martin Väth <martin@mvath.de>
+  Bump all versions to force upgrade.
+
   27 Apr 2010; Martin Väth <martin@mvath.de>
   Copy from the portage tree to add USE=progress-redirect
   Clear previous ChangeLog.

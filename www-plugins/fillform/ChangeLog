@@ -2,6 +2,11 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*fillform-1.1.7 (03 Jul 2010)
+
+  13 Jun 2010; Martin Väth <martin@mvath.de>
+  Bump. Remove old.
+
 *fillform-1.0.6 (13 Jun 2010)
 
   13 Jun 2010; Martin Väth <martin@mvath.de>

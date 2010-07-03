@@ -1,8 +1,13 @@
-# ChangeLog for www-plugins/fillform
+# ChangeLog for www-plugins/form-history-control
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
-*fillform-1.0.6 (13 Jun 2010)
+*form-history-control-1.2.6 (03 Jul 2010)
+
+  03 Jul 2010; Martin Väth <martin@mvath.de>
+  Bump version. Remove old ebuild.
+
+*form-history-control-1.2.3 (13 Jun 2010)
 
   13 Jun 2010; Martin Väth <martin@mvath.de>
   New ebuild.
