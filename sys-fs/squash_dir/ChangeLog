@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  20 Jul 2010; Martin Väth <martin@mvath.de>
+  +squash_dir-10.9.ebuild -squash_dir-10.8.ebuild:
+  Version bump to provide workaround if readlink command is missing
+
   02 Jun 2010; Martin Väth <martin@mvath.de>
   +squash_dir-10.8.ebuild -squash_dir-10.7.ebuild:
   Version bump to support modified syntax of unionfs-fuse
@@ -17,7 +21,7 @@
 
   22 May 2010; Martin Väth <martin@mvath.de>
   Do not require >=unionfs-fuse-0.25_alpha, but print a message
-  recommending it an earlier version is used.
+  recommending it if an earlier version is used.
 
   20 May 2010; Martin Väth <martin@mvath.de>
   +squash_dir-10.5.ebuild -squash_dir-10.4.ebuild:
