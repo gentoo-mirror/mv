@@ -5,9 +5,10 @@
 *magus-1.3.1 (10 Mar 2010)
 
   25 Jul 2010; Martin Väth <martin@mvath.de> :
+  Do not install unnecessary .h files.
   mozilla-firefox->firefox.
   USE flags: Add icecat, rename kde->konqueror, pdf->acroread.
-  Let firefox take precedence.
+  Let firefox USE take precedence.
 
   31 Mar 2010; Martin Väth <martin@mvath.de> :
   +magus-1.3.1.ebuild +magus-99999999.ebuild -magus-live-1.3.1-r6.ebuild:

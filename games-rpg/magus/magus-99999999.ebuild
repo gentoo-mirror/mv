@@ -178,14 +178,15 @@ src_compile () {
 
 my_install () {
 	my_cd "${1}"
-	emake DESTDIR="${D}" install || die "make install in ${1} failed"
+	emake DESTDIR="${ED}" install || die "make install in ${1} failed"
 }
 
 src_install () {
 	local myicon myres
 	my_install "ManuProC_Base"
+	rm -rf -- "${ED}"/usr/include
 	my_install "midgard"
-	find "${D}" -name "*.la" -type f -exec rm -v -- '{}' '+'
+	find "${ED}" -name "*.la" -type f -exec rm -v -- '{}' '+'
 
 	insinto "/usr/share/magus"
 
