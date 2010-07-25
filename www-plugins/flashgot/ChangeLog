@@ -2,33 +2,33 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*flashgot-1.2.1.28 (25 Jul 2010)
+
+  06 Jun 2010; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+
 *flashgot-1.2.1.27 (03 Jul 2010)
 
   06 Jun 2010; Martin Väth <martin@mvath.de>
-  +flashgot-1.2.1.27.ebuild -flashgot-1.2.1.23.ebuild:
   Version bump, remove old ebuild.
 
 *flashgot-1.2.1.23 (06 Jun 2010)
 
   06 Jun 2010; Martin Väth <martin@mvath.de>
-  +flashgot-1.2.1.23.ebuild -flashgot-1.2.1.21.ebuild:
   Version bump, remove old ebuild. Switch to new mv_mozextension.eclass:
   Installs also for other mozilla variants like seamonkey.
 
 *flashgot-1.2.1.21 (22 Apr 2010)
 
   22 Apr 2010; Martin Väth <martin@mvath.de>
-  +flashgot-1.2.1.21.ebuild -flashgot-1.2.1.18.ebuild:
   Version bump, remove old ebuild.
 
 *flashgot-1.2.1.18 (02 Apr 2010)
 
   02 Apr 2010; Martin Väth <martin@mvath.de>
-  +flashgot-1.2.1.18.ebuild -flashgot-1.1.9.8.ebuild:
   Version bump, remove old ebuild.
 
 *flashgot-1.1.9.8 (28 Mar 2010)
 
   28 Mar 2010; Martin Väth <martin@mvath.de>
-  flashgot-1.1.9.8.ebuild:
   import with minor changes from a personal overlay.
