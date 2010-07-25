@@ -32,19 +32,19 @@ esac
 case "${MOZILLAS}" in
 *fire*)
 	RDEPEND="${RDEPEND}
-	>=www-client/mozilla-firefox-1.5
-	>=www-client/firefox-bin-1.5";;
+	>=www-client/firefox-3.6
+	>=www-client/firefox-bin-3.6";;
 esac
 case "${MOZILLAS}" in
 *sea*)
 	RDEPEND="${RDEPEND}
-	>=www-client/seamonkey-1.1
-	>=www-client/seamonkey-bin-1.1";;
+	>=www-client/seamonkey-2
+	>=www-client/seamonkey-bin-2";;
 esac
 case "${MOZILLAS}" in
 *ice*)
 	RDEPEND="${RDEPEND}
-	>=www-client/icecat-3.5";;
+	>=www-client/icecat-3.6";;
 esac
 RDEPEND="${RDEPEND}${RDEPEND_END}"
 
@@ -72,12 +72,12 @@ mv_mozextension_src_install () {
 	INST_MOZILLAS=""
 	case "${MOZILLAS}" in
 	*fire*)
-		if has_version '>=www-client/mozilla-firefox-1.5'
-		then	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-firefox"
+		if has_version '>=www-client/firefox-3.6'
+		then	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/firefox"
 			xpi_install_dirs
-			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/mozilla-firefox)"
+			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/firefox)"
 		fi
-		if has_version '>=www-client/firefox-bin-1.5'
+		if has_version '>=www-client/firefox-bin-3.6'
 		then	MOZILLA_FIVE_HOME="/opt/firefox"
 			xpi_install_dirs
 			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/firefox-bin)"
@@ -85,12 +85,12 @@ mv_mozextension_src_install () {
 	esac
 	case "${MOZILLAS}" in
 	*sea*)
-		if has_version '>=www-client/seamonkey-1.1'
+		if has_version '>=www-client/seamonkey-2'
 		then	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/seamonkey"
 			xpi_install_dirs
 			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/seamonkey)"
 		fi
-		if has_version '>=www-client/seamonkey-bin-1.1'
+		if has_version '>=www-client/seamonkey-bin-2'
 		then	MOZILLA_FIVE_HOME="/opt/seamonkey"
 			xpi_install_dirs
 			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/seamonkey-bin)"
@@ -98,7 +98,7 @@ mv_mozextension_src_install () {
 	esac
 	case "${MOZILLAS}" in
 	*ice*)
-		if has_version '>=www-client/icecat-3.5'
+		if has_version '>=www-client/icecat-3.6'
 		then	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/icecat"
 			xpi_install_dirs
 			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/icecat)"

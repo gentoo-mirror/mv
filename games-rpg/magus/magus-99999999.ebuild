@@ -28,7 +28,7 @@ then	PROPERTIES="live"
 fi
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="firefox seamonkey kde pdf postgres"
+IUSE="+acroread firefox icecat konqueror postgres seamonkey"
 
 DEPENDCOMMON=">=dev-libs/libsigc++-2.0.1
 	>=dev-cpp/gtkmm-2.4.0
@@ -41,10 +41,11 @@ DEPEND="${DEPENDCOMMON}
 
 RDEPEND="${RDEPEND}
 	${DEPENDCOMMON}
-	firefox? ( || ( www-client/mozilla-firefox www-client/mozilla-firefox-bin ) )
+	firefox? ( || ( www-client/firefox www-client/firefox-bin ) )
+	icecat? ( www-client/icecat )
 	seamonkey? ( www-client/seamonkey )
-	kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
-	pdf? ( app-text/acroread )"
+	konqueror? ( kde-base/konqueror )
+	acroread? ( app-text/acroread )"
 
 if ${LIVE_VERSION}
 then
@@ -88,7 +89,7 @@ src_sed () {
 }
 
 src_patch () {
-	local browser
+	local browser i
 	einfo
 	einfo "Various patches:"
 	einfo
@@ -100,10 +101,9 @@ src_patch () {
 		ewarn "Unneeded patching of midgard/libmagus/Makefile.am"
 	src_sed midgard/libmagus/Makefile.am -e "2iLIBS=-lManuProC_Base"
 
-	browser="mozilla"
-	use seamonkey && browser="seamonkey"
-	use firefox && browser="firefox"
-	use kde && browser="konqueror"
+	for i in konqueror icecat seamonkey firefox mozilla
+	do	use "${i}" && browser="${i}" &&	break
+	done
 	[ "${browser}" = "mozilla" ] && return
 	src_sed midgard/docs/BMod_Op.html -e "s#mozilla#${browser}#"
 	src_sed midgard/libmagus/Magus_Optionen.cc -e "s#mozilla#${browser}#"
