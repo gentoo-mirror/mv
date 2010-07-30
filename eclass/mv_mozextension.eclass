@@ -73,7 +73,7 @@ mv_mozextension_src_install () {
 	case "${MOZILLAS}" in
 	*fire*)
 		if has_version '>=www-client/firefox-3.6'
-		then	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/firefox"
+		then	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-firefox"
 			xpi_install_dirs
 			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/firefox)"
 		fi
