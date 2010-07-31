@@ -81,7 +81,7 @@ mv_mozextension_src_unpack () {
 
 EXPORT_FUNCTIONS src_unpack
 
-declare -a MV_MOZ_INS MV_MOZ_PKG MV_MOZ_DIR MV_MOZ_SYM
+declare -a MV_MOZ_INS MV_MOZ_PKG MV_MOZ_CPY MV_MOZ_DIR
 
 mv_mozextension_install () {
 	local MOZILLA_EXTENSIONS_DIRECTORY
@@ -101,10 +101,9 @@ mv_mozextension_calc () {
 }
 
 mv_mozextension_src_install () {
-	local MOZILLA_FIVE_HOME b d i j
+	local b d i j
 	MV_MOZ_PKG=()
 	MV_MOZ_DIR=()
-	MV_MOZ_SYM=()
 	b="/usr/$(get_libdir)/"
 	mv_mozextension_calc "*fire*" "www-client/firefox" "${b}mozilla-firefox"
 	mv_mozextension_calc "*fire*" "www-client/firefox-bin" "/opt/firefox"
@@ -119,23 +118,60 @@ mv_mozextension_src_install () {
 		else	d="*"
 		fi
 	fi
-	if [ "${d}" != "*" ]
-	then	if [ -n "${d}" ]
+	MV_MOZ_SYM=()
+	if [ "${d}" = "*" ]
+	then	MV_MOZ_CPY=:
+	else	MV_MOZ_CPY=false
+		if [ -n "${d}" ]
 		then	mv_mozextension_install "${d}"
 		else	mv_mozextension_install "${b}mozilla/extensions"
 		fi
-		for i in "${MV_MOZ_DIR[@]}"
-		do	for j in "${MV_MOZ_INS[@]}"
-			do	d="${i}/extensions/${j##*/}"
-				MV_MOZ_SYM+=("${d}")
-				dosym "${EROOT%/}${j}" "${d}"
-			done
-		done
-	else	for i in "${MV_MOZ_DIR[@]}"
-		do	MOZILLA_FIVE_HOME="${i}"
-			xpi_install_dirs
-		done
 	fi
+	for i in "${MV_MOZ_DIR[@]}"
+	do	b="${i}/extensions"
+		${MV_MOZ_CPY} && mv_mozextension_install "${b}"
+		for j in "${MV_MOZ_INS[@]}"
+		do	d="${b}/${j##*/}"
+			MV_MOZ_SYM+=("${d}")
+			${MV_MOZ_CPY} || dosym "${EROOT%/}${j}" "${d}"
+		done
+	done
+}
+
+mv_mozextension_pkg_preinst () {
+	local i j
+	einfo "checking for switching between dirs and symlinks"
+	for i in "${MV_MOZ_SYM[@]}"
+	do	j="${ROOT%/}${EPREFIX}${i}"
+# There are two forms of installation:
+# (1) symlink mozilla-dir/extensions/X -> $MOZILLA_EXTENSIONS_DIRECTORY/X
+# (2) data in mozilla-dir/extensions/X
+# Since we might switch between (1) and (2), we must take caution, since
+# in general portage cannot merge into the live directory properly:
+		if ${MV_MOZ_CPY}
+		then	test -L "${j}" && {
+# We switched from (1) to (2). If this happened, portage would
+# actually merge the data of (2) into $MOZILLA_EXTENSIONS_DIRECTORY/X,
+# since this is where the symlink from (1) points to.
+# Hence, we have to remove this symlink in advance, in this case.
+			rm -v -- "${j}"
+		}
+		else	test -d "${j}" && ! test -L "${j}" && {
+# We switched from (2) to (1). If this happened, portage cannot
+# merge the symlink to the live system, since this can only happen once
+# the directory mozilla-dir/extensions/X is removed.
+# We could remove this directory here.
+# However, removing a directory is a dangerous thing, and so
+# we prefer to tell the user only that he has to reemerge the package.
+			eerror
+			eerror "It is necessary to reemerge again ${CATEGORY}/${PN}"
+			eerror "(a directory should be removed in the cleanup after the first emerge"
+			eerror "in order to install a symlink of the same name in the second emerge.)"
+			eerror
+			break
+		}
+		fi
+	done
 }
 
 mv_mozextension_pkg_postinst () {
@@ -148,21 +184,10 @@ mv_mozextension_pkg_postinst () {
 	elog
 	elog "When you install/uninstall/reemerge some of: ${MOZILLAS}"
 	elog "you might need to reemerge ${CATEGORY}/${PN}"
-	b=:
-	for i in "${MV_MOZ_SYM[@]}"
-	do	test -L "${i}" || {
-		eerror
-		eerror "It is necessary to reemerge again ${CATEGORY}/${PN}"
-		eerror "(a directory should be removed in the cleanup after the first emerge"
-		eerror "in order to install a symlink of the same name in the second emerge.)"
-		eerror
-		break
-	}
-	done
 }
 
 if [ -n "${MOZILLAS}" ]
-then	EXPORT_FUNCTIONS src_install pkg_postinst
+then	EXPORT_FUNCTIONS src_install pkg_preinst pkg_postinst
 fi
 
 xpi_unpack () {
