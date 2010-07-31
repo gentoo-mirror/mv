@@ -81,12 +81,12 @@ mv_mozextension_src_unpack () {
 
 EXPORT_FUNCTIONS src_unpack
 
-declare -a INST_EXTENSIONS INST_MOZILLAS LINK_MOZILLAS
+declare -a MV_MOZ_INS MV_MOZ_PKG MV_MOZ_DIR MV_MOZ_SYM
 
 mv_mozextension_install () {
 	local MOZILLA_EXTENSIONS_DIRECTORY
 	MOZILLA_EXTENSIONS_DIRECTORY="${1}"
-	INST_EXTENSIONS=()
+	MV_MOZ_INS=()
 	xpi_install_dirs
 }
 
@@ -96,24 +96,25 @@ mv_mozextension_calc () {
 		${1}) false;;
 	esac && return
 	i="$(best_version "${2}")" && [ -n "${i}" ] || return
-	INST_MOZILLAS+=("${i}")
-	LINK_MOZILLAS+=("${3}")
+	MV_MOZ_PKG+=("${i}")
+	MV_MOZ_DIR+=("${3}")
 }
 
 mv_mozextension_src_install () {
 	local MOZILLA_FIVE_HOME b d i j
-	INST_MOZILLAS=()
-	LINK_MOZILLAS=()
+	MV_MOZ_PKG=()
+	MV_MOZ_DIR=()
+	MV_MOZ_SYM=()
 	b="/usr/$(get_libdir)/"
 	mv_mozextension_calc "*fire*" "www-client/firefox" "${b}mozilla-firefox"
 	mv_mozextension_calc "*fire*" "www-client/firefox-bin" "/opt/firefox"
 	mv_mozextension_calc "*ice*" "www-client/icecat" "${b}icecat"
 	mv_mozextension_calc "*sea*" "www-client/seamonkey" "${b}seamonkey"
 	mv_mozextension_calc "*sea*" "www-client/seamonkey-bin" "/opt/seamonkey"
-	[ ${#LINK_MOZILLAS[@]} -ne 0 ] || die "no supported mozilla is installed"
+	[ ${#MV_MOZ_DIR[@]} -ne 0 ] || die "no supported mozilla is installed"
 	d="${MOZILLA_COMMON_EXTENSIONS}"
 	if [ "${d}" = "?" ]
-	then	if [ ${#INST_MOZILLAS[@]} -gt 1 ]
+	then	if [ ${#MV_MOZ_PKG[@]} -gt 1 ]
 		then	d=""
 		else	d="*"
 		fi
@@ -123,12 +124,14 @@ mv_mozextension_src_install () {
 		then	mv_mozextension_install "${d}"
 		else	mv_mozextension_install "${b}mozilla/extensions"
 		fi
-		for i in "${LINK_MOZILLAS[@]}"
-		do	for j in "${INST_EXTENSIONS[@]}"
-			do	dosym "${EROOT%/}${j}" "${i}/extensions/${j##*/}"
+		for i in "${MV_MOZ_DIR[@]}"
+		do	for j in "${MV_MOZ_INS[@]}"
+			do	d="${i}/extensions/${j##*/}"
+				MV_MOZ_SYM+=("${d}")
+				dosym "${EROOT%/}${j}" "${d}"
 			done
 		done
-	else for i in "${LINK_MOZILLAS[@]}"
+	else	for i in "${MV_MOZ_DIR[@]}"
 		do	MOZILLA_FIVE_HOME="${i}"
 			xpi_install_dirs
 		done
@@ -137,14 +140,25 @@ mv_mozextension_src_install () {
 
 mv_mozextension_pkg_postinst () {
 	local i
-	[ "${#INST_MOZILLAS[@]}" -ge 1 ] || die "no supported mozilla is installed"
+	[ "${#MV_MOZ_PKG[@]}" -ge 1 ] || die "no supported mozilla is installed"
 	elog "${CATEGORY}/${PN} has been installed for the following packages:"
-	for i in ${INST_MOZILLAS[@]}
+	for i in ${MV_MOZ_PKG[@]}
 	do	elog "	${i}"
 	done
 	elog
-	elog "When you install or upgrade some of: ${MOZILLAS}"
+	elog "When you install/uninstall/reemerge some of: ${MOZILLAS}"
 	elog "you might need to reemerge ${CATEGORY}/${PN}"
+	b=:
+	for i in "${MV_MOZ_SYM[@]}"
+	do	test -L "${i}" || {
+		eerror
+		eerror "It is necessary to reemerge again ${CATEGORY}/${PN}"
+		eerror "(a directory should be removed in the cleanup after the first emerge"
+		eerror "in order to install a symlink of the same name in the second emerge.)"
+		eerror
+		break
+	}
+	done
 }
 
 if [ -n "${MOZILLAS}" ]
@@ -201,7 +215,7 @@ xpi_install () {
 		&& [ -n "${d}" ] || die "failed to determine extension id"
 	if [ -n "${MOZILLA_EXTENSIONS_DIRECTORY}" ]
 	then	d="${MOZILLA_EXTENSIONS_DIRECTORY}/${d}"
-		INST_EXTENSIONS+=("${d}")
+		MV_MOZ_INS+=("${d}")
 	else	d="${MOZILLA_FIVE_HOME}/extensions/${d}"
 	fi
 	insinto "${d}"
