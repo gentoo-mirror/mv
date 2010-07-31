@@ -2,21 +2,21 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
-*stylish-1.0.9 (06 Jun 2010)
+  31 Jul 2010; Martin Väth <martin@mvath.de>
+  Bump revision to force eclass upgrade.
+
+*stylish-1.0.9 (31 Jul 2010)
 
   06 Jun 2010; Martin Väth <martin@mvath.de>
-  +stylish-1.0.9.ebuild -stylish-1.0.8.ebuild:
   Version bump, remove old ebuild. Switch to new mv_mozextension.eclass:
   Installs also for other mozilla variants like seamonkey.
 
 *stylish-1.0.8 (02 Apr 2010)
 
   02 Apr 2010; Martin Väth <martin@mvath.de>
-  +stylish-1.0.8.ebuild -stylish-1.0.7.ebuild:
   Version bump, remove old ebuild.
 
 *stylish-1.0.7 (28 Mar 2010)
 
   28 Mar 2010; Martin Väth <martin@mvath.de>
-  stylish-1.0.7.ebuild:
   import with minor changes from a personal overlay.

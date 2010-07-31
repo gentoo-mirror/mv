@@ -1,24 +1,41 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
-#
-# mv_mozextention.eclass: installing firefox extensions and language packs
-#
-# This is mozextension.eclass from the portage tree with the following changes:
-#
-# 1. Some compatibility fixes in xpi_install/xpi_unpack.
+
+# @ECLASS: mv_mozextension.eclass
+# @MAINTAINER:
+# Martin Väth <martin@mvath.de>
+# @BLURB: This eclass provides functions to install mozilla extensions
+# @DESCRIPTION:
+# The eclass is based on mozextension.eclass with many extensions.
+# 1. It has some compatibility fixes in xpi_install/xpi_unpack.
 # 2. A default src_unpack function is defined; set FILENAME to the archive name.
 #    If FILENAME is unset or empty, the last part of the last SRC_URI is used.
-# 3. Default functions for installation for all browsers.
-#    If you want only installation for some browser, define
-#    MOZILLAS="firefox seamonkey icecat" (or to a subset thereof)
-#    before inheriting the eclass.
-#    If you define MOZILLA="" before inheriting the eclass,
-#    no default functions get defined.
+# 3. Default functions for installation for all mozilla type browsers.
 
-: ${MOZILLAS="firefox seamonkey icecat"}
+# @ECLASS-VARIABLE: MOZILLAS
+# @DESCRIPTION:
+# If this variables is set to the empty value, no default install functions
+# are defined. Otherwise, the value of this variable should be
+# "firefox icecat seamonkey" (default)
+# or a subset of these.
+# The eclass will then install the extension for all these mozillas,
+# set corresponding dependencies and print corresponding messages.
+: ${MOZILLAS="firefox icecat seamonkey"}
 
-[ -n "${MOZILLAS}" ] && inherit multilib
+# @ECLASS-VARIABLE: MOZILLA_COMMON_EXTENSIONS
+# @DESCRIPTION:
+# If this variable has the special value "*", the extension is copied directly
+# into the extension directory of the installed MOZILLA's.
+# Otherwise, only symlinks are made in that directory, and the extension is
+# installed only once into MOZILLA_COMMON_EXTENSIONS (a default directory is
+# chosen if MOZILLA_COMMON_EXTENSIONS is empty).
+# If this variable has the special value "?" (default), it acts like "*" or
+# "" depending on whether MOZILLAS applies to more than 1 installed mozilla
+# or not.
+: ${MOZILLA_COMMON_EXTENSIONS="?"}
+
+inherit multilib
 
 case "${MOZILLAS}" in
 ''|icecat)
@@ -64,52 +81,65 @@ mv_mozextension_src_unpack () {
 
 EXPORT_FUNCTIONS src_unpack
 
-if [ -n "${MOZILLAS}" ]
-then
+declare -a INST_EXTENSIONS INST_MOZILLAS LINK_MOZILLAS
+
+mv_mozextension_install () {
+	local MOZILLA_EXTENSIONS_DIRECTORY
+	MOZILLA_EXTENSIONS_DIRECTORY="${1}"
+	INST_EXTENSIONS=()
+	xpi_install_dirs
+}
+
+mv_mozextension_calc () {
+	local i
+	case "${MOZILLAS}" in
+		${1}) false;;
+	esac && return
+	i="$(best_version "${2}")" && [ -n "${i}" ] || return
+	INST_MOZILLAS+=("${i}")
+	LINK_MOZILLAS+=("${3}")
+}
 
 mv_mozextension_src_install () {
-	local MOZILLA_FIVE_HOME
-	INST_MOZILLAS=""
-	case "${MOZILLAS}" in
-	*fire*)
-		if has_version '>=www-client/firefox-3.6'
-		then	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-firefox"
-			xpi_install_dirs
-			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/firefox)"
+	local MOZILLA_FIVE_HOME b d i j
+	INST_MOZILLAS=()
+	LINK_MOZILLAS=()
+	b="/usr/$(get_libdir)/"
+	mv_mozextension_calc "*fire*" "www-client/firefox" "${b}mozilla-firefox"
+	mv_mozextension_calc "*fire*" "www-client/firefox-bin" "/opt/firefox"
+	mv_mozextension_calc "*ice*" "www-client/icecat" "${b}icecat"
+	mv_mozextension_calc "*sea*" "www-client/seamonkey" "${b}seamonkey"
+	mv_mozextension_calc "*sea*" "www-client/seamonkey-bin" "/opt/seamonkey"
+	[ ${#LINK_MOZILLAS[@]} -ne 0 ] || die "no supported mozilla is installed"
+	d="${MOZILLA_COMMON_EXTENSIONS}"
+	if [ "${d}" = "?" ]
+	then	if [ ${#INST_MOZILLAS[@]} -gt 1 ]
+		then	d=""
+		else	d="*"
 		fi
-		if has_version '>=www-client/firefox-bin-3.6'
-		then	MOZILLA_FIVE_HOME="/opt/firefox"
-			xpi_install_dirs
-			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/firefox-bin)"
-		fi;;
-	esac
-	case "${MOZILLAS}" in
-	*sea*)
-		if has_version '>=www-client/seamonkey-2'
-		then	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/seamonkey"
-			xpi_install_dirs
-			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/seamonkey)"
+	fi
+	if [ "${d}" != "*" ]
+	then	if [ -n "${d}" ]
+		then	mv_mozextension_install "${d}"
+		else	mv_mozextension_install "${b}mozilla/extensions"
 		fi
-		if has_version '>=www-client/seamonkey-bin-2'
-		then	MOZILLA_FIVE_HOME="/opt/seamonkey"
+		for i in "${LINK_MOZILLAS[@]}"
+		do	for j in "${INST_EXTENSIONS[@]}"
+			do	dosym "${EROOT%/}${j}" "${i}/extensions/${j##*/}"
+			done
+		done
+	else for i in "${LINK_MOZILLAS[@]}"
+		do	MOZILLA_FIVE_HOME="${i}"
 			xpi_install_dirs
-			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/seamonkey-bin)"
-		fi;;
-	esac
-	case "${MOZILLAS}" in
-	*ice*)
-		if has_version '>=www-client/icecat-3.6'
-		then	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/icecat"
-			xpi_install_dirs
-			INST_MOZILLAS="${INST_MOZILLAS} $(best_version www-client/icecat)"
-		fi;;
-	esac
+		done
+	fi
 }
 
 mv_mozextension_pkg_postinst () {
 	local i
+	[ "${#INST_MOZILLAS[@]}" -ge 1 ] || die "no supported mozilla is installed"
 	elog "${CATEGORY}/${PN} has been installed for the following packages:"
-	for i in ${INST_MOZILLAS}
+	for i in ${INST_MOZILLAS[@]}
 	do	elog "	${i}"
 	done
 	elog
@@ -117,8 +147,8 @@ mv_mozextension_pkg_postinst () {
 	elog "you might need to reemerge ${CATEGORY}/${PN}"
 }
 
-EXPORT_FUNCTIONS src_install pkg_postinst
-
+if [ -n "${MOZILLAS}" ]
+then	EXPORT_FUNCTIONS src_install pkg_postinst
 fi
 
 xpi_unpack () {
@@ -160,17 +190,21 @@ xpi_unpack () {
 }
 
 xpi_install () {
-	local emid x
+	local d x
 
 	# You must tell xpi_install which dir to use
 	[ ${#} -ne 1 ] && die "${FUNCNAME} takes exactly one argument. Please specify the directory"
 
 	x="${1}"
-	cd -- "${x}"
 	# determine id for extension
-	emid="$(sed -n -e '/install-manifest/,$ { /em:id/!d; s/.*[\">]\([^\"<>]*\)[\"<].*/\1/; p; q }' "${x}"/install.rdf)" \
-		&& [ -n "${emid}" ] || die "failed to determine extension id"
-	insinto "${MOZILLA_FIVE_HOME}/extensions/${emid}"
+	d="$(sed -n -e '/install-manifest/,$ { /em:id/!d; s/.*[\">]\([^\"<>]*\)[\"<].*/\1/; p; q }' "${x}"/install.rdf)" \
+		&& [ -n "${d}" ] || die "failed to determine extension id"
+	if [ -n "${MOZILLA_EXTENSIONS_DIRECTORY}" ]
+	then	d="${MOZILLA_EXTENSIONS_DIRECTORY}/${d}"
+		INST_EXTENSIONS+=("${d}")
+	else	d="${MOZILLA_FIVE_HOME}/extensions/${d}"
+	fi
+	insinto "${d}"
 	doins -r "${x}"/* || die "failed to copy extension"
 }
 

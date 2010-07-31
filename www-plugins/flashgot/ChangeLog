@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  31 Jul 2010; Martin Väth <martin@mvath.de>
+  Bump revision to force eclass upgrade.
+
 *flashgot-1.2.1.28 (25 Jul 2010)
 
   06 Jun 2010; Martin Väth <martin@mvath.de>
