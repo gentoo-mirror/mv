@@ -13,7 +13,7 @@
 #    If FILENAME is unset or empty, the last part of the last SRC_URI is used.
 # 3. Default functions for installation for all mozilla type browsers.
 
-# @ECLASS-VARIABLE: MOZILLAS
+# @ECLASS-VARIABLE: MV_MOZ_MOZILLAS
 # @DESCRIPTION:
 # If this variables is set to the empty value, no default install functions
 # are defined. Otherwise, the value of this variable should be
@@ -21,24 +21,26 @@
 # or a subset of these.
 # The eclass will then install the extension for all these mozillas,
 # set corresponding dependencies and print corresponding messages.
-: ${MOZILLAS="firefox icecat seamonkey"}
+: ${MV_MOZ_MOZILLAS="firefox icecat seamonkey"}
 
-# @ECLASS-VARIABLE: MOZILLA_COMMON_EXTENSIONS
+# @ECLASS-VARIABLE: MV_MOZ_EXTDIR
 # @DESCRIPTION:
 # If this variable has the special value "*", the extension is copied directly
 # into the extension directory of the installed MOZILLA's.
 # Otherwise, only symlinks are made in that directory, and the extension is
-# installed only once into MOZILLA_COMMON_EXTENSIONS (a default directory is
-# chosen if MOZILLA_COMMON_EXTENSIONS is empty).
+# installed only once into MV_MOZ_EXTDIR (a default directory is
+# chosen if MV_MOZ_EXTDIR is empty).
 # If this variable has the special value "?" (default), it acts like "*" or
-# "" depending on whether MOZILLAS applies to more than 1 installed mozilla
-# or not.
-: ${MOZILLA_COMMON_EXTENSIONS="?"}
+# "" depending on whether MV_MOZ_MOZILLAS applies to more than 1 installed
+# mozilla or not.
+: ${MV_MOZ_EXTDIR="?"}
 
 inherit multilib
 
-case "${MOZILLAS}" in
+case "${MV_MOZ_MOZILLAS}" in
 ''|icecat)
+# We have certainly at most one browser
+	MV_MOZ_EXTDIR="*"
 	RDEPEND=""
 	RDEPEND_END="";;
 *)
@@ -46,19 +48,19 @@ case "${MOZILLAS}" in
 	RDEPEND_END="
 )";;
 esac
-case "${MOZILLAS}" in
+case "${MV_MOZ_MOZILLAS}" in
 *fire*)
 	RDEPEND="${RDEPEND}
 	>=www-client/firefox-3.6
 	>=www-client/firefox-bin-3.6";;
 esac
-case "${MOZILLAS}" in
+case "${MV_MOZ_MOZILLAS}" in
 *sea*)
 	RDEPEND="${RDEPEND}
 	>=www-client/seamonkey-2
 	>=www-client/seamonkey-bin-2";;
 esac
-case "${MOZILLAS}" in
+case "${MV_MOZ_MOZILLAS}" in
 *ice*)
 	RDEPEND="${RDEPEND}
 	>=www-client/icecat-3.6";;
@@ -68,6 +70,8 @@ RDEPEND="${RDEPEND}${RDEPEND_END}"
 DEPEND="app-arch/unzip"
 [ -n "${RDEPEND}" ] && DEPEND="${DEPEND}
 ${RDEPEND}"
+
+[ "${MV_MOZ_EXTDIR}" = "*" ] || IUSE="symlink_extensions"
 
 mv_mozextension_src_unpack () {
 	local i
@@ -92,7 +96,7 @@ mv_mozextension_install () {
 
 mv_mozextension_calc () {
 	local i
-	case "${MOZILLAS}" in
+	case "${MV_MOZ_MOZILLAS}" in
 		${1}) false;;
 	esac && return
 	i="$(best_version "${2}")" && [ -n "${i}" ] || return
@@ -111,7 +115,7 @@ mv_mozextension_src_install () {
 	mv_mozextension_calc "*sea*" "www-client/seamonkey" "${b}seamonkey"
 	mv_mozextension_calc "*sea*" "www-client/seamonkey-bin" "/opt/seamonkey"
 	[ ${#MV_MOZ_DIR[@]} -ne 0 ] || die "no supported mozilla is installed"
-	d="${MOZILLA_COMMON_EXTENSIONS}"
+	d="${MV_MOZ_EXTDIR}"
 	if [ "${d}" = "?" ]
 	then	if [ ${#MV_MOZ_PKG[@]} -gt 1 ]
 		then	d=""
@@ -119,7 +123,7 @@ mv_mozextension_src_install () {
 		fi
 	fi
 	MV_MOZ_SYM=()
-	if [ "${d}" = "*" ]
+	if [ "${d}" = "*" ] || ! use symlink_extensions
 	then	MV_MOZ_CPY=:
 	else	MV_MOZ_CPY=false
 		if [ -n "${d}" ]
@@ -181,12 +185,16 @@ mv_mozextension_pkg_postinst () {
 	for i in ${MV_MOZ_PKG[@]}
 	do	elog "	${i}"
 	done
-	elog
-	elog "When you install/uninstall/reemerge some of: ${MOZILLAS}"
+	elog "When you install/uninstall/reemerge some of: ${MV_MOZ_MOZILLAS}"
 	elog "you might need to reemerge ${CATEGORY}/${PN}"
+	${MV_MOZ_CPY} || {
+		elog
+		elog "The extension was installed using symlinks. This saves space but may require"
+		elog "to remove ~/.mozilla/*/*/extensions.ini for each browser restart."
+	}
 }
 
-if [ -n "${MOZILLAS}" ]
+if [ -n "${MV_MOZ_MOZILLAS}" ]
 then	EXPORT_FUNCTIONS src_install pkg_preinst pkg_postinst
 fi
 

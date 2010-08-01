@@ -6,4 +6,7 @@
 	<email>martin@mvath.de</email>
 	<name>Martin Väth</name>
 </maintainer>
+<use>
+	<flag name="flash">Pulls in dependency on www-plugins/adobe-flash.</flag>
+</use>
 </pkgmetadata>

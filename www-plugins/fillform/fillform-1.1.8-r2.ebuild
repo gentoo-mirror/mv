@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="3"
-MOZILLAS="firefox icecat"
+MV_MOZ_MOZILLAS="firefox icecat"
 inherit mv_mozextension
 RESTRICT="mirror"
 
