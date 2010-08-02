@@ -1,1 +1,2 @@
-symlink_extensions - Use symlinks to install data for firefox/icecat/seamonkey extensions only once. This may require to remove ~/.mozilla/*/*/extensions.ini at a restart of the browser.
+copy_extensions - Copy extensions for each firefox/icecat/seamonkey separately instead of using hardlinks. This may be necessary if you have e.g. /opt and /usr on different partitions or if cp -RPl is not supported by your system.
+symlink_extensions - Use symlinks for extensions of firefox/icecat/seamonkey instead of hardlinks or copies. This may require to remove ~/.mozilla/*/*/extensions.ini at each restart of the browser.
