@@ -95,25 +95,26 @@ mv_mozextension_install () {
 }
 
 mv_mozextension_calc () {
-	local i
+	local v
 	case "${MV_MOZ_MOZILLAS}" in
 		${1}) false;;
 	esac && return
-	i="$(best_version "${2}")" && [ -n "${i}" ] || return
-	MV_MOZ_PKG+=("${i}")
+	v="$(best_version "${2}")" && [ -n "${v}" ] || return
+	MV_MOZ_PKG+=("${v}")
 	MV_MOZ_DIR+=("${3}")
 }
 
 mv_mozextension_src_install () {
-	local b d i j s
+	local b d e i j k l s
 	MV_MOZ_PKG=()
 	MV_MOZ_DIR=()
-	b="/usr/$(get_libdir)/"
+	b="${EPREFIX%/}/usr/$(get_libdir)/"
+	e="${EPREFIX%/}/opt/"
 	mv_mozextension_calc "*fire*" "www-client/firefox" "${b}mozilla-firefox"
-	mv_mozextension_calc "*fire*" "www-client/firefox-bin" "/opt/firefox"
+	mv_mozextension_calc "*fire*" "www-client/firefox-bin" "${e}firefox"
 	mv_mozextension_calc "*ice*" "www-client/icecat" "${b}icecat"
 	mv_mozextension_calc "*sea*" "www-client/seamonkey" "${b}seamonkey"
-	mv_mozextension_calc "*sea*" "www-client/seamonkey-bin" "/opt/seamonkey"
+	mv_mozextension_calc "*sea*" "www-client/seamonkey-bin" "${e}seamonkey"
 	[ ${#MV_MOZ_DIR[@]} -ne 0 ] || die "no supported mozilla is installed"
 	d="${MV_MOZ_EXTDIR}"
 	if [ "${d}" = "?" ]
@@ -134,12 +135,12 @@ mv_mozextension_src_install () {
 	fi
 	use copy_extensions || MV_MOZ_LNK=:
 	for i in "${MV_MOZ_DIR[@]}"
-	do	b="${i}/extensions"
-		${MV_MOZ_CPY} && mv_mozextension_install "${b}"
-		for j in "${MV_MOZ_INS[@]}"
-		do	d="${b}/${j##*/}"
-			MV_MOZ_SYM+=("${d}")
-			${MV_MOZ_CPY} || dosym "${EROOT%/}${j}" "${d}"
+	do	j="${i}/extensions"
+		${MV_MOZ_CPY} && mv_mozextension_install "${j}"
+		for k in "${MV_MOZ_INS[@]}"
+		do	l="${j}/${k##*/}"
+			MV_MOZ_SYM+=("${l}")
+			${MV_MOZ_CPY} || dosym "${ROOT%/}${k}" "${l}"
 		done
 	done
 }
@@ -148,7 +149,7 @@ mv_mozextension_pkg_preinst () {
 	local i j
 	einfo "checking for switching between dirs and symlinks"
 	for i in "${MV_MOZ_SYM[@]}"
-	do	j="${ROOT%/}${EPREFIX}${i}"
+	do	j="${ROOT%/}${i}"
 # There are two forms of installation:
 # (1) symlink mozilla-dir/extensions/X -> $MOZILLA_EXTENSIONS_DIRECTORY/X
 # (2) data in mozilla-dir/extensions/X
@@ -254,7 +255,7 @@ xpi_install () {
 	else	d="${MOZILLA_FIVE_HOME}/extensions/${d}"
 	fi
 	test -d "${D}${d}" || dodir "${d}" || die "failed to create ${d}"
-	${MV_MOZ_LNK} && cp -RPl -- "${x}"/* "${D}/${d}" || {
+	${MV_MOZ_LNK} && cp -RPl -- "${x}"/* "${D}${d}" || {
 		${MV_MOZ_LNK} && \
 			ewarn "Failed to hardlink extension. Falling back to USE=copy_extension"
 		insinto "${d}" && doins -r "${x}"/*
