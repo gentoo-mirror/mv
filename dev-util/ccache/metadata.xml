@@ -10,4 +10,7 @@
 	ccache acts as a caching pre-processor to C/C++ compilers, improving
 	compilation time when recompiling previously compiled source.
 </longdescription>
+<use>
+	<flag name="defaults">Set some default environment variables in /etc/env.d/98ccache</flag>
+</use>
 </pkgmetadata>

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
+EAPI="3"
+
 inherit multilib
 RESTRICT="mirror"
 
@@ -14,32 +16,34 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+defaults"
 
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}"
 
 do_links() {
 	local a b
-	insinto "/usr/$(get_libdir)/ccache/bin"
 	for a in gcc c++ g++
 	do	for b in "${CHOST}"- ''
-		do	dosym /usr/bin/ccache "/usr/$(get_libdir)/ccache/bin/${b}${a}"
+		do	dosym "${EROOT%/}/usr/bin/ccache" \
+			"${EPREFIX%/}/usr/$(get_libdir)/ccache/bin/${b}${a}"
 		done
 	done
 }
 
 src_install() {
-	echo 'CCACHE_SLOPPINESS="file_macro,time_macros,include_file_mtime"
+	if use defaults
+	then	echo 'CCACHE_SLOPPINESS="file_macro,time_macros,include_file_mtime"
 CCACHE_COMPRESS=1' >"${S}/98ccache"
-	doenvd "${S}/98ccache"
+		doenvd "${S}/98ccache"
+	fi
 	dobin ccache || die
 	doman ccache.1
 	dodoc README.txt NEWS.txt
 
 	diropts -m0755
-	dodir "/usr/$(get_libdir)/ccache/bin"
-	keepdir "/usr/$(get_libdir)/ccache/bin"
+	dodir "${EPREFIX%/}/usr/$(get_libdir)/ccache/bin"
+	keepdir "${EPREFIX%/}/usr/$(get_libdir)/ccache/bin"
 
 	dobin "${FILESDIR}"/ccache-config || die
 }
@@ -56,6 +60,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	local i
 	# nuke broken symlinks from previous versions that shouldn't exist
 	for i in cc "${CHOST}"-cc
 	do	test -L "${ROOT}/usr/$(get_libdir)/ccache/bin/${i}" && \
@@ -75,11 +80,13 @@ pkg_postinst() {
 	elog "If you are upgrading from an older version than 3.x you should run"
 	elog "	CCACHE_DIR=\"${CCACHE_DIR:-${PORTAGE_TMPDIR}/ccache}\" ccache -C"
 	elog "You should do the same when you change the gcc version, since"
-	elog "cache's compiler check acts in gentoo only on gentoo's gcc wrapper."
+	elog "ccache's compiler check acts in gentoo only on gentoo's gcc wrapper."
 	elog "It can lead to strange errors when you forget to do this after a"
 	elog "compiler change."
-	elog
-	elog "Observe that some default choices are made in /etc/env.d/98ccache"
+	if use defaults
+	then	elog
+		elog "Observe that some default choices are made in /etc/env.d/98ccache"
+	fi
 
 	case "${PORTAGE_TMPDIR}/portage/*" in
 		"${CCACHE_BASEDIR:-none}"/*) :;;
