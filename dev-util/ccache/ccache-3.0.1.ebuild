@@ -79,10 +79,6 @@ pkg_postinst() {
 	elog
 	elog "If you are upgrading from an older version than 3.x you should run"
 	elog "	CCACHE_DIR=\"${CCACHE_DIR:-${PORTAGE_TMPDIR}/ccache}\" ccache -C"
-	elog "You should do the same when you change the gcc version, since"
-	elog "ccache's compiler check acts in gentoo only on gentoo's gcc wrapper."
-	elog "It can lead to strange errors when you forget to do this after a"
-	elog "compiler change."
 	if use defaults
 	then	elog
 		elog "Observe that some default choices are made in /etc/env.d/98ccache"
