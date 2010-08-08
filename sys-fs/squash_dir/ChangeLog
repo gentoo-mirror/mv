@@ -2,44 +2,57 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+squash_dir-10.10 (08 Aug 2010)
+
+  08 Aug 2010; Martin Väth <martin@mvath.de>
+  Version bump to make cd -P tacit.
+
+squash_dir-10.9 (20 Jul 2010)
+
   20 Jul 2010; Martin Väth <martin@mvath.de>
-  +squash_dir-10.9.ebuild -squash_dir-10.8.ebuild:
   Version bump to provide workaround if readlink command is missing
 
+squash_dir-10.6 (02 Jun 2010)
+
   02 Jun 2010; Martin Väth <martin@mvath.de>
-  +squash_dir-10.8.ebuild -squash_dir-10.7.ebuild:
   Version bump to support modified syntax of unionfs-fuse
 
-  23 May 2010; Martin Väth <martin@mvath.de>
-  +squash_dir-10.7.ebuild -squash_dir-10.6.ebuild:
-  Version bump to fix regression.
+squash_dir-10.7 (23 Mar 2010)
 
   23 May 2010; Martin Väth <martin@mvath.de>
-  +squash_dir-10.6.ebuild -squash_dir-10.5.ebuild:
+  Version bump to fix regression.
+
+squash_dir-10.6 (23 Mar 2010)
+
+  23 May 2010; Martin Väth <martin@mvath.de>
   Version bump. Now "stop" (umount) should be more reliable, and a second
   "stop" might succeed, making "zap" unnecessary in many cases.
+
+squash_dir-10.5 (20 May 2010)
 
   22 May 2010; Martin Väth <martin@mvath.de>
   Do not require >=unionfs-fuse-0.25_alpha, but print a message
   recommending it if an earlier version is used.
 
   20 May 2010; Martin Väth <martin@mvath.de>
-  +squash_dir-10.5.ebuild -squash_dir-10.4.ebuild:
   Version bump. Depend on >unionfs-fuse-0.24
 
+squash_dir-10.4 (28 Apr 2010)
+
   28 Apr 2010; Martin Väth <martin@mvath.de>
-  +squash_dir-10.4.ebuild -squash_dir-10.3.ebuild:
   Version bump because of a stupid automake bug.
 
+squash_dir-10.3 (27 Apr 2010)
+
   27 Apr 2010; Martin Väth <martin@mvath.de>
-  +squash_dir-10.3.ebuild -squash_dir-10.2.ebuild:
   Version bump. Support USE=readonly, making USE=+unionfs-fuse obsolete.
   Remove USE=hack-squash-utils and warn for previous installs.
   Recommend sys-fs/squashfs-tools[progress-redirect] from mv overlay.
+
+squash_dir-10.3 (28 Mar 2010)
 
   01 Apr 2010; Martin Väth <martin@mvath.de>
   Update tarball without revbump (remove ebuild from tarball).
 
   28 Mar 2010; Martin Väth <martin@mvath.de>
-  squash_dir-10.2.ebuild:
   import with minor changes from a personal overlay.
