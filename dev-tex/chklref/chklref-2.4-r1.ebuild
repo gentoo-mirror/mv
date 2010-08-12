@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="3"
-inherit latex-package
+inherit latex-package eutils
 RESTRICT="mirror"
 
 DESCRIPTION="Finds out useless references in latex files or numbered environments that should not be"
@@ -13,20 +13,24 @@ SRC_URI="http://www-ljk.imag.fr/membres/Jerome.Lelong/soft/chklref/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+citations"
 
 RDEPEND="virtual/latex-base
 	dev-lang/perl"
 DEPEND="${RDEPEND}"
 
-src_configure() {
+src_prepare () {
+	use citations && epatch "${FILESDIR}"/citations.patch
+}
+
+src_configure () {
 	econf --docdir="${EPREFIX}/usr/share/doc/${PF}"
 }
 
-src_compile() {
+src_compile () {
 	emake || die "emake failed"
 }
 
-src_install() {
+src_install () {
 	emake prefix="${ED}/usr" install || die "emake install failed"
 }

@@ -4,6 +4,9 @@
 
 *chkltex-2.4 (23 Apr 2010)
 
+  12 Aug 2010; Martin Väth <martin@mvath.de>
+  Add a patch to find uncited bibliography entries
+
   27 Apr 2010; Martin Väth <martin@mvath.de>
   Use ${ED} in install phase
 
