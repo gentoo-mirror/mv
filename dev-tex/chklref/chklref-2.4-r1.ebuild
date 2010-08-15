@@ -19,18 +19,18 @@ RDEPEND="virtual/latex-base
 	dev-lang/perl"
 DEPEND="${RDEPEND}"
 
-src_prepare () {
+src_prepare() {
 	use citations && epatch "${FILESDIR}"/citations.patch
 }
 
-src_configure () {
+src_configure() {
 	econf --docdir="${EPREFIX}/usr/share/doc/${PF}"
 }
 
-src_compile () {
+src_compile() {
 	emake || die "emake failed"
 }
 
-src_install () {
+src_install() {
 	emake prefix="${ED}/usr" install || die "emake install failed"
 }

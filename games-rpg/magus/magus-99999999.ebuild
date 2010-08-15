@@ -49,7 +49,7 @@ RDEPEND="${RDEPEND}
 
 if ${LIVE_VERSION}
 then
-src_unpack () {
+src_unpack() {
 	monotone_fetch
 	monotone_co "" "manuproc.berlios.de/ManuProC_Base"
 	monotone_co "" "manuproc.berlios.de/GtkmmAddons"
@@ -59,7 +59,7 @@ src_unpack () {
 }
 fi
 
-src_sed () {
+src_sed() {
 	local short file ori ignore remove
 	ignore=false
 	remove=false
@@ -88,7 +88,7 @@ src_sed () {
 	return 0
 }
 
-src_patch () {
+src_patch() {
 	local browser i
 	einfo
 	einfo "Various patches:"
@@ -111,11 +111,11 @@ src_patch () {
 	src_sed midgard/src/table_optionen_glade.cc -e "s#mozilla#${browser}#"
 }
 
-my_cd () {
+my_cd() {
 	cd -- "${S}/${1}" >/dev/null || die "cd ${1} failed"
 }
 
-my_autoreconf () {
+my_autoreconf() {
 	einfo
 	einfo "eautoreconf ${1}:"
 	einfo
@@ -125,7 +125,7 @@ my_autoreconf () {
 	eautoreconf
 }
 
-src_prepare () {
+src_prepare() {
 	local i
 	src_patch
 	for i in "${S}"/*
@@ -133,7 +133,7 @@ src_prepare () {
 	done
 }
 
-my_conf () {
+my_conf() {
 	einfo
 	einfo "configuring ${1}"
 	einfo
@@ -147,7 +147,7 @@ my_conf () {
 	econf ${COMMON_CONF} "${@}"
 }
 
-my_make () {
+my_make() {
 	einfo
 	einfo "making ${*}"
 	einfo
@@ -155,7 +155,7 @@ my_make () {
 	emake || die "emake in ${1} failed"
 }
 
-my_confmake () {
+my_confmake() {
 	# It is unfortunate that we must build here,
 	# but some ./configure's require make in other directories_
 	my_make "GtkmmAddons" "(needed for configuring ManuProC_Widget and midgard)"
@@ -165,23 +165,23 @@ my_confmake () {
 	my_conf "midgard"
 }
 
-src_configure () {
+src_configure() {
 	filter-flags -flto -fwhole-program
 	my_conf "ManuProC_Base"
 	my_conf "GtkmmAddons"
 	my_confmake
 }
 
-src_compile () {
+src_compile() {
 	my_make "midgard"
 }
 
-my_install () {
+my_install() {
 	my_cd "${1}"
 	emake DESTDIR="${ED}" install || die "make install in ${1} failed"
 }
 
-src_install () {
+src_install() {
 	local myicon myres
 	my_install "ManuProC_Base"
 	rm -rf -- "${ED}"/usr/include

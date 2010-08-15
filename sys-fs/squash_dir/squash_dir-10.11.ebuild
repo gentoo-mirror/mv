@@ -25,11 +25,11 @@ RDEPEND="sys-fs/squashfs-tools
 	) )"
 DEPEND=">=sys-devel/autoconf-2.65"
 
-src_prepare () {
+src_prepare() {
 	eautoreconf
 }
 
-src_configure () {
+src_configure() {
 	econf --docdir="${EPREFIX}/usr/share/doc/${PF}"
 }
 
@@ -38,7 +38,7 @@ src_install() {
 	prepalldocs
 }
 
-check_for_obsolete () {
+check_for_obsolete() {
 	local a
 	a="${EPREFIX}/etc/portage/env/sys-fs/squashfs-tools"
 	test -e "${a}" && grep -q "squash_dir's hack" "${a}" || return 0
@@ -50,7 +50,7 @@ check_for_obsolete () {
 	return 1
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	if check_for_obsolete && \
 		! has_version sys-fs/squashfs-tools[progress-redirect]
 	then	ewarn "For better output of ${PN}, it is recommended to install"
@@ -65,7 +65,7 @@ pkg_postinst () {
 	:
 }
 
-pkg_postrm () {
+pkg_postrm() {
 	check_for_obsolete
 	:
 }

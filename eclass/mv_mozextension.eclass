@@ -73,7 +73,7 @@ ${RDEPEND}"
 
 [ "${MV_MOZ_EXTDIR}" = "*" ] || IUSE="copy_extensions symlink_extensions"
 
-mv_mozextension_src_unpack () {
+mv_mozextension_src_unpack() {
 	local i
 	if [ -z "${FILENAME}" ]
 	then	for i in ${SRC_URI}
@@ -87,14 +87,14 @@ EXPORT_FUNCTIONS src_unpack
 
 declare -a MV_MOZ_INS MV_MOZ_PKG MV_MOZ_CPY MV_MOZ_DIR
 
-mv_mozextension_install () {
+mv_mozextension_install() {
 	local MOZILLA_EXTENSIONS_DIRECTORY
 	MOZILLA_EXTENSIONS_DIRECTORY="${1}"
 	MV_MOZ_INS=()
 	xpi_install_dirs
 }
 
-mv_mozextension_calc () {
+mv_mozextension_calc() {
 	local v
 	case "${MV_MOZ_MOZILLAS}" in
 		${1}) false;;
@@ -104,7 +104,7 @@ mv_mozextension_calc () {
 	MV_MOZ_DIR+=("${3}")
 }
 
-mv_mozextension_src_install () {
+mv_mozextension_src_install() {
 	local b d e i j k l s
 	MV_MOZ_PKG=()
 	MV_MOZ_DIR=()
@@ -145,7 +145,7 @@ mv_mozextension_src_install () {
 	done
 }
 
-mv_mozextension_pkg_preinst () {
+mv_mozextension_pkg_preinst() {
 	local i j
 	einfo "checking for switching between dirs and symlinks"
 	for i in "${MV_MOZ_SYM[@]}"
@@ -181,7 +181,7 @@ mv_mozextension_pkg_preinst () {
 	done
 }
 
-mv_mozextension_pkg_postinst () {
+mv_mozextension_pkg_postinst() {
 	local i
 	[ "${#MV_MOZ_PKG[@]}" -ge 1 ] || die "no supported mozilla is installed"
 	elog "${CATEGORY}/${PN} has been installed for the following packages:"
@@ -201,7 +201,7 @@ if [ -n "${MV_MOZ_MOZILLAS}" ]
 then	EXPORT_FUNCTIONS src_install pkg_preinst pkg_postinst
 fi
 
-xpi_unpack () {
+xpi_unpack() {
 	local xpi srcdir
 
 	# Not gonna use ${A} as we are looking for a specific option being passed to function
@@ -239,7 +239,7 @@ xpi_unpack () {
 	done
 }
 
-xpi_install () {
+xpi_install() {
 	local d x
 
 	# You must tell xpi_install which dir to use
@@ -269,7 +269,7 @@ xpi_install () {
 # This function is called by mv_mozextension_src_install
 # and should be overridden if the paths do not match:
 # It just should call xpi_install with the correct argument(s)
-xpi_install_dirs () {
+xpi_install_dirs() {
 	local d
 	for d in "${WORKDIR}"/*
 	do	[ -n "${d}" ] && test -d "${d}" && xpi_install "${d}"

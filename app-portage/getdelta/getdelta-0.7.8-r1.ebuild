@@ -17,11 +17,11 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="app-portage/deltup
 	dev-util/bdelta"
 
-src_prepare () {
+src_prepare() {
 	epatch "${FILESDIR}"/eapi2.patch
 }
 
-src_install () {
+src_install() {
 	sed -i -e "s:/bin/sh:/bin/bash:" "${WORKDIR}"/getdelta.sh || die
 	dobin "${WORKDIR}"/getdelta.sh || die
 }

@@ -98,7 +98,7 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 #   repo_uri - a repository URI. If empty defaults to EMTN_REPO_URI.
 #   glob     - The glob for URI. If empty defaults to EMTN_GLOB.
 #   db       - the database filename. If empty defaults to EMTN_DB.
-monotone_fetch () {
+monotone_fetch() {
 	local repo_uri db db_full
 	if [ ${#} -ge 1 ]
 	then	repo_uri=${1:-"${EMTN_REPO_URI}"}
@@ -152,7 +152,7 @@ monotone_fetch () {
 #   revisionargs - Args for the revision to checkout. If empty defaults to
 #                EMTN_REVISIONARGS.
 #                The special value "head" means to use the first head.
-monotone_co () {
+monotone_co() {
 	local db modulepath moduledir r
 	if [ ${#} -ge 1 ]
 	then	db=${1:-"${EMTN_DB}"}
@@ -195,7 +195,7 @@ monotone_co () {
 # @DESCRIPTION:
 # Call this when all modules are checked out: Removes the local database.
 # The argument db defaults to EMTN_DB.
-monotone_finish () {
+monotone_finish() {
 	if [ ${#} -ge 1 ]
 	then	db=${1:-"${EMTN_DB}"}
 			shift
