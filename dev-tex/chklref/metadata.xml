@@ -6,7 +6,4 @@
 	<email>martin@mvath.de</email>
 	<name>Martin Väth</name>
 </maintainer>
-<use>
-	<flag name="citations">Add a patch to find uncited bibliography entries</flag>
-</use>
 </pkgmetadata>

@@ -1,0 +1,24 @@
+--- src/chklref.in
++++ src/chklref.in
+@@ -64,18 +64,16 @@
+ basetexfile=${1##*/}
+ basetexfile=${basetexfile%.tex}
+ dirtexfile=${1%/*}
+-if [ ${dirtexfile} == $1 ]; then dirtexfile="."; fi
++if [ "${dirtexfile}" = "$1" ]; then dirtexfile="."; fi
+ 
+-cwd=${PWD}
+-cd ${dirtexfile}
++cd -- "${dirtexfile}"
+ 
+ printf "Running $latex_cmd on $basetexfile.tex to collect labels,
+ references and environment declarations\n\n"
+ $latex_cmd --interaction errorstopmode "${basetexfile}" > "$out" 2>&1
+ rm -f -- "$basetexfile".tex.chk
+ $latex_cmd --interaction errorstopmode --jobname "$basetexfile" \
+-    '\RequirePackage{chklref}\input' "{$basetexfile.tex}" &> $out
++    '\RequirePackage{chklref}\input' "{$basetexfile.tex}" > "$out" 2>&1
+ $PERL "$SCRIPTSDIR"/chkparser "$basetexfile".tex.chk
+ [ $debug -ne 0 ] || rm -f -- "$basetexfile".tex.chk
+ 
+-cd ${cwd}

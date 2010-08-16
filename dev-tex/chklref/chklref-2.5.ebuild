@@ -13,24 +13,16 @@ SRC_URI="http://www-ljk.imag.fr/membres/Jerome.Lelong/soft/chklref/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+citations"
+IUSE=""
 
 RDEPEND="virtual/latex-base
 	dev-lang/perl"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	use citations && epatch "${FILESDIR}"/citations.patch
-}
-
-src_configure() {
-	econf --docdir="${EPREFIX}/usr/share/doc/${PF}"
-}
-
-src_compile() {
-	emake || die "emake failed"
+	epatch "${FILESDIR}"/posix.patch
 }
 
 src_install() {
-	emake prefix="${ED}/usr" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 }
