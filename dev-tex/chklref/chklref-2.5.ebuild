@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="3"
-inherit latex-package eutils
+inherit latex-package
 RESTRICT="mirror"
 
 DESCRIPTION="Finds out useless references in latex files or numbered environments that should not be"
@@ -18,10 +18,6 @@ IUSE=""
 RDEPEND="virtual/latex-base
 	dev-lang/perl"
 DEPEND="${RDEPEND}"
-
-src_prepare() {
-	epatch "${FILESDIR}"/posix.patch
-}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

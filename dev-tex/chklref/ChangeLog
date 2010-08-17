@@ -4,6 +4,9 @@
 
 *chkltex-2.5 (16 Aug 2010)
 
+  17 Aug 2010; Martin Väth <martin@mvath.de>
+  Redigest. Removing POSIX patch since it was put into upstream tarball
+
   16 Aug 2010; Martin Väth <martin@mvath.de>
   Bump. Removing patch since it is now in upstream package :)
   Cleanup ebuild since DISTDIR is now supported by upstream.
