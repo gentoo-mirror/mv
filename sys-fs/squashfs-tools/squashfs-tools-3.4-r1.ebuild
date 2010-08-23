@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
+EAPI="3"
+
 inherit toolchain-funcs eutils
 
 MY_PV=${PV/_p/-r}
@@ -18,9 +20,7 @@ RDEPEND="sys-libs/zlib"
 
 S=${WORKDIR}/squashfs${MY_PV}/squashfs-tools
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e 's:-O2:$(CFLAGS):' \
 		-e '/-lz/s:$: $(LDFLAGS):' \
