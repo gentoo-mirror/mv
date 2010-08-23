@@ -2,17 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="3"
 
 EGIT_REPO_URI="http://git.c3sl.ufpr.br/pub/scm/aufs/aufs2-standalone.git"
 EGIT_PROJECT="aufs2"
 # BRANCH/COMMIT will be overridden in pkg_setup (according to kernel version)
 EGIT_BRANCH="aufs2"
 EGIT_COMMIT="aufs2"
-if [ -n "${EGIT_OFFLINE:-${ESCM_OFFLINE}}" ]
-then	EGIT_PRUNE=false
-else	EGIT_PRUNE=true
-fi
+[ -n "${EGIT_OFFLINE:-${ESCM_OFFLINE}}" ] || EGIT_PRUNE=true
 
 inherit git linux-info eutils
 
