@@ -4,6 +4,9 @@
 
 *getdelta-0.7.8 (07 Apr 2010)
 
+  26 Aug 2010; Martin Väth <martin@mvath.de>
+  Use local name also for dtu file. Bump to force upgrade.
+
   30 Jun 2010; Martin Väth <martin@mvath.de>
   Fix typo in FETCHCOMMAND description
 
