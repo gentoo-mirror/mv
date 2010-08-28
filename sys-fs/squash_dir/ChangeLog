@@ -2,10 +2,16 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
-squash_dir-10.10 (08 Aug 2010)
+squash_dir-10.12 (28 Aug 2010)
 
-  08 Aug 2010; Martin Väth <martin@mvath.de>
-  Version bump to make cd -P tacit.
+  28 Aug 2010; Martin Väth <martin@mvath.de>
+  Version bump. Improve squash-dir output
+
+squash_dir-10.11 (15 Aug 2010)
+
+  15 Aug 2010; Martin Väth <martin@mvath.de>
+  Version bump. Rename squash-dir -> squash_dir.
+  Omit spaces in function definition (more compatible).
 
 squash_dir-10.9 (20 Jul 2010)
 
