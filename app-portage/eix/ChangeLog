@@ -2,8 +2,13 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*eix-0.21.0 (05 Sep 2010)
+  04 Sep 2010; Martin Väth <martin@mvath.de>
+  Version bump.
+
 *eix-0.20.7 (03 Sep 2010)
 
   03 Sep 2010; Martin Väth <martin@mvath.de>
   Copy from tree and remove previous ChangeLog.
   I will bump here until Jeremy has time to bump in the main tree.
+
