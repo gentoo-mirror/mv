@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*eix-0.22.1 (11 Sep 2010)
+  11 Sep 2010; Martin Väth <martin@mvath.de>
+  Versiom bump
+
 *eix-0.22.0 (09 Sep 2010)
   10 Sep 2010; Martin Väth <martin@mvath.de>
   Patch for tempname compilation error with <gcc-4.5
