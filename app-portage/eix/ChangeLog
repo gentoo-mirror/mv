@@ -3,6 +3,9 @@
 # $Header $
 
 *eix-0.22.0 (09 Sep 2010)
+  10 Sep 2010; Martin Väth <martin@mvath.de>
+  Patch for tempname compilation error with <gcc-4.5
+
   09 Sep 2010; Martin Väth <martin@mvath.de>
   Version bump.
 

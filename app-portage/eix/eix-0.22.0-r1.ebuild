@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit multilib
+inherit multilib eutils
 RESTRICT="mirror"
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
@@ -23,6 +23,10 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	doc? ( dev-python/docutils )
 	nls? ( sys-devel/gettext )"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}"-typename.patch
+}
 
 src_configure() {
 	econf $(use_with bzip2) $(use_with sqlite) $(use_with doc rst) \
