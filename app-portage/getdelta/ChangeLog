@@ -4,6 +4,10 @@
 
 *getdelta-0.7.8 (07 Apr 2010)
 
+  14 Sep 2010; Martin Väth <martin@mvath.de>
+  Support alternative location of make.globals and both locations of make.conf
+  Bump to force upgrade.
+
   27 Aug 2010; Martin Väth <martin@mvath.de>
   Fix previous patch. Bump to force upgrade.
 
