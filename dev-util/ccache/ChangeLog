@@ -2,6 +2,11 @@
 # Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*ccache-3.1 (25 Sep 2010)
+
+  25 Sep 2010; Martin Väth <martin@mvath.de>
+  revbump to 3.1 and remove old. Add support for colorgcc and html doc.
+
   06 Aug 2010; Martin Väth <martin@mvath.de>
   Support EPREFIX and minor bugfixes. Introduce IUSE=defaults.
 

@@ -12,5 +12,6 @@
 </longdescription>
 <use>
 	<flag name="defaults">Set some default environment variables in /etc/env.d/98ccache</flag>
+	<flag name="colorgcc">Add the wrapper color-gcc for dev-util/colorgcc</flag>
 </use>
 </pkgmetadata>
