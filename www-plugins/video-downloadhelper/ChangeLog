@@ -2,6 +2,11 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*video-downloadhelper-4.8.1 (14 Oct 2010)
+
+  14 Oct 2010; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+
   01 Aug 2010; Martin Väth <martin@mvath.de>
   Bump revision to force eclass upgrade.
 
