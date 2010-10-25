@@ -4,6 +4,9 @@
 
 *form-history-control-1.2.7 (17 Oct 2010)
 
+  25 Oct 2010; Martin Väth <martin@mvath.de>
+  Bump properly. Remove old ebuild.
+
   17 Oct 2010; Martin Väth <martin@mvath.de>
   Bump version from sandbox. It is not keyworded, since I did not test it!
 
