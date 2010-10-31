@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  31 Oct 2010; Martin Väth <martin@mvath.de>
+  Fix description.
+
   28 Mar 2010; Martin Väth <martin@mvath.de>
   stardict-freedict-deu-eng-2.4.2.ebuild:
   import with minor changes from a personal overlay.
