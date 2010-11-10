@@ -32,13 +32,6 @@ do_links() {
 	done
 }
 
-src_prepare() {
-	# The "ar" test is broken in ccache-3.1 (this is fixed in later versions)
-	sed -i -e \
-		's/^if test -z "$ac_ct_AR"; then/if test -z "$AR"; then/' \
-		"${S}"/configure || die
-}
-
 src_install() {
 	local colorgcc_config
 	colorgcc_config=''

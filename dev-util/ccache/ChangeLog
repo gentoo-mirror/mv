@@ -2,6 +2,11 @@
 # Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*ccache-3.1.1 (10 Nov 2010)
+
+  10 Nov 2010; Martin Väth <martin@mvath.de>
+  revbump to 3.1.1 and remove old. Remove unneeded patch.
+
 *ccache-3.1 (25 Sep 2010)
 
   25 Sep 2010; Martin Väth <martin@mvath.de>
