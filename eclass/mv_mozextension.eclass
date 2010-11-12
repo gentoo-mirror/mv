@@ -231,6 +231,7 @@ xpi_unpack() {
 					cd -- "${WORKDIR}/${xpiname}" && \
 					unzip -qo -- "${srcdir}${xpi}" \
 						|| die "failed to unpack ${xpi}"
+				chmod -R a+rX,u+w,go-w -- "${WORKDIR}/${xpiname}"
 				;;
 			*)
 				einfo "unpack ${xpi}: file format not recognized. Ignoring."
