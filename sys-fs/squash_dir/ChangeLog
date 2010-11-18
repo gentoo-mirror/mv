@@ -2,10 +2,15 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+squash_dir-10.12 (18 Nov 2010)
+
+  18 Nov 2010; Martin Väth <martin@mvath.de>
+  Version bump. Introduce option -n to the squash_dir wrapper script
+
 squash_dir-10.12 (28 Aug 2010)
 
   28 Aug 2010; Martin Väth <martin@mvath.de>
-  Version bump. Improve squash-dir output
+  Version bump. Improve output of the squash_dir wrapper script
 
 squash_dir-10.11 (15 Aug 2010)
 
