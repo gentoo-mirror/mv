@@ -18,13 +18,13 @@ RamzswapEnableOpts() {
 }
 
 RamzswapEnable() {
-	eval 'RamzswapEnableOpts "/dev/ramzswap${1}" \
+	eval 'RamzswapEnableOpts "/dev/zram${1}" \
 "${RAMZSWAP_OPTS_'${1}'}" "${SWAPON_OPTS_'${1}'}"'
 }
 
 RamzswapDisable() {
-	einfo "Disabling swap /dev/ramzswap${1}..."
-	swapoff "/dev/ramzswap${1}" && rzscontrol "/dev/ramzswap${1}" --reset
+	einfo "Disabling swap /dev/zram${1}..."
+	swapoff "/dev/zram${1}" && rzscontrol "/dev/zram${1}" --reset
 	eend ${?}
 }
 
@@ -40,8 +40,8 @@ RamzswapParseFstab() {
 start() {
 	RamzswapDefaults
 	if [ "${LOAD_ON_START}" = "yes" ]
-	then	einfo "Loading ramzswap module..."
-		modprobe ramzswap num_devices=${NUM_DEVICES}
+	then	einfo "Loading zram module..."
+		modprobe zram num_devices=${NUM_DEVICES}
 		eend ${?}
 	fi
 
@@ -69,8 +69,8 @@ stop() {
 	done
 
 	if [ "${UNLOAD_ON_STOP}" = "yes" ]
-	then	einfo "Unloading ramzswap module..."
-		rmmod ramzswap
+	then	einfo "Unloading zram module..."
+		modprobe -r zram
 		eend ${?}
 	fi
 
@@ -86,7 +86,7 @@ info() {
 	RamzswapDefaults
 	i=0
 	while [ ${i} -lt "${NUM_DEVICES}" ]
-	do	rzscontrol "/dev/ramzswap${i}" --stats
+	do	rzscontrol "/dev/zram${i}" --stats
 		i=$(( ${i} + 1 ))
 	done
 	:

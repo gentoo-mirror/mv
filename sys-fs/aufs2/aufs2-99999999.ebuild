@@ -1,14 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header $
 
 EAPI="3"
 
 EGIT_REPO_URI="http://git.c3sl.ufpr.br/pub/scm/aufs/aufs2-standalone.git"
 EGIT_PROJECT="aufs2"
 # BRANCH/COMMIT will be overridden in pkg_setup (according to kernel version)
-EGIT_BRANCH="aufs2"
-EGIT_COMMIT="aufs2"
+EGIT_BRANCH="aufs2.1"
+EGIT_COMMIT="${EGIT_BRANCH}"
 [ -n "${EGIT_OFFLINE:-${ESCM_OFFLINE}}" ] || EGIT_PRUNE=true
 
 inherit git linux-info eutils
@@ -44,14 +44,15 @@ pkg_setup() {
 
 	if [ -n "${AUFS2BRANCH}" ]
 	then	EGIT_BRANCH="${AUFS2BRANCH}"
-	else	[ -n "${KV_PATCH}" ] && EGIT_BRANCH="aufs2-${KV_PATCH}"
+	else	[ -n "${KV_PATCH}" ] && EGIT_BRANCH="aufs2.1-${KV_PATCH}"
 	fi
 	elog
 	elog "Using aufs2 branch: ${EGIT_BRANCH}"
 	elog "If this guess for the branch is wrong, set AUFS2BRANCH."
-	elog "For example, to use the aufs2 branch for kernel version 2.6.30, use:"
-	elog "	AUFS2BRANCH=aufs2-30 emerge -1 aufs2"
-	elog "For the most current kernel it might be necessary to use"
+	elog "For example, to use the aufs2.1 branch for kernel version 2.6.36, use:"
+	elog "	AUFS2BRANCH=aufs2.1-36 emerge -1 aufs2"
+	elog "For the most current kernel it might be necessary to use one of"
+	elog "	AUFS2BRANCH=aufs2.1 emerge -1 aufs2"
 	elog "	AUFS2BRANCH=aufs2 emerge -1 aufs2"
 	msg=''
 	[ -n "${ESCM_OFFLINE}" ] && msg="${msg} ESCM_OFFLINE=''"
@@ -102,6 +103,7 @@ src_install() {
 	dodir "${k}/fs/aufs"
 	cp -pPR -- fs/aufs/* "${dk}/fs/aufs"
 	cp -pPR -- include "${dk}"
+	find "${dk}"/include -name Kbuild -type f -exec rm -v -- '{}' ';'
 	if use doc && test -e Documentation
 	then
 		cp -pPR -- Documentation "${dk}"
@@ -116,7 +118,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	local i
 	[ "${#my_patchlist[@]}" -eq 0 ] && {
 		cd -- "${KV_DIR}" >/dev/null 2>&1 && for i in *.patch *.diff
 		do	test -f "${i}" && my_patchlist+=("${i}")
@@ -125,10 +126,7 @@ pkg_postinst() {
 	if use kernel-patch
 	then
 		cd -- "${KV_DIR}" >/dev/null 2>&1 || die "cannot cd to ${KV_DIR}"
-		for i in "${my_patchlist[@]}"
-		do	test -f "${i}" || continue
-			use kernel-patch && epatch "${i}"
-		done
+		use kernel-patch && epatch "${my_patchlist[@]}"
 		elog "Your kernel has been patched. Cleanup and recompile it, selecting"
 	else
 		elog "You will have to apply the following patch to your kernel:"

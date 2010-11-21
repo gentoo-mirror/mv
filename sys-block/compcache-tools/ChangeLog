@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  21 Nov 2010; Martin Väth <martin@mvath.de>
+  Modify init.d files for kernel 2.6.36. Bump revision to force upgrade.
+
   10 Oct 2010; Martin Väth <martin@mvath.de>
   Bump to 0.6.2. Add init.d/conf.d files.
 
