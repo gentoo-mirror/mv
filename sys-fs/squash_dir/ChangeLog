@@ -2,7 +2,13 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
-squash_dir-10.12 (18 Nov 2010)
+squash_dir-10.14 (24 Nov 2010)
+
+  24 Nov 2010; Martin Väth <martin@mvath.de>
+  Version bump. Introduce MOUNT_AUFS_OPTS.
+  Introduce KILL_FILE and option -k to the squash_dir wrapper script
+
+squash_dir-10.13 (18 Nov 2010)
 
   18 Nov 2010; Martin Väth <martin@mvath.de>
   Version bump. Introduce option -n to the squash_dir wrapper script
