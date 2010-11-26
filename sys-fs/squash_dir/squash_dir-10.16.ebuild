@@ -13,7 +13,7 @@ SRC_URI="http://www.mathematik.uni-wuerzburg.de/~vaeth/gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="readonly"
+IUSE="readonly zsh-completion"
 
 RDEPEND="sys-fs/squashfs-tools
 	!readonly? ( || (
@@ -30,7 +30,8 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --docdir="${EPREFIX}/usr/share/doc/${PF}"
+	econf --docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		"$(use_with zsh-completion)"
 }
 
 src_install() {
