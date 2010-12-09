@@ -2,6 +2,11 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+squash_dir-10.16 (09 Dec 2010)
+
+  09 Dec 2010; Martin Väth <martin@mvath.de>
+  Version bump. Improve zsh-completion
+
 squash_dir-10.16 (27 Nov 2010)
 
   27 Nov 2010; Martin Väth <martin@mvath.de>
