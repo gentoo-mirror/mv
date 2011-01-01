@@ -69,5 +69,5 @@ LESS="-sFR -iMX --shift 5"' > 70less
 }
 
 pkg_postinst() {
-	einfo "lesspipe offers colorization options.  Run 'lesspipe.sh -h' for info."
+	einfo "lesspipe offers colorization options.  Run 'lesspipe -h' for info."
 }

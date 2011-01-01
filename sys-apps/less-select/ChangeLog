@@ -2,6 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
+*less-select-438.ebuild (01 Jan 2011)
+
+ 01 Jan 2011; Martin Väth <martin@mvath.de> :
+   Bump less version. Remove old ebuild.
+
 *less-select-436-r1.ebuild (30 Mar 2010)
 
   12 Jun 2010; Martin Väth <martin@mvath.de> :

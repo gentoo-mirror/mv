@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Preprocessor for 'less'. Used when this environment variable is set:
-# LESSOPEN="|lesspipe.sh %s"
+# LESSOPEN="|lesspipe %s"
 
 # TODO: handle compressed files better
 
@@ -107,7 +107,7 @@ lesspipe() {
 	*.tar.lz|*.tar.tlz|\
 	*.tar.lzma|*.tar.xz)
 		${DECOMPRESSOR} -- "$1" | tar tvvf -;;
-	*.tbz2|*.tbz|*.tgz|*.tlz)
+	*.tbz2|*.tbz|*.tgz|*.tlz|*.txz)
 		lesspipe "$1" "$1".tar.${1##*.t} ;;
 
 	### Misc archives ###
@@ -175,6 +175,10 @@ lesspipe() {
 		isoinfo -l ${iso_opts} -i "$1"
 		;;
 
+	### Encryption stuff ###
+	*.crl) openssl crl -hash -text -noout -in "$1" ;;
+	*.pem) openssl x509 -hash -text -noout -in "$1" ;;
+
 # May not be such a good idea :)
 #	### Device nodes ###
 #	/dev/[hs]d[a-z]*)
@@ -227,11 +231,11 @@ lesspipe() {
 }
 
 if [[ -z $1 ]] ; then
-	echo "Usage: lesspipe.sh <file>"
+	echo "Usage: lesspipe <file>"
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
 	cat <<-EOF
-		$Id: lesspipe.sh,v 1.40 2010/03/23 20:54:13 vapier Exp $
+		$Id: lesspipe.sh,v 1.43 2010/12/31 20:52:17 vapier Exp $
 		Copyright 2001-2010 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
@@ -241,11 +245,11 @@ elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	less -V
 elif [[ $1 == "-h" || $1 == "--help" ]] ; then
 	cat <<-EOF
-		lesspipe.sh: preproccess files before sending them to less
+		lesspipe: preproccess files before sending them to less
 
-		Usage: lesspipe.sh <file>
+		Usage: lesspipe <file>
 
-		lesspipe.sh specific settings:
+		lesspipe specific settings:
 		  LESSCOLOR env     - toggle colorizing of output (no/yes/always)
 		  LESSCOLORIZER env - program used to colorize output (default: code2color)
 		  LESSIGNORE        - list of extensions to ignore (don't do anything fancy)
@@ -254,8 +258,8 @@ elif [[ $1 == "-h" || $1 == "--help" ]] ; then
 		  ~/.lessfilter
 		One argument is passed to it: the file to display.
 
-		To use lesspipe.sh, simply add to your environment:
-		  export LESSOPEN="|lesspipe.sh %s"
+		To use lesspipe, simply add to your environment:
+		  export LESSOPEN="|lesspipe %s"
 
 		Run 'less --help' or 'man less' for more info
 	EOF
