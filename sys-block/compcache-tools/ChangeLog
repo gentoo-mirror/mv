@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/compcache-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
+
+  03 Jan 2011; Martin Väth <martin@mvath.de>
+  Bump to EAPI=4.
 
   21 Nov 2010; Martin Väth <martin@mvath.de>
   Modify init.d files for kernel 2.6.36. Bump revision to force upgrade.

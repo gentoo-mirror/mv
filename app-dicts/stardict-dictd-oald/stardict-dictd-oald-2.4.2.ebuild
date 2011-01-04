@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
+EAPI="4"
 DICT_PREFIX=""
-
 inherit stardict
 RESTRICT="mirror"
 

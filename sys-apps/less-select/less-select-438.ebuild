@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
+EAPI="4"
 inherit eutils
 
 DESCRIPTION="Excellent text file viewer, patched with additional selection feature"
@@ -21,34 +22,41 @@ DEPEND=">=sys-libs/ncurses-5.2
 
 S="${WORKDIR}/less-${PV}"
 
-MYSUBDIR="${S}/less-select-patch-${PATCHVER}"
+MYSUBDIR="./less-select-patch-${PATCHVER}"
 
 src_unpack() {
 	unpack "less-${PV}.tar.gz"
+	cp -- "${DISTDIR}"/code2color "${S}"
 	cd "${S}"
-	cp "${DISTDIR}"/code2color "${S}"/
-	epatch "${FILESDIR}"/code2color.patch
 	unpack "less-select-patch-${PATCHVER}.tar.gz"
-	mv "${MYSUBDIR}/INSTALL" "${MYSUBDIR}/README.less-select"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/code2color.patch
+	mv -- "${MYSUBDIR}/INSTALL" "${MYSUBDIR}/README.less-select"
 	if test -e "${MYSUBDIR}/less-${PV}-select.patch"
 	then	epatch "${MYSUBDIR}/less-${PV}-select.patch" || die "Patch less-${PV}-select failed"
 	else	epatch "${MYSUBDIR}/less-${PATCHVER}-select.patch" || die "Patch less-${PATCHVER}-select failed"
 	fi
 	"${MYSUBDIR}"/after-patch || die "${MYSUBDIR}/after-patch failed"
+	mv -- "${MYSUBDIR}/less-normal-key.src" "${MYSUBDIR}/lesskey.src"
 }
 
 yesno() { use $1 && echo yes || echo no ; }
-src_compile() {
+src_configure() {
 	export ac_cv_lib_ncursesw_initscr=$(yesno unicode)
 	export ac_cv_lib_ncurses_initscr=$(yesno !unicode)
 	econf || die
-	emake || die
-	./lesskey -o less-normal-key.bin "${MYSUBDIR}/less-normal-key.src" || die
+}
+
+src_compile() {
+	default_src_compile
+	./lesskey -o lesskey.bin "${MYSUBDIR}/lesskey.src" || die
 	./lesskey -o less-select-key.bin "${MYSUBDIR}/less-select-key.src" || die
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	default_src_install
 
 	dobin code2color || die "dobin"
 	newbin "${FILESDIR}"/lesspipe.sh lesspipe || die "newbin"
@@ -62,10 +70,9 @@ LESS="-sFR -iMX --shift 5"' > 70less
 	newbin "${MYSUBDIR}/less-select" less-select
 
 	insinto /etc
-	newins less-normal-key.bin lesskey.bin
-	newins less-select-key.bin less-select-key.bin
-	newins "${MYSUBDIR}/less-normal-key.src" lesskey.src
-	newins "${MYSUBDIR}/less-select-key.src" less-select-key.src
+	newins *.bin
+	cd -- "${MYSUBDIR}"
+	newins *.src
 }
 
 pkg_postinst() {

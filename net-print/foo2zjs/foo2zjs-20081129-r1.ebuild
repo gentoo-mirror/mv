@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
+EAPI="4"
 inherit eutils
 
 DESCRIPTION="Support for printing to ZjStream-based printers. Fixes bug 271079"
@@ -89,8 +90,9 @@ src_unpack() {
 	do
 		ln -s "${DISTDIR}"/${i} "${S}"
 	done
+}
 
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 	epatch "${FILESDIR}"/${P}-udevfwld.patch
 }

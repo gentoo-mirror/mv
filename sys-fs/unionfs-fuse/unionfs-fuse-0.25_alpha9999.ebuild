@@ -1,9 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/unionfs-fuse-0.23.ebuild,v 1.2 2010/01/17 20:23:12 a3li Exp $
+# $Header $
 
-EAPI="2"
-
+EAPI="4"
 EHG_REPO_URI="http://podgorny.cz/~bernd/hg/hgwebdir.cgi/0.25"
 S="${WORKDIR}/0.25"
 inherit eutils mercurial flag-o-matic

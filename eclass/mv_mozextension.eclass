@@ -209,8 +209,9 @@ xpi_unpack() {
 	[ ${#} -eq 0 ] && die \
 		"Nothing passed to the ${FUNCNAME} command. Please pass which xpi to unpack"
 
+	test -d "${S}" || mkdir "${S}"
 	for xpi
-	do	einfo "Unpacking ${xpi} to ${WORKDIR}"
+	do	einfo "Unpacking ${xpi} to ${S}"
 		xpiname="${xpi%.*}"
 		xpiname="${xpiname##*/}"
 
@@ -227,11 +228,11 @@ xpi_unpack() {
 
 		case "${xpi##*.}" in
 			ZIP|zip|jar|xpi)
-				mkdir -- "${WORKDIR}/${xpiname}" && \
-					cd -- "${WORKDIR}/${xpiname}" && \
+				mkdir -- "${S}/${xpiname}" && \
+					cd -- "${S}/${xpiname}" && \
 					unzip -qo -- "${srcdir}${xpi}" \
 						|| die "failed to unpack ${xpi}"
-				chmod -R a+rX,u+w,go-w -- "${WORKDIR}/${xpiname}"
+				chmod -R a+rX,u+w,go-w -- "${S}/${xpiname}"
 				;;
 			*)
 				einfo "unpack ${xpi}: file format not recognized. Ignoring."
@@ -272,7 +273,7 @@ xpi_install() {
 # It just should call xpi_install with the correct argument(s)
 xpi_install_dirs() {
 	local d
-	for d in "${WORKDIR}"/*
+	for d in "${S}"/*
 	do	[ -n "${d}" ] && test -d "${d}" && xpi_install "${d}"
 	done
 }

@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
+EAPI="4"
 inherit eutils versionator autotools
+RESTRICT="mirror"
 
 BASE_VER="$(get_version_component_range 1-4)"
 PATCH_VER="$(get_version_component_range 5-)"
@@ -10,10 +12,9 @@ PATCH_VER="$(get_version_component_range 5-)"
 MY_PV="${BASE_VER/_beta/b}"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-if [[ "${PATCH_VER:3:4}" != "0" ]]; then
-	PATCH_VERSION="${PATCH_VER:1:2}.${PATCH_VER:3:4}"
-else
-	PATCH_VERSION="${PATCH_VER:1:2}"
+if [ "${PATCH_VER:3:4}" != "0" ]
+then	PATCH_VERSION="${PATCH_VER:1:2}.${PATCH_VER:3:4}"
+else	PATCH_VERSION="${PATCH_VER:1:2}"
 fi
 
 DESCRIPTION="Dynamic DNS client for lots of dynamic dns services"
@@ -28,9 +29,7 @@ IUSE=""
 
 DEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${WORKDIR}/${PN}_${MY_PV}-${PATCH_VERSION}.diff"
 	epatch "${FILESDIR}/${PN}-3.0.11_beta8-dnsexit.diff"
 	epatch "${FILESDIR}/${PN}-3.0.11_beta8-3322.diff"
@@ -52,13 +51,12 @@ src_unpack() {
 	chmod +x missing
 }
 
-src_compile() {
+src_configure() {
 	econf --bindir=/usr/sbin || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default_src_install
 	newinitd "${FILESDIR}/ez-ipupdate.initd" ez-ipupdate
 	keepdir /etc/ez-ipupdate /var/cache/ez-ipupdate
 

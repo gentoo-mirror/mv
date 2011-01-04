@@ -1,16 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-EAPI="3"
-
+EAPI="4"
 EGIT_REPO_URI="http://git.c3sl.ufpr.br/pub/scm/aufs/aufs2-util.git"
 EGIT_PROJECT="aufs2-util"
 # BRANCH/COMMIT will be overridden in pkg_setup (according to kernel version)
 EGIT_BRANCH="aufs2.1"
 EGIT_COMMIT="${EGIT_BRANCH}"
 [ -n "${EGIT_OFFLINE:-${ESCM_OFFLINE}}" ] || EGIT_PRUNE=true
-
 inherit git linux-info multilib
 
 DESCRIPTION="Userspace tools for aufs2"

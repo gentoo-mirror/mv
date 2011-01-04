@@ -1,8 +1,11 @@
 # ChangeLog for sys-fs/squash_dir
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
 squash_dir-10.19 (25 Dec 2010)
+
+  04 Jan 2011; Martin Väth <martin@mvath.de>
+  Bump to EAPI=4.
 
   25 Dec 2010; Martin Väth <martin@mvath.de>
   Version bump. Minor improvements in zsh-completion

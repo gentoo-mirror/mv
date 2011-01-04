@@ -1,8 +1,11 @@
 # ChangeLog for www-plugins/form-history-control
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
 *form-history-control-1.2.7 (17 Oct 2010)
+
+  03 Jan 2011; Martin Väth <martin@mvath.de>
+  Bump to EAPI=4.
 
   25 Oct 2010; Martin Väth <martin@mvath.de>
   Bump properly. Remove old ebuild.

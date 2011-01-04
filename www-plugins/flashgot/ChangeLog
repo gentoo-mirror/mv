@@ -1,8 +1,11 @@
 # ChangeLog for www-plugins/flashgot
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
 *flashgot-1.2.7 (16 Dec 2010)
+
+  03 Jan 2011; Martin Väth <martin@mvath.de>
+  Bump to EAPI=4.
 
   16 Dec 2010; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.

@@ -1,9 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-EAPI="2"
-
+EAPI="4"
 inherit eutils
 
 DESCRIPTION="dynamic deltup client"
@@ -13,16 +12,17 @@ SLOT="0"
 IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
+S="${WORKDIR}"
 
 RDEPEND="app-portage/deltup
 	dev-util/bdelta"
 
 src_prepare() {
 	epatch "${FILESDIR}"/eapi2.patch
+	sed -i -e "s:/bin/sh:/bin/bash:" getdelta.sh || die
 }
 
 src_install() {
-	sed -i -e "s:/bin/sh:/bin/bash:" "${WORKDIR}"/getdelta.sh || die
 	dobin "${WORKDIR}"/getdelta.sh || die
 }
 

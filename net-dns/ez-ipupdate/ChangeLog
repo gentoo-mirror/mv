@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ez-ipupdate
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
+
+  03 Jan 2011; Martin Väth <martin@mvath.de>
+  Bump to EAPI=4.
 
   12 May 2010; Martin Väth <martin@mvath.de>
   ez-ipupdate-3.0.11_beta8_p133-r1.ebuild -ez-ipupdate-3.0.11_beta8_p133.ebuild

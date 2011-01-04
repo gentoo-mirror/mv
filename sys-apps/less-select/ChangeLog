@@ -1,8 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
+# ChangeLog for sys-apps/less-select
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
 *less-select-438.ebuild (01 Jan 2011)
+
+  03 Jan 2011; Martin Väth <martin@mvath.de>
+  Bump to EAPI=4.
 
  01 Jan 2011; Martin Väth <martin@mvath.de> :
    Bump less version. Remove old ebuild.

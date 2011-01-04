@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
-EAPI="3"
+EAPI="4"
 inherit autotools
 RESTRICT="mirror"
 
@@ -32,11 +32,6 @@ src_prepare() {
 src_configure() {
 	econf --docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		"$(use_with zsh-completion)"
-}
-
-src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-	prepalldocs
 }
 
 check_for_obsolete() {
