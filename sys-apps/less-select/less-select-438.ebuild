@@ -39,7 +39,6 @@ src_prepare() {
 	else	epatch "${MYSUBDIR}/less-${PATCHVER}-select.patch" || die "Patch less-${PATCHVER}-select failed"
 	fi
 	"${MYSUBDIR}"/after-patch || die "${MYSUBDIR}/after-patch failed"
-	mv -- "${MYSUBDIR}/less-normal-key.src" "${MYSUBDIR}/lesskey.src"
 }
 
 yesno() { use $1 && echo yes || echo no ; }
@@ -51,7 +50,7 @@ src_configure() {
 
 src_compile() {
 	default_src_compile
-	./lesskey -o lesskey.bin "${MYSUBDIR}/lesskey.src" || die
+	./lesskey -o less-normal-key.bin "${MYSUBDIR}/less-normal-key.src" || die
 	./lesskey -o less-select-key.bin "${MYSUBDIR}/less-select-key.src" || die
 }
 
@@ -68,11 +67,11 @@ LESS="-sFR -iMX --shift 5"' > 70less
 	dodoc NEWS README* "${FILESDIR}"/README.Gentoo "${MYSUBDIR}"/README.less-select
 
 	newbin "${MYSUBDIR}/less-select" less-select
-
 	insinto /etc
-	newins *.bin
-	cd -- "${MYSUBDIR}"
-	newins *.src
+	newins less-normal-key.bin lesskey.bin
+	newins less-select-key.bin less-select-key.bin
+	newins "${MYSUBDIR}/less-normal-key.src" lesskey.src
+	newins "${MYSUBDIR}/less-select-key.src" less-select-key.src
 }
 
 pkg_postinst() {
