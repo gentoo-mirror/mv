@@ -2,13 +2,18 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*less-select-440.ebuild (06 Jan 2011)
+
+  04 Jan 2011; Martin Väth <martin@mvath.de>
+  Bump less version. Remove old ebuild.
+
 *less-select-438.ebuild (01 Jan 2011)
 
   04 Jan 2011; Martin Väth <martin@mvath.de>
   Bump to EAPI=4.
 
- 01 Jan 2011; Martin Väth <martin@mvath.de> :
-   Bump less version. Remove old ebuild.
+  01 Jan 2011; Martin Väth <martin@mvath.de> :
+  Bump less version. Remove old ebuild.
 
 *less-select-436-r1.ebuild (30 Mar 2010)
 
