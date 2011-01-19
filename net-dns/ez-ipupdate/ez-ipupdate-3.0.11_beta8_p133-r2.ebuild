@@ -30,6 +30,7 @@ IUSE=""
 DEPEND=""
 
 src_prepare() {
+	sed -i 's!\([+][-][-][-] \)\.\./!\1!' "${WORKDIR}/${PN}_${MY_PV}-${PATCH_VERSION}.diff"
 	epatch "${WORKDIR}/${PN}_${MY_PV}-${PATCH_VERSION}.diff"
 	epatch "${FILESDIR}/${PN}-3.0.11_beta8-dnsexit.diff"
 	epatch "${FILESDIR}/${PN}-3.0.11_beta8-3322.diff"

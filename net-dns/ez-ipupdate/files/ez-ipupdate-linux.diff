@@ -1,6 +1,10 @@
 --- ez-ipupdate.c
 +++ ez-ipupdate.c
-@@ -172,6 +172,17 @@
+@@ -168,10 +168,21 @@
+ #if __linux__ || __SVR4 || __OpenBSD__ || __FreeBSD__ || __NetBSD__
+ #  define IF_LOOKUP 1
+ #  include <sys/ioctl.h>
+-#  include <net/if.h>
  #  ifdef HAVE_SYS_SOCKIO_H
  #    include <sys/sockio.h>
  #  endif
@@ -12,6 +16,7 @@
 +#    define socketopen(sock)
 +#    define socketclose(sock)
 +#  else
++#    include <net/if.h>
 +#    define socketopen(sock) sock = socket(AF_INET, SOCK_STREAM, 0)
 +#    define socketclose(sock) close(sock)
 +#  endif
