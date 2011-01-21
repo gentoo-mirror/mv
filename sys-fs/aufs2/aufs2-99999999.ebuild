@@ -9,6 +9,7 @@ EGIT_PROJECT="aufs2"
 EGIT_BRANCH="aufs2.1"
 EGIT_COMMIT="${EGIT_BRANCH}"
 [ -n "${EGIT_OFFLINE:-${ESCM_OFFLINE}}" ] || EGIT_PRUNE=true
+EGIT_HAS_SUBMODULES=true
 inherit git linux-info eutils
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs."
@@ -20,13 +21,58 @@ SLOT="0"
 # that the user unmasks this ebuild with ACCEPT_KEYWORDS='**'
 #KEYWORDS="~amd64 ~x86"
 KEYWORDS=""
-IUSE="doc kernel-patch"
+IUSE="kernel-patch"
 PROPERTIES="live"
 
 RDEPEND=""
 DEPEND="dev-vcs/git[curl]"
 
 declare -a my_patchlist
+
+fill_my_patchlist() {
+	local i
+	my_patchlist=()
+	for i
+	do	case "${i}" in
+		*.patch|*.diff)	test -f "${i}" && my_patchlist+=("${i}")
+		;;
+		esac
+	done
+	:
+}
+
+apply_my_patch() {
+	local r
+	r=''
+	if [ ${#} -gt 1 ]
+	then	shift
+		r='-R'
+	fi
+	patch ${r} -p1 --dry-run --force <"${1}" >/dev/null || return
+	einfo "Applying kernel patch ${1}${r:+ reversely}"
+	patch ${r} -p1 --force --no-backup-if-mismatch <"${1}" >/dev/null || {
+		eerror "applying kernel patch ${1}${r:+ reversely} failed."
+		eerror "Since dry run succeeded this is probably a problem with write permissions."
+		die "With USE=-kernel-patch you avoid automatic patching attempts."
+	}
+}
+
+apply_my_patchlist() {
+	local r i
+	r=''
+	if [ "${#}" -gt 0 ]
+	then	shift
+		r='-R'
+	fi
+	set --
+	for i in "${my_patchlist[@]}"
+	do	apply_my_patch ${r} "${i}" || set -- "${@}" "${i}"
+	done
+	for i
+	do	apply_my_patch ${r} "${i}" || \
+		ewarn "Kernel patch ${i} cannot be${r:+ reverse} applied - skipping."
+	done
+}
 
 pkg_setup() {
 	local msg
@@ -65,23 +111,17 @@ pkg_setup() {
 
 	use kernel-patch || return 0
 	(
+		set --
 		cd -- "${KV_DIR}" >/dev/null 2>&1 && \
-		for i in aufs*.patch aufs*.diff
-		do	test -f "${i}" || continue
-			if patch -R -p1 --dry-run --force <"${i}" >/dev/null
-			then
-				einfo "Applying kernel patch ${i} reversely"
-				patch -R -p1 --force --no-backup-if-mismatch \
-					<"${i}" >/dev/null || {
-					eerror "Reverse applying kernel patch ${i} failed."
-					eerror "Since dry run succeeded this is probably a problem with write permissions."
-					die "With USE=-kernel-patch you avoid automatic patching attempts."
-				}
-			else
-				ewarn "Kernel patch ${i} cannot be reverse applied - skipping."
-			fi
-		done
+		fill_my_patchlist aufs* && apply_my_patchlist -R
 	)
+}
+
+src_prepare() {
+	local i
+	for i in grsecurity-2.2.0.patch grsecurity-2.2.1.patch
+	do	cp -p -- "${FILESDIR}/${i}" "aufs2-${i}" || die "copying ${i} failed"
+	done
 }
 
 src_configure() {
@@ -102,32 +142,19 @@ src_install() {
 	cp -pPR -- fs/aufs/* "${dk}/fs/aufs"
 	cp -pPR -- include "${dk}"
 	find "${dk}"/include -name Kbuild -type f -exec rm -v -- '{}' ';'
-	if use doc && test -e Documentation
-	then
-		cp -pPR -- Documentation "${dk}"
-		rm -- "${dk}/${i}"
-	fi
-	my_patchlist=()
-	for i in *.patch *.diff
-	do	test -f "${i}" || continue
-		my_patchlist+=("${i}")
-		cp -pPR -- "${i}" "${dk}"
-	done
+	fill_my_patchlist *.patch *.diff
+	cp -pPR -- "${my_patchlist[@]}" "${dk}"
 }
 
 pkg_postinst() {
 	[ "${#my_patchlist[@]}" -eq 0 ] && {
-		cd -- "${KV_DIR}" >/dev/null 2>&1 && for i in *.patch *.diff
-		do	test -f "${i}" && my_patchlist+=("${i}")
-		done
+		cd -- "${KV_DIR}" >/dev/null 2>&1 && fill_my_patchlist *.patch *.diff
 	}
 	if use kernel-patch
-	then
-		cd -- "${KV_DIR}" >/dev/null 2>&1 || die "cannot cd to ${KV_DIR}"
-		use kernel-patch && epatch "${my_patchlist[@]}"
+	then	cd -- "${KV_DIR}" >/dev/null 2>&1 || die "cannot cd to ${KV_DIR}"
+		apply_my_patchlist
 		elog "Your kernel has been patched. Cleanup and recompile it, selecting"
-	else
-		elog "You will have to apply the following patch to your kernel:"
+	else	elog "You will have to apply the following patch to your kernel:"
 		elog "	cd ${KV_DIR} && cat ${my_patchlist[*]} | patch -p1 --no-backup-if-mismatch"
 		elog "Then cleanup and recompile your kernel, selecting"
 	fi

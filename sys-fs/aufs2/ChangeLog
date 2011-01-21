@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  21 Jan 2011; Martin Väth <martin@mvath.de>
+  Make git checkout more stable.
+  Apply patches conditionally and more stable (retry after failure).
+  Provide patches for grsecurity (hardened-sources).
+
   03 Jan 2011; Martin Väth <martin@mvath.de>
   Bump to EAPI=4.
 
