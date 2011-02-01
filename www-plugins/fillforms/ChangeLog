@@ -1,6 +1,12 @@
-# ChangeLog for www-plugins/fillform
+# ChangeLog for www-plugins/fillforms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
+
+*fillforms-1.2.9 (01 Feb 2011)
+
+  01 Feb 2011; Martin Väth <martin@mvath.de>
+  Rename ebuild according to upstreams rename. Update homepage.
+  Bump. Remove old.
 
   03 Jan 2011; Martin Väth <martin@mvath.de>
   Bump to EAPI=4.

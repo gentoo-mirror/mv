@@ -8,8 +8,8 @@ inherit mv_mozextension
 RESTRICT="mirror"
 
 DESCRIPTION="Save/restore forms in firefox with Alt-W/Alt-Q"
-HOMEPAGE="http://linux.softpedia.com/get/Internet/Firefox-Extensions/FillForm-57638.shtml"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/160849/${P}-fx.xpi"
+HOMEPAGE="https://addons.mozilla.org/firefox/addon/fillforms/"
+SRC_URI="https://addons.mozilla.org/firefox/downloads/file/106114/${P}-fx.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"
