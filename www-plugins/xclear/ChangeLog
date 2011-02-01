@@ -2,6 +2,8 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*xclear-1.3 (13 Jun 2010)
+
   03 Jan 2011; Martin Väth <martin@mvath.de>
   Bump to EAPI=4.
 
@@ -10,8 +12,6 @@
 
   31 Jul 2010; Martin Väth <martin@mvath.de>
   Bump revision to force eclass upgrade.
-
-*xclear-1.3 (13 Jun 2010)
 
   13 Jun 2010; Martin Väth <martin@mvath.de>
   New ebuild.

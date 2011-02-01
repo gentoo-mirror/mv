@@ -15,10 +15,10 @@
   14 Oct 2010; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 
+*video-downloadhelper-4.8 (31 Jul 2010)
+
   01 Aug 2010; Martin Väth <martin@mvath.de>
   Bump revision to force eclass upgrade.
-
-*video-downloadhelper-4.8 (31 Jul 2010)
 
   31 Jul 2010; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.

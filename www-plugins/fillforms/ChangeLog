@@ -8,6 +8,8 @@
   Rename ebuild according to upstreams rename. Update homepage.
   Bump. Remove old.
 
+*fillform-1.1.8 (16 Jul 2010)
+
   03 Jan 2011; Martin Väth <martin@mvath.de>
   Bump to EAPI=4.
 
@@ -16,8 +18,6 @@
 
   31 Jul 2010; Martin Väth <martin@mvath.de>
   Fix homepage. Bump revision to force eclass upgrade.
-
-*fillform-1.1.8 (16 Jul 2010)
 
   16 Jun 2010; Martin Väth <martin@mvath.de>
   Bump. Remove old.
