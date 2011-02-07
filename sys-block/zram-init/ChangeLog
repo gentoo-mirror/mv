@@ -1,6 +1,10 @@
-# ChangeLog for sys-block/compcache-tools
+# ChangeLog for sys-block/zram-init
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
+
+  07 Feb 2010; Martin Väth <martin@mvath.de>
+  Only install init-files which work with kernels >=2.6.37
+  Since compcache-tools is no longer installed, the package is renamed
 
   03 Jan 2011; Martin Väth <martin@mvath.de>
   Bump to EAPI=4.
