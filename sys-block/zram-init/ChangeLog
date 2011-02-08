@@ -2,18 +2,5 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
-  07 Feb 2010; Martin Väth <martin@mvath.de>
-  Only install init-files which work with kernels >=2.6.37
-  Since compcache-tools is no longer installed, the package is renamed
-
-  03 Jan 2011; Martin Väth <martin@mvath.de>
-  Bump to EAPI=4.
-
-  21 Nov 2010; Martin Väth <martin@mvath.de>
-  Modify init.d files for kernel 2.6.36. Bump revision to force upgrade.
-
-  10 Oct 2010; Martin Väth <martin@mvath.de>
-  Bump to 0.6.2. Add init.d/conf.d files.
-
-  04 Jan 2010; Russell Harmon (eatnumber1) <russ@eatnumber1.com>
-  New ebuild for bug 299664. Thanks to Russell Harmon
+  08 Feb 2010; Martin Väth <martin@mvath.de>
+  Complete rewrite. Remove old ChangeLog.
