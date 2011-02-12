@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="Video-downloadmanager as mozilla plugin"
 HOMEPAGE="https://addons.mozilla.org/firefox/addon/3006"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/3006/${P#*-}-fx+sm.xpi"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/3006/${P/-/_}-sm+fx.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"
