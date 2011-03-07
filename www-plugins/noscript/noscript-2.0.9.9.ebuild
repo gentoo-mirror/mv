@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="Mozilla plugin: Restrict active contents like java/javascript/flash"
 HOMEPAGE="http://noscript.net/"
-SRC_URI="http://software.informaction.com/data/releases/${P}.xpi"
+SRC_URI="https://secure.informaction.com/download/releases/${P}.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"
