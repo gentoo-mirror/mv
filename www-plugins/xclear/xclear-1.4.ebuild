@@ -9,7 +9,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="Firefox plugin: button to clear URL"
 HOMEPAGE="https://addons.mozilla.org/firefox/addon/13078/"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/13078/${P}-fx.xpi"
+SRC_URI="http://static.addons.mozilla.net/_files/13078/${P}-fx.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"
