@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -249,7 +249,8 @@ xpi_install() {
 
 	x="${1}"
 	# determine id for extension
-	d="$(sed -n -e '/install-manifest/,$ { /em:id/!d; s/.*[\">]\([^\"<>]*\)[\"<].*/\1/; p; q }' "${x}"/install.rdf)" \
+	d='{ /\<\(em:\)*id\>/!d; s/.*[\">]\([^\"<>]*\)[\"<].*/\1/; p; q }'
+	d="$(sed -n -e '/install-manifest/,$ '"${d}" "${x}"/install.rdf)" \
 		&& [ -n "${d}" ] || die "failed to determine extension id"
 	if [ -n "${MOZILLA_EXTENSIONS_DIRECTORY}" ]
 	then	d="${MOZILLA_EXTENSIONS_DIRECTORY}/${d}"
