@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*flashgot-1.2.9.1 (05 Apr 2011)
+
+  05 Apr 2011; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+
 *flashgot-1.2.8.5 (20 Mar 2011)
 
   20 Mar 2011; Martin Väth <martin@mvath.de>
