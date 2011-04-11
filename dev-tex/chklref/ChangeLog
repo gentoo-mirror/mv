@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*chkltex-2.5.1 (11 Apr 2011)
+
+  11 Apr 2011; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+
 *chkltex-2.5 (16 Aug 2010)
 
   03 Jan 2011; Martin Väth <martin@mvath.de>
