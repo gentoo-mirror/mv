@@ -158,7 +158,7 @@ lesspipe() {
 	*.mp3)        mp3info "$1" || id3info "$1" ;;
 	*.ogg)        ogginfo "$1" ;;
 	*.flac)       metaflac --list "$1" ;;
-	*.torrent)    torrentinfo-console "$1" || ctorrent -x "$1" ;;
+	*.torrent)    torrentinfo "$1" || torrentinfo-console "$1" || ctorrent -x "$1" ;;
 	*.bin|*.cue|*.raw)
 		# not all .bin/.raw files are cd images, so fall back to hexdump
 		cd-info --no-header --no-device-info "$1" || lesspipe_file "$1"
@@ -188,19 +188,13 @@ lesspipe() {
 
 	### Everything else ###
 	*)
-		# Sanity check
-		[[ ${recur} == 2 ]] && exit 0
+		case $(( recur++ )) in
+			# Maybe we didn't match due to case issues ...
+			0) lesspipe "$1" "$(echo $1 | LC_ALL=C tr '[:upper:]' '[:lower:]')" ;;
 
-		# Maybe we didn't match due to case issues ...
-		if [[ ${recur} == 0 ]] ; then
-			recur=1
-			lesspipe "$1" "$(echo $1 | LC_ALL=C tr '[:upper:]' '[:lower:]')"
-
-		# Maybe we didn't match because the file is named weird ...
-		else
-			recur=2
-			lesspipe_file "$1"
-		fi
+			# Maybe we didn't match because the file is named weird ...
+			1) lesspipe_file "$1" ;;
+		esac
 
 		# So no matches from above ... finally fall back to an external
 		# coloring package.  No matching here so we don't have to worry
@@ -235,7 +229,7 @@ if [[ -z $1 ]] ; then
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
 	cat <<-EOF
-		$Id: lesspipe.sh,v 1.43 2010/12/31 20:52:17 vapier Exp $
+		$Id: lesspipe.sh,v 1.45 2011/01/20 03:26:14 vapier Exp $
 		Copyright 2001-2010 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
