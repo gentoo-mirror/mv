@@ -11,7 +11,7 @@ HOMEPAGE="https://addons.mozilla.org/firefox/addon/6623"
 MY_P="${P/-/}"
 MY_P="${MY_P%_alpha*}"
 MY_P="${MY_P%_beta*}"
-MY_P="${MY_P}-sm+fx"
+MY_P="${MY_P}-fx+sm"
 FILENAME="${MY_P}.xpi"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/6623/${FILENAME}"
 case "${PV}" in
