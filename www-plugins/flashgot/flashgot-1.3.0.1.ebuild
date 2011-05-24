@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="Yet another video download manager as mozilla plugin"
 HOMEPAGE="http://flashgot.net/"
-SRC_URI="http://secure.informaction.com/download/releases/${P}.xpi"
+SRC_URI="https://secure.informaction.com/download/releases/${P}.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"
