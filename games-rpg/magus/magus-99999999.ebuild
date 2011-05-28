@@ -38,6 +38,7 @@ DEPENDCOMMON=">=dev-libs/libsigc++-2.0.1
 	!postgres? ( >=dev-db/sqlite-3 )"
 
 DEPEND="${DEPENDCOMMON}
+	>=sys-devel/gettext-0.17
 	media-gfx/pngcrush"
 
 RDEPEND="${RDEPEND}
@@ -59,6 +60,19 @@ src_unpack() {
 	monotone_finish
 }
 fi
+
+src_cp() {
+	einfo "cp ${1} ${2}"
+	test -f "${1}" || {
+		ewarn "File ${1} does not exist"
+		return 0
+	}
+	if ! test -e "${2}" || diff -q -- "${1}" "${2}" >/dev/null 2>&1
+	then	ewarn "cp ${1} ${2} appears no longer necessary"
+		return 0
+	fi
+	cp -- "${1}" "${2}"
+}
 
 src_sed() {
 	local short file ori ignore remove
@@ -94,16 +108,16 @@ src_patch() {
 	einfo
 	einfo "Various patches:"
 	einfo
-	src_sed midgard/tools/translate/translate.cc -e "1i#include <cstdlib>"
-	src_sed midgard/libmagus/MidgardBasicElement.cc -e "1i#include <cstdio>"
-	src_sed ManuProC_Base/src/Makefile.am \
-		-e "s/ \$(includedir)/ \$(DESTDIR)\$(includedir)/"
-	grep "^LIB" midgard/libmagus/Makefile.am && \
-		ewarn "Unneeded patching of midgard/libmagus/Makefile.am"
-	src_sed midgard/libmagus/Makefile.am -e "2iLIBS=-lManuProC_Base"
+	grep "saebel.png" midgard/src/Makefile.am && \
+		ewarn "Unneeded patching of midgard/src/Makefile.am"
+	src_sed  midgard/src/Makefile.am \
+		-e 's/drache.png/Money-gray.png saebel.png drache.png/'
+	src_sed ManuProC_Widgets/configure.in \
+		-e 's/^[ 	]*AM_GNU_GETTEXT_VERSION/AM_GNU_GETTEXT_VERSION/'
+#	src_cp ManuProC_Base/macros/petig.m4 ManuProC_Widgets/macros/petig.m4
 
 	for i in konqueror icecat seamonkey firefox mozilla
-	do	use "${i}" && browser="${i}" &&	break
+	do	use "${i}" && browser="${i}" && break
 	done
 	[ "${browser}" = "mozilla" ] && return
 	src_sed midgard/docs/BMod_Op.html -e "s#mozilla#${browser}#"
@@ -123,6 +137,10 @@ my_autoreconf() {
 	my_cd "${1}"
 	export AT_M4DIR
 	test -d macros && AT_M4DIR="macros" || AT_M4DIR=""
+	if grep -q 'AM_GNU_GETTEXT' configure.in
+	then	einfo "Running autopoint --force"
+		autopoint --force >/dev/null || die "autopoint failed"
+	fi
 	eautoreconf
 }
 
@@ -185,8 +203,9 @@ my_install() {
 src_install() {
 	local myicon myres
 	my_install "ManuProC_Base"
-	rm -rf -- "${ED}"/usr/include
+	my_install "ManuProC_Widgets"
 	my_install "midgard"
+	rm -rf -- "${ED}"/usr/include
 	find "${ED}" -name "*.la" -type f -exec rm -v -- '{}' '+'
 
 	insinto "/usr/share/magus"
