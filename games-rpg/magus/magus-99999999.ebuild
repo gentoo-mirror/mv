@@ -33,12 +33,12 @@ IUSE="+acroread firefox icecat konqueror postgres seamonkey"
 
 DEPENDCOMMON=">=dev-libs/libsigc++-2.0.1
 	>=dev-cpp/gtkmm-2.4.0
+	>=sys-devel/gettext-0.17
 	virtual/latex-base
 	postgres? ( virtual/postgresql-server )
 	!postgres? ( >=dev-db/sqlite-3 )"
 
 DEPEND="${DEPENDCOMMON}
-	>=sys-devel/gettext-0.17
 	media-gfx/pngcrush"
 
 RDEPEND="${RDEPEND}
@@ -48,6 +48,8 @@ RDEPEND="${RDEPEND}
 	seamonkey? ( www-client/seamonkey )
 	konqueror? ( kde-base/konqueror )
 	acroread? ( app-text/acroread )"
+
+REQUIRED_USE="^^ ( firefox icecat seamonkey konqueror )"
 
 if ${LIVE_VERSION}
 then

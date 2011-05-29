@@ -4,6 +4,9 @@
 
 *magus-1.3.3 (28 May 2011)
 
+  29 May 2011; Martin Väth <martin@mvath.de>
+  Add REQUIRED_USE and fix some missing dependencies.
+
   28 May 2011; Martin Väth <martin@mvath.de>
   Version bump and patch for missing autopoint support.
   Remove old ebuild.
