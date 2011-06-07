@@ -1,6 +1,14 @@
-# ChangeLog for sys-apps/less-select
+# ChangeLog for sys-apps/less
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
+
+*less-443.ebuild (11 Apr 2011)
+
+  06 Jun 2011; Martin Väth <martin@mvath.de>
+  -less-select-443.ebuild +less-443.ebuild
+  Rename into less to avoid problems with portage hard-depending on less.
+  In fact, less-select is just less with additional options which therefore
+  should be provided by a useflag.
 
 *less-select-443.ebuild (11 Apr 2011)
 
@@ -35,34 +43,34 @@
   Update lesspipe.sh and related changes of sys-apps/less in portage tree.
 
   22 Jul 2009; Martin Väth <martin@mvath.de> :
-  Version bump to less-436
+  Version bump to less-select-436
 
   12 Apr 2009; Martin Väth <martin@mvath.de> :
-  Version bump to less-429
+  Version bump to less-select-429
 
   09 Feb 2009; Martin Väth <martin@mvath.de> :
-  Version bump to less-424
+  Version bump to less-select-424
 
   04 Jan 2008; Martin Väth <martin@mvath.de> :
-  Version bump to less-418
+  Version bump to less-select-418
 
   29 Nov 2007; Martin Väth <martin@mvath.de> :
-  Version bump to less-416
+  Version bump to less-select-416
 
   16 Nov 2007; Martin Väth <martin@mvath.de> :
-  Version bump to less-415
+  Version bump to less-select-415
 
   10 Oct 2007; Martin Väth <martin@mvath.de> :
-  Version bump to less-409
+  Version bump to less-select-409
 
   29 Jun 2007; Martin Väth <martin@mvath.de> :
-  Version bump to less-406
+  Version bump to less-select-406
 
   29 Dec 2005; Martin Väth <martin@mvath.de> :
-  Version bump to less-394
+  Version bump to less-select-394
 
   03 Dec 2005; Martin Väth <martin@mvath.de> :
-  Version bump to less-393
+  Version bump to less-select-393
 
   06 Mar 2005; Martin Väth <martin@mvath.de> :
   Initial version based on less-382-r2.ebuild
