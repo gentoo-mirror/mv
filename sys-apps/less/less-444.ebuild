@@ -64,7 +64,6 @@ src_install() {
 	dobin code2color || die "dobin"
 	newbin "${FILESDIR}"/lesspipe.sh lesspipe || die "newbin"
 	dosym lesspipe /usr/bin/lesspipe.sh
-	newenvd "${FILESDIR}"/less.envd 70less
 
 	dodoc NEWS README* "${FILESDIR}"/README.Gentoo
 
@@ -73,7 +72,7 @@ src_install() {
 	else	a="-sFRiMX --shift 5"
 	fi
 	printf '%s\n' 'LESSOPEN="|lesspipe.sh %s"' "LESS=\"${a}\"" >70less
-	doenv 70less
+	doenvd 70less
 
 	if use less-select
 	then	dodoc "${SELECTDIR}"/README.less-select
