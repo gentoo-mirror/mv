@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  20 Jun 2011; Martin Väth <martin@mvath.de>
+  Update patches for grsecurity.
+
   21 Jan 2011; Martin Väth <martin@mvath.de>
   Make git checkout more stable.
   Apply patches conditionally and more stable (retry after failure).

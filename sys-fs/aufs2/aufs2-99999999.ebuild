@@ -12,7 +12,7 @@ EGIT_COMMIT="${EGIT_BRANCH}"
 EGIT_HAS_SUBMODULES=true
 inherit git linux-info eutils
 
-DESCRIPTION="An entirely re-designed and re-implemented Unionfs."
+DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
 
 LICENSE="GPL-2"
@@ -118,9 +118,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	local i
-	for i in grsecurity-2.2.0.patch grsecurity-2.2.1.patch
-	do	cp -p -- "${FILESDIR}/${i}" "aufs2-${i}" || die "copying ${i} failed"
+	local i j
+	for i in 2.2.0 2.2.1 2.2.2
+	do	j="grsecurity-${i}.patch"
+		cp -p -- "${FILESDIR}/${j}" "aufs2-${j}" || die "copying ${j} failed"
 	done
 }
 
