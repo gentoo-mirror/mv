@@ -11,7 +11,7 @@ MY_P="${MY_P/-/_}"
 NAME="${MY_P}-sm+fx.xpi"
 DESCRIPTION="Edit the saved history of forms in mozilla"
 HOMEPAGE="http://www.formhistory.blogspot.com/"
-SRC_URI="http://static.addons.mozilla.net/_files/12021/${NAME}"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/12021/${NAME}"
 
 LICENSE="GPL-2"
 SLOT="0"
