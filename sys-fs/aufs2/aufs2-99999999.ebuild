@@ -21,7 +21,7 @@ SLOT="0"
 # that the user unmasks this ebuild with ACCEPT_KEYWORDS='**'
 #KEYWORDS="~amd64 ~x86"
 KEYWORDS=""
-IUSE="kernel-patch"
+IUSE="kernel-patch all-patches"
 PROPERTIES="live"
 
 RDEPEND=""
@@ -66,7 +66,13 @@ apply_my_patchlist() {
 	fi
 	set --
 	for i in "${my_patchlist[@]}"
-	do	apply_my_patch ${r} "${i}" || set -- "${@}" "${i}"
+	do	if use all-patches || case "${i}" in
+		aufs*)	:;;
+		*)	false;;
+		esac
+		then	apply_my_patch ${r} "${i}" || set -- "${@}" "${i}"
+		else	einfo "Kernel patch ${i} - skipping as all-patches is not set"
+		fi
 	done
 	for i
 	do	apply_my_patch ${r} "${i}" || \
@@ -113,13 +119,37 @@ pkg_setup() {
 	(
 		set --
 		cd -- "${KV_DIR}" >/dev/null 2>&1 && \
-		fill_my_patchlist aufs* && apply_my_patchlist -R
+		fill_my_patchlist *.patch *.diff && apply_my_patchlist -R
 	)
 }
 
 src_prepare() {
-	local i j
-	for i in 2.2.0 2.2.1 2.2.2
+	local i j w v newest all
+	all="2.2.0  2.2.1  2.2.2  2.2.2.r1"
+	newest="${all##* }"
+	v=''
+	for i in ${GRSECURITYPATCHVER-+}
+	do	case "${i}" in
+		'+')	j="${newest}";;
+		'*')	j="${all}";;
+		*)	w=:
+			for j in ${newest}
+			do	[ "${i}" = "${j}" ] && w=false && continue
+			done
+			${w} && ewarn "GRSECURITYPATCHVER contains bad version ${i}"
+			j="${i}";;
+		esac
+		v="${v} ${j}"
+	done
+	v="${v# }"
+	elog
+	elog "Using GRSECURITYPATCHVER: ${v}"
+	elog "If you want other patches, set GRSECURITYPATCHVER to some or more of:"
+	elog "${all}  +"
+	elog "The special value + means the newest version (${newest}) and is default."
+	elog "The special value * means all versions."
+	elog
+	for i in ${v}
 	do	j="grsecurity-${i}.patch"
 		cp -p -- "${FILESDIR}/${j}" "aufs2-${j}" || die "copying ${j} failed"
 	done

@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  09 Aug 2011; Martin Väth <martin@mvath.de>
+  Update patches for grsecurity.
+  Skip patches not named aufs* (unless USE=all-patches is set).
+  Only install the most current grsecurity patch by default.
+
   20 Jun 2011; Martin Väth <martin@mvath.de>
   Update patches for grsecurity.
 
