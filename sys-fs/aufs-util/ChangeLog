@@ -1,6 +1,10 @@
-# ChangeLog for sys-fs/aufs2
+# ChangeLog for sys-fs/aufs-util
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
+
+  26 Aug 2011; Martin Väth <martin@mvath.de>
+  Rename aufs2-util-99999999->aufs-util-99999999.2
+  Add aufs-util-99999999.3 for linux3.0/aufs3
 
   20 Jun 2011; Martin Väth <martin@mvath.de>
   Improve/fix git handling

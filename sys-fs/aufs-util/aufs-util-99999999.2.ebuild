@@ -11,7 +11,7 @@ EGIT_COMMIT="${EGIT_BRANCH}"
 EGIT_HAS_SUBMODULES=true
 inherit git linux-info multilib
 
-DESCRIPTION="Userspace tools for aufs2"
+DESCRIPTION="Userspace tools for aufs"
 HOMEPAGE="http://aufs.sourceforge.net/"
 
 LICENSE="GPL-2"
@@ -30,8 +30,8 @@ src_prepare() {
 	ln -s "${KERNEL_DIR}"/include local_kernel
 	set -- local_kernel/linux/aufs*.h
 	test -e "${1}" || {
-		eerror "It seems you do not have installed aufs2 into your kernel tree."
-		die "You might need to emerge =sys-fs/aufs2-99999999::mv"
+		eerror "It seems you do not have installed aufs into your kernel tree."
+		die "You might need to emerge >=sys-fs/aufs-99999999::mv"
 	}
 	l="s|/usr/lib|$(get_libdir)|"
 	sed -i -e "1iCFLAGS += -I./local_kernel" -e "${l}" Makefile || \

@@ -34,7 +34,11 @@ pkg_setup() {
 	fi
 
 	BUILD_TARGETS="all"
-	BUILD_PARAMS="KERNEL_DIR='${KV_DIR}' SUBLEVEL='${KV_PATCH}'"
+	BUILD_PARAMS="KERNEL_DIR='${KV_DIR}' SUBLEVEL='21'"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/grsecurity.patch"
 }
 
 src_install() {

@@ -3,10 +3,10 @@
 # $Header $
 
 EAPI="4"
-EGIT_REPO_URI="http://git.c3sl.ufpr.br/pub/scm/aufs/aufs2-standalone.git"
-EGIT_PROJECT="aufs2"
+EGIT_REPO_URI="git://aufs.git.sourceforge.net/gitroot/aufs/aufs3-standalone.git"
+EGIT_PROJECT="aufs3"
 # BRANCH/COMMIT will be overridden in pkg_setup (according to kernel version)
-EGIT_BRANCH="aufs2.1"
+EGIT_BRANCH="aufs3.0"
 EGIT_COMMIT="${EGIT_BRANCH}"
 [ -n "${EGIT_OFFLINE:-${ESCM_OFFLINE}}" ] || EGIT_PRUNE=true
 EGIT_HAS_SUBMODULES=true
@@ -92,24 +92,24 @@ pkg_setup() {
 		die "Wrong kernel version"
 	fi
 
-	if [ -n "${AUFS2BRANCH}" ]
-	then	EGIT_BRANCH="${AUFS2BRANCH}"
-	else	[ -n "${KV_PATCH}" ] && EGIT_BRANCH="aufs2.1-${KV_PATCH}"
+	if [ -n "${AUFSBRANCH}" ]
+	then	EGIT_BRANCH="${AUFSBRANCH}"
+	else	if kernel_is lt 3 0
+		then	[ -n "${KV_PATCH}" ] && EGIT_BRANCH="aufs2.2-${KV_PATCH}"
+		else	[ -n "${KV_MINOR}" ] && EGIT_BRANCH="aufs${KV_MAJOR}.${KV_MINOR}"
+		fi
 	fi
 	elog
-	elog "Using aufs2 branch: ${EGIT_BRANCH}"
-	elog "If this guess for the branch is wrong, set AUFS2BRANCH."
-	elog "For example, to use the aufs2.1 branch for kernel version 2.6.36, use:"
-	elog "	AUFS2BRANCH=aufs2.1-36 emerge -1 aufs2"
-	elog "For the most current kernel it might be necessary to use one of"
-	elog "	AUFS2BRANCH=aufs2.1 emerge -1 aufs2"
-	elog "	AUFS2BRANCH=aufs2 emerge -1 aufs2"
+	elog "Using aufs branch: ${EGIT_BRANCH}"
+	elog "If this guess for the branch is wrong, set AUFSBRANCH."
+	elog "For example, to use the aufs3.0 branch for kernel version 3.0, use:"
+	elog "	AUFSBRANCH=aufs3.0 emerge -1 aufs"
 	msg=''
 	[ -n "${ESCM_OFFLINE}" ] && msg="${msg} ESCM_OFFLINE=''"
 	[ -n "${EGIT_OFFLINE}" ] && msg="${msg} EGIT_OFFLINE=''"
 	if [ -n "${msg}" ]
 	then
-		elog "Note that it might be necessary in addition to fetch the newest aufs2:"
+		elog "Note that it might be necessary in addition to fetch the newest aufs:"
 		elog "Set ${msg# } and be sure to be online during emerge."
 	fi
 	elog
@@ -133,11 +133,14 @@ src_prepare() {
 		'+')	j="${newest}";;
 		'*')	j="${all}";;
 		*)	w=:
-			for j in ${newest}
+			for j in ${all}
 			do	[ "${i}" = "${j}" ] && w=false && continue
 			done
-			${w} && ewarn "GRSECURITYPATCHVER contains bad version ${i}"
-			j="${i}";;
+			if ${w}
+			then	warn "GRSECURITYPATCHVER contains bad version ${i}"
+			else	j="${i}"
+			fi
+			;;
 		esac
 		v="${v} ${j}"
 	done
@@ -151,7 +154,7 @@ src_prepare() {
 	elog
 	for i in ${v}
 	do	j="grsecurity-${i}.patch"
-		cp -p -- "${FILESDIR}/${j}" "aufs2-${j}" || die "copying ${j} failed"
+		cp -p -- "${FILESDIR}/${j}" "aufs-${j}" || die "copying ${j} failed"
 	done
 }
 

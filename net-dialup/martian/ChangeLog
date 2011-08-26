@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  26 Aug 2011; Martin Väth <martin@mvath.de>
+  Force sublevel to fix broken version number test for >=linux-3.0
+  Fix breakage of grsecurity
+
   03 Jan 2011; Martin Väth <martin@mvath.de>
   Bump to EAPI=4.
 
