@@ -28,8 +28,8 @@ SERIAL_8250_ERROR="This driver requires you to compile your kernel with serial c
 pkg_setup() {
 	linux-mod_pkg_setup
 
-	if kernel_is 2 4
-	then	eerror "This driver works only with 2.6 kernels!"
+	if kernel_is lt 2 6 21
+	then	eerror "This driver works only with 2.6.21 or newer kernels!"
 		die "unsupported kernel detected"
 	fi
 
@@ -56,11 +56,4 @@ pkg_postinst() {
 	ewarn "To make the modem available modprobe martian_dev and run \"martian_modem\"."
 	ewarn "This will make the modem available as /dev/ttySM0."
 	ewarn "When using wvdial add \"Carrier Check = no\" line."
-
-	if linux_chkconfig_present SMP
-	then	ewarn
-		ewarn "Please note that Linux support for SMP (symmetric multi processor)"
-		ewarn "is reported to be incompatible with this driver!"
-		ewarn "In case it doesn't work, you should try first to disable CONFIG_SMP in your kernel."
-	fi
 }
