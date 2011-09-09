@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)"
 HOMEPAGE="https://addons.mozilla.org/firefox/addon/stylish/"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/2108/${P}-fx+tb+sm.xpi"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/2108/${P}-sm+tb+fx.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"
