@@ -36,10 +36,11 @@ DEPENDCOMMON=">=dev-libs/libsigc++-2.0.1
 	>=sys-devel/gettext-0.17
 	virtual/latex-base
 	postgres? ( virtual/postgresql-server )
-	!postgres? ( >=dev-db/sqlite-3 )"
+	!postgres? ( >=dev-db/sqlite-3 )
+	|| ( media-libs/netpbm media-gfx/graphicsmagick media-gfx/imagemagick )"
+#	media-gfx/pngcrush is supported but not strictly required
 
-DEPEND="${DEPENDCOMMON}
-	media-gfx/pngcrush"
+DEPEND="${DEPENDCOMMON}"
 
 RDEPEND="${RDEPEND}
 	${DEPENDCOMMON}
@@ -187,7 +188,11 @@ my_confmake() {
 }
 
 src_configure() {
-	filter-flags -flto -fwhole-program
+	filter-flags \
+		-flto \
+		-fwhole-program \
+		-fuse-linker-plugin \
+		-fvisibility-inlines-hidden
 	my_conf "ManuProC_Base"
 	my_conf "GtkmmAddons"
 	my_confmake
