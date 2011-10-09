@@ -23,7 +23,7 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # @DESCRIPTION:
 # Set this variable to a non-empty value to disable the automatic updating of
 # an monotone source tree. This is intended to be set by users.
-: ${EMTN_OFFLINE:="${ESCM_OFFLINE}"}
+: ${EMTN_OFFLINE:="${EVCS_OFFLINE}"}
 
 # @ECLASS-VARIABLE: EMTN_CMD
 # @DESCRIPTION:

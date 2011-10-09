@@ -8,9 +8,8 @@ EGIT_PROJECT="aufs2"
 # BRANCH/COMMIT will be overridden in pkg_setup (according to kernel version)
 EGIT_BRANCH="aufs2.2"
 EGIT_COMMIT="${EGIT_BRANCH}"
-[ -n "${EGIT_OFFLINE:-${ESCM_OFFLINE}}" ] || EGIT_PRUNE=true
 EGIT_HAS_SUBMODULES=true
-inherit git linux-info eutils
+inherit git-2 linux-info eutils
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
@@ -107,8 +106,6 @@ pkg_setup() {
 	elog "To use the aufs2.1 branch for kernel version 2.6.39 use:"
 	elog "	AUFSBRANCH=aufs2.1-39 emerge -1 aufs"
 	msg=''
-	[ -n "${ESCM_OFFLINE}" ] && msg="${msg} ESCM_OFFLINE=''"
-	[ -n "${EGIT_OFFLINE}" ] && msg="${msg} EGIT_OFFLINE=''"
 	if [ -n "${msg}" ]
 	then
 		elog "Note that it might be necessary in addition to fetch the newest aufs:"

@@ -7,9 +7,8 @@ EGIT_REPO_URI="git://aufs.git.sourceforge.net/gitroot/aufs/aufs-util.git"
 EGIT_PROJECT="aufs-util"
 EGIT_BRANCH="aufs3.0"
 EGIT_COMMIT="${EGIT_BRANCH}"
-[ -n "${EGIT_OFFLINE:-${ESCM_OFFLINE}}" ] || EGIT_PRUNE=true
 EGIT_HAS_SUBMODULES=true
-inherit git linux-info multilib
+inherit git-2 linux-info multilib
 
 DESCRIPTION="Userspace tools for aufs"
 HOMEPAGE="http://aufs.sourceforge.net/"

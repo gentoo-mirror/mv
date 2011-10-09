@@ -3,13 +3,12 @@
 # $Header $
 
 EAPI="4"
-EGIT_REPO_URI="git://github.com/nicoulaj/zsh-syntax-highlighting.git"
+EGIT_REPO_URI="git://github.com/zsh-users/zsh-syntax-highlighting.git"
 EGIT_PROJECT="zsh-syntax-highlighting"
-[ -n "${EGIT_OFFLINE:-${ESCM_OFFLINE}}" ] || EGIT_PRUNE=true
-inherit git
+inherit git-2
 
 DESCRIPTION="Fish shell like syntax highlighting for zsh"
-HOMEPAGE="https://github.com/nicoulaj/zsh-syntax-highlighting"
+HOMEPAGE="https://github.com/zsh-users/zsh-syntax-highlighting"
 
 LICENSE="as-is"
 SLOT="0"
