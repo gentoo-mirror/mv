@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  15 Oct 2011; Martin Väth <martin@mvath.de>
+  Fix grsecurity-2.2.2.r1.patch to work without grsecurity, and
+  bump to aufs-99999999.3-r1 to push the change.
+
   09 Sep 2011; Martin Väth <martin@mvath.de>
   Port to git-2. Remove support for ESCM_OFLINE/EGIT_OFFLINE:
   This is named EVCS_OFFLINE in git-2.
