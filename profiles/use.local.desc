@@ -1,0 +1,16 @@
+# This file is deprecated as per GLEP 56 in favor of metadata.xml. Please add
+# your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using egencache *
+
+games-rpg/magus:acroread - Depend on acroread (otherwise you are responsible to install/configure a pdf viewer)
+games-rpg/magus:firefox - Depend on firefox browser (without a browser useflag you are responsible to install and configure a browser)
+games-rpg/magus:icecat - Depend on icecat browser
+games-rpg/magus:konqueror - Depend on konqueror browser
+games-rpg/magus:postgres - Use postgresql instead of sqlite
+games-rpg/magus:seamonkey - Depend on seamonkey browser
+sys-apps/less:less-select - Add the less-select feature (additional options and a binary helper).
+sys-apps/less:original-gentoo - Use the gentoo default for the LESS variable.
+sys-fs/aufs:all-patches - Apply all patches - also those which do not start with aufs
+sys-fs/aufs:kernel-patch - Apply the aufs2 kernel patches instead of just copying them
+sys-fs/squash_dir:readonly - Do not depend on any of aufs|aufs2|unionfs|unionfs-fuse|funionfs. At least one of these must be installed and active to make the squash_dir-mounted filesystems writable.
+sys-fs/squashfs-tools:progress-redirect - Redirect printing of progress bar to stderr. This gives a nicer output if used from scripts like sys-fs/squash_dir
