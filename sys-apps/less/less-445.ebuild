@@ -7,7 +7,7 @@ inherit eutils
 
 DESCRIPTION="Excellent text file viewer, optionally with additional selection feature"
 HOMEPAGE="http://www.greenwoodsoftware.com/less/"
-PATCHVER=436
+PATCHVER="436"
 SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz
 	http://www-zeuthen.desy.de/~friebel/unix/less/code2color
 	less-select? ( http://www.mathematik.uni-wuerzburg.de/~vaeth/download/less-select-patch-${PATCHVER}.tar.gz )"
@@ -42,15 +42,14 @@ src_prepare() {
 	fi
 }
 
-yesno() { use $1 && echo yes || echo no ; }
 src_configure() {
-	export ac_cv_lib_ncursesw_initscr=$(yesno unicode)
-	export ac_cv_lib_ncurses_initscr=$(yesno !unicode)
+	export ac_cv_lib_ncursesw_initscr=$(usex unicode)
+	export ac_cv_lib_ncurses_initscr=$(usex !unicode)
 	econf || die
 }
 
 src_compile() {
-	default_src_compile
+	default
 	if use less-select
 	then	./lesskey -o less-normal-key.bin "${SELECTDIR}/less-normal-key.src" || die
 		./lesskey -o less-select-key.bin "${SELECTDIR}/less-select-key.src" || die
@@ -59,20 +58,19 @@ src_compile() {
 
 src_install() {
 	local a
-	default_src_install
+	default
 
 	dobin code2color || die "dobin"
 	newbin "${FILESDIR}"/lesspipe.sh lesspipe || die "newbin"
 	dosym lesspipe /usr/bin/lesspipe.sh
-
-	dodoc NEWS README* "${FILESDIR}"/README.Gentoo
-
 	if use original-gentoo
 	then	a="-R -M --shift 5"
 	else	a="-sFRiMX --shift 5"
 	fi
 	printf '%s\n' 'LESSOPEN="|lesspipe.sh %s"' "LESS=\"${a}\"" >70less
 	doenvd 70less
+
+	dodoc NEWS README* "${FILESDIR}"/README.Gentoo
 
 	if use less-select
 	then	dodoc "${SELECTDIR}"/README.less-select

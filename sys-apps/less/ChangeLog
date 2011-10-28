@@ -2,10 +2,15 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*less-445.ebuild (28 Oct 2011)
+
+  28 Oct 2011; Martin Väth <martin@mvath.de>
+  Bump less version.
+
 *less-444.ebuild (09 Jun 2011)
 
   09 Jun 2011; Martin Väth <martin@mvath.de>
-  Bump less version. Remove old ebuild. Fix some typos concering env.d
+  Bump less version. Remove old ebuild. Fix some typos concerning env.d
 
 *less-443.ebuild (06 Jun 2011)
 
