@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+squash_dir-11.2 (29 Oct 2011)
+
+  29 Oct 2011; Martin Väth <martin@mvath.de>
+  Version bump. Change location to gitorious
+
 squash_dir-11.1 (22 Oct 2011)
 
   22 Oct 2011; Martin Väth <martin@mvath.de>
