@@ -7,8 +7,8 @@ inherit autotools
 RESTRICT="mirror"
 
 DESCRIPTION="Keep directories compressed with squashfs. Useful for portage tree, texmf-dist"
-HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367-highlight-.html"
-SRC_URI="http://gitorious.org/${PN}/${PN}/archive-tarball/release-${PV} -> ${P}.tar.gz"
+HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367.html"
+SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,7 +26,11 @@ RDEPEND="sys-fs/squashfs-tools
 	) )"
 DEPEND=">=sys-devel/autoconf-2.65"
 
-S="${WORKDIR}/${PN}-${PN}"
+src_unpack() {
+	default
+	cd *"${PN}"-*
+	S="${PWD}"
+}
 
 src_prepare() {
 	eautoreconf
