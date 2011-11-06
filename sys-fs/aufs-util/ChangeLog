@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  06 Nov 2011; Martin Väth <martin@mvath.de>
+  Use default EGIT_PROJECT name. Call EGIT_REPACK unless offline.
+
   09 Sep 2011; Martin Väth <martin@mvath.de>
   Port to git-2. Remove support for ESCM_OFLINE/EGIT_OFFLINE:
   This is named EVCS_OFFLINE in git-2.

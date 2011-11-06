@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  06 Nov 2011; Martin Väth <martin@mvath.de>
+  Use default EGIT_PROJECT name. Call EGIT_REPACK unless offline.
+
   15 Oct 2011; Martin Väth <martin@mvath.de>
   Fix grsecurity-2.2.2.r1.patch to work without grsecurity, and
   bump to aufs-99999999.3-r1 to push the change.

@@ -4,7 +4,7 @@
 
 EAPI="4"
 EGIT_REPO_URI="git://github.com/zsh-users/zsh-syntax-highlighting.git"
-EGIT_PROJECT="zsh-syntax-highlighting"
+[ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
 inherit git-2
 
 DESCRIPTION="Fish shell like syntax highlighting for zsh"

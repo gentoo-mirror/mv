@@ -4,11 +4,12 @@
 
 EAPI="4"
 EGIT_REPO_URI="git://aufs.git.sourceforge.net/gitroot/aufs/aufs3-standalone.git"
-EGIT_PROJECT="aufs3"
+EGIT_PROJECT="aufs3.git"
 # BRANCH/COMMIT will be overridden in pkg_setup (according to kernel version)
 EGIT_BRANCH="aufs3.0"
 EGIT_COMMIT="${EGIT_BRANCH}"
 EGIT_HAS_SUBMODULES=true
+[ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
 inherit git-2 linux-info eutils
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
