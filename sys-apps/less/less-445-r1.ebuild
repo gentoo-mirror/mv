@@ -15,15 +15,17 @@ SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz
 LICENSE="|| ( GPL-3 BSD-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="+less-select original-gentoo unicode"
+IUSE="+less-select pcre original-gentoo unicode"
 
-DEPEND=">=sys-libs/ncurses-5.2"
+RDEPEND="app-misc/editor-wrapper
+	>=sys-libs/ncurses-5.2
+	pcre? ( dev-libs/libpcre )"
+DEPEND="${RDEPEND}"
 
-SELECTDIR="./less-select-patch-${PATCHVER}"
+SELECTDIR="${WORKDIR}/less-select-patch-${PATCHVER}"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd "${S}"
 	cp "${DISTDIR}"/code2color "${S}"/
 	if use less-select
 	then	unpack "less-select-patch-${PATCHVER}.tar.gz"
@@ -39,13 +41,21 @@ src_prepare() {
 		else	epatch "${SELECTDIR}/less-${PATCHVER}-select.patch" || die "Patch less-${PATCHVER}-select failed"
 		fi
 		"${SELECTDIR}"/after-patch || die "${SELECTDIR}/after-patch failed"
+		sed -i -e 's|\([^a-zA-Z]\)/etc/less-select-key.bin|\1'"${EPREFIX%/}"'/etc/less/select-key.bin|g' \
+			"${SELECTDIR}/less-select"
 	fi
 }
 
 src_configure() {
 	export ac_cv_lib_ncursesw_initscr=$(usex unicode)
 	export ac_cv_lib_ncurses_initscr=$(usex !unicode)
-	econf || die
+
+	local regex="posix"
+	use pcre && regex="pcre"
+
+	econf \
+		--with-regex=${regex} \
+		--with-editor=/usr/libexec/gentoo-editor
 }
 
 src_compile() {
@@ -75,11 +85,12 @@ src_install() {
 	if use less-select
 	then	dodoc "${SELECTDIR}"/README.less-select
 		newbin "${SELECTDIR}/less-select" less-select
-		insinto /etc
-		newins less-normal-key.bin lesskey.bin
-		newins less-select-key.bin less-select-key.bin
-		newins "${SELECTDIR}/less-normal-key.src" lesskey.src
-		newins "${SELECTDIR}/less-select-key.src" less-select-key.src
+		insinto /etc/less
+		# The first is required for less-select, the others are optional
+		newins less-select-key.bin select-key.bin
+		newins less-normal-key.bin normal-key.bin
+		newins "${SELECTDIR}/less-select-key.src" select-key.src
+		newins "${SELECTDIR}/less-normal-key.src" normal-key.src
 	fi
 }
 
