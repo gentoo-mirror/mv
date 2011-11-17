@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="+less-select pcre original-gentoo unicode"
 
-RDEPEND="app-misc/editor-wrapper
+RDEPEND=">=app-misc/editor-wrapper-3
 	>=sys-libs/ncurses-5.2
 	pcre? ( dev-libs/libpcre )"
 DEPEND="${RDEPEND}"
@@ -55,7 +55,7 @@ src_configure() {
 
 	econf \
 		--with-regex=${regex} \
-		--with-editor=/usr/libexec/gentoo-editor
+		--with-editor=/usr/libexec/editor
 }
 
 src_compile() {
