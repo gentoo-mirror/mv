@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*form-history-control-1.2.10.0 (26 Nov 2011)
+
+  26 Nov 2011; Martin Väth <martin@mvath.de>
+  Bump version. Remove old ebuild.
+
 *form-history-control-1.2.9.3 (30 Jul 2011)
 
   01 Aug 2011; Martin Väth <martin@mvath.de>

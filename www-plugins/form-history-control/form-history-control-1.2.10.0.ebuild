@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 MY_P="${P/-/_}"
 MY_P="${MY_P/-/_}"
-NAME="${MY_P}-sm+fx.xpi"
+NAME="${MY_P}-fx+sm.xpi"
 DESCRIPTION="Edit the saved history of forms in mozilla"
 HOMEPAGE="http://www.formhistory.blogspot.com/"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/12021/${NAME}"
