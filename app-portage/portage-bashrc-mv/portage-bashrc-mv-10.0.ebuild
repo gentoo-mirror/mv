@@ -3,13 +3,11 @@
 # $Header $
 
 EAPI="4"
-
-EGIT_REPO_URI="git://github.com/vaeth/${PN}.git"
-[ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit git-2
+RESTRICT="mirror"
 
 DESCRIPTION="Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags"
 HOMEPAGE="https://github.com/vaeth/${PN}"
+SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +15,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 PROPERTIES="live"
 
+src_unpack() {
+	default
+	cd *"${PN}"-*
+	S="${PWD}"
+}
+
 src_install() {
 	insinto "${EPREFIX%/}/etc/portage"
 	doins -r bashrc bashrc.d
+	docompress "${EPREFIX%/}/etc/portage/bashrc.d/README"
 }
