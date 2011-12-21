@@ -5,7 +5,7 @@
 EAPI="4"
 RESTRICT="mirror"
 
-DESCRIPTION="sudox is a wrapper for sudo which can pass X authority data and deal with screen and tmux"
+DESCRIPTION="Keep only compressed logs of installed packages"
 HOMEPAGE="https://github.com/vaeth/${PN}"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
