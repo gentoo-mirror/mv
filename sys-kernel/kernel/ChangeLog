@@ -1,11 +1,8 @@
-# ChangeLog for app-admin/useflags
+# ChangeLog for sys-kernel/kernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
-useflags-2.5 (21 Dec 2011)
-
-  21 Nov 2011; Martin Väth <martin@mvath.de>
-  Suppose IUSE=eix
+kernel-3.4 (21 Dec 2011)
 
   21 Nov 2011; Martin Väth <martin@mvath.de>
   New ebuild from scratch.

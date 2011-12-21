@@ -2,6 +2,8 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
+app-admin/logclean:eix - Pull in eix for quicker execution
+app-portage/useflags:eix - Pull in eix for quicker execution
 games-rpg/magus:acroread - Depend on acroread (otherwise you are responsible to install/configure a pdf viewer)
 games-rpg/magus:firefox - Depend on firefox browser (without a browser useflag you are responsible to install and configure a browser)
 games-rpg/magus:icecat - Depend on icecat browser
@@ -14,3 +16,4 @@ sys-fs/aufs:all-patches - Apply all patches - also those which do not start with
 sys-fs/aufs:kernel-patch - Apply the aufs2 kernel patches instead of just copying them
 sys-fs/squash_dir:readonly - Do not depend on any of aufs|aufs2|unionfs|unionfs-fuse|funionfs. At least one of these must be installed and active to make the squash_dir-mounted filesystems writable.
 sys-fs/squashfs-tools:progress-redirect - Redirect printing of progress bar to stderr. This gives a nicer output if used from scripts like sys-fs/squash_dir
+sys-kernel/kernel:eix - Pull in eix for quicker execution

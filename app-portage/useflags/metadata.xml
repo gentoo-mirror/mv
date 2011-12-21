@@ -6,4 +6,7 @@
 	<email>martin@mvath.de</email>
 	<name>Martin Väth</name>
 </maintainer>
+<use>
+	<flag name="eix">Pull in eix for quicker execution</flag>
+</use>
 </pkgmetadata>

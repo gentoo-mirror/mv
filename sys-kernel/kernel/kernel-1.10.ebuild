@@ -5,7 +5,7 @@
 EAPI="4"
 RESTRICT="mirror"
 
-DESCRIPTION="Keep only compressed logs of installed packages"
+DESCRIPTION="A POSIX shell script to compile the kernel with user permissions"
 HOMEPAGE="https://github.com/vaeth/${PN}"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+eix zsh-completion"
 PROPERTIES="live"
 
-DEPEND="eix? ( app-portage/eix )"
+DEPEND="app-admin/sudox
+eix? ( app-portage/eix )"
 
 src_unpack() {
 	default
@@ -25,8 +26,4 @@ src_unpack() {
 
 src_install() {
 	dobin "${PN}"
-	if use zsh-completion
-	then	insinto ${EPREFIX%/}/usr/share/zsh/site-functions
-			doins "_${PN}"
-	fi
 }

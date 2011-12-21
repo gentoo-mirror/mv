@@ -5,4 +5,8 @@
 logclean-7.6 (21 Dec 2011)
 
   21 Nov 2011; Martin Väth <martin@mvath.de>
+  Suppose IUSE=eix
+
+  21 Nov 2011; Martin Väth <martin@mvath.de>
   New ebuild from scratch.
+
