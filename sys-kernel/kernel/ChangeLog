@@ -4,5 +4,8 @@
 
 kernel-3.4 (21 Dec 2011)
 
-  21 Nov 2011; Martin Väth <martin@mvath.de>
+  26 Dec 2011; Martin Väth <martin@mvath.de>
+  Fix dependencies.
+
+  21 Dec 2011; Martin Väth <martin@mvath.de>
   New ebuild from scratch.

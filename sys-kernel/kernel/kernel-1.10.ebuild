@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+eix zsh-completion"
 PROPERTIES="live"
 
-DEPEND="app-admin/sudox
+RDEPEND="app-admin/sudo
+app-admin/sudox
 eix? ( app-portage/eix )"
 
 src_unpack() {

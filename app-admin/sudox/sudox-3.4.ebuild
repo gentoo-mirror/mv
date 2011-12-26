@@ -15,6 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
 PROPERTIES="live"
 
+RDEPEND="app-admin/sudo"
+
 src_unpack() {
 	default
 	cd *"${PN}"-*
