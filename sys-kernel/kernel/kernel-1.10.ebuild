@@ -13,7 +13,6 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+eix zsh-completion"
-PROPERTIES="live"
 
 RDEPEND="app-admin/sudo
 app-admin/sudox

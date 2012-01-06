@@ -19,7 +19,8 @@ PROPERTIES="live"
 
 RDEPEND="app-shells/zsh"
 
-ZSH_DEST="${EPREFIX%/}/usr/share/zsh/site-contrib/${PN}"
+ZSH_DEST="/usr/share/zsh/site-contrib/${PN}"
+ZSH_EDEST="${EPREFIX%/}${ZSH_DEST}"
 ZSH_TEMPLATE="templates/zshrc.zsh-template"
 
 src_prepare() {
@@ -27,9 +28,9 @@ src_prepare() {
 	for i in "${S}"/tools/*install* "${S}"/tools/*upgrade*
 	do	test -f "${i}" && : >"${i}"
 	done
-	sed -i -e 's!^ZSH=.*$!ZSH='"${ZSH_DEST}"'!' \
-		   -e 's!~/.oh-my-zsh!'"${ZSH_DEST}"'!' "${S}/${ZSH_TEMPLATE}"
-	sed -i -e 's!~/.oh-my-zsh!'"${ZSH_DEST}"'!' \
+	sed -i -e 's!^ZSH=.*$!ZSH='"${ZSH_EDEST}"'!' \
+		   -e 's!~/.oh-my-zsh!'"${ZSH_EDEST}"'!' "${S}/${ZSH_TEMPLATE}"
+	sed -i -e 's!~/.oh-my-zsh!'"${ZSH_EDEST}"'!' \
 		"${S}/plugins/dirpersist/dirpersist.plugin.zsh"
 	sed -i -e '/zstyle.*cache/d' "${S}/lib/completion.zsh"
 }

@@ -13,7 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-PROPERTIES="live"
 
 src_unpack() {
 	default
@@ -22,7 +21,7 @@ src_unpack() {
 }
 
 src_install() {
-	insinto "${EPREFIX%/}/etc/portage"
+	insinto /etc/portage
 	doins -r bashrc bashrc.d
-	docompress "${EPREFIX%/}/etc/portage/bashrc.d/README"
+	docompress /etc/portage/bashrc.d/README
 }

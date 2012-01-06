@@ -13,7 +13,6 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+eix zsh-completion"
-PROPERTIES="live"
 
 DEPEND="eix? ( app-portage/eix )"
 
@@ -26,7 +25,7 @@ src_unpack() {
 src_install() {
 	dobin "${PN}"
 	if use zsh-completion
-	then	insinto ${EPREFIX%/}/usr/share/zsh/site-functions
+	then	insinto /usr/share/zsh/site-functions
 			doins "_${PN}"
 	fi
 }
