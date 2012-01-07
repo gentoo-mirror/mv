@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+eix zsh-completion"
 
-DEPEND="eix? ( app-portage/eix )"
+RDEPEND="dev-lang/perl
+eix? ( app-portage/eix )"
 
 src_unpack() {
 	default

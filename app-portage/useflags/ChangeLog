@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/useflags
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
 useflags-2.5 (21 Dec 2011)
+
+  07 Jan 2012; Martin Väth <martin@mvath.de>
+  Fix dependencies
 
   21 Nov 2011; Martin Väth <martin@mvath.de>
   Suppose IUSE=eix
