@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+trickyfetch-6.1 (08 Jan 2012)
+
+  08 Jan 2012; Martin Väth <martin@mvath.de>
+  Version bump. Never proceed after LOCALFETCHCOMMAND.
+
 trickyfetch-6.0 (06 Jan 2012)
 
   06 Jan 2012; Martin Väth <martin@mvath.de>
