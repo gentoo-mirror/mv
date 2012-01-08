@@ -1,11 +1,14 @@
-# ChangeLog for app-admin/logclean
+# ChangeLog for app-portage/logclean
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
 logclean-7.7 (07 Jan 2012)
 
+  08 Jan 2012; Martin Väth <martin@mvath.de>
+  Move category: app-admin -> app-portage
+
   07 Jan 2012; Martin Väth <martin@mvath.de>
-  Version bump, remove old ebuild. Fix dependencies
+  Version bump. Make help handling more consistent. Fix dependencies.
 
 logclean-7.6 (21 Dec 2011)
 

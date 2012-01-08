@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+useflags-2.6 (08 Jan 2011)
+
+  08 Jan 2012; Martin Väth <martin@mvath.de>
+  Version bump: Make help handling more consistent.
+
 useflags-2.5 (21 Dec 2011)
 
   07 Jan 2012; Martin Väth <martin@mvath.de>

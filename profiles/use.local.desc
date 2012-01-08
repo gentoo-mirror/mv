@@ -2,7 +2,7 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
-app-admin/logclean:eix - Pull in eix for quicker execution
+app-portage/logclean:eix - Pull in eix for quicker execution
 app-portage/useflags:eix - Pull in eix for quicker execution
 games-rpg/magus:acroread - Depend on acroread (otherwise you are responsible to install/configure a pdf viewer)
 games-rpg/magus:firefox - Depend on firefox browser (without a browser useflag you are responsible to install and configure a browser)
