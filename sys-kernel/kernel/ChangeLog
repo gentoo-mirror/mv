@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/kernel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
 kernel-3.4 (21 Dec 2011)
+
+  09 Jan 2011; Martin Väth <martin@mvath.de>
+  Reformat deps.
 
   26 Dec 2011; Martin Väth <martin@mvath.de>
   Fix dependencies.

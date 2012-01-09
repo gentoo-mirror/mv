@@ -4,6 +4,9 @@
 
 logclean-7.7 (07 Jan 2012)
 
+  09 Jan 2012; Martin Väth <martin@mvath.de>
+  Depend of virtual/perl-Getopt-Long
+
   08 Jan 2012; Martin Väth <martin@mvath.de>
   Move category: app-admin -> app-portage
 

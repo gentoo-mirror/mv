@@ -5,7 +5,7 @@
 EAPI="4"
 RESTRICT="mirror"
 
-DESCRIPTION="Keep only compressed logs of installed packages"
+DESCRIPTION="Keep only (compressed) logs of installed packages"
 HOMEPAGE="https://github.com/vaeth/${PN}"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+eix zsh-completion"
 
 RDEPEND="dev-lang/perl
-eix? ( app-portage/eix )"
+	virtual/perl-Getopt-Long
+	eix? ( app-portage/eix )"
 
 src_unpack() {
 	default

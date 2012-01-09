@@ -4,6 +4,9 @@
 
 useflags-2.6 (08 Jan 2011)
 
+  09 Jan 2012; Martin Väth <martin@mvath.de>
+  Depend of virtual/perl-Getopt-Long
+
   08 Jan 2012; Martin Väth <martin@mvath.de>
   Version bump: Make help handling more consistent.
 

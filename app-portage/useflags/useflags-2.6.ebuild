@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+eix zsh-completion"
 
 RDEPEND="dev-lang/perl
-eix? ( app-portage/eix )"
+	virtual/perl-Getopt-Long
+	eix? ( app-portage/eix )"
 
 src_unpack() {
 	default
