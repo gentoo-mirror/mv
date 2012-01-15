@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+world-mv-3.2 (15 Jan 2012)
+
+  15 Jan 2012; Martin Väth <martin@mvath.de>
+  Version bump to provide grep/sgrep.
+
 world-mv-3.1 (08 Jan 2012)
 
   08 Jan 2012; Martin Väth <martin@mvath.de>
