@@ -4,6 +4,13 @@
 
 app-portage/logclean:eix - Pull in eix for quicker execution
 app-portage/useflags:eix - Pull in eix for quicker execution
+app-text/stardict:editor - Build and install the stardict-editor utility
+app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
+app-text/stardict:festival - Enable text to speech synthesizer using festival engine
+app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
+app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
+app-text/stardict:qqwry - Enable QQWry plugin, which provides information (in Chinese language) about geographical positions, owner, etc. for IP addresses
+app-text/stardict:tools - Build and install the extra stardict tools
 games-rpg/magus:acroread - Depend on acroread (otherwise you are responsible to install/configure a pdf viewer)
 games-rpg/magus:firefox - Depend on firefox browser (without a browser useflag you are responsible to install and configure a browser)
 games-rpg/magus:icecat - Depend on icecat browser
