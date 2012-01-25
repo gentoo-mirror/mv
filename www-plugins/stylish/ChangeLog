@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/stylish
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
+
+*stylish-1.2.5 (25 Jan 2012)
+
+  25 Jan 2011; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
 
 *stylish-1.2.4 (08 Nov 2011)
 
