@@ -1,0 +1,8 @@
+# ChangeLog for app-arch/bzwc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+bzwc-2.7 (29 Jan 2012)
+
+  29 Jan 2011; Martin Väth <martin@mvath.de>
+  New ebuild from scratch.

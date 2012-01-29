@@ -5,7 +5,7 @@
 EAPI="4"
 RESTRICT="mirror"
 
-DESCRIPTION="A collection of POSIX shell scripts to invoke archiver programs"
+DESCRIPTION="A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)"
 HOMEPAGE="https://github.com/vaeth/${PN}"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 

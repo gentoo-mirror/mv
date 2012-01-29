@@ -2,7 +2,6 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
-app-arch/archwrap:eix - Pull in eix for quicker execution
 app-portage/logclean:eix - Pull in eix for quicker execution
 app-portage/useflags:eix - Pull in eix for quicker execution
 app-text/stardict:editor - Build and install the stardict-editor utility
