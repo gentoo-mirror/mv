@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/squashfs-tools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
+
+  29 Jan 2012; Martin Väth <martin@mvath.de>
+  Remove old.
 
   31 Mar 2011; Martin Väth <martin@mvath.de>
   Bump 4.2 from tree.
