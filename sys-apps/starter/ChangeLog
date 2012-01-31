@@ -2,7 +2,7 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
-*starter-2.1 (31 Jan 2012)
+*starter-2.2 (31 Jan 2012)
 
   31 Jan 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. More secure defaults.
