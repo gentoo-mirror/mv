@@ -1,0 +1,8 @@
+# ChangeLog for sys-fs/emount
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+*emount-2.1 (31 Jan 2012)
+
+  31 Jan 2012; Martin Väth <martin@mvath.de>
+  New ebuild from scratch.
