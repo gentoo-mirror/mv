@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/less
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
 *less-445-r1.ebuild (10 Nov 2011)
+
+  31 Jan 2012; Martin Väth <martin@mvath.de>
+  Bump lesspipe.sh from tree
 
   17 Nov 2011; Martin Väth <martin@mvath.de>
   Update editor dependency as in portage main tree
