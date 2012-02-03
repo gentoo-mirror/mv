@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*bzwc-2.7-r1 (03 Feb 2012)
+
+  03 Feb 2011; Martin Väth <martin@mvath.de>
+  Do not install README
+
 *bzwc-2.7 (29 Jan 2012)
 
   29 Jan 2011; Martin Väth <martin@mvath.de>

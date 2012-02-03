@@ -33,5 +33,4 @@ src_install() {
 	then	insinto /usr/share/zsh/site-functions
 			doins _"${mPN}"
 	fi
-	dodoc README
 }
