@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -8,7 +8,7 @@ EGIT_REPO_URI="git://github.com/robbyrussell/${PN}.git"
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
 inherit git-2
 
-DESCRIPTION="Directory of help-files (for run-help) for your current zsh"
+DESCRIPTION="A ready-to-use zsh configuration with plugins"
 HOMEPAGE="https://github.com/robbyrussell/oh-my-zsh"
 
 LICENSE="ZSH"

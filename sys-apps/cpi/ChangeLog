@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/cpi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+*cpi-1.0 (03 Feb 2012)
+
+  03 Feb 2011; Martin Väth <martin@mvath.de>
+  New ebuild from scratch.
