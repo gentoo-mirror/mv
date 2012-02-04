@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*firewall-mv-6.1 (04 Feb 2012)
+
+  04 Feb 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild. Separate SYSCTL parameters. Add init files.
+
 *firewall-mv-6.0 (02 Feb 2012)
 
   02 Feb 2012; Martin Väth <martin@mvath.de>

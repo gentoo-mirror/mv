@@ -32,5 +32,7 @@ src_install() {
 	dosbin firewall sysctl.net
 	insinto /etc
 	doins firewall.config
+	doconfd openrc/conf.d/*
+	doinitd openrc/init.d/*
 	dodoc README
 }
