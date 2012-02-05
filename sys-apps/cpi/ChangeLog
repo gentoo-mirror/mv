@@ -2,6 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*cpi-1.2 (05 Feb 2012)
+
+  05 Feb 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+  Allow touch or forcing of cp -a; options -tfh; diff -q; zsh completion
+
 *cpi-1.0 (03 Feb 2012)
 
   03 Feb 2011; Martin Väth <martin@mvath.de>

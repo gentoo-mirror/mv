@@ -12,6 +12,7 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="zsh-completion"
 
 src_unpack() {
 	default
@@ -21,4 +22,8 @@ src_unpack() {
 
 src_install() {
 	dobin "${PN}"
+	if use zsh-completion
+	then	insinto /usr/share/zsh/site-functions
+			doins _"${PN}"
+	fi
 }
