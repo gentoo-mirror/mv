@@ -6,7 +6,7 @@ EAPI="4"
 RESTRICT="mirror"
 
 mPN="${PN%-*}"
-DESCRIPTION="Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR"
+DESCRIPTION="Organize your world file and find installed packages or differences to @world"
 HOMEPAGE="https://github.com/vaeth/${mPN}"
 SRC_URI="http://github.com/vaeth/${mPN}/tarball/release-${PV} -> ${mPN}-${PV}.tar.gz"
 
