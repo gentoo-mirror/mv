@@ -2,6 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  11 Feb 2012; Martin Väth <martin@mvath.de>
+  Rename USE lzma->xz and drop SQUASH_FS_DEFAULT_COMP as in main tree.
+  Use REQUIRED_USE.
+
   29 Jan 2012; Martin Väth <martin@mvath.de>
   Remove old.
 

@@ -13,14 +13,14 @@ SRC_URI="mirror://sourceforge/squashfs/squashfs${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-linux"
-IUSE="+gzip +lzma lzo +progress-redirect xattr"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-linux"
+IUSE="+gzip lzo +progress-redirect xattr +xz"
+REQUIRED_USE="|| ( gzip lzo xz )"
 
 RDEPEND="
 	gzip? ( sys-libs/zlib )
-	lzma? ( app-arch/xz-utils )
+	xz? ( app-arch/xz-utils )
 	lzo? ( dev-libs/lzo )
-	!lzma? ( !lzo? ( sys-libs/zlib ) )
 	xattr? ( sys-apps/attr )"
 DEPEND="${RDEPEND}"
 
@@ -39,41 +39,22 @@ use_sed() {
 
 src_configure() {
 	tc-export CC
-	local def
-	if [[ -n ${SQUASH_FS_DEFAULT_COMP} ]]; then
-		def=${SQUASH_FS_DEFAULT_COMP}
-	else
-		einfo "You can set the default compression (gzip, xz or lzo) by exporting SQUASH_FS_DEFAULT_COMP"
-		if use gzip; then
-			def="gzip"
-		elif use lzma; then
-			def="xz"
-		elif use lzo; then
-			def="lzo"
-		else
-			die "Please set at least one of the gzip, lzma and lzo USE flags as compression algorithm."
-		fi
-	fi
-
-	einfo "Using ${def} as compression algorithm."
-
 	sed -i -r \
-		-e "/^COMP_DEFAULT =/s:=.*:= ${def}:" \
 		-e "$(use_sed gzip)" \
-		-e "$(use_sed lzma XZ)" \
+		-e "$(use_sed xz)" \
 		-e "$(use_sed lzo)" \
 		-e "$(use_sed xattr)" \
 		Makefile || die
 }
 
 src_install() {
-	dobin mksquashfs unsquashfs || die
+	dobin mksquashfs unsquashfs
 	cd ..
-	dodoc README ACKNOWLEDGEMENTS CHANGES PERFORMANCE.README || die
+	dodoc README ACKNOWLEDGEMENTS CHANGES PERFORMANCE.README
 }
 
 pkg_postinst() {
 	ewarn "This version of mksquashfs requires a 2.6.29 kernel or better"
-	use lzma &&
+	use xz &&
 		ewarn "XZ support requires a 2.6.38 kernel or better"
 }
