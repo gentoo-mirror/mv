@@ -78,25 +78,30 @@ src_cp() {
 }
 
 src_sed() {
-	local short file ori ignore remove
+	local short file ori ignore remove grep opt
 	ignore=false
 	remove=false
-	while case "${1}" in
-		-f) remove=true;;
-		-i) ignore=true;;
-		*) false;;
-	esac
-	do	shift
+	grep=''
+	OPTIND=1
+	while getopts 'fig:' opt
+	do	case "${opt}" in
+		f)	remove=:;;
+		i)	ignore=:;;
+		g)	grep="${OPTARG}";;
+		esac
 	done
+	shift $(( ${OPTIND} - 1 ))
 	short="${1}"
 	file="${S}/${short}"
 	ori="${file}.ori"
-	test -e "${ori}" && ${ignore} && ori="${file}.ori-1" && remove=true
+	test -e "${ori}" && ${ignore} && ori="${file}.ori-1" && remove=:
 	test -e "${ori}" && die "File ${ori} already exists"
 	if ! test -e "${file}"
 	then	die "Expected file ${short} does not exist"
 	fi
 	einfo "Patching ${short}"
+	[ -n "${grep}" ] && grep -q -- "${grep}" "${file}" \
+		&& ewarn "Redundant patching of ${short}"
 	mv -- "${file}" "${ori}"
 	shift
 	sed "${@}" -- "${ori}" >"${file}"
@@ -117,7 +122,11 @@ src_patch() {
 		-e 's/drache.png/Money-gray.png saebel.png drache.png/'
 	src_sed ManuProC_Widgets/configure.in \
 		-e 's/^[ 	]*AM_GNU_GETTEXT_VERSION/AM_GNU_GETTEXT_VERSION/'
+	src_sed -g 'AM_GNU_GETTEXT_VERSION' ManuProC_Base/configure.in \
+		-e '/AC_SUBST(GETTEXT_PACKAGE)/iAM_GNU_GETTEXT_VERSION([0.17])'
 #	src_cp ManuProC_Base/macros/petig.m4 ManuProC_Widgets/macros/petig.m4
+	src_sed midgard/src/table_lernschema.cc \
+		 '/case .*:$/{n;s/^[ 	]*\}/break;}/}'
 
 	for i in konqueror icecat seamonkey firefox mozilla
 	do	use "${i}" && browser="${i}" && break
