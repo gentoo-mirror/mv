@@ -17,6 +17,7 @@ games-rpg/magus:icecat - Depend on icecat browser
 games-rpg/magus:konqueror - Depend on konqueror browser
 games-rpg/magus:postgres - Use postgresql instead of sqlite
 games-rpg/magus:seamonkey - Depend on seamonkey browser
+net-misc/sshstart:keychain - Pull in keychain as dependency. Not required, but recommended for smoother operation.
 sys-apps/less:less-select - Add the less-select feature (additional options and a binary helper).
 sys-apps/less:original-gentoo - Use the gentoo default for the LESS variable.
 sys-fs/aufs:all-patches - Apply all patches - also those which do not start with aufs

@@ -31,4 +31,5 @@ src_install() {
 	done
 	insinto /etc
 	doins etc/*
+	dodoc README
 }
