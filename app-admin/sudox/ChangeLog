@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudox
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
+
+*sudox-3.5 (28 Feb 2012)
+
+  28 Feb 2011; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
 
 *sudox-3.4 (26 Dec 2011)
 
