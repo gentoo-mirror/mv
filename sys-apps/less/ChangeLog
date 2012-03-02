@@ -4,6 +4,9 @@
 
 *less-445-r1.ebuild (10 Nov 2011)
 
+  02 Mar 2012; Martin Väth <martin@mvath.de>
+  Change to github repository.
+
   31 Jan 2012; Martin Väth <martin@mvath.de>
   Bump lesspipe.sh from tree
 

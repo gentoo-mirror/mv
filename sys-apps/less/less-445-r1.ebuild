@@ -6,43 +6,42 @@ EAPI="4"
 inherit eutils
 
 DESCRIPTION="Excellent text file viewer, optionally with additional selection feature"
-HOMEPAGE="http://www.greenwoodsoftware.com/less/"
+PATCHN="less-select"
+PATCHV="2.2"
 PATCHVER="436"
+PATCHBALL="${PATCHN}-${PATCHV}.tar.gz"
+HOMEPAGE="http://www.greenwoodsoftware.com/less/ https://github.com/vaeth/${PATCHN}"
 SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz
-	http://www-zeuthen.desy.de/~friebel/unix/less/code2color
-	less-select? ( http://www.mathematik.uni-wuerzburg.de/~vaeth/download/less-select-patch-${PATCHVER}.tar.gz )"
+	less-select? ( http://github.com/vaeth/${PATCHN}/tarball/release-${PATCHV} -> ${PATCHBALL} )
+	http://www-zeuthen.desy.de/~friebel/unix/less/code2color"
 
 LICENSE="|| ( GPL-3 BSD-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="+less-select pcre original-gentoo unicode"
 
-RDEPEND=">=app-misc/editor-wrapper-3
+DEPEND=">=app-misc/editor-wrapper-3
 	>=sys-libs/ncurses-5.2
 	pcre? ( dev-libs/libpcre )"
-DEPEND="${RDEPEND}"
-
-SELECTDIR="${WORKDIR}/less-select-patch-${PATCHVER}"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${P}.tar.gz
 	cp "${DISTDIR}"/code2color "${S}"/
 	if use less-select
-	then	unpack "less-select-patch-${PATCHVER}.tar.gz"
+	then	unpack ${PATCHBALL}
+		cd *"${PATCHN}"-*
+		SELECTDIR="${PWD}"
 	fi
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/code2color.patch
 	if use less-select
-	then	mv -- "${SELECTDIR}/INSTALL" "${SELECTDIR}/README.less-select"
-		if test -e "${SELECTDIR}/less-${PV}-select.patch"
-		then	epatch "${SELECTDIR}/less-${PV}-select.patch" || die "Patch less-${PV}-select failed"
-		else	epatch "${SELECTDIR}/less-${PATCHVER}-select.patch" || die "Patch less-${PATCHVER}-select failed"
-		fi
+	then	epatch "${SELECTDIR}/patches/less-${PATCHVER}-select.patch" || die
 		"${SELECTDIR}"/after-patch || die "${SELECTDIR}/after-patch failed"
 		sed -i -e 's|\([^a-zA-Z]\)/etc/less-select-key.bin|\1'"${EPREFIX%/}"'/etc/less/select-key.bin|g' \
-			"${SELECTDIR}/less-select"
+			"${SELECTDIR}/bin/less-select" || die
 	fi
 }
 
@@ -61,8 +60,8 @@ src_configure() {
 src_compile() {
 	default
 	if use less-select
-	then	./lesskey -o less-normal-key.bin "${SELECTDIR}/less-normal-key.src" || die
-		./lesskey -o less-select-key.bin "${SELECTDIR}/less-select-key.src" || die
+	then	./lesskey -o normal-key.bin "${SELECTDIR}/keys/less-normal-key.src" || die
+		./lesskey -o select-key.bin "${SELECTDIR}/keys/less-select-key.src" || die
 	fi
 }
 
@@ -83,14 +82,13 @@ src_install() {
 	dodoc NEWS README* "${FILESDIR}"/README.Gentoo
 
 	if use less-select
-	then	dodoc "${SELECTDIR}"/README.less-select
-		newbin "${SELECTDIR}/less-select" less-select
+	then	newdoc "${SELECTDIR}"/README README.less-select
+		dobin "${SELECTDIR}/bin/"*
 		insinto /etc/less
 		# The first is required for less-select, the others are optional
-		newins less-select-key.bin select-key.bin
-		newins less-normal-key.bin normal-key.bin
-		newins "${SELECTDIR}/less-select-key.src" select-key.src
-		newins "${SELECTDIR}/less-normal-key.src" normal-key.src
+		doins select-key.bin normal-key.bin
+		newins "${SELECTDIR}/keys/less-select-key.src" select-key.src
+		newins "${SELECTDIR}/keys/less-normal-key.src" normal-key.src
 	fi
 }
 
