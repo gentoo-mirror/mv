@@ -2,9 +2,14 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*set_prompt-1.6 (10 Mar 2012)
+
+  10 Mar 2011; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild. Security Update. See the new README.
+
 *set_prompt-1.5 (08 Mar 2012)
 
-  08 Feb 2011; Martin Väth <martin@mvath.de>
+  08 Mar 2011; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Security Update. See the new README.
 
 *set_prompt-1.4 (28 Feb 2012)
