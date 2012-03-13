@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -6,7 +6,7 @@ EAPI="4"
 inherit autotools flag-o-matic
 RESTRICT="mirror"
 
-case "${PV}" in
+case ${PV} in
 9999*)
 	LIVE_VERSION=:
 ;;
@@ -29,21 +29,20 @@ then	PROPERTIES="live"
 fi
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+acroread firefox icecat konqueror postgres seamonkey"
+IUSE="+acroread firefox icecat konqueror postgres pngcrush seamonkey"
 
 DEPENDCOMMON=">=dev-libs/libsigc++-2.0.1
-	>=dev-cpp/gtkmm-2.4.0
+	>=dev-cpp/gtkmm-2.4.0:2.4
 	>=sys-devel/gettext-0.17
 	virtual/latex-base
 	postgres? ( virtual/postgresql-server )
 	!postgres? ( >=dev-db/sqlite-3 )
 	|| ( media-libs/netpbm media-gfx/graphicsmagick media-gfx/imagemagick )"
-#	media-gfx/pngcrush is supported but not strictly required
 
-DEPEND="${DEPENDCOMMON}"
+DEPEND="${DEPENDCOMMON}
+	pngcrush? ( media-gfx/pngcrush )"
 
-RDEPEND="${RDEPEND}
-	${DEPENDCOMMON}
+RDEPEND="${DEPENDCOMMON}
 	firefox? ( || ( www-client/firefox www-client/firefox-bin ) )
 	icecat? ( www-client/icecat )
 	seamonkey? ( www-client/seamonkey )
@@ -84,14 +83,14 @@ src_sed() {
 	grep=''
 	OPTIND=1
 	while getopts 'fig:' opt
-	do	case "${opt}" in
+	do	case ${opt} in
 		f)	remove=:;;
 		i)	ignore=:;;
-		g)	grep="${OPTARG}";;
+		g)	grep=${OPTARG};;
 		esac
 	done
 	shift $(( ${OPTIND} - 1 ))
-	short="${1}"
+	short=${1}
 	file="${S}/${short}"
 	ori="${file}.ori"
 	test -e "${ori}" && ${ignore} && ori="${file}.ori-1" && remove=:
@@ -129,7 +128,7 @@ src_patch() {
 		 '/case .*:$/{n;s/^[ 	]*\}/break;}/}'
 
 	for i in konqueror icecat seamonkey firefox mozilla
-	do	use "${i}" && browser="${i}" && break
+	do	use "${i}" && browser=${i} && break
 	done
 	[ "${browser}" = "mozilla" ] && return
 	src_sed midgard/docs/BMod_Op.html -e "s#mozilla#${browser}#"
@@ -233,8 +232,8 @@ src_install() {
 
 	for myicon in pixmaps/desktop-icons/MAGUS-*.png
 	do	test -e "${myicon}" || continue
-		myres="${myicon##*/MAGUS?}"
-		myres="${myres%.png}"
+		myres=${myicon##*/MAGUS?}
+		myres=${myres%.png}
 		insinto "/usr/share/icons/hicolor/${myres}/apps"
 		doins "${myicon}"
 	done

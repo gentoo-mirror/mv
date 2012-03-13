@@ -13,5 +13,6 @@
 	<flag name="konqueror">Depend on konqueror browser</flag>
 	<flag name="postgres">Use postgresql instead of sqlite</flag>
 	<flag name="seamonkey">Depend on seamonkey browser</flag>
+	<flag name="pngcrush">Use pngcrush for opimizing png before installation</flag>
 </use>
 </pkgmetadata>
