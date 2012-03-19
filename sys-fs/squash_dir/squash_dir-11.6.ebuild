@@ -3,8 +3,8 @@
 # $Header $
 
 EAPI="4"
-inherit autotools
 RESTRICT="mirror"
+inherit autotools vcs-snapshot
 
 DESCRIPTION="Keep directories compressed with squashfs. Useful for portage tree, texmf-dist"
 HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367.html"
@@ -25,12 +25,6 @@ RDEPEND="sys-fs/squashfs-tools
 		sys-fs/unionfs
 	) )"
 DEPEND=">=sys-devel/autoconf-2.65"
-
-src_unpack() {
-	default
-	cd *"${PN}"-*
-	S="${PWD}"
-}
 
 src_prepare() {
 	eautoreconf

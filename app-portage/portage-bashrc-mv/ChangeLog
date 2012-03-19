@@ -4,12 +4,15 @@
 
 *portage-bashrc-mv-10.6 (13 Mar 2012)
 
-  13 Mar 2011; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass, remove old ebuild.
+
+  13 Mar 2012; Martin Väth <martin@mvath.de>
   Version bump. Keep old ebuild, since release is experimental.
 
 *portage-bashrc-mv-10.3 (28 Feb 2012)
 
-  28 Feb 2011; Martin Väth <martin@mvath.de>
+  28 Feb 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 
 *portage-bashrc-mv-10.2 (19 Feb 2012)

@@ -4,15 +4,18 @@
 
 *diffhelp-1.2 (01 Mar 2012)
 
-  01 Mar 2011; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
+  01 Mar 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Fixes option parsing broken previously
 
 *diffhelp-1.2 (28 Feb 2012)
 
-  28 Feb 2011; Martin Väth <martin@mvath.de>
+  28 Feb 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 
 *diffhelp-1.1 (04 Feb 2012)
 
-  04 Feb 2011; Martin Väth <martin@mvath.de>
+  04 Feb 2012; Martin Väth <martin@mvath.de>
   New ebuild from scratch.

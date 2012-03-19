@@ -4,6 +4,9 @@
 
 *logclean-7.7 (07 Jan 2012)
 
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
   09 Jan 2012; Martin Väth <martin@mvath.de>
   Depend of virtual/perl-Getopt-Long
 

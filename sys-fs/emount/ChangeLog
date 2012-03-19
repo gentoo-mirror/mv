@@ -4,6 +4,9 @@
 
 *emount-2.1-r1 (03 Feb 2012)
 
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
   30 Feb 2012; Martin Väth <martin@mvath.de>
   Do not install README
 

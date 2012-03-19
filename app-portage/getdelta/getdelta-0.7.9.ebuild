@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -7,11 +7,11 @@ inherit eutils
 
 DESCRIPTION="dynamic deltup client"
 HOMEPAGE="http://linux01.gwdg.de/~nlissne/"
-SRC_URI="http://linux01.gwdg.de/~nlissne/${P}.tar.bz2"
+SRC_URI="http://linux01.gwdg.de/~nlissne/${PN}-0.7.8.tar.bz2"
 SLOT="0"
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 S="${WORKDIR}"
 
 RDEPEND="app-portage/deltup
@@ -23,7 +23,7 @@ src_prepare() {
 }
 
 src_install() {
-	dobin "${WORKDIR}"/getdelta.sh || die
+	dobin "${WORKDIR}"/getdelta.sh
 }
 
 pkg_postinst() {
@@ -33,10 +33,10 @@ pkg_postinst() {
 	elog "into your /etc/make.conf to make use of getdelta"
 
 	# make sure permissions are ok
-	a="${ROOT}"/var/log/getdelta.log
-	b="${ROOT}"/etc/deltup
+	a="${EROOT}"/var/log/getdelta.log
+	b="${EROOT}"/etc/deltup
 	test -f "${a}" || touch -- "${a}"
 	mkdir -p -- "${b}"
-	chown -R portage:portage -- "${a}" "${b}"
+	use prefix || chown -R portage:portage -- "${a}" "${b}"
 	chmod -R ug+rwX -- "${a}" "${b}"
 }

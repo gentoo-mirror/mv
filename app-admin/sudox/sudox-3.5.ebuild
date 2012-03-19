@@ -4,9 +4,10 @@
 
 EAPI="4"
 RESTRICT="mirror"
+inherit vcs-snapshot
 
 DESCRIPTION="sudox is a wrapper for sudo which can pass X authority data and deal with screen and tmux"
-HOMEPAGE="https://github.com/vaeth/${PN}"
+HOMEPAGE="https://github.com/vaeth/sudox/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
@@ -15,12 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
 
 RDEPEND="app-admin/sudo"
-
-src_unpack() {
-	default
-	cd *"${PN}"-*
-	S="${PWD}"
-}
 
 src_install() {
 	dobin "${PN}"

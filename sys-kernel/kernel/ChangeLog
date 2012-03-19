@@ -4,6 +4,9 @@
 
 *kernel-1.14 (29 Feb 2012)
 
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
   29 Feb 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 

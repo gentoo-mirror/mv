@@ -4,9 +4,10 @@
 
 EAPI="4"
 RESTRICT="mirror"
+inherit vcs-snapshot
 
 DESCRIPTION="Start ssh-agent/ssh-add only if you really use ssh or friends"
-HOMEPAGE="https://github.com/vaeth/${PN}"
+HOMEPAGE="https://github.com/vaeth/sshstart/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
@@ -15,12 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+keychain"
 RDEPEND="keychain? ( net-misc/keychain )"
 DEPEND=""
-
-src_unpack() {
-	default
-	cd *"${PN}"-*
-	S="${PWD}"
-}
 
 src_install() {
 	dobin sshstart

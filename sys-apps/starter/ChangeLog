@@ -4,7 +4,10 @@
 
 *starter-2.3 (28 Feb 2012)
 
-  28 Feb 2011; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
+  28 Feb 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 
 *starter-2.2 (31 Jan 2012)
@@ -14,5 +17,5 @@
 
 *starter-2.0 (30 Jan 2012)
 
-  30 Jan 2011; Martin Väth <martin@mvath.de>
+  30 Jan 2012; Martin Väth <martin@mvath.de>
   New ebuild from scratch.

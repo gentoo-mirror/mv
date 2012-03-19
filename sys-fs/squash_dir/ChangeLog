@@ -4,12 +4,15 @@
 
 *squash_dir-11.6 (29 Feb 2012)
 
-  29 Feb 2011; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
+  29 Feb 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Fixes statusline (titlebar) logic
 
 *squash_dir-11.5 (28 Feb 2012)
 
-  28 Feb 2011; Martin Väth <martin@mvath.de>
+  28 Feb 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 
 *squash_dir-11.4 (17 Feb 2012)

@@ -4,9 +4,10 @@
 
 EAPI="4"
 RESTRICT="mirror"
+inherit vcs-snapshot
 
 DESCRIPTION="A collection of perl scripts (replacement in files, syncing dirs etc)"
-HOMEPAGE="https://github.com/vaeth/${PN}"
+HOMEPAGE="https://github.com/vaeth/mv_perl/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
@@ -17,12 +18,6 @@ IUSE="zsh-completion"
 RDEPEND="dev-lang/perl
 	virtual/perl-Getopt-Long
 	virtual/perl-Digest-MD5"
-
-src_unpack() {
-	default
-	cd *"${PN}"-*
-	S="${PWD}"
-}
 
 src_install() {
 	dobin bin/*

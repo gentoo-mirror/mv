@@ -4,10 +4,11 @@
 
 EAPI="4"
 RESTRICT="mirror"
+inherit vcs-snapshot
 
 mPN="${PN%-*}"
 DESCRIPTION="Organize your world file and find installed packages or differences to @world"
-HOMEPAGE="https://github.com/vaeth/${mPN}"
+HOMEPAGE="https://github.com/vaeth/world/"
 SRC_URI="http://github.com/vaeth/${mPN}/tarball/release-${PV} -> ${mPN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
@@ -16,12 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
 
 RDEPEND=">=sys-apps/portage-2.2"
-
-src_unpack() {
-	default
-	cd *"${mPN}"-*
-	S="${PWD}"
-}
 
 src_prepare() {
 	sed -i -e "s'\"\${EPREFIX}\"'\\'${EPREFIX}\\''" "${mPN}" || die

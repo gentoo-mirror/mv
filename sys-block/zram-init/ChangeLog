@@ -4,6 +4,9 @@
 
 *zram-init-2.1.ebuild (02 Mar 2012)
 
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
   02 Mar 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Changes to github repository.
 

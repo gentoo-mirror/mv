@@ -4,10 +4,13 @@
 
 *sshstart-2.5 (28 Feb 2012)
 
-  28 Feb 2011; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
+  28 Feb 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 
 *sshstart-2.4 (13 Feb 2012)
 
-  13 Feb 2011; Martin Väth <martin@mvath.de>
+  13 Feb 2012; Martin Väth <martin@mvath.de>
   New ebuild from scratch.

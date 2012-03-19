@@ -5,10 +5,10 @@
 EAPI="4"
 RESTRICT="mirror"
 
-inherit elisp-common
+inherit vcs-snapshot elisp-common
 
 DESCRIPTION="A collection of perl scripts (replacement in files, syncing dirs etc)"
-HOMEPAGE="https://github.com/vaeth/${PN}"
+HOMEPAGE="https://github.com/vaeth/mv_emacs/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -17,12 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 PDEPEND="virtual/emacs"
-
-src_unpack() {
-	default
-	cd *"${PN}"-*
-	S="${PWD}"
-}
 
 src_install() {
 	insinto "${SITELISP}/mv_emacs"

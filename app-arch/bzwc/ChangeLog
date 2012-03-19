@@ -4,15 +4,18 @@
 
 *bzwc-2.8 (28 Feb 2012)
 
-  28 Feb 2011; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
+  28 Feb 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 
 *bzwc-2.7-r1 (03 Feb 2012)
 
-  03 Feb 2011; Martin Väth <martin@mvath.de>
+  03 Feb 2012; Martin Väth <martin@mvath.de>
   Do not install README
 
 *bzwc-2.7 (29 Jan 2012)
 
-  29 Jan 2011; Martin Väth <martin@mvath.de>
+  29 Jan 2012; Martin Väth <martin@mvath.de>
   New ebuild from scratch.

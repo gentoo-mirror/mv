@@ -4,7 +4,10 @@
 
 *sudox-3.5 (28 Feb 2012)
 
-  28 Feb 2011; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
+  28 Feb 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 
 *sudox-3.4 (26 Dec 2011)

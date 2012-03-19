@@ -4,9 +4,10 @@
 
 EAPI="4"
 RESTRICT="mirror"
+inherit vcs-snapshot
 
 DESCRIPTION="A POSIX shell script to compile the kernel with user permissions"
-HOMEPAGE="https://github.com/vaeth/${PN}"
+HOMEPAGE="https://github.com/vaeth/kernel/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
@@ -17,12 +18,6 @@ IUSE="+eix zsh-completion"
 RDEPEND="app-admin/sudo
 	app-admin/sudox
 	eix? ( app-portage/eix )"
-
-src_unpack() {
-	default
-	cd *"${PN}"-*
-	S="${PWD}"
-}
 
 src_install() {
 	dobin "${PN}"

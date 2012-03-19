@@ -280,7 +280,7 @@
  					let percent=${savedsize}*100/${newsize}
  					unit="bytes"
  					[ $savedsize -gt 1024 ] && let savedsize=$savedsize/1024 && unit="kB"
-@@ -791,8 +826,8 @@
+@@ -791,8 +827,8 @@
  					esac
  					output "${YELLOW}This dtu-file saved ${UCOLOR}${savedsize} ${unit} (${percent}%)${YELLOW} download size.\n"
  				fi
@@ -291,7 +291,7 @@
  			fi
  
  		fi # if $FETCH "${DELTUP_SERVER}${query}"
-@@ -812,7 +847,7 @@
+@@ -812,7 +848,7 @@
  			read
  		fi
  		popd >/dev/null 2>&1
@@ -300,7 +300,7 @@
  		#stop respond to trap2
  		trap 2
  	fi # if ! FILE_IS_CORRUPT
-@@ -824,10 +859,10 @@
+@@ -824,10 +860,10 @@
  	
  # Ok, once we are here, we should have got the delta (and used it)
  # or we still have to download the full file

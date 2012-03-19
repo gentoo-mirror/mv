@@ -4,5 +4,8 @@
 
 *mv_emacs-1.0 (01 Mar 2012)
 
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
   01 Mar 2012; Martin Väth <martin@mvath.de>
   New ebuild from scratch.

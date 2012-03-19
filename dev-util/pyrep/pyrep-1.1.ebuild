@@ -4,9 +4,10 @@
 
 EAPI="4"
 RESTRICT="mirror"
+inherit vcs-snapshot
 
 DESCRIPTION="Search and/or replace regular expressions within many files interactively"
-HOMEPAGE="https://github.com/vaeth/${PN}"
+HOMEPAGE="https://github.com/vaeth/pyrep/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
@@ -15,12 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/python"
-
-src_unpack() {
-	default
-	cd *"${PN}"-*
-	S="${PWD}"
-}
 
 src_install() {
 	dobin "${PN}"

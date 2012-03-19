@@ -4,5 +4,8 @@
 
 *pyrep-1.1 (02 Mar 2012)
 
+  19 Mar 2012; Martin Väth <martin@mvath.de>
+  Use vcs-snapshot.eclass
+
   02 Mar 2012; Martin Väth <martin@mvath.de>
   New ebuild from scratch.
