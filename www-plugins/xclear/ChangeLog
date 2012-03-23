@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*xclear-1.8 (23 Mar 2012)
+
+  23 Mar 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+
 *xclear-1.7 (10 Mar 2012)
 
   10 Mar 2012; Martin Väth <martin@mvath.de>
