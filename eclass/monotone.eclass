@@ -17,75 +17,75 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # @ECLASS-VARIABLE: EMTN_STORE_DIR
 # @DESCRIPTION:
 # monotone sources store directory. Users may override this in /etc/make.conf
-: ${EMTN_STORE_DIR:="${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}/mtn-src"}
+: ${EMTN_STORE_DIR:=${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}/mtn-src}
 
 # @ECLASS-VARIABLE: EMTN_OFFLINE
 # @DESCRIPTION:
 # Set this variable to a non-empty value to disable the automatic updating of
 # an monotone source tree. This is intended to be set by users.
-: ${EMTN_OFFLINE:="${EVCS_OFFLINE}"}
+: ${EMTN_OFFLINE:=${EVCS_OFFLINE}}
 
 # @ECLASS-VARIABLE: EMTN_CMD
 # @DESCRIPTION:
-# monotone command with argument for database which must be \"\$db\"
-: ${EMTN_CMD:="mtn -d \"\${db}\""}
+# monotone command with argument for database which must be '$db'
+: ${EMTN_CMD:=mtn -d \"\$db\"}
 
 # @ECLASS-VARIABLE: EMTN_PULL_CMD
 # @DESCRIPTION:
 # monotone pull command
-: ${EMTN_PULL_CMD:="${EMTN_CMD} pull"}
+: ${EMTN_PULL_CMD:=${EMTN_CMD} pull}
 
 # @ECLASS-VARIABLE: EMTN_INIT_CMD
 # @DESCRIPTION:
 # monotone init command
-: ${EMTN_INIT_CMD:="${EMTN_CMD} db init"}
+: ${EMTN_INIT_CMD:=${EMTN_CMD} db init}
 
 # @ECLASS-VARIABLE: EMTN_CO_CMD
 # @DESCRIPTION:
 # monotone checkout command
-: ${EMTN_CO_CMD:="${EMTN_CMD} co"}
+: ${EMTN_CO_CMD:=${EMTN_CMD} co}
 
 # @ECLASS-VARIABLE: EMTN_PRINT_HEADS_CMD
 # @DESCRIPTION:
 # monotone command to print the revision of the heads
-: ${EMTN_PRINT_HEADS_CMD:="${EMTN_CMD} automate heads"}
+: ${EMTN_PRINT_HEADS_CMD:=${EMTN_CMD} automate heads}
 
 # @ECLASS-VARIABLE: EMTN_DB
 # @DESCRIPTION:
 # Name of the database file where the local monotone repository is stored.
-: ${EMTN_DB:="${PN}.db"}
+: ${EMTN_DB:=${PN}.db}
 
 # @ECLASS-VARIABLE: EMTN_REPO_URI
 # @DESCRIPTION:
 # Name of the external monotone repository, e.g. foo.bar.org
-: ${EMTN_REPO_URI:=""}
+: ${EMTN_REPO_URI:=}
 
 # @ECLASS-VARIABLE: EMTN_GLOB
 # @DESCRIPTION:
 # Name of the glob for the external repository. Typically '*'
-: ${EMTN_GLOB:="*"}
+: ${EMTN_GLOB:=*}
 
 # @ECLASS-VARIABLE: EMTN_MODULEPATH
 # @DESCRIPTION:
 # Name of the module to checkout
-: ${EMTN_MODULEPATH:="${PN}"}
+: ${EMTN_MODULEPATH:=${PN}}
 
 # @ECLASS-VARIABLE: EMTN_MODULEDIR
 # @DESCRIPTION:
 # Name where the module should come. Empty means: basename of modulepath.
-: ${EMTN_MODULEDIR:=""}
+: ${EMTN_MODULEDIR:=}
 
 # @ECLASS-VARIABLE: EMTN_REVISIONARGS
 # @DESCRIPTION:
 # Args for revision to checkout, e.g. "-r something"
 # The special value "head" means to use the first head.
-: ${EMTN_REVISIONARGS="head"}
+: ${EMTN_REVISIONARGS=head}
 
 # @ECLASS-VARIABLE: EMTN_DISABLE_DEPENDENCIES
 # @DESCRIPTION:
 # Set this variable to a non-empty value to disable the automatic inclusion of
 # monotone in dependencies.
-: ${EMTN_DISABLE_DEPENDENCIES:=""}
+: ${EMTN_DISABLE_DEPENDENCIES:=}
 
 # @FUNCTION: monotone_fetch
 # @USAGE: [repo_uri] [glob] [db]
@@ -94,23 +94,16 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # and copy it into ${S}.
 # After this function, current working directory is ${S}.
 #
-# Can take two optional parameters:
+# Can take three optional parameters:
 #   repo_uri - a repository URI. If empty defaults to EMTN_REPO_URI.
 #   glob     - The glob for URI. If empty defaults to EMTN_GLOB.
 #   db       - the database filename. If empty defaults to EMTN_DB.
 monotone_fetch() {
-	local repo_uri db db_full
-	if [ ${#} -ge 1 ]
-	then	repo_uri=${1:-"${EMTN_REPO_URI}"}
-			shift
-	else	repo_uri="${EMTN_REPO_URI}"
-	fi
-	if [ ${#} -ge 1 ]
-	then	db=${1:-"${EMTN_DB}"}
-		shift
-	else	db=${1:-"${EMTN_DB}"}
-	fi
-	test -d "${EMTN_STORE_DIR}" || ( \
+	local repo_uri glob db db_full
+	repo_uri=${1:-${EMTN_REPO_URI}}
+	glob=${2:-${EMTN_GLOB}}
+	db=${3:-${EMTN_DB}}
+	test -d "${EMTN_STORE_DIR}" || (
 			addwrite /
 			mkdir -p -- "/${EMTN_STORE_DIR}"
 	)
@@ -118,14 +111,16 @@ monotone_fetch() {
 		|| die "cannot cd to ${EMTN_STORE_DIR}"
 
 	if ! test -e "${db}"
-	then	( addwrite "${PWD}"
+	then	(
+		addwrite "${PWD}"
 		einfo "Initializing new ${db}" && \
 		eval "${EMTN_INIT_CMD}" && \
 		einfo "Fetching ${db} from remote ${repo_uri}" && \
 		eval "${EMTN_PULL_CMD} \"\${repo_uri}\" \"\${glob}\""
 	)
 	elif [ -z "${EMTN_OFFLINE}" ]
-	then	( addwrite "${PWD}"
+	then	(
+		addwrite "${PWD}"
 		einfo "Updating ${db} from remote ${repo_uri}"
 		eval "${EMTN_PULL_CMD}"
 	)
@@ -154,30 +149,19 @@ monotone_fetch() {
 #                The special value "head" means to use the first head.
 monotone_co() {
 	local db modulepath moduledir r
-	if [ ${#} -ge 1 ]
-	then	db=${1:-"${EMTN_DB}"}
-			shift
-	else	db="${EMTN_DB}"
+	db=${1:-${EMTN_DB}}
+	modulepath=${2:-${EMTN_MODULEPATH}}
+	moduledir=${3:-${EMTN_MODULEDIR}}
+	[ -z "${moduledir}" ] && moduledir=${modulepath##*/}
+	if [ ${#} -gt 3 ]
+	then	shift 3
+	else	eval "set -- ${EMTN_REVISIONARGS}"
 	fi
-	if [ ${#} -ge 1 ]
-	then	modulepath=${1:-"${EMTN_MODULEPATH}"}
-			shift
-	else	modulepath="${EMTN_MODULEPATH}"
-	fi
-	if [ ${#} -ge 1 ]
-	then	moduledir=${1:-"${EMTN_MODULEDIR}"}
-			shift
-	else	moduledir="${EMTN_MODULEDIR}"
-	fi
-	[ -z "${moduledir}" ] && moduledir="${modulepath##*/}"
-	if [ ${#} -eq 0 ] && [ -n "${EMTN_REVISIONARGS}" ]
-	then	eval "set -- ${EMTN_REVISIONARGS}"
-	fi
-	if [ "${1}" = "head" ]
+	if [ "${1}" = 'head' ]
 	then	if r=`eval "${EMTN_PRINT_HEADS_CMD} \"\${modulepath}\"" \
 		| tail -n1` && [ -n "${r}" ]
-		then set -- -r "${r}"
-		else set --
+		then	set -- -r "${r}"
+		else	set --
 		fi
 	fi
 	if [ -n "${modulepath}" ]
@@ -194,13 +178,10 @@ monotone_co() {
 # @USAGE: [db]
 # @DESCRIPTION:
 # Call this when all modules are checked out: Removes the local database.
-# The argument db defaults to EMTN_DB.
+# The optional argument db defaults to EMTN_DB.
 monotone_finish() {
-	if [ ${#} -ge 1 ]
-	then	db=${1:-"${EMTN_DB}"}
-			shift
-	else	db="${EMTN_DB}"
-	fi
+	local db
+	db=${1:-${EMTN_DB}}
 	rm -- "${S}/${db}" || die "cannot remove ${S}/${db}"
 }
 
@@ -213,6 +194,6 @@ monotone_src_unpack() {
 	monotone_finish
 }
 
-[ -n "${EMTN_DISABLE_DEPENDENCIES}" ] || DEPEND="dev-vcs/monotone"
+[ -n "${EMTN_DISABLE_DEPENDENCIES}" ] || DEPEND='dev-vcs/monotone'
 
 EXPORT_FUNCTIONS src_unpack
