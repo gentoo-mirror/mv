@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*archwrap-1.6 (13 Apr 2012)
+
+  13 Apr 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+
 *archwrap-1.5 (08 Apr 2012)
 
   08 Apr 2012; Martin Väth <martin@mvath.de>
