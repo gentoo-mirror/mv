@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)"
 HOMEPAGE="https://github.com/vaeth/set_prompt/"

@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="POSIX shell script and function to schedule commands"
 HOMEPAGE="https://github.com/vaeth/starter/"

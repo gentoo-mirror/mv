@@ -4,6 +4,9 @@
 
 *mv_emacs-1.0 (01 Mar 2012)
 
+  15 Apr 2012; Martin Väth <martin@mvath.de>
+  Inherit base
+
   19 Mar 2012; Martin Väth <martin@mvath.de>
   Use vcs-snapshot.eclass
 

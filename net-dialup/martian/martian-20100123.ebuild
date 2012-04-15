@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
 EAPI="4"
-inherit linux-mod eutils
+inherit base linux-mod eutils
 
 ARCHRUMP="${PN}-full-${PV}"
 DESCRIPTION="Winmodems with Lucent Apollo (ISA) and Mars (PCI) chipsets"
@@ -25,6 +25,8 @@ MODULE_NAMES="martian_dev(ltmodem::kmodule)"
 CONFIG_CHECK="SERIAL_8250"
 SERIAL_8250_ERROR="This driver requires you to compile your kernel with serial core (CONFIG_SERIAL_8250) support."
 
+PATCHES=("${FILESDIR}/grsecurity.patch")
+
 pkg_setup() {
 	linux-mod_pkg_setup
 
@@ -35,10 +37,6 @@ pkg_setup() {
 
 	BUILD_TARGETS="all"
 	BUILD_PARAMS="KERNEL_DIR='${KV_DIR}' SUBLEVEL='21'"
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/grsecurity.patch"
 }
 
 src_install() {

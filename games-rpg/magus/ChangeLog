@@ -4,6 +4,9 @@
 
 *magus-1.3.3 (28 May 2011)
 
+  15 Apr 2012; Martin Väth <martin@mvath.de>
+  Inherit base
+
   13 Mar 2012; Martin Väth <martin@mvath.de>
   Fix dependency on dev-cpp/gtkmm: slot 3 is not (yet?) supported upstream.
   Introduce pngcrush useflag.

@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -8,7 +8,7 @@ EGIT_BRANCH="aufs2.1"
 EGIT_COMMIT="${EGIT_BRANCH}"
 EGIT_HAS_SUBMODULES=true
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit git-2 linux-info multilib
+inherit base git-2 linux-info multilib
 
 DESCRIPTION="Userspace tools for aufs"
 HOMEPAGE="http://aufs.sourceforge.net/"
@@ -40,4 +40,5 @@ src_prepare() {
 		sed -i -e "1iCFLAGS += -I../local_kernel" -e "${l}" "${i}" || \
 			die "Patching ${i} failed"
 	done
+	base_src_prepare
 }

@@ -5,7 +5,7 @@
 EAPI="4"
 EHG_REPO_URI="http://podgorny.cz/~bernd/hg/hgwebdir.cgi/0.25"
 S="${WORKDIR}/0.25"
-inherit mercurial flag-o-matic
+inherit base mercurial flag-o-matic
 
 DESCRIPTION="Self-syncing tree-merging file system based on FUSE"
 

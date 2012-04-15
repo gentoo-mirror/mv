@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
 EAPI="4"
 EGIT_REPO_URI="git://github.com/zsh-users/zsh-syntax-highlighting.git"
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit git-2
+inherit base git-2
 
 DESCRIPTION="Fish shell like syntax highlighting for zsh"
 HOMEPAGE="https://github.com/zsh-users/zsh-syntax-highlighting"

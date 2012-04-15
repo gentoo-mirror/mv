@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="sudox is a wrapper for sudo which can pass X authority data and deal with screen and tmux"
 HOMEPAGE="https://github.com/vaeth/sudox/"

@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="A frontend for using mplayer and mencoder as a video recorder"
 HOMEPAGE="https://github.com/vaeth/video-mv/"

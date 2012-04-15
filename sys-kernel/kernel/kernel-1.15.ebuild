@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="A POSIX shell script to compile the kernel with user permissions"
 HOMEPAGE="https://github.com/vaeth/kernel/"

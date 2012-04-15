@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+  15 Apr 2012; Martin Väth <martin@mvath.de>
+  Inherit base. Add zlib compatibility patch from main tree.
+
   24 Jan 2012; Martin Väth <martin@mvath.de>
   Copy from tree to make dependencies for dependencies for help optional.
   Clean old ChangeLog

@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="A wrapper for cp -i -a, making use of diff"
 HOMEPAGE="https://github.com/vaeth/cpi/"

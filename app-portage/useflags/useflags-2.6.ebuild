@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="Print or save the current USE-flag state and compare with older versions"
 HOMEPAGE="https://github.com/vaeth/useflags/"

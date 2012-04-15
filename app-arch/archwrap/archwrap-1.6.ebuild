@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="A collection of POSIX shell scripts to invoke archiver programs"
 HOMEPAGE="https://github.com/vaeth/archwrap/"

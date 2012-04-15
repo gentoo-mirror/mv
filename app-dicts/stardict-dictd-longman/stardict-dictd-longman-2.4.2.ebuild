@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
 EAPI="4"
 DICT_PREFIX=""
-inherit stardict
+inherit base stardict
 RESTRICT="mirror"
 
 DESCRIPTION="Stardict Dictionary for Dictd.org's Longman Dictionary of Contemporary English"

@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
 EAPI="4"
-inherit flag-o-matic toolchain-funcs
+inherit base flag-o-matic toolchain-funcs
 RESTRICT="mirror"
 
 DESCRIPTION="Heirloom Bourne Shell, derived from OpenSolaris code SVR4/SVID3"

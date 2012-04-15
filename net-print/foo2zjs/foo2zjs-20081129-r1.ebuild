@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
 EAPI="4"
-inherit eutils
+inherit base
 
 DESCRIPTION="Support for printing to ZjStream-based printers. Fixes bug 271079"
 HOMEPAGE="http://foo2zjs.rkkda.com/"
@@ -80,21 +80,21 @@ RDEPEND="cups? ( net-print/cups )
 	net-print/foomatic-filters
 	sys-fs/udev"
 KEYWORDS="~x86 ~amd64 ~ppc"
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-Makefile.patch
+	"${FILESDIR}"/${P}-udevfwld.patch
+)
 
 src_unpack() {
 	unpack ${P}.tar.gz
 
 	# link getweb files in ${S} to get unpacked
+	local i
 	for i in ${A}
-	do
-		ln -s "${DISTDIR}"/${i} "${S}"
+	do	ln -s "${DISTDIR}"/${i} "${S}"
 	done
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-Makefile.patch
-	epatch "${FILESDIR}"/${P}-udevfwld.patch
 }
 
 src_compile() {

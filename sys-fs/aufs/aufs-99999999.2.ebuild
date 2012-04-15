@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -10,7 +10,7 @@ EGIT_BRANCH="aufs2.2"
 EGIT_COMMIT="${EGIT_BRANCH}"
 EGIT_HAS_SUBMODULES=true
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit git-2 linux-info eutils
+inherit base git-2 linux-info eutils
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
@@ -125,6 +125,7 @@ pkg_setup() {
 
 src_prepare() {
 	local i j w v newest all
+	base_src_prepare
 	all="2.2.0  2.2.1  2.2.2  2.2.2.r1"
 	newest="${all##* }"
 	v=''

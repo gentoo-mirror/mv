@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="Keep only (compressed) logs of installed packages"
 HOMEPAGE="https://github.com/vaeth/logclean/"

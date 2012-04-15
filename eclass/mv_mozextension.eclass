@@ -35,7 +35,7 @@
 # mozilla or not.
 : ${MV_MOZ_EXTDIR=?}
 
-inherit multilib
+inherit base multilib
 
 case ${MV_MOZ_MOZILLAS:-icecat} in
 icecat)

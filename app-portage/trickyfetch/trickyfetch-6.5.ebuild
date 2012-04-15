@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR"
 HOMEPAGE="https://github.com/vaeth/trickyfetch/"

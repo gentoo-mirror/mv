@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit flag-o-matic
+inherit base flag-o-matic
 RESTRICT="mirror"
 DESCRIPTION="Self-syncing tree-merging file system based on FUSE"
 

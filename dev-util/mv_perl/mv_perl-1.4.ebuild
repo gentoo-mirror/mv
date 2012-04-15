@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="A collection of perl scripts (replacement in files, syncing dirs etc)"
 HOMEPAGE="https://github.com/vaeth/mv_perl/"

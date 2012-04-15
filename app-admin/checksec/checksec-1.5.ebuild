@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
 EAPI="4"
 RESTRICT="mirror"
+inherit base
 
 DESCRIPTION="Check for hardened protections like RELRO, NoExec, Stack protection, ASLR, PIE"
 HOMEPAGE="http://www.trapkit.de/tools/checksec.html"

@@ -4,6 +4,9 @@
 
 *less-445-r1.ebuild (10 Nov 2011)
 
+  15 Apr 2012; Martin Väth <martin@mvath.de>
+  Inherit base
+
   02 Mar 2012; Martin Väth <martin@mvath.de>
   Change to github repository.
 

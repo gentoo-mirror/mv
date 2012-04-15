@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit eutils
+inherit base
 
 DESCRIPTION="dynamic deltup client"
 HOMEPAGE="http://linux01.gwdg.de/~nlissne/"
@@ -17,9 +17,11 @@ S="${WORKDIR}"
 RDEPEND="app-portage/deltup
 	dev-util/bdelta"
 
+PATCHES=("${FILESDIR}/eapi2.patch")
+
 src_prepare() {
-	epatch "${FILESDIR}"/eapi2.patch
 	sed -i -e "s:/bin/sh:/bin/bash:" getdelta.sh || die
+	base_src_prepare
 }
 
 src_install() {

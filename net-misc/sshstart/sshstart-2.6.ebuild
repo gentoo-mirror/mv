@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="Start ssh-agent/ssh-add only if you really use ssh or friends"
 HOMEPAGE="https://github.com/vaeth/sshstart/"

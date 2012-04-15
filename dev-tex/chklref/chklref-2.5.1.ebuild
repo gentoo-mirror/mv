@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
 EAPI="4"
-#inherit latex-package
+inherit base # latex-package
 RESTRICT="mirror"
 
 DESCRIPTION="Finds out useless references in latex files or numbered environments that should not be"
@@ -18,3 +18,5 @@ IUSE=""
 RDEPEND="virtual/latex-base
 	dev-lang/perl"
 DEPEND="${RDEPEND}"
+
+DOCS=(README)

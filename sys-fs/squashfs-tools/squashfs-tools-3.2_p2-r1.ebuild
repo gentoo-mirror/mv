@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
 EAPI="4"
-inherit toolchain-funcs eutils
+inherit base toolchain-funcs
 
 MY_PV=${PV/_p/-r}
 DESCRIPTION="Tool for creating compressed filesystem type squashfs"
@@ -17,7 +17,7 @@ IUSE="+progress-redirect"
 
 RDEPEND="sys-libs/zlib"
 
-S=${WORKDIR}/squashfs${MY_PV}/squashfs-tools
+S="${WORKDIR}/squashfs${MY_PV}/squashfs-tools"
 
 src_prepare() {
 	sed -i \
@@ -27,6 +27,7 @@ src_prepare() {
 	use progress-redirect && \
 		epatch "${FILESDIR}/${PN}-3.3-progress-stderr.patch"
 	echo "struct dir_info; `grep '^int dir_scan2' mksquashfs.c`;" >> global.h
+	base_src_prepare
 }
 
 src_compile() {

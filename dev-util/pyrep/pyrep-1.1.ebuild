@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="Search and/or replace regular expressions within many files interactively"
 HOMEPAGE="https://github.com/vaeth/pyrep/"

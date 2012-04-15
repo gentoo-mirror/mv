@@ -4,6 +4,9 @@
 
 *kernel-1.15 (08 Apr 2012)
 
+  15 Apr 2012; Martin Väth <martin@mvath.de>
+  Inherit base
+
   08 Apr 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 

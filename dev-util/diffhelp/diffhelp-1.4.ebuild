@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="A frontend, beautifier, and path-fixer for diff -u"
 HOMEPAGE="https://github.com/vaeth/diffhelp/"

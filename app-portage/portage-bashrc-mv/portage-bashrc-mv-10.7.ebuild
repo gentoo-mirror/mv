@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags"
 HOMEPAGE="https://github.com/vaeth/portage-bashrc-mv/"

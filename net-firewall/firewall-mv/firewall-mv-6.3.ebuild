@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="Initialize iptables and net-related sysctl variables"
 HOMEPAGE="https://github.com/vaeth/firewall-mv/"
@@ -20,6 +20,7 @@ src_prepare() {
 		-e "s!/usr/!${EPREFIX%/}/usr/!g" \
 		firewall \
 		firewall.config
+	base_src_prepare
 }
 
 src_install() {

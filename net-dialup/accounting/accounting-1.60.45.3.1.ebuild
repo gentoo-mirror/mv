@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
 EAPI="4"
-inherit rpm toolchain-funcs
+inherit base rpm toolchain-funcs
 RESTRICT="mirror"
 
 MY_PN="smpppd"
@@ -42,6 +42,7 @@ src_prepare() {
 		"${CDIR}"/defines.h
 	sed -i -e's!/var/log/[^.]*\.log!'"${ACCOUNTING_LOG}"'!' \
 		"${DDIR}"/accounting.1
+	base_src_prepare
 }
 
 src_configure() {

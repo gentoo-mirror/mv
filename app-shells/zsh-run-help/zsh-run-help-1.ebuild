@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
 EAPI="4"
+inherit base
 DESCRIPTION="Directory of help-files (for run-help) for your current zsh"
 HOMEPAGE=""
 
@@ -24,7 +25,7 @@ src_unpack() {
 	mkdir "${S}"
 }
 
-src_compile() {
+src_prepare() {
 	local help i mystatus
 	# We need GROFF_NO_SGR to produce "classical" formatting:
 	export GROFF_NO_SGR=''
@@ -50,6 +51,7 @@ src_compile() {
 		eerror "For compatibility reasons, this ebuild ignores LC_ALL."
 		die "Failed to produce necessary files"
 	}
+	base_src_prepare
 }
 
 src_install() {

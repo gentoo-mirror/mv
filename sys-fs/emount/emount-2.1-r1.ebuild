@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit vcs-snapshot
+inherit base vcs-snapshot
 
 DESCRIPTION="mount/unmount (and create/remove) dm-crypt filesystems according to your /etc/fstab"
 HOMEPAGE="https://github.com/vaeth/emount/"

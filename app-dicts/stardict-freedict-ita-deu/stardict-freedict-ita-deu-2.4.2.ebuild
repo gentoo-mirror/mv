@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header $
 
@@ -6,7 +6,7 @@ EAPI="4"
 FROM_LANG="Italian"
 TO_LANG="German"
 DICT_PREFIX="dictd_www.freedict.de_"
-inherit stardict
+inherit base stardict
 RESTRICT="mirror"
 
 HOMEPAGE="http://stardict.sourceforge.net/Dictionaries_dictd-www.freedict.de.php"
