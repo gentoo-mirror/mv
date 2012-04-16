@@ -7,6 +7,7 @@ EAPI=4
 EGIT_REPO_URI="git://git.berlios.de/${PN}"
 EGIT_PROJECT="${PN}.git"
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
+WANT_LIBTOOL=none
 inherit base git-2 autotools multilib bash-completion-r1
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"

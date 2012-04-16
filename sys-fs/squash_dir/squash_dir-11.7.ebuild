@@ -4,6 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
+WANT_LIBTOOL=none
 inherit base autotools vcs-snapshot
 
 DESCRIPTION="Keep directories compressed with squashfs. Useful for portage tree, texmf-dist"
