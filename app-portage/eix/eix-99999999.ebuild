@@ -21,8 +21,7 @@ IUSE="debug +dep doc nls optimization security strong-optimization sqlite tools 
 RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	app-arch/xz-utils
-	nls? ( sys-devel/gettext )"
+	sys-devel/gettext"
 
 pkg_setup() {
 	if has_version "<${CATEGORY}/${PN}-0.25.3"; then

@@ -31,15 +31,15 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="+acroread firefox icecat konqueror postgres pngcrush seamonkey"
 
-DEPENDCOMMON=">=dev-libs/libsigc++-2.0.1
-	>=dev-cpp/gtkmm-2.4.0:2.4
-	>=sys-devel/gettext-0.17
+DEPENDCOMMON="dev-libs/libsigc++:2
+	dev-cpp/gtkmm:2.4
 	virtual/latex-base
 	postgres? ( virtual/postgresql-server )
-	!postgres? ( >=dev-db/sqlite-3 )
+	!postgres? ( dev-db/sqlite:3 )
 	|| ( media-libs/netpbm media-gfx/graphicsmagick media-gfx/imagemagick )"
 
 DEPEND="${DEPENDCOMMON}
+	sys-devel/gettext
 	pngcrush? ( media-gfx/pngcrush )"
 
 RDEPEND="${DEPENDCOMMON}
@@ -47,7 +47,8 @@ RDEPEND="${DEPENDCOMMON}
 	icecat? ( www-client/icecat )
 	seamonkey? ( www-client/seamonkey )
 	konqueror? ( kde-base/konqueror )
-	acroread? ( app-text/acroread )"
+	acroread? ( app-text/acroread )
+	virtual/libintl"
 
 REQUIRED_USE="^^ ( firefox icecat seamonkey konqueror )"
 
