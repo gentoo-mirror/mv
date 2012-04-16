@@ -148,10 +148,7 @@ my_autoreconf() {
 	my_cd "${1}"
 	export AT_M4DIR
 	test -d macros && AT_M4DIR="macros" || AT_M4DIR=""
-	if grep -q 'AM_GNU_GETTEXT' configure.in
-	then	einfo "Running autopoint --force"
-		autopoint --force >/dev/null || die "autopoint failed"
-	fi
+	grep -q 'AM_GNU_GETTEXT' configure.in && eautopoint
 	eautoreconf
 }
 
