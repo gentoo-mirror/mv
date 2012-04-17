@@ -13,6 +13,7 @@ inherit base git-2 autotools multilib bash-completion-r1
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
 HOMEPAGE="http://eix.berlios.de"
 SRC_URI=""
+PROPERTIES="live"
 
 LICENSE="GPL-2"
 SLOT="0"
