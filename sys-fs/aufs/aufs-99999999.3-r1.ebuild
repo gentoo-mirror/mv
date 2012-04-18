@@ -122,7 +122,7 @@ pkg_setup() {
 
 src_prepare() {
 	local i j w v newest all
-	base_src_prepre
+	base_src_prepare
 	all="2.2.0  2.2.1  2.2.2  2.2.2.r1"
 	newest="${all##* }"
 	v=''
