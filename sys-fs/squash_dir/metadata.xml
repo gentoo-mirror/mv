@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-	<email>martin@mvath.de</email>
-	<name>Martin Väth</name>
-	<description>Upstream developer</description>
-</maintainer>
-<use>
-	<flag name="readonly">Do not depend on any of aufs|aufs2|unionfs|unionfs-fuse|funionfs. At least one of these must be installed and active to make the squash_dir-mounted filesystems writable.</flag>
-</use>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>martin@mvath.de</email>
+		<name>Martin Väth</name>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<email>martin@mvath.de</email>
+			<name>Martin Väth</name>
+		</maintainer>
+		<bugs-to>mailto:martin@mvath.de</bugs-to>
+		<remote-id type="github">vaeth/squash_dir</remote-id>
+	</upstream>
+	<use>
+		<flag name="readonly">Do not depend on any of aufs|aufs2|unionfs|unionfs-fuse|funionfs. At least one of these must be installed and active to make the squash_dir-mounted filesystems writable.</flag>
+	</use>
 </pkgmetadata>
