@@ -13,14 +13,15 @@ SRC_URI="mirror://sourceforge/squashfs/squashfs${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-linux"
-IUSE="+gzip lzo +progress-redirect xattr +xz"
-REQUIRED_USE="|| ( gzip lzo xz )"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-linux"
+IUSE="+gzip lzma lzo +progress-redirect xattr +xz"
+REQUIRED_USE="|| ( gzip lzma lzo xz )"
 
 RDEPEND="
 	gzip? ( sys-libs/zlib )
 	xz? ( app-arch/xz-utils )
 	lzo? ( dev-libs/lzo )
+	lzma? ( app-arch/xz-utils )
 	xattr? ( sys-apps/attr )"
 DEPEND="${RDEPEND}"
 
@@ -42,15 +43,16 @@ src_configure() {
 	tc-export CC
 	sed -i -r \
 		-e "$(use_sed gzip)" \
-		-e "$(use_sed xz)" \
+		-e "$(use_sed xz XZ)" \
 		-e "$(use_sed lzo)" \
 		-e "$(use_sed xattr)" \
+		-e "$(use_sed lzma LZMA_XZ)" \
 		Makefile || die
 }
 
 src_install() {
 	dobin mksquashfs unsquashfs
-	cd ..
+	cd .. || die
 	dodoc README ACKNOWLEDGEMENTS CHANGES PERFORMANCE.README
 }
 

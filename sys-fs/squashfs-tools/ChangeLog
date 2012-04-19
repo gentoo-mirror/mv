@@ -3,6 +3,10 @@
 # $Header $
 
   15 Apr 2012; Martin Väth <martin@mvath.de>
+  Add old LZMA support back (and revbump) as in the main tree.
+  Downgrade revision numbers to match with main tree.
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>
   Inherit base
 
   11 Feb 2012; Martin Väth <martin@mvath.de>
