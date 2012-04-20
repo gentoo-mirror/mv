@@ -15,6 +15,6 @@
 		<remote-id type="github">vaeth/squash_dir</remote-id>
 	</upstream>
 	<use>
-		<flag name="readonly">Do not depend on any of aufs|aufs2|unionfs|unionfs-fuse|funionfs. At least one of these must be installed and active to make the squash_dir-mounted filesystems writable.</flag>
+		<flag name="readonly">Do not depend on any of aufs|aufs2|aufs3|unionfs|unionfs-fuse|funionfs. At least one of these must be installed and active to make the squash_dir-mounted filesystems writable.</flag>
 	</use>
 </pkgmetadata>

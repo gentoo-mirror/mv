@@ -4,6 +4,12 @@
 	<maintainer>
 		<email>martin@mvath.de</email>
 		<name>Martin Väth</name>
+		<description>Upstream developer, assign bugs</description>
+	</maintainer>
+	<maintainer>
+		<email>darkside@gentoo.org</email>
+		<name>Jeremy Olexa</name>
+		<description>Proxy committer, CC bugs</description>
 	</maintainer>
 	<upstream>
 		<maintainer>

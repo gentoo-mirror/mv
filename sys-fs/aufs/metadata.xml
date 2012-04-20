@@ -7,7 +7,7 @@
 		<name>Martin Väth</name>
 	</maintainer>
 	<use>
-		<flag name="kernel-patch">Apply the aufs2 kernel patches instead of just copying them</flag>
+		<flag name="kernel-patch">Apply the aufs kernel patches instead of just copying them</flag>
 		<flag name="all-patches">Apply all patches - also those which do not start with aufs</flag>
 	</use>
 </pkgmetadata>

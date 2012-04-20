@@ -6,6 +6,15 @@
 		<email>martin@mvath.de</email>
 		<name>Martin Väth</name>
 	</maintainer>
+	<upstream>
+		<maintainer>
+			<email>martin@mvath.de</email>
+			<name>Martin Väth</name>
+			<description>Maintainer of the less-select patch</description>
+		</maintainer>
+		<bugs-to>mailto:martin@mvath.de</bugs-to>
+		<remote-id type="github">vaeth/less-select</remote-id>
+	</upstream>
 	<use>
 		<flag name="original-gentoo">Use the gentoo default for the LESS variable.</flag>
 		<flag name="less-select">Add the less-select feature (additional options and a binary helper).</flag>

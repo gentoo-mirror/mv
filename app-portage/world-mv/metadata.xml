@@ -5,5 +5,13 @@
 <maintainer>
 	<email>martin@mvath.de</email>
 	<name>Martin Väth</name>
+	<upstream>
+		<maintainer>
+			<email>martin@mvath.de</email>
+			<name>Martin Väth</name>
+		</maintainer>
+		<bugs-to>mailto:martin@mvath.de</bugs-to>
+		<remote-id type="github">vaeth/world</remote-id>
+	</upstream>
 </maintainer>
 </pkgmetadata>
