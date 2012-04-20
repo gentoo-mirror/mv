@@ -19,7 +19,7 @@ IUSE="zsh-completion"
 RDEPEND=">=sys-apps/portage-2.2"
 
 src_prepare() {
-	sed -i -e "s'\"\${EPREFIX}\"'\\'${EPREFIX}\\''" "${mPN}" || die
+	sed -i -e "s'\${EPREFIX}'\\'${EPREFIX}\\''" "${mPN}" || die
 	base_src_prepare
 }
 
