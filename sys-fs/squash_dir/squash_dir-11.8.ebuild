@@ -39,6 +39,13 @@ src_configure() {
 
 check_for_obsolete() {
 	local a
+	a="/etc/mtab.lock"
+	if test -p '/etc/mtab' && test -e "${a}"
+	then	ewarn
+		ewarn "${a} is probably left from a previous install and now obsolete."
+		ewarn "You probably want to remove it."
+		ewarn
+	fi
 	a="${EPREFIX}/etc/portage/env/sys-fs/squashfs-tools"
 	test -e "${a}" && grep -q "squash_dir's hack" "${a}" || return 0
 	ewarn "You probably had installed ${PN} with USE=hack-squash-utils"
