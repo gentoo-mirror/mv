@@ -4,6 +4,9 @@
 
 *xclear-1.8 (23 Mar 2012)
 
+  02 Apr 2012; Martin Väth <martin@mvath.de>
+  Fix homepage.
+
   23 Mar 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 
