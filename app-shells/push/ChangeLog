@@ -1,0 +1,8 @@
+# ChangeLog for app-shells/push
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header $
+
+*push-1.0 (04 May 2012)
+
+  04 May 2012; Martin Väth <martin@mvath.de>
+  New ebuild from scratch.

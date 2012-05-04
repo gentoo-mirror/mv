@@ -14,12 +14,15 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
+RDEPEND="app-shells/push
+media-video/mplayer"
+DEPEND=""
 
 src_install() {
 	local i
 	insinto /usr/bin
 	for i in bin/*
-	do	if	test -h "${i}" || ! test -x "${i}"
+	do	if test -h "${i}" || ! test -x "${i}"
 		then	doins "${i}"
 		else	dobin "${i}"
 		fi

@@ -6,8 +6,8 @@ EAPI="4"
 RESTRICT="mirror"
 inherit base vcs-snapshot
 
-DESCRIPTION="POSIX shell script and function to schedule commands"
-HOMEPAGE="https://github.com/vaeth/starter/"
+DESCRIPTION="Scripts to run commands and set the hard status line (windows title)"
+HOMEPAGE="https://github.com/vaeth/runtitle/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
@@ -16,14 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
 
 src_install() {
-	local i
-	insinto /usr/bin
-	for i in bin/*
-	do	if	test -h "${i}" || ! test -x "${i}"
-		then	doins "${i}"
-		else	dobin "${i}"
-		fi
-	done
+	dobin bin/*
 	if use zsh-completion
 	then	insinto /usr/share/zsh/site-functions
 			doins zsh/*

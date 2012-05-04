@@ -14,8 +14,9 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
-
-RDEPEND="app-admin/sudo"
+RDEPEND="app-admin/sudo
+	app-shells/push"
+DEPEND=""
 
 src_install() {
 	dobin "${PN}"
