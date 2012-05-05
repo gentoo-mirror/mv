@@ -53,7 +53,7 @@ DEPEND="${COMMON_DEPEND}
 		dev-libs/libxslt
 	)
 	dev-util/intltool
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	sys-devel/gettext"
 
 RESTRICT="test"
