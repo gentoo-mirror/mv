@@ -16,10 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+eix zsh-completion"
 RDEPEND="app-admin/sudo
 	app-admin/sudox
-	eix? ( app-portage/eix )
-	!eix? (
-		|| ( app-shells/push app-portage/eix )
-	)"
+	>=app-shells/push-1.1
+	eix? ( app-portage/eix )"
 DEPEND=""
 
 src_install() {
