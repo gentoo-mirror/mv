@@ -6,7 +6,7 @@ EAPI="4"
 RESTRICT="mirror"
 inherit base vcs-snapshot
 
-DESCRIPTION="A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)"
+DESCRIPTION="A POSIX shell function to treat a variable like an array, quoting args."
 HOMEPAGE="https://github.com/vaeth/push/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
