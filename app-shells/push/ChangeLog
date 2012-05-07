@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*push-1.4 (07 May 2012)
+
+  07 May 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+
 *push-1.1 (06 May 2012)
 
   06 May 2012; Martin Väth <martin@mvath.de>
