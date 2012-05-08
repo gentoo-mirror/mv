@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+eix zsh-completion"
 RDEPEND="app-admin/sudo
 	app-admin/sudox
-	>=app-shells/push-1.1
+	app-shells/push
 	eix? ( app-portage/eix )"
 DEPEND=""
 

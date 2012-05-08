@@ -20,7 +20,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug +dep doc nls optimization security strong-optimization sqlite tools zsh-completion"
 
-RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
+RDEPEND="app-shells/push
+	sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
