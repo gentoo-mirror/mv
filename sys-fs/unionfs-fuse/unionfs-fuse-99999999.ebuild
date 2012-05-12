@@ -5,7 +5,7 @@
 EAPI="4"
 EHG_REPO_URI="http://podgorny.cz/~bernd/hg/hgwebdir.cgi/0.25"
 S="${WORKDIR}/0.25"
-inherit base mercurial flag-o-matic
+inherit eutils mercurial flag-o-matic
 
 DESCRIPTION="Self-syncing tree-merging file system based on FUSE"
 
@@ -21,6 +21,10 @@ PROPERTIES="live"
 
 DEPEND="sys-fs/fuse"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch_user
+}
 
 src_configure() {
 	filter-flags -flto -fuse-linkerplugin -fwhole-program -fno-common

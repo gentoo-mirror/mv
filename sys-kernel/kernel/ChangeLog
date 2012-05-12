@@ -4,6 +4,9 @@
 
 *kernel-1.17 (06 May 2012)
 
+  12 May 2012; Martin Väth <martin@mvath.de>
+  base->eutils
+
   06 May 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Makes app-shells/push mandatory.
 

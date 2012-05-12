@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit base autotools flag-o-matic
+inherit eutils autotools flag-o-matic
 RESTRICT="mirror"
 
 case ${PV} in
@@ -156,7 +156,7 @@ my_autoreconf() {
 src_prepare() {
 	local i
 	src_patch
-	base_src_prepare
+	epatch_user
 	for i in "${S}"/*
 	do	my_autoreconf "${i##*/}"
 	done

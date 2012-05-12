@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="A collection of perl scripts (replacement in files, syncing dirs etc)"
 HOMEPAGE="https://github.com/vaeth/mv_perl/"
@@ -18,6 +18,10 @@ IUSE="zsh-completion"
 RDEPEND="dev-lang/perl
 	virtual/perl-Getopt-Long
 	virtual/perl-Digest-MD5"
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	dobin bin/*

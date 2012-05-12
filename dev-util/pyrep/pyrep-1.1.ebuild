@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="Search and/or replace regular expressions within many files interactively"
 HOMEPAGE="https://github.com/vaeth/pyrep/"
@@ -16,6 +16,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/python"
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	dobin "${PN}"

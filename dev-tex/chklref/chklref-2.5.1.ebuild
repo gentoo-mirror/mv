@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit base # latex-package
+inherit eutils # latex-package
 RESTRICT="mirror"
 
 DESCRIPTION="Finds out useless references in latex files or numbered environments that should not be"
@@ -19,4 +19,11 @@ RDEPEND="virtual/latex-base
 	dev-lang/perl"
 DEPEND="${RDEPEND}"
 
-DOCS=(README)
+src_prepare() {
+	epatch_user
+}
+
+src_install() {
+	default
+	dodoc README
+}

@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)"
 HOMEPAGE="https://github.com/vaeth/set_prompt/"
@@ -14,6 +14,10 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	insinto /etc

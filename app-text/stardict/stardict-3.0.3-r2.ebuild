@@ -13,7 +13,7 @@ EAPI=4
 GNOME2_LA_PUNT=yes
 GCONF_DEBUG=no
 
-inherit base eutils gnome2 autotools
+inherit eutils gnome2 autotools
 
 DESCRIPTION="A international dictionary supporting fuzzy and glob style matching"
 HOMEPAGE="http://code.google.com/p/stardict-3/"
@@ -72,16 +72,15 @@ pkg_setup() {
 		--disable-schemas-install"
 }
 
-PATCHES=(
-		"${FILESDIR}/${P}-correct-glib-include.patch"
-		"${FILESDIR}/${P}-entry.patch"
-		"${FILESDIR}/${P}-gcc46.patch"
-		"${FILESDIR}/${P}-compositelookup_cpp.patch"
-		"${FILESDIR}/${P}-overflow.patch"
-		"${FILESDIR}/${P}-zlib-1.2.5.2.patch"
-)
 src_prepare() {
-	base_src_prepare
+	epatch \
+		"${FILESDIR}"/${P}-correct-glib-include.patch \
+		"${FILESDIR}"/${P}-entry.patch \
+		"${FILESDIR}"/${P}-gcc46.patch \
+		"${FILESDIR}"/${P}-compositelookup_cpp.patch \
+		"${FILESDIR}"/${P}-overflow.patch \
+		"${FILESDIR}"/${P}-zlib-1.2.5.2.patch
+	epatch_user
 	if ! use gnome
 	then	sed -i \
 				-e "s/GNOME_DOC_INIT/GNOME_DOC_INIT([0.32],[:],[:])/" \

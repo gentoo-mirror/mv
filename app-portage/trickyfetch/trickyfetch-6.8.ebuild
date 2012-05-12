@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR"
 HOMEPAGE="https://github.com/vaeth/trickyfetch/"
@@ -14,6 +14,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	dobin bin/*

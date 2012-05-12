@@ -35,7 +35,7 @@
 # mozilla or not.
 : ${MV_MOZ_EXTDIR=?}
 
-inherit base multilib
+inherit eutils multilib
 
 case ${MV_MOZ_MOZILLAS:-icecat} in
 icecat)
@@ -83,7 +83,11 @@ mv_mozextension_src_unpack() {
 	xpi_unpack "${FILENAME}"
 }
 
-EXPORT_FUNCTIONS src_unpack
+mv_mozextension_src_prepare() {
+	epatch_user
+}
+
+EXPORT_FUNCTIONS src_unpack src_prepare
 
 declare -a MV_MOZ_INS MV_MOZ_PKG MV_MOZ_CPY MV_MOZ_DIR
 
@@ -276,3 +280,5 @@ xpi_install_dirs() {
 	do	[ -n "${d}" ] && test -d "${d}" && xpi_install "${d}"
 	done
 }
+
+

@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit base toolchain-funcs
+inherit eutils toolchain-funcs
 
 MY_PV=${PV/_p/-r}
 DESCRIPTION="Tool for creating compressed filesystem type squashfs"
@@ -27,7 +27,7 @@ src_prepare() {
 	use progress-redirect && \
 		epatch "${FILESDIR}/${PN}-3.3-progress-stderr.patch"
 	echo "struct dir_info; `grep '^int dir_scan2' mksquashfs.c`;" >> global.h
-	base_src_prepare
+	epatch_user
 }
 
 src_compile() {

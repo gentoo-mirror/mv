@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags"
 HOMEPAGE="https://github.com/vaeth/portage-bashrc-mv/"
@@ -14,6 +14,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	insinto /etc/portage

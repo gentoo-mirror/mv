@@ -4,6 +4,9 @@
 
 *less-445-r1.ebuild (10 Nov 2011)
 
+  12 May 2012; Martin Väth <martin@mvath.de>
+  base->eutils
+
   15 Apr 2012; Martin Väth <martin@mvath.de>
   Inherit base
 

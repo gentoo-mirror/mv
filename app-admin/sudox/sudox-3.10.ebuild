@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="sudox is a wrapper for sudo which can pass X authority data and deal with screen and tmux"
 HOMEPAGE="https://github.com/vaeth/sudox/"
@@ -17,6 +17,10 @@ IUSE="zsh-completion"
 RDEPEND="app-admin/sudo
 	app-shells/push"
 DEPEND=""
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	dobin "${PN}"

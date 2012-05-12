@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base elisp-common vcs-snapshot
+inherit eutils elisp-common vcs-snapshot
 
 DESCRIPTION="A collection of perl scripts (replacement in files, syncing dirs etc)"
 HOMEPAGE="https://github.com/vaeth/mv_emacs/"
@@ -16,6 +16,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 PDEPEND="virtual/emacs"
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	insinto "${SITELISP}/mv_emacs"

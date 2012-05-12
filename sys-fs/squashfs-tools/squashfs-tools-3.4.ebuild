@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit base toolchain-funcs
+inherit eutils toolchain-funcs
 
 MY_PV=${PV/_p/-r}
 DESCRIPTION="Tool for creating compressed filesystem type squashfs"
@@ -27,7 +27,7 @@ src_prepare() {
 	use progress-redirect && \
 		epatch "${FILESDIR}/${P}-progress-stderr.patch"
 	sed -i -e 's:get_nprocs():sysconf(_SC_NPROCESSORS_ONLN):' *.c
-	base_src_prepare
+	epatch_user
 }
 
 src_compile() {

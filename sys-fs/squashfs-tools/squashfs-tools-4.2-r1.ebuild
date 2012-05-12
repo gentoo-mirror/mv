@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit base toolchain-funcs
+inherit eutils toolchain-funcs
 
 MY_PV=${PV}
 DESCRIPTION="Tool for creating compressed filesystem type squashfs"
@@ -30,7 +30,7 @@ S="${WORKDIR}/squashfs${MY_PV}/squashfs-tools"
 src_prepare() {
 	use progress-redirect && \
 		epatch "${FILESDIR}/${PN}-4.0-progress-stderr.patch"
-	base_src_prepare
+	epatch_user
 }
 
 use_sed() {

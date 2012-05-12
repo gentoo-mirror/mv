@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="Print or save the current USE-flag state and compare with older versions"
 HOMEPAGE="https://github.com/vaeth/useflags/"
@@ -18,6 +18,10 @@ IUSE="+eix zsh-completion"
 RDEPEND="dev-lang/perl
 	virtual/perl-Getopt-Long
 	eix? ( app-portage/eix )"
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	dobin "${PN}"

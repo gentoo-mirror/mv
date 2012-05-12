@@ -5,7 +5,7 @@
 EAPI="4"
 RESTRICT="mirror"
 WANT_LIBTOOL=none
-inherit base autotools vcs-snapshot
+inherit eutils autotools vcs-snapshot
 
 DESCRIPTION="Keep directories compressed with squashfs. Useful for portage tree, texmf-dist"
 HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367.html"
@@ -28,7 +28,7 @@ RDEPEND="sys-fs/squashfs-tools
 DEPEND=">=sys-devel/autoconf-2.65"
 
 src_prepare() {
-	base_src_prepare
+	epatch_user
 	eautoreconf
 }
 

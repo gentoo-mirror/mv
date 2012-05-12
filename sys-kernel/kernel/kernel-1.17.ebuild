@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="A POSIX shell script to compile the kernel with user permissions"
 HOMEPAGE="https://github.com/vaeth/kernel/"
@@ -19,6 +19,10 @@ RDEPEND="app-admin/sudo
 	app-shells/push
 	eix? ( app-portage/eix )"
 DEPEND=""
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	dobin "${PN}"

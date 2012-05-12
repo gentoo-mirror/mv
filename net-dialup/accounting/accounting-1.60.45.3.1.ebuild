@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit base rpm toolchain-funcs
+inherit eutils rpm toolchain-funcs
 RESTRICT="mirror"
 
 MY_PN="smpppd"
@@ -42,7 +42,7 @@ src_prepare() {
 		"${CDIR}"/defines.h
 	sed -i -e's!/var/log/[^.]*\.log!'"${ACCOUNTING_LOG}"'!' \
 		"${DDIR}"/accounting.1
-	base_src_prepare
+	epatch_user
 }
 
 src_configure() {

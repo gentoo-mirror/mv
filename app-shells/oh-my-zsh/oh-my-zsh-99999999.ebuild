@@ -6,7 +6,7 @@ EAPI="4"
 
 EGIT_REPO_URI="git://github.com/robbyrussell/${PN}.git"
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit base git-2
+inherit eutils git-2
 
 DESCRIPTION="A ready-to-use zsh configuration with plugins"
 HOMEPAGE="https://github.com/robbyrussell/oh-my-zsh"
@@ -33,7 +33,7 @@ src_prepare() {
 	sed -i -e 's!~/.oh-my-zsh!'"${ZSH_EDEST}"'!' \
 		"${S}/plugins/dirpersist/dirpersist.plugin.zsh"
 	sed -i -e '/zstyle.*cache/d' "${S}/lib/completion.zsh"
-	base_src_prepare
+	epatch_user
 }
 
 src_install() {

@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="Start ssh-agent/ssh-add only if you really use ssh or friends"
 HOMEPAGE="https://github.com/vaeth/sshstart/"
@@ -17,6 +17,10 @@ IUSE="+keychain"
 RDEPEND="app-shells/push
 	keychain? ( net-misc/keychain )"
 DEPEND=""
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	dobin sshstart

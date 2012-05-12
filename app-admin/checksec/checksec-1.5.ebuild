@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base
+inherit eutils
 
 DESCRIPTION="Check for hardened protections like RELRO, NoExec, Stack protection, ASLR, PIE"
 HOMEPAGE="http://www.trapkit.de/tools/checksec.html"
@@ -15,6 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
 S="${WORKDIR}"
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	newbin "${DISTDIR}/${P}.sh" "${PN}"

@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit base flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 RESTRICT="mirror"
 
 DESCRIPTION="Heirloom Bourne Shell, derived from OpenSolaris code SVR4/SVID3"
@@ -17,6 +17,10 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+src_prepare() {
+	epatch_user
+}
 
 src_compile() {
 	append-cppflags -D_GNU_SOURCE

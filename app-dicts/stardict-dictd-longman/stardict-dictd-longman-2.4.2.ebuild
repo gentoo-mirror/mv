@@ -4,7 +4,7 @@
 
 EAPI="4"
 DICT_PREFIX=""
-inherit base stardict
+inherit eutils stardict
 RESTRICT="mirror"
 
 DESCRIPTION="Stardict Dictionary for Dictd.org's Longman Dictionary of Contemporary English"
@@ -13,3 +13,7 @@ HOMEPAGE="http://stardict.sourceforge.net/Dictionaries_dictd-www.dict.org.php"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND=""
+
+src_prepare() {
+	epatch_user
+}

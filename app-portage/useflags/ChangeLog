@@ -4,6 +4,9 @@
 
 *useflags-2.6 (08 Jan 2012)
 
+  12 May 2012; Martin Väth <martin@mvath.de>
+  base->eutils
+
   15 Apr 2012; Martin Väth <martin@mvath.de>
   Inherit base
 

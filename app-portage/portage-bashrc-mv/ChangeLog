@@ -4,6 +4,9 @@
 
 *portage-bashrc-mv-10.9 (11 May 2012)
 
+  12 May 2012; Martin Väth <martin@mvath.de>
+  base->eutils
+
   11 May 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 

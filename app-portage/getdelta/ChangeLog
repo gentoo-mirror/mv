@@ -4,6 +4,9 @@
 
 *getdelta-0.7.9 (19 Mar 2012)
 
+  12 May 2012; Martin Väth <martin@mvath.de>
+  base->eutils
+
   15 Apr 2012; Martin Väth <martin@mvath.de>
   Inherit base.
 

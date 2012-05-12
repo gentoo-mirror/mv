@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit base
+inherit eutils
 DESCRIPTION="Directory of help-files (for run-help) for your current zsh"
 HOMEPAGE=""
 
@@ -51,7 +51,7 @@ src_prepare() {
 		eerror "For compatibility reasons, this ebuild ignores LC_ALL."
 		die "Failed to produce necessary files"
 	}
-	base_src_prepare
+	epatch_user
 }
 
 src_install() {

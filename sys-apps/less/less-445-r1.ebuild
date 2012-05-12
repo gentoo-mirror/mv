@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit base
+inherit eutils
 
 DESCRIPTION="Excellent text file viewer, optionally with additional selection feature"
 PATCHN="less-select"
@@ -31,13 +31,9 @@ src_unpack() {
 	if use less-select
 	then	unpack ${PATCHBALL}
 		cd *"${PATCHN}"-*
-		SELECTDIR="${PWD}"
+		SELECTDIR=${PWD}
 	fi
 }
-
-PATCHES=(
-	"${FILESDIR}"/code2color.patch
-)
 
 src_prepare() {
 	if use less-select
@@ -46,7 +42,8 @@ src_prepare() {
 		sed -i -e 's|\([^a-zA-Z]\)/etc/less-select-key.bin|\1'"${EPREFIX%/}"'/etc/less/select-key.bin|g' \
 			"${SELECTDIR}/bin/less-select" || die
 	fi
-	base_src_prepare
+	epatch "${FILESDIR}"/code2color.patch
+	epatch_user
 }
 
 src_configure() {

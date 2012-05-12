@@ -5,10 +5,10 @@
 EAPI="4"
 EGIT_REPO_URI="http://git.c3sl.ufpr.br/pub/scm/aufs/aufs2-util.git"
 EGIT_BRANCH="aufs2.1"
-EGIT_COMMIT="${EGIT_BRANCH}"
+EGIT_COMMIT=${EGIT_BRANCH}
 EGIT_HAS_SUBMODULES=true
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit base git-2 linux-info multilib
+inherit eutils git-2 linux-info multilib
 
 DESCRIPTION="Userspace tools for aufs"
 HOMEPAGE="http://aufs.sourceforge.net/"
@@ -40,5 +40,5 @@ src_prepare() {
 		sed -i -e "1iCFLAGS += -I../local_kernel" -e "${l}" "${i}" || \
 			die "Patching ${i} failed"
 	done
-	base_src_prepare
+	epatch_user
 }

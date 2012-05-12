@@ -6,10 +6,14 @@ EAPI="4"
 FROM_LANG="German"
 TO_LANG="Italian"
 DICT_PREFIX="dictd_www.freedict.de_"
-inherit base stardict
+inherit eutils stardict
 RESTRICT="mirror"
 
 HOMEPAGE="http://stardict.sourceforge.net/Dictionaries_dictd-www.freedict.de.php"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND=""
+
+src_prepare() {
+	epatch_user
+}

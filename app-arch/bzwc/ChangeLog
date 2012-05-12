@@ -4,6 +4,9 @@
 
 *bzwc-2.12 (07 May 2012)
 
+  12 May 2012; Martin Väth <martin@mvath.de>
+  base->eutils
+
   07 May 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 

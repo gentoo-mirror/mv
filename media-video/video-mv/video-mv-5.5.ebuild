@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="A frontend for using mplayer and mencoder as a video recorder"
 HOMEPAGE="https://github.com/vaeth/video-mv/"
@@ -17,6 +17,10 @@ IUSE="zsh-completion"
 RDEPEND="app-shells/push
 media-video/mplayer"
 DEPEND=""
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	local i

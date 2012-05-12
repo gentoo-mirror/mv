@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="A collection of POSIX shell scripts to invoke archiver programs"
 HOMEPAGE="https://github.com/vaeth/archwrap/"
@@ -16,6 +16,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
 RDEPEND="app-shells/push"
 DEPEND=""
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	local i

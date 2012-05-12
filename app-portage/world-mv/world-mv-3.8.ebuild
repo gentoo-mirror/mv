@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 mPN="${PN%-*}"
 DESCRIPTION="Organize your world file and find installed packages or differences to @world"
@@ -20,7 +20,7 @@ RDEPEND=">=sys-apps/portage-2.2"
 
 src_prepare() {
 	sed -i -e "s'\${EPREFIX}'\\'${EPREFIX}\\''" "${mPN}" || die
-	base_src_prepare
+	epatch_user
 }
 
 src_install() {

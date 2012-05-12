@@ -7,10 +7,10 @@ EGIT_REPO_URI="git://aufs.git.sourceforge.net/gitroot/aufs/aufs3-standalone.git"
 EGIT_PROJECT="aufs3.git"
 # BRANCH/COMMIT will be overridden in pkg_setup (according to kernel version)
 EGIT_BRANCH="aufs3.0"
-EGIT_COMMIT="${EGIT_BRANCH}"
+EGIT_COMMIT=${EGIT_BRANCH}
 EGIT_HAS_SUBMODULES=true
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit base git-2 linux-info eutils
+inherit eutils git-2 linux-info eutils
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
@@ -33,16 +33,15 @@ fill_my_patchlist() {
 	local i
 	my_patchlist=()
 	for i
-	do	case "${i}" in
-		*.patch|*.diff)	test -f "${i}" && my_patchlist+=("${i}");;
+	do	case ${i} in
+		*.patch|*.diff)	! test -f "${i}" || my_patchlist+=("${i}");;
 		esac
 	done
-	:
 }
 
 apply_my_patch() {
 	local r
-	r=''
+	r=
 	if [ ${#} -gt 1 ]
 	then	shift
 		r='-R'
@@ -58,8 +57,8 @@ apply_my_patch() {
 
 apply_my_patchlist() {
 	local r i
-	r=''
-	if [ "${#}" -gt 0 ]
+	r=
+	if [ ${#} -gt 0 ]
 	then	shift
 		r='-R'
 	fi
@@ -103,14 +102,14 @@ pkg_setup() {
 	elog "If this guess for the branch is wrong, set AUFSBRANCH."
 	elog "For example, to use the aufs3.0 branch for kernel version 3.0, use:"
 	elog "	AUFSBRANCH=aufs3.0 emerge -1 aufs"
-	msg=''
+	msg=
 	if [ -n "${msg}" ]
 	then
 		elog "Note that it might be necessary in addition to fetch the newest aufs:"
 		elog "Set ${msg# } and be sure to be online during emerge."
 	fi
 	elog
-	EGIT_COMMIT="${EGIT_BRANCH}"
+	EGIT_COMMIT=${EGIT_BRANCH}
 
 	use kernel-patch || return 0
 	(
@@ -122,14 +121,14 @@ pkg_setup() {
 
 src_prepare() {
 	local i j w v newest all
-	base_src_prepare
+	epatch_user
 	all="2.2.0  2.2.1  2.2.2  2.2.2.r1"
-	newest="${all##* }"
-	v=''
+	newest=${all##* }
+	v=
 	for i in ${GRSECURITYPATCHVER-+}
-	do	case "${i}" in
-		'+')	j="${newest}";;
-		'*')	j="${all}";;
+	do	case ${i} in
+		'+')	j=${newest};;
+		'*')	j=${all};;
 		*)	w=:
 			for j in ${all}
 			do	[ "${i}" = "${j}" ] && w=false && continue
@@ -137,12 +136,11 @@ src_prepare() {
 			if ${w}
 			then	warn "GRSECURITYPATCHVER contains bad version ${i}"
 			else	j="${i}"
-			fi
-			;;
+			fi;;
 		esac
 		v="${v} ${j}"
 	done
-	v="${v# }"
+	v=${v# }
 	elog
 	elog "Using GRSECURITYPATCHVER: ${v}"
 	elog "If you want other patches, set GRSECURITYPATCHVER to some or more of:"

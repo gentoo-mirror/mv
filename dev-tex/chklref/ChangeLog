@@ -4,6 +4,9 @@
 
 *chkltex-2.5.1 (11 Apr 2011)
 
+  12 May 2012; Martin Väth <martin@mvath.de>
+  base->eutils
+
   15 Apr 2012; Martin Väth <martin@mvath.de>
   Inherit base
 

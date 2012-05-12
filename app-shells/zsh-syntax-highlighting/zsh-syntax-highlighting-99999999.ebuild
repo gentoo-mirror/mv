@@ -5,7 +5,7 @@
 EAPI="4"
 EGIT_REPO_URI="git://github.com/zsh-users/zsh-syntax-highlighting.git"
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit base git-2
+inherit eutils git-2
 
 DESCRIPTION="Fish shell like syntax highlighting for zsh"
 HOMEPAGE="https://github.com/zsh-users/zsh-syntax-highlighting"
@@ -20,6 +20,10 @@ PROPERTIES="live"
 
 RDEPEND="app-shells/zsh"
 DEPEND=""
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	dodoc *.md

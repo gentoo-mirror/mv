@@ -3,7 +3,7 @@
 # $Header $
 
 EAPI="4"
-inherit base flag-o-matic
+inherit eutils flag-o-matic
 RESTRICT="mirror"
 DESCRIPTION="Self-syncing tree-merging file system based on FUSE"
 
@@ -17,6 +17,10 @@ IUSE=""
 
 DEPEND="sys-fs/fuse"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch_user
+}
 
 src_configure() {
 	filter-flags -flto -fuse-linkerplugin -fwhole-program -fno-common

@@ -4,7 +4,7 @@
 
 EAPI="4"
 RESTRICT="mirror"
-inherit base vcs-snapshot
+inherit eutils vcs-snapshot
 
 DESCRIPTION="A frontend, beautifier, and path-fixer for diff -u"
 HOMEPAGE="https://github.com/vaeth/diffhelp/"
@@ -14,6 +14,10 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
+
+src_prepare() {
+	epatch_user
+}
 
 src_install() {
 	dobin "${PN}"
