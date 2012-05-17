@@ -21,12 +21,11 @@ app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just ma
 app-text/stardict:qqwry - Enable QQWry plugin, which provides information (in Chinese language) about geographical positions, owner, etc. for IP addresses
 app-text/stardict:tools - Build and install the extra stardict tools
 games-rpg/magus:acroread - Depend on acroread (otherwise you are responsible to install/configure a pdf viewer)
-games-rpg/magus:firefox - Depend on firefox browser (without a browser useflag you are responsible to install and configure a browser)
-games-rpg/magus:icecat - Depend on icecat browser
-games-rpg/magus:konqueror - Depend on konqueror browser
+games-rpg/magus:icecat - Depend on icecat browser instead of firefox
+games-rpg/magus:konqueror - Depend on konqueror browser instead of firefox
 games-rpg/magus:pngcrush - Use pngcrush for opimizing png before installation
 games-rpg/magus:postgres - Use postgresql instead of sqlite
-games-rpg/magus:seamonkey - Depend on seamonkey browser
+games-rpg/magus:seamonkey - Depend on seamonkey browser instead of firefox
 net-misc/sshstart:keychain - Pull in keychain as dependency. Not required, but recommended for smoother operation.
 sys-apps/less:less-select - Add the less-select feature (additional options and a binary helper).
 sys-apps/less:original-gentoo - Use the gentoo default for the LESS variable.

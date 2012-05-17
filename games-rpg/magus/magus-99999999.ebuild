@@ -8,11 +8,9 @@ RESTRICT="mirror"
 
 case ${PV} in
 9999*)
-	LIVE_VERSION=:
-;;
+	LIVE_VERSION=:;;
 *)
-	LIVE_VERSION=false
-;;
+	LIVE_VERSION=false;;
 esac
 
 ${LIVE_VERSION} && inherit monotone
@@ -29,7 +27,7 @@ then	PROPERTIES="live"
 fi
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+acroread firefox icecat konqueror postgres pngcrush seamonkey"
+IUSE="+acroread icecat konqueror postgres pngcrush seamonkey"
 
 DEPENDCOMMON="dev-libs/libsigc++:2
 	dev-cpp/gtkmm:2.4
@@ -43,14 +41,18 @@ DEPEND="${DEPENDCOMMON}
 	pngcrush? ( media-gfx/pngcrush )"
 
 RDEPEND="${DEPENDCOMMON}
-	firefox? ( || ( www-client/firefox www-client/firefox-bin ) )
+	!icecat? (
+		!seamonkey? (
+			!konqueror? (
+			 || ( www-client/firefox www-client/firefox-bin )
+			)
+		)
+	)
 	icecat? ( www-client/icecat )
 	seamonkey? ( www-client/seamonkey )
 	konqueror? ( kde-base/konqueror )
 	acroread? ( app-text/acroread )
 	virtual/libintl"
-
-REQUIRED_USE="^^ ( firefox icecat seamonkey konqueror )"
 
 if ${LIVE_VERSION}
 then
@@ -111,8 +113,17 @@ src_sed() {
 	return 0
 }
 
+set_browser() {
+	einfo "Using browser ${browser}"
+	[ "${browser}" = "mozilla" ] && return
+	src_sed midgard/docs/BMod_Op.html -e "s#mozilla#${browser}#"
+	src_sed midgard/libmagus/Magus_Optionen.cc -e "s#mozilla#${browser}#"
+	src_sed midgard/midgard.glade -e "s#mozilla#${browser}#"
+	src_sed midgard/src/table_optionen_glade.cc -e "s#mozilla#${browser}#"
+}
+
 src_patch() {
-	local browser i
+	local i
 	einfo
 	einfo "Various patches:"
 	einfo
@@ -128,14 +139,13 @@ src_patch() {
 	src_sed midgard/src/table_lernschema.cc \
 		 '/case .*:$/{n;s/^[ 	]*\}/break;}/}'
 
-	for i in konqueror icecat seamonkey firefox mozilla
-	do	use "${i}" && browser=${i} && break
+	for i in icecat seamonkey konqueror
+	do	if use "${i}"
+		then	set_browser "${i}"
+			return
+		fi
 	done
-	[ "${browser}" = "mozilla" ] && return
-	src_sed midgard/docs/BMod_Op.html -e "s#mozilla#${browser}#"
-	src_sed midgard/libmagus/Magus_Optionen.cc -e "s#mozilla#${browser}#"
-	src_sed midgard/midgard.glade -e "s#mozilla#${browser}#"
-	src_sed midgard/src/table_optionen_glade.cc -e "s#mozilla#${browser}#"
+	set_browser "firefox"
 }
 
 my_cd() {

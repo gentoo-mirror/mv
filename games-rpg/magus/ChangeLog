@@ -4,6 +4,9 @@
 
 *magus-1.3.3 (28 May 2011)
 
+  17 May 2012; Martin Väth <martin@mvath.de>
+  Remove REQUIRED_USE; default to firefox
+
   12 May 2012; Martin Väth <martin@mvath.de>
   base->eutils
 

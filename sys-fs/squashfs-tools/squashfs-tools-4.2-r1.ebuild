@@ -14,18 +14,17 @@ SRC_URI="mirror://sourceforge/squashfs/squashfs${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-linux"
-IUSE="+gzip lzma lzo +progress-redirect xattr +xz"
-REQUIRED_USE="|| ( gzip lzma lzo xz )"
+IUSE="lzma lzo +progress-redirect xattr +xz"
 
 RDEPEND="
-	gzip? ( sys-libs/zlib )
+	sys-libs/zlib
 	xz? ( app-arch/xz-utils )
 	lzo? ( dev-libs/lzo )
 	lzma? ( app-arch/xz-utils )
 	xattr? ( sys-apps/attr )"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/squashfs${MY_PV}/squashfs-tools"
+S=${WORKDIR}/squashfs${MY_PV}/squashfs-tools
 
 src_prepare() {
 	use progress-redirect && \
@@ -42,7 +41,6 @@ use_sed() {
 src_configure() {
 	tc-export CC
 	sed -i -r \
-		-e "$(use_sed gzip)" \
 		-e "$(use_sed xz XZ)" \
 		-e "$(use_sed lzo)" \
 		-e "$(use_sed xattr)" \
