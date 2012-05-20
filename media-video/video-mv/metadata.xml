@@ -14,4 +14,7 @@
 		<bugs-to>mailto:martin@mvath.de</bugs-to>
 		<remote-id type="github">vaeth/video-mv</remote-id>
 	</upstream>
+	<use>
+		<flag name="libav">Require libav (only very experimental support) instead of mplayer</flag>
+	</use>
 </pkgmetadata>
