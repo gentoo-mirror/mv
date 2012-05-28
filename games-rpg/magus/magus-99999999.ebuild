@@ -27,7 +27,7 @@ then	PROPERTIES="live"
 fi
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+acroread icecat konqueror postgres pngcrush seamonkey"
+IUSE="+acroread icecat imagemagick konqueror postgres pngcrush seamonkey"
 
 DEPENDCOMMON="dev-libs/libsigc++:2
 	dev-cpp/gtkmm:2.4
@@ -38,19 +38,20 @@ DEPENDCOMMON="dev-libs/libsigc++:2
 
 DEPEND="${DEPENDCOMMON}
 	sys-devel/gettext
-	pngcrush? ( media-gfx/pngcrush )"
+	pngcrush? ( media-gfx/pngcrush )
+	imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) )"
 
 RDEPEND="${DEPENDCOMMON}
+	icecat? ( www-client/icecat )
 	!icecat? (
+		seamonkey? ( www-client/seamonkey )
 		!seamonkey? (
+			konqueror? ( kde-base/konqueror )
 			!konqueror? (
-			 || ( www-client/firefox www-client/firefox-bin )
+				|| ( www-client/firefox www-client/firefox-bin )
 			)
 		)
 	)
-	icecat? ( www-client/icecat )
-	seamonkey? ( www-client/seamonkey )
-	konqueror? ( kde-base/konqueror )
 	acroread? ( app-text/acroread )
 	virtual/libintl"
 
@@ -114,8 +115,26 @@ src_sed() {
 }
 
 set_browser() {
-	einfo "Using browser ${browser}"
-	[ "${browser}" = "mozilla" ] && return
+	local i browser
+	browser=
+	for i in icecat seamonkey konqueror
+	do	use "${i}" || continue
+		if [ -n "${browser}" ]
+		then	ewarn "USE=${i} is overridden by USE=${browser}"
+		else	browser=${i}
+		fi
+	done
+	einfo
+	if [ -z "${browser}" ]
+	then	browser="firefox"
+		einfo "Using default browser ${browser}:"
+	elif [ "${browser}" = "mozilla" ]
+	then	einfo "Keeping upstream's default browser (mozilla)"
+			einfo
+			return
+	else	einfo "USE=${browser} overrides default browser firefox:"
+	fi
+	einfo
 	src_sed midgard/docs/BMod_Op.html -e "s#mozilla#${browser}#"
 	src_sed midgard/libmagus/Magus_Optionen.cc -e "s#mozilla#${browser}#"
 	src_sed midgard/midgard.glade -e "s#mozilla#${browser}#"
@@ -123,7 +142,6 @@ set_browser() {
 }
 
 src_patch() {
-	local i
 	einfo
 	einfo "Various patches:"
 	einfo
@@ -138,14 +156,6 @@ src_patch() {
 #	src_cp ManuProC_Base/macros/petig.m4 ManuProC_Widgets/macros/petig.m4
 	src_sed midgard/src/table_lernschema.cc \
 		 '/case .*:$/{n;s/^[ 	]*\}/break;}/}'
-
-	for i in icecat seamonkey konqueror
-	do	if use "${i}"
-		then	set_browser "${i}"
-			return
-		fi
-	done
-	set_browser "firefox"
 }
 
 my_cd() {
@@ -159,7 +169,6 @@ my_autoreconf() {
 	my_cd "${1}"
 	export AT_M4DIR
 	test -d macros && AT_M4DIR="macros" || AT_M4DIR=""
-	grep -q 'AM_GNU_GETTEXT' configure.in && eautopoint
 	eautoreconf
 }
 
@@ -167,6 +176,7 @@ src_prepare() {
 	local i
 	src_patch
 	epatch_user
+	set_browser
 	for i in "${S}"/*
 	do	my_autoreconf "${i##*/}"
 	done
