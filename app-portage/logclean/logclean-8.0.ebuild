@@ -25,6 +25,8 @@ src_prepare() {
 
 src_install() {
 	dobin "${PN}"
+	insinto /etc
+	doins "${PN}.conf"
 	if use zsh-completion
 	then	insinto /usr/share/zsh/site-functions
 			doins "_${PN}"

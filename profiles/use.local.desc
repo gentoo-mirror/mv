@@ -22,7 +22,7 @@ app-text/stardict:qqwry - Enable QQWry plugin, which provides information (in Ch
 app-text/stardict:tools - Build and install the extra stardict tools
 games-rpg/magus:acroread - Depend on acroread (otherwise you are responsible to install/configure a pdf viewer)
 games-rpg/magus:icecat - Depend on icecat browser instead of firefox
-games-rpg/magus:imagemagick - Use convert from graphicsmagick/imagemagick to optimize pictures before installation
+games-rpg/magus:imagemagick - Use convert from graphicsmagick/imagemagick to scale pictures before installation
 games-rpg/magus:konqueror - Depend on konqueror browser instead of firefox
 games-rpg/magus:pngcrush - Use pngcrush for opimizing png before installation
 games-rpg/magus:postgres - Use postgresql instead of sqlite
