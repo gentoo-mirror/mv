@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header $
 
+*set_prompt-1.13 (02 Jun 2012)
+
+  02 Jun 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+
 *set_prompt-1.12 (14 May 2012)
 
   14 May 2012; Martin Väth <martin@mvath.de>
