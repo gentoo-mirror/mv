@@ -4,6 +4,9 @@
 
 *set_prompt-1.13 (02 Jun 2012)
 
+  04 Jun 2012; Martin Väth <martin@mvath.de>
+  Fix description
+
   02 Jun 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 

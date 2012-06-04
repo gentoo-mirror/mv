@@ -6,7 +6,7 @@ EAPI="4"
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)"
+DESCRIPTION="An intelligent prompt for zsh or bash with status line (window title) support"
 HOMEPAGE="https://github.com/vaeth/set_prompt/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
