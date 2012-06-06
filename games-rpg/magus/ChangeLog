@@ -4,6 +4,9 @@
 
 *magus-1.3.3 (28 May 2011)
 
+  06 Jun 2012; Martin Väth <martin@mvath.de>
+  Use new eutils features prune_libtool_files, doicon
+
   28 May 2012; Martin Väth <martin@mvath.de>
   Cleaner dependencies and messages for colliding USE-flags.
   Rely on automagic eautopoint. Add support for optional imagemagick.

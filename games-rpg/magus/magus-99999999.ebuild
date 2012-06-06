@@ -240,7 +240,7 @@ src_install() {
 	my_install "ManuProC_Widgets"
 	my_install "midgard"
 	rm -rf -- "${ED}"/usr/include
-	find "${ED}" -name "*.la" -type f -exec rm -v -- '{}' '+'
+	prune_libtool_files
 
 	insinto "/usr/share/magus"
 
@@ -253,8 +253,7 @@ src_install() {
 	do	test -e "${myicon}" || continue
 		myres=${myicon##*/MAGUS?}
 		myres=${myres%.png}
-		insinto "/usr/share/icons/hicolor/${myres}/apps"
-		doins "${myicon}"
+		doicon -s "${myres}" "${myicon}"
 	done
 }
 
