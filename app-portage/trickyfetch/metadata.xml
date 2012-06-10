@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-	<email>martin@mvath.de</email>
-	<name>Martin Väth</name>
+	<maintainer>
+		<email>martin@mvath.de</email>
+		<name>Martin Väth</name>
+	</maintainer>
 	<upstream>
 		<maintainer>
 			<email>martin@mvath.de</email>
@@ -13,5 +13,4 @@
 		<bugs-to>mailto:martin@mvath.de</bugs-to>
 		<remote-id type="github">vaeth/trickyfetch</remote-id>
 	</upstream>
-</maintainer>
 </pkgmetadata>

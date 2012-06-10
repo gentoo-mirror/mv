@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: $
 
 # NOTE: Even though the *.dict.dz are the same as dictd/freedict's files,
 #       their indexes seem to be in a different format. So we'll keep them

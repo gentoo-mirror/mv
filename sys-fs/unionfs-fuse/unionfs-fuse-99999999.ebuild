@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: $
 
 EAPI="4"
 EHG_REPO_URI="http://podgorny.cz/~bernd/hg/hgwebdir.cgi/0.25"

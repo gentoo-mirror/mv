@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: $
 
 EAPI="4"
 inherit eutils
@@ -16,7 +16,6 @@ S="${WORKDIR}"
 
 RDEPEND="app-portage/deltup
 	dev-util/bdelta"
-
 
 src_prepare() {
 	epatch "${FILESDIR}/eapi2.patch"

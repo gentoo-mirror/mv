@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: $
 
 EAPI="4"
 inherit eutils
 DESCRIPTION="Directory of help-files (for run-help) for your current zsh"
-HOMEPAGE=""
+HOMEPAGE="http://www.zsh.org/"
 
 LICENSE="ZSH"
 SLOT="0"
@@ -65,4 +65,3 @@ pkg_postinst() {
 	elog "autoload -Uz run-help"
 	elog "HELPDIR=/usr/share/zsh/site-contrib/help"
 }
-

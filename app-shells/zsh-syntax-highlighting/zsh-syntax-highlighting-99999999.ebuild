@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: $
 
 EAPI="4"
 EGIT_REPO_URI="git://github.com/zsh-users/zsh-syntax-highlighting.git"
@@ -38,4 +38,3 @@ pkg_postinst() {
 	elog "at the end of your ~/.zshrc"
 	elog "For testing, you can also execute the above command in your zsh."
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: $
 
 EAPI="4"
 
@@ -47,4 +47,3 @@ pkg_postinst() {
 	elog "or copy a modification of that file to your ~/.zshrc"
 	elog "If you just want to try, enter the above command in your zsh."
 }
-

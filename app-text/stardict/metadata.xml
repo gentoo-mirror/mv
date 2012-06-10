@@ -9,10 +9,7 @@
 	 as Full-text translation, Net Dict. 
 	 </longdescription>
 	 <use>
-		 <flag name='editor'>Build and install the stardict-editor utility</flag>
 		 <flag name='espeak'>Enable text to speech synthesizer using espeak
-			 engine</flag>
-		 <flag name='festival'>Enable text to speech synthesizer using festival
 			 engine</flag>
 		 <flag name='gucharmap'>Enable gucharmap dictionary plugin</flag>
 		 <flag name='pronounce'>Install WyabdcRealPeopleTTS package (it is just

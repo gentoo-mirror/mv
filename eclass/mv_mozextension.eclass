@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: $
 
 # @ECLASS: mv_mozextension.eclass
 # @MAINTAINER:
@@ -17,11 +17,11 @@
 # @DESCRIPTION:
 # If this variables is set to the empty value, no default install functions
 # are defined. Otherwise, the value of this variable should be
-# "firefox icecat seamonkey" (default)
+# "firefox seamonkey" (default)
 # or a subset of these.
 # The eclass will then install the extension for all these mozillas,
 # set corresponding dependencies and print corresponding messages.
-: ${MV_MOZ_MOZILLAS=firefox icecat seamonkey}
+: ${MV_MOZ_MOZILLAS=firefox seamonkey}
 
 # @ECLASS-VARIABLE: MV_MOZ_EXTDIR
 # @DESCRIPTION:
@@ -37,35 +37,21 @@
 
 inherit eutils multilib
 
-case ${MV_MOZ_MOZILLAS:-icecat} in
-icecat)
-# We have certainly at most one browser
-	MV_MOZ_EXTDIR='*'
-	RDEPEND=''
-	RDEPEND_END='';;
-*)
-	RDEPEND='|| ('
-	RDEPEND_END='
-)';;
-esac
+RDEPEND='|| ('
 case ${MV_MOZ_MOZILLAS} in
 *fire*)
 	RDEPEND="${RDEPEND}
 	>=www-client/firefox-3.6
-	>=www-client/firefox-bin-3.6";;
+	>=www-client/firefox-bin-3.6"
 esac
 case ${MV_MOZ_MOZILLAS} in
 *sea*)
 	RDEPEND="${RDEPEND}
 	>=www-client/seamonkey-2
-	>=www-client/seamonkey-bin-2";;
+	>=www-client/seamonkey-bin-2"
 esac
-case ${MV_MOZ_MOZILLAS} in
-*ice*)
-	RDEPEND="${RDEPEND}
-	>=www-client/icecat-3.6";;
-esac
-RDEPEND=${RDEPEND}${RDEPEND_END}
+RDEPEND=${RDEPEND}'
+)'
 
 DEPEND='app-arch/unzip'
 [ -n "${RDEPEND}" ] && DEPEND="${DEPEND}
@@ -116,7 +102,6 @@ mv_mozextension_src_install() {
 	e="${EPREFIX%/}/opt/"
 	mv_mozextension_calc '*fire*' 'www-client/firefox' "${b}firefox"
 	mv_mozextension_calc '*fire*' 'www-client/firefox-bin' "${e}firefox"
-	mv_mozextension_calc '*ice*' 'www-client/icecat' "${b}icecat"
 	mv_mozextension_calc '*sea*' 'www-client/seamonkey' "${b}seamonkey"
 	mv_mozextension_calc '*sea*' 'www-client/seamonkey-bin' "${e}seamonkey"
 	[ ${#MV_MOZ_DIR[@]} -ne 0 ] || die 'no supported mozilla is installed'

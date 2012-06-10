@@ -13,15 +13,12 @@ app-portage/eix:strong-optimization - Adds several more agressive CXXFLAGS/LDFLA
 app-portage/eix:tools - Create separate binary for script helper tools (currently only: versionsort); useful if they are called extremely often
 app-portage/logclean:eix - Pull in eix for quicker execution
 app-portage/useflags:eix - Pull in eix for quicker execution
-app-text/stardict:editor - Build and install the stardict-editor utility
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
-app-text/stardict:festival - Enable text to speech synthesizer using festival engine
 app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
 app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
 app-text/stardict:qqwry - Enable QQWry plugin, which provides information (in Chinese language) about geographical positions, owner, etc. for IP addresses
 app-text/stardict:tools - Build and install the extra stardict tools
 games-rpg/magus:acroread - Depend on acroread (otherwise you are responsible to install/configure a pdf viewer)
-games-rpg/magus:icecat - Depend on icecat browser instead of firefox
 games-rpg/magus:imagemagick - Use convert from graphicsmagick/imagemagick to scale pictures before installation
 games-rpg/magus:konqueror - Depend on konqueror browser instead of firefox
 games-rpg/magus:pngcrush - Use pngcrush for opimizing png before installation
@@ -35,4 +32,5 @@ sys-fs/aufs:all-patches - Apply all patches - also those which do not start with
 sys-fs/aufs:kernel-patch - Apply the aufs kernel patches instead of just copying them
 sys-fs/squash_dir:readonly - Do not depend on any of aufs|aufs2|aufs3|unionfs|unionfs-fuse|funionfs. At least one of these must be installed and active to make the squash_dir-mounted filesystems writable.
 sys-fs/squashfs-tools:progress-redirect - Redirect printing of progress bar to stderr. This gives a nicer output if used from scripts like sys-fs/squash_dir
+sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
 sys-kernel/kernel:eix - Pull in eix for quicker execution

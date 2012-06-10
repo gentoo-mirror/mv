@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header $
+# $Header: $
 
   17 May 2012; Martin Väth <martin@mvath.de>
   Remove REQUIRED_USE; make gzip support mandatory (as it actually is)

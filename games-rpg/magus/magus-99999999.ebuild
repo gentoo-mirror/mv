@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: $
 
 EAPI="4"
 inherit eutils autotools flag-o-matic
@@ -27,12 +27,12 @@ then	PROPERTIES="live"
 fi
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+acroread icecat imagemagick konqueror postgres pngcrush seamonkey"
+IUSE="+acroread imagemagick konqueror postgres pngcrush seamonkey"
 
 DEPENDCOMMON="dev-libs/libsigc++:2
 	dev-cpp/gtkmm:2.4
 	virtual/latex-base
-	postgres? ( virtual/postgresql-server )
+	postgres? ( dev-db/postgresql-server )
 	!postgres? ( dev-db/sqlite:3 )
 	|| ( media-libs/netpbm media-gfx/graphicsmagick media-gfx/imagemagick )"
 
@@ -42,14 +42,11 @@ DEPEND="${DEPENDCOMMON}
 	imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) )"
 
 RDEPEND="${DEPENDCOMMON}
-	icecat? ( www-client/icecat )
-	!icecat? (
-		seamonkey? ( www-client/seamonkey )
-		!seamonkey? (
-			konqueror? ( kde-base/konqueror )
-			!konqueror? (
-				|| ( www-client/firefox www-client/firefox-bin )
-			)
+	seamonkey? ( www-client/seamonkey )
+	!seamonkey? (
+		konqueror? ( kde-base/konqueror )
+		!konqueror? (
+			|| ( www-client/firefox www-client/firefox-bin )
 		)
 	)
 	acroread? ( app-text/acroread )
@@ -117,7 +114,7 @@ src_sed() {
 set_browser() {
 	local i browser
 	browser=
-	for i in icecat seamonkey konqueror
+	for i in seamonkey konqueror
 	do	use "${i}" || continue
 		if [ -n "${browser}" ]
 		then	ewarn "USE=${i} is overridden by USE=${browser}"
@@ -256,4 +253,3 @@ src_install() {
 		doicon -s "${myres}" "${myicon}"
 	done
 }
-
