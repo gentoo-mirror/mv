@@ -13,4 +13,7 @@
 		<bugs-to>mailto:martin@mvath.de</bugs-to>
 		<remote-id type="github">vaeth/trickyfetch</remote-id>
 	</upstream>
+	<use>
+		<flag name="eix">Pull in eix for quicker execution</flag>
+	</use>
 </pkgmetadata>

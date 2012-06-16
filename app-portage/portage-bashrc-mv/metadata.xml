@@ -13,4 +13,7 @@
 		<bugs-to>mailto:martin@mvath.de</bugs-to>
 		<remote-id type="github">vaeth/portage-bashrc-mv</remote-id>
 	</upstream>
+	<use>
+		<flag name="eix">Pull in >=app-portage/eix-0.25.6 for proper mask handling</flag>
+	</use>
 </pkgmetadata>

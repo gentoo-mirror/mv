@@ -12,6 +12,8 @@ app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to act
 app-portage/eix:strong-optimization - Adds several more agressive CXXFLAGS/LDFLAGS for optimization like graphite (if available). May cause trouble with some buggy compiler versions. Absense of this USE flag does not strip user's *FLAGS
 app-portage/eix:tools - Create separate binary for script helper tools (currently only: versionsort); useful if they are called extremely often
 app-portage/logclean:eix - Pull in eix for quicker execution
+app-portage/portage-bashrc-mv:eix - Pull in >=app-portage/eix-0.25.6 for proper mask handling
+app-portage/trickyfetch:eix - Pull in eix for quicker execution
 app-portage/useflags:eix - Pull in eix for quicker execution
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
 app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
