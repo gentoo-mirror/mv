@@ -4,6 +4,9 @@
 
 *magus-1.3.3 (28 May 2011)
 
+  01 Jul 2012; Martin Väth <martin@mvath.de>
+  Use prune_libtool_files --all
+
   10 Jun 2012; Martin Väth <martin@mvath.de>
   Remove support for icecat. Fix postgresql dependency
 

@@ -237,7 +237,7 @@ src_install() {
 	my_install "ManuProC_Widgets"
 	my_install "midgard"
 	rm -rf -- "${ED}"/usr/include
-	prune_libtool_files
+	prune_libtool_files --all
 
 	insinto "/usr/share/magus"
 
