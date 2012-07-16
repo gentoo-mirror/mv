@@ -4,6 +4,10 @@
 
 *world-mv-3.8 (07 May 2012)
 
+  16 Jul 2012; Martin Väth <martin@mvath.de>
+  Fix for changed vcs-snapshot.eclass behavior.
+  Thanks to Chris Slycord <cslycord at gmail.com> for reporting.
+
   12 May 2012; Martin Väth <martin@mvath.de>
   base->eutils
 

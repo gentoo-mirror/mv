@@ -15,6 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
+S="${WORKDIR}/${mPN}-${PV}"
 
 src_prepare() {
 	sed -i -e "s'\${EPREFIX}'\\'${EPREFIX}\\''" "${mPN}" || die
