@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="Mozilla plugin: Restrict active contents like java/javascript/flash"
 HOMEPAGE="https://www.requestpolicy.com/"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/9727/${P}-sm+fx.xpi"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/9727/${P}-fx+sm.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"
