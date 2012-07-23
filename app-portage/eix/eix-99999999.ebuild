@@ -8,7 +8,8 @@ EGIT_REPO_URI="git://git.berlios.de/${PN}"
 EGIT_PROJECT="${PN}.git"
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
 WANT_LIBTOOL=none
-inherit eutils git-2 autotools multilib bash-completion-r1
+PLOCALES="de ru"
+inherit eutils git-2 autotools multilib bash-completion-r1 l10n
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
 HOMEPAGE="http://eix.berlios.de"
@@ -18,7 +19,7 @@ PROPERTIES="live"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="clang debug +dep doc linguas_de linguas_ru nls optimization security strong-optimization sqlite tools zsh-completion"
+IUSE="clang debug +dep doc nls optimization security strong-optimization sqlite tools zsh-completion"
 
 RDEPEND="app-shells/push
 	sqlite? ( >=dev-db/sqlite-3 )

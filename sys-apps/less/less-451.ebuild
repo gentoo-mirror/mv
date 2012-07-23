@@ -50,12 +50,8 @@ src_prepare() {
 src_configure() {
 	export ac_cv_lib_ncursesw_initscr=$(usex unicode)
 	export ac_cv_lib_ncurses_initscr=$(usex !unicode)
-
-	local regex="posix"
-	use pcre && regex="pcre"
-
 	econf \
-		--with-regex=${regex} \
+		--with-regex=$(usex pcre pcre posix) \
 		--with-editor="${EPREFIX}"/usr/libexec/editor
 }
 
@@ -81,7 +77,7 @@ src_install() {
 	printf '%s\n' 'LESSOPEN="|lesspipe.sh %s"' "LESS=\"${a}\"" >70less
 	doenvd 70less
 
-	dodoc NEWS README* "${FILESDIR}"/README.Gentoo
+	dodoc "${FILESDIR}"/README.Gentoo
 
 	if use less-select
 	then	newdoc "${SELECTDIR}"/README README.less-select
