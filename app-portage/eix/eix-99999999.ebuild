@@ -9,7 +9,7 @@ EGIT_PROJECT="${PN}.git"
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
 WANT_LIBTOOL=none
 PLOCALES="de ru"
-inherit eutils git-2 autotools multilib bash-completion-r1 l10n
+inherit autotools bash-completion-r1 eutils git-2 l10n multilib
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
 HOMEPAGE="http://eix.berlios.de"

@@ -1,0 +1,52 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI="4"
+RESTRICT="mirror"
+inherit elisp-common eutils vcs-snapshot
+
+DESCRIPTION="A collection of perl scripts (replacement in files, syncing dirs etc)"
+HOMEPAGE="https://github.com/vaeth/mv_emacs/"
+SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
+
+DEPEND="virtual/emacs"
+RDEPEND=${DEPEND}
+
+src_unpack() {
+	vcs-snapshot_src_unpack
+	cd "${S}"
+	mkdir sitefile
+	cat >"sitefile/50${PN}-gentoo.el" <<EOF
+(add-to-list 'load-path "@SITELISP@")
+(load "mv_emacs-autoloads")
+EOF
+}
+
+src_prepare() {
+	epatch_user
+}
+
+src_compile() {
+	elisp-make-autoload-file || die
+	elisp-compile *.el || die
+}
+
+src_install() {
+	dodoc README
+	elisp-install "${PN}" *.el *.elc || die
+	elisp-site-file-install "sitefile/50${PN}-gentoo.el" || die
+}
+
+pkg_postinst() {
+	elisp-site-regen
+}
+
+pkg_postrm() {
+	elisp-site-regen
+}
