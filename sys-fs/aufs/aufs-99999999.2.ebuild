@@ -14,6 +14,7 @@ inherit eutils git-2 linux-info eutils
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"

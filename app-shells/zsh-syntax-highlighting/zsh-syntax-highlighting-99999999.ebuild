@@ -9,6 +9,7 @@ inherit eutils git-2
 
 DESCRIPTION="Fish shell like syntax highlighting for zsh"
 HOMEPAGE="https://github.com/zsh-users/zsh-syntax-highlighting"
+SRC_URI=""
 
 LICENSE="as-is"
 SLOT="0"

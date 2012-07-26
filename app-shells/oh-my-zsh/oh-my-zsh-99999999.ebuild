@@ -10,6 +10,7 @@ inherit eutils git-2
 
 DESCRIPTION="A ready-to-use zsh configuration with plugins"
 HOMEPAGE="https://github.com/robbyrussell/oh-my-zsh"
+SRC_URI=""
 
 LICENSE="ZSH"
 SLOT="0"

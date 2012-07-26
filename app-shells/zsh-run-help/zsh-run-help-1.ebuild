@@ -6,6 +6,7 @@ EAPI="4"
 inherit eutils
 DESCRIPTION="Directory of help-files (for run-help) for your current zsh"
 HOMEPAGE="http://www.zsh.org/"
+SRC_URI=""
 
 LICENSE="ZSH"
 SLOT="0"

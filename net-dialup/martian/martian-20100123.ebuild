@@ -13,6 +13,7 @@ SRC_URI="http://linmodems.technion.ac.il/packages/ltmodem/kernel-2.6/martian/${A
 LICENSE="GPL-2 AgereSystems-WinModem"
 KEYWORDS="-* ~x86"
 IUSE=""
+SLOT="0"
 
 RESTRICT="mirror strip"
 

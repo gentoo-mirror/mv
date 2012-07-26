@@ -12,6 +12,7 @@ inherit eutils git-2 linux-info multilib
 
 DESCRIPTION="Userspace tools for aufs"
 HOMEPAGE="http://aufs.sourceforge.net/"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
