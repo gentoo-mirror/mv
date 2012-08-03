@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Jul 2012; Martin Väth <martin@mvath.de>
+  Block sys-fs/aufs{2,3} from the gentoo main tree
+
   12 May 2012; Martin Väth <martin@mvath.de>
   base->eutils
 

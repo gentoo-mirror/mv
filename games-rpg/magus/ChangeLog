@@ -4,6 +4,9 @@
 
 *magus-1.3.3 (28 May 2011)
 
+  02 Aug 2012; Martin Väth <martin@mvath.de>
+  Parallelize patching and eautoreconf calls
+
   01 Jul 2012; Martin Väth <martin@mvath.de>
   Use prune_libtool_files --all
 

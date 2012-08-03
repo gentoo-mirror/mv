@@ -25,7 +25,8 @@ KEYWORDS=""
 IUSE="kernel-patch all-patches"
 PROPERTIES="live"
 
-RDEPEND=""
+RDEPEND="!sys-fs/aufs2
+	!sys-fs/aufs3"
 DEPEND="dev-vcs/git[curl]"
 
 declare -a my_patchlist

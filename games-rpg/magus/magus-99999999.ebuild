@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI="4"
-inherit eutils autotools flag-o-matic
+inherit autotools eutils flag-o-matic multiprocessing
 RESTRICT="mirror"
 
 case ${PV} in
@@ -124,7 +124,7 @@ set_browser() {
 	einfo
 	if [ -z "${browser}" ]
 	then	browser="firefox"
-		einfo "Using default browser ${browser}:"
+		einfo "Patching for default browser ${browser}:"
 	elif [ "${browser}" = "mozilla" ]
 	then	einfo "Keeping upstream's default browser (mozilla)"
 			einfo
@@ -132,10 +132,12 @@ set_browser() {
 	else	einfo "USE=${browser} overrides default browser firefox:"
 	fi
 	einfo
-	src_sed midgard/docs/BMod_Op.html -e "s#mozilla#${browser}#"
-	src_sed midgard/libmagus/Magus_Optionen.cc -e "s#mozilla#${browser}#"
-	src_sed midgard/midgard.glade -e "s#mozilla#${browser}#"
-	src_sed midgard/src/table_optionen_glade.cc -e "s#mozilla#${browser}#"
+	multijob_init
+	multijob_child_init src_sed midgard/docs/BMod_Op.html -e "s#mozilla#${browser}#"
+	multijob_child_init src_sed midgard/libmagus/Magus_Optionen.cc -e "s#mozilla#${browser}#"
+	multijob_child_init src_sed midgard/midgard.glade -e "s#mozilla#${browser}#"
+	multijob_child_init src_sed midgard/src/table_optionen_glade.cc -e "s#mozilla#${browser}#"
+	multijob_finish || die "patching of browser failed"
 }
 
 src_patch() {
@@ -144,15 +146,17 @@ src_patch() {
 	einfo
 	grep "saebel.png" midgard/src/Makefile.am && \
 		ewarn "Unneeded patching of midgard/src/Makefile.am"
-	src_sed  midgard/src/Makefile.am \
+	multijob_init
+	multijob_child_init src_sed midgard/src/Makefile.am \
 		-e 's/drache.png/Money-gray.png saebel.png drache.png/'
-	src_sed ManuProC_Widgets/configure.in \
-		-e 's/^[ 	]*AM_GNU_GETTEXT_VERSION/AM_GNU_GETTEXT_VERSION/'
-	src_sed -g 'AM_GNU_GETTEXT_VERSION' ManuProC_Base/configure.in \
+	multijob_child_init src_sed ManuProC_Widgets/configure.in \
+		-e 's/^[[:space:]]*AM_GNU_GETTEXT_VERSION/AM_GNU_GETTEXT_VERSION/'
+	multijob_child_init src_sed -g 'AM_GNU_GETTEXT_VERSION' ManuProC_Base/configure.in \
 		-e '/AC_SUBST(GETTEXT_PACKAGE)/iAM_GNU_GETTEXT_VERSION([0.17])'
-#	src_cp ManuProC_Base/macros/petig.m4 ManuProC_Widgets/macros/petig.m4
-	src_sed midgard/src/table_lernschema.cc \
-		 '/case .*:$/{n;s/^[ 	]*\}/break;}/}'
+#	multijob_child_init src_cp ManuProC_Base/macros/petig.m4 ManuProC_Widgets/macros/petig.m4
+	multijob_child_init src_sed midgard/src/table_lernschema.cc \
+		-e '/case .*:$/{n;s/^[[:space:]]*\}/break;}/}'
+	multijob_finish || die "basic patching failed"
 }
 
 my_cd() {
@@ -160,9 +164,6 @@ my_cd() {
 }
 
 my_autoreconf() {
-	einfo
-	einfo "eautoreconf ${1}:"
-	einfo
 	my_cd "${1}"
 	export AT_M4DIR
 	test -d macros && AT_M4DIR="macros" || AT_M4DIR=""
@@ -174,9 +175,14 @@ src_prepare() {
 	src_patch
 	epatch_user
 	set_browser
+	einfo
+	einfo "Calling eautoreconf for all subprojects:"
+	einfo
+	multijob_init
 	for i in "${S}"/*
-	do	my_autoreconf "${i##*/}"
+	do	multijob_child_init my_autoreconf "${i##*/}"
 	done
+	multijob_finish || die "some eautoreconf failed"
 }
 
 my_conf() {
