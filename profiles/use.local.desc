@@ -16,6 +16,7 @@ app-portage/logclean:eix - Pull in eix for quicker execution
 app-portage/portage-bashrc-mv:eix - Pull in >=app-portage/eix-0.25.6 for proper mask handling
 app-portage/trickyfetch:eix - Pull in eix for quicker execution
 app-portage/useflags:eix - Pull in eix for quicker execution
+app-shells/auto-fu-zsh:compile - Byte-compile to speed up
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
 app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
 app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
