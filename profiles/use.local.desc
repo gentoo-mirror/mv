@@ -17,6 +17,19 @@ app-portage/portage-bashrc-mv:eix - Pull in >=app-portage/eix-0.25.6 for proper 
 app-portage/trickyfetch:eix - Pull in eix for quicker execution
 app-portage/useflags:eix - Pull in eix for quicker execution
 app-shells/auto-fu-zsh:compile - Byte-compile to speed up
+app-shells/zsh:completion_AIX - install completions for AIX
+app-shells/zsh:completion_BSD - install completions for BSD
+app-shells/zsh:completion_Cygwin - install completions for Cygwin
+app-shells/zsh:completion_Darwin - install completions for Darwin
+app-shells/zsh:completion_Debian - install completions for Debian
+app-shells/zsh:completion_Linux - install completions for Linux
+app-shells/zsh:completion_Mandriva - install completions for Mandriva
+app-shells/zsh:completion_Redhat - install completions for Redhat
+app-shells/zsh:completion_Solaris - install completions for Solaris
+app-shells/zsh:completion_Unix - install completions for Unix
+app-shells/zsh:completion_X - install completions for X
+app-shells/zsh:completion_openSUSE - install completions for openSUSE
+app-shells/zsh:run-help - Create and install data for run-help command
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
 app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
 app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words

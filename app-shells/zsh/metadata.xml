@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>tove@gentoo.org</email>
+  <name>Torsten Veller</name>
+  <description>Interim maintainer</description>
+</maintainer>
+<maintainer>
+  <email>radhermit@gentoo.org</email>
+  <name>Tim Harder</name>
+  <description>Co-maintainer</description>
+</maintainer>
+<maintainer>
+  <email>martin@mvath.de</email>
+  <name>Martin Väth</name>
+  <description>Maintainer of run-help and completion_* USE-flags</description>
+</maintainer>
+<longdescription>
+  Zsh is a shell designed for interactive use, although it is also a
+  powerful scripting language. Many of the useful features of bash, ksh,
+  and tcsh were incorporated into zsh; many original features were
+  added.
+</longdescription>
+<use>
+  <flag name='completion_AIX'>install completions for AIX</flag>
+  <flag name='completion_BSD'>install completions for BSD</flag>
+  <flag name='completion_Cygwin'>install completions for Cygwin</flag>
+  <flag name='completion_Darwin'>install completions for Darwin</flag>
+  <flag name='completion_Debian'>install completions for Debian</flag>
+  <flag name='completion_Linux'>install completions for Linux</flag>
+  <flag name='completion_Mandriva'>install completions for Mandriva</flag>
+  <flag name='completion_openSUSE'>install completions for openSUSE</flag>
+  <flag name='completion_Redhat'>install completions for Redhat</flag>
+  <flag name='completion_Solaris'>install completions for Solaris</flag>
+  <flag name='completion_Unix'>install completions for Unix</flag>
+  <flag name='completion_X'>install completions for X</flag>
+  <flag name='run-help'>Create and install data for run-help command</flag>
+</use>
+</pkgmetadata>

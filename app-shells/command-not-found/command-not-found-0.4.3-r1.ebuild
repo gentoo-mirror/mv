@@ -25,7 +25,12 @@ src_prepare() {
 	PREFIX=${EPREFIX}
 	filter-flags -fwhole-program
 	sed -i -e 1d -e '2i#! /bin/sh' cnf-cron.in || die
-	sed -i -e "s!usr/lib!usr/$(get_libdir)!g" CMakeLists.txt || die
+	sed -i \
+		-e "s!usr/lib!usr/$(get_libdir)!g" \
+		-e "/^INSTALL.*cnf\.sh/,/^INSTALL/{/EXECUTE/d}" \
+		CMakeLists.txt || die
+	sed -i -e "s/function[[:space:]]*\([^[:space:](]*\)[[:space:]]*(/\1(/" \
+		cnf.sh || die
 	epatch_user
 }
 

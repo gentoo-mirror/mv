@@ -2,6 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Aug 2012; Martin Väth <martin@mvath.de>
+  This package becomes obsoleted by app-shells/zsh in the overlay
+  and will be removed. Until this is the case, it will block.
+
   12 May 2012; Martin Väth <martin@mvath.de>
   base->eutils
 

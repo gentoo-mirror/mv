@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="app-shells/zsh"
+RDEPEND="app-shells/zsh
+	!!app-shells/zsh[run-help]"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-apps/man
