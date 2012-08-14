@@ -4,7 +4,10 @@
 
 *zsh-5.0.0 (13 Aug 2012)
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  14 Aug 2012; Martin Väth <martin@mvath.de>
+  Add comments about the paranoid pipe testing
+
+  13 Aug 2012; Martin Väth <martin@mvath.de>
   Copy from the portage tree to add support for run-help and for removal of
   unrequested completion functions (in particular, do not put them in $fpath).
   Clear previous ChangeLog.

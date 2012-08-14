@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-5.0.0.ebuild,v 1.1 2012/07/22 01:34:03 radhermit Exp $
+# $Header: $
 
 EAPI=4
 
@@ -165,6 +165,10 @@ generate_run_help() (
 	unset MANPL LC_ALL
 	[ -z "${LC_CTYPE}" ] && export LC_CTYPE=en_US.utf8
 	ebegin "Generating files for run-help"
+	# It is necessary to be paranoid about the success of the following pipe,
+	# since any change in locale or environment (like unset GROFF_NO_SGR,
+	# "bad" LC_CTYPE or tools behaving slightly different) can break it
+	# completely. It needs to be tested carefully in each architecture.
 	man "${S}/Doc/zshbuiltins.1" | colcrt - | perl "${S}/Util/helpfiles" || {
 		eend 1
 		eerror "perl Util/helpfiles failed"
