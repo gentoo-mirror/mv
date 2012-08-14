@@ -2,7 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*auto-fu-zsh-0.0.1.12 (12 Aug 2012)
+*auto-fu-zsh-0.0.1.12 (14 Aug 2012)
+
+  12 Aug 2012; Martin Väth <martin@mvath.de>
+  Improve comments.
 
   12 Aug 2012; Martin Väth <martin@mvath.de>
   Write ebuild from scratch.

@@ -22,17 +22,20 @@ DEPEND="compile? ( app-shells/zsh )"
 DESTPATH="/usr/share/zsh/site-contrib/${pPN}"
 
 generate_example() {
-	echo "# Put something like this into your ~/.zshrc"
+	echo "# Put something like the following into your ~/.zshrc
+# The interplay with zsh-syntax-highlighting is not perfect yet, but it
+# somewhat works if you source zsh-syntax-highlighting after that code"
 	if use compile
 	then	echo "source ${DESTPATH}/${pPN}
 auto-fu-install"
 	else	echo "source ${DESTPATH}/${pPN}.zsh"
 	fi
-	echo "zstyle ':auto-fu:highlight' input bold
-zstyle ':auto-fu:highlight' completion fg=yellow
+	echo "zstyle ':auto-fu:highlight' input hi
+zstyle ':auto-fu:highlight' completion fg=red
 zstyle ':auto-fu:highlight' completion/one fg=blue
 zstyle ':auto-fu:var' postdisplay # \$'\\n-azfu-'
 zstyle ':auto-fu:var' track-keymap-skip opp
+zstyle ':auto-fu:var' enable all
 #zstyle ':auto-fu:var' disable magic-space
 zle-line-init() auto-fu-init
 zle -N zle-line-init
