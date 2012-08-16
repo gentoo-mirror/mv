@@ -1,0 +1,11 @@
+--- auto-fu.zsh
++++ auto-fu.zsh
+@@ -287,7 +287,7 @@
+ 
+ afu-eof-maybe () {
+   local eof="$1"; shift
+-  [[ "$BUFFER" != '' ]] || { $eof; return }
++  [[ -z $BUFFER ]] && { $eof; return }
+   "$@"
+ }
+ 

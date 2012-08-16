@@ -1,0 +1,35 @@
+--- auto-fu.zsh
++++ auto-fu.zsh
+@@ -285,19 +285,21 @@
+   }
+ }
+ 
+-afu-eof-maybe () {
+-  local eof="$1"; shift
+-  [[ "$BUFFER" != '' ]] || { $eof; return }
+-  "$@"
+-}
+-
+ afu-ignore-eof () { zle -M "zsh: use 'exit' to exit." }
+ 
+-afu-register-zle-eof () {
+-  local fun="$1"
+-  local then="$2"
+-  local else="${3:-delete-char-or-list}"
+-  eval "$fun () { afu-eof-maybe $then zle $else }; zle -N $fun"
++afu-kill-line() {
++if (($#BUFFER > CURSOR))
++then	zle kill-line
++else	zle kill-whole-line
++fi
++}
++afu-register-zle-eof() {
++eval $1'() { [[ -z $BUFFER ]] && { '$2'
++return
++}
++afu-kill-line
++}'
++zle -N $1
+ }
+ afu-register-zle-eof afu+orf-ignoreeof-deletechar-list afu-ignore-eof
+ afu-register-zle-eof      afu+orf-exit-deletechar-list exit

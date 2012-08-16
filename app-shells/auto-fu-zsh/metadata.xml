@@ -14,5 +14,6 @@
 	</upstream>
 	<use>
 		<flag name="compile">Byte-compile to speed up</flag>
+		<flag name="kill-line">Make Ctrl-D work correctly and in case of nonempty buffer work as kill-line resp. kill-whole-line</flag>
 	</use>
 </pkgmetadata>
