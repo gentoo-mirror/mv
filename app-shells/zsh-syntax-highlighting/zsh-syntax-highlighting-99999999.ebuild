@@ -3,21 +3,29 @@
 # $Header: $
 
 EAPI="4"
-EGIT_REPO_URI="git://github.com/zsh-users/zsh-syntax-highlighting.git"
-[ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit eutils git-2
+
+inherit eutils
+
+case ${PV} in
+99999999*)
+	EGIT_REPO_URI="git://github.com/zsh-users/${PN}.git"
+	[ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
+	inherit git-2
+	PROPERTIES="live"
+	SRC_URI=""
+	KEYWORDS="";;
+*)
+	inherit vcs-snapshot
+	SRC_URI="http://github.com/zsh-users/${PN}/tarball/${PV} -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86";;
+esac
 
 DESCRIPTION="Fish shell like syntax highlighting for zsh"
 HOMEPAGE="https://github.com/zsh-users/zsh-syntax-highlighting"
-SRC_URI=""
 
 LICENSE="as-is"
 SLOT="0"
-# Since this is a live ebuild, we require ACCEPT_KEYWORDS='**'
-#KEYWORDS="~amd64 ~x86"
-KEYWORDS=""
 IUSE=""
-PROPERTIES="live"
 
 RDEPEND="app-shells/zsh"
 DEPEND=""

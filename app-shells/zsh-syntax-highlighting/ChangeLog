@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*set_prompt-0.1.2 (17 Aug 2012)
+
+  17 Aug 2012; Martin Väth <martin@mvath.de>
+  Provide non-live ebuild
+
   12 May 2012; Martin Väth <martin@mvath.de>
   base->eutils
 
