@@ -15,6 +15,7 @@ case ${PV} in
 	SRC_URI=""
 	KEYWORDS="";;
 *)
+	RESTRICT="mirror"
 	inherit vcs-snapshot
 	SRC_URI="http://github.com/zsh-users/${PN}/tarball/${PV} -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86";;
