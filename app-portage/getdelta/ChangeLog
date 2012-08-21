@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*getdelta-0.7.9-r1 (21 Aug 2012)
+
+  21 Aug 2012; Martin Väth <martin@mvath.de>
+  Upgrade revision without change to be not older than in portage tree
+
 *getdelta-0.7.9 (19 Mar 2012)
 
   12 May 2012; Martin Väth <martin@mvath.de>
