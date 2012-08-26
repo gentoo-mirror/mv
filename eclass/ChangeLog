@@ -2,6 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Aug 2012; Martin Väth <martin@mvath.de>
+  Rename IUSE={copy,symlink}_extensions to {copy,symlink}-extensions to avoid
+  possible collision with USE_EXPAND
+
   10 Jun 2012; Martin Väth <martin@mvath.de>
   Remove support for icecat. Fix headers to make repoman happy.
 

@@ -57,7 +57,7 @@ DEPEND='app-arch/unzip'
 [ -n "${RDEPEND}" ] && DEPEND="${DEPEND}
 ${RDEPEND}"
 
-[ "${MV_MOZ_EXTDIR}" = '*' ] || IUSE='copy_extensions symlink_extensions'
+[ "${MV_MOZ_EXTDIR}" = '*' ] || IUSE='copy-extensions symlink-extensions'
 
 mv_mozextension_src_unpack() {
 	local i
@@ -114,7 +114,7 @@ mv_mozextension_src_install() {
 	fi
 	MV_MOZ_SYM=()
 	MV_MOZ_LNK=false
-	if [ "${d}" = '*' ] || ! use symlink_extensions
+	if [ "${d}" = '*' ] || ! use symlink-extensions
 	then	MV_MOZ_CPY=:
 	else	MV_MOZ_CPY=false
 		if [ -n "${d}" ]
@@ -122,7 +122,7 @@ mv_mozextension_src_install() {
 		else	mv_mozextension_install "${b}mozilla/extensions"
 		fi
 	fi
-	use copy_extensions || MV_MOZ_LNK=:
+	use copy-extensions || MV_MOZ_LNK=:
 	for i in "${MV_MOZ_DIR[@]}"
 	do	j="${i}/extensions"
 		${MV_MOZ_CPY} && mv_mozextension_install "${j}"
@@ -247,11 +247,11 @@ xpi_install() {
 	test -d "${D}${d}" || dodir "${d}" || die "failed to create ${d}"
 	${MV_MOZ_LNK} && cp -RPl -- "${x}"/* "${D}${d}" || {
 		${MV_MOZ_LNK} && \
-			ewarn 'Failed to hardlink extension. Falling back to USE=copy_extension'
+			ewarn 'Failed to hardlink extension. Falling back to USE=copy-extensions'
 		insinto "${d}" && doins -r "${x}"/*
 	} || {
 		${MV_MOZ_LNK} && \
-			die 'failed to copy extension. Please retry emerging with USE=copy_extension'
+			die 'failed to copy extension. Please retry emerging with USE=copy-extensions'
 		die 'failed to copy extension'
 	}
 }
@@ -265,5 +265,3 @@ xpi_install_dirs() {
 	do	[ -n "${d}" ] && test -d "${d}" && xpi_install "${d}"
 	done
 }
-
-
