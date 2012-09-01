@@ -20,9 +20,9 @@ src_prepare() {
 }
 
 src_install() {
-	dobin "${PN}"
+	dobin bin/*
 	if use zsh-completion
 	then	insinto /usr/share/zsh/site-functions
-			doins _"${PN}"
+			doins zsh/*
 	fi
 }
