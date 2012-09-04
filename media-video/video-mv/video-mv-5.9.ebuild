@@ -13,8 +13,9 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="libav zsh-completion"
+IUSE="libav +title zsh-completion"
 RDEPEND="app-shells/push
+title? ( app-shells/runtitle )
 !libav? ( media-video/mplayer )
 libav? ( media-video/libav )"
 DEPEND=""

@@ -43,6 +43,7 @@ games-rpg/magus:pngcrush - Use pngcrush for opimizing png before installation
 games-rpg/magus:postgres - Use postgresql instead of sqlite
 games-rpg/magus:seamonkey - Depend on seamonkey browser instead of firefox
 media-video/video-mv:libav - Require libav (only very experimental support) instead of mplayer
+media-video/video-mv:title - Support for statusline changes (requires app-shells/runtitle)
 net-misc/sshstart:keychain - Pull in keychain as dependency. Not required, but recommended for smoother operation.
 sys-apps/less:less-select - Add the less-select feature (additional options and a binary helper).
 sys-apps/less:original-gentoo - Use the gentoo default for the LESS variable.

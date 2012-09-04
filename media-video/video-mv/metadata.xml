@@ -14,6 +14,7 @@
 		<remote-id type="github">vaeth/video-mv</remote-id>
 	</upstream>
 	<use>
+		<flag name="title">Support for statusline changes (requires app-shells/runtitle)</flag>
 		<flag name="libav">Require libav (only very experimental support) instead of mplayer</flag>
 	</use>
 </pkgmetadata>
