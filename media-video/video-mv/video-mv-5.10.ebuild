@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="libav +title zsh-completion"
 RDEPEND="app-shells/push
-title? ( app-shells/runtitle )
-!libav? ( media-video/mplayer )
-libav? ( media-video/libav )"
+	title? ( >=app-shells/runtitle-2.0 )
+	!libav? ( media-video/mplayer )
+	libav? ( media-video/libav )"
 DEPEND=""
 
 src_prepare() {

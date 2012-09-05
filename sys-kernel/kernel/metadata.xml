@@ -15,5 +15,6 @@
 	</upstream>
 	<use>
 		<flag name="eix">Pull in eix for quicker execution</flag>
+		<flag name="title">Support for statusline changes (requires app-shells/runtitle)</flag>
 	</use>
 </pkgmetadata>

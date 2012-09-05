@@ -15,5 +15,6 @@
 	</upstream>
 	<use>
 		<flag name="readonly">Do not depend on any of aufs|aufs2|aufs3|unionfs|unionfs-fuse|funionfs. At least one of these must be installed and active to make the squash_dir-mounted filesystems writable.</flag>
+		<flag name="title">Support for statusline changes (requires app-shells/runtitle)</flag>
 	</use>
 </pkgmetadata>
