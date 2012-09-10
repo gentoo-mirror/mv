@@ -2,14 +2,20 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*portage-bashrc-mv-11.3 (07 Sep 2012)
+*portage-bashrc-mv-11.4 (10 Sep 2012)
 
-  07 Sep 2012; Martin Väth <martin@mvath.de>
+  10 Sep 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild. Rely that gold linker is used with clang:
+  Do not filter -flto for USE_NONGNU
+
+*portage-bashrc-mv-11.3 (08 Sep 2012)
+
+  08 Sep 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Support for Non-GNU compilers (e.g. clang).
 
-*portage-bashrc-mv-11.2 (07 Sep 2012)
+*portage-bashrc-mv-11.2 (08 Sep 2012)
 
-  07 Sep 2012; Martin Väth <martin@mvath.de>
+  08 Sep 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Fixes CCACHE_*
 
 *portage-bashrc-mv-11.1 (07 Sep 2012)
