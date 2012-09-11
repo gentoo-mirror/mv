@@ -47,6 +47,7 @@ media-video/video-mv:title - Support for statusline changes (requires app-shells
 net-misc/sshstart:keychain - Pull in keychain as dependency. Not required, but recommended for smoother operation.
 sys-apps/less:less-select - Add the less-select feature (additional options and a binary helper).
 sys-apps/less:original-gentoo - Use the gentoo default for the LESS variable.
+sys-apps/starter:title - Support for statusline changes (requires app-shells/runtitle)
 sys-fs/aufs:all-patches - Apply all patches - also those which do not start with aufs
 sys-fs/aufs:kernel-patch - Apply the aufs kernel patches instead of just copying them
 sys-fs/squash_dir:readonly - Do not depend on any of aufs|aufs2|aufs3|unionfs|unionfs-fuse|funionfs. At least one of these must be installed and active to make the squash_dir-mounted filesystems writable.
