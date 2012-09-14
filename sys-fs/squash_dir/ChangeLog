@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squash_dir-11.16 (15 Sep 2012)
+
+  15 Sep 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild. Fix regression in wrapper script
+
 *squash_dir-11.15 (14 Sep 2012)
 
   14 Sep 2012; Martin Väth <martin@mvath.de>
