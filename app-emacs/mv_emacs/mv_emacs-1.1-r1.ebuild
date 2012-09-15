@@ -6,7 +6,7 @@ EAPI="4"
 RESTRICT="mirror"
 inherit elisp-common eutils vcs-snapshot
 
-DESCRIPTION="A collection of perl scripts (replacement in files, syncing dirs etc)"
+DESCRIPTION="(X)Emacs extensions: block support, macrorecorder, verify change"
 HOMEPAGE="https://github.com/vaeth/mv_emacs/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
