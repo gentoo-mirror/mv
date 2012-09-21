@@ -4,6 +4,9 @@
 
 *zsh-5.0.0 (13 Aug 2012)
 
+  21 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   14 Aug 2012; Martin Väth <martin@mvath.de>
   Add comments about the paranoid pipe testing
 

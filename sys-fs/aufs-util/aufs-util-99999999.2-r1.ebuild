@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
 EGIT_REPO_URI="http://git.c3sl.ufpr.br/pub/scm/aufs/aufs2-util.git"
 EGIT_BRANCH="aufs2.1"
 EGIT_COMMIT=${EGIT_BRANCH}
@@ -15,7 +15,7 @@ HOMEPAGE="http://aufs.sourceforge.net/"
 SRC_URI=""
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/2"
 # Since this is a live ebuild, we require ACCEPT_KEYWORDS='**'
 #KEYWORDS="~amd64 ~x86"
 KEYWORDS=""

@@ -37,18 +37,24 @@
 
 inherit eutils multilib
 
+case ${EAPI:-0} in
+[01234])
+	die "EAPI ${EAPI} no longer supported by mv_mozextension";;
+esac
+
+
 RDEPEND='|| ('
 case ${MV_MOZ_MOZILLAS} in
 *fire*)
 	RDEPEND="${RDEPEND}
-	>=www-client/firefox-3.6
-	>=www-client/firefox-bin-3.6"
+	www-client/firefox:=
+	www-client/firefox-bin:=";;
 esac
 case ${MV_MOZ_MOZILLAS} in
 *sea*)
 	RDEPEND="${RDEPEND}
-	>=www-client/seamonkey-2
-	>=www-client/seamonkey-bin-2"
+	www-client/seamonkey:=
+	www-client/seamonkey-bin:=";;
 esac
 RDEPEND=${RDEPEND}'
 )'
@@ -87,7 +93,8 @@ mv_mozextension_install() {
 mv_mozextension_calc() {
 	local v
 	case ${MV_MOZ_MOZILLAS} in
-	${1})	false;;
+	${1})
+		false;;
 	esac && return
 	v=`best_version "${2}"` && [ -n "${v}" ] || return
 	MV_MOZ_PKG+=("${v}")
@@ -219,11 +226,9 @@ xpi_unpack() {
 				cd -- "${S}/${xpiname}" && \
 				unzip -qo -- "${srcdir}${xpi}" \
 					|| die "failed to unpack ${xpi}"
-			chmod -R a+rX,u+w,go-w -- "${S}/${xpiname}"
-		;;
+			chmod -R a+rX,u+w,go-w -- "${S}/${xpiname}";;
 		*)
-			einfo "unpack ${xpi}: file format not recognized. Ignoring."
-		;;
+			einfo "unpack ${xpi}: file format not recognized. Ignoring.";;
 		esac
 	done
 }

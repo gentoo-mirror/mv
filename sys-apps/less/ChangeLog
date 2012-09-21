@@ -4,6 +4,9 @@
 
 *less-451.ebuild (23 Jul 2012)
 
+  21 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   23 Jul 2012; Martin Väth <martin@mvath.de>
   Bump less version. Simplify doc install and pcre passing as in main tree.
 

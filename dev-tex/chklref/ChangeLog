@@ -4,6 +4,9 @@
 
 *chkltex-2.5.1 (11 Apr 2011)
 
+  21 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   12 May 2012; Martin Väth <martin@mvath.de>
   base->eutils
 

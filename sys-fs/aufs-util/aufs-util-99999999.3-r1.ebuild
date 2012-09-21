@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
 EGIT_REPO_URI="git://aufs.git.sourceforge.net/gitroot/aufs/aufs-util.git"
 EGIT_BRANCH="aufs3.0"
 EGIT_COMMIT=${EGIT_BRANCH}
@@ -15,7 +15,7 @@ HOMEPAGE="http://aufs.sourceforge.net/"
 SRC_URI=""
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/3"
 # Since this is a live ebuild, we require ACCEPT_KEYWORDS='**'
 #KEYWORDS="~amd64 ~x86"
 KEYWORDS=""
@@ -34,7 +34,7 @@ src_prepare() {
 		die "You might need to emerge >=sys-fs/aufs-99999999::mv"
 	}
 	l="s|/usr/lib|$(get_libdir)|"
-	sed -i -e "1iCFLAGS += -I./local_kernel" -e "${l}" Makefile || \
+	sed -i -e "1iCFLAGS += -I./local_kernel -include linux/compiler.h" -e "${l}" Makefile || \
 		die "Patching Makefile failed"
 	for i in lib*/Makefile
 	do	test -e "${i}" || continue

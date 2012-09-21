@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI=5
 EGIT_REPO_URI="http://git.c3sl.ufpr.br/pub/scm/aufs/aufs2-standalone.git"
 EGIT_PROJECT="aufs2.git"
 # BRANCH/COMMIT will be overridden in pkg_setup (according to kernel version)
@@ -17,7 +17,7 @@ HOMEPAGE="http://aufs.sourceforge.net/"
 SRC_URI=""
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/2"
 # Since this is a live ebuild with unstable versions in portage we require
 # that the user unmasks this ebuild with ACCEPT_KEYWORDS='**'
 #KEYWORDS="~amd64 ~x86"

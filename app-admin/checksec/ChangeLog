@@ -4,6 +4,9 @@
 
 *checksec-1.5 (12 Feb 2012)
 
+  21 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   12 May 2012; Martin Väth <martin@mvath.de>
   base->eutils
 

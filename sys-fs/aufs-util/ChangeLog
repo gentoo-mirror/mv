@@ -2,6 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5. Bump revision to force correct subslot.
+  include linux/compiler.h to fix compilation issues.
+
   12 May 2012; Martin Väth <martin@mvath.de>
   base->eutils
 

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI=5
 FROM_LANG="German"
 TO_LANG="English"
 DICT_PREFIX="dictd_www.freedict.de_"

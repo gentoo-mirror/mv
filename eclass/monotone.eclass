@@ -12,8 +12,6 @@
 # The monotone eclass provides functions to fetch software sources from
 # monotone repositories.
 
-DESCRIPTION="Based on the ${ECLASS} eclass"
-
 # @ECLASS-VARIABLE: EMTN_STORE_DIR
 # @DESCRIPTION:
 # monotone sources store directory. Users may override this in /etc/make.conf
@@ -124,7 +122,7 @@ monotone_fetch() {
 		einfo "Updating ${db} from remote ${repo_uri}"
 		eval "${EMTN_PULL_CMD}"
 	)
-	fi	|| die "Could not fetch/update ${db}"
+	fi || die "Could not fetch/update ${db}"
 	db_full="${EMTN_STORE_DIR}/${db}"
 	einfo "Copying database ${db_full} ..."
 	test -d "${S}" || mkdir -p -- "${S}" || die "mkdir ${S} failed"

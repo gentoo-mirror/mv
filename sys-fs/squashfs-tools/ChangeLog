@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   17 May 2012; Martin Väth <martin@mvath.de>
   Remove REQUIRED_USE; make gzip support mandatory (as it actually is)
 
