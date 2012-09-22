@@ -39,7 +39,7 @@ inherit eutils multilib
 
 case ${EAPI:-0} in
 [01234])
-	die "EAPI ${EAPI} no longer supported by mv_mozextension";;
+	die "EAPI ${EAPI} no longer supported by ${ECLASS}";;
 esac
 
 
