@@ -4,7 +4,10 @@
 
 *trickyfetch-7.1 (23 Aug 2012)
 
-  23 Auf 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
+  23 Aug 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 
 *trickyfetch-7.0 (16 Jun 2012)

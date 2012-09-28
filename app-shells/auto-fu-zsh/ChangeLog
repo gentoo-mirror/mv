@@ -4,6 +4,9 @@
 
 *auto-fu-zsh-0.0.1.12-r1 (16 Aug 2012)
 
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   16 Aug 2012; Martin Väth <martin@mvath.de>
   Make Ctrl-D return correctly (and optionally act as kill{-whole,}-line)
   Restore default color after accept-line; fix compatibility with earlier

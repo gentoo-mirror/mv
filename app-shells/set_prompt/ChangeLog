@@ -4,6 +4,9 @@
 
 *set_prompt-1.13 (02 Jun 2012)
 
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   04 Jun 2012; Martin Väth <martin@mvath.de>
   Fix description
 

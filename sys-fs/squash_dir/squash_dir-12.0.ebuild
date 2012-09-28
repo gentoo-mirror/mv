@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI=5
 RESTRICT="mirror"
 WANT_LIBTOOL=none
 inherit eutils autotools vcs-snapshot

@@ -4,6 +4,9 @@
 
 *archwrap-1.9 (08 May 2012)
 
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   12 May 2012; Martin Väth <martin@mvath.de>
   base->eutils
 

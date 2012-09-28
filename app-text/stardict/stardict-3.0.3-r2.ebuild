@@ -8,7 +8,7 @@
 
 # NOTE: Festival plugin crashes, bug 188684. Disable for now.
 
-EAPI=4
+EAPI=5
 
 GNOME2_LA_PUNT=yes
 GCONF_DEBUG=no

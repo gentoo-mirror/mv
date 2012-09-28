@@ -4,6 +4,9 @@
 
 *runtitle-2.2 (11 Sep 2012)
 
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   11 Sep 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Rename run->runner to avoid collision
   with gdb. Thanks to Massimo B. for pointing out this problem.

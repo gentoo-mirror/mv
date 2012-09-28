@@ -4,6 +4,9 @@
 
 *logclean-8.1 (31 May 2012)
 
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   31 May 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 

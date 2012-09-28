@@ -4,6 +4,9 @@
 
 *sudox-3.12 (14 Sep 2012)
 
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   14 Sep 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 

@@ -4,6 +4,9 @@
 
 *portage-bashrc-mv-11.4 (10 Sep 2012)
 
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   10 Sep 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Rely that gold linker is used with clang:
   Do not filter -flto for USE_NONGNU

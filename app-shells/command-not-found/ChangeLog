@@ -4,6 +4,9 @@
 
 *command-not-found-0.4.3-r1 (13 Aug 2012)
 
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   13 Aug 2012; Martin Väth <martin@mvath.de>
   Make /etc/profile.d/cnf.sh readable by dash and do not make it executable.
 

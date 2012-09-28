@@ -4,6 +4,9 @@
 
 *cpi-2.0 (01 Sep 2012)
 
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   01 Sep 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Support now also mvi
 

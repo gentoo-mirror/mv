@@ -4,6 +4,9 @@
 
 *zsh-syntax-highlighting-0.1.2 (17 Aug 2012)
 
+  28 Sep 2012; Martin Väth <martin@mvath.de>
+  Bump to EAPI=5
+
   18 Aug 2012; Martin Väth <martin@mvath.de>
   Add RESTRICT="mirror" for non-live ebuild
 
