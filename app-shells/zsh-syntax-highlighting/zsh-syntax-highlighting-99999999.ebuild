@@ -24,7 +24,7 @@ esac
 DESCRIPTION="Fish shell like syntax highlighting for zsh"
 HOMEPAGE="https://github.com/zsh-users/zsh-syntax-highlighting"
 
-LICENSE="as-is"
+LICENSE="HPND"
 SLOT="0"
 IUSE=""
 

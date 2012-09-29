@@ -12,7 +12,7 @@ SRC_URI="http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml -> cppli
 	http://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py -> cpplint-${PV}.py
 	http://google-styleguide.googlecode.com/svn/trunk/cpplint/README -> cpplint-${PV}.txt
 	emacs? ( http://google-styleguide.googlecode.com/svn/trunk/google-c-style.el -> cpplint-${PV}.el )"
-LICENSE="as-is"
+LICENSE="CCPL-Attribution-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="emacs"
