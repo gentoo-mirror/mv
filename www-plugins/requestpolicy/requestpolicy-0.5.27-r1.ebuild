@@ -6,7 +6,7 @@ EAPI=5
 inherit mv_mozextension
 RESTRICT="mirror"
 
-DESCRIPTION="Mozilla plugin: Restrict active contents like java/javascript/flash"
+DESCRIPTION="Mozilla plugin: Increases privacy and security by giving you control over cross-site requests"
 HOMEPAGE="https://www.requestpolicy.com/"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/9727/${P}-fx+sm.xpi"
 
