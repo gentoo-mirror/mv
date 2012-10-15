@@ -1,0 +1,11 @@
+--- Portage.pm
++++ Portage.pm
+@@ -137,6 +137,7 @@
+ }
+ 
+ sub read_make_conf() {
+	my %env = read_sh "/etc/make.conf";
++	merge (%env, read_sh('/etc/portage/make.conf'));
+ 	merge %make_conf_flags, %{$env{USE}} if exists $env{USE};
+ 	@portagedirs = $environment{PORTDIR};
+ 	push @portagedirs, split ' ', $environment{PORTDIR_OVERLAY} if defined $environment{PORTDIR_OVERLAY};

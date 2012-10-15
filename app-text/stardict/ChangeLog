@@ -15,5 +15,4 @@
   Inherit base. Add zlib compatibility patch from main tree.
 
   24 Jan 2012; Martin Väth <martin@mvath.de>
-  Copy from tree to make dependencies for dependencies for help optional.
-  Clean old ChangeLog
+  Copy from tree to make dependencies for help optional. Clean old ChangeLog.
