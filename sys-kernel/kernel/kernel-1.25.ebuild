@@ -27,4 +27,8 @@ src_prepare() {
 
 src_install() {
 	dobin "${PN}"
+	if use zsh-completion
+	then	insinto /usr/share/zsh/site-functions
+			doins _*
+	fi
 }
