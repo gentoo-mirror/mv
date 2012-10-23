@@ -18,5 +18,6 @@
 	<use>
 		<flag name="original-gentoo">Use the gentoo default for the LESS variable.</flag>
 		<flag name="less-select">Add the less-select feature (additional options and a binary helper).</flag>
+		<flag name="source">Install sources for keybindings (only useful with less-select).</flag>
 	</use>
 </pkgmetadata>

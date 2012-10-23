@@ -19,12 +19,18 @@ SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz
 LICENSE="|| ( GPL-3 BSD-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="+less-select pcre original-gentoo unicode"
+IUSE="+less-select pcre original-gentoo source unicode"
 
 DEPEND=">=app-misc/editor-wrapper-3
 	>=sys-libs/ncurses-5.2
 	pcre? ( dev-libs/libpcre )"
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	if use source && ! use less-select
+	then	ewarn 'ignoring USE=source without USE=less-select'
+	fi
+}
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -83,10 +89,11 @@ src_install() {
 	then	newdoc "${SELECTDIR}"/README README.less-select
 		dobin "${SELECTDIR}/bin/"*
 		insinto /etc/less
-		# The first is required for less-select, the others are optional
 		doins select-key.bin normal-key.bin
-		newins "${SELECTDIR}/keys/less-select-key.src" select-key.src
-		newins "${SELECTDIR}/keys/less-normal-key.src" normal-key.src
+		if use source
+		then	newins "${SELECTDIR}/keys/less-select-key.src" select-key.src
+			newins "${SELECTDIR}/keys/less-normal-key.src" normal-key.src
+		fi
 	fi
 }
 
