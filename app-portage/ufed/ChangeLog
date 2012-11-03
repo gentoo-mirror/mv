@@ -1,7 +1,0 @@
-# ChangeLog for app-portage/ufed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  15 Oct 2012; Martin Väth <martin@mvath.de>
-  Copy from tree to support make.{conf,profile} optionally also in /etc/portage
-  Clear old ChangeLog
