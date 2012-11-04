@@ -26,3 +26,8 @@ src_install() {
 	doins -r bashrc bashrc.d
 	docompress /etc/portage/bashrc.d/README
 }
+
+pkg_postinst() {
+	! test -d /var/cache/gpo || \
+		ewarn 'Obsolete /var/cache/gpo found. Please remove'
+}
