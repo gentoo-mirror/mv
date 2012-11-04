@@ -10,7 +10,7 @@ EGIT_BRANCH="aufs3.0"
 EGIT_COMMIT=${EGIT_BRANCH}
 EGIT_HAS_SUBMODULES=true
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit eutils git-2 linux-info eutils
+inherit eutils git-2 linux-info
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
