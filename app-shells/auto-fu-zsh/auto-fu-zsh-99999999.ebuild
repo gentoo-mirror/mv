@@ -9,6 +9,7 @@ pPN=${PN%-zsh}
 mPN="${pPN}.zsh"
 case ${PV} in
 99999999*)
+	LIVE=:
 	EGIT_REPO_URI="git://github.com/hchbaw/${mPN}.git"
 	EGIT_PROJECT="${PN}.git"
 	EGIT_BRANCH="pu"
@@ -18,6 +19,7 @@ case ${PV} in
 	SRC_URI=""
 	KEYWORDS="";;
 *)
+	LIVE=false
 	RESTRICT="mirror"
 	inherit vcs-snapshot
 	SRC_URI="http://github.com/hchbaw/${mPN}/tarball/v${PV} -> ${P}.tar.gz"
@@ -29,7 +31,6 @@ HOMEPAGE="https://github.com/hchbaw/auto-fu.zsh/"
 
 LICENSE="HPND"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="+compile +kill-line"
 
 DEPEND="compile? ( app-shells/zsh )"
@@ -79,16 +80,22 @@ src_prepare() {
 		umask 022
 		generate_example >"${S}"/zshrc-example
 	)
-	# Make Ctrl-D return correctly.
-	# In case of nonempty buffer act like kill-line or kill-whole-line.
-	if use kill-line
-	then	epatch "${FILESDIR}"/kill-line.patch
-	else	epatch "${FILESDIR}"/exit.patch
+	if ${LIVE}
+	then	if use kill-line
+		then	epatch "${FILESDIR}"/kill-line-live.patch
+		fi
+	else
+		# Make Ctrl-D return correctly.
+		# In case of nonempty buffer act like kill-line or kill-whole-line.
+		if use kill-line
+		then	epatch "${FILESDIR}"/kill-line.patch
+		else	epatch "${FILESDIR}"/exit.patch
+		fi
+		# Reset color with "return":
+		epatch "${FILESDIR}"/reset-color.patch
+		# Make it work with older zsh versions:
+		epatch "${FILESDIR}"/zsh-compatibility.patch
 	fi
-	# Reset color with "return":
-	epatch "${FILESDIR}"/reset-color.patch
-	# Make it work with older zsh versions:
-	epatch "${FILESDIR}"/zsh-compatibility.patch
 	epatch_user
 }
 
