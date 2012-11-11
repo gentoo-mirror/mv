@@ -46,8 +46,42 @@ media-video/video-mv:libav - Require libav (only very experimental support) inst
 media-video/video-mv:title - Support for statusline changes (requires app-shells/runtitle)
 net-misc/sshstart:keychain - Pull in keychain as dependency. Not required, but recommended for smoother operation.
 sys-apps/less:less-select - Add the less-select feature (additional options and a binary helper).
+sys-apps/less:lesspipe - Use sys-apps/lesspipe instead of Gentoo's default lesspipe.sh.
 sys-apps/less:original-gentoo - Use the gentoo default for the LESS variable.
 sys-apps/less:source - Install sources for keybindings (only useful with less-select).
+sys-apps/lesspipe:antiword - Support doc files with app-text/antiword; this overrides catdoc
+sys-apps/lesspipe:cabextract - Support cabextract files
+sys-apps/lesspipe:catdoc - Support doc files with app-text/catdoc; unused if antiword is set
+sys-apps/lesspipe:cpio - Support cpio files
+sys-apps/lesspipe:djvu - Support djvu files
+sys-apps/lesspipe:dpkg - Support Debian package files
+sys-apps/lesspipe:dvi2tty - Support dvi files with dev-tex/dvi2tty
+sys-apps/lesspipe:elinks - Support html files with www-client/elinks; ignored if html2text, links, or lynx is set; this overrides w3m
+sys-apps/lesspipe:fastjar - Support jar files with app-arch/fastjar
+sys-apps/lesspipe:ghostscript - Support ps files with app-text/ghostscript-gpl; ignored if pstotext is set
+sys-apps/lesspipe:gpg - Support gpg files
+sys-apps/lesspipe:groff - Support man and nroff files
+sys-apps/lesspipe:html2text - Support html files with app-text/html2text; this overrides links, lynx, elinks, w3m
+sys-apps/lesspipe:id3v2 - Support mp3 files with media-sound/id3v2; this overrides mp3info
+sys-apps/lesspipe:image - Support image/jpg files
+sys-apps/lesspipe:isoinfo - Support CD/DVD-iso files
+sys-apps/lesspipe:libplist - Support Apple Property List files
+sys-apps/lesspipe:links - Support html files with www-client/links; ignored if html2text is set; this overrides lynx, elinks, w3m
+sys-apps/lesspipe:lynx - Support html files with www-client/lynx; ignored if html2text or links is set; this overrides elinks, w3m
+sys-apps/lesspipe:lzip - Support lzip files
+sys-apps/lesspipe:mp3info - Support mp3 files with media-sound/mp3info; unused if id3v2 is set
+sys-apps/lesspipe:ooffice - Support OpenOffice files
+sys-apps/lesspipe:p7zip - Support p7zip files
+sys-apps/lesspipe:pdf - Support pdf files
+sys-apps/lesspipe:pstotext - Support ps files with app-text/pstotext; this overrides ghostscript
+sys-apps/lesspipe:rar - Support rar files with app-arch/rar; unused if unrar is set
+sys-apps/lesspipe:rpm - Support rpm files with app-arch/rpm or rpm5; ignored if rpm2targz is set
+sys-apps/lesspipe:rpm2targz - Support rpm files with app-arch/rpm2targz; this overrides rpm
+sys-apps/lesspipe:unrar - Support rar files with app-arch/unrar; this overrides rar
+sys-apps/lesspipe:unrtf - Support rtf files with app-text/unrtf
+sys-apps/lesspipe:unzip - Support zip files with app-arch/unzip
+sys-apps/lesspipe:w3m - Support html files with www-client/w3m; ignored if html2text, links, lynx, or elinks is set
+sys-apps/lesspipe:xlhtml - Support Excel and Powerpoint files with app-arch/xlhtml
 sys-apps/starter:title - Support for statusline changes (requires app-shells/runtitle)
 sys-fs/aufs:all-patches - Apply all patches - also those which do not start with aufs
 sys-fs/aufs:kernel-patch - Apply the aufs kernel patches instead of just copying them
