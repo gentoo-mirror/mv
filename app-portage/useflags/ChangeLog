@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*useflags-2.9 (11 Nov 2012)
+
+  11 Nov 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+
 *useflags-2.7 (15 Oct 2012)
 
   15 Oct 2012; Martin Väth <martin@mvath.de>
