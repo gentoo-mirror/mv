@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="readonly +title zsh-completion"
 
 RDEPEND="sys-fs/squashfs-tools
-	title? ( >=app-shells/runtitle-2.0 )
+	title? ( >=app-shells/runtitle-2.3[zsh-completion?] )
 	!readonly? ( || (
 		sys-fs/aufs
 		sys-fs/aufs3

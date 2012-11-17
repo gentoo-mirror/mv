@@ -44,7 +44,7 @@ generate_example() {
 
 autoload -Uz compinit is-at-least
 compinit -D -u
-zstyle ':completion:*' completer _oldlist _complete
+zstyle ':completion:*' completer _complete
 zstyle ':completion:*' list-colors \${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu select=1 # interactive
 zstyle ':completion:*' accept-exact-dirs true

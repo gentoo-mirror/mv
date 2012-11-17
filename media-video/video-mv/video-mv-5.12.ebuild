@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="libav +title zsh-completion"
 RDEPEND="app-shells/push
-	title? ( >=app-shells/runtitle-2.0 )
+	title? ( >=app-shells/runtitle-2.3[zsh-completion?] )
 	!libav? ( media-video/mplayer )
 	libav? ( media-video/libav )"
 DEPEND=""
@@ -35,5 +35,9 @@ src_install() {
 	done
 	insinto /etc
 	doins etc/*
+	if use zsh-completion
+	then	insinto /usr/share/zsh/site-functions
+			doins zsh/*
+	fi
 	dodoc README
 }

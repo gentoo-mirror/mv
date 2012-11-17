@@ -4,6 +4,9 @@
 
 *auto-fu-zsh-99999999 (04 Nov 2012)
 
+  17 Nov 2012; Martin Väth <martin@mvath.de>
+  Remove _oldlist completer from defaults
+
   04 Nov 2012; Martin Väth <martin@mvath.de>
   Provide git version which works nicely with zsh-syntax-highlighting
 
