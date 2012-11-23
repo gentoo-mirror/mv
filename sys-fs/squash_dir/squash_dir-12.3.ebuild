@@ -14,18 +14,18 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="readonly +title zsh-completion"
+IUSE="aufs overlayfs +title unionfs-fuse zsh-completion"
 
 RDEPEND="sys-fs/squashfs-tools
 	title? ( >=app-shells/runtitle-2.3[zsh-completion?] )
-	!readonly? ( || (
-		sys-fs/aufs
-		sys-fs/aufs3
-		sys-fs/aufs2
-		sys-fs/unionfs-fuse
-		sys-fs/funionfs
-		sys-fs/unionfs
-	) )"
+	aufs? (
+		|| (
+			sys-fs/aufs
+			sys-fs/aufs2
+			sys-fs/aufs3
+		)
+	)
+	unionfs-fuse? ( sys-fs/unionfs-fuse )"
 DEPEND=">=sys-devel/autoconf-2.65"
 
 src_prepare() {
@@ -34,8 +34,12 @@ src_prepare() {
 }
 
 src_configure() {
+	local order=
+	use unionfs-fuse && order=unionfs-fuse
+	use aufs && order=aufs
+	use overlayfs && order=overlayfs
 	econf --docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		"$(use_with zsh-completion)"
+		"$(use_with zsh-completion)" ${order:+"--with-first-order=${order}"}
 }
 
 check_for_obsolete() {
