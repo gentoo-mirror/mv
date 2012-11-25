@@ -13,11 +13,17 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+eix zsh-completion"
+IUSE="+eix getdelta zsh-completion"
 
-RDEPEND="eix? ( app-portage/eix )"
+RDEPEND="eix? ( app-portage/eix )
+getdelta? ( app-portage/getdelta )"
 
 src_prepare() {
+	local use_getdelta=false
+	use getdelta && use_getdelta=:
+	sed -i -e \
+		"s/^trickyfetch_getdelta=.*/trickyfetch_getdelta=${use_getdelta}/" \
+		-- "${S}/bin/trickyfetch"
 	epatch_user
 }
 

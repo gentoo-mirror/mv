@@ -29,10 +29,22 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	if has_version "<${CATEGORY}/${PN}-0.25.3"; then
-		local eixcache="${EROOT}/var/cache/${PN}"
-		! test -f "${eixcache}" || rm -f -- "${eixcache}"
-	fi
+	local i j eixcache
+	for i in ${REPLACING_VERSIONS[*]}
+	do	case ${i} in
+		0.*)
+			j=${i#0.}
+			j=${j%%.*}
+			[ "${j}" -gt 25 ] && continue
+			[ "${j}" -eq 25 ] && {
+				j=${i#0.25.}
+				[ "${j%%.*}" -ge 3 ] && continue
+			}
+			eixcache=${EROOT}/var/cache/${PN}
+			test -f "${eixcache}" && rm -f -- "${eixcache}"
+			break;;
+		esac
+	done
 }
 
 src_prepare() {
