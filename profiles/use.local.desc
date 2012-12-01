@@ -12,11 +12,7 @@ app-portage/eix:security - This adds some checks which can prevent certain explo
 app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to actually use it you need additional configuration of portage and eix
 app-portage/eix:strong-optimization - Adds several more agressive CXXFLAGS/LDFLAGS for optimization like graphite (if available). May cause trouble with some buggy compiler versions. Absense of this USE flag does not strip user's *FLAGS
 app-portage/eix:tools - Create separate binary for script helper tools; useful if they are called extremely often
-app-portage/logclean:eix - Pull in eix for quicker execution
-app-portage/portage-bashrc-mv:eix - Pull in >=app-portage/eix-0.25.6 for proper mask handling
-app-portage/trickyfetch:eix - Pull in eix for quicker execution
 app-portage/trickyfetch:getdelta - Support getdelta
-app-portage/useflags:eix - Pull in eix for quicker execution
 app-shells/auto-fu-zsh:compile - Byte-compile to speed up
 app-shells/auto-fu-zsh:kill-line - Make Ctrl-D work correctly and in case of nonempty buffer work as kill-line resp. kill-whole-line
 app-shells/zsh:completion_AIX - install completions for AIX
@@ -92,5 +88,4 @@ sys-fs/squash_dir:title - Support for statusline changes (requires app-shells/ru
 sys-fs/squash_dir:unionfs-fuse - Prefer unionfs-fuse
 sys-fs/squashfs-tools:progress-redirect - Redirect printing of progress bar to stderr. This gives a nicer output if used from scripts like sys-fs/squash_dir
 sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
-sys-kernel/kernel:eix - Pull in eix for quicker execution
 sys-kernel/kernel:title - Support for statusline changes (requires app-shells/runtitle)

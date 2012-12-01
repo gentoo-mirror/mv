@@ -13,10 +13,9 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+eix getdelta zsh-completion"
+IUSE="getdelta zsh-completion"
 
-RDEPEND="eix? ( app-portage/eix )
-getdelta? ( app-portage/getdelta )"
+RDEPEND="getdelta? ( app-portage/getdelta )"
 
 src_prepare() {
 	local use_getdelta=false
@@ -34,4 +33,9 @@ src_install() {
 			doins zsh/_*
 	fi
 	dodoc README
+}
+
+pkg_postinst() {
+	has_version app-portage/eix || \
+		elog "Installing app-portage/eix will speed up execution time"
 }

@@ -13,9 +13,7 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+eix"
-
-RDEPEND="eix? ( >=app-portage/eix-0.25.6 )"
+IUSE=""
 
 src_prepare() {
 	epatch_user
@@ -28,6 +26,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	has_version app-portage/eix || \
+		elog "Installing app-portage/eix will improve mask handling"
 	! test -d /var/cache/gpo || \
 		ewarn 'Obsolete /var/cache/gpo found. Please remove'
 }

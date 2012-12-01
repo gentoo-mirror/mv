@@ -4,6 +4,9 @@
 
 *useflags-2.9 (11 Nov 2012)
 
+  01 Dev 2012; Martin Väth <martin@mvath.de>
+  Remove USE=eix; only log recommendation if appropriate
+
   11 Nov 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 

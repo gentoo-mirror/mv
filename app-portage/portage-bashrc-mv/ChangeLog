@@ -4,6 +4,9 @@
 
 *portage-bashrc-mv-12.0 (04 Nov 2012)
 
+  01 Dev 2012; Martin Väth <martin@mvath.de>
+  Remove USE=eix; only log recommendation if appropriate
+
   04 Nov 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Globally rename GPO->PGO, gpo->pgo
 

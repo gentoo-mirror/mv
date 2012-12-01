@@ -4,6 +4,9 @@
 
 *trickyfetch-7.3 (25 Nov 2012)
 
+  01 Dev 2012; Martin Väth <martin@mvath.de>
+  Remove USE=eix; only log recommendation if appropriate
+
   25 Nov 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Make getdelta support optional
 

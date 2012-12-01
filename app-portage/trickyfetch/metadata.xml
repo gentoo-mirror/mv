@@ -14,7 +14,6 @@
 		<remote-id type="github">vaeth/trickyfetch</remote-id>
 	</upstream>
 	<use>
-		<flag name="eix">Pull in eix for quicker execution</flag>
 		<flag name="getdelta">Support getdelta</flag>
 	</use>
 </pkgmetadata>
