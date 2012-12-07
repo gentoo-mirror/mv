@@ -9,7 +9,7 @@ RESTRICT="mirror"
 mPN="${PN}_for_firefox-${PV}"
 DESCRIPTION="Firefox plugin: enable duckduckgo search engine"
 HOMEPAGE="http://addons.mozilla.org/firefox/addon/xclear/"
-SRC_URI="https://addons.mozilla.org/firefox/downloads/file/175018/${mPN}-fx.xpi"
+SRC_URI="https://addons.mozilla.org/firefox/downloads/file/179120/${mPN}-fx.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"

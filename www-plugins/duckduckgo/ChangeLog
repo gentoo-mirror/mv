@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*duckduckgo-0.2.8-r1 (07 Dec 2010)
+
+  07 Dec 2012; Martin Väth <martin@mvath.de>
+  Fix download and rename ebuild to force a true bump
+
 *duckduckgo-0.2.8 (23 Nov 2010)
 
   23 Nov 2012; Martin Väth <martin@mvath.de>
