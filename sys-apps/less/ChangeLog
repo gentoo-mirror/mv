@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*less-457.ebuild (10 Dec 2012)
+
+  10 Dec 2012; Martin Väth <martin@mvath.de>
+  Bump less version.
+
 *less-456.ebuild (09 Nov 2012)
 
   09 Nov 2012; Martin Väth <martin@mvath.de>
