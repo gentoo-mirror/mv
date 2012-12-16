@@ -36,27 +36,28 @@ src_configure() {
 		"$(use_with zsh-completion)" ${order:+"--with-first-order=${order}"}
 }
 
+linux_config_missing() {
+	! linux_config_exists || ! linux_chkconfig_present "${1}"
+}
+
 pkg_postinst() {
-	local CONFIG_CHECK fs=overlayfs sep=:
+	local fs=aufs
 	use unionfs-fuse && fs=unionfs-fuse
 	use aufs && fs=aufs
 	use overlayfs && fs=overlayfs
 	CONFIG_CHECK="~SQUASHFS"
 	case ${fs} in
 	overlayfs)
-		CONFIG_CHECK="${CONFIG_CHECK} ~OVERLAYFS_FS"
-		elog "To use ${PN} activate overlayfs in your kernel."
-		elog "Unless you use a patched kernel, apply e.g. top patches from some head of"
-		elog "http://git.kernel.org/?p=linux/kernel/git/mszeredi/vfs.git;a=summary"
-		sep=elog;;
+		if linux_config_missing 'OVERLAYFS_FS'
+		then	ewarn "To use ${PN} activate overlayfs in your kernel."
+			ewarn "Unless you use a patched kernel, apply e.g. top patches from some head of"
+			ewarn "http://git.kernel.org/?p=linux/kernel/git/mszeredi/vfs.git;a=summary"
+		fi;;
 	aufs)
-		if ! has_version sys-fs/aufs3 && ! has_version sys-fs/aufs2
-		then	CONFIG_CHECK="${CONFIG_CHECK} ~AUFS_FS"
-			elog "To use ${PN} activate aufs in your kernel. Use e.g. sys-fs/aufs*"
-			sep=elog
+		if ! has_version sys-fs/aufs3 && ! has_version sys-fs/aufs2 && linux_config_missing 'AUFS_FS'
+		then	ewarn "To use ${PN} activate aufs in your kernel. Use e.g. sys-fs/aufs*"
 		fi;;
 	esac
-	check_extra_config
 	if ! has_version sys-fs/squashfs-tools[progress-redirect]
 	then	${sep}
 		elog "For better output of ${PN}, it is recommended to install"

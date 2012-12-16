@@ -3,13 +3,14 @@
 # $Header: $
 
 EAPI=5
+MV_MOZ_MOZILLAS="firefox"
 inherit mv_mozextension
 RESTRICT="mirror"
 
 mPN="${PN}_for_firefox-${PV}"
 DESCRIPTION="Firefox plugin: enable duckduckgo search engine"
 HOMEPAGE="http://addons.mozilla.org/firefox/addon/xclear/"
-SRC_URI="https://addons.mozilla.org/firefox/downloads/file/179120/${mPN}-fx.xpi"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/385621/${mPN}-fx.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"

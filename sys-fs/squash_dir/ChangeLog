@@ -2,11 +2,19 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*squash_dir-12.3 (23 Nov 2012)
+*squash_dir-12.5 (16 Dec 2012)
+
+  16 Dec 2012; Martin Väth <martin@mvath.de>
+  Version bump. ewarn instead of elog, but only if necessary.
+  Follow upstream default order.
+
+*squash_dir-12.4 (01 Dec 2012)
 
   01 Dec 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Provide USE for ORDER default
   Print logs instead of making hard dependencies
+
+*squash_dir-12.3 (23 Nov 2012)
 
   23 Nov 2012; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild. Provide USE for ORDER default

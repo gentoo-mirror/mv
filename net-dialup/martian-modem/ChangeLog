@@ -1,6 +1,9 @@
-# ChangeLog for net-dialup/martian
+# ChangeLog for net-dialup/martian-modem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  16 Dec 2012; Martin Väth <martin@mvath.de>
+  Use from main Gentoo tree but keep grsecurity patch.
 
   21 Sep 2012; Martin Väth <martin@mvath.de>
   Bump to EAPI=5
