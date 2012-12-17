@@ -36,7 +36,8 @@ fill_my_patchlist() {
 	my_patchlist=()
 	for i
 	do	case ${i} in
-		*.patch|*.diff)	! test -f "${i}" || my_patchlist+=("${i}");;
+		*.patch|*.diff)
+			! test -f "${i}" || my_patchlist+=("${i}");;
 		esac
 	done
 }
@@ -67,8 +68,10 @@ apply_my_patchlist() {
 	set --
 	for i in "${my_patchlist[@]}"
 	do	if use all-patches || case "${i}" in
-		aufs*)	:;;
-		*)	false;;
+		aufs*)
+			:;;
+		*)
+			false;;
 		esac
 		then	apply_my_patch ${r} "${i}" || set -- "${@}" "${i}"
 		else	einfo "Kernel patch ${i} - skipping as all-patches is not set"
@@ -81,7 +84,6 @@ apply_my_patchlist() {
 }
 
 pkg_setup() {
-	local msg
 	linux-info_pkg_setup
 
 	# kernel version check
@@ -98,17 +100,23 @@ pkg_setup() {
 		then	[ -n "${KV_PATCH}" ] && EGIT_BRANCH="aufs2.2-${KV_PATCH}"
 		else	[ -n "${KV_MINOR}" ] && EGIT_BRANCH="aufs${KV_MAJOR}.${KV_MINOR}"
 		fi
+		case ${EGIT_BRANCH} in
+		aufs3.7)
+			EGIT_BRANCH="aufs3.x-rcN";;
+		esac
 	fi
 	elog
 	elog "Using aufs branch: ${EGIT_BRANCH}"
 	elog "If this guess for the branch is wrong, set AUFSBRANCH."
 	elog "For example, to use the aufs3.0 branch for kernel version 3.0, use:"
 	elog "	AUFSBRANCH=aufs3.0 emerge -1 aufs"
-	msg=
-	if [ -n "${msg}" ]
-	then
+	elog
+	elog "To find out names of testing branches you might want to use"
+	elog "( cd ${EGIT_DIR} && git log --decorate --graph --all --full-history )"
+	if [ -n "${EVCS_OFFLINE}" ]
+	then	elog
 		elog "Note that it might be necessary in addition to fetch the newest aufs:"
-		elog "Set ${msg# } and be sure to be online during emerge."
+		elog "Set EVCS_OFFLINE='' in the environment and be online during emerge."
 	fi
 	elog
 	EGIT_COMMIT=${EGIT_BRANCH}
@@ -124,14 +132,17 @@ pkg_setup() {
 src_prepare() {
 	local i j w v newest all
 	epatch_user
-	all="2.2.0  2.2.1  2.2.2  2.2.2.r1"
+	all="2.2.0 2.2.1 2.2.2 2.2.2.r1 2.9.1"
 	newest=${all##* }
 	v=
 	for i in ${GRSECURITYPATCHVER-+}
 	do	case ${i} in
-		'+')	j=${newest};;
-		'*')	j=${all};;
-		*)	w=:
+		'+')
+			j=${newest};;
+		'*')
+			j=${all};;
+		*)
+			w=:
 			for j in ${all}
 			do	[ "${i}" = "${j}" ] && w=false && continue
 			done

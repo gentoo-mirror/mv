@@ -2,6 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Dec 2012; Martin Väth <martin@mvath.de>
+  Add patch for hardened-sources-3.7.0. Improve documentation.
+  Special case of kernel-3.7 branch name.
+
   21 Sep 2012; Martin Väth <martin@mvath.de>
   Bump to EAPI=5. Bump revision to force correct subslot
 

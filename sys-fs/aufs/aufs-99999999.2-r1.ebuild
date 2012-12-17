@@ -36,7 +36,8 @@ fill_my_patchlist() {
 	my_patchlist=()
 	for i
 	do	case ${i} in
-		*.patch|*.diff)	! test -f "${i}" || my_patchlist+=("${i}");;
+		*.patch|*.diff)
+			! test -f "${i}" || my_patchlist+=("${i}");;
 		esac
 	done
 }
@@ -67,8 +68,10 @@ apply_my_patchlist() {
 	set --
 	for i in "${my_patchlist[@]}"
 	do	if use all-patches || case ${i} in
-		aufs*)	:;;
-		*)	false;;
+		aufs*)
+			:;;
+		*)
+			false;;
 		esac
 		then	apply_my_patch ${r} "${i}" || set -- "${@}" "${i}"
 		else	einfo "Kernel patch ${i} - skipping as all-patches is not set"
@@ -126,14 +129,17 @@ pkg_setup() {
 src_prepare() {
 	local i j w v newest all
 	epatch_user
-	all="2.2.0  2.2.1  2.2.2  2.2.2.r1"
+	all="2.9.1 2.2.0 2.2.1 2.2.2 2.2.2.r1"
 	newest=${all##* }
 	v=
 	for i in ${GRSECURITYPATCHVER-+}
 	do	case ${i} in
-		'+')	j=${newest};;
-		'*')	j=${all};;
-		*)	w=:
+		'+')
+			j=${newest};;
+		'*')
+			j=${all};;
+		*)
+			w=:
 			for j in ${all}
 			do	[ "${i}" = "${j}" ] && w=false && continue
 			done
