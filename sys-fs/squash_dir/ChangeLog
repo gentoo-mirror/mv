@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squash_dir-12.6 (19 Dec 2012)
+
+  19 Dec 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
+
 *squash_dir-12.5 (16 Dec 2012)
 
   16 Dec 2012; Martin Väth <martin@mvath.de>

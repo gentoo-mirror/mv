@@ -15,6 +15,7 @@ SRC_URI="http://linmodems.technion.ac.il/packages/ltmodem/kernel-2.6/martian/${M
 LICENSE="GPL-2 AgereSystems-WinModem"
 KEYWORDS="~amd64 ~x86 -*"
 IUSE=""
+SLOT=0
 
 DEPEND="!net-dialup/ltmodem"
 RDEPEND="${DEPEND}"
