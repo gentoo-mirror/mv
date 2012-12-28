@@ -2,7 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*useflags-2.9 (11 Nov 2012)
+*useflags-3.0 (28 Dec 2012)
+
+  28 Dev 2012; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild. Recommend >=app-portage/eix-0.27.7
+
+*useflags-2.8 (11 Nov 2012)
 
   01 Dev 2012; Martin Väth <martin@mvath.de>
   Remove USE=eix; only log recommendation if appropriate

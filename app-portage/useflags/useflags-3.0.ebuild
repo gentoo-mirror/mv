@@ -31,6 +31,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	has_version app-portage/eix || \
-		elog "Installing app-portage/eix will speed up execution time"
+	if ! has_version 'app-portage/eix'
+	then	elog "Install app-portage/eix for faster execution time."
+		elog "With >=app-portage/eix-0.27.7 also security is increased."
+	elif has_version '<app-portage/eix-0.27.7'
+	then	elog "Upgrade to >=app-portage/eix-0.27.7 to increase security."
+	fi
 }
