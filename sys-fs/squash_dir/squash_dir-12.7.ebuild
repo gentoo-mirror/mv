@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -23,6 +23,11 @@ RDEPEND="sys-fs/squashfs-tools
 DEPEND=">=sys-devel/autoconf-2.65"
 
 src_prepare() {
+	if [ -n "${EPREFIX%/}" ]
+	then	sed -i \
+		-e "s\"'[^']*/etc/conf[.]d/${PN}'\"'${EPREFIX%/}/etc/conf.d/${PN}'\"g" \
+			"init.d/${PN}"
+	fi
 	epatch_user
 	eautoreconf
 }
@@ -58,9 +63,17 @@ pkg_postinst() {
 		then	ewarn "To use ${PN} activate aufs in your kernel. Use e.g. sys-fs/aufs*"
 		fi;;
 	esac
+	local i ok=false
+	for i in ${REPLACING_VERSIONS[*]}
+	do	case ${i} in
+		[0-9].*|1[01].*|12.[0-6])	continue;;
+		esac
+		ok=:
+		break
+	done
+	${ok} || elog "Please adopt ${EPREFIX}/etc/conf.d/${PN} to your needs"
 	if ! has_version sys-fs/squashfs-tools[progress-redirect]
-	then	${sep}
-		elog "For better output of ${PN}, it is recommended to install"
+	then	elog "For better output of ${PN}, it is recommended to install"
 		elog "sys-fs/squashfs-tools from the mv overlay with USE=progress-redirect"
 	fi
 }
