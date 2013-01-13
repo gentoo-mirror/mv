@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -71,13 +71,15 @@ PDEPEND="
 "
 
 src_prepare() {
-	local i f
+	local i
 	# fix zshall problem with soelim
 	ln -s Doc man1
 	mv Doc/zshall.1 Doc/zshall.1.soelim
 	soelim Doc/zshall.1.soelim > Doc/zshall.1
 
 	epatch "${FILESDIR}/${PN}"-init.d-gentoo-r1.diff
+	cp -- "${FILESDIR}/_run-help" "${S}/Completion/Zsh/Command/_run-help" || \
+			die "cannot copy _run-help completion"
 
 	cp "${FILESDIR}"/zprofile-1 "${T}"/zprofile || die
 	eprefixify "${T}"/zprofile || die
@@ -160,9 +162,10 @@ generate_run_help() (
 	# Hence, we also need not declare any variables as local
 	mkdir run-help && cd run-help || die "cannot create run-help directory"
 	# We need GROFF_NO_SGR to produce "classical" formatting:
-	export GROFF_NO_SGR=''
+	export GROFF_NO_SGR=
+	export MANWIDTH=80
 	export LANG=C
-	unset MANPL LC_ALL
+	unset MANPL MANROFFSEQ LC_ALL
 	[ -z "${LC_CTYPE}" ] && export LC_CTYPE=en_US.utf8
 	ebegin "Generating files for run-help"
 	# It is necessary to be paranoid about the success of the following pipe,

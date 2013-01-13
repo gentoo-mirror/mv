@@ -1,0 +1,6 @@
+#compdef run-help
+local d expl
+[[ -d $HELPDIR ]] && {
+	d=($HELPDIR/*(:t))
+	(($#d)) && _wanted commands expl 'command' compadd -a d
+} || _man

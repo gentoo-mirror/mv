@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/zsh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*zsh-5.0.2-r1 (13 Jan 2013)
+
+  13 Jan 2012; Martin Väth <martin@mvath.de>
+  Fix run-help generation by forcing width 80. Install run-help completion.
 
 *zsh-5.0.2 (25 Dec 2012)
 
