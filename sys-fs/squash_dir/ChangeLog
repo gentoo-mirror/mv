@@ -4,6 +4,9 @@
 
 *squash_dir-12.8 (08 Jan 2013)
 
+  14 Jan 2013; Martin Väth <martin@mvath.de>
+  Improve messages and handling of REPLACING_VERSIONS
+
   08 Jan 2013; Martin Väth <martin@mvath.de>
   Version bump, remove old ebuild.
 

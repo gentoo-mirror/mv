@@ -50,7 +50,9 @@ pkg_postinst() {
 	use unionfs-fuse && fs=unionfs-fuse
 	use aufs && fs=aufs
 	use overlayfs && fs=overlayfs
-	CONFIG_CHECK="~SQUASHFS"
+	if linux_config_missing 'SQUASHFS'
+	then	ewarn "To use ${PN} activate squashfs in your kernel"
+	fi
 	case ${fs} in
 	overlayfs)
 		if linux_config_missing 'OVERLAYFS_FS'
@@ -64,7 +66,7 @@ pkg_postinst() {
 		fi;;
 	esac
 	local i ok=false
-	for i in ${REPLACING_VERSIONS[*]}
+	for i in ${REPLACING_VERSIONS}
 	do	case ${i} in
 		[0-9].*|1[01].*|12.[0-6])	continue;;
 		esac
