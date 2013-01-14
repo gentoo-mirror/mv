@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -29,22 +29,11 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	local i j eixcache
-	for i in ${REPLACING_VERSIONS[*]}
-	do	case ${i} in
-		0.*)
-			j=${i#0.}
-			j=${j%%.*}
-			[ "${j}" -gt 25 ] && continue
-			[ "${j}" -eq 25 ] && {
-				j=${i#0.25.}
-				[ "${j%%.*}" -ge 3 ] && continue
-			}
-			eixcache=${EROOT}/var/cache/${PN}
-			test -f "${eixcache}" && rm -f -- "${eixcache}"
-			break;;
-		esac
-	done
+	case " ${REPLACING_VERSIONS}" in
+	*\ 0.[0-9].*|*\ 0.1[0-9].*|*\ 0.2[0-4].*|*\ 0.25.0*)
+		local eixcache="${EROOT}/var/cache/${PN}"
+		test -f "${eixcache}" && rm -f -- "${eixcache}";;
+	esac
 }
 
 src_prepare() {
