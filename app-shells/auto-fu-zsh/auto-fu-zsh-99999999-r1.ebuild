@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -35,7 +35,7 @@ IUSE="+compile +kill-line"
 
 DEPEND="compile? ( app-shells/zsh )"
 
-DESTPATH="/usr/share/zsh/site-contrib/${pPN}"
+DESTPATH="/usr/share/zsh/site-contrib/${mPN}"
 
 generate_example() {
 	echo "# Put something like the following into your ~/.zshrc

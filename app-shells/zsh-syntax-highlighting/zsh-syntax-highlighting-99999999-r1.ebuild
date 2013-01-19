@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -37,14 +37,15 @@ src_prepare() {
 
 src_install() {
 	dodoc *.md
-	insinto /usr/share/zsh/site-contrib
+	insinto /usr/share/zsh/site-contrib/${PN}
 	doins *.zsh
 	doins -r highlighters
 }
 
 pkg_postinst() {
+	[ -n "${REPLACING_VERSIONS}" ] && return
 	elog "In order to use ${CATEGORY}/${PN} add"
-	elog ". /usr/share/zsh/site-contrib/zsh-syntax-highlighting.zsh"
+	elog ". /usr/share/zsh/site-contrib/${PN}/zsh-syntax-highlighting.zsh"
 	elog "at the end of your ~/.zshrc"
 	elog "For testing, you can also execute the above command in your zsh."
 }
