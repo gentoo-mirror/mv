@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,21 +13,18 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="getdelta zsh-completion"
-
-RDEPEND="getdelta? ( app-portage/getdelta )"
+IUSE="zsh-completion"
 
 src_prepare() {
-	local use_getdelta=false
-	use getdelta && use_getdelta=:
-	sed -i -e \
-		"s/^trickyfetch_getdelta=.*/trickyfetch_getdelta=${use_getdelta}/" \
+	sed -i -e "s'\\(PATH=.\\)/etc'\\1${EPREFIX%/}/etc'" \
 		-- "${S}/bin/trickyfetch"
 	epatch_user
 }
 
 src_install() {
 	dobin bin/*
+	insinto /etc
+	doins etc/*
 	if use zsh-completion
 	then	insinto /usr/share/zsh/site-functions
 			doins zsh/_*
@@ -36,6 +33,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	case " ${REPLACING_VERSIONS:-0.}" in
+	' '[0-7].*)
+		elog "Please adapt /etc/trickyfetch.conf to your needs";;
+	esac
 	has_version app-portage/eix || \
 		elog "Installing app-portage/eix will speed up execution time"
 }

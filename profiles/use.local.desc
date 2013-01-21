@@ -12,7 +12,6 @@ app-portage/eix:security - This adds some checks which can prevent certain explo
 app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to actually use it you need additional configuration of portage and eix
 app-portage/eix:strong-optimization - Adds several more agressive CXXFLAGS/LDFLAGS for optimization like graphite (if available). May cause trouble with some buggy compiler versions. Absense of this USE flag does not strip user's *FLAGS
 app-portage/eix:tools - Create separate binary for script helper tools; useful if they are called extremely often
-app-portage/trickyfetch:getdelta - Support getdelta
 app-shells/auto-fu-zsh:compile - Byte-compile to speed up
 app-shells/auto-fu-zsh:kill-line - Make Ctrl-D work correctly and in case of nonempty buffer work as kill-line resp. kill-whole-line
 app-shells/zsh:completion_AIX - install completions for AIX
