@@ -1,1 +1,0 @@
-auto-fu-zsh-99999999-r1.ebuild

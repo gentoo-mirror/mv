@@ -31,7 +31,7 @@ HOMEPAGE="https://github.com/hchbaw/auto-fu.zsh/"
 
 LICENSE="HPND"
 SLOT="0"
-IUSE="+compile +kill-line"
+IUSE="+compile"
 
 DEPEND="compile? ( app-shells/zsh )"
 
@@ -72,7 +72,31 @@ zstyle ':auto-fu:var' postdisplay # \$'\\n-azfu-'
 #zstyle ':auto-fu:var' disable magic-space
 zle-line-init() auto-fu-init
 zle -N zle-line-init
-zle -N zle-keymap-select auto-fu-zle-keymap-select"
+zle -N zle-keymap-select auto-fu-zle-keymap-select
+
+# Starting a line with a space or tab or quoting the first word
+# or escaping a word should deactivate auto-fu for that line/word.
+# This is useful e.g. if auto-fu is too slow for you in some cases.
+zstyle ':auto-fu:var' autoable-function/skiplines '[[:blank:]\\\\\"'\'']*'
+zstyle ':auto-fu:var' autoable-function/skipwords '[\\\\]*'
+
+# Let Ctrl-d successively remove tail of line, whole line, and exit
+kill-line-maybe() {
+	if ((\$#BUFFER > CURSOR))
+	then	zle kill-line
+	else	zle kill-whole-line
+	fi
+}
+zle -N kill-line-maybe
+bindkey '\C-d' kill-line-maybe
+
+# Keep Ctrl-d behavior also when auto-fu is active
+afu+orf-ignoreeof-deletechar-list() {
+	afu-eof-maybe afu-ignore-eof zle kill-line-maybe
+}
+afu+orf-exit-deletechar-list() {
+	afu-eof-maybe exit zle kill-line-maybe
+}"
 }
 
 src_prepare() {
@@ -80,17 +104,10 @@ src_prepare() {
 		umask 022
 		generate_example >"${S}"/zshrc-example
 	)
-	if ${LIVE}
-	then	if use kill-line
-		then	epatch "${FILESDIR}"/kill-line-live.patch
-		fi
-	else
+	if ! ${LIVE}
+	then
 		# Make Ctrl-D return correctly.
-		# In case of nonempty buffer act like kill-line or kill-whole-line.
-		if use kill-line
-		then	epatch "${FILESDIR}"/kill-line.patch
-		else	epatch "${FILESDIR}"/exit.patch
-		fi
+		epatch "${FILESDIR}"/exit.patch
 		# Reset color with "return":
 		epatch "${FILESDIR}"/reset-color.patch
 		# Make it work with older zsh versions:

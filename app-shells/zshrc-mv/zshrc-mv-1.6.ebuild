@@ -14,6 +14,7 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RDEPEND="!app-shells/auto-fu-zsh[kill-line(-)]"
 
 src_prepare() {
 	epatch_user

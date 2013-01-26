@@ -13,7 +13,6 @@ app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to act
 app-portage/eix:strong-optimization - Adds several more agressive CXXFLAGS/LDFLAGS for optimization like graphite (if available). May cause trouble with some buggy compiler versions. Absense of this USE flag does not strip user's *FLAGS
 app-portage/eix:tools - Create separate binary for script helper tools; useful if they are called extremely often
 app-shells/auto-fu-zsh:compile - Byte-compile to speed up
-app-shells/auto-fu-zsh:kill-line - Make Ctrl-D work correctly and in case of nonempty buffer work as kill-line resp. kill-whole-line
 app-shells/zsh:completion_AIX - install completions for AIX
 app-shells/zsh:completion_BSD - install completions for BSD
 app-shells/zsh:completion_Cygwin - install completions for Cygwin
