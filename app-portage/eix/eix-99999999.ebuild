@@ -19,7 +19,7 @@ PROPERTIES="live"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="clang debug +dep doc nls optimization security strong-optimization sqlite tools zsh-completion"
+IUSE="clang debug +dep doc nls optimization security strong-optimization strong-security sqlite tools zsh-completion"
 
 RDEPEND="app-shells/push
 	sqlite? ( >=dev-db/sqlite-3 )
@@ -47,6 +47,7 @@ src_configure() {
 		$(use_with zsh-completion) \
 		$(use_enable nls) $(use_enable tools separate-tools) \
 		$(use_enable security) $(use_enable optimization) \
+		$(use_enable strong-security) \
 		$(use_enable strong-optimization) $(use_enable debug debugging) \
 		$(use_with prefix always-accept-keywords) \
 		$(use_with dep dep-default) \
