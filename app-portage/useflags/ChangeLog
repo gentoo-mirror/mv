@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/useflags
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*useflags-3.1 (28 Jan 2013)
+
+  28 Jan 2013; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild.
 
 *useflags-3.0 (28 Dec 2012)
 

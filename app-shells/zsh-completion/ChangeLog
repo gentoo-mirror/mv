@@ -1,0 +1,8 @@
+# ChangeLog for app-shells/zsh-completion
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*zshrc-0.8.0, zshrc-99999999 (28 Jan 2013)
+
+  28 Jan 2013; Martin Väth <martin@mvath.de>
+  New ebuild from scratch.

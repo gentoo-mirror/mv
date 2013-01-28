@@ -27,6 +27,28 @@ app-shells/zsh:completion_Unix - install completions for Unix
 app-shells/zsh:completion_X - install completions for X
 app-shells/zsh:completion_openSUSE - install completions for openSUSE
 app-shells/zsh:run-help - Create and install data for run-help command
+app-shells/zsh-completion:completion_ack - zsh completion for sys-apps/ack
+app-shells/zsh-completion:completion_android - Android-related zsh completions
+app-shells/zsh-completion:completion_bumblebee - zsh completion for x11-misc/bumblebee
+app-shells/zsh-completion:completion_database - database-related zsh completions
+app-shells/zsh-completion:completion_dev - zsh completions for development (build systems, editors, web)
+app-shells/zsh-completion:completion_disk - zsh completions for disk tools
+app-shells/zsh-completion:completion_distribute - zsh completions for tools for distributing tasks to various machines
+app-shells/zsh-completion:completion_gentoo - Gentoo-related zsh completions
+app-shells/zsh-completion:completion_git - zsh completions for special git tools
+app-shells/zsh-completion:completion_google - zsh completions for googlecl
+app-shells/zsh-completion:completion_haskel - zsh completions for Haskell tools
+app-shells/zsh-completion:completion_managers - zsh completions for various filemanagers (not portage)
+app-shells/zsh-completion:completion_net - zsh completions for various net-related tools
+app-shells/zsh-completion:completion_perf - zsh completion for linux kernel's perf tool
+app-shells/zsh-completion:completion_pip - zsh completion for app-misc/pip
+app-shells/zsh-completion:completion_python - zsh completion for python development tools
+app-shells/zsh-completion:completion_ruby - zsh completion for ruby tools and tools in ruby
+app-shells/zsh-completion:completion_session - zsh completion for session-handling frontends
+app-shells/zsh-completion:completion_showoff - zsh completion for showoff
+app-shells/zsh-completion:completion_subtitle - zsh completion for subtitle tools
+app-shells/zsh-completion:completion_virtualbox - zsh completion for virtualbox
+app-shells/zsh-completion:completion_web - zsh completion for web-related tools incl. java/javascript/scala
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
 app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
 app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
