@@ -37,16 +37,17 @@ app-shells/zsh-completion:completion_distribute - zsh completions for tools for 
 app-shells/zsh-completion:completion_gentoo - Gentoo-related zsh completions
 app-shells/zsh-completion:completion_git - zsh completions for special git tools
 app-shells/zsh-completion:completion_google - zsh completions for googlecl
-app-shells/zsh-completion:completion_haskel - zsh completions for Haskell tools
+app-shells/zsh-completion:completion_haskell - zsh completions for Haskell tools
 app-shells/zsh-completion:completion_managers - zsh completions for various filemanagers (not portage)
 app-shells/zsh-completion:completion_net - zsh completions for various net-related tools
 app-shells/zsh-completion:completion_perf - zsh completion for linux kernel's perf tool
+app-shells/zsh-completion:completion_perl - zsh completion for perl-related tools
 app-shells/zsh-completion:completion_pip - zsh completion for app-misc/pip
 app-shells/zsh-completion:completion_python - zsh completion for python development tools
 app-shells/zsh-completion:completion_ruby - zsh completion for ruby tools and tools in ruby
 app-shells/zsh-completion:completion_session - zsh completion for session-handling frontends
 app-shells/zsh-completion:completion_showoff - zsh completion for showoff
-app-shells/zsh-completion:completion_subtitle - zsh completion for subtitle tools
+app-shells/zsh-completion:completion_subtitles - zsh completion for subtitle tools
 app-shells/zsh-completion:completion_virtualbox - zsh completion for virtualbox
 app-shells/zsh-completion:completion_web - zsh completion for web-related tools incl. java/javascript/scala
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
