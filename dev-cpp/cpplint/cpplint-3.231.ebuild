@@ -3,8 +3,8 @@
 # $Header: $
 
 EAPI=5
-
 inherit elisp-common eutils
+RESTRICT="mirror"
 
 DESCRIPTION="The google styleguide for C++ together with a verifyer and an emacs file"
 HOMEPAGE="http://code.google.com/p/google-styleguide/"
