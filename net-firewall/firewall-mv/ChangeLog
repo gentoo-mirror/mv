@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*firewall-mv-6.7 (13 Feb 2013)
+
+  13 Feb 2013; Martin Väth <martin@mvath.de>
+  Version bump, remove old ebuild. Default to -m conntrack instead of -m state
+
 *firewall-mv-6.6 (07 May 2012)
 
   28 Sep 2012; Martin Väth <martin@mvath.de>
