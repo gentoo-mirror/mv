@@ -6,6 +6,8 @@ EAPI=5
 
 inherit eutils
 
+CODE2COLOR_PV="0.2"
+CODE2COLOR_P="code2color-${CODE2COLOR_PV}"
 DESCRIPTION="Excellent text file viewer, optionally with additional selection feature"
 PATCHN="less-select"
 PATCHV="2.2"
@@ -14,11 +16,11 @@ PATCHBALL="${PATCHN}-${PATCHV}.tar.gz"
 HOMEPAGE="http://www.greenwoodsoftware.com/less/ https://github.com/vaeth/${PATCHN}"
 SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz
 	less-select? ( http://github.com/vaeth/${PATCHN}/tarball/release-${PATCHV} -> ${PATCHBALL} )
-	http://www-zeuthen.desy.de/~friebel/unix/less/code2color"
+	http://www-zeuthen.desy.de/~friebel/unix/less/code2color -> ${CODE2COLOR_P}"
 
 LICENSE="|| ( GPL-3 BSD-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+lesspipe +less-select pcre original-gentoo source unicode"
 
 DEPEND=">=app-misc/editor-wrapper-3
@@ -35,7 +37,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cp "${DISTDIR}"/code2color "${S}"/
+	cp "${DISTDIR}/${CODE2COLOR_P}" "${S}"/code2color || die
 	if use less-select
 	then	unpack ${PATCHBALL}
 		cd *"${PATCHN}"-*
@@ -50,7 +52,7 @@ src_prepare() {
 		sed -i -e 's|\([^a-zA-Z]\)/etc/less-select-key.bin|\1'"${EPREFIX%/}"'/etc/less/select-key.bin|g' \
 			"${SELECTDIR}/bin/less-select" || die
 	fi
-	epatch "${FILESDIR}"/code2color.patch
+	epatch "${FILESDIR}/${CODE2COLOR_P}.patch"
 	epatch_user
 }
 

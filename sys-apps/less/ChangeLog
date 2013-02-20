@@ -4,6 +4,9 @@
 
 *less-457.ebuild (10 Dec 2012)
 
+  20 Feb 2013; Martin Väth <martin@mvath.de>
+  Update code2color handling from main tree.
+
   10 Dec 2012; Martin Väth <martin@mvath.de>
   Bump less version.
 
