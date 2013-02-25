@@ -52,6 +52,11 @@ src_prepare() {
 
 	BUILD_TARGETS="all"
 	BUILD_PARAMS="KERNEL_DIR='${KV_DIR}' SUBLEVEL='${KV_PATCH}'"
+
+	if kernel_is ge 3 8
+	then	epatch "${FILESDIR}/${PN}-kernel-3.8.patch"
+	fi
+	epatch_user
 }
 
 src_install() {

@@ -2,6 +2,9 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Feb 2012; Martin Väth <martin@mvath.de>
+  Fix compilation with kernel 3.8. Call epatch_user.
+
   19 Dec 2012; Martin Väth <martin@mvath.de>
   Add SLOT information
 
