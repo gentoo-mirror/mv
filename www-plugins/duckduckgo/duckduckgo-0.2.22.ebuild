@@ -7,10 +7,10 @@ MV_MOZ_MOZILLAS="firefox"
 inherit mv_mozextension
 RESTRICT="mirror"
 
-mPN="${PN}_for_firefox-${PV}"
+mPN="${PN}_plus-${PV}"
 DESCRIPTION="Firefox plugin: enable duckduckgo search engine"
 HOMEPAGE="http://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/"
-SRC_URI="https://addons.mozilla.org/firefox/downloads/file/190404/${mPN}-fx.xpi"
+SRC_URI="https://addons.cdn.mozilla.net/storage/public-staging/385621/${mPN}-fx.xpi"
 #SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/385621/${mPN}-fx.xpi"
 
 LICENSE="GPL-2"
