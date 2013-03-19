@@ -19,14 +19,14 @@ PROPERTIES="live"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="clang debug +dep doc nls optimization security strong-optimization strong-security sqlite tools zsh-completion"
+IUSE="clang debug +dep doc nls optimization security strong-optimization strong-security sqlite swap-remote tools zsh-completion"
 
 RDEPEND="app-shells/push
 	sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	clang? ( sys-devel/clang )
-	sys-devel/gettext"
+	>=sys-devel/gettext-0.18.2"
 
 pkg_setup() {
 	case " ${REPLACING_VERSIONS}" in
@@ -49,6 +49,7 @@ src_configure() {
 		$(use_enable security) $(use_enable optimization) \
 		$(use_enable strong-security) \
 		$(use_enable strong-optimization) $(use_enable debug debugging) \
+		$(use_enable swap-remote) \
 		$(use_with prefix always-accept-keywords) \
 		$(use_with dep dep-default) \
 		$(use_with clang nongnu-cxx clang++) \
