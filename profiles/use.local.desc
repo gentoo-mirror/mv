@@ -6,7 +6,6 @@ app-portage/eix:clang - Use sys-devel/clang for building
 app-portage/eix:debug - Build with upstream's CXXFLAGS/LDFLAGS for debugging support; not recommended for normal use.
 app-portage/eix:dep - Make DEP=true the default which enables support for {,R,P}DEPEND but requires roughly double disk and memory.
 app-portage/eix:doc - Create description of the eix cache file additionally in html format
-app-portage/eix:nls - Support foreign language messages (experimental; currently only de)
 app-portage/eix:optimization - Accept upstream's choices for CXXFLAGS/LDFLAGS for optimization. Absense of this USE flag does not strip user's *FLAGS
 app-portage/eix:security - This adds some checks which can prevent certain exploits if e.g. the eix code has a bug. If you use the hardened toolchain, using this flag does not increase security and can even lead to problems.
 app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to actually use it you need additional configuration of portage and eix
@@ -15,6 +14,7 @@ app-portage/eix:strong-security - Add many checks to prevent exploits if eix cod
 app-portage/eix:swap-remote - Swap role of remote addresses in eix-remote, making the data from gpo.zugaina.org the first choice.
 app-portage/eix:tools - Create separate binary for script helper tools; useful if they are called extremely often
 app-shells/auto-fu-zsh:compile - Byte-compile to speed up
+app-shells/termcolors-mv:perl - Install 256colors perl script
 app-shells/zsh:completion_AIX - install completions for AIX
 app-shells/zsh:completion_BSD - install completions for BSD
 app-shells/zsh:completion_Cygwin - install completions for Cygwin

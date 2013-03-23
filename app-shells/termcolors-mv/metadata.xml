@@ -13,4 +13,7 @@
 		<bugs-to>mailto:martin@mvath.de</bugs-to>
 		<remote-id type="github">vaeth/termcolors-mv</remote-id>
 	</upstream>
+	<use>
+		<flag name="perl">Install 256colors perl script</flag>
+	</use>
 </pkgmetadata>
