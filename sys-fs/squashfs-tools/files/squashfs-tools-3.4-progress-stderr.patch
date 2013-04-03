@@ -1,5 +1,5 @@
---- squashfs-tools/mksquashfs.c
-+++ squashfs-tools/mksquashfs.c
+--- 1/squashfs-tools/mksquashfs.c
++++ 1/squashfs-tools/mksquashfs.c
 @@ -2254,26 +2254,26 @@
  	int spaces = columns - used - hashes;
  

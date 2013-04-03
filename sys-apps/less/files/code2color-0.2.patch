@@ -1,5 +1,5 @@
---- code2color
-+++ code2color
+--- 1/code2color
++++ 1/code2color
 @@ -163,11 +163,11 @@
        # building up the database
        # newer entries overwrite old ones

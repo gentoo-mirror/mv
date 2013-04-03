@@ -1,5 +1,5 @@
---- auto-fu.zsh
-+++ auto-fu.zsh
+--- 1/auto-fu.zsh
++++ 1/auto-fu.zsh
 @@ -305,7 +305,11 @@
  afu+vi-ins-mode () { zle -K afu      ; }; zle -N afu+vi-ins-mode
  afu+vi-cmd-mode () { zle -K afu-vicmd; }; zle -N afu+vi-cmd-mode

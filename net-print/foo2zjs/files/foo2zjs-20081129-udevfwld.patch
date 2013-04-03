@@ -1,5 +1,5 @@
---- Makefile
-+++ Makefile
+--- 1/Makefile
++++ 1/Makefile
 @@ -20,6 +20,10 @@
  PREFIX=/usr
  PREFIX=$(DESTDIR)/usr

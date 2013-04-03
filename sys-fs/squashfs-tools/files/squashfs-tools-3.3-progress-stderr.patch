@@ -1,5 +1,5 @@
---- squashfs-tools/mksquashfs.c
-+++ squashfs-tools/mksquashfs.c
+--- 1/squashfs-tools/mksquashfs.c
++++ 1/squashfs-tools/mksquashfs.c
 @@ -1832,17 +1832,17 @@
  	if(!progress || columns - used < 0)
  		return;

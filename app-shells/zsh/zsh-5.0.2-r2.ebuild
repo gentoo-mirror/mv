@@ -72,6 +72,9 @@ PDEPEND="
 
 src_prepare() {
 	local i
+	# fix compilation issues with texinfo-5
+	epatch "${FILESDIR}"/zsh-texi.patch
+	sed -i -e '/^@item$/d' Doc/zsh.texi || die
 	# fix zshall problem with soelim
 	ln -s Doc man1
 	mv Doc/zshall.1 Doc/zshall.1.soelim

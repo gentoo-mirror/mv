@@ -1,5 +1,5 @@
---- auto-fu.zsh
-+++ auto-fu.zsh
+--- 1/auto-fu.zsh
++++ 1/auto-fu.zsh
 @@ -370,7 +370,7 @@
        [[ -z ${hi} ]] || region_highlight=("0 ${#BUFFER} ${hi}")
      }

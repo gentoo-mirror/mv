@@ -1,5 +1,5 @@
---- progressbar.bak/progressbar.c
-+++ progressbar.bak/progressbar.c
+--- 1/progressbar.c
++++ 1/progressbar.c
 @@ -119,19 +119,19 @@
  		previous = current;
  	}
