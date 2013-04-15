@@ -35,7 +35,7 @@ SRC_URI="${ZSH_URI}
 LICENSE="ZSH gdbm? ( GPL-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="caps"
+IUSE="caps custom-ctype"
 COMPLETIONS="AIX BSD Cygwin Darwin Debian +Linux Mandriva openSUSE Redhat Solaris +Unix +X"
 for curr in ${COMPLETIONS}
 do	case ${curr} in
@@ -169,7 +169,23 @@ generate_run_help() (
 	export MANWIDTH=80
 	export LANG=C
 	unset MANPL MANROFFSEQ LC_ALL
-	[ -z "${LC_CTYPE}" ] && export LC_CTYPE=en_US.utf8
+	if [ -z "${LC_CTYPE++}" ] || ! use custom-ctype
+	then	local i j=
+		unset LC_CTYPE
+		for i in `locale -a 2>/dev/null`
+		do	case ${i} in
+			en*[uU][tT][fF]8*)
+				LC_CTYPE=${i}
+				break;;
+			*[uU][tT][fF]8*)
+				[ -n "${LC_CTYPE}" ] || LC_CTYPE=${i};;
+			en*|*.*)
+				j=${i};;
+			esac
+		done
+		[ -n "${LC_CTYPE}" ] || LC_CTYPE=${j}
+		[ -z "${LC_CTYPE}" ] || export LC_CTYPE
+	fi
 	ebegin "Generating files for run-help"
 	# It is necessary to be paranoid about the success of the following pipe,
 	# since any change in locale or environment (like unset GROFF_NO_SGR,

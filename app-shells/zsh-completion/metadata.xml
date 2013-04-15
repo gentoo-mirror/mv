@@ -13,28 +13,30 @@
 		<remote-id type="github">zsh-users/zsh-completions</remote-id>
 	</upstream>
 	<use>
-		<flag name="completion_ack">zsh completion for sys-apps/ack</flag>
-		<flag name="completion_android">Android-related zsh completions</flag>
-		<flag name="completion_bumblebee">zsh completion for x11-misc/bumblebee</flag>
-		<flag name="completion_database">database-related zsh completions</flag>
-		<flag name="completion_dev">zsh completions for development (build systems, editors, web)</flag>
-		<flag name="completion_disk">zsh completions for disk tools</flag>
-		<flag name="completion_distribute">zsh completions for tools for distributing tasks to various machines</flag>
-		<flag name="completion_gentoo">Gentoo-related zsh completions</flag>
-		<flag name="completion_git">zsh completions for special git tools</flag>
-		<flag name="completion_google">zsh completions for googlecl</flag>
-		<flag name="completion_haskell">zsh completions for Haskell tools</flag>
-		<flag name="completion_managers">zsh completions for various filemanagers (not portage)</flag>
-		<flag name="completion_net">zsh completions for various net-related tools</flag>
-		<flag name="completion_perf">zsh completion for linux kernel's perf tool</flag>
-		<flag name="completion_perl">zsh completion for perl-related tools</flag>
-		<flag name="completion_pip">zsh completion for app-misc/pip</flag>
-		<flag name="completion_python">zsh completion for python development tools</flag>
-		<flag name="completion_ruby">zsh completion for ruby tools and tools in ruby</flag>
-		<flag name="completion_session">zsh completion for session-handling frontends</flag>
-		<flag name="completion_showoff">zsh completion for showoff</flag>
-		<flag name="completion_subtitles">zsh completion for subtitle tools</flag>
-		<flag name="completion_virtualbox">zsh completion for virtualbox</flag>
-		<flag name="completion_web">zsh completion for web-related tools incl. java/javascript/scala</flag>
+		<flag name="completion_Android">Install zsh completions for Android-related programs</flag>
+		<flag name="completion_Gentoo">Install zsh completions for Gentoo and portage</flag>
+		<flag name="completion_Google">Install zsh completions for googlecl</flag>
+		<flag name="completion_Unix">Install zsh completion for unix system tools</flag>
+		<flag name="completion_bumblebee">Install zsh completion for x11-misc/bumblebee</flag>
+		<flag name="completion_database">Install zsh completions for database programs</flag>
+		<flag name="completion_dev">Install zsh completions for development (build systems, editors, web)</flag>
+		<flag name="completion_disk">Install zsh completions for disk tools</flag>
+		<flag name="completion_distribute">Install zsh completions for tools for distributing tasks to various machines</flag>
+		<flag name="completion_dzen">Install zsh completions for x11-misc/dzen</flag>
+		<flag name="completion_git">Install zsh completions for special git tools</flag>
+		<flag name="completion_haskell">Install zsh completions for Haskell tools</flag>
+		<flag name="completion_id3">Install zsh completions for media-sound/id3 and media-sound/id3v2</flag>
+		<flag name="completion_managers">Install zsh completions for various package managers (not portage)</flag>
+		<flag name="completion_net">Install zsh completions for various net-related tools</flag>
+		<flag name="completion_perf">Install zsh completion for dev-util/perf</flag>
+		<flag name="completion_perl">Install zsh completion for perl-related tools</flag>
+		<flag name="completion_python">Install zsh completion for python development tools</flag>
+		<flag name="completion_ruby">Install zsh completion for ruby tools and tools in ruby</flag>
+		<flag name="completion_search">Install zsh completion for search tools like sys-apps/ack and sys-apps/the_silver_searcher</flag>
+		<flag name="completion_session">Install zsh completion for session-handling frontends</flag>
+		<flag name="completion_showoff">Install zsh completion for showoff</flag>
+		<flag name="completion_subtitles">Install zsh completion for subtitle tools</flag>
+		<flag name="completion_virtualbox">Install zsh completion for virtualbox</flag>
+		<flag name="completion_web">Install zsh completion for web-related tools incl. java/javascript/scala</flag>
 	</use>
 </pkgmetadata>

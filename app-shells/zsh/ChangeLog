@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*zsh-5.0.2-r2 (15 Apr 2013)
+
+  15 Apr 2013; Martin Väth <martin@mvath.de>
+  Override LC_CTYPE, using some heuristics, unless USE=custom-ctype is chosen.
+
 *zsh-5.0.2-r2 (03 Apr 2013)
 
   03 Apr 2013; Martin Väth <martin@mvath.de>

@@ -33,29 +33,31 @@ declare -a COMPLETIONS FILES
 COMPLETIONS=()
 FILES=()
 for completion in \
-	'ack _ack' \
-	'android _adb _android _emulator' \
+	'Android _adb _android _emulator' \
+	'+Gentoo _baselayout _eselect _gcc-config _genlop _gentoo_packages _gentoolkit _layman _portage _portage_utils' \
+	'Google _google' \
+	'+Unix _logger' \
 	'bumblebee _optirun' \
 	'database _redis-cli _pgsql_utils' \
 	'dev _choc _gradle _geany _manage.py _mvn _pear _play _symfony _thor _vagrant' \
 	'disk _sdd _smartmontools _srm' \
-	'distribute _cap _fab _knife _mussh' \
-	'+gentoo _baselayout _eselect _gcc-config _genlop _gentoo_packages _gentoolkit _layman _portage _portage_utils' \
+	'distribute _fab _knife _mussh' \
+	'dzen _dzen2' \
 	'git _git-flow _git-pulls' \
-	'google _google' \
 	'haskell _cabal' \
+	'id3 _id3 _id3v2' \
 	'managers _brew _debuild _lein _packagekit _pactree _pkcon _port _yaourt' \
-	'net _dhcpcd _mosh _ssh-copy-id _vpnc _vnstat' \
+	'net _dhcpcd _mosh _socat _ssh-copy-id _vpnc _vnstat' \
 	'perf _perf' \
 	'perl _cpanm' \
-	'pip _pip' \
-	'python _bpython _pygmentize _setup.py' \
-	'ruby _bundle _ditz _gas _gem _github _git-wtf _lunchy _rvm' \
+	'python _bpython _pip _pygmentize _setup.py' \
+	'ruby _bundle _cap _ditz _gas _gem _github _git-wtf _lunchy _rvm' \
+	'search _ack _ag' \
 	'session _attach _teamocil _tmuxinator' \
 	'showoff _showoff' \
 	'subtitles _language_codes _periscope _subliminal' \
 	'virtualbox _virtualbox' \
-	'web _coffee _docpad _gradle _heroku _jonas _jmeter _jmeter-plugins _lunar _node _nvm _sbt _scala'
+	'web _coffee _docpad _gradle _heroku _jonas _jmeter _jmeter-plugins _lunar _node _nvm _sbt _scala _svm'
 do	curr=${completion%% *}
 	case ${curr} in
 	'+'*)

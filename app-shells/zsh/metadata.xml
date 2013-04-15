@@ -23,18 +23,19 @@
   added.
 </longdescription>
 <use>
-  <flag name='completion_AIX'>install completions for AIX</flag>
-  <flag name='completion_BSD'>install completions for BSD</flag>
-  <flag name='completion_Cygwin'>install completions for Cygwin</flag>
-  <flag name='completion_Darwin'>install completions for Darwin</flag>
-  <flag name='completion_Debian'>install completions for Debian</flag>
-  <flag name='completion_Linux'>install completions for Linux</flag>
-  <flag name='completion_Mandriva'>install completions for Mandriva</flag>
-  <flag name='completion_openSUSE'>install completions for openSUSE</flag>
-  <flag name='completion_Redhat'>install completions for Redhat</flag>
-  <flag name='completion_Solaris'>install completions for Solaris</flag>
-  <flag name='completion_Unix'>install completions for Unix</flag>
-  <flag name='completion_X'>install completions for X</flag>
+  <flag name='completion_AIX'>Install zsh completions for AIX</flag>
+  <flag name='completion_BSD'>Install zsh completions for BSD</flag>
+  <flag name='completion_Cygwin'>Install zsh completions for Cygwin</flag>
+  <flag name='completion_Darwin'>Install zsh completions for Darwin</flag>
+  <flag name='completion_Debian'>Install zsh completions for Debian</flag>
+  <flag name='completion_Linux'>Install zsh completions for Linux</flag>
+  <flag name='completion_Mandriva'>Install zsh completions for Mandriva</flag>
+  <flag name='completion_openSUSE'>Install zsh completions for openSUSE</flag>
+  <flag name='completion_Redhat'>Install zsh completions for Redhat</flag>
+  <flag name='completion_Solaris'>Install zsh completions for Solaris</flag>
+  <flag name='completion_Unix'>Install zsh completions for Unix</flag>
+  <flag name='completion_X'>Install zsh completions for X</flag>
+  <flag name='custom-ctype'>Set this and an utf8-capable LC_CTYPE (e.g. in make.conf) if run-help does not work for you. If unset, the value of LC_CTYPE for the generation of run-help is calculated by a heuristic based on locale -a.</flag>
   <flag name='run-help'>Create and install data for run-help command</flag>
 </use>
 </pkgmetadata>
