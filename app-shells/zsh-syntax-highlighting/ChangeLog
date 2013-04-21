@@ -4,32 +4,32 @@
 
 *zsh-syntax-highlighting-0.1.2-r1, -99999999-r1 (19 Jan 2013)
 
-  19 Jan 2013; Martin Väth <martin@mvath.de>
+  19 Jan 2013; Martin Väth <martin@mvath.de>:
   Change install location, remove old ebuilds.
 
 *zsh-syntax-highlighting-0.1.2 (17 Aug 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  18 Aug 2012; Martin Väth <martin@mvath.de>
+  18 Aug 2012; Martin Väth <martin@mvath.de>:
   Add RESTRICT="mirror" for non-live ebuild
 
-  17 Aug 2012; Martin Väth <martin@mvath.de>
+  17 Aug 2012; Martin Väth <martin@mvath.de>:
   Provide non-live ebuild
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  06 Nov 2011; Martin Väth <martin@mvath.de>
+  06 Nov 2011; Martin Väth <martin@mvath.de>:
   Use default EGIT_PROJECT name. Call EGIT_REPACK unless offline.
 
-  09 Sep 2011; Martin Väth <martin@mvath.de>
+  09 Sep 2011; Martin Väth <martin@mvath.de>:
   Update addresses and port to git-2 eclass.
   Note that ESCM_OFLINE/EGIT_OFFLINE is named EVCS_OFFLINE in git-2.
 
-  03 Jun 2011; Martin Väth <martin@mvath.de>
+  03 Jun 2011; Martin Väth <martin@mvath.de>:
   Write ebuild from scratch.

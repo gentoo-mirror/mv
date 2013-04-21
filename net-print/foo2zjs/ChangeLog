@@ -2,26 +2,26 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  02 Jan 2013; Martin Väth <martin@mvath.de>
+  02 Jan 2013; Martin Väth <martin@mvath.de>:
   Depend only on virtual/udev
 
-  12 Sep 2012; Martin Väth <martin@mvath.de>
+  12 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  03 Jan 2011; Martin Väth <martin@mvath.de>
+  03 Jan 2011; Martin Väth <martin@mvath.de>:
   Bump to EAPI=4.
 
-  29 Jun 2010; Martin Väth <martin@mvath.de>
+  29 Jun 2010; Martin Väth <martin@mvath.de>:
   foo2zjs-20081129-r1.ebuild:
   Bump to force upgrade.
 
-  28 Mar 2010; Martin Väth <martin@mvath.de>
+  28 Mar 2010; Martin Väth <martin@mvath.de>:
   foo2zjs-20081129.ebuild:
   import with minor changes from a personal overlay.
   The change from the tree is the fixing of bug 271079

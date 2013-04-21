@@ -4,111 +4,111 @@
 
 *portage-bashrc-mv-12.0 (04 Nov 2012)
 
-  01 Dev 2012; Martin Väth <martin@mvath.de>
+  01 Dev 2012; Martin Väth <martin@mvath.de>:
   Remove USE=eix; only log recommendation if appropriate
 
-  04 Nov 2012; Martin Väth <martin@mvath.de>
+  04 Nov 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Globally rename GPO->PGO, gpo->pgo
 
 *portage-bashrc-mv-11.7 (13 Oct 2012)
 
-  13 Oct 2012; Martin Väth <martin@mvath.de>
+  13 Oct 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Parse first line in cflags correctly.
 
 *portage-bashrc-mv-11.6 (07 Oct 2012)
 
-  07 Oct 2012; Martin Väth <martin@mvath.de>
+  07 Oct 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *portage-bashrc-mv-11.5 (07 Oct 2012)
 
-  07 Oct 2012; Martin Väth <martin@mvath.de>
+  07 Oct 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Support gpo
 
 *portage-bashrc-mv-11.4 (10 Sep 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  10 Sep 2012; Martin Väth <martin@mvath.de>
+  10 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Rely that gold linker is used with clang:
   Do not filter -flto for USE_NONGNU
 
 *portage-bashrc-mv-11.3 (08 Sep 2012)
 
-  08 Sep 2012; Martin Väth <martin@mvath.de>
+  08 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Support for Non-GNU compilers (e.g. clang).
 
 *portage-bashrc-mv-11.2 (08 Sep 2012)
 
-  08 Sep 2012; Martin Väth <martin@mvath.de>
+  08 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fixes CCACHE_*
 
 *portage-bashrc-mv-11.1 (07 Sep 2012)
 
-  07 Sep 2012; Martin Väth <martin@mvath.de>
+  07 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Support for CCACHE_*
 
 *portage-bashrc-mv-11.0 (16 Jun 2012)
 
-  16 Jun 2012; Martin Väth <martin@mvath.de>
+  16 Jun 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Use masked-packages from app-portage/eix
 
 *portage-bashrc-mv-10.12 (21 May 2012)
 
-  21 May 2012; Martin Väth <martin@mvath.de>
+  21 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *portage-bashrc-mv-10.11 (20 May 2012)
 
-  20 May 2012; Martin Väth <martin@mvath.de>
+  20 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *portage-bashrc-mv-10.9 (11 May 2012)
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  11 May 2012; Martin Väth <martin@mvath.de>
+  11 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *portage-bashrc-mv-10.8 (07 May 2012)
 
-  07 May 2012; Martin Väth <martin@mvath.de>
+  07 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *portage-bashrc-mv-10.7 (08 Apr 2012)
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  08 Apr 2012; Martin Väth <martin@mvath.de>
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *portage-bashrc-mv-10.6 (13 Mar 2012)
 
-  19 Mar 2012; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
   Use vcs-snapshot.eclass, remove old ebuild.
 
-  13 Mar 2012; Martin Väth <martin@mvath.de>
+  13 Mar 2012; Martin Väth <martin@mvath.de>:
   Version bump. Keep old ebuild, since release is experimental.
 
 *portage-bashrc-mv-10.3 (28 Feb 2012)
 
-  28 Feb 2012; Martin Väth <martin@mvath.de>
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *portage-bashrc-mv-10.2 (19 Feb 2012)
 
-  19 Jan 2012; Martin Väth <martin@mvath.de>
+  19 Jan 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Support CPPFLAGS.
 
 *portage-bashrc-mv-10.1 (06 Jan 2012)
 
-  06 Jan 2012; Martin Väth <martin@mvath.de>
+  06 Jan 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *portage-bashrc-mv-10.0 (19 Dec 2011)
 
-  19 Nov 2011; Martin Väth <martin@mvath.de>
+  19 Nov 2011; Martin Väth <martin@mvath.de>:
   New ebuild from scratch.

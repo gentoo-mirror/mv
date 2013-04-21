@@ -4,50 +4,50 @@
 
 *duckduckgo-0.2.25 (17 Mar 2013)
 
-  17 Mar 2013; Martin Väth <martin@mvath.de>
+  17 Mar 2013; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *duckduckgo-0.2.22 (12 Mar 2013)
 
-  12 Mar 2013; Martin Väth <martin@mvath.de>
+  12 Mar 2013; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *duckduckgo-0.2.16 (10 Feb 2013)
 
-  10 Feb 2013; Martin Väth <martin@mvath.de>
+  10 Feb 2013; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *duckduckgo-0.2.15 (01 Feb 2013)
 
-  01 Feb 2013; Martin Väth <martin@mvath.de>
+  01 Feb 2013; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *duckduckgo-0.2.13 (12 Jan 2013)
 
-  12 Jan 2013; Martin Väth <martin@mvath.de>
+  12 Jan 2013; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *duckduckgo-0.2.12 (25 Dec 2012)
 
-  25 Dec 2012; Martin Väth <martin@mvath.de>
+  25 Dec 2012; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild. Fix homepage
 
 *duckduckgo-0.2.9 (16 Dec 2012)
 
-  16 Dec 2012; Martin Väth <martin@mvath.de>
+  16 Dec 2012; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *duckduckgo-0.2.8-r1 (07 Dec 2012)
 
-  07 Dec 2012; Martin Väth <martin@mvath.de>
+  07 Dec 2012; Martin Väth <martin@mvath.de>:
   Fix download and rename ebuild to force a true bump
 
 *duckduckgo-0.2.8 (23 Nov 2012)
 
-  23 Nov 2012; Martin Väth <martin@mvath.de>
+  23 Nov 2012; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *duckduckgo-0.2.7 (04 Nov 2012)
 
-  04 Nov 2012; Martin Väth <martin@mvath.de>
+  04 Nov 2012; Martin Väth <martin@mvath.de>:
   New ebuild.

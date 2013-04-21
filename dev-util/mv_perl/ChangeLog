@@ -4,62 +4,62 @@
 
 *noscript-2.8 (21 Apr 2013)
 
-  21 Apr 2013; Martin Väth <martin@mvath.de>
+  21 Apr 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *noscript-2.7 (20 Apr 2013)
 
-  20 Apr 2013; Martin Väth <martin@mvath.de>
+  20 Apr 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *noscript-2.6 (28 Jan 2013)
 
-  28 Jan 2013; Martin Väth <martin@mvath.de>
+  28 Jan 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *noscript-2.5 (11 Nov 2012)
 
-  11 Nov 2012; Martin Väth <martin@mvath.de>
+  11 Nov 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *noscript-2.4 (10 Jun 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  10 Jun 2012; Martin Väth <martin@mvath.de>
+  10 Jun 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fixes comp regression
 
 *noscript-2.3 (13 May 2012)
 
-  13 May 2012; Martin Väth <martin@mvath.de>
+  13 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fixes renreg regression
 
 *noscript-2.2 (05 May 2012)
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  05 May 2012; Martin Väth <martin@mvath.de>
+  05 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *noscript-2.0 (21 Apr 2012)
 
-  21 Apr 2012; Martin Väth <martin@mvath.de>
+  21 Apr 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. comp options have changed
 
 *noscript-1.4 (10 Mar 2012)
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  19 Mar 2012; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
   Use vcs-snapshot.eclass
 
-  10 Mar 2012; Martin Väth <martin@mvath.de>
+  10 Mar 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *mv_perl-1.2 (01 Mar 2012)
 
-  01 Mar 2012; Martin Väth <martin@mvath.de>
+  01 Mar 2012; Martin Väth <martin@mvath.de>:
   New ebuild from scratch.

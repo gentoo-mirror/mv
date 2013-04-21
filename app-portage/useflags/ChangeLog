@@ -4,54 +4,54 @@
 
 *useflags-3.1 (28 Jan 2013)
 
-  28 Jan 2013; Martin Väth <martin@mvath.de>
+  28 Jan 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *useflags-3.0 (28 Dec 2012)
 
-  28 Dev 2012; Martin Väth <martin@mvath.de>
+  28 Dev 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Recommend >=app-portage/eix-0.27.7
 
 *useflags-2.8 (11 Nov 2012)
 
-  01 Dev 2012; Martin Väth <martin@mvath.de>
+  01 Dev 2012; Martin Väth <martin@mvath.de>:
   Remove USE=eix; only log recommendation if appropriate
 
-  11 Nov 2012; Martin Väth <martin@mvath.de>
+  11 Nov 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *useflags-2.7 (15 Oct 2012)
 
-  15 Oct 2012; Martin Väth <martin@mvath.de>
+  15 Oct 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *useflags-2.6 (08 Jan 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  19 Mar 2012; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
   Use vcs-snapshot.eclass
 
-  09 Jan 2012; Martin Väth <martin@mvath.de>
+  09 Jan 2012; Martin Väth <martin@mvath.de>:
   Depend of virtual/perl-Getopt-Long
 
-  08 Jan 2012; Martin Väth <martin@mvath.de>
+  08 Jan 2012; Martin Väth <martin@mvath.de>:
   Version bump: Make help handling more consistent.
 
 *useflags-2.5 (21 Dec 2011)
 
-  07 Jan 2012; Martin Väth <martin@mvath.de>
+  07 Jan 2012; Martin Väth <martin@mvath.de>:
   Fix dependencies
 
-  21 Nov 2011; Martin Väth <martin@mvath.de>
+  21 Nov 2011; Martin Väth <martin@mvath.de>:
   Suppose IUSE=eix
 
-  21 Nov 2011; Martin Väth <martin@mvath.de>
+  21 Nov 2011; Martin Väth <martin@mvath.de>:
   New ebuild from scratch.

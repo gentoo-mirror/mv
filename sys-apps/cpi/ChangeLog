@@ -4,63 +4,63 @@
 
 *cpi-2.3 (12 Mar 2013)
 
-  12 Mar 2013; Martin Väth <martin@mvath.de>
+  12 Mar 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *cpi-2.2 (05 Oct 2012)
 
-  05 Oct 2012; Martin Väth <martin@mvath.de>
+  05 Oct 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *cpi-2.1 (04 Oct 2012)
 
-  04 Oct 2012; Martin Väth <martin@mvath.de>
+  04 Oct 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *cpi-2.0 (01 Sep 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  01 Sep 2012; Martin Väth <martin@mvath.de>
+  01 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Support now also mvi
 
 *cpi-1.6 (07 May 2012)
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  07 May 2012; Martin Väth <martin@mvath.de>
+  07 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *cpi-1.5 (04 May 2012)
 
-  04 May 2012; Martin Väth <martin@mvath.de>
+  04 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *cpi-1.4 (08 Apr 2012)
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  08 Apr 2012; Martin Väth <martin@mvath.de>
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *cpi-1.3 (28 Feb 2012)
 
-  19 Mar 2012; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
   Use vcs-snapshot.eclass
 
-  28 Feb 2012; Martin Väth <martin@mvath.de>
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *cpi-1.2 (05 Feb 2012)
 
-  05 Feb 2012; Martin Väth <martin@mvath.de>
+  05 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
   Allow touch or forcing of cp -a; options -tfh; diff -q; zsh completion
 
 *cpi-1.0 (03 Feb 2012)
 
-  03 Feb 2012; Martin Väth <martin@mvath.de>
+  03 Feb 2012; Martin Väth <martin@mvath.de>:
   New ebuild from scratch.

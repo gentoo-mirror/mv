@@ -2,18 +2,18 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  21 Sep 2012; Martin Väth <martin@mvath.de>
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  03 Jan 2011; Martin Väth <martin@mvath.de>
+  03 Jan 2011; Martin Väth <martin@mvath.de>:
   Bump to EAPI=4.
 
-  28 Mar 2010; Martin Väth <martin@mvath.de>
+  28 Mar 2010; Martin Väth <martin@mvath.de>:
   stardict-freedict-ita-deu-2.4.2.ebuild:
   import with minor changes from a personal overlay.

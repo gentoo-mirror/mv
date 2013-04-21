@@ -4,101 +4,101 @@
 
 *kernel-1.26 (17 Nov 2012)
 
-  01 Dev 2012; Martin Väth <martin@mvath.de>
+  01 Dev 2012; Martin Väth <martin@mvath.de>:
   Remove USE=eix; only log recommendation if appropriate
 
-  17 Nov 2012; Martin Väth <martin@mvath.de>
+  17 Nov 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Improve zsh-completion
 
 *kernel-1.25 (21 Oct 2012)
 
-  21 Oct 2012; Martin Väth <martin@mvath.de>
+  21 Oct 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Add zsh-completion
 
 *kernel-1.24 (14 Oct 2012)
 
-  14 Oct 2012; Martin Väth <martin@mvath.de>
+  14 Oct 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fix sudox call
 
 *kernel-1.23 (14 Sep 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  14 Sep 2012; Martin Väth <martin@mvath.de>
+  14 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *kernel-1.22 (06 Sep 2012)
 
-  06 Sep 2012; Martin Väth <martin@mvath.de>
+  06 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *kernel-1.21 (19 Jun 2012)
 
-  19 Jun 2012; Martin Väth <martin@mvath.de>
+  19 Jun 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *kernel-1.20 (20 May 2012)
 
-  20 May 2012; Martin Väth <martin@mvath.de>
+  20 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *kernel-1.19 (15 May 2012)
 
-  15 May 2012; Martin Väth <martin@mvath.de>
+  15 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *kernel-1.17 (06 May 2012)
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  06 May 2012; Martin Väth <martin@mvath.de>
+  06 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Makes app-shells/push mandatory.
 
 *kernel-1.16 (04 May 2012)
 
-  04 May 2012; Martin Väth <martin@mvath.de>
+  04 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *kernel-1.15 (08 Apr 2012)
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  08 Apr 2012; Martin Väth <martin@mvath.de>
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *kernel-1.14 (29 Feb 2012)
 
-  19 Mar 2012; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
   Use vcs-snapshot.eclass
 
-  29 Feb 2012; Martin Väth <martin@mvath.de>
+  29 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *kernel-1.13 (28 Feb 2012)
 
-  28 Feb 2012; Martin Väth <martin@mvath.de>
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *kernel-1.12 (17 Feb 2012)
 
-  17 Feb 2012; Martin Väth <martin@mvath.de>
+  17 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Improve status line support; change option.
 
 *kernel-1.11 (29 Jan 2012)
 
-  29 Jan 2012; Martin Väth <martin@mvath.de>
+  29 Jan 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *kernel-1.10 (21 Dec 2011)
 
-  09 Jan 2012; Martin Väth <martin@mvath.de>
+  09 Jan 2012; Martin Väth <martin@mvath.de>:
   Reformat deps.
 
-  26 Dec 2011; Martin Väth <martin@mvath.de>
+  26 Dec 2011; Martin Väth <martin@mvath.de>:
   Fix dependencies.
 
-  21 Dec 2011; Martin Väth <martin@mvath.de>
+  21 Dec 2011; Martin Väth <martin@mvath.de>:
   New ebuild from scratch.

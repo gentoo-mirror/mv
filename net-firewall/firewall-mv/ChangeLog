@@ -4,57 +4,57 @@
 
 *firewall-mv-6.8 (01 Apr 2013)
 
-  01 Apr 2013; Martin Väth <martin@mvath.de>
+  01 Apr 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Rename eth* -> net* in defaults
 
 *firewall-mv-6.7 (13 Feb 2013)
 
-  13 Feb 2013; Martin Väth <martin@mvath.de>
+  13 Feb 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Default to -m conntrack instead of -m state
 
 *firewall-mv-6.6 (07 May 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  07 May 2012; Martin Väth <martin@mvath.de>
+  07 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *firewall-mv-6.5 (04 May 2012)
 
-  04 May 2012; Martin Väth <martin@mvath.de>
+  04 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *firewall-mv-6.4 (22 Apr 2012)
 
-  22 Apr 2012; Martin Väth <martin@mvath.de>
+  22 Apr 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *firewall-mv-6.3 (08 Apr 2012)
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  08 Apr 2012; Martin Väth <martin@mvath.de>
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *firewall-mv-6.2 (28 Feb 2012)
 
-  19 Mar 2012; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
   Use vcs-snapshot.eclass
 
-  28 Feb 2012; Martin Väth <martin@mvath.de>
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *firewall-mv-6.1 (04 Feb 2012)
 
-  04 Feb 2012; Martin Väth <martin@mvath.de>
+  04 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Separate SYSCTL parameters. Add init files.
 
 *firewall-mv-6.0 (02 Feb 2012)
 
-  02 Feb 2012; Martin Väth <martin@mvath.de>
+  02 Feb 2012; Martin Väth <martin@mvath.de>:
   New ebuild from scratch.

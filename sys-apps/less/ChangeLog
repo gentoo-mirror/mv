@@ -4,79 +4,79 @@
 
 *less-458.ebuild (05 Apr 2012)
 
-  05 Apr 2013; Martin Väth <martin@mvath.de>
+  05 Apr 2013; Martin Väth <martin@mvath.de>:
   Bump less version.
 
 *less-457.ebuild (10 Dec 2012)
 
-  20 Feb 2013; Martin Väth <martin@mvath.de>
+  20 Feb 2013; Martin Väth <martin@mvath.de>:
   Update code2color handling from main tree.
 
-  10 Dec 2012; Martin Väth <martin@mvath.de>
+  10 Dec 2012; Martin Väth <martin@mvath.de>:
   Bump less version.
 
 *less-456.ebuild (09 Nov 2012)
 
-  09 Nov 2012; Martin Väth <martin@mvath.de>
+  09 Nov 2012; Martin Väth <martin@mvath.de>:
   Bump less version.
 
 *less-452.ebuild (23 Oct 2012)
 
-  23 Oct 2012; Martin Väth <martin@mvath.de>
+  23 Oct 2012; Martin Väth <martin@mvath.de>:
   Bump less version. Add USE=sources
 
 *less-451.ebuild (23 Jul 2012)
 
-  21 Sep 2012; Martin Väth <martin@mvath.de>
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  23 Jul 2012; Martin Väth <martin@mvath.de>
+  23 Jul 2012; Martin Väth <martin@mvath.de>:
   Bump less version. Simplify doc install and pcre passing as in main tree.
 
 *less-450.ebuild (16 Jul 2012)
 
-  16 Jul 2012; Martin Väth <martin@mvath.de>
+  16 Jul 2012; Martin Väth <martin@mvath.de>:
   Bump less version.
 
 *less-449.ebuild (28 Jun 2012)
 
-  28 Jun 2012; Martin Väth <martin@mvath.de>
+  28 Jun 2012; Martin Väth <martin@mvath.de>:
   Bump less version.
 
 *less-445-r1.ebuild (10 Nov 2011)
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  02 Mar 2012; Martin Väth <martin@mvath.de>
+  02 Mar 2012; Martin Väth <martin@mvath.de>:
   Change to github repository.
 
-  31 Jan 2012; Martin Väth <martin@mvath.de>
+  31 Jan 2012; Martin Väth <martin@mvath.de>:
   Bump lesspipe.sh from tree
 
-  17 Nov 2011; Martin Väth <martin@mvath.de>
+  17 Nov 2011; Martin Väth <martin@mvath.de>:
   Update editor dependency as in portage main tree
 
-  10 Nov 2011; Martin Väth <martin@mvath.de>
+  10 Nov 2011; Martin Väth <martin@mvath.de>:
   Follow revision upgrade from gentoo: support pcre
   Put keyfiles into ${EPREFIX}/etc/less subdirectories
 
 *less-445.ebuild (28 Oct 2011)
 
-  28 Oct 2011; Martin Väth <martin@mvath.de>
+  28 Oct 2011; Martin Väth <martin@mvath.de>:
   Bump less version.
 
 *less-444.ebuild (09 Jun 2011)
 
-  09 Jun 2011; Martin Väth <martin@mvath.de>
+  09 Jun 2011; Martin Väth <martin@mvath.de>:
   Bump less version. Remove old ebuild. Fix some typos concerning env.d
 
 *less-443.ebuild (06 Jun 2011)
 
-  06 Jun 2011; Martin Väth <martin@mvath.de>
+  06 Jun 2011; Martin Väth <martin@mvath.de>:
   -less-select-443.ebuild +less-443.ebuild
   Rename into less to avoid problems with portage hard-depending on less.
   In fact, less-select is just less with additional options which therefore
@@ -84,66 +84,66 @@
 
 *less-select-443.ebuild (11 Apr 2011)
 
-  11 Apr 2011; Martin Väth <martin@mvath.de>
+  11 Apr 2011; Martin Väth <martin@mvath.de>:
   Bump less version. Remove old ebuild.
 
 *less-select-441.ebuild (28 Feb 2011)
 
-  29 Feb 2011; Martin Väth <martin@mvath.de>
+  29 Feb 2011; Martin Väth <martin@mvath.de>:
   Bump less version. Remove old ebuild.
 
 *less-select-440.ebuild (06 Jan 2011)
 
-  04 Jan 2011; Martin Väth <martin@mvath.de>
+  04 Jan 2011; Martin Väth <martin@mvath.de>:
   Bump less version. Remove old ebuild.
 
 *less-select-438.ebuild (01 Jan 2011)
 
-  04 Jan 2011; Martin Väth <martin@mvath.de>
+  04 Jan 2011; Martin Väth <martin@mvath.de>:
   Bump to EAPI=4.
 
-  01 Jan 2011; Martin Väth <martin@mvath.de> :
+  01 Jan 2011; Martin Väth <martin@mvath.de>: :
   Bump less version. Remove old ebuild.
 
 *less-select-436-r1.ebuild (30 Mar 2010)
 
-  12 Jun 2010; Martin Väth <martin@mvath.de> :
+  12 Jun 2010; Martin Väth <martin@mvath.de>: :
   Remove unneeded files/less.envd. Remove arches which I never tested.
 
-  30 Mar 2010; Martin Väth <martin@mvath.de> :
+  30 Mar 2010; Martin Väth <martin@mvath.de>: :
   -less-select-436.ebuild +less-select-436-r1.ebuild files/lesspipe.sh:
   Update lesspipe.sh and related changes of sys-apps/less in portage tree.
 
-  22 Jul 2009; Martin Väth <martin@mvath.de> :
+  22 Jul 2009; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-436
 
-  12 Apr 2009; Martin Väth <martin@mvath.de> :
+  12 Apr 2009; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-429
 
-  09 Feb 2009; Martin Väth <martin@mvath.de> :
+  09 Feb 2009; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-424
 
-  04 Jan 2008; Martin Väth <martin@mvath.de> :
+  04 Jan 2008; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-418
 
-  29 Nov 2007; Martin Väth <martin@mvath.de> :
+  29 Nov 2007; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-416
 
-  16 Nov 2007; Martin Väth <martin@mvath.de> :
+  16 Nov 2007; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-415
 
-  10 Oct 2007; Martin Väth <martin@mvath.de> :
+  10 Oct 2007; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-409
 
-  29 Jun 2007; Martin Väth <martin@mvath.de> :
+  29 Jun 2007; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-406
 
-  29 Dec 2005; Martin Väth <martin@mvath.de> :
+  29 Dec 2005; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-394
 
-  03 Dec 2005; Martin Väth <martin@mvath.de> :
+  03 Dec 2005; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-393
 
-  06 Mar 2005; Martin Väth <martin@mvath.de> :
+  06 Mar 2005; Martin Väth <martin@mvath.de>: :
   Initial version based on less-382-r2.ebuild
 

@@ -4,36 +4,36 @@
 
 *auto-fu-zsh-0.0.1.12-r4, auto-fu-zsh-99999999-r2 (26 Jan 2012)
 
-  26 Jan 2013; Martin Väth <martin@mvath.de>
+  26 Jan 2013; Martin Väth <martin@mvath.de>:
   Remove kill-line patch.  Instead describe it in zshrc-example.
 
 *auto-fu-zsh-0.0.1.12-r3, auto-fu-zsh-99999999-r1 (10 Jan 2012)
 
-  10 Jan 2013; Martin Väth <martin@mvath.de>
+  10 Jan 2013; Martin Väth <martin@mvath.de>:
   Change install location, remove old ebuilds
 
 *auto-fu-zsh-99999999 (04 Nov 2012)
 
-  17 Nov 2012; Martin Väth <martin@mvath.de>
+  17 Nov 2012; Martin Väth <martin@mvath.de>:
   Remove _oldlist completer from defaults
 
-  04 Nov 2012; Martin Väth <martin@mvath.de>
+  04 Nov 2012; Martin Väth <martin@mvath.de>:
   Provide git version which works nicely with zsh-syntax-highlighting
 
 *auto-fu-zsh-0.0.1.12-r1 (16 Aug 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  16 Aug 2012; Martin Väth <martin@mvath.de>
+  16 Aug 2012; Martin Väth <martin@mvath.de>:
   Make Ctrl-D return correctly (and optionally act as kill{-whole,}-line)
   Restore default color after accept-line; fix compatibility with earlier
   zsh versions
 
 *auto-fu-zsh-0.0.1.12 (12 Aug 2012)
 
-  14 Aug 2012; Martin Väth <martin@mvath.de>
+  14 Aug 2012; Martin Väth <martin@mvath.de>:
   Improve comments.
 
-  12 Aug 2012; Martin Väth <martin@mvath.de>
+  12 Aug 2012; Martin Väth <martin@mvath.de>:
   Write ebuild from scratch.

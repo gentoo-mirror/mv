@@ -4,27 +4,27 @@
 
 *zram-init-2.2.ebuild (03 Jan 2013)
 
-  03 Jan 2012; Martin Väth <martin@mvath.de>
+  03 Jan 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *zram-init-2.1.ebuild (02 Mar 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  19 Mar 2012; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
   Use vcs-snapshot.eclass
 
-  02 Mar 2012; Martin Väth <martin@mvath.de>
+  02 Mar 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Changes to github repository.
 
 *zram-init-2.0.ebuild (08 Feb 2010)
 
-  08 Feb 2010; Martin Väth <martin@mvath.de>
+  08 Feb 2010; Martin Väth <martin@mvath.de>:
   Complete rewrite. Remove old ChangeLog.

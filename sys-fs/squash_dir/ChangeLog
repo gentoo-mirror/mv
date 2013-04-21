@@ -4,267 +4,267 @@
 
 *squash_dir-12.9 (28 Jan 2013)
 
-  28 Jan 2013; Martin Väth <martin@mvath.de>
+  28 Jan 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squash_dir-12.8 (08 Jan 2013)
 
-  14 Jan 2013; Martin Väth <martin@mvath.de>
+  14 Jan 2013; Martin Väth <martin@mvath.de>:
   Improve messages and handling of REPLACING_VERSIONS
 
-  08 Jan 2013; Martin Väth <martin@mvath.de>
+  08 Jan 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squash_dir-12.7 (01 Jan 2013)
 
-  01 Jan 2013; Martin Väth <martin@mvath.de>
+  01 Jan 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Support new /etc/conf.d/squash_dir
 
 *squash_dir-12.6 (19 Dec 2012)
 
-  19 Dec 2012; Martin Väth <martin@mvath.de>
+  19 Dec 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squash_dir-12.5 (16 Dec 2012)
 
-  16 Dec 2012; Martin Väth <martin@mvath.de>
+  16 Dec 2012; Martin Väth <martin@mvath.de>:
   Version bump. ewarn instead of elog, but only if necessary.
   Follow upstream default order.
 
 *squash_dir-12.4 (01 Dec 2012)
 
-  01 Dec 2012; Martin Väth <martin@mvath.de>
+  01 Dec 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Provide USE for ORDER default
   Print logs instead of making hard dependencies
 
 *squash_dir-12.3 (23 Nov 2012)
 
-  23 Nov 2012; Martin Väth <martin@mvath.de>
+  23 Nov 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Provide USE for ORDER default
 
 *squash_dir-12.2 (17 Nov 2012)
 
-  17 Nov 2012; Martin Väth <martin@mvath.de>
+  17 Nov 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Improve zsh completion support
 
 *squash_dir-12.1 (14 Oct 2012)
 
-  14 Oct 2012; Martin Väth <martin@mvath.de>
+  14 Oct 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Changes default of ORDER, see ChangeLog
 
 *squash_dir-12.0 (15 Sep 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  15 Sep 2012; Martin Väth <martin@mvath.de>
+  15 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squash_dir-11.16 (15 Sep 2012)
 
-  15 Sep 2012; Martin Väth <martin@mvath.de>
+  15 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fix regression in wrapper script
 
 *squash_dir-11.15 (14 Sep 2012)
 
-  14 Sep 2012; Martin Väth <martin@mvath.de>
+  14 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fix regression in wrapper script
 
 *squash_dir-11.14 (12 Sep 2012)
 
-  12 Sep 2012; Martin Väth <martin@mvath.de>
+  12 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Succeed if read-only fallback. New: STOP
 
 *squash_dir-11.13 (06 Sep 2012)
 
-  06 Sep 2012; Martin Väth <martin@mvath.de>
+  06 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squash_dir-11.12 (26 Aug 2012)
 
-  26 Aug 2012; Martin Väth <martin@mvath.de>
+  26 Aug 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Support overlayfs (untested)
 
 *squash_dir-11.11 (29 Jul 2012)
 
-  29 Jul 2012; Martin Väth <martin@mvath.de>
+  29 Jul 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squash_dir-11.10 (07 May 2012)
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  07 May 2012; Martin Väth <martin@mvath.de>
+  07 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squash_dir-11.9 (04 May 2012)
 
-  04 May 2012; Martin Väth <martin@mvath.de>
+  04 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squash_dir-11.8 (27 Apr 2012)
 
-  27 Apr 2012; Martin Väth <martin@mvath.de>
+  27 Apr 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Check for possibly obsolete /etc/mtab.lock
 
 *squash_dir-11.7 (08 Apr 2012)
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  08 Apr 2012; Martin Väth <martin@mvath.de>
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squash_dir-11.6 (29 Feb 2012)
 
-  19 Mar 2012; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
   Use vcs-snapshot.eclass
 
-  29 Feb 2012; Martin Väth <martin@mvath.de>
+  29 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fixes statusline (titlebar) logic
 
 *squash_dir-11.5 (28 Feb 2012)
 
-  28 Feb 2012; Martin Väth <martin@mvath.de>
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squash_dir-11.4 (17 Feb 2012)
 
-  17 Feb 2012; Martin Väth <martin@mvath.de>
+  17 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump. Support soft status line for screen. Care about TERM.
 
 *squash_dir-11.3 (03 Nov 2011)
 
-  03 Nov 2011; Martin Väth <martin@mvath.de>
+  03 Nov 2011; Martin Väth <martin@mvath.de>:
   Version bump. Fix sh -c treatment.
 
 *squash_dir-11.2-r1 (31 Oct 2011)
 
-  31 Oct 2011; Martin Väth <martin@mvath.de>
+  31 Oct 2011; Martin Väth <martin@mvath.de>:
   Change location.
 
 *squash_dir-11.2 (29 Oct 2011)
 
-  29 Oct 2011; Martin Väth <martin@mvath.de>
+  29 Oct 2011; Martin Väth <martin@mvath.de>:
   Version bump. Change location.
 
 *squash_dir-11.1 (22 Oct 2011)
 
-  22 Oct 2011; Martin Väth <martin@mvath.de>
+  22 Oct 2011; Martin Väth <martin@mvath.de>:
   Version bump. Improve squash_dir script (order and alignment)
 
 *squash_dir-11.0 (03 Sep 2011)
 
-  03 Sep 2011; Martin Väth <martin@mvath.de>
+  03 Sep 2011; Martin Väth <martin@mvath.de>:
   Version bump. Support COMPRESSION, default to xz. Update openrc interface.
 
 *squash_dir-10.21 (21 Jan 2011)
 
-  21 Jan 2011; Martin Väth <martin@mvath.de>
+  21 Jan 2011; Martin Väth <martin@mvath.de>:
   Version bump. Support for titlebar
 
 *squash_dir-10.20 (25 Dec 2010)
 
-  04 Jan 2011; Martin Väth <martin@mvath.de>
+  04 Jan 2011; Martin Väth <martin@mvath.de>:
   Bump to EAPI=4.
 
-  25 Dec 2010; Martin Väth <martin@mvath.de>
+  25 Dec 2010; Martin Väth <martin@mvath.de>:
   Version bump. Minor improvements in zsh-completion
 
 *squash_dir-10.19 (21 Dec 2010)
 
-  21 Dec 2010; Martin Väth <martin@mvath.de>
+  21 Dec 2010; Martin Väth <martin@mvath.de>:
   Version bump. Minor fixes in zsh-completion and configure.ac
 
 *squash_dir-10.18 (11 Dec 2010)
 
-  11 Dec 2010; Martin Väth <martin@mvath.de>
+  11 Dec 2010; Martin Väth <martin@mvath.de>:
   Version bump. Allow masks in squash_dir wrapper; minor changes in output
 
 *squash_dir-10.17 (09 Dec 2010)
 
-  09 Dec 2010; Martin Väth <martin@mvath.de>
+  09 Dec 2010; Martin Väth <martin@mvath.de>:
   Version bump. Improve zsh-completion
 
 *squash_dir-10.16 (27 Nov 2010)
 
-  27 Nov 2010; Martin Väth <martin@mvath.de>
+  27 Nov 2010; Martin Väth <martin@mvath.de>:
   Version bump. Provide zsh-completion
 
 *squash_dir-10.15 (26 Nov 2010)
 
-  26 Nov 2010; Martin Väth <martin@mvath.de>
+  26 Nov 2010; Martin Väth <martin@mvath.de>:
   Version bump. Do no longer default to MOUNT_AUFS=-i
 
 *squash_dir-10.14 (24 Nov 2010)
 
-  24 Nov 2010; Martin Väth <martin@mvath.de>
+  24 Nov 2010; Martin Väth <martin@mvath.de>:
   Version bump. Introduce MOUNT_AUFS_OPTS.
   Introduce KILL_FILE and option -k to the squash_dir wrapper script
 
 *squash_dir-10.13 (18 Nov 2010)
 
-  18 Nov 2010; Martin Väth <martin@mvath.de>
+  18 Nov 2010; Martin Väth <martin@mvath.de>:
   Version bump. Introduce option -n to the squash_dir wrapper script
 
 *squash_dir-10.12 (28 Aug 2010)
 
-  28 Aug 2010; Martin Väth <martin@mvath.de>
+  28 Aug 2010; Martin Väth <martin@mvath.de>:
   Version bump. Improve output of the squash_dir wrapper script
 
 *squash_dir-10.11 (15 Aug 2010)
 
-  15 Aug 2010; Martin Väth <martin@mvath.de>
+  15 Aug 2010; Martin Väth <martin@mvath.de>:
   Version bump. Rename squash-dir -> squash_dir.
   Omit spaces in function definition (more compatible).
 
 *squash_dir-10.9 (20 Jul 2010)
 
-  20 Jul 2010; Martin Väth <martin@mvath.de>
+  20 Jul 2010; Martin Väth <martin@mvath.de>:
   Version bump to provide workaround if readlink command is missing
 
 *squash_dir-10.6 (02 Jun 2010)
 
-  02 Jun 2010; Martin Väth <martin@mvath.de>
+  02 Jun 2010; Martin Väth <martin@mvath.de>:
   Version bump to support modified syntax of unionfs-fuse
 
 *squash_dir-10.7 (23 Mar 2010)
 
-  23 May 2010; Martin Väth <martin@mvath.de>
+  23 May 2010; Martin Väth <martin@mvath.de>:
   Version bump to fix regression.
 
 *squash_dir-10.6 (23 Mar 2010)
 
-  23 May 2010; Martin Väth <martin@mvath.de>
+  23 May 2010; Martin Väth <martin@mvath.de>:
   Version bump. Now "stop" (umount) should be more reliable, and a second
   "stop" might succeed, making "zap" unnecessary in many cases.
 
 *squash_dir-10.5 (20 May 2010)
 
-  22 May 2010; Martin Väth <martin@mvath.de>
+  22 May 2010; Martin Väth <martin@mvath.de>:
   Do not require >=unionfs-fuse-0.25_alpha, but print a message
   recommending it if an earlier version is used.
 
-  20 May 2010; Martin Väth <martin@mvath.de>
+  20 May 2010; Martin Väth <martin@mvath.de>:
   Version bump. Depend on >unionfs-fuse-0.24
 
 *squash_dir-10.4 (28 Apr 2010)
 
-  28 Apr 2010; Martin Väth <martin@mvath.de>
+  28 Apr 2010; Martin Väth <martin@mvath.de>:
   Version bump because of a stupid automake bug.
 
 *squash_dir-10.3 (27 Apr 2010)
 
-  27 Apr 2010; Martin Väth <martin@mvath.de>
+  27 Apr 2010; Martin Väth <martin@mvath.de>:
   Version bump. Support USE=readonly, making USE=+unionfs-fuse obsolete.
   Remove USE=hack-squash-utils and warn for previous installs.
   Recommend sys-fs/squashfs-tools[progress-redirect] from mv overlay.
 
 *squash_dir-10.3 (28 Mar 2010)
 
-  01 Apr 2010; Martin Väth <martin@mvath.de>
+  01 Apr 2010; Martin Väth <martin@mvath.de>:
   Update tarball without revbump (remove ebuild from tarball).
 
-  28 Mar 2010; Martin Väth <martin@mvath.de>
+  28 Mar 2010; Martin Väth <martin@mvath.de>:
   import with minor changes from a personal overlay.

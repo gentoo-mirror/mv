@@ -4,20 +4,20 @@
 
 *requestpolicy-0.5.27-r1 (21 Sep 2012)
 
-  21 Sep 2012; Martin Väth <martin@mvath.de>
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5. Revision bump to force slot dependency.
 
 *requestpolicy-0.5.27 (20 Jul 2012)
 
-  20 Jul 2012; Martin Väth <martin@mvath.de>
+  20 Jul 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *requestpolicy-0.5.26 (06 Jul 2012)
 
-  06 Jul 2012; Martin Väth <martin@mvath.de>
+  06 Jul 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *requestpolicy-0.5.25 (13 Apr 2012)
 
-  13 Apr 2012; Martin Väth <martin@mvath.de>
+  13 Apr 2012; Martin Väth <martin@mvath.de>:
   new ebuild from scratch

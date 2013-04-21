@@ -4,63 +4,63 @@
 
 *magus-1.3.3 (28 May 2011)
 
-  21 Sep 2012; Martin Väth <martin@mvath.de>
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  02 Aug 2012; Martin Väth <martin@mvath.de>
+  02 Aug 2012; Martin Väth <martin@mvath.de>:
   Parallelize patching and eautoreconf calls
 
-  01 Jul 2012; Martin Väth <martin@mvath.de>
+  01 Jul 2012; Martin Väth <martin@mvath.de>:
   Use prune_libtool_files --all
 
-  10 Jun 2012; Martin Väth <martin@mvath.de>
+  10 Jun 2012; Martin Väth <martin@mvath.de>:
   Remove support for icecat. Fix postgresql dependency
 
-  06 Jun 2012; Martin Väth <martin@mvath.de>
+  06 Jun 2012; Martin Väth <martin@mvath.de>:
   Use new eutils features prune_libtool_files, doicon
 
-  28 May 2012; Martin Väth <martin@mvath.de>
+  28 May 2012; Martin Väth <martin@mvath.de>:
   Cleaner dependencies and messages for colliding USE-flags.
   Rely on automagic eautopoint. Add support for optional imagemagick.
 
-  17 May 2012; Martin Väth <martin@mvath.de>
+  17 May 2012; Martin Väth <martin@mvath.de>:
   Remove REQUIRED_USE; default to firefox
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  16 Apr 2012; Martin Väth <martin@mvath.de>
+  16 Apr 2012; Martin Väth <martin@mvath.de>:
   Use eautopoint and relax gettext runtime dependency
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base
 
-  13 Mar 2012; Martin Väth <martin@mvath.de>
+  13 Mar 2012; Martin Väth <martin@mvath.de>:
   Fix dependency on dev-cpp/gtkmm: slot 3 is not (yet?) supported upstream.
   Introduce pngcrush useflag.
 
-  30 Sep 2011; Martin Väth <martin@mvath.de>
+  30 Sep 2011; Martin Väth <martin@mvath.de>:
   Fix dependencies, in particular do not require optional media-gfx/pngcrush
 
-  29 May 2011; Martin Väth <martin@mvath.de>
+  29 May 2011; Martin Väth <martin@mvath.de>:
   Add REQUIRED_USE and fix some missing dependencies.
 
-  28 May 2011; Martin Väth <martin@mvath.de>
+  28 May 2011; Martin Väth <martin@mvath.de>:
   Version bump and patch for missing autopoint support.
   Remove old ebuild.
 
 *magus-1.3.1 (10 Mar 2010)
 
-  03 Jan 2011; Martin Väth <martin@mvath.de>
+  03 Jan 2011; Martin Väth <martin@mvath.de>:
   Bump to EAPI=4.
 
-  25 Jul 2010; Martin Väth <martin@mvath.de> :
+  25 Jul 2010; Martin Väth <martin@mvath.de>: :
   Do not install unnecessary .h files.
   mozilla-firefox->firefox.
   USE flags: Add icecat, rename kde->konqueror, pdf->acroread.
   Let firefox USE take precedence.
 
-  31 Mar 2010; Martin Väth <martin@mvath.de> :
+  31 Mar 2010; Martin Väth <martin@mvath.de>: :
   +magus-1.3.1.ebuild +magus-99999999.ebuild -magus-live-1.3.1-r6.ebuild:
   Rename magus-live into magus: Since now some tarball is available and the
   monotone repository is too often inaccessible, we do not install the
@@ -74,56 +74,56 @@
 
 *magus-live-1.3.1 (03 May 2010)
 
-  10 Mar 2010; Martin Väth <martin@mvath.de> :
+  10 Mar 2010; Martin Väth <martin@mvath.de>: :
   magus-live-1.3.1-r6.ebuild: Fix monotone dependency.
 
-  08 Jan 2010; Martin Väth <martin@mvath.de> :
+  08 Jan 2010; Martin Väth <martin@mvath.de>: :
   magus-live-1.3.1-r6.ebuild: Fix postgresql dependency.
 
-  04 Jan 2010; Martin Väth <martin@mvath.de> :
+  04 Jan 2010; Martin Väth <martin@mvath.de>: :
   magus-live-1.3.1-r6.ebuild: Select latest head.
   Remove useless static libs and .la files by default;
   can be overridden by EXTRA_ECONF=--enable-static
 
-  03 Jan 2010; Martin Väth <martin@mvath.de> :
+  03 Jan 2010; Martin Väth <martin@mvath.de>: :
   magus-live-1.3.1-r5.ebuild: Select Christoph's head.
 
-  10 May 2009; Martin Väth <martin@mvath.de> :
+  10 May 2009; Martin Väth <martin@mvath.de>: :
   magus-live-1.3.1-r4.ebuild: Support gcc-4.4
 
-  03 May 2009; Martin Väth <martin@mvath.de> :
+  03 May 2009; Martin Väth <martin@mvath.de>: :
   magus-live-1.3.1-r3.ebuild: Switch to EAPI=2
 
-  03 Dec 2008; Martin Väth <martin@mvath.de> :
+  03 Dec 2008; Martin Väth <martin@mvath.de>: :
   Useflag seamonkey. Put inherit at begin.
   Patch build system to work with --as-needed.
 
-  20 Sep 2008; Martin Väth <martin@mvath.de> :
+  20 Sep 2008; Martin Väth <martin@mvath.de>: :
   Useflag postgres (instead of sqlite with inverted meaning).
   Use firefox/kde as default browser. Introduce USE firefox/kde for dependency.
   Install icons. Use doins -r for doc installing.
   Introduce metadata.xml to explain useflags.
 
-  24 Aug 2008; Martin Väth <martin@mvath.de> :
+  24 Aug 2008; Martin Väth <martin@mvath.de>: :
   Support for sqlite. Warn if patches are not necessary anymore.
   Split configure and make so that separate phases can be used for EAPI=2
   if upstream supports it.
 
-  11 Jul 2008; Martin Väth <martin@mvath.de> :
+  11 Jul 2008; Martin Väth <martin@mvath.de>: :
   Support autotools eclass and filter some bad flags
 
-  22 Dec 2007; Martin Väth <martin@mvath.de> :
+  22 Dec 2007; Martin Väth <martin@mvath.de>: :
   Rather complete rewrite for monotone
 
-  31 Aug 2007; Martin Väth <martin@mvath.de> :
+  31 Aug 2007; Martin Väth <martin@mvath.de>: :
   Patch german gpl tex to use modern style {inputenc} which works with texlive
 
-  20 Nov 2005; Martin Väth <martin@mvath.de> :
+  20 Nov 2005; Martin Väth <martin@mvath.de>: :
   Dependency to media-gfx/pngcrush and compile dependency to virtual/tetex
 
-  19 Nov 2005; Martin Väth <martin@mvath.de> :
+  19 Nov 2005; Martin Väth <martin@mvath.de>: :
   Honor useflag postgres to make dependency on dev-db/postgresql optional
 
-  03 May 2005; Martin Väth <martin@mvath.de> :
+  03 May 2005; Martin Väth <martin@mvath.de>: :
   Initial version from scratch
 

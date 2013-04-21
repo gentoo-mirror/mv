@@ -4,13 +4,13 @@
 
 *cpplint-3.231 (08 Feb 2013)
 
-  08 Feb 2013; Martin Väth <martin@mvath.de>
+  08 Feb 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Follow license renaming.
 
 *cpplint-3.199 (25 Jul 2012)
 
-  21 Sep 2012; Martin Väth <martin@mvath.de>
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  25 Jul 2012; Martin Väth <martin@mvath.de>
+  25 Jul 2012; Martin Väth <martin@mvath.de>:
   New ebuild from scratch.

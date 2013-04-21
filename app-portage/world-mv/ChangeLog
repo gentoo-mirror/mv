@@ -4,68 +4,68 @@
 
 *world-mv-3.10 (11 Nov 2012)
 
-  11 Nov 2012; Martin Väth <martin@mvath.de>
+  11 Nov 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *world-mv-3.9 (06 Sep 2012)
 
-  28 Sep 2012; Martin Väth <martin@mvath.de>
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  06 Sep 2012; Martin Väth <martin@mvath.de>
+  06 Sep 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *world-mv-3.8 (07 May 2012)
 
-  16 Jul 2012; Martin Väth <martin@mvath.de>
+  16 Jul 2012; Martin Väth <martin@mvath.de>:
   Fix for changed vcs-snapshot.eclass behavior.
   Thanks to Chris Slycord <cslycord at gmail.com> for reporting.
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  07 May 2012; Martin Väth <martin@mvath.de>
+  07 May 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fix EPREFIX substitution.
 
 *world-mv-3.7 (20 Apr 2012)
 
-  20 Apr 2012; Martin Väth <martin@mvath.de>
+  20 Apr 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fix EPREFIX substitution.
 
 *world-mv-3.6 (08 Apr 2012)
 
-  08 Apr 2012; Martin Väth <martin@mvath.de>
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *world-mv-3.5 (28 Feb 2012)
 
-  19 Mar 2012; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
   Use vcs-snapshot.eclass
 
-  28 Feb 2012; Martin Väth <martin@mvath.de>
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *world-mv-3.4 (05 Feb 2012)
 
-  05 Feb 2012; Martin Väth <martin@mvath.de>
+  05 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *world-mv-3.3 (03 Feb 2012)
 
-  03 Feb 2012; Martin Väth <martin@mvath.de>
+  03 Feb 2012; Martin Väth <martin@mvath.de>:
   Version bump; POSIX compatible. Do not install README
 
 *world-mv-3.2 (15 Jan 2012)
 
-  15 Jan 2012; Martin Väth <martin@mvath.de>
+  15 Jan 2012; Martin Väth <martin@mvath.de>:
   Version bump to provide grep/sgrep.
 
 *world-mv-3.1 (08 Jan 2012)
 
-  08 Jan 2012; Martin Väth <martin@mvath.de>
+  08 Jan 2012; Martin Väth <martin@mvath.de>:
   Version bump to improve output for copying/skipping.
 
 *world-mv-3.0 (07 Jan 2012)
 
-  07 Jan 2012; Martin Väth <martin@mvath.de>
+  07 Jan 2012; Martin Väth <martin@mvath.de>:
   New ebuild from scratch.

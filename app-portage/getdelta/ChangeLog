@@ -4,51 +4,51 @@
 
 *getdelta-0.7.9-r2 (17 Mar 2013)
 
-  17 Mar 2012; Martin Väth <martin@mvath.de>
+  17 Mar 2012; Martin Väth <martin@mvath.de>:
   Bump without any change to make clear our version is newer as in main tree
 
 *getdelta-0.7.9-r1 (21 Aug 2012)
 
-  21 Sep 2012; Martin Väth <martin@mvath.de>
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
-  21 Aug 2012; Martin Väth <martin@mvath.de>
+  21 Aug 2012; Martin Väth <martin@mvath.de>:
   Upgrade revision without change to be not older than in portage tree
 
 *getdelta-0.7.9 (19 Mar 2012)
 
-  12 May 2012; Martin Väth <martin@mvath.de>
+  12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
-  15 Apr 2012; Martin Väth <martin@mvath.de>
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
   Inherit base.
 
-  19 Mar 2012; Martin Väth <martin@mvath.de>
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
   Upgrade according to version bump in main tree.
 
 *getdelta-0.7.8 (07 Apr 2010)
 
-  03 Jan 2011; Martin Väth <martin@mvath.de>
+  03 Jan 2011; Martin Väth <martin@mvath.de>:
   Bump to EAPI=4.
 
-  27 Sep 2010; Martin Väth <martin@mvath.de>
+  27 Sep 2010; Martin Väth <martin@mvath.de>:
   Improve treatment of fetch errors. Bump to force upgrade.
 
-  14 Sep 2010; Martin Väth <martin@mvath.de>
+  14 Sep 2010; Martin Väth <martin@mvath.de>:
   Support alternative location of make.globals and both locations of make.conf
   Bump to force upgrade.
 
-  27 Aug 2010; Martin Väth <martin@mvath.de>
+  27 Aug 2010; Martin Väth <martin@mvath.de>:
   Fix previous patch. Bump to force upgrade.
 
-  26 Aug 2010; Martin Väth <martin@mvath.de>
+  26 Aug 2010; Martin Väth <martin@mvath.de>:
   Use local name also for dtu file. Bump to force upgrade.
 
-  30 Jun 2010; Martin Väth <martin@mvath.de>
+  30 Jun 2010; Martin Väth <martin@mvath.de>:
   Fix typo in FETCHCOMMAND description
 
-  29 Jun 2010; Martin Väth <martin@mvath.de>
+  29 Jun 2010; Martin Väth <martin@mvath.de>:
   Bump to force upgrade.
 
-  07 Apr 2010; Martin Väth <martin@mvath.de>
+  07 Apr 2010; Martin Väth <martin@mvath.de>:
   Copy from the portage tree and add eapi2.patch; clear previous ChangeLog.

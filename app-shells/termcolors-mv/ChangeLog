@@ -4,12 +4,12 @@
 
 *termcolors-2.0 (23 Mar 2013)
 
-  23 Mar 2013; Martin Väth <martin@mvath.de>
+  23 Mar 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
   Support solarized if SOLARIZED is set for the new dircolors wrapper.
   No file collisions anymore. Make 256colors perl script optional.
 
 *termcolors-1.1 (06 Jan 2013)
 
-  06 Jan 2013; Martin Väth <martin@mvath.de>
+  06 Jan 2013; Martin Väth <martin@mvath.de>:
   New ebuild from scratch.

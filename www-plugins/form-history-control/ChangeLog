@@ -4,100 +4,100 @@
 
 *form-history-control-1.3.0.6 (02 Mar 2013)
 
-  02 Mar 2012; Martin Väth <martin@mvath.de>
+  02 Mar 2012; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.3.0.5 (18 Feb 2013)
 
-  18 Feb 2012; Martin Väth <martin@mvath.de>
+  18 Feb 2012; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.3.0.3 (20 Nov 2012)
 
-  20 Nov 2012; Martin Väth <martin@mvath.de>
+  20 Nov 2012; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.3.0.2-r1 (21 Sep 2012)
 
-  21 Sep 2012; Martin Väth <martin@mvath.de>
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5. Revision bump to force slot dependency.
 
 *form-history-control-1.3.0.2 (20 Jul 2012)
 
-  20 Jul 2012; Martin Väth <martin@mvath.de>
+  20 Jul 2012; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.3.0.1 (06 Jul 2012)
 
-  06 Jul 2012; Martin Väth <martin@mvath.de>
+  06 Jul 2012; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.2.10.3 (07 May 2012)
 
-  07 May 2012; Martin Väth <martin@mvath.de>
+  07 May 2012; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.2.10.2 (29 Jan 2012)
 
-  29 Jan 2012; Martin Väth <martin@mvath.de>
+  29 Jan 2012; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.2.10.1 (30 Nov 2011)
 
-  30 Nov 2011; Martin Väth <martin@mvath.de>
+  30 Nov 2011; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.2.10.0 (26 Nov 2011)
 
-  26 Nov 2011; Martin Väth <martin@mvath.de>
+  26 Nov 2011; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.2.9.3 (30 Jul 2011)
 
-  01 Aug 2011; Martin Väth <martin@mvath.de>
+  01 Aug 2011; Martin Väth <martin@mvath.de>:
   Change to more stable URL.
 
-  30 Jul 2011; Martin Väth <martin@mvath.de>
+  30 Jul 2011; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.2.9.2 (26 Jun 2011)
 
-  26 Jun 2011; Martin Väth <martin@mvath.de>
+  26 Jun 2011; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.2.9.1 (17 May 2011)
 
-  17 May 2011; Martin Väth <martin@mvath.de>
+  17 May 2011; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.2.8.1 (15 Jan 2011)
 
-  15 Jan 2011; Martin Väth <martin@mvath.de>
+  15 Jan 2011; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.2.7 (17 Oct 2010)
 
-  03 Jan 2011; Martin Väth <martin@mvath.de>
+  03 Jan 2011; Martin Väth <martin@mvath.de>:
   Bump to EAPI=4.
 
-  25 Oct 2010; Martin Väth <martin@mvath.de>
+  25 Oct 2010; Martin Väth <martin@mvath.de>:
   Bump properly. Remove old ebuild.
 
-  17 Oct 2010; Martin Väth <martin@mvath.de>
+  17 Oct 2010; Martin Väth <martin@mvath.de>:
   Bump version from sandbox. It is not keyworded, since I did not test it!
 
-  01 Aug 2010; Martin Väth <martin@mvath.de>
+  01 Aug 2010; Martin Väth <martin@mvath.de>:
   Bump revision to force eclass upgrade.
 
-  31 Jul 2010; Martin Väth <martin@mvath.de>
+  31 Jul 2010; Martin Väth <martin@mvath.de>:
   Bump revision to force eclass upgrade.
 
 *form-history-control-1.2.6 (03 Jul 2010)
 
-  03 Jul 2010; Martin Väth <martin@mvath.de>
+  03 Jul 2010; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild.
 
 *form-history-control-1.2.3 (13 Jun 2010)
 
-  13 Jun 2010; Martin Väth <martin@mvath.de>
+  13 Jun 2010; Martin Väth <martin@mvath.de>:
   New ebuild.

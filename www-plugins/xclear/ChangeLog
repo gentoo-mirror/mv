@@ -4,42 +4,42 @@
 
 *xclear-1.8-r1 (21 Sep 2012)
 
-  21 Sep 2012; Martin Väth <martin@mvath.de>
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5. Revision bump to force slot dependency.
 
 *xclear-1.8 (23 Mar 2012)
 
-  02 Apr 2012; Martin Väth <martin@mvath.de>
+  02 Apr 2012; Martin Väth <martin@mvath.de>:
   Fix homepage.
 
-  23 Mar 2012; Martin Väth <martin@mvath.de>
+  23 Mar 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *xclear-1.7 (10 Mar 2012)
 
-  10 Mar 2012; Martin Väth <martin@mvath.de>
+  10 Mar 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *xclear-1.6 (20 Dec 2011)
 
-  20 Dec 2011; Martin Väth <martin@mvath.de>
+  20 Dec 2011; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *xclear-1.4 (21 Mar 2011)
 
-  21 Mar 2011; Martin Väth <martin@mvath.de>
+  21 Mar 2011; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *xclear-1.3 (13 Jun 2010)
 
-  03 Jan 2011; Martin Väth <martin@mvath.de>
+  03 Jan 2011; Martin Väth <martin@mvath.de>:
   Bump to EAPI=4.
 
-  01 Aug 2010; Martin Väth <martin@mvath.de>
+  01 Aug 2010; Martin Väth <martin@mvath.de>:
   Bump revision to force eclass upgrade.
 
-  31 Jul 2010; Martin Väth <martin@mvath.de>
+  31 Jul 2010; Martin Väth <martin@mvath.de>:
   Bump revision to force eclass upgrade.
 
-  13 Jun 2010; Martin Väth <martin@mvath.de>
+  13 Jun 2010; Martin Väth <martin@mvath.de>:
   New ebuild.
