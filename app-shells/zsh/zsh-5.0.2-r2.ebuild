@@ -231,13 +231,14 @@ src_test() {
 	local i
 	addpredict /dev/ptmx
 	for i in C02cond.ztst Y01completion.ztst Y02compmatch.ztst Y03arguments.ztst ; do
-		rm "${S}"/Test/${i} || die
+		rm -- "${S}"/Test/${i} || die
 	done
 	emake check
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install.info
+	emake DESTDIR="${ED}" install install.info
+	rm -- "${ED}/bin/${P%_*}"
 
 	if use run-help
 	then	insinto /usr/share/zsh/site-contrib/help

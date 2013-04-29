@@ -99,7 +99,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake getweb || die "Failed building getweb script"
+	emake getweb
 
 	# remove wget as we got the firmware with portage
 	sed -i -e "s/.*wget .*//" \
@@ -116,7 +116,7 @@ src_compile() {
 	done
 	if [ ${GOT} == 0 ]; then ./getweb all; fi
 
-	emake || die "emake failed"
+	emake
 }
 
 src_install() {
@@ -124,6 +124,5 @@ src_install() {
 
 	use cups && dodir /usr/share/cups/model
 
-	emake DESTDIR="${D}" install install-udev \
-		|| die "emake install failed"
+	emake DESTDIR="${ED}" install install-udev
 }
