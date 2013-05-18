@@ -25,8 +25,16 @@ src_prepare() {
 src_install() {
 	dobin bin/*
 	dodoc README
+	insinto /etc
+	doins etc/*
+	dodir /etc/find_cruft.d
 	if use zsh-completion
 	then	insinto /usr/share/zsh/site-functions
 			doins zsh/_*
 	fi
+}
+
+pkg_postinst() {
+	has_version app-portage/eix || \
+		elog "Installing app-portage/eix will speed up execution time"
 }
