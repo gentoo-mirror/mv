@@ -41,7 +41,7 @@ for completion in \
 	'database _redis-cli _pgsql_utils' \
 	'dev _choc _gradle _geany _manage.py _mvn _pear _play _symfony _thor _vagrant' \
 	'disk _sdd _smartmontools _srm' \
-	'distribute _fab _knife _mussh' \
+	'distribute _fab _knife _mina _mussh' \
 	'dzen _dzen2' \
 	'git _git-flow _git-pulls' \
 	'haskell _cabal' \
@@ -57,7 +57,7 @@ for completion in \
 	'showoff _showoff' \
 	'subtitles _language_codes _periscope _subliminal' \
 	'virtualbox _virtualbox' \
-	'web _coffee _docpad _gradle _heroku _jonas _jmeter _jmeter-plugins _lunar _node _nvm _sbt _scala _svm'
+	'web _coffee _docpad _gradle _heroku _jonas _jmeter _jmeter-plugins _lunar _node _nvm _ralio _sbt _scala _svm'
 do	curr=${completion%% *}
 	case ${curr} in
 	'+'*)
