@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*video-mv-5.15 (27 May 2013)
+
+  27 May 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Remove misleading USE=libav
+
 *video-mv-5.14 (28 Jan 2013)
 
   28 Jan 2013; Martin Väth <martin@mvath.de>:

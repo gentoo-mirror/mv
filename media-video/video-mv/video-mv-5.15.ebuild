@@ -13,11 +13,11 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="libav +title zsh-completion"
+IUSE="+title zsh-completion"
 RDEPEND="app-shells/push
 	title? ( >=app-shells/runtitle-2.3[zsh-completion?] )
-	!libav? ( media-video/mplayer )
-	libav? ( media-video/libav )"
+	media-sound/alsautils
+	|| ( media-video/mplayer[encode] virtual/ffmpeg )"
 DEPEND=""
 
 src_prepare() {
