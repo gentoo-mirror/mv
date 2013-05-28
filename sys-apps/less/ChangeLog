@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*less-459-r1.ebuild (28 May 2013)
+
+  28 May 2013; Martin Väth <martin@mvath.de>:
+  Bump less-select version. Update dependencies
+
 *less-459.ebuild (28 May 2013)
 
   28 May 2013; Martin Väth <martin@mvath.de>:

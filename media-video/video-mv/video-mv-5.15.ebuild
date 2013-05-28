@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+title zsh-completion"
 RDEPEND="app-shells/push
 	title? ( >=app-shells/runtitle-2.3[zsh-completion?] )
-	media-sound/alsautils
+	media-sound/alsa-utils
 	|| ( media-video/mplayer[encode] virtual/ffmpeg )"
 DEPEND=""
 

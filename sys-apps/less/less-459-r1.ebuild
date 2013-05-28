@@ -10,7 +10,7 @@ CODE2COLOR_PV="0.2"
 CODE2COLOR_P="code2color-${CODE2COLOR_PV}"
 DESCRIPTION="Excellent text file viewer, optionally with additional selection feature"
 PATCHN="less-select"
-PATCHV="2.2"
+PATCHV="2.3"
 PATCHVER="436"
 PATCHBALL="${PATCHN}-${PATCHV}.tar.gz"
 HOMEPAGE="http://www.greenwoodsoftware.com/less/ https://github.com/vaeth/${PATCHN}"
@@ -26,7 +26,8 @@ IUSE="+lesspipe +less-select pcre original-gentoo source unicode"
 DEPEND=">=app-misc/editor-wrapper-3
 	>=sys-libs/ncurses-5.2
 	pcre? ( dev-libs/libpcre )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	less-select? ( dev-lang/perl virtual/perl-File-Temp )"
 PDEPEND="lesspipe? ( sys-apps/lesspipe )"
 
 pkg_setup() {
