@@ -47,6 +47,8 @@ RDEPEND='|| ('
 case ${MV_MOZ_MOZILLAS} in
 *fire*)
 	RDEPEND="${RDEPEND}
+	!<www-client/firefox-21
+	!<www-client/firefox-bin-21
 	www-client/firefox:=
 	www-client/firefox-bin:=";;
 esac
@@ -107,8 +109,8 @@ mv_mozextension_src_install() {
 	MV_MOZ_DIR=()
 	b="${EPREFIX%/}/usr/`get_libdir`/"
 	e="${EPREFIX%/}/opt/"
-	mv_mozextension_calc '*fire*' 'www-client/firefox' "${b}firefox"
-	mv_mozextension_calc '*fire*' 'www-client/firefox-bin' "${e}firefox"
+	mv_mozextension_calc '*fire*' 'www-client/firefox' "${b}firefox/browser"
+	mv_mozextension_calc '*fire*' 'www-client/firefox-bin' "${e}firefox/browser"
 	mv_mozextension_calc '*sea*' 'www-client/seamonkey' "${b}seamonkey"
 	mv_mozextension_calc '*sea*' 'www-client/seamonkey-bin' "${e}seamonkey"
 	[ ${#MV_MOZ_DIR[@]} -ne 0 ] || die 'no supported mozilla is installed'
