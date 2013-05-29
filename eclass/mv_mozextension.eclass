@@ -47,16 +47,14 @@ RDEPEND='|| ('
 case ${MV_MOZ_MOZILLAS} in
 *fire*)
 	RDEPEND="${RDEPEND}
-	!<www-client/firefox-21
-	!<www-client/firefox-bin-21
-	www-client/firefox:=
-	www-client/firefox-bin:=";;
+	>=www-client/firefox-21
+	>=www-client/firefox-bin-21";;
 esac
 case ${MV_MOZ_MOZILLAS} in
 *sea*)
 	RDEPEND="${RDEPEND}
-	www-client/seamonkey:=
-	www-client/seamonkey-bin:=";;
+	www-client/seamonkey
+	www-client/seamonkey-bin";;
 esac
 RDEPEND=${RDEPEND}'
 )'

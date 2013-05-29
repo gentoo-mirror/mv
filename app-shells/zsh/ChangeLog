@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*zsh-5.0.2-r3 (29 May 2013)
+
+  29 May 2013; Martin Väth <martin@mvath.de>:
+  Use upstream patches for texinfo-5 and fix-parameter-modifier crash,
+  as in the main gentoo tree. Print messages conditionally as far as possible.
+
 *zsh-5.0.2-r2 (15 Apr 2013)
 
   29 Apr 2013; Martin Väth <martin@mvath.de>:
