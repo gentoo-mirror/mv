@@ -2,6 +2,9 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 May 2013; Martin Väth <martin@mvath.de>:
+  Fix linking without gnome-doc-util. Pull stability from main tree.
+
   28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 
@@ -15,4 +18,4 @@
   Inherit base. Add zlib compatibility patch from main tree.
 
   24 Jan 2012; Martin Väth <martin@mvath.de>:
-  Copy from tree to make dependencies for help optional. Clean old ChangeLog.
+  Copy from tree to make gnome-doc-utils optional. Clean old ChangeLog.

@@ -13,7 +13,7 @@ EAPI=5
 GNOME2_LA_PUNT=yes
 GCONF_DEBUG=no
 
-inherit eutils gnome2 autotools
+inherit autotools eutils gnome2
 
 DESCRIPTION="A international dictionary supporting fuzzy and glob style matching"
 HOMEPAGE="http://code.google.com/p/stardict-3/"
@@ -23,7 +23,7 @@ SRC_URI="http://${PN}-3.googlecode.com/files/${P}.tar.bz2
 
 LICENSE="CPL-1.0 GPL-3 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="espeak gnome gucharmap qqwry pronounce spell tools"
 
 COMMON_DEPEND=">=dev-libs/glib-2.16
@@ -83,13 +83,16 @@ src_prepare() {
 	epatch_user
 	if ! use gnome
 	then	sed -i \
-				-e "s/GNOME_DOC_INIT/GNOME_DOC_INIT([0.32],[:],[:])/" \
-				-e "/AM_GCONF_SOURCE/d" \
-				-e "/help\/Makefile/d" \
+				-e 's/GNOME_DOC_INIT/GNOME_DOC_INIT([0.32],[:],[:])/' \
+				-e '/AM_GCONF_SOURCE/d' \
+				-e '/help\/Makefile/d' \
 				dict/configure.ac
 			sed -i \
-				-e "s/ help / /" \
+				-e 's/ help / /' \
 				dict/Makefile.am
+			sed -i \
+				-e 's/\(libstardict_la_LIBADD = \)/\1 -lgmodule-2.0 /' \
+				dict/src/lib/Makefile.am
 			eautoreconf
 	fi
 	gnome2_src_prepare
