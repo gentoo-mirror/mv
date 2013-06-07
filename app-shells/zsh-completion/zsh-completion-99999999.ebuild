@@ -50,8 +50,9 @@ for completion in \
 	'net _dhcpcd _mosh _socat _ssh-copy-id _vpnc _vnstat' \
 	'perf _perf' \
 	'perl _cpanm' \
+	'primus _primus' \
 	'python _bpython _pip _pygmentize _setup.py' \
-	'ruby _bundle _cap _ditz _gas _gem _github _git-wtf _lunchy _rvm' \
+	'ruby _bundle _cap _ditz _gas _gem _github _git-wtf _lunchy _rails _rvm' \
 	'search _ack _ag' \
 	'session _attach _teamocil _tmuxinator' \
 	'showoff _showoff' \

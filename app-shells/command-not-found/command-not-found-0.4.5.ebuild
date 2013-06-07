@@ -35,6 +35,15 @@ src_prepare() {
 }
 
 src_install() {
-	keepdir /var/lib/cnf
+	dodir /var/lib/cnf
 	cmake-utils_src_install
+}
+
+pkg_postrm() {
+	local a
+	if [ -z "${REPLACED_BY_VERSION}" ] && a="${EPREFIX}/var/lib/cnf" && \
+		test -d "${a}"
+	then	ewarn "removing now unneeded ${a}"
+		rm -rf -- "${a}"
+	fi
 }
