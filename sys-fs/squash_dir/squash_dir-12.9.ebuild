@@ -14,11 +14,11 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="aufs overlayfs +title unionfs-fuse zsh-completion"
+IUSE="aufs overlayfs unionfs-fuse zsh-completion"
 
 RDEPEND="sys-fs/squashfs-tools
 	!<sys-fs/unionfs-fuse-0.25
-	title? ( >=app-shells/runtitle-2.3[zsh-completion?] )
+	>=app-shells/runtitle-2.3[zsh-completion?]
 	unionfs-fuse? ( sys-fs/unionfs-fuse )"
 DEPEND=">=sys-devel/autoconf-2.65"
 

@@ -7,6 +7,9 @@
   28 Jan 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
+  09 Jun 2013; Martin Väth <martin@mvath.de>:
+  Make runtitle mandatory
+
 *squash_dir-12.8 (08 Jan 2013)
 
   14 Jan 2013; Martin Väth <martin@mvath.de>:

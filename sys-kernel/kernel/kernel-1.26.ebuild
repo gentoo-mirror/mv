@@ -17,7 +17,7 @@ IUSE="+title zsh-completion"
 RDEPEND="app-admin/sudo
 	app-admin/sudox
 	app-shells/push
-	title? ( >=app-shells/runtitle-2.3[zsh-completion?] )"
+	>=app-shells/runtitle-2.3[zsh-completion?]"
 DEPEND=""
 
 src_prepare() {

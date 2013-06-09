@@ -16,7 +16,6 @@
 	<use>
 		<flag name="aufs">Prefer aufs</flag>
 		<flag name="overlayfs">Prefer overlayfs</flag>
-		<flag name="title">Support for statusline changes (requires app-shells/runtitle)</flag>
 		<flag name="unionfs-fuse">Prefer unionfs-fuse</flag>
 	</use>
 </pkgmetadata>

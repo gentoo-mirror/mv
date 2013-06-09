@@ -65,7 +65,6 @@ games-rpg/magus:konqueror - Depend on konqueror browser instead of firefox
 games-rpg/magus:pngcrush - Use pngcrush for opimizing png before installation
 games-rpg/magus:postgres - Use postgresql instead of sqlite
 games-rpg/magus:seamonkey - Depend on seamonkey browser instead of firefox
-media-video/video-mv:title - Support for statusline changes (requires app-shells/runtitle)
 net-misc/sshstart:keychain - Pull in keychain as dependency. Not required, but recommended for smoother operation.
 sys-apps/less:less-select - Add the less-select feature (additional options and a binary helper).
 sys-apps/less:lesspipe - Use sys-apps/lesspipe instead of Gentoo's default lesspipe.sh.
@@ -104,13 +103,10 @@ sys-apps/lesspipe:unrtf - Support rtf files with app-text/unrtf
 sys-apps/lesspipe:unzip - Support zip files with app-arch/unzip
 sys-apps/lesspipe:w3m - Support html files with www-client/w3m; ignored if html2text, links, lynx, or elinks is set
 sys-apps/lesspipe:xlhtml - Support Excel and Powerpoint files with app-arch/xlhtml
-sys-apps/starter:title - Support for statusline changes (requires app-shells/runtitle)
 sys-fs/aufs:all-patches - Apply all patches - also those which do not start with aufs
 sys-fs/aufs:kernel-patch - Apply the aufs kernel patches instead of just copying them
 sys-fs/squash_dir:aufs - Prefer aufs
 sys-fs/squash_dir:overlayfs - Prefer overlayfs
-sys-fs/squash_dir:title - Support for statusline changes (requires app-shells/runtitle)
 sys-fs/squash_dir:unionfs-fuse - Prefer unionfs-fuse
 sys-fs/squashfs-tools:progress-redirect - Redirect printing of progress bar to stderr. This gives a nicer output if used from scripts like sys-fs/squash_dir
 sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
-sys-kernel/kernel:title - Support for statusline changes (requires app-shells/runtitle)

@@ -6,7 +6,7 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="A frontend for using mplayer and mencoder as a video recorder"
+DESCRIPTION="Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder"
 HOMEPAGE="https://github.com/vaeth/video-mv/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
@@ -15,9 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+title zsh-completion"
 RDEPEND="app-shells/push
-	title? ( >=app-shells/runtitle-2.3[zsh-completion?] )
-	media-sound/alsa-utils
-	|| ( media-video/mplayer[encode] virtual/ffmpeg )"
+	>=app-shells/runtitle-2.3[zsh-completion?]
+	|| ( ( media-sound/alsa-utils
+			|| ( media-video/mplayer[encode] virtual/ffmpeg ) )
+		media-tv/linuxtv-dvb-apps )"
 DEPEND=""
 
 src_prepare() {
@@ -40,4 +41,13 @@ src_install() {
 			doins zsh/*
 	fi
 	dodoc README
+}
+
+pkg_post_install() {
+	case " ${REPLACING_VERSIONS:-5.}" in
+	' '5.*)
+		elog "If you use dvb-t with zsh completion, you might want to put"
+		elog "zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'"
+		elog "into your ~/.zshrc or /etc/zshrc for case-insensitive matching.";;
+	esac
 }
