@@ -17,8 +17,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="aufs overlayfs unionfs-fuse zsh-completion"
 
 RDEPEND="sys-fs/squashfs-tools
+	!<app-shells/runtitle-2.3
+	zsh-completion? ( app-shells/runtitle[zsh-completion] )
 	!<sys-fs/unionfs-fuse-0.25
-	>=app-shells/runtitle-2.3[zsh-completion?]
 	unionfs-fuse? ( sys-fs/unionfs-fuse )"
 DEPEND=">=sys-devel/autoconf-2.65"
 
@@ -78,4 +79,6 @@ pkg_postinst() {
 	then	elog "For better output of ${PN}, it is recommended to install"
 		elog "sys-fs/squashfs-tools from the mv overlay with USE=progress-redirect"
 	fi
+	has_version app-shells/runtitle || elog \
+		"Install app-shells/runtitle to let ${PN} update the satatus bar"
 }

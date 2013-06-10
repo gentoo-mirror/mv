@@ -7,6 +7,9 @@
   28 Jan 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
+  10 Jun 2013; Martin Väth <martin@mvath.de>:
+  Improve eix message
+
 *trickyfetch-8.0 (21 Jan 2013)
 
   21 Jan 2013; Martin Väth <martin@mvath.de>:

@@ -7,6 +7,9 @@
   18 May 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Create /etc. Warn if eix is not installed.
 
+  10 Jun 2013; Martin Väth <martin@mvath.de>:
+  Improve eix message
+
 *find_cruft-1.0 (16 May 2013)
 
   16 May 2013; Martin Väth <martin@mvath.de>:

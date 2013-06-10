@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+title zsh-completion"
 RDEPEND="app-shells/push
-	>=app-shells/runtitle-2.3[zsh-completion?]
+	!<app-shells/runtitle-2.3
+	zsh-completion? ( app-shells/runtitle[zsh-completion] )
 	|| ( ( media-sound/alsa-utils
 			|| ( media-video/mplayer[encode] virtual/ffmpeg ) )
 		media-tv/linuxtv-dvb-apps )"
@@ -44,6 +45,8 @@ src_install() {
 }
 
 pkg_post_install() {
+	has_version app-shells/runtitle || elog \
+		"Install app-shells/runtitle to let ${PN} update the satatus bar"
 	case " ${REPLACING_VERSIONS:-5.}" in
 	' '5.*)
 		elog "If you use dvb-t with zsh completion, you might want to put"

@@ -7,6 +7,9 @@
   21 Apr 2013; Martin Väth <martin@mvath.de>::
   Version bump, remove old ebuild.
 
+  10 Jun 2013; Martin Väth <martin@mvath.de>:
+  Improve eix message
+
 *logclean-9.0 (20 Apr 2013)
 
   20 Apr 2013; Martin Väth <martin@mvath.de>::

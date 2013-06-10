@@ -7,6 +7,9 @@
   09 Jun 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
+  10 Jun 2013; Martin Väth <martin@mvath.de>:
+  Make runtitle mandatory for USE=zsh-completion, recommend otherwise
+
 *video-mv-5.19 (04 Jun 2013)
 
   04 Jun 2013; Martin Väth <martin@mvath.de>:

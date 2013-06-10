@@ -36,5 +36,5 @@ src_install() {
 
 pkg_postinst() {
 	has_version app-portage/eix || \
-		elog "Installing app-portage/eix will speed up execution time"
+		elog "Installing app-portage/eix will speed up ${PN}"
 }
