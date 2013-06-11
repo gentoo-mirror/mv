@@ -46,7 +46,7 @@ src_install() {
 
 pkg_post_install() {
 	has_version app-shells/runtitle || elog \
-		"Install app-shells/runtitle to let ${PN} update the satatus bar"
+		"Install app-shells/runtitle to let ${PN} update the status bar"
 	case " ${REPLACING_VERSIONS:-5.}" in
 	' '5.*)
 		elog "If you use dvb-t with zsh completion, you might want to put"

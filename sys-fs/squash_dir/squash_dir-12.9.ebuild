@@ -80,5 +80,5 @@ pkg_postinst() {
 		elog "sys-fs/squashfs-tools from the mv overlay with USE=progress-redirect"
 	fi
 	has_version app-shells/runtitle || elog \
-		"Install app-shells/runtitle to let ${PN} update the satatus bar"
+		"Install app-shells/runtitle to let ${PN} update the status bar"
 }
