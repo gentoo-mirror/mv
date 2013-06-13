@@ -21,10 +21,11 @@ SLOT="0"
 KEYWORDS=""
 IUSE="clang debug +dep doc nls optimization security strong-optimization strong-security sqlite swap-remote tools zsh-completion"
 
-RDEPEND="app-shells/push
-	sqlite? ( >=dev-db/sqlite-3 )
+BOTHDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )"
-DEPEND="${RDEPEND}
+RDEPEND="${BOTHDEPEND}
+	app-shells/push"
+DEPEND="${BOTHDEPEND}
 	clang? ( sys-devel/clang )
 	>=sys-devel/gettext-0.18.2"
 
