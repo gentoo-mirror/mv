@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*duckduckgo-0.2.49 (31 Jul 2013)
+
+  31 Jul 2013; Martin Väth <martin@mvath.de>:
+  Bump version. Remove old ebuild.
+
 *duckduckgo-0.2.43 (14 Jul 2013)
 
   14 Jul 2013; Martin Väth <martin@mvath.de>:
