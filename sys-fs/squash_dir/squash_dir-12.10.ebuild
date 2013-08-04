@@ -47,7 +47,7 @@ linux_config_missing() {
 }
 
 pkg_postinst() {
-	local fs=aufs
+	local fs=overlayfs
 	use unionfs-fuse && fs=unionfs-fuse
 	use aufs && fs=aufs
 	use overlayfs && fs=overlayfs
