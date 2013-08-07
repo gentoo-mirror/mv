@@ -230,7 +230,7 @@ generate_run_help() (
 		eend 1
 		eerror "Could not produce all required files for run-help."
 		eerror "This can be caused by a broken locale setting:"
-		eerror "Try to set LC_CTYPE to a utf8 aware locale like en_US.utf8,"
+		eerror "Try to set LC_CTYPE to a utf8 aware locale like en_US.UTF-8,"
 		eerror "making sure that this locale is supported by your glibc."
 		eerror "For compatibility reasons, this ebuild ignores LC_ALL."
 		return false

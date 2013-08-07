@@ -13,19 +13,26 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="perl"
-REDEPEND="perl? ( dev-lang/perl )"
+IUSE="create +perl"
+DEPEND="dev-lang/perl"
+RDEPEND="create? ( dev-lang/perl )
+perl? ( dev-lang/perl )"
 
 src_prepare() {
 	epatch_user
 }
 
+src_compile() {
+	perl bin/DIR_COLORS-create
+}
+
 src_install() {
 	dodoc README
 	dobin bin/dircolors-mv
+	use create && dobin bin/DIR_COLORS-create
 	use perl && dobin bin/256colors
-	insinto /etc
-	doins -r etc/*
+	insinto /etc/dir_colors
+	doins DIR_COLORS*
 }
 
 pkg_postinst() {
