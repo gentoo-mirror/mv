@@ -2,7 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*zshrc-0.8.0, zshrc-99999999 (28 Jan 2013)
+*zsh-completion-20130808.ebuild (09 Aug 2013)
+
+  09 Aug 2013; Martin Väth <martin@mvath.de>:
+  Bump version. Remove old ebuild
+
+*zsh-completion-0.8.0, zsh-completion-99999999 (28 Jan 2013)
 
   07 Jun 2013; Martin Väth <martin@mvath.de>:
   Update live ebuild to new upstream completions.
