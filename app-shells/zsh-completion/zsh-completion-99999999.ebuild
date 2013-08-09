@@ -39,9 +39,9 @@ for completion in \
 	'+Unix _logger' \
 	'bumblebee _optirun' \
 	'database _redis-cli _pgsql_utils' \
-	'dev _choc _gradle _geany _manage.py _mvn _pear _play _symfony _thor _vagrant' \
+	'dev _choc _gradle _geany _manage.py _mvn _pear _play _symfony _thor _vagrant _veewee' \
 	'disk _sdd _smartmontools _srm' \
-	'distribute _fab _knife _mina _mussh' \
+	'distribute _celery _fab _knife _mina _mussh' \
 	'dzen _dzen2' \
 	'git _git-flow _git-pulls' \
 	'haskell _cabal' \
@@ -52,9 +52,9 @@ for completion in \
 	'perl _cpanm' \
 	'primus _primus' \
 	'python _bpython _pip _pygmentize _setup.py' \
-	'ruby _bundle _cap _ditz _gas _gem _github _git-wtf _lunchy _rails _rvm' \
-	'search _ack _ag' \
-	'session _attach _teamocil _tmuxinator' \
+	'ruby _bundle _cap _ditz _gas _gem _github _git-wtf _lunchy _rails _rvm _jekyll' \
+	'search _ack _ag _jq' \
+	'session _attach _teamocil _tmuxinator _wemux' \
 	'showoff _showoff' \
 	'subtitles _language_codes _periscope _subliminal' \
 	'virtualbox _virtualbox' \

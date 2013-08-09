@@ -5,7 +5,7 @@
 *zsh-completion-20130808.ebuild (09 Aug 2013)
 
   09 Aug 2013; Martin Väth <martin@mvath.de>:
-  Bump version. Remove old ebuild
+  Bump version. Remove old ebuild. Add new completion files to USE
 
 *zsh-completion-0.8.0, zsh-completion-99999999 (28 Jan 2013)
 
