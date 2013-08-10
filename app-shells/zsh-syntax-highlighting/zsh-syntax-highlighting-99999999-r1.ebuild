@@ -32,6 +32,9 @@ RDEPEND="app-shells/zsh"
 DEPEND=""
 
 src_prepare() {
+	grep -q 'local .*cdpath_dir' >/dev/null 2>&1 || \
+		sed -i -e '/for cdpath_dir/ilocal cdpath_dir' \
+			-- "${S}/highlighters/main/main-highlighter.zsh" || die
 	epatch_user
 }
 
