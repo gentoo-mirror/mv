@@ -39,7 +39,7 @@ case ${PV} in
 	WANT_LIBTOOL="none"
 	inherit autotools
 	KEYWORDS=""
-	DEPEND="app-doc/yodl"
+	DEPEND="app-text/yodl"
 	PROPERTIES="live"
 	LIVE=:;;
 *)

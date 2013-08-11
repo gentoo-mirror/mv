@@ -4,6 +4,9 @@
 
 *zsh-99999999 (29 May 2013)
 
+  11 Aug 2013; Martin Väth <martin@mvath.de>:
+  app-doc/yodl -> app-text/yodl which is in gentoo tree meanwhile
+
   29 May 2013; Martin Väth <martin@mvath.de>:
   Add live ebuild. Requires app-doc/yodl which is not in the gentoo tree;
   get it e.g. from the betagarden or roslin overlay
