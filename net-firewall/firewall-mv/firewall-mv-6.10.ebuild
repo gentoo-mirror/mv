@@ -4,7 +4,7 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils vcs-snapshot
+inherit eutils systemd vcs-snapshot
 
 DESCRIPTION="Initialize iptables and net-related sysctl variables"
 HOMEPAGE="https://github.com/vaeth/firewall-mv/"
@@ -22,7 +22,8 @@ src_prepare() {
 		-e "s!/etc/!${EPREFIX%/}/etc/!g" \
 		-e "s!/usr/!${EPREFIX%/}/usr/!g" \
 		firewall \
-		firewall.config
+		firewall.config \
+		systemd/*
 	epatch_user
 }
 
@@ -34,4 +35,5 @@ src_install() {
 	doconfd openrc/conf.d/*
 	doinitd openrc/init.d/*
 	dodoc README
+	systemd_dounit systemd/*
 }

@@ -5,7 +5,8 @@
 EAPI=5
 RESTRICT="mirror"
 WANT_LIBTOOL=none
-inherit autotools eutils linux-info vcs-snapshot
+AUTOTOOLS_IN_SOURCE_BUILD=true
+inherit autotools autotools-utils eutils linux-info systemd vcs-snapshot
 
 DESCRIPTION="Keep directories compressed with squashfs. Useful for portage tree, texmf-dist"
 HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367.html"
@@ -27,7 +28,17 @@ src_prepare() {
 	if [ -n "${EPREFIX%/}" ]
 	then	sed -i \
 		-e "s\"'[^']*/etc/conf[.]d/${PN}'\"'${EPREFIX%/}/etc/conf.d/${PN}'\"g" \
-			"init.d/${PN}"
+			"init.d/${PN}" || die
+		sed -i \
+		-e "s\"=/etc/\"=${EPREFIX%/}/etc/\"" \
+		-e "s\"=/usr/\"=${EPREFIX%/}/usr/\"" \
+			"systemd/${PN}@.service" || die
+		sed -i \
+		-e "s\":/usr/sbin:/sbin'\":${EPREFIX%/}/usr/sbin:${EPREFIX%/}/sbin:/usr/sbin:/sbin'\"" \
+			"sbin/${PN}" || die
+		sed -i \
+		-e "s\"'/lib/rc/bin:\":'${EPREFIX%/}/lib/rc/bin:/lib/rc/bin:\"" \
+			"sbin/openrc-wrapper" || die
 	fi
 	epatch_user
 	eautoreconf
@@ -38,8 +49,12 @@ src_configure() {
 	use unionfs-fuse && order=unionfs-fuse
 	use aufs && order=aufs
 	use overlayfs && order=overlayfs
-	econf --docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		"$(use_with zsh-completion)" ${order:+"--with-first-order=${order}"}
+	local myeconfargs=(
+		"$(use_with zsh-completion)"
+		${order:+"--with-first-order=${order}"}
+	)
+	systemd_to_myeconfargs
+	autotools-utils_src_configure
 }
 
 linux_config_missing() {
