@@ -19,8 +19,8 @@ DEPEND=""
 
 src_prepare() {
 	sed -i \
-		-e "s!/etc/!${EPREFIX%/}/etc/!g" \
-		-e "s!/usr/!${EPREFIX%/}/usr/!g" \
+		-e "s!/etc/!${EPREFIX}/etc/!g" \
+		-e "s!/usr/!${EPREFIX}/usr/!g" \
 		firewall \
 		firewall.config \
 		systemd/*

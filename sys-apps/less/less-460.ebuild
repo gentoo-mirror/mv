@@ -50,7 +50,7 @@ src_prepare() {
 	if use less-select
 	then	epatch "${SELECTDIR}/patches/less-${PATCHVER}-select.patch" || die
 		"${SELECTDIR}"/after-patch || die "${SELECTDIR}/after-patch failed"
-		sed -i -e 's|\([^a-zA-Z]\)/etc/less-select-key.bin|\1'"${EPREFIX%/}"'/etc/less/select-key.bin|g' \
+		sed -i -e 's|\([^a-zA-Z]\)/etc/less-select-key.bin|\1'"${EPREFIX}"'/etc/less/select-key.bin|g' \
 			"${SELECTDIR}/bin/less-select" || die
 	fi
 	epatch "${FILESDIR}/${CODE2COLOR_P}.patch"

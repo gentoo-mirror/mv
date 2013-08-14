@@ -2,9 +2,17 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squash_dir-13.1 (15 Aug 2013)
+
+  15 Aug 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix IGNORETOUCH for subdirectories
+
 *squash_dir-13.0 (13 Aug 2013)
 
-  13 Auf 2013; Martin Väth <martin@mvath.de>:
+  14 Aug 2013; Martin Väth <martin@mvath.de>:
+  Simplify EPREFIX usage (without version change)
+
+  13 Aug 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Support systemd
 
 *squash_dir-12.10 (04 Aug 2013)

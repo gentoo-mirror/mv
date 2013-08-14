@@ -4,6 +4,9 @@
 
 *less-460.ebuild (13 Jul 2013)
 
+  14 Aug 2013; Martin Väth <martin@mvath.de>:
+  Simplify EPREFIX (without revision bump)
+
   13 Jul 2013; Martin Väth <martin@mvath.de>:
   Bump less, less-select, and patch version
 

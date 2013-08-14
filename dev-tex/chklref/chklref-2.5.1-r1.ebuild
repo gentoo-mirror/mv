@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-inherit eutils # latex-package
+inherit eutils latex-package
 RESTRICT="mirror"
 
 DESCRIPTION="Finds out useless references in latex files or numbered environments that should not be"
@@ -21,6 +21,14 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch_user
+}
+
+src_configure() {
+	econf --with-texmf-prefix="${EPREFIX}${TEXMF}"
+}
+
+src_compile() {
+	default
 }
 
 src_install() {

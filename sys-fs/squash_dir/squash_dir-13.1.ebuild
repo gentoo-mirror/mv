@@ -25,19 +25,19 @@ RDEPEND="sys-fs/squashfs-tools
 DEPEND=">=sys-devel/autoconf-2.65"
 
 src_prepare() {
-	if [ -n "${EPREFIX%/}" ]
+	if [ -n "${EPREFIX}" ]
 	then	sed -i \
-		-e "s\"'[^']*/etc/conf[.]d/${PN}'\"'${EPREFIX%/}/etc/conf.d/${PN}'\"g" \
+		-e "s\"'[^']*/etc/conf[.]d/${PN}'\"'${EPREFIX}/etc/conf.d/${PN}'\"g" \
 			"init.d/${PN}" || die
 		sed -i \
-		-e "s\"=/etc/\"=${EPREFIX%/}/etc/\"" \
-		-e "s\"=/usr/\"=${EPREFIX%/}/usr/\"" \
+		-e "s\"=/etc/\"=${EPREFIX}/etc/\"" \
+		-e "s\"=/usr/\"=${EPREFIX}/usr/\"" \
 			"systemd/${PN}@.service" || die
 		sed -i \
-		-e "s\":/usr/sbin:/sbin'\":${EPREFIX%/}/usr/sbin:${EPREFIX%/}/sbin:/usr/sbin:/sbin'\"" \
+		-e "s\":/usr/sbin:/sbin'\":${EPREFIX}/usr/sbin:${EPREFIX}/sbin:/usr/sbin:/sbin'\"" \
 			"sbin/${PN}" || die
 		sed -i \
-		-e "s\"'/lib/rc/bin:\":'${EPREFIX%/}/lib/rc/bin:/lib/rc/bin:\"" \
+		-e "s\"'/lib/rc/bin:\":'${EPREFIX}/lib/rc/bin:/lib/rc/bin:\"" \
 			"sbin/openrc-wrapper" || die
 	fi
 	epatch_user

@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="zsh-completion"
 
 src_prepare() {
-	sed -i -e "s'\\(PATH=.\\)/etc'\\1${EPREFIX%/}/etc'" \
+	sed -i -e "s'\\(PATH=.\\)/etc'\\1${EPREFIX}/etc'" \
 		-- "${S}/bin/trickyfetch"
 	epatch_user
 }

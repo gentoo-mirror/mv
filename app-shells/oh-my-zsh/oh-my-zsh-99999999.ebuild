@@ -21,7 +21,7 @@ PROPERTIES="live"
 RDEPEND="app-shells/zsh"
 
 ZSH_DEST="/usr/share/zsh/site-contrib/${PN}"
-ZSH_EDEST="${EPREFIX%/}${ZSH_DEST}"
+ZSH_EDEST="${EPREFIX}${ZSH_DEST}"
 ZSH_TEMPLATE="templates/zshrc.zsh-template"
 
 src_prepare() {

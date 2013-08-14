@@ -4,6 +4,9 @@
 
 *trickyfetch-8.1 (28 Jan 2013)
 
+  14 Aug 2013; Martin Väth <martin@mvath.de>:
+  Simplify EPREFIX (without revision bump)
+
   28 Jan 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

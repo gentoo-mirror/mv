@@ -105,8 +105,8 @@ mv_mozextension_src_install() {
 	local b d e i j k l s
 	MV_MOZ_PKG=()
 	MV_MOZ_DIR=()
-	b="${EPREFIX%/}/usr/`get_libdir`/"
-	e="${EPREFIX%/}/opt/"
+	b="${EPREFIX}/usr/`get_libdir`/"
+	e="${EPREFIX}/opt/"
 	mv_mozextension_calc '*fire*' 'www-client/firefox' "${b}firefox/browser"
 	mv_mozextension_calc '*fire*' 'www-client/firefox-bin' "${e}firefox/browser"
 	mv_mozextension_calc '*sea*' 'www-client/seamonkey' "${b}seamonkey"
