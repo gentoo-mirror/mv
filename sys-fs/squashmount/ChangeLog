@@ -2,7 +2,7 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*squashmount-1.0 (18 Aug 2013)
+*squashmount-1.1 (18 Aug 2013)
 
   18 Aug 2013; Martin Väth <martin@mvath.de>:
   This is the successor of sys-fs/squash_dir
