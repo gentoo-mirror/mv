@@ -15,10 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="zsh-completion"
 
-RDEPEND="dev-lang/perl
-	sys-fs/squashfs-tools
-	!<app-shells/runtitle-2.3
+RDEPEND="!<app-shells/runtitle-2.3
 	zsh-completion? ( app-shells/runtitle[zsh-completion] )
+	dev-lang/perl
+	|| ( dev-perl/File-Which sys-apps/which )
+	sys-fs/squashfs-tools
 	!<sys-fs/unionfs-fuse-0.25"
 DEPEND=""
 
@@ -46,4 +47,6 @@ pkg_postinst() {
 	fi
 	has_version app-shells/runtitle || elog \
 		"Install app-shells/runtitle to let ${PN} update the status bar"
+	has_version dev-perl/File-Which || elog \
+		"${PN} strongly recommends to install dev-perl/File-Which"
 }
