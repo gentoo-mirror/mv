@@ -49,4 +49,8 @@ pkg_postinst() {
 		"Install app-shells/runtitle to let ${PN} update the status bar"
 	has_version dev-perl/File-Which || elog \
 		"${PN} strongly recommends to install dev-perl/File-Which"
+	has_version '>=dev-lang/perl-5.14' || has_version perl-core/Term-ANSIColor || {
+		elog "For colored output install virtual/perl-Term-ANSIColor or"
+		elog "alternatively upgrade to >=dev-lang/perl-5.14"
+	}
 }
