@@ -107,6 +107,7 @@ sys-apps/lesspipe:xlhtml - Support Excel and Powerpoint files with app-arch/xlht
 sys-fs/aufs:all-patches - Apply all patches - also those which do not start with aufs
 sys-fs/aufs:kernel-patch - Apply the aufs kernel patches instead of just copying them
 sys-fs/squash_dir:aufs - Prefer aufs
+sys-fs/squash_dir:bundled-openrc-wrapper - Install the bundled openrc-wrapper
 sys-fs/squash_dir:overlayfs - Prefer overlayfs
 sys-fs/squash_dir:unionfs-fuse - Prefer unionfs-fuse
 sys-fs/squashfs-tools:progress-redirect - Redirect printing of progress bar to stderr. This gives a nicer output if used from scripts like sys-fs/squash_dir

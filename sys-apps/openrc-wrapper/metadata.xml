@@ -11,12 +11,6 @@
 			<name>Martin Väth</name>
 		</maintainer>
 		<bugs-to>mailto:martin@mvath.de</bugs-to>
-		<remote-id type="github">vaeth/squash_dir</remote-id>
+		<remote-id type="github">vaeth/openrc-wrapper</remote-id>
 	</upstream>
-	<use>
-		<flag name="aufs">Prefer aufs</flag>
-		<flag name="overlayfs">Prefer overlayfs</flag>
-		<flag name="unionfs-fuse">Prefer unionfs-fuse</flag>
-		<flag name="bundled-openrc-wrapper">Install the bundled openrc-wrapper</flag>
-	</use>
 </pkgmetadata>

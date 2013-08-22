@@ -15,9 +15,10 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="aufs overlayfs unionfs-fuse zsh-completion"
+IUSE="aufs overlayfs bundled-openrc-wrapper unionfs-fuse zsh-completion"
 
 RDEPEND="sys-fs/squashfs-tools
+	!bundled-openrc-wrapper? ( sys-apps/openrc-wrapper )
 	!<app-shells/runtitle-2.3
 	zsh-completion? ( app-shells/runtitle[zsh-completion] )
 	!<sys-fs/unionfs-fuse-0.25
@@ -51,6 +52,7 @@ src_configure() {
 	use overlayfs && order=overlayfs
 	local myeconfargs=(
 		"$(use_with zsh-completion)"
+		"$(use_enable bundled-openrc-wrapper openrc-wrapper)"
 		${order:+"--with-first-order=${order}"}
 	)
 	systemd_to_myeconfargs

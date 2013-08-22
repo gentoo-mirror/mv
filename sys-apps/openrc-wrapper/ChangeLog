@@ -1,0 +1,9 @@
+# ChangeLog for sys-fs/openrc-wrapper
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*openrc-wrapper-1.1 (22 Aug 2013)
+
+  22 Aug 2013; Martin Väth <martin@mvath.de>:
+  Split script from squash_dir project as it is of independent interest,
+  and the former has squashmount as a successor.
