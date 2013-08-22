@@ -19,6 +19,7 @@ IUSE="aufs overlayfs bundled-openrc-wrapper unionfs-fuse zsh-completion"
 
 RDEPEND="sys-fs/squashfs-tools
 	!bundled-openrc-wrapper? ( sys-apps/openrc-wrapper )
+	bundled-openrc-wrapper? ( !!sys-apps/openrc-wrapper )
 	!<app-shells/runtitle-2.3
 	zsh-completion? ( app-shells/runtitle[zsh-completion] )
 	!<sys-fs/unionfs-fuse-0.25
