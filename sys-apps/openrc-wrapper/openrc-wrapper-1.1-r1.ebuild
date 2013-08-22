@@ -23,6 +23,7 @@ src_prepare() {
 }
 
 src_install() {
+	dodoc README
 	dobin bin/*
 	systemd_dounit systemd/system/*
 	if use zsh-completion
