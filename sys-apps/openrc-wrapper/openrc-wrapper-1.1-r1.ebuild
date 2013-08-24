@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="!!<sys-fs/squash_dir-3.2"
+DEPEND="!!<sys-fs/squash_dir-3.2"
+RDEPEND="${DEPEND}"
 IUSE="zsh-completion"
 
 src_prepare() {

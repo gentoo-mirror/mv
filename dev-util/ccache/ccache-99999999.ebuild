@@ -7,7 +7,7 @@ EAPI=5
 WANT_LIBTOOL=none
 EGIT_REPO_URI="git://git.samba.org/ccache.git"
 [ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit autotools eutils git multilib
+inherit autotools eutils git-2 multilib
 
 DESCRIPTION="fast compiler cache"
 HOMEPAGE="http://ccache.samba.org/"

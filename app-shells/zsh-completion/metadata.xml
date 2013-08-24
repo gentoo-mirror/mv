@@ -31,6 +31,7 @@
 		<flag name="completion_perf">Install zsh completion for dev-util/perf</flag>
 		<flag name="completion_perl">Install zsh completion for perl-related tools</flag>
 		<flag name="completion_python">Install zsh completion for python development tools</flag>
+		<flag name="completion_primus">Install zsh completion for primus</flag>
 		<flag name="completion_ruby">Install zsh completion for ruby tools and tools in ruby</flag>
 		<flag name="completion_search">Install zsh completion for search tools like sys-apps/ack and sys-apps/the_silver_searcher</flag>
 		<flag name="completion_session">Install zsh completion for session-handling frontends</flag>

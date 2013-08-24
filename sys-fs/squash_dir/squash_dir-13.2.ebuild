@@ -17,14 +17,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="aufs overlayfs bundled-openrc-wrapper unionfs-fuse zsh-completion"
 
+BOTHDEPEND="bundled-openrc-wrapper? ( !!sys-apps/openrc-wrapper )"
 RDEPEND="sys-fs/squashfs-tools
 	!bundled-openrc-wrapper? ( sys-apps/openrc-wrapper )
-	bundled-openrc-wrapper? ( !!sys-apps/openrc-wrapper )
+	${BOTHDEPEND}
 	!<app-shells/runtitle-2.3
 	zsh-completion? ( app-shells/runtitle[zsh-completion] )
 	!<sys-fs/unionfs-fuse-0.25
 	unionfs-fuse? ( sys-fs/unionfs-fuse )"
-DEPEND=">=sys-devel/autoconf-2.65"
+DEPEND=">=sys-devel/autoconf-2.65
+	${BOTHDEPEND}"
 
 src_prepare() {
 	if [ -n "${EPREFIX}" ]
