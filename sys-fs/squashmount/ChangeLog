@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squashmount-2.7 (31 Aug 2013)
+
+  31 Aug 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
 *squashmount-2.6 (24 Aug 2013)
 
   24 Aug 2013; Martin Väth <martin@mvath.de>:

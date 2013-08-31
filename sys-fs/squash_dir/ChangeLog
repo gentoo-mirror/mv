@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squash_dir-13.3 (31 Aug 2013)
+
+  31 Aug 2013; Martin Väth <martin@mvath.de>:
+  Recommend alias with noglob
+
 *squash_dir-13.1a (18 Aug 2013)
 
   18 Aug 2013; Martin Väth <martin@mvath.de>:
