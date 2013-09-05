@@ -4,6 +4,10 @@
 
 *squashmount-2.9 (04 Sep 2013)
 
+  05 Sep 2013; Martin Väth <martin@mvath.de>:
+  Depend properly on virtual/perl-* to avoid possible issues with perl-5.18
+  or newer versions.
+
   04 Sep 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fixes breakage with systemd
   (regression of squashmount-2.8)

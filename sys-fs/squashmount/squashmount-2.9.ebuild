@@ -19,6 +19,10 @@ RDEPEND="!<app-shells/runtitle-2.3
 	zsh-completion? ( app-shells/runtitle[zsh-completion] )
 	dev-lang/perl
 	|| ( dev-perl/File-Which sys-apps/which )
+	virtual/perl-File-Path
+	virtual/perl-File-Spec
+	virtual/perl-File-Temp
+	virtual/perl-Getopt-Long
 	sys-fs/squashfs-tools
 	!<sys-fs/unionfs-fuse-0.25"
 DEPEND=""
