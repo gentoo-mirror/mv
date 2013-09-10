@@ -4,6 +4,9 @@
 
 *sudox-3.12 (14 Sep 2012)
 
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
   28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
 

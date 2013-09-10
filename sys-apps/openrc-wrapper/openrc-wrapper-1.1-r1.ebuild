@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="!!<sys-fs/squash_dir-3.2"
 RDEPEND="${DEPEND}"
-IUSE="zsh-completion"
+IUSE=""
 
 src_prepare() {
 	epatch_user
@@ -27,8 +27,6 @@ src_install() {
 	dodoc README
 	dobin bin/*
 	systemd_dounit systemd/system/*
-	if use zsh-completion
-	then	insinto /usr/share/zsh/site-functions
-		doins zsh/*
-	fi
+	insinto /usr/share/zsh/site-functions
+	doins zsh/*
 }

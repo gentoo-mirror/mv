@@ -4,6 +4,9 @@
 
 *openrc-wrapper-1.1-r1 (24 Aug 2013)
 
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
   24 Aug 2013; Martin Väth <martin@mvath.de>:
   Fix blockers
 

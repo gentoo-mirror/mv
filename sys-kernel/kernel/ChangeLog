@@ -4,6 +4,9 @@
 
 *kernel-1.26 (17 Nov 2012)
 
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
   01 Dev 2012; Martin Väth <martin@mvath.de>:
   Remove USE=eix; only log recommendation if appropriate
 

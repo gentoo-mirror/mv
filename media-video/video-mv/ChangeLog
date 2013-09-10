@@ -4,6 +4,9 @@
 
 *video-mv-7.9 (18 Aug 2013)
 
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
   18 Aug 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

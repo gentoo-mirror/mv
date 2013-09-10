@@ -13,7 +13,7 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="zsh-completion"
+IUSE=""
 
 src_prepare() {
 	epatch_user
@@ -23,10 +23,8 @@ src_install() {
 	dosbin sbin/*
 	doinitd openrc/init.d/*
 	doconfd openrc/conf.d/*
-	if use zsh-completion
-	then	insinto /usr/share/zsh/site-functions
-		doins zsh/*
-	fi
+	insinto /usr/share/zsh/site-functions
+	doins zsh/*
 }
 
 pkg_postinst() {

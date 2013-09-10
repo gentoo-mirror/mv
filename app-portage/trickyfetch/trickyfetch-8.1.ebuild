@@ -13,7 +13,7 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="zsh-completion"
+IUSE=""
 
 src_prepare() {
 	sed -i -e "s'\\(PATH=.\\)/etc'\\1${EPREFIX}/etc'" \
@@ -25,10 +25,8 @@ src_install() {
 	dobin bin/*
 	insinto /etc
 	doins etc/*
-	if use zsh-completion
-	then	insinto /usr/share/zsh/site-functions
-			doins zsh/_*
-	fi
+	insinto /usr/share/zsh/site-functions
+	doins zsh/_*
 	dodoc README
 }
 

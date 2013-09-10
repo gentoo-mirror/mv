@@ -13,10 +13,9 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="zsh-completion"
+IUSE=""
 
-RDEPEND="!<app-shells/runtitle-2.3
-	zsh-completion? ( app-shells/runtitle[zsh-completion] )
+RDEPEND=">=app-shells/runtitle-2.3
 	dev-lang/perl
 	|| ( dev-perl/File-Which sys-apps/which )
 	virtual/perl-File-Path
@@ -40,10 +39,8 @@ src_install() {
 	doins etc/*
 	insinto /usr/lib/tmpfiles.d
 	doins tmpfiles.d/*
-	if use zsh-completion
-	then	insinto /usr/share/zsh/site-functions
-		doins zsh/*
-	fi
+	insinto /usr/share/zsh/site-functions
+	doins zsh/*
 }
 
 pkg_postinst() {

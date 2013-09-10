@@ -19,7 +19,7 @@ PROPERTIES="live"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="clang debug +dep doc nls optimization security strong-optimization strong-security sqlite swap-remote tools zsh-completion"
+IUSE="clang debug +dep doc nls optimization security strong-optimization strong-security sqlite swap-remote tools"
 
 BOTHDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )"
@@ -45,7 +45,6 @@ src_prepare() {
 
 src_configure() {
 	econf $(use_with sqlite) $(use_with doc extra-doc) \
-		$(use_with zsh-completion) \
 		$(use_enable nls) $(use_enable tools separate-tools) \
 		$(use_enable security) $(use_enable optimization) \
 		$(use_enable strong-security) \
@@ -54,6 +53,7 @@ src_configure() {
 		$(use_with prefix always-accept-keywords) \
 		$(use_with dep dep-default) \
 		$(use_with clang nongnu-cxx clang++) \
+		--with-zsh-completion \
 		--with-ebuild-sh-default="/usr/$(get_libdir)/portage/bin/ebuild.sh" \
 		--with-portage-rootpath="${ROOTPATH}" \
 		--with-eprefix-default="${EPREFIX}" \

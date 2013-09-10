@@ -13,9 +13,10 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="zsh-completion"
+IUSE=""
 
 RDEPEND="dev-lang/perl
+	|| ( >=dev-lang/perl-5.14 virtual/perl-Term-ANSIColor )
 	virtual/perl-Getopt-Long"
 
 src_prepare() {
@@ -26,10 +27,8 @@ src_install() {
 	dobin "${PN}"
 	insinto /etc
 	doins "${PN}.conf"
-	if use zsh-completion
-	then	insinto /usr/share/zsh/site-functions
-			doins "_${PN}"
-	fi
+	insinto /usr/share/zsh/site-functions
+	doins "_${PN}"
 }
 
 pkg_postinst() {

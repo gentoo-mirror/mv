@@ -4,6 +4,9 @@
 
 *archwrap-1.10 (31 May 2013)
 
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
   31 Sep 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fix preserve defaults
 

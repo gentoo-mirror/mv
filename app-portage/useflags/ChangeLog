@@ -4,6 +4,9 @@
 
 *useflags-3.1 (28 Jan 2013)
 
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
   28 Jan 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

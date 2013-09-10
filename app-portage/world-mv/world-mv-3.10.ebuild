@@ -14,7 +14,7 @@ SRC_URI="http://github.com/vaeth/${mPN}/tarball/release-${PV} -> ${mPN}-${PV}.ta
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="zsh-completion"
+IUSE=""
 S="${WORKDIR}/${mPN}-${PV}"
 
 src_prepare() {
@@ -24,8 +24,6 @@ src_prepare() {
 
 src_install() {
 	dobin "${mPN}"
-	if use zsh-completion
-	then	insinto /usr/share/zsh/site-functions
-			doins _"${mPN}"
-	fi
+	insinto /usr/share/zsh/site-functions
+	doins _"${mPN}"
 }

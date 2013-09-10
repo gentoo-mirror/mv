@@ -4,6 +4,9 @@
 
 *world-mv-3.10 (11 Nov 2012)
 
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
   11 Nov 2012; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

@@ -4,6 +4,9 @@
 
 *trickyfetch-8.1 (28 Jan 2013)
 
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
   14 Aug 2013; Martin Väth <martin@mvath.de>:
   Simplify EPREFIX (without revision bump)
 

@@ -13,7 +13,7 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="zsh-completion"
+IUSE=""
 
 RDEPEND="dev-lang/perl
 	sys-fs/cryptsetup
@@ -32,8 +32,6 @@ src_install() {
 		else	dobin "${i}"
 		fi
 	done
-	if use zsh-completion
-	then	insinto /usr/share/zsh/site-functions
-			doins zsh/*
-	fi
+	insinto /usr/share/zsh/site-functions
+	doins zsh/*
 }

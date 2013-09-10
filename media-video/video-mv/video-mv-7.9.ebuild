@@ -13,10 +13,9 @@ SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="zsh-completion"
+IUSE=""
 RDEPEND="app-shells/push
-	!<app-shells/runtitle-2.3
-	zsh-completion? ( app-shells/runtitle[zsh-completion] )
+	>=app-shells/runtitle-2.3
 	|| ( ( media-sound/alsa-utils
 			|| ( media-video/mplayer[encode] virtual/ffmpeg ) )
 		media-tv/linuxtv-dvb-apps )"
@@ -37,10 +36,8 @@ src_install() {
 	done
 	insinto /etc
 	doins etc/*
-	if use zsh-completion
-	then	insinto /usr/share/zsh/site-functions
-			doins zsh/*
-	fi
+	insinto /usr/share/zsh/site-functions
+	doins zsh/*
 	dodoc README
 }
 

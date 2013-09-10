@@ -13,7 +13,7 @@ SRC_URI="http://www.trapkit.de/tools/${PN}.sh -> ${P}.sh"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="zsh-completion"
+IUSE=""
 S="${WORKDIR}"
 
 src_prepare() {
@@ -22,8 +22,6 @@ src_prepare() {
 
 src_install() {
 	newbin "${DISTDIR}/${P}.sh" "${PN}"
-	if use zsh-completion
-	then	insinto /usr/share/zsh/site-functions
-			doins "${FILESDIR}/_${PN}"
-	fi
+	insinto /usr/share/zsh/site-functions
+	doins "${FILESDIR}/_${PN}"
 }
