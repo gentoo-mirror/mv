@@ -2,6 +2,9 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Sep 2013; Martin Väth <martin@mvath.de>:
+  Bump to git-r3.eclass. Remove support for aufs2
+
   17 Dec 2012; Martin Väth <martin@mvath.de>:
   Add patch for hardened-sources-3.7.0. Improve documentation.
   Special case of kernel-3.7 branch name.

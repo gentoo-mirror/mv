@@ -3,19 +3,16 @@
 # $Header: $
 
 EAPI=5
-EGIT_REPO_URI="http://git.c3sl.ufpr.br/pub/scm/aufs/aufs2-util.git"
-EGIT_BRANCH="aufs2.1"
-EGIT_COMMIT=${EGIT_BRANCH}
-EGIT_HAS_SUBMODULES=true
-[ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit eutils git-2 linux-info multilib
+EGIT_REPO_URI="git://aufs.git.sourceforge.net/gitroot/aufs/aufs-util.git"
+EGIT_BRANCH="aufs3.9"
+inherit eutils git-r3 linux-info multilib
 
 DESCRIPTION="Userspace tools for aufs"
 HOMEPAGE="http://aufs.sourceforge.net/"
 SRC_URI=""
 
 LICENSE="GPL-2"
-SLOT="0/2"
+SLOT="0/3.9"
 # Since this is a live ebuild, we require ACCEPT_KEYWORDS='**'
 #KEYWORDS="~amd64 ~x86"
 KEYWORDS=""
@@ -34,7 +31,7 @@ src_prepare() {
 		die "You might need to emerge >=sys-fs/aufs-99999999::mv"
 	}
 	l="s|/usr/lib|$(get_libdir)|"
-	sed -i -e "1iCFLAGS += -I./local_kernel" -e "${l}" Makefile || \
+	sed -i -e "1iCFLAGS += -I./local_kernel -include linux/compiler.h" -e "${l}" Makefile || \
 		die "Patching Makefile failed"
 	for i in lib*/Makefile
 	do	test -e "${i}" || continue

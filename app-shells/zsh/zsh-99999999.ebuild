@@ -33,9 +33,7 @@ HOMEPAGE="http://www.zsh.org/"
 case ${PV} in
 9999*)
 	EGIT_REPO_URI="git://git.code.sf.net/p/zsh/code"
-	EGIT_PROJECT="${PN}"
-	[ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-	inherit git-2
+	inherit git-r3
 	WANT_LIBTOOL="none"
 	inherit autotools
 	KEYWORDS=""

@@ -3,21 +3,16 @@
 # $Header: $
 
 EAPI=5
-EGIT_REPO_URI="http://git.c3sl.ufpr.br/pub/scm/aufs/aufs2-standalone.git"
-EGIT_PROJECT="aufs2.git"
-# BRANCH/COMMIT will be overridden in pkg_setup (according to kernel version)
-EGIT_BRANCH="aufs2.2"
-EGIT_COMMIT=${EGIT_BRANCH}
-EGIT_HAS_SUBMODULES=true
-[ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-inherit eutils git-2 linux-info
+EGIT_REPO_URI="git://aufs.git.sourceforge.net/gitroot/aufs/aufs3-standalone.git"
+EGIT_BRANCH="aufs3.0"
+inherit eutils git-r3 linux-info
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
 SRC_URI=""
 
 LICENSE="GPL-2"
-SLOT="0/2"
+SLOT="0/3"
 # Since this is a live ebuild with unstable versions in portage we require
 # that the user unmasks this ebuild with ACCEPT_KEYWORDS='**'
 #KEYWORDS="~amd64 ~x86"
@@ -67,7 +62,7 @@ apply_my_patchlist() {
 	fi
 	set --
 	for i in "${my_patchlist[@]}"
-	do	if use all-patches || case ${i} in
+	do	if use all-patches || case "${i}" in
 		aufs*)
 			:;;
 		*)
@@ -84,7 +79,6 @@ apply_my_patchlist() {
 }
 
 pkg_setup() {
-	local msg
 	linux-info_pkg_setup
 
 	# kernel version check
@@ -99,24 +93,27 @@ pkg_setup() {
 	then	EGIT_BRANCH="${AUFSBRANCH}"
 	else	if kernel_is lt 3 0
 		then	[ -n "${KV_PATCH}" ] && EGIT_BRANCH="aufs2.2-${KV_PATCH}"
-		else	[ -n "${KV_MINOR}" ] && EGIT_BRANCH="aufs2.2-${KV_MAJOR}.${KV_MINOR}"
+		else	[ -n "${KV_MINOR}" ] && EGIT_BRANCH="aufs${KV_MAJOR}.${KV_MINOR}"
 		fi
+		case ${EGIT_BRANCH} in
+		aufs3.7)
+			EGIT_BRANCH="aufs3.x-rcN";;
+		esac
 	fi
 	elog
 	elog "Using aufs branch: ${EGIT_BRANCH}"
 	elog "If this guess for the branch is wrong, set AUFSBRANCH."
-	elog "For example, to use the aufs2.2 branch for kernel version 3.0, use:"
-	elog "	AUFSBRANCH=aufs2.2-3.0 emerge -1 aufs"
-	elog "To use the aufs2.1 branch for kernel version 2.6.39 use:"
-	elog "	AUFSBRANCH=aufs2.1-39 emerge -1 aufs"
-	msg=
-	if [ -n "${msg}" ]
-	then
+	elog "For example, to use the aufs3.0 branch for kernel version 3.0, use:"
+	elog "	AUFSBRANCH=aufs3.0 emerge -1 aufs"
+	elog
+	elog "To find out names of testing branches you might want to use"
+	elog "( cd ${EGIT_DIR} && git log --decorate --graph --all --full-history )"
+	if [ -n "${EVCS_OFFLINE}" ]
+	then	elog
 		elog "Note that it might be necessary in addition to fetch the newest aufs:"
-		elog "Set ${msg# } and be sure to be online during emerge."
+		elog "Set EVCS_OFFLINE='' in the environment and be online during emerge."
 	fi
 	elog
-	EGIT_COMMIT=${EGIT_BRANCH}
 
 	use kernel-patch || return 0
 	(
@@ -129,7 +126,7 @@ pkg_setup() {
 src_prepare() {
 	local i j w v newest all
 	epatch_user
-	all="2.9.1 2.2.0 2.2.1 2.2.2 2.2.2.r1"
+	all="2.2.0 2.2.1 2.2.2 2.2.2.r1 2.9.1"
 	newest=${all##* }
 	v=
 	for i in ${GRSECURITYPATCHVER-+}
@@ -145,7 +142,7 @@ src_prepare() {
 			done
 			if ${w}
 			then	warn "GRSECURITYPATCHVER contains bad version ${i}"
-			else	j=${i}
+			else	j="${i}"
 			fi;;
 		esac
 		v="${v} ${j}"

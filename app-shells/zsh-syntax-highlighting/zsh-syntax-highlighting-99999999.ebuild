@@ -9,8 +9,7 @@ inherit eutils
 case ${PV} in
 99999999*)
 	EGIT_REPO_URI="git://github.com/zsh-users/${PN}.git"
-	[ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-	inherit git-2
+	inherit git-r3
 	PROPERTIES="live"
 	SRC_URI=""
 	KEYWORDS="";;

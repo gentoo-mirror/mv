@@ -11,10 +11,8 @@ case ${PV} in
 99999999*)
 	LIVE=:
 	EGIT_REPO_URI="git://github.com/hchbaw/${mPN}.git"
-	EGIT_PROJECT="${PN}.git"
 	EGIT_BRANCH="pu"
-	[ -n "${EVCS_OFFLINE}" ] || EGIT_REPACK=true
-	inherit git-2
+	inherit git-r3
 	PROPERTIES="live"
 	SRC_URI=""
 	KEYWORDS="";;

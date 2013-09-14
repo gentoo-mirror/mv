@@ -1,1 +1,1 @@
-auto-fu-zsh-99999999-r2.ebuild
+auto-fu-zsh-99999999.ebuild
