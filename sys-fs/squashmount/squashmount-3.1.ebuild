@@ -53,8 +53,12 @@ pkg_postinst() {
 	has_version dev-perl/File-Which || elog \
 		"${PN} strongly recommends to install dev-perl/File-Which."
 	has_version '>=dev-lang/perl-5.14' || has_version perl-core/Term-ANSIColor || {
-		elog "For colored output install virtual/perl-Term-ANSIColor or"
-		elog "alternatively upgrade to >=dev-lang/perl-5.14"
+		elog "For colored output upgrade to >=dev-lang/perl-5.14 or"
+		elog "alternatively install virtual/perl-Term-ANSIColor"
+	}
+	has_version '>=dev-lang/perl-5.12' || has_version virtual/perl-IO-Compress || {
+		elog "For using ? or ?? attributes upgrade to >=dev-lang/perl-5.12 or"
+		elog "alternatively install virtual/perl-IO-Compress"
 	}
 	case " ${REPLACING_VERSIONS}" in
 	' '[0-9][0-9]*|' '[3-9]*|' '2.[0-9][0-9]*|' '2.[7-9]*) :;;
