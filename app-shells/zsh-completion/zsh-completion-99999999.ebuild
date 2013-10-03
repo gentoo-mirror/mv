@@ -50,7 +50,7 @@ for completion in \
 	'perl _cpanm' \
 	'primus _primus' \
 	'python _bpython _pip _pygmentize _setup.py' \
-	'ruby _bundle _cap _ditz _gas _gem _github _git-wtf _lunchy _rails _rvm _jekyll' \
+	'ruby _bundle _cap _ditz _gas _gem _gist _github _git-wtf _lunchy _rails _rvm _jekyll' \
 	'search _ack _ag _jq' \
 	'session _attach _teamocil _tmuxinator _wemux' \
 	'showoff _showoff' \
