@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
+	virtual/perl-File-Spec
 	virtual/perl-Getopt-Long
 	virtual/perl-Digest-MD5"
 

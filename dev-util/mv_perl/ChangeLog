@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*noscript-2.16 (04 Oct 2013)
+
+  04 OCt 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Update dependencies
+
 *noscript-2.15 (18 Aug 2013)
 
   10 Sep 2013; Martin Väth <martin@mvath.de>:
