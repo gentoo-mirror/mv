@@ -4,7 +4,7 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils vcs-snapshot
+inherit eutils systemd vcs-snapshot
 
 DESCRIPTION="Scripts to support compressed swap devices or ramdisks with zram"
 HOMEPAGE="https://github.com/vaeth/zram-init/"
@@ -23,13 +23,16 @@ src_install() {
 	dosbin sbin/*
 	doinitd openrc/init.d/*
 	doconfd openrc/conf.d/*
+	systemd_dounit systemd/system/*
+	insinto /etc/modprobe.d
+	doins etc/modprobe.d/*
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
 }
 
 pkg_postinst() {
-	elog
 	elog "To use zram, activate it in your kernel and add it to default runlevel:"
-	elog "rc-config add zram default"
-	elog
+	elog "	rc-config add zram default"
+	elog "If you use systemd enable zram_swap, tmp, and/or var_tmp with systemctl."
+	elog "You might need to modify /etc/modprobe.d/zram.conf"
 }
