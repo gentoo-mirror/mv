@@ -25,7 +25,7 @@ src_install() {
 	doconfd openrc/conf.d/*
 	systemd_dounit systemd/system/*
 	insinto /etc/modprobe.d
-	doins etc/modprobe.d/*
+	doins modprobe.d/*
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
 }
