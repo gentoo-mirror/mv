@@ -34,6 +34,8 @@ src_install() {
 	doins firewall.config
 	insinto /usr/lib/modules-load.d
 	doins modules-load.d/*
+	insinto /usr/share/zsh/site-functions
+	doins zsh/*
 	doconfd openrc/conf.d/*
 	doinitd openrc/init.d/*
 	dodoc README

@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*firewall-mv-7.0 (11 Oct 2013)
+
+  11 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
 *firewall-mv-6.11 (09 Sep 2013)
 
   09 Sep 2013; Martin Väth <martin@mvath.de>:
