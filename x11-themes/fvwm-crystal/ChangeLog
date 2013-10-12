@@ -1,0 +1,9 @@
+# ChangeLog for x11-themes/fvwm-crystal
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*fvwm-crystal-3.2.7 (12 Oct 2013)
+
+  12 Oct 2013; Martin Väth <martin@mvath.de>:
+  Fork from main tree to get earlier revbump: In particular, bashisms are
+  fixed in newer versions of fvwm-crystal. Removing previous ChangeLog.

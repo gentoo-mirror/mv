@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-inherit eutils
+inherit eutils readme.gentoo
 
 DESCRIPTION="dynamic deltup client"
 HOMEPAGE="http://linux01.gwdg.de/~nlissne/"
@@ -17,6 +17,11 @@ S="${WORKDIR}"
 RDEPEND="app-portage/deltup
 	dev-util/bdelta"
 
+DISABLE_AUTOFORMATTING="true"
+DOC_CONTENTS="You need to put
+FETCHCOMMAND=\"/usr/bin/getdelta.sh \\\"\\\${URI}\\\" \\\"\\\${FILE}\\\"\"
+into your /etc/make.conf to make use of getdelta"
+
 src_prepare() {
 	epatch "${FILESDIR}/eapi2.patch"
 	sed -i -e "s:/bin/sh:/bin/bash:" getdelta.sh || die
@@ -25,14 +30,11 @@ src_prepare() {
 
 src_install() {
 	dobin "${WORKDIR}"/getdelta.sh
+	readme.gentoo_src_install
 }
 
 pkg_postinst() {
 	local a b
-	elog "You need to put"
-	elog "FETCHCOMMAND=\"/usr/bin/getdelta.sh \\\"\\\${URI}\\\" \\\"\\\${FILE}\\\"\""
-	elog "into your /etc/make.conf to make use of getdelta"
-
 	# make sure permissions are ok
 	a="${EROOT}"/var/log/getdelta.log
 	b="${EROOT}"/etc/deltup
@@ -40,4 +42,5 @@ pkg_postinst() {
 	mkdir -p -- "${b}"
 	use prefix || chown -R portage:portage -- "${a}" "${b}"
 	chmod -R ug+rwX -- "${a}" "${b}"
+	readme.gentoo_pkg_postinst
 }

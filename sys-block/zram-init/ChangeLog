@@ -4,6 +4,9 @@
 
 *zram-init-2.6.ebuild (11 Oct 2013)
 
+  12 Oct 2013; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
   11 Oct 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fixes umounting
 

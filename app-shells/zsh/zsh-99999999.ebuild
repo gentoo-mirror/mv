@@ -7,7 +7,7 @@ EAPI=5
 # doc package for -dev version exists?
 doc_available=true
 
-inherit eutils flag-o-matic multilib prefix
+inherit eutils flag-o-matic multilib prefix readme.gentoo
 
 MY_PV=${PV/_p/-dev-}
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -86,6 +86,31 @@ DEPEND="${DEPEND}
 PDEPEND="
 	examples? ( app-doc/zsh-lovers )
 "
+
+DISABLE_AUTOFORMATTING="true"
+DOC_CONTENTS="
+If you want to enable Portage completions and Gentoo prompt,
+emerge app-shells/zsh-completion and add
+	autoload -U compinit promptinit
+	compinit
+	promptinit; prompt gentoo
+to your ~/.zshrc
+
+Also, if you want to enable cache for the completions, add
+	zstyle ':completion::complete:*' use-cache 1
+to your ~/.zshrc
+"
+
+pkg_setup() {
+	if use run-help
+	then	DOC_CONTENTS="
+If you want to use run-help add to your ~/.zshrc
+	unalias run-help
+	autoload -Uz run-help
+	HELPDIR=/usr/share/zsh/site-contrib/help
+${DOC_CONTENTS}"
+	fi
+}
 
 src_prepare() {
 	# fix zshall problem with soelim
@@ -279,6 +304,7 @@ src_install() {
 	done
 
 	dodoc ChangeLog* META-FAQ NEWS README config.modules
+	readme.gentoo_src_install
 
 	if use doc ; then
 		pushd "${WORKDIR}/${PN}-${PV%_*}" >/dev/null
@@ -290,34 +316,4 @@ src_install() {
 
 	docinto StartupFiles
 	dodoc StartupFiles/z*
-}
-
-pkg_postinst() {
-	if use run-help ; then
-		# In order to avoid confusion of the user, we print the following
-		# unconditionally even if an older version of zsh was installed:
-		# This older version might be without support for USE=run-help -
-		# we cannot tell from the version number in ${REPLACING_VERSIONS}
-		# alone and has_version does not work here as desired.
-		elog
-		elog "If you want to use run-help add to your ~/.zshrc"
-		elog "	unalias run-help"
-		elog "	autoload -Uz run-help"
-		elog "	HELPDIR=/usr/share/zsh/site-contrib/help"
-	fi
-	if [[ -z ${REPLACING_VERSIONS} ]] ; then
-		# should link to http://www.gentoo.org/doc/en/zsh.xml
-		elog
-		elog "If you want to enable Portage completions and Gentoo prompt,"
-		elog "emerge app-shells/zsh-completion and add"
-		elog "	autoload -U compinit promptinit"
-		elog "	compinit"
-		elog "	promptinit; prompt gentoo"
-		elog "to your ~/.zshrc"
-		elog
-		elog "Also, if you want to enable cache for the completions, add"
-		elog "	zstyle ':completion::complete:*' use-cache 1"
-		elog "to your ~/.zshrc"
-		elog
-	fi
 }

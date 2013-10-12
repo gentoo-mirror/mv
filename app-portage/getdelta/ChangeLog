@@ -4,6 +4,9 @@
 
 *getdelta-0.7.9-r2 (17 Mar 2013)
 
+  12 Oct 2013; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
   17 Mar 2012; Martin Väth <martin@mvath.de>:
   Bump without any change to make clear our version is newer as in main tree
 

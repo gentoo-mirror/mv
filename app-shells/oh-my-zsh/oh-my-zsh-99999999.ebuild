@@ -5,7 +5,7 @@
 EAPI=5
 
 EGIT_REPO_URI="git://github.com/robbyrussell/${PN}.git"
-inherit eutils git-r3
+inherit eutils git-r3 readme.gentoo
 
 DESCRIPTION="A ready-to-use zsh configuration with plugins"
 HOMEPAGE="https://github.com/robbyrussell/oh-my-zsh"
@@ -23,6 +23,12 @@ ZSH_DEST="/usr/share/zsh/site-contrib/${PN}"
 ZSH_EDEST="${EPREFIX}${ZSH_DEST}"
 ZSH_TEMPLATE="templates/zshrc.zsh-template"
 
+DISABLE_AUTOFORMATTING="true"
+DOC_CONTENTS="In order to use ${CATEGORY}/${PN} add to your ~/.zshrc
+source '${ZSH_DEST}/${ZSH_TEMPLATE}'
+or copy a modification of that file to your ~/.zshrc
+If you just want to try, enter the above command in your zsh."
+
 src_prepare() {
 	local i
 	for i in "${S}"/tools/*install* "${S}"/tools/*upgrade*
@@ -39,11 +45,5 @@ src_prepare() {
 src_install() {
 	insinto "${ZSH_DEST}"
 	doins -r *
-}
-
-pkg_postinst() {
-	elog "In order to use ${CATEGORY}/${PN} add to your ~/.zshrc"
-	elog "source '${ZSH_DEST}/${ZSH_TEMPLATE}'"
-	elog "or copy a modification of that file to your ~/.zshrc"
-	elog "If you just want to try, enter the above command in your zsh."
+	readme.gentoo_src_install
 }

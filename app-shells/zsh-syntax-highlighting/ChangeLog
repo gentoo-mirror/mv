@@ -4,6 +4,9 @@
 
 *zsh-syntax-highlighting-0.2.0, -99999999 (14 Sep 2013)
 
+  12 Oct 2013; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
   14 Sep 2013; Martin Väth <martin@mvath.de>:
   Rename back. Bump to git-r3.eclass
 

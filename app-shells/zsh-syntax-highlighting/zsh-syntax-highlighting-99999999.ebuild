@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils
+inherit eutils readme.gentoo
 
 case ${PV} in
 99999999*)
@@ -30,6 +30,12 @@ IUSE=""
 RDEPEND="app-shells/zsh"
 DEPEND=""
 
+DISABLE_AUTOFORMATTING="true"
+DOC_CONTENTS="In order to use ${CATEGORY}/${PN} add
+. /usr/share/zsh/site-contrib/${PN}/zsh-syntax-highlighting.zsh
+at the end of your ~/.zshrc
+For testing, you can also execute the above command in your zsh."
+
 src_prepare() {
 	grep -q 'local .*cdpath_dir' >/dev/null 2>&1 || \
 		sed -i -e '/for cdpath_dir/ilocal cdpath_dir' \
@@ -42,12 +48,5 @@ src_install() {
 	insinto /usr/share/zsh/site-contrib/${PN}
 	doins *.zsh
 	doins -r highlighters
-}
-
-pkg_postinst() {
-	[ -n "${REPLACING_VERSIONS}" ] && return
-	elog "In order to use ${CATEGORY}/${PN} add"
-	elog ". /usr/share/zsh/site-contrib/${PN}/zsh-syntax-highlighting.zsh"
-	elog "at the end of your ~/.zshrc"
-	elog "For testing, you can also execute the above command in your zsh."
+	readme.gentoo_src_install
 }

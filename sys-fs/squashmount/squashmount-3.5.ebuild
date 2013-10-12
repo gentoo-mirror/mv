@@ -4,7 +4,7 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils systemd vcs-snapshot
+inherit eutils readme.gentoo systemd vcs-snapshot
 
 DESCRIPTION="Keep directories compressed with squashfs. Useful for portage tree, texmf-dist"
 HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367.html"
@@ -26,6 +26,11 @@ RDEPEND=">=app-shells/runtitle-2.3
 	!<sys-fs/unionfs-fuse-0.25"
 DEPEND=""
 
+DISABLE_AUTOFORMATTING="true"
+DOC_CONTENTS="Please adapt /etc/squashmount.pl to your needs.
+It is recommended to put into your zshrc the line:
+alias squashmount='noglob squashmount'"
+
 src_prepare() {
 	epatch_user
 }
@@ -41,6 +46,7 @@ src_install() {
 	doins tmpfiles.d/*
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
+	readme.gentoo_src_install
 }
 
 pkg_postinst() {
@@ -62,7 +68,7 @@ pkg_postinst() {
 	}
 	case " ${REPLACING_VERSIONS}" in
 	' '[0-9][0-9]*|' '[3-9]*|' '2.[0-9][0-9]*|' '2.[7-9]*) :;;
-	*)	elog "It is recommended to put into your zshrc the line:"
-		elog "alias squashmount='noglob squashmount'";;
+	*)	FORCE_PRINT_ELOG="true";;
 	esac
+	readme.gentoo_pkg_postinst
 }

@@ -4,6 +4,9 @@
 
 *squashmount-3.5 (09 Oct 2013)
 
+  12 Oct 2013; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
   09 Oct 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

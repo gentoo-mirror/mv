@@ -4,7 +4,7 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils vcs-snapshot
+inherit eutils readme.gentoo vcs-snapshot
 
 DESCRIPTION="Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder"
 HOMEPAGE="https://github.com/vaeth/video-mv/"
@@ -20,6 +20,11 @@ RDEPEND="app-shells/push
 			|| ( media-video/mplayer[encode] virtual/ffmpeg ) )
 		media-tv/linuxtv-dvb-apps )"
 DEPEND=""
+
+DISABLE_AUTOFORMATTING="true"
+DOC_CONTENTS="If you use dvb-t with zsh completion, you might want to put
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+into your ~/.zshrc or /etc/zshrc for case-insensitive matching."
 
 src_prepare() {
 	epatch_user
@@ -39,15 +44,11 @@ src_install() {
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
 	dodoc README
+	readme.gentoo_src_install
 }
 
-pkg_post_install() {
+pkg_postinst() {
 	has_version app-shells/runtitle || elog \
 		"Install app-shells/runtitle to let ${PN} update the status bar"
-	case " ${REPLACING_VERSIONS:-5.}" in
-	' '5.*)
-		elog "If you use dvb-t with zsh completion, you might want to put"
-		elog "zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'"
-		elog "into your ~/.zshrc or /etc/zshrc for case-insensitive matching.";;
-	esac
+	readme.gentoo_pkg_postinst
 }
