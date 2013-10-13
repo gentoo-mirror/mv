@@ -25,7 +25,7 @@ RDEPEND="${BOTHDEPEND}
 	app-shells/push"
 DEPEND="${BOTHDEPEND}
 	clang? ( sys-devel/clang )
-	>=sys-devel/gettext-0.18.2"
+	>=sys-devel/gettext-0.18.3"
 
 pkg_setup() {
 	case " ${REPLACING_VERSIONS}" in
