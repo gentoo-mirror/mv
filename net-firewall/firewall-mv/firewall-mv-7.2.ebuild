@@ -21,17 +21,17 @@ src_prepare() {
 	sed -i \
 		-e "s!/etc/!${EPREFIX}/etc/!g" \
 		-e "s!/usr/!${EPREFIX}/usr/!g" \
-		firewall \
-		firewall.config \
+		sbin/* \
+		etc/* \
 		systemd/*
 	epatch_user
 }
 
 src_install() {
 	into /
-	dosbin firewall sysctl.net
+	dosbin sbin/*
 	insinto /etc
-	doins firewall.config
+	doins etc/*
 	insinto /usr/lib/modules-load.d
 	doins modules-load.d/*
 	insinto /usr/share/zsh/site-functions
