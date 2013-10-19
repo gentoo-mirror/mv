@@ -18,7 +18,8 @@ IUSE=""
 RDEPEND="dev-lang/perl
 	virtual/perl-File-Spec
 	virtual/perl-Getopt-Long
-	virtual/perl-Digest-MD5"
+	virtual/perl-Digest-MD5
+	virtual/perl-Time-HiRes"
 
 src_prepare() {
 	epatch_user
