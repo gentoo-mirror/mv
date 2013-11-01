@@ -19,7 +19,6 @@
 		<!-- remote-id type="berlios">eix</remote-id -->
 	</upstream>
 	<use>
-		<flag name="clang">Use sys-devel/clang for building</flag>
 		<flag name="debug">Build with upstream's CXXFLAGS/LDFLAGS for debugging support; not recommended for normal use.</flag>
 		<flag name="dep">Make DEP=true the default which enables support for {,R,P}DEPEND but requires roughly double disk and memory.</flag>
 		<flag name="doc">Create description of the eix cache file additionally in html format</flag>

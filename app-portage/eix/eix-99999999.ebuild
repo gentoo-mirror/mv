@@ -17,14 +17,13 @@ PROPERTIES="live"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="clang debug +dep doc nls optimization security strong-optimization strong-security sqlite swap-remote tools"
+IUSE="debug +dep doc nls optimization security strong-optimization strong-security sqlite swap-remote tools"
 
 BOTHDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	nls? ( virtual/libintl )"
 RDEPEND="${BOTHDEPEND}
 	app-shells/push"
 DEPEND="${BOTHDEPEND}
-	clang? ( sys-devel/clang )
 	>=sys-devel/gettext-0.18.3"
 
 pkg_setup() {
@@ -50,7 +49,6 @@ src_configure() {
 		$(use_enable swap-remote) \
 		$(use_with prefix always-accept-keywords) \
 		$(use_with dep dep-default) \
-		$(use_with clang nongnu-cxx clang++) \
 		--with-zsh-completion \
 		--with-ebuild-sh-default="/usr/$(get_libdir)/portage/bin/ebuild.sh" \
 		--with-portage-rootpath="${ROOTPATH}" \
