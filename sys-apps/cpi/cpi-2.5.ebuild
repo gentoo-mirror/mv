@@ -16,6 +16,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 src_prepare() {
+	use prefix || sed -i \
+		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+		-- bin/* || die
 	epatch_user
 }
 

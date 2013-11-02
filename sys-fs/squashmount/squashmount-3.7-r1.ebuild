@@ -32,6 +32,9 @@ It is recommended to put into your zshrc the line:
 alias squashmount='noglob squashmount'"
 
 src_prepare() {
+	use prefix || sed -i \
+		-e '1s"^#!/usr/bin/env perl$"#!'"$(command -v perl)"'"' \
+		-- bin/* || die
 	epatch_user
 }
 

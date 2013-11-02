@@ -33,20 +33,23 @@ It is recommended to put into your zshrc the line:
 alias squash_dir='noglob squash_dir'"
 
 src_prepare() {
-	if [ -n "${EPREFIX}" ]
+	if use prefix
 	then	sed -i \
-		-e "s\"'[^']*/etc/conf[.]d/${PN}'\"'${EPREFIX}/etc/conf.d/${PN}'\"g" \
-			"init.d/${PN}" || die
+			-e "s\"'[^']*/etc/conf[.]d/${PN}'\"'${EPREFIX}/etc/conf.d/${PN}'\"g" \
+			-- "init.d/${PN}" || die
 		sed -i \
-		-e "s\"=/etc/\"=${EPREFIX}/etc/\"" \
-		-e "s\"=/usr/\"=${EPREFIX}/usr/\"" \
-			"systemd/${PN}@.service" || die
+			-e "s\"=/etc/\"=${EPREFIX}/etc/\"" \
+			-e "s\"=/usr/\"=${EPREFIX}/usr/\"" \
+			-- "systemd/${PN}@.service" || die
 		sed -i \
-		-e "s\":/usr/sbin:/sbin'\":${EPREFIX}/usr/sbin:${EPREFIX}/sbin:/usr/sbin:/sbin'\"" \
-			"sbin/${PN}" || die
+			-e "s\":/usr/sbin:/sbin'\":${EPREFIX}/usr/sbin:${EPREFIX}/sbin:/usr/sbin:/sbin'\"" \
+			-- "sbin/${PN}" || die
 		sed -i \
-		-e "s\"'/lib/rc/bin:\":'${EPREFIX}/lib/rc/bin:/lib/rc/bin:\"" \
-			"sbin/openrc-wrapper" || die
+			-e "s\"'/lib/rc/bin:\":'${EPREFIX}/lib/rc/bin:/lib/rc/bin:\"" \
+			-- "sbin/openrc-wrapper" || die
+	else	sed -i \
+			-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+			-- bin/* sbin/* || die
 	fi
 	epatch_user
 	eautoreconf
@@ -60,9 +63,9 @@ src_configure() {
 	local myeconfargs=(
 		--with-zsh-completion
 		"$(use_enable bundled-openrc-wrapper openrc-wrapper)"
+		"$(systemd_with_unitdir)"
 		${order:+"--with-first-order=${order}"}
 	)
-	systemd_to_myeconfargs
 	autotools-utils_src_configure
 }
 

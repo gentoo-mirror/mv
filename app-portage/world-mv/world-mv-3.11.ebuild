@@ -18,7 +18,14 @@ IUSE=""
 S="${WORKDIR}/${mPN}-${PV}"
 
 src_prepare() {
-	sed -i -e "s'\${EPREFIX}'\\'${EPREFIX}\\''" "${mPN}" || die
+	if use prefix
+	then	sed -i \
+			-e "s'\${EPREFIX}'\\'${EPREFIX}\\''" \
+			-- "${mPN}" || die
+	else	sed -i \
+			-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+			-- "${mPN}" || die
+	fi
 	epatch_user
 }
 

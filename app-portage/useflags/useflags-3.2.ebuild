@@ -19,6 +19,9 @@ RDEPEND="dev-lang/perl
 	virtual/perl-Getopt-Long"
 
 src_prepare() {
+	use prefix || sed -i \
+		-e '1s"^#!/usr/bin/env perl$"#!'"$(command -v perl)"'"' \
+		-- "${PN}" || die
 	epatch_user
 }
 

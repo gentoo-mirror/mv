@@ -6,23 +6,27 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="Start ssh-agent/ssh-add only if you really use ssh or friends"
-HOMEPAGE="https://github.com/vaeth/sshstart/"
+DESCRIPTION="An intelligent prompt for zsh or bash with status line (window title) support"
+HOMEPAGE="https://github.com/vaeth/set_prompt/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+keychain"
-RDEPEND="app-shells/push
-	keychain? ( net-misc/keychain )"
-DEPEND=""
+IUSE=""
 
 src_prepare() {
+	use prefix || sed -i \
+		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+		-- * || die
 	epatch_user
 }
 
 src_install() {
-	dobin sshstart
+	insinto /etc
+	doins set_prompt.config
+	insinto /usr/bin
+	doins set_prompt.sh git_prompt.zsh
+	dobin set_prompt
 	dodoc README
 }

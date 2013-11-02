@@ -16,8 +16,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 src_prepare() {
-	sed -i -e "s'\\(PATH=.\\)/etc'\\1${EPREFIX}/etc'" \
-		-- "${S}/bin/trickyfetch"
+	if use prefix
+	then	sed -i \
+			-e "s'\\(PATH=.\\)/etc'\\1${EPREFIX}/etc'" \
+			-- "${S}/bin/trickyfetch" || die
+	else	sed -i \
+			-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+			 -- "${S}"/bin/* || die
+	fi
 	epatch_user
 }
 

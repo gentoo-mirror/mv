@@ -27,6 +27,9 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 into your ~/.zshrc or /etc/zshrc for case-insensitive matching."
 
 src_prepare() {
+	use prefix || sed -i \
+		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+		-- bin/* || die
 	epatch_user
 }
 

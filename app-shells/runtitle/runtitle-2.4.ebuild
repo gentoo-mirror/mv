@@ -6,33 +6,25 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="find cruft files not managed by portage"
-HOMEPAGE="https://github.com/vaeth/find_cruft/"
+DESCRIPTION="Scripts to run commands and set the hard status line (windows title)"
+HOMEPAGE="https://github.com/vaeth/runtitle/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="dev-lang/perl
-	virtual/perl-Getopt-Long"
-
 src_prepare() {
+	use prefix || sed -i \
+		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+		-- bin/* || die
 	epatch_user
 }
 
 src_install() {
 	dobin bin/*
-	dodoc README
-	insinto /etc
-	doins etc/*
-	dodir /etc/find_cruft.d
 	insinto /usr/share/zsh/site-functions
-	doins zsh/_*
-}
-
-pkg_postinst() {
-	has_version app-portage/eix || \
-		elog "Installing app-portage/eix will speed up ${PN}"
+	doins zsh/*
+	dodoc README
 }

@@ -18,12 +18,15 @@ RDEPEND="app-shells/push"
 DEPEND=""
 
 src_prepare() {
-	sed -i \
-		-e "s!/etc/!${EPREFIX}/etc/!g" \
-		-e "s!/usr/!${EPREFIX}/usr/!g" \
-		sbin/* \
-		etc/* \
-		systemd/*
+	if use prefix
+	then	sed -i \
+			-e "s!/etc/!${EPREFIX}/etc/!g" \
+			-e "s!/usr/!${EPREFIX}/usr/!g" \
+			-- sbin/* etc/* systemd/* || die
+	else	sed -i \
+			-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+			-- sbin/* || die
+	fi
 	epatch_user
 }
 

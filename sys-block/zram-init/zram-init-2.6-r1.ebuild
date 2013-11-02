@@ -22,6 +22,9 @@ If you use systemd enable zram_swap, tmp, and/or var_tmp with systemctl.
 You might need to modify /etc/modprobe.d/zram.conf"
 
 src_prepare() {
+	use prefix || sed -i \
+		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+		-- sbin/* || die
 	epatch_user
 }
 

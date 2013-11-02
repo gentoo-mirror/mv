@@ -26,6 +26,10 @@ and DEFAULTS is set appropriately, see the documentation.
 For zsh, this happens if you use zshrc-mv"
 
 src_prepare() {
+	use prefix || sed -i \
+		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+		-e '1s"^#!/usr/bin/env perl$"#!'"$(command -v perl)"'"' \
+		-- bin/* || die
 	epatch_user
 }
 
