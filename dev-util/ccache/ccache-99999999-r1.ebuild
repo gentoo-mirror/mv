@@ -6,7 +6,7 @@ EAPI=5
 
 WANT_LIBTOOL=none
 EGIT_REPO_URI="git://git.samba.org/ccache.git"
-inherit autotools eutils git-r3 multilib
+inherit autotools eutils git-r3 multilib readme.gentoo
 
 DESCRIPTION="fast compiler cache"
 HOMEPAGE="http://ccache.samba.org/"
@@ -25,6 +25,7 @@ src_prepare() {
 	# make sure we always use system zlib
 	rm -rf zlib
 	epatch "${FILESDIR}"/${PN}-3.1.7-no-perl.patch #421609
+	# epatch "${FILESDIR}"/${PN}-3.1.9-test-gcc-4.8.patch #461966 Fixed in git
 	sed \
 		-e "/^LIBDIR=/s:lib:$(get_libdir):" \
 		-e "/^EPREFIX=/s:'':'${EPREFIX}':" \
@@ -38,7 +39,19 @@ src_install() {
 	dodoc AUTHORS.txt MANUAL.txt NEWS.txt README.txt
 
 	dobin ccache-config
-#	rm -rfv -- "${D}/root"
+
+	DOC_CONTENTS="
+To use ccache with **non-Portage** C compiling, add
+${EPREFIX}/usr/$(get_libdir)/ccache/bin to the beginning of your path, before ${EPREFIX}usr/bin.
+Portage 2.0.46-r11+ will automatically take advantage of ccache with
+no additional steps.  If this is your first install of ccache, type
+something like this to set a maximum cache size of 2GB:\\n
+# ccache -M 2G\\n
+If you are upgrading from an older version than 3.x you should clear all of your caches like so:\\n
+# CCACHE_DIR='${CCACHE_DIR:-${PORTAGE_TMPDIR}/ccache}' ccache -C\\n
+ccache now supports sys-devel/clang and dev-lang/icc, too!"
+
+	readme.gentoo_create_doc
 }
 
 pkg_prerm() {
@@ -49,6 +62,7 @@ pkg_prerm() {
 }
 
 pkg_postinst() {
+	pkg_prerm
 	"${EROOT}"/usr/bin/ccache-config --install-links
 	"${EROOT}"/usr/bin/ccache-config --install-links ${CHOST}
 
@@ -57,21 +71,5 @@ pkg_postinst() {
 	[[ -d "${EROOT}/usr/$(get_libdir)/ccache.backup" ]] && \
 		rm -rf "${EROOT}/usr/$(get_libdir)/ccache.backup"
 
-	if [[ -z ${REPLACING_VERSIONS} ]] ; then
-		elog "To use ccache with **non-Portage** C compiling, add"
-		elog "${EPREFIX}/usr/$(get_libdir)/ccache/bin to the beginning of your path, before ${EPREFIX}/usr/bin."
-		elog "Portage 2.0.46-r11+ will automatically take advantage of ccache with"
-		elog "no additional steps."
-		elog
-		elog "You might want to set a maximum cache size:"
-		elog "# ccache -M 2G"
-	fi
-	if has_version "<${CATEGORY}/${PN}-3" ; then
-		elog "If you are upgrading from an older version than 3.x you should clear"
-		elog "all of your caches like so:"
-		elog "# CCACHE_DIR='${CCACHE_DIR:-${PORTAGE_TMPDIR}/ccache}' ccache -C"
-	fi
-	if has_version "<${CATEGORY}/${PN}-3.1.9-r2" ; then
-		elog "ccache now supports sys-devel/clang and dev-lang/icc, too!"
-	fi
+	readme.gentoo_print_elog
 }

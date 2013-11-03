@@ -6,7 +6,7 @@ EAPI=5
 inherit elisp-common eutils
 RESTRICT="mirror"
 
-SUBVERSION_REVISION="r${PV##*_p}"
+SUBVERSION_REVISION="r=${PV}"
 DESCRIPTION="The google styleguide for C++ together with a verifyer and an emacs file"
 HOMEPAGE="http://code.google.com/p/google-styleguide/"
 SRC_URI="http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml?${SUBVERSION_REVISION} -> cpplint-${PV}.xml
