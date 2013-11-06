@@ -45,7 +45,7 @@ for completion in \
 	'haskell _cabal' \
 	'id3 _id3 _id3v2' \
 	'managers _brew _debuild _lein _packagekit _pactree _pkcon _port _yaourt' \
-	'net _dhcpcd _mosh _socat _ssh-copy-id _vpnc _vnstat' \
+	'net _dhcpcd _httpie _mosh _socat _ssh-copy-id _vpnc _vnstat' \
 	'perf _perf' \
 	'perl _cpanm' \
 	'primus _primus' \
@@ -56,7 +56,7 @@ for completion in \
 	'showoff _showoff' \
 	'subtitles _language_codes _periscope _subliminal' \
 	'virtualbox _virtualbox' \
-	'web _coffee _docpad _gradle _heroku _jonas _jmeter _jmeter-plugins _lunar _middleman _node _nvm _ralio _sbt _scala _svm'
+	'web _coffee _docpad _gradle _heroku _jonas _jmeter _jmeter-plugins _lunar _middleman _node _nvm _ralio _salt _sbt _scala _svm'
 do	curr=${completion%% *}
 	case ${curr} in
 	'+'*)
