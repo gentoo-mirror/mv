@@ -279,21 +279,37 @@ src_test() {
 }
 
 zcompile_dirs() {
+	use compile || return 0
 	einfo "compiling modules"
 	local i
-	i=$(sed -n -e 's/^#define FPATH_DIR .*\"\(.*\)\".*$/\1/p' \
-		-- "${S}/Src/zshpaths.h") || i=
-	i="${ED}/${i:-(undefined)}"
-	pushd -- "${i}" >/dev/null 2>&1 || die "failed to cd to ${i}"
-	find . -type d -exec "${ED}/bin/zsh" -fc 'setopt nullglob
+	i="${S}/Src/zshpaths.h"
+	test -f "${i}" || die "cannot find ${i}"
+	# We need this directory also in pkg_postinst
+	FPATH_DIR="$(sed -n -e \
+		's/^#define FPATH_DIR .*\"\(.*\)\".*$/\1/p' -- "${i}" 2>/dev/null)" \
+		|| FPATH_DIR=
+	[ -n "${FPATH_DIR}" ] || die "cannot parse ${i}"
+	pushd -- "${ED}" >/dev/null || die
+	test -d ".${FPATH_DIR}" || die "parsing ${i} gave strange result ${FPATH_DIR}"
+	find ".${FPATH_DIR}" -type d -exec "${ED}bin/zsh" -fc 'setopt nullglob
 for i
-do	d=${i#./}
-	a=(${d}/*(.))
+do	a=(${i}/*(.))
 	[[ ${#a} -eq 0 ]] && continue
-	echo "Compiling ${d}"
-	zcompile -U -M ${d}.zwc ${a} || exit
-done' zsh '{}' '+' || die 'compiling failed'
-	popd >/dev/null 2>&1
+	echo "Compiling ${i#.}.zwc"
+	zcompile -U -M ${i}.zwc ${a} || exit
+done' zsh '{}' '+' || die 'compiling failed. If you are cross-compiling set USE=-compile'
+	popd >/dev/null
+}
+
+touch_zwc() {
+	use compile || return 0
+	einfo "touching *.zwc files"
+	# Make a sanity check that variables are preserved after zcompile_dirs:
+	# If the package mangler is not faulty, this *must* succeeed.
+	[ -n "${FPATH_DIR}" ] && test -d "${FPATH_DIR}" || die "strange FPATH_DIR"
+	# Now the actual action
+	find "${EPREFIX}${FPATH_DIR}" -type f -name '*.zwc' \
+		-exec "$(command -v touch)" -- '{}' '+'
 }
 
 src_install() {
@@ -334,7 +350,12 @@ src_install() {
 	docinto StartupFiles
 	dodoc StartupFiles/z*
 
-	! use compile || zcompile_dirs
+	zcompile_dirs
 
 	rm -vf -- "${ED}"/bin/zsh?*
+}
+
+pkg_postinst() {
+	readme.gentoo_pkg_postinst
+	touch_zwc
 }

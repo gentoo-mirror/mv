@@ -13,6 +13,6 @@
 		<remote-id type="github">hchbaw/auto-fu.zsh</remote-id>
 	</upstream>
 	<use>
-		<flag name="compile">Byte-compile to speed up</flag>
+		<flag name="compile">Byte-compile to speed up. Do not use this if you are cross-compiling</flag>
 	</use>
 </pkgmetadata>
