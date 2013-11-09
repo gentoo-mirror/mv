@@ -12,10 +12,10 @@ app-portage/eix:strong-optimization - Adds several more agressive CXXFLAGS/LDFLA
 app-portage/eix:strong-security - Add many checks to prevent exploits if eix code has a bug. This will slow down eix considerably. Use only if you are paranoid or have reasons to suspect a bug.
 app-portage/eix:swap-remote - Swap role of remote addresses in eix-remote, making the data from gpo.zugaina.org the first choice.
 app-portage/eix:tools - Create separate binary for script helper tools; useful if they are called extremely often
-app-shells/auto-fu-zsh:compile - Byte-compile to speed up
+app-shells/auto-fu-zsh:compile - Byte-compile to speed up. Do not use this if you are cross-compiling
 app-shells/termcolors-mv:create - Install DIR_COLORS-create perl script
 app-shells/termcolors-mv:perl - Install 256colors perl script
-app-shells/zsh:compile - Byte-compile to speed up
+app-shells/zsh:compile - Byte-compile to speed up. Do not use this if you are cross-compiling
 app-shells/zsh:completion_AIX - Install zsh completions for AIX
 app-shells/zsh:completion_BSD - Install zsh completions for BSD
 app-shells/zsh:completion_Cygwin - Install zsh completions for Cygwin
