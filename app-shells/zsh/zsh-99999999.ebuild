@@ -51,7 +51,7 @@ esac
 
 LICENSE="ZSH gdbm? ( GPL-2 )"
 SLOT="0"
-IUSE="caps custom-ctype"
+IUSE="caps +compile custom-ctype"
 COMPLETIONS="AIX BSD Cygwin Darwin Debian +Linux Mandriva openSUSE Redhat Solaris +Unix +X"
 for curr in ${COMPLETIONS}
 do	case ${curr} in
@@ -278,9 +278,26 @@ src_test() {
 	emake check
 }
 
+zcompile_dirs() {
+	einfo "compiling modules"
+	local i
+	i=$(sed -n -e 's/^#define FPATH_DIR .*\"\(.*\)\".*$/\1/p' \
+		-- "${S}/Src/zshpaths.h") || i=
+	i="${ED}/${i:-(undefined)}"
+	pushd -- "${i}" >/dev/null 2>&1 || die "failed to cd to ${i}"
+	find . -type d -exec "${ED}/bin/zsh" -fc 'setopt nullglob
+for i
+do	d=${i#./}
+	a=(${d}/*(.))
+	[[ ${#a} -eq 0 ]] && continue
+	echo "Compiling ${d}"
+	zcompile -U -M ${d}.zwc ${a} || exit
+done' zsh '{}' '+' || die 'compiling failed'
+	popd >/dev/null 2>&1
+}
+
 src_install() {
 	emake DESTDIR="${ED}" install install.info
-	rm -- "${ED}/bin/${PN}-"*
 
 	if use run-help
 	then	insinto /usr/share/zsh/site-contrib/help
@@ -316,4 +333,8 @@ src_install() {
 
 	docinto StartupFiles
 	dodoc StartupFiles/z*
+
+	! use compile || zcompile_dirs
+
+	rm -vf -- "${ED}"/bin/zsh?*
 }

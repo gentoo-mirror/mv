@@ -4,6 +4,9 @@
 
 *zsh-99999999 (29 May 2013)
 
+  08 Nov 2013; Martin Väth <martin@mvath.de>:
+  add IUSE=compile (suggestion of bug 362812)
+
   12 Oct 2013; Martin Väth <martin@mvath.de>:
   Use readme.gentoo.eclass
 

@@ -23,6 +23,7 @@
   added.
 </longdescription>
 <use>
+  <flag name="compile">Byte-compile to speed up</flag>
   <flag name='completion_AIX'>Install zsh completions for AIX</flag>
   <flag name='completion_BSD'>Install zsh completions for BSD</flag>
   <flag name='completion_Cygwin'>Install zsh completions for Cygwin</flag>
