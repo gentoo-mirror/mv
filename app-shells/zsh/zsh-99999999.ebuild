@@ -61,7 +61,9 @@ do	case ${curr} in
 	esac
 	IUSE="${IUSE} completion_${curr}"
 done
-IUSE="${IUSE} debug doc examples gdbm maildir pcre +run-help static unicode"
+IUSE="${IUSE} debug"
+${LIVE} || IUSE="${IUSE} doc"
+IUSE="${IUSE} examples gdbm maildir pcre +run-help static unicode"
 
 RDEPEND="
 	>=sys-libs/ncurses-5.1
@@ -124,8 +126,10 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}"-5.0.2-texinfo-5.1.patch
 	fi
 
-	cp -- "${FILESDIR}/_run-help" "${S}/Completion/Zsh/Command/_run-help" || \
+	if use run-help ; then
+		cp -- "${FILESDIR}/_run-help" "${S}/Completion/Zsh/Command/_run-help" || \
 			die "cannot copy _run-help completion"
+	fi
 
 	cp "${FILESDIR}"/zprofile-1 "${T}"/zprofile || die
 	eprefixify "${T}"/zprofile || die
@@ -148,6 +152,8 @@ src_prepare() {
 		|| die "patching ${file} failed"
 	epatch_user
 	! ${LIVE} || eautoreconf
+	PVPATH=$(. "${S}"/Config/version.mk && printf '%s' "${VERSION}") && \
+		[ -n "${PVPATH}" ] || PVPATH=${PV}
 }
 
 src_configure() {
@@ -175,7 +181,7 @@ src_configure() {
 		--bindir="${EPREFIX}"/bin \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--enable-etcdir="${EPREFIX}"/etc/zsh \
-		--enable-fndir="${EPREFIX}"/usr/share/zsh/${PV%_*}/functions \
+		--enable-fndir="${EPREFIX}"/usr/share/zsh/${PVPATH}/functions \
 		--enable-site-fndir="${EPREFIX}"/usr/share/zsh/site-functions \
 		--enable-function-subdirs \
 		--with-term-lib="ncursesw ncurses" \
@@ -324,7 +330,7 @@ src_install() {
 	doins "${T}"/zprofile
 
 	keepdir /usr/share/zsh/site-functions
-	insinto /usr/share/zsh/${PV%_*}/functions/Prompts
+	insinto "/usr/share/zsh/${PVPATH}/functions/Prompts"
 	newins "${FILESDIR}"/prompt_gentoo_setup-1 prompt_gentoo_setup
 
 	# install miscellaneous scripts; bug #54520
@@ -332,14 +338,14 @@ src_install() {
 	sed -i -e "s:/usr/local/bin/perl:${EPREFIX}/usr/bin/perl:g" \
 		-e "s:/usr/local/bin/zsh:${EPREFIX}/bin/zsh:g" "${S}"/{Util,Misc}/* || die
 	for i in Util Misc ; do
-		insinto /usr/share/zsh/${PV%_*}/${i}
+		insinto "/usr/share/zsh/${PVPATH}/${i}"
 		doins ${i}/*
 	done
 
 	dodoc ChangeLog* META-FAQ NEWS README config.modules
 	readme.gentoo_src_install
 
-	if use doc ; then
+	if ! ${LIVE} && use doc ; then
 		pushd "${WORKDIR}/${PN}-${PV%_*}" >/dev/null
 		dohtml -r Doc/*
 		insinto /usr/share/doc/${PF}

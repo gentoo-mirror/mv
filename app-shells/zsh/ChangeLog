@@ -4,6 +4,10 @@
 
 *zsh-99999999 (29 May 2013)
 
+  12 Nov 2013; Martin Väth <martin@mvath.de>:
+  Live version: Fix paths, remove IUSE=doc.
+  Do not install _run-help without USE=run-help
+
   08 Nov 2013; Martin Väth <martin@mvath.de>:
   add IUSE=compile (suggestion of bug 362812)
 
