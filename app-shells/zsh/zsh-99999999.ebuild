@@ -30,6 +30,11 @@ fi
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 
+# Creating help files needs util-linux for colcrt.
+# Please let me know if you have an arch where "colcrt" (or at least "col")
+# is provided by a different package.
+HELPDEPS="dev-lang/perl sys-apps/man sys-apps/util-linux"
+
 case ${PV} in
 9999*)
 	EGIT_REPO_URI="git://git.code.sf.net/p/zsh/code"
@@ -37,8 +42,9 @@ case ${PV} in
 	WANT_LIBTOOL="none"
 	inherit autotools
 	KEYWORDS=""
-	DEPEND="app-text/yodl"
+	DEPEND="app-text/yodl ${HELPDEPS}"
 	PROPERTIES="live"
+	HAVE_HELP=:
 	LIVE=:;;
 *)
 	SRC_URI="${ZSH_URI}
@@ -46,24 +52,27 @@ case ${PV} in
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 	DEPEND=""
 	PROPERTIES=""
+	HAVE_HELP=false
 	LIVE=false;;
 esac
 
 LICENSE="ZSH gdbm? ( GPL-2 )"
 SLOT="0"
-IUSE="caps +compile custom-ctype"
+IUSE="caps compile custom-ctype"
 COMPLETIONS="AIX BSD Cygwin Darwin Debian +Linux Mandriva openSUSE Redhat Solaris +Unix +X"
 for curr in ${COMPLETIONS}
 do	case ${curr} in
 	[+-]*)
-		IUSE="${IUSE} ${curr%%[!+-]*}completion_${curr#?}"
+		IUSE+=" ${curr%%[!+-]*}completion_${curr#?}"
 		continue;;
 	esac
-	IUSE="${IUSE} completion_${curr}"
+	IUSE+=" completion_${curr}"
 done
-IUSE="${IUSE} debug"
-${LIVE} || IUSE="${IUSE} doc"
-IUSE="${IUSE} examples gdbm maildir pcre +run-help static unicode"
+IUSE+=" debug"
+${LIVE} || IUSE+=" doc"
+IUSE+=" examples gdbm maildir pcre"
+${HAVE_HELP} || IUSE+=" +run-help"
+IUSE+=" static unicode"
 
 RDEPEND="
 	>=sys-libs/ncurses-5.1
@@ -73,17 +82,12 @@ RDEPEND="
 		static? ( >=dev-libs/libpcre-3.9[static-libs] ) )
 	gdbm? ( sys-libs/gdbm )
 "
-DEPEND="${DEPEND}
+DEPEND+="
 	sys-apps/groff
-	${RDEPEND}
-	run-help? (
-		dev-lang/perl
-		sys-apps/man
-		sys-apps/util-linux
-	)"
-# run-help needs util-linux for colcrt.
-# Please let me know if you have an arch where "colcrt" (or at least "col")
-# is provided by a different package.
+	${RDEPEND}"
+${HAVE_HELP} || DEPEND+="
+	run-help? ( ${HELPDEPS} )
+"
 
 PDEPEND="
 	examples? ( app-doc/zsh-lovers )
@@ -104,12 +108,12 @@ to your ~/.zshrc
 "
 
 pkg_setup() {
-	if use run-help
+	if ${HAVE_HELP} || use run-help
 	then	DOC_CONTENTS="
 If you want to use run-help add to your ~/.zshrc
 	unalias run-help
 	autoload -Uz run-help
-	HELPDIR=/usr/share/zsh/site-contrib/help
+	[[ -z $EPREFIX ]] || HELPDIR=$EPREFIX/usr/share/zsh/$ZSH_VERSION/help
 ${DOC_CONTENTS}"
 	fi
 }
@@ -126,7 +130,7 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}"-5.0.2-texinfo-5.1.patch
 	fi
 
-	if use run-help ; then
+	if ! ${HAVE_HELP} && use run-help ; then
 		cp -- "${FILESDIR}/_run-help" "${S}/Completion/Zsh/Command/_run-help" || \
 			die "cannot copy _run-help completion"
 	fi
@@ -170,6 +174,9 @@ src_configure() {
 			--enable-zsh-mem-warning \
 			--enable-zsh-secure-free \
 			--enable-zsh-hash-debug"
+	fi
+	if ${HAVE_HELP} ; then
+		myconf+=" --enable-runhelpdir=\"${EPREFIX}/usr/share/zsh/${PVPATH}/help\""
 	fi
 
 	if [[ ${CHOST} == *-darwin* ]]; then
@@ -269,7 +276,7 @@ generate_run_help() (
 
 src_compile() {
 	default
-	! use run-help || generate_run_help || {
+	${HAVE_HELP} || ! use run-help || generate_run_help || {
 		error "cannot generate files for run-help."
 		die "If this problem cannot be fixed, disable USE=run-help for zsh"
 	}
@@ -321,8 +328,8 @@ touch_zwc() {
 src_install() {
 	emake DESTDIR="${ED}" install install.info
 
-	if use run-help
-	then	insinto /usr/share/zsh/site-contrib/help
+	if ! ${HAVE_HELP} && use run-help
+	then	insinto /usr/share/zsh/${PVPATH}/help
 		doins run-help/*
 	fi
 

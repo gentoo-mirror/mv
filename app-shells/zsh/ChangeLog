@@ -4,6 +4,11 @@
 
 *zsh-99999999 (29 May 2013)
 
+  13 Nov 2013; Martin Väth <martin@mvath.de>:
+  Fix HELPDIR path. Revision bump to force change. Do not use-enable compile.
+  I submitted help installation upstream; this is used unconditionally if
+  available (currently only in the live ebuild).
+
   12 Nov 2013; Martin Väth <martin@mvath.de>:
   Live version: Fix paths, remove IUSE=doc.
   Do not install _run-help without USE=run-help
