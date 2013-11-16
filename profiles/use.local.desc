@@ -28,7 +28,6 @@ app-shells/zsh:completion_Solaris - Install zsh completions for Solaris
 app-shells/zsh:completion_Unix - Install zsh completions for Unix
 app-shells/zsh:completion_X - Install zsh completions for X
 app-shells/zsh:completion_openSUSE - Install zsh completions for openSUSE
-app-shells/zsh:custom-ctype - Set this and an utf8-capable LC_CTYPE (e.g. in make.conf) if run-help does not work for you. If unset, the value of LC_CTYPE for the generation of run-help is calculated by a heuristic based on locale -a.
 app-shells/zsh:run-help - Create and install data for run-help command
 app-shells/zsh-completion:completion_Android - Install zsh completions for Android-related programs
 app-shells/zsh-completion:completion_Gentoo - Install zsh completions for Gentoo and portage

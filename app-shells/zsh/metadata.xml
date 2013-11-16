@@ -36,7 +36,6 @@
   <flag name='completion_Solaris'>Install zsh completions for Solaris</flag>
   <flag name='completion_Unix'>Install zsh completions for Unix</flag>
   <flag name='completion_X'>Install zsh completions for X</flag>
-  <flag name='custom-ctype'>Set this and an utf8-capable LC_CTYPE (e.g. in make.conf) if run-help does not work for you. If unset, the value of LC_CTYPE for the generation of run-help is calculated by a heuristic based on locale -a.</flag>
   <flag name='run-help'>Create and install data for run-help command</flag>
 </use>
 </pkgmetadata>

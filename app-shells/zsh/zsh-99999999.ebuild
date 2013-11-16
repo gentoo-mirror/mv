@@ -58,7 +58,7 @@ esac
 
 LICENSE="ZSH gdbm? ( GPL-2 )"
 SLOT="0"
-IUSE="caps compile custom-ctype"
+IUSE="caps compile"
 COMPLETIONS="AIX BSD Cygwin Darwin Debian +Linux Mandriva openSUSE Redhat Solaris +Unix +X"
 for curr in ${COMPLETIONS}
 do	case ${curr} in
@@ -146,7 +146,8 @@ src_prepare() {
 	file='Src/Zle/complete.mdd'
 	for i in ${COMPLETIONS}
 	do	case ${i} in
-		[+-]*)	i=${i#?}
+		[+-]*)
+			i=${i#?};;
 		esac
 		grep -q "Completion\/${i}" -- "${S}/${file}" \
 			|| die "${file} does not contain Completion/${i}"
@@ -223,24 +224,7 @@ generate_run_help() (
 	export GROFF_NO_SGR=
 	export MANWIDTH=80
 	export LANG=C
-	unset MANPL MANROFFSEQ LC_ALL
-	if [ -z "${LC_CTYPE++}" ] || ! use custom-ctype
-	then	local i j=
-		unset LC_CTYPE
-		for i in `locale -a 2>/dev/null`
-		do	case ${i} in
-			en*[uU][tT][fF]8*)
-				LC_CTYPE=${i}
-				break;;
-			*[uU][tT][fF]8*)
-				[ -n "${LC_CTYPE}" ] || LC_CTYPE=${i};;
-			en*|*.*)
-				j=${i};;
-			esac
-		done
-		[ -n "${LC_CTYPE}" ] || LC_CTYPE=${j}
-		[ -z "${LC_CTYPE}" ] || export LC_CTYPE
-	fi
+	unset ${!MAN*} ${!LESS} ${!LC_*}
 	ebegin "Generating files for run-help"
 	# It is necessary to be paranoid about the success of the following pipe,
 	# since any change in locale or environment (like unset GROFF_NO_SGR,

@@ -4,6 +4,9 @@
 
 *zsh-99999999 (29 May 2013)
 
+  16 Nov 2013; Martin Väth <martin@mvath.de>:
+  Remove necessity for USE=custom-ctype.
+
   13 Nov 2013; Martin Väth <martin@mvath.de>:
   Fix HELPDIR path. Revision bump to force change. Do not use-enable compile.
   I submitted help installation upstream; this is used unconditionally if
