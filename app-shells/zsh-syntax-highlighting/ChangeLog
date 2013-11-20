@@ -4,6 +4,9 @@
 
 *zsh-syntax-highlighting-0.2.0, -99999999 (14 Sep 2013)
 
+  20 Nov 2013; Martin Väth <martin@mvath.de>:
+  Fix check for patching
+
   12 Oct 2013; Martin Väth <martin@mvath.de>:
   Use readme.gentoo.eclass
 
