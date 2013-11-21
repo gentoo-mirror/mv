@@ -8,7 +8,7 @@ inherit eutils readme.gentoo vcs-snapshot
 
 DESCRIPTION="Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder"
 HOMEPAGE="https://github.com/vaeth/video-mv/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
+SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -27,9 +27,12 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 into your ~/.zshrc or /etc/zshrc for case-insensitive matching."
 
 src_prepare() {
-	use prefix || sed -i \
-		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
-		-- bin/* || die
+	local i
+	use prefix || for i in bin/*
+	do	test -h "${i}" || \
+		sed -i -e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' -- "${i}" \
+			|| die
+	done
 	epatch_user
 }
 

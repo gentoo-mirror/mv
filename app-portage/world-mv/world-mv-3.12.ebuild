@@ -9,7 +9,7 @@ inherit eutils vcs-snapshot
 mPN="${PN%-*}"
 DESCRIPTION="Organize your world file and find installed packages or differences to @world"
 HOMEPAGE="https://github.com/vaeth/world/"
-SRC_URI="http://github.com/vaeth/${mPN}/tarball/release-${PV} -> ${mPN}-${PV}.tar.gz"
+SRC_URI="http://github.com/vaeth/${mPN}/tarball/${PV} -> ${mPN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

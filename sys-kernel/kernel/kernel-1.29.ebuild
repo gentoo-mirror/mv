@@ -6,34 +6,36 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="A collection of POSIX shell scripts to invoke archiver programs"
-HOMEPAGE="https://github.com/vaeth/archwrap/"
+DESCRIPTION="A POSIX shell script to compile the kernel with user permissions"
+HOMEPAGE="https://github.com/vaeth/kernel/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND="app-shells/push"
+RDEPEND="app-admin/sudo
+	app-admin/sudox
+	app-shells/push
+	>=app-shells/runtitle-2.3"
 DEPEND=""
 
 src_prepare() {
 	use prefix || sed -i \
 		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
-		-- bin/* || die
+		-- "${PN}" || die
 	epatch_user
 }
 
 src_install() {
-	local i
-	insinto /usr/bin
-	for i in bin/*
-	do	if test -h "${i}" || ! test -x "${i}"
-		then	doins "${i}"
-		else	dobin "${i}"
-		fi
-	done
+	dobin "${PN}"
 	insinto /usr/share/zsh/site-functions
-	doins zsh/*
-	dodoc README
+	doins _*
+}
+
+pkg_postinst() {
+	has_version app-portage/eix || \
+		elog "Installing app-portage/eix will speed up ${PN}"
+	has_version app-shells/runtitle || elog \
+		"Install app-shells/runtitle to let ${PN} update the status bar"
 }

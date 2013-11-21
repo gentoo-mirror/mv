@@ -6,9 +6,9 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="Print or save the current USE-flag state and compare with older versions"
-HOMEPAGE="https://github.com/vaeth/useflags/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
+DESCRIPTION="Keep only (compressed) logs of installed packages and cleanup emerge.log"
+HOMEPAGE="https://github.com/vaeth/logclean/"
+SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
+	|| ( >=dev-lang/perl-5.14 virtual/perl-Term-ANSIColor )
 	virtual/perl-Getopt-Long"
 
 src_prepare() {
@@ -27,15 +28,13 @@ src_prepare() {
 
 src_install() {
 	dobin "${PN}"
+	insinto /etc
+	doins "${PN}.conf"
 	insinto /usr/share/zsh/site-functions
 	doins "_${PN}"
 }
 
 pkg_postinst() {
-	if ! has_version 'app-portage/eix'
-	then	elog "Install app-portage/eix for faster execution time."
-		elog "With >=app-portage/eix-0.27.7 also security is increased."
-	elif has_version '<app-portage/eix-0.27.7'
-	then	elog "Upgrade to >=app-portage/eix-0.27.7 to increase security."
-	fi
+	has_version app-portage/eix || \
+		elog "Installing app-portage/eix will speed up ${PN}"
 }

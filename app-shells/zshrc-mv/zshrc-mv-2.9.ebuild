@@ -8,7 +8,7 @@ inherit eutils vcs-snapshot
 
 DESCRIPTION="A zshrc file initializing zsh specific interactive features"
 HOMEPAGE="https://github.com/vaeth/zshrc-mv/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
+SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"

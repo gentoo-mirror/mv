@@ -6,9 +6,9 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="A wrapper for cp -i -a, making use of diff"
-HOMEPAGE="https://github.com/vaeth/cpi/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
+DESCRIPTION="An intelligent prompt for zsh or bash with status line (window title) support"
+HOMEPAGE="https://github.com/vaeth/set_prompt/"
+SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -18,12 +18,15 @@ IUSE=""
 src_prepare() {
 	use prefix || sed -i \
 		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
-		-- bin/* || die
+		-- * || die
 	epatch_user
 }
 
 src_install() {
-	dobin bin/*
-	insinto /usr/share/zsh/site-functions
-	doins zsh/*
+	insinto /etc
+	doins set_prompt.config
+	insinto /usr/bin
+	doins set_prompt.sh git_prompt.zsh
+	dobin set_prompt
+	dodoc README
 }

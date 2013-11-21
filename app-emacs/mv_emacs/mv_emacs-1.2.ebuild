@@ -8,7 +8,7 @@ inherit elisp-common eutils vcs-snapshot
 
 DESCRIPTION="(X)Emacs extensions: block support, macrorecorder, verify change"
 HOMEPAGE="https://github.com/vaeth/mv_emacs/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
+SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

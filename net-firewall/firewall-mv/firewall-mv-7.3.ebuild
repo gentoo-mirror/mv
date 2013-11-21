@@ -8,7 +8,7 @@ inherit eutils systemd vcs-snapshot
 
 DESCRIPTION="Initialize iptables and net-related sysctl variables"
 HOMEPAGE="https://github.com/vaeth/firewall-mv/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
+SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

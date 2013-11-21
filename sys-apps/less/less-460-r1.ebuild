@@ -10,12 +10,12 @@ CODE2COLOR_PV="0.2"
 CODE2COLOR_P="code2color-${CODE2COLOR_PV}"
 DESCRIPTION="Excellent text file viewer, optionally with additional selection feature"
 PATCHN="less-select"
-PATCHV="2.4"
+PATCHV="2.5"
 PATCHVER="460"
 PATCHBALL="${PATCHN}-${PATCHV}.tar.gz"
 HOMEPAGE="http://www.greenwoodsoftware.com/less/ https://github.com/vaeth/${PATCHN}"
 SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz
-	less-select? ( http://github.com/vaeth/${PATCHN}/tarball/release-${PATCHV} -> ${PATCHBALL} )
+	less-select? ( http://github.com/vaeth/${PATCHN}/tarball/${PATCHV} -> ${PATCHBALL} )
 	http://www-zeuthen.desy.de/~friebel/unix/less/code2color -> ${CODE2COLOR_P}"
 
 LICENSE="|| ( GPL-3 BSD-2 )"
