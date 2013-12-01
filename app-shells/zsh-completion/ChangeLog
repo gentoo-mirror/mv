@@ -4,6 +4,9 @@
 
 *zsh-completion-20130808.ebuild (09 Aug 2013)
 
+  01 Dec 2013; Martin Väth <martin@mvath.de>:
+  Update to new completion files. Auto-enable and restructure COMPLETION=...
+
   06 Nov 2013; Martin Väth <martin@mvath.de>:
   Update to new completion files
 
