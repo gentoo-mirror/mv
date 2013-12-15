@@ -7,12 +7,15 @@ EAPI=5
 # doc package for -dev version exists?
 doc_available=true
 
+# sourceforge mirror for non-git version exists?
+sourceforge_mirror=false
+
 inherit eutils flag-o-matic multilib prefix readme.gentoo
 
 MY_PV=${PV/_p/-dev-}
 S=${WORKDIR}/${PN}-${MY_PV}
 
-zsh_ftp="ftp://ftp.zsh.org/pub"
+zsh_ftp="http://www.zsh.org/pub"
 
 if [[ ${PV} != "${MY_PV}" ]] ; then
 	ZSH_URI="${zsh_ftp}/development/${PN}-${MY_PV}.tar.bz2"
@@ -22,37 +25,39 @@ if [[ ${PV} != "${MY_PV}" ]] ; then
 		ZSH_DOC_URI="${zsh_ftp}/${PN}-${PV%_*}-doc.tar.bz2"
 	fi
 else
-	ZSH_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
+	ZSH_URI=""
+	${sourceforge_mirror} && ZSH_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+	ZSH_URI+="
 		${zsh_ftp}/${P}.tar.bz2"
 	ZSH_DOC_URI="${zsh_ftp}/${PN}-${PV%_*}-doc.tar.bz2"
 fi
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
-
-# Creating help files needs util-linux for colcrt.
-# Please let me know if you have an arch where "colcrt" (or at least "col")
-# is provided by a different package.
-HELPDEPS="dev-lang/perl sys-apps/man sys-apps/util-linux"
-
 case ${PV} in
 9999*)
+	SRC_URI=""
 	EGIT_REPO_URI="git://git.code.sf.net/p/zsh/code"
 	inherit git-r3
 	WANT_LIBTOOL="none"
 	inherit autotools
 	KEYWORDS=""
-	DEPEND="app-text/yodl ${HELPDEPS}"
+# Creating help files needs util-linux for colcrt.
+# Please let me know if you have an arch where "colcrt" (or at least "col")
+# is provided by a different package.
+	DEPEND="app-text/yodl
+		run-help? (
+			dev-lang/perl
+			sys-apps/man
+			sys-apps/util-linux
+		)"
 	PROPERTIES="live"
-	HAVE_HELP=:
 	LIVE=:;;
 *)
 	SRC_URI="${ZSH_URI}
 		doc? ( ${ZSH_DOC_URI} )"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 	DEPEND=""
-	PROPERTIES=""
-	HAVE_HELP=false
 	LIVE=false;;
 esac
 
@@ -68,10 +73,8 @@ do	case ${curr} in
 	esac
 	IUSE+=" completion_${curr}"
 done
-IUSE+=" debug"
-${LIVE} || IUSE+=" doc"
-IUSE+=" examples gdbm maildir pcre"
-${HAVE_HELP} || IUSE+=" +run-help"
+IUSE+=" debug doc examples gdbm maildir pcre"
+${LIVE} && IUSE+=" +run-help"
 IUSE+=" static unicode"
 
 RDEPEND="
@@ -85,10 +88,6 @@ RDEPEND="
 DEPEND+="
 	sys-apps/groff
 	${RDEPEND}"
-${HAVE_HELP} || DEPEND+="
-	run-help? ( ${HELPDEPS} )
-"
-
 PDEPEND="
 	examples? ( app-doc/zsh-lovers )
 "
@@ -105,18 +104,21 @@ to your ~/.zshrc
 Also, if you want to enable cache for the completions, add
 	zstyle ':completion::complete:*' use-cache 1
 to your ~/.zshrc
-"
 
-pkg_setup() {
-	if ${HAVE_HELP} || use run-help
-	then	DOC_CONTENTS="
 If you want to use run-help add to your ~/.zshrc
 	unalias run-help
 	autoload -Uz run-help
-	[[ -z $EPREFIX ]] || HELPDIR=$EPREFIX/usr/share/zsh/$ZSH_VERSION/help
-${DOC_CONTENTS}"
-	fi
-}
+
+Note that a system zprofile startup file is installed. This will override
+PATH and possibly other variables that a user may set in ~/.zshenv.
+Custom PATH settings and similar overridden variables can be moved
+to ~/.zprofile or other user startup files that are sourced after the
+system zprofile.
+
+If PATH must be set in ~/.zshenv to affect things like non-login ssh shells,
+one method is to use a separate path-setting file that is conditionally sourced
+in ~/.zshenv and also sourced from ~/.zprofile. For more information, see the
+zshenv example in ${EROOT}/usr/share/doc/${PF}/StartupFiles/."
 
 src_prepare() {
 	# fix zshall problem with soelim
@@ -124,16 +126,7 @@ src_prepare() {
 	mv Doc/zshall.1 Doc/zshall.1.soelim
 	soelim Doc/zshall.1.soelim > Doc/zshall.1
 
-	epatch "${FILESDIR}/${PN}"-init.d-gentoo-r1.diff
-	if ! ${LIVE} ; then
-		epatch "${FILESDIR}/${PN}"-fix-parameter-modifier-crash.patch
-		epatch "${FILESDIR}/${PN}"-5.0.2-texinfo-5.1.patch
-	fi
-
-	if ! ${HAVE_HELP} && use run-help ; then
-		cp -- "${FILESDIR}/_run-help" "${S}/Completion/Zsh/Command/_run-help" || \
-			die "cannot copy _run-help completion"
-	fi
+	epatch "${FILESDIR}"/${PN}-init.d-gentoo-r1.diff
 
 	cp "${FILESDIR}"/zprofile-1 "${T}"/zprofile || die
 	eprefixify "${T}"/zprofile || die
@@ -176,8 +169,10 @@ src_configure() {
 			--enable-zsh-secure-free \
 			--enable-zsh-hash-debug"
 	fi
-	if ${HAVE_HELP} ; then
+	if ! ${LIVE} || use run-help ; then
 		myconf+=" --enable-runhelpdir=\"${EPREFIX}/usr/share/zsh/${PVPATH}/help\""
+	else
+		myconf+=" --disable-runhelpdir"
 	fi
 
 	if [[ ${CHOST} == *-darwin* ]]; then
@@ -216,61 +211,16 @@ src_configure() {
 	fi
 }
 
-generate_run_help() (
-	# We use a subshell (...) for locale overrides and local cd
-	# Hence, we also need not declare any variables as local
-	mkdir run-help && cd run-help || die "cannot create run-help directory"
-	# We need GROFF_NO_SGR to produce "classical" formatting:
-	export GROFF_NO_SGR=
-	export MANWIDTH=80
-	export LANG=C
-	unset ${!MAN*} ${!LESS} ${!LC_*}
-	ebegin "Generating files for run-help"
-	# It is necessary to be paranoid about the success of the following pipe,
-	# since any change in locale or environment (like unset GROFF_NO_SGR,
-	# "bad" LC_CTYPE or tools behaving slightly different) can break it
-	# completely. It needs to be tested carefully in each architecture.
-	man "${S}/Doc/zshbuiltins.1" | colcrt - | perl "${S}/Util/helpfiles" || {
-		eend 1
-		eerror "perl Util/helpfiles failed"
-		return false
-	}
-	mystatus=("${PIPESTATUS[@]}")
-	[ "${mystatus[0]}" -eq 0 ] || {
-		eend 1
-		eerror "man Doc/zshbuiltins.1 failed"
-		return false
-	}
-	[ "${mystatus[1]}" -eq 0 ] || {
-		eend 1
-		eerror "colcrt failed"
-		return false
-	}
-	test -e zmodload || {
-		eend 1
-		eerror "Could not produce all required files for run-help."
-		eerror "This can be caused by a broken locale setting:"
-		eerror "Try to set LC_CTYPE to a utf8 aware locale like en_US.UTF-8,"
-		eerror "making sure that this locale is supported by your glibc."
-		eerror "For compatibility reasons, this ebuild ignores LC_ALL."
-		return false
-	}
-	eend 0
-)
-
 src_compile() {
 	default
-	${HAVE_HELP} || ! use run-help || generate_run_help || {
-		error "cannot generate files for run-help."
-		die "If this problem cannot be fixed, disable USE=run-help for zsh"
-	}
+	! ${LIVE} || ! use doc || emake dvi pdf html
 }
 
 src_test() {
 	local i
 	addpredict /dev/ptmx
 	for i in C02cond.ztst Y01completion.ztst Y02compmatch.ztst Y03arguments.ztst ; do
-		rm -- "${S}"/Test/${i} || die
+		rm "${S}"/Test/${i} || die
 	done
 	emake check
 }
@@ -312,16 +262,11 @@ touch_zwc() {
 src_install() {
 	emake DESTDIR="${ED}" install install.info
 
-	if ! ${HAVE_HELP} && use run-help
-	then	insinto /usr/share/zsh/${PVPATH}/help
-		doins run-help/*
-	fi
-
 	insinto /etc/zsh
 	doins "${T}"/zprofile
 
 	keepdir /usr/share/zsh/site-functions
-	insinto "/usr/share/zsh/${PVPATH}/functions/Prompts"
+	insinto /usr/share/zsh/"${PVPATH}"/functions/Prompts
 	newins "${FILESDIR}"/prompt_gentoo_setup-1 prompt_gentoo_setup
 
 	# install miscellaneous scripts; bug #54520
@@ -329,14 +274,14 @@ src_install() {
 	sed -i -e "s:/usr/local/bin/perl:${EPREFIX}/usr/bin/perl:g" \
 		-e "s:/usr/local/bin/zsh:${EPREFIX}/bin/zsh:g" "${S}"/{Util,Misc}/* || die
 	for i in Util Misc ; do
-		insinto "/usr/share/zsh/${PVPATH}/${i}"
+		insinto /usr/share/zsh/"${PVPATH}"/${i}
 		doins ${i}/*
 	done
 
 	dodoc ChangeLog* META-FAQ NEWS README config.modules
 	readme.gentoo_src_install
 
-	if ! ${LIVE} && use doc ; then
+	if use doc ; then
 		pushd "${WORKDIR}/${PN}-${PV%_*}" >/dev/null
 		dohtml -r Doc/*
 		insinto /usr/share/doc/${PF}

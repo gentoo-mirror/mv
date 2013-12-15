@@ -28,7 +28,7 @@ app-shells/zsh:completion_Solaris - Install zsh completions for Solaris
 app-shells/zsh:completion_Unix - Install zsh completions for Unix
 app-shells/zsh:completion_X - Install zsh completions for X
 app-shells/zsh:completion_openSUSE - Install zsh completions for openSUSE
-app-shells/zsh:run-help - Create and install data for run-help command
+app-shells/zsh:run-help - Create run-help data for live version of zsh; requires dev-lang/perl sys-apps/man sys-apps/util-linux
 app-shells/zsh-completion:completion_Android - Install zsh completions for Android-related programs
 app-shells/zsh-completion:completion_Gentoo - Install zsh completions for Gentoo and portage
 app-shells/zsh-completion:completion_Google - Install zsh completions for googlecl
