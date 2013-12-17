@@ -23,7 +23,7 @@ src_prepare() {
 			-e "s'\${EPREFIX}'\\'${EPREFIX}\\''" \
 			-- "${mPN}" || die
 	else	sed -i \
-			-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+			-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
 			-- "${mPN}" || die
 	fi
 	epatch_user

@@ -24,7 +24,7 @@ src_prepare() {
 			-e "s!/usr/!${EPREFIX}/usr/!g" \
 			-- sbin/* etc/* systemd/* || die
 	else	sed -i \
-			-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+			-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
 			-- sbin/* || die
 	fi
 	epatch_user

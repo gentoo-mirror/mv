@@ -21,7 +21,7 @@ src_prepare() {
 			-e "s'\\(PATH=.\\)/etc'\\1${EPREFIX}/etc'" \
 			-- "${S}/bin/trickyfetch" || die
 	else	sed -i \
-			-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+			-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
 			 -- "${S}"/bin/* || die
 	fi
 	epatch_user

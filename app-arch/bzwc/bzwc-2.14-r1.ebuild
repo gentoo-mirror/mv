@@ -6,22 +6,24 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="POSIX shell script and function to schedule commands"
-HOMEPAGE="https://github.com/vaeth/starter/"
+DESCRIPTION="A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)"
+HOMEPAGE="https://github.com/vaeth/bzwc/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND="app-shells/push
-	>=app-shells/runtitle-2.3"
+RDEPEND="app-shells/push"
 DEPEND=""
 
 src_prepare() {
-	use prefix || sed -i \
-		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
-		-- bin/* || die
+	local i
+	use prefix || for i in bin/*
+	do	test -h "${i}" || \
+		sed -i -e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' -- "${i}" \
+			|| die
+	done
 	epatch_user
 }
 
@@ -36,5 +38,4 @@ src_install() {
 	done
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
-	dodoc README
 }

@@ -6,26 +6,35 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="A wrapper for cp -i -a, making use of diff"
-HOMEPAGE="https://github.com/vaeth/cpi/"
+DESCRIPTION="POSIX shell script and function to schedule commands"
+HOMEPAGE="https://github.com/vaeth/starter/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RDEPEND="app-shells/push
+	>=app-shells/runtitle-2.3"
+DEPEND=""
 
 src_prepare() {
 	use prefix || sed -i \
-		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
-		-- bin/cpi || die
+		-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
+		-- bin/* || die
 	epatch_user
 }
 
 src_install() {
-	dobin bin/cpi
+	local i
 	insinto /usr/bin
-	doins bin/mvi
+	for i in bin/*
+	do	if test -h "${i}" || ! test -x "${i}"
+		then	doins "${i}"
+		else	dobin "${i}"
+		fi
+	done
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
+	dodoc README
 }

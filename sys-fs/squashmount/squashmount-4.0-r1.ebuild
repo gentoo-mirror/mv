@@ -33,7 +33,7 @@ alias squashmount='noglob squashmount'"
 
 src_prepare() {
 	use prefix || sed -i \
-		-e '1s"^#!/usr/bin/env perl$"#!'"$(command -v perl)"'"' \
+		-e '1s"^#!/usr/bin/env perl$"#!'"${EPREFIX}/usr/bin/perl"'"' \
 		-- bin/* || die
 	epatch_user
 }

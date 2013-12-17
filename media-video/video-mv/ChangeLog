@@ -2,6 +2,12 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*video-mv-7.13-r1 (17 Dec 2013)
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  _videoscript.sh -> /usr/share/video-mv: not meant to be called by the user.
+  Fix sh path
+
 *video-mv-7.13 (09 Dec 2013)
 
   09 Dec 2013; Martin Väth <martin@mvath.de>:

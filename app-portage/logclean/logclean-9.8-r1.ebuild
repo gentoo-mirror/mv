@@ -6,8 +6,8 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="find cruft files not managed by portage"
-HOMEPAGE="https://github.com/vaeth/find_cruft/"
+DESCRIPTION="Keep only (compressed) logs of installed packages and cleanup emerge.log"
+HOMEPAGE="https://github.com/vaeth/logclean/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
@@ -16,23 +16,22 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
+	|| ( >=dev-lang/perl-5.14 virtual/perl-Term-ANSIColor )
 	virtual/perl-Getopt-Long"
 
 src_prepare() {
 	use prefix || sed -i \
-		-e '1s"^#!/usr/bin/env perl$"#!'"$(command -v perl)"'"' \
-		-- bin/* || die
+		-e '1s"^#!/usr/bin/env perl$"#!'"${EPREFIX}/usr/bin/perl"'"' \
+		-- "${PN}" || die
 	epatch_user
 }
 
 src_install() {
-	dobin bin/*
-	dodoc README
+	dobin "${PN}"
 	insinto /etc
-	doins etc/*
-	dodir /etc/find_cruft.d
+	doins "${PN}.conf"
 	insinto /usr/share/zsh/site-functions
-	doins zsh/_*
+	doins "_${PN}"
 }
 
 pkg_postinst() {

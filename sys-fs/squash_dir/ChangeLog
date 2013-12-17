@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squash_dir-13.5-r1 (17 Dec 2013)
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  Fix sh path
+
 *squash_dir-13.5 (21 Nov 2013)
 
   21 Nov 2013; Martin Väth <martin@mvath.de>:

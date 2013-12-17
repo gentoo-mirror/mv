@@ -20,21 +20,26 @@ DEPEND=""
 src_prepare() {
 	local i
 	use prefix || for i in bin/*
-	do	test -h "${i}" || \
-		sed -i -e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' -- "${i}" \
-			|| die
+	do	test -h "${i}" || sed -i \
+			-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
+			-e 's"^\. archwrap\.sh$". '"${EPREFIX}/usr/share/archwrap"'"' \
+			-- "${i}" || die
 	done
 	epatch_user
 }
 
 src_install() {
+	local i
 	insinto /usr/bin
 	for i in bin/*
-	do	if test -h "${i}" || ! test -x "${i}"
+	do	if test -h "${i}"
 		then	doins "${i}"
-		else	dobin "${i}"
+		elif [ "${i#*/}" != 'archwrap.sh' ]
+		then	dobin "${i}"
 		fi
 	done
+	insinto /usr/share/archwrap
+	doins bin/archwrap.sh
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
 	dodoc README

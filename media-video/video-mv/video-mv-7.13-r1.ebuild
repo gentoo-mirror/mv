@@ -29,9 +29,10 @@ into your ~/.zshrc or /etc/zshrc for case-insensitive matching."
 src_prepare() {
 	local i
 	use prefix || for i in bin/*
-	do	test -h "${i}" || \
-		sed -i -e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' -- "${i}" \
-			|| die
+	do	test -h "${i}" || sed -i \
+			-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
+			-e 's"^\. _videoscript\.sh$". '"${EPREFIX}/usr/share/video-mv/_videoscript.sh"'"' \
+			-- "${i}" || die
 	done
 	epatch_user
 }
@@ -40,11 +41,14 @@ src_install() {
 	local i
 	insinto /usr/bin
 	for i in bin/*
-	do	if test -h "${i}" || ! test -x "${i}"
+	do	if test -h "${i}"
 		then	doins "${i}"
-		else	dobin "${i}"
+		elif [ "${i#*/}" != '_videoscript.sh' ]
+		then	dobin "${i}"
 		fi
 	done
+	insinto /usr/share/video-mv
+	doins bin/_videoscript.sh
 	insinto /etc
 	doins etc/*
 	insinto /usr/share/zsh/site-functions

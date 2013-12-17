@@ -6,26 +6,25 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils vcs-snapshot
 
-DESCRIPTION="Start ssh-agent/ssh-add only if you really use ssh or friends"
-HOMEPAGE="https://github.com/vaeth/sshstart/"
+DESCRIPTION="Scripts to run commands and set the hard status line (windows title)"
+HOMEPAGE="https://github.com/vaeth/runtitle/"
 SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="+keychain"
-RDEPEND="app-shells/push
-	keychain? ( net-misc/keychain )"
-DEPEND=""
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE=""
 
 src_prepare() {
 	use prefix || sed -i \
-		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
-		-- "${PN}" || die
+		-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
+		-- bin/* || die
 	epatch_user
 }
 
 src_install() {
-	dobin "${PN}"
+	dobin bin/*
+	insinto /usr/share/zsh/site-functions
+	doins zsh/*
 	dodoc README
 }

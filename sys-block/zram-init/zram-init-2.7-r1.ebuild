@@ -23,7 +23,7 @@ You might need to modify /etc/modprobe.d/zram.conf"
 
 src_prepare() {
 	use prefix || sed -i \
-		-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+		-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
 		-- sbin/* || die
 	epatch_user
 }

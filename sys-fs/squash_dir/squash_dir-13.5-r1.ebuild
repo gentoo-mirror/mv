@@ -48,7 +48,7 @@ src_prepare() {
 			-e "s\"'/lib/rc/bin:\":'${EPREFIX}/lib/rc/bin:/lib/rc/bin:\"" \
 			-- "sbin/openrc-wrapper" || die
 	else	sed -i \
-			-e '1s"^#!/usr/bin/env sh$"#!'"$(command -v sh)"'"' \
+			-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
 			-- bin/* sbin/* || die
 	fi
 	epatch_user

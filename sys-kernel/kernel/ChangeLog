@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kernel-1.30-r1 (17 Dec 2013)
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  Fix sh path
+
 *kernel-1.30 (10 Dec 2013)
 
   10 Dec 2013; Martin Väth <martin@mvath.de>:
