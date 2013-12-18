@@ -105,5 +105,5 @@ src_install() {
 
 pkg_postinst() {
 	use lesspipe || \
-	einfo "lesspipe offers colorization options.  Run 'lesspipe -h' for info."
+	elog "lesspipe offers colorization options.  Run 'lesspipe -h' for info."
 }
