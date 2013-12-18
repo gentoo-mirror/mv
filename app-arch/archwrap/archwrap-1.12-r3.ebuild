@@ -22,7 +22,7 @@ src_prepare() {
 	use prefix || for i in bin/*
 	do	test -h "${i}" || sed -i \
 			-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
-			-e 's"^\. archwrap\.sh$". '"${EPREFIX}/usr/share/archwrap"'"' \
+			-e 's"^\. archwrap\.sh$". '"${EPREFIX}/usr/share/archwrap/archwrap.sh"'"' \
 			-- "${i}" || die
 	done
 	epatch_user
