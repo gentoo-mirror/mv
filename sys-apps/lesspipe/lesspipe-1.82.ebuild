@@ -13,7 +13,7 @@ SRC_URI="http://www-zeuthen.desy.de/~friebel/unix/less/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="antiword cabextract catdoc +cpio +djvu dpkg +dvi2tty +elinks fastjar +ghostscript gpg +groff +html2text id3v2 image isoinfo libplist +links +lynx lzip mp3info ooffice p7zip pdf pstotext rar rpm +rpm2targz unrar unrtf +unzip +w3m xlhtml"
+IUSE="antiword cabextract catdoc +cpio +djvu dpkg +dvi2tty +elinks fastjar +ghostscript gpg +groff +html2text id3v2 image isoinfo libplist +links +lynx lzip mp3info mp3info2 ooffice p7zip pdf pstotext rar rpm +rpm2targz unrar unrtf +unzip +w3m xlhtml"
 
 htmlmode="( || ( html2text links lynx elinks w3m ) )"
 REQUIRED_USE="!rpm2targz? ( rpm? ( cpio ) )
@@ -70,7 +70,10 @@ RDEPEND="sys-apps/file
 	pdf? ( app-text/poppler )
 	id3v2? ( media-sound/id3v2 )
 	!id3v2? (
-		mp3info? ( media-sound/mp3info )
+		mp3info2? ( dev-perl/MP3-Tag )
+		!mp3info2? (
+			mp3info? ( media-sound/mp3info )
+		)
 	)
 	image? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) )
 	isoinfo? ( || ( app-cdr/cdrtools app-cdr/dvdrtools app-cdr/cdrkit ) )
@@ -158,7 +161,7 @@ src_prepare() {
 	! use pstotext && use ghostscript; ModifyX 'ps2ascii'
 	ModifyU 'gpg'
 	use pdf; ModifyX 'pdftohtml' 'pdftotext'
-	Modify1 'id3v2' 'mp3info'
+	Modify1 'id3v2' 'mp3info2' 'mp3info'
 	use image; ModifyX 'identify'
 	ModifyU 'isoinfo'
 	ModifyN 'dpkg'
@@ -170,7 +173,7 @@ src_prepare() {
 }
 
 src_configure() {
-	./configure --fixed --prefix="${ED}/usr"
+	./configure --fixed --prefix=/usr
 }
 
 src_install() {
