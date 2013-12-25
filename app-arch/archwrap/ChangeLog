@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*archwrap-1.13 (25 Dec 2013)
+
+  25 Dec 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support xattr
+
 *archwrap-1.12-r3 (18 Dec 2013)
 
   18 Dec 2013; Martin Väth <martin@mvath.de>:
