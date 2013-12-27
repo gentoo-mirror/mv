@@ -42,5 +42,5 @@ src_install() {
 	doins bin/archwrap.sh
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
-	dodoc README
+	dodoc README archwrap_alias
 }
