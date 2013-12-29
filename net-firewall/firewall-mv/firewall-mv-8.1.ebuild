@@ -34,7 +34,7 @@ src_install() {
 	into /
 	dosbin sbin/*
 	insinto /etc
-	doins etc/*
+	doins -r etc/*
 	insinto /usr/lib/modules-load.d
 	doins modules-load.d/*
 	insinto /usr/share/zsh/site-functions
