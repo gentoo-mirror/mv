@@ -237,7 +237,7 @@ elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
 	cat <<-EOF
 		$Id: lesspipe.sh,v 1.53 2013/08/06 21:35:30 vapier Exp $
-		Copyright 2001-2013 Gentoo Foundation
+		Copyright 2001-2014 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
 
