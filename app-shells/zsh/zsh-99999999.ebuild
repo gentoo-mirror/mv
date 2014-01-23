@@ -279,7 +279,7 @@ src_install() {
 	done
 
 	dodoc ChangeLog* META-FAQ NEWS README config.modules
-	readme.gentoo_src_install
+	readme.gentoo_create_doc
 
 	if use doc ; then
 		pushd "${WORKDIR}/${PN}-${PV%_*}" >/dev/null

@@ -45,18 +45,19 @@ To know how to update your custom color themes, please run
 	${ROOT}usr/share/${PN}/addons/convert_colorsets"
 
 src_prepare() {
+	sed -i -e 's!/usr/local!${EPREFIX%/}/usr!' -- "${S}/Makefile"
 	epatch_user
 }
 
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		docdir="/usr/share/doc/${PF}" \
-		prefix="/usr" \
+		docdir="${EPREFIX%/}/usr/share/doc/${PF}" \
+		prefix="${EPREFIX%/}/usr" \
 		install
 
 	python_replicate_script \
-		"${D}/usr/bin/${PN}".{apps,wallpaper} \
-		"${D}/usr/share/${PN}"/fvwm/scripts/FvwmMPD/*.py
-	readme.gentoo_src_install
+		"${ED}/usr/bin/${PN}".{apps,wallpaper} \
+		"${ED}/usr/share/${PN}"/fvwm/scripts/FvwmMPD/*.py
+	readme.gentoo_create_doc
 }

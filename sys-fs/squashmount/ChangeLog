@@ -4,7 +4,10 @@
 
 *squashmount-4.2 (21 Jan 2014)
 
-  21 Jan 2013; Martin Väth <martin@mvath.de>:
+  24 Jan 2014; Martin Väth <martin@mvath.de>:
+  Avoid duplicate installation
+
+  21 Jan 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *squashmount-4.1 (03 Dec 2013)

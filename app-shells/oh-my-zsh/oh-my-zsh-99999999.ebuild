@@ -45,5 +45,5 @@ src_prepare() {
 src_install() {
 	insinto "${ZSH_DEST}"
 	doins -r *
-	readme.gentoo_src_install
+	readme.gentoo_create_doc
 }

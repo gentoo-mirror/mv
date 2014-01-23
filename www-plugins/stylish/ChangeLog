@@ -4,6 +4,9 @@
 
 *stylish-1.4.0 (16 Nov 2013)
 
+  24 Jan 2014; Martin Väth <martin@mvath.de>:
+  Avoid duplicate installation
+
   16 Nov 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

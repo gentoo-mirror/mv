@@ -4,6 +4,11 @@
 
 *video-mv-7.13-r1 (17 Dec 2013)
 
+  24 Jan 2014; Martin Väth <martin@mvath.de>:
+  Avoid duplicate installation
+
+*video-mv-7.13-r1 (17 Dec 2013)
+
   17 Dec 2013; Martin Väth <martin@mvath.de>:
   _videoscript.sh -> /usr/share/video-mv: not meant to be called by the user.
   Fix sh path

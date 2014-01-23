@@ -44,5 +44,5 @@ src_install() {
 	use perl && dobin bin/256colors
 	insinto /etc/dir_colors
 	doins DIR_COLORS*
-	readme.gentoo_src_install
+	readme.gentoo_create_doc
 }

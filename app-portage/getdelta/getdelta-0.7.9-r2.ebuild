@@ -30,7 +30,7 @@ src_prepare() {
 
 src_install() {
 	dobin "${WORKDIR}"/getdelta.sh
-	readme.gentoo_src_install
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {

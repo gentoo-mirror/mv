@@ -49,5 +49,5 @@ src_install() {
 	insinto /usr/share/zsh/site-contrib/${PN}
 	doins *.zsh
 	doins -r highlighters
-	readme.gentoo_src_install
+	readme.gentoo_create_doc
 }

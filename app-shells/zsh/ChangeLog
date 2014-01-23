@@ -4,6 +4,9 @@
 
 *zsh-5.0.5 (09 Jan 2014)
 
+  24 Jan 2014; Martin Väth <martin@mvath.de>:
+  Avoid duplicate installation
+
   09 Jan 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

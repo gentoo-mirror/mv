@@ -49,7 +49,7 @@ src_install() {
 	doins tmpfiles.d/*
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
-	readme.gentoo_src_install
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {

@@ -25,7 +25,7 @@ Note that you have to temporarily disable noscript for that site."
 
 src_install() {
 	mv_mozextension_src_install
-	readme.gentoo_src_install
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {

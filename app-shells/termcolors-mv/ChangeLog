@@ -4,6 +4,9 @@
 
 *termcolors-3.2-r1 (17 Dec 2013)
 
+  24 Jan 2014; Martin Väth <martin@mvath.de>:
+  Avoid duplicate installation
+
   17 Dec 2013; Martin Väth <martin@mvath.de>:
   Fix sh and perl paths
 
