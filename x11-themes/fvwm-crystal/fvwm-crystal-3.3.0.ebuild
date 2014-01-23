@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.2.3.ebuild,v 1.1 2013/06/23 10:00:55 hwoarang Exp $
+# $Header: $
 
 EAPI="5"
 RESTRICT=mirror
@@ -11,7 +11,6 @@ inherit eutils readme.gentoo python-r1
 DESCRIPTION="Configurable and full featured FVWM theme, with lots of transparency and freedesktop compatible menu"
 HOMEPAGE="http://fvwm-crystal.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-#http://sourceforge.net/projects/fvwm-crystal/files/3.2.7/fvwm-crystal-3.2.7.tar.gz/download
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -46,51 +45,6 @@ To know how to update your custom color themes, please run
 	${ROOT}usr/share/${PN}/addons/convert_colorsets"
 
 src_prepare() {
-	find "${S}" -type d -name Applications -prune \
-		-o -type f -exec /bin/sh -c 'Echo() {
-	printf '\''%s\n'\'' "${*}"
-}
-Sed() {
-	text=${1:-bashisms}
-	shift
-	cp -p -- "${i}" "${i}.patched" && \
-	sed "${@}" \
-		-e '\''s/echo -e/echo/'\'' \
-		-e '\''s/\[\[ /\[ /g'\'' \
-		-e '\''s/ \]\]/ \]/g'\'' \
-		-e '\''/\[ | \]/{s/==/=/g}'\'' \
-		-e '\''s/source \([^a-z]\)/. \1/g'\'' \
-		-- "${i}" >|"${i}.patched" && \
-	if diff -q -- "${i}.patched" "${i}" >/dev/null 2>&1
-	then	rm -f -- "${i}.patched"
-	else	Echo "Fixing ${text} in ${i}"
-		mv -- "${i}.patched" "${i}"
-	fi && return
-	Echo "Failed to patch ${i}" >&2
-	exit 1
-}
-for i
-do	case ${i} in
-	*.html|*.py|*.png|*.gif|*.jpg|*/ChangeLog)
-		continue;;
-	*/fvwm-crystal)
-		Sed break -e '\''/break;/d'\''
-		continue;;
-	*/DesktopActions)
-		Sed arrays \
-			-e '\''/Execs=/{s/[()]/'\''"'\''/g}" \
-			-e '\''s/Execs\[\*\]/Execs/'\''
-		continue;;
-	*/fvwm-crystal.videomodeswitch*)
-		Sed shebang -e '\''s:^#!/bin/sh:#!/bin/bash:'\''
-		continue;;
-	esac
-	head -n1 -- "${i}" | grep bash >/dev/null && continue
-	if grep -q '\''echo \*'\'' -- "${i}" >/dev/null
-	then	Sed quoting -e '\''s/echo \*/echo \\*/g'\''
-	else	Sed ""
-	fi
-done' sh '{}' '+' || die "patching failed"
 	epatch_user
 }
 
