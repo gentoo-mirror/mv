@@ -1,0 +1,8 @@
+# ChangeLog for games-rpg/m5figur-mv
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*m5figur-mv-1.1 (24 Jan 2013)
+
+  24 Jan 2013; Martin Väth <martin@mvath.de>:
+  Initial version from scratch
