@@ -15,8 +15,8 @@
 			<email>martin@mvath.de</email>
 			<name>Martin Väth</name>
 		</maintainer>
-		<bugs-to>https://developer.berlios.de/bugs/?group_id=11597</bugs-to>
-		<!-- remote-id type="berlios">eix</remote-id -->
+		<bugs-to>http://github.com/vaeth/eix/issues/</bugs-to>
+		<remote-id type="github">vaeth/eix</remote-id>
 	</upstream>
 	<use>
 		<flag name="debug">Build with upstream's CXXFLAGS/LDFLAGS for debugging support; not recommended for normal use.</flag>

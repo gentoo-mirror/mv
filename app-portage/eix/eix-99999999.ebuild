@@ -4,13 +4,13 @@
 
 EAPI=5
 
-EGIT_REPO_URI="git://git.berlios.de/${PN}"
+EGIT_REPO_URI="git://github.com/vaeth/${PN}.git"
 WANT_LIBTOOL=none
 PLOCALES="de ru"
 inherit autotools bash-completion-r1 eutils git-r3 l10n multilib
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
-HOMEPAGE="http://eix.berlios.de"
+HOMEPAGE="http://github.com/vaeth/eix/"
 SRC_URI=""
 PROPERTIES="live"
 
