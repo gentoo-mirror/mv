@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Feb 2014; Martin Väth <martin@mvath.de>:
+  Move eix to Github; add /usr/lib/tmpfiles.d/eix.conf support
+
   01 Nov 2013; Martin Väth <martin@mvath.de>:
   Remove IUSE=clang
 

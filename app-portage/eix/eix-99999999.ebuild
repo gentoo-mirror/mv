@@ -35,6 +35,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	sed -i -e "s'/'${EPREFIX}/'" -- "${S}"/tmpfiles.d/eix.conf
 	epatch_user
 	eautopoint
 	eautoreconf
@@ -60,15 +61,19 @@ src_configure() {
 src_install() {
 	default
 	dobashcomp bash/eix
-	keepdir "/var/cache/${PN}"
-	fowners portage:portage "/var/cache/${PN}"
-	fperms 775 "/var/cache/${PN}"
+	insinto "/usr/lib/tmpfiles.d"
+	doins tmpfiles.d/eix.conf
 }
 
 pkg_postinst() {
-	# fowners in src_install doesn't work for owner/group portage:
-	# merging changes this owner/group back to root.
-	use prefix || chown portage:portage "${EROOT}var/cache/${PN}"
+	test -d "${EROOT}var/cache/${PN}" || {
+		mkdir "${EROOT}var/cache/${PN}"
+		use prefix || chown portage:portage "${EROOT}var/cache/${PN}"
+	}
 	local obs="${EROOT}var/cache/eix.previous"
 	! test -f "${obs}" || ewarn "Found obsolete ${obs}, please remove it"
+}
+
+pkg_postrm() {
+	[ -n "${REPLACED_BY_VERSION}" ] || rm -rf -- "${EROOT}var/cache/${PN}"
 }
