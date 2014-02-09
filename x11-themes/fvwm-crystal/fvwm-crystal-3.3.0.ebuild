@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="${PYTHON_DEPS}
+	x11-misc/xdg-user-dirs
 	>=x11-wm/fvwm-2.6.5[png]
 	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	|| ( >=x11-misc/stalonetray-0.6.2-r2 x11-misc/trayer )
