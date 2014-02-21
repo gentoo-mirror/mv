@@ -29,7 +29,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-ldflags.patch
 	epatch_user
 }
 
