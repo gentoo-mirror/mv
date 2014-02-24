@@ -45,6 +45,7 @@ for completion in \
 	'+managers _brew _debuild _lein _packagekit _pactree _pkcon _port _yaourt' \
 	'+multimedia _id3 _id3v2 _mpv _showoff' \
 	'+net _dget _dhcpcd _httpie _mosh _socat _ssh-copy-id _vpnc _vnstat' \
+	'+nfs _exportfs' \
 	'+perl _cpanm' \
 	'+python _bpython _pip _pygmentize _setup.py' \
 	'+ruby _bundle _cap _ditz _gas _gem _gist _github _git-wtf _lunchy _rails _rvm _jekyll' \

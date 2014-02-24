@@ -33,25 +33,22 @@ app-shells/zsh-completion:completion_Android - Install zsh completions for Andro
 app-shells/zsh-completion:completion_Gentoo - Install zsh completions for Gentoo and portage
 app-shells/zsh-completion:completion_Google - Install zsh completions for googlecl
 app-shells/zsh-completion:completion_Unix - Install zsh completion for unix system tools
-app-shells/zsh-completion:completion_bumblebee - Install zsh completion for x11-misc/bumblebee
 app-shells/zsh-completion:completion_database - Install zsh completions for database programs
 app-shells/zsh-completion:completion_dev - Install zsh completions for development (build systems, editors, web)
 app-shells/zsh-completion:completion_disk - Install zsh completions for disk tools
-app-shells/zsh-completion:completion_distribute - Install zsh completions for tools for distributing tasks to various machines
-app-shells/zsh-completion:completion_dzen - Install zsh completions for x11-misc/dzen
+app-shells/zsh-completion:completion_distribute - Install zsh completions for tools for distributing tasks to machines
 app-shells/zsh-completion:completion_git - Install zsh completions for special git tools
+app-shells/zsh-completion:completion_hardware - Install zsh completions for low-level hardware tools
 app-shells/zsh-completion:completion_haskell - Install zsh completions for Haskell tools
-app-shells/zsh-completion:completion_id3 - Install zsh completions for media-sound/id3 and media-sound/id3v2
-app-shells/zsh-completion:completion_managers - Install zsh completions for various package managers (not portage)
-app-shells/zsh-completion:completion_net - Install zsh completions for various net-related tools
-app-shells/zsh-completion:completion_perf - Install zsh completion for dev-util/perf
+app-shells/zsh-completion:completion_managers - Install zsh completions for package managers (not portage)
+app-shells/zsh-completion:completion_multimedia - Install zsh completions for multimedia programs
+app-shells/zsh-completion:completion_net - Install zsh completions for net-related tools
+app-shells/zsh-completion:completion_nfs - Install zsh completions for network filesystem tools
 app-shells/zsh-completion:completion_perl - Install zsh completion for perl-related tools
-app-shells/zsh-completion:completion_primus - Install zsh completion for primus
 app-shells/zsh-completion:completion_python - Install zsh completion for python development tools
 app-shells/zsh-completion:completion_ruby - Install zsh completion for ruby tools and tools in ruby
 app-shells/zsh-completion:completion_search - Install zsh completion for search tools like sys-apps/ack and sys-apps/the_silver_searcher
 app-shells/zsh-completion:completion_session - Install zsh completion for session-handling frontends
-app-shells/zsh-completion:completion_showoff - Install zsh completion for showoff
 app-shells/zsh-completion:completion_subtitles - Install zsh completion for subtitle tools
 app-shells/zsh-completion:completion_virtualbox - Install zsh completion for virtualbox
 app-shells/zsh-completion:completion_web - Install zsh completion for web-related tools incl. java/javascript/scala
