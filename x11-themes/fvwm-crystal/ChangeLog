@@ -2,7 +2,17 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*fvwm-crystal-3.3.2-r1 (08 Mar 2014)
+
+  08 Mar 2014; Martin Väth <martin@mvath.de>:
+  Fix some path handling; thanks for feedback from upstream developer
+  Dominique Michel. Do not install LICENSE file (is globally in gentoo).
+
 *fvwm-crystal-3.3.2 (23 Jan 2014)
+
+  08 Mar 2014; Martin Väth <martin@mvath.de>:
+  Fix some path handling; thanks for feedback from upstream developer
+  Dominique Michel. Do not install LICENSE file (is globally in gentoo).
 
   23 Jan 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
