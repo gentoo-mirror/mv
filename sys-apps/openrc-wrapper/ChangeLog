@@ -4,6 +4,9 @@
 
 *openrc-wrapper-1.5 (12 Mar 2014)
 
+  14 Mar 2014; Martin Väth <martin@mvath.de>:
+  Add dependency on gentoo-functions to guarantee a nice output
+
   12 Mar 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Support /lib/gentoo/functions.sh
 
