@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
   25 Feb 2012; Martin Väth <martin@mvath.de>:
   Fix compilation with kernel 3.8. Call epatch_user.
 

@@ -4,6 +4,9 @@
 
 *video-mv-7.13-r1 (17 Dec 2013)
 
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Use optfeature
+
   24 Jan 2014; Martin Väth <martin@mvath.de>:
   Avoid duplicate installation
 

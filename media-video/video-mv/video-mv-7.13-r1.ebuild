@@ -58,7 +58,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	has_version app-shells/runtitle || elog \
-		"Install app-shells/runtitle to let ${PN} update the status bar"
+	optfeature "status bar support" app-shells/runtitle
 	readme.gentoo_pkg_postinst
 }

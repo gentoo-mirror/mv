@@ -26,8 +26,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	has_version app-portage/eix || \
-		elog "Installing app-portage/eix will improve mask handling"
+	optfeature "improved mask handling" app-portage/eix
 	! test -d /var/cache/gpo || \
-		ewarn 'Obsolete /var/cache/gpo found. Please remove'
+		ewarn "Obsolete /var/cache/gpo found. Please remove"
 }

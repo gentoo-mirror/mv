@@ -4,17 +4,20 @@
 
 *logclean-9.8-r1 (17 Dec 2013)
 
-  17 Dec 2013; Martin Väth <martin@mvath.de>::
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Use optfeature
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
   Fix perl path
 
 *logclean-9.8 (21 Nov 2013)
 
-  21 Nov 2013; Martin Väth <martin@mvath.de>::
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *logclean-9.7 (02 Nov 2013)
 
-  02 Nov 2013; Martin Väth <martin@mvath.de>::
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Shebang care
 
 *logclean-9.6 (10 Sep 2013)
@@ -25,12 +28,12 @@
 
 *logclean-9.4 (18 Aug 2013)
 
-  18 Aug 2013; Martin Väth <martin@mvath.de>::
+  18 Aug 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *logclean-9.3 (21 Apr 2013)
 
-  21 Apr 2013; Martin Väth <martin@mvath.de>::
+  21 Apr 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
   10 Jun 2013; Martin Väth <martin@mvath.de>:
@@ -38,7 +41,7 @@
 
 *logclean-9.0 (20 Apr 2013)
 
-  20 Apr 2013; Martin Väth <martin@mvath.de>::
+  20 Apr 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Added ability to cleanup emerge.log
 
 *logclean-8.3 (28 Jan 2013)

@@ -4,6 +4,9 @@
 
 *useflags-3.4 (01 Feb 2014)
 
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Use optfeature
+
   01 Feb 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

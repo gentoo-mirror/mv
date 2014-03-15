@@ -53,25 +53,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! has_version sys-fs/squashfs-tools[progress-redirect]
-	then	elog "For better output of ${PN}, it is recommended to install"
-		elog "sys-fs/squashfs-tools from the mv overlay with USE=progress-redirect."
-	fi
-	has_version app-shells/runtitle || elog \
-		"Install app-shells/runtitle to let ${PN} update the status bar."
-	has_version dev-perl/File-Which || elog \
-		"${PN} strongly recommends to install dev-perl/File-Which."
-	has_version '>=dev-lang/perl-5.14' || has_version perl-core/Term-ANSIColor || {
-		elog "For colored output upgrade to >=dev-lang/perl-5.14 or"
-		elog "alternatively install virtual/perl-Term-ANSIColor"
-	}
-	has_version '>=dev-lang/perl-5.12' || has_version virtual/perl-IO-Compress || {
-		elog "For using ? or ?? attributes upgrade to >=dev-lang/perl-5.12 or"
-		elog "alternatively install virtual/perl-IO-Compress"
-	}
+	optfeature "improved output" 'sys-fs/squashfs-tools[progress-redirect]'
+	optfeature "status bar support" 'app-shells/runtitle'
+	optfeature "improved compatibility and security" 'dev-perl/File-Which'
+	optfeature "colored output" '>=dev-lang/perl-5.14' 'perl-core/Term-ANSIColor'
+	optfeature "using ? or ?? attributes" '>=dev-lang/perl-5.12' 'virtual/perl-IO-Compress'
 	case " ${REPLACING_VERSIONS}" in
-	' '[0-9][0-9]*|' '[3-9]*|' '2.[0-9][0-9]*|' '2.[7-9]*) :;;
-	*)	FORCE_PRINT_ELOG="true";;
+	' '[0-9][0-9]*|' '[3-9]*|' '2.[0-9][0-9]*|' '2.[7-9]*)
+		:;;
+	*)
+		FORCE_PRINT_ELOG="true";;
 	esac
 	readme.gentoo_pkg_postinst
 }

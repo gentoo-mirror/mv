@@ -94,10 +94,6 @@ pkg_postinst() {
 		then	ewarn "To use ${PN} activate aufs in your kernel. Use e.g. sys-fs/aufs*"
 		fi;;
 	esac
-	if ! has_version sys-fs/squashfs-tools[progress-redirect]
-	then	elog "For better output of ${PN}, it is recommended to install"
-		elog "sys-fs/squashfs-tools from the mv overlay with USE=progress-redirect."
-	fi
-	has_version app-shells/runtitle || elog \
-		"Install app-shells/runtitle to let ${PN} update the status bar."
+	optfeature "improved output" 'sys-fs/squashfs-tools[progress-redirect]'
+	optfeature "status bar support" 'app-shells/runtitle'
 }

@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-inherit linux-mod eutils
+inherit eutils linux-mod readme.gentoo
 
 MY_P="martian-full-${PV}"
 DESCRIPTION="ltmodem alternative driver providing support for Agere Systems winmodems"
@@ -26,6 +26,19 @@ RESTRICT="strip"
 
 # contains proprietary precompiled 32 bit ltmdmobj.o
 QA_PREBUILT="usr/sbin/martian_modem"
+
+DISABLE_AUTOFORMATTING="true"
+DOC_CONTENTS="See /etc/conf.d/${PN} for configuration options.
+After you have finished the configuration, you need to run
+	/etc/init.d/${PN} start
+
+To run the userspace daemon automatically on every boot,
+just add it to a runlevel:
+	rc-update add ${PN} default
+
+If using net-dialup/wvdial, you need
+	Carrier Check = no
+line."
 
 S="${WORKDIR}/${P/modem/full}"
 MODULE_NAMES="martian_dev(ltmodem::kmodule)"
@@ -75,17 +88,5 @@ pkg_postinst() {
 		elog "You have SMP (symmetric multi processor) support enabled in kernel."
 		elog "You should run martian-modem with --smp enabled in MARTIAN_OPTS."
 	fi
-	if ! has_version net-dialup/martian-modem; then
-		elog "See /etc/conf.d/${PN} for configuration options."
-		elog "After you have finished the configuration, you need to run /etc/init.d/${PN} start"
-		elog
-	fi
-	if [ "$(rc-config list default | grep martian-modem)" = "" ]; then
-		elog "To run the userspace daemon automatically on every boot, just add it to a runlevel:"
-		elog "rc-update add ${PN} default"
-		elog
-	fi
-	if has_version net-dialup/wvdial; then
-		elog "If using net-dialup/wvdial, you need \"Carrier Check = no\" line."
-	fi
+	readme.gentoo_pkg_postinst
 }

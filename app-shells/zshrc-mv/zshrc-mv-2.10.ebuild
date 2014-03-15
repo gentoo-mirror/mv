@@ -27,12 +27,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	local i
-	for i in \
-		'>=app-shells/auto-fu-zsh-0.0.1.13' \
-		'app-shells/zsh-syntax-highlighting' \
-		'app-shells/set_prompt' \
-		'app-shells/termcolors-mv'
-	do	has_version "${i}" || elog "It is recommended to install ${i}"
-	done
+	optfeature "automagic completion" '>=app-shells/auto-fu-zsh-0.0.1.13'
+	optfeature "syntax highlighting" 'app-shells/zsh-syntax-highlighting'
+	optfeature "a nice prompt" 'app-shells/set_prompt'
+	optfeature "nice directory colors" 'app-shells/termcolors-mv'
 }

@@ -4,6 +4,9 @@
 
 *kernel-1.31 (28 Dec 2013)
 
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Use optfeature
+
   28 Dec 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Improve CCACHE_* support
 

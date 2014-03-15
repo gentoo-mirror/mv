@@ -4,6 +4,9 @@
 
 *squash_dir-13.5-r1 (17 Dec 2013)
 
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Use optfeature
+
   17 Dec 2013; Martin Väth <martin@mvath.de>:
   Fix sh path
 

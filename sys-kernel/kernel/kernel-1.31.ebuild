@@ -34,8 +34,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	has_version app-portage/eix || \
-		elog "Installing app-portage/eix will speed up ${PN}"
-	has_version app-shells/runtitle || elog \
-		"Install app-shells/runtitle to let ${PN} update the status bar"
+	optfeature "faster execution" 'app-portage/eix'
+	optfeature "status bar support" 'app-shells/runtitle'
 }
