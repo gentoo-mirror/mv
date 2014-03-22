@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squashmount-4.4 (22 Mar 2014)
+
+  22 Mar 2014; Martin Väth <martin@mvath.de>:
+  Add sanity check before deleting DIR after first creation of squashfile
+
 *squashmount-4.3 (09 Mar 2014)
 
   15 Mar 2014; Martin Väth <martin@mvath.de>:
