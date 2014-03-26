@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*video-mv-7.14 (26 Mar 2014)
+
+  26 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support adevice, immediatemode, audiorate
+
 *video-mv-7.13-r1 (17 Dec 2013)
 
   15 Mar 2014; Martin Väth <martin@mvath.de>:

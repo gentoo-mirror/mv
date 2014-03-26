@@ -87,13 +87,16 @@ my_movlibdir() {
 
 src_prepare() {
 	local mybinprefix mylibdir myinclude myinclsundtek mysystemd \
-		myudev mypkgconfig mylirc
+		myudev mypkgconfig mylirc myusr
 	if ${keep_original}
 	then	mylibdir="opt/lib"
+			myinclude="opt/include"
+			myusr=
 	else	mylibdir="usr/$(get_libdir)"
+			myinclude="usr/include"
+			myusr="usr"
 	fi
 	mybinprefix="opt"
-	myinclude="usr/include"
 	mypkgconfig="usr/share/pkgconfig"
 	myinclsundtek="${myinclude}/sundtek"
 	myudev="lib/udev"
@@ -105,12 +108,12 @@ src_prepare() {
 		pax-mark e opt/bin/mediaclient
 	fi
 	mv opt 1 || die
-	mkdir -p "${mybinprefix}" lib "${myinclude}" "${mypkgconfig}" "${mylirc}" \
+	mkdir -p ${myusr} "${mybinprefix}" lib "${mypkgconfig}" "${mylirc}" \
 		1/lib/pm-utils || die
 	mv 1/bin "${mybinprefix}" || die
 	${keep_original} || mv 1/lib/pm 1/lib/pm-utils/sleep.d || die
 	mv 1/lib "${mylibdir}" || die
-	${keep_original} || mv 1/include "${myinclude}" || die
+	mv 1/include "${myinclude}" || die
 	# The systemd unit need only be patched if PAX flags are not properly set
 	: sed -i -e 's/^\(\(Exec\(Start\|Stop\)\|Type\)=\)/#\1/' \
 		-e '/^#ExecStart=/iExecStart=/opt/bin/mediasrv --pluginpath /opt/bin' \
@@ -159,7 +162,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	false chmod 6111 "${EPREFIX}/opt/bin/mediasrv" ||
+	false chmod 6111 "${EPREFIX}/opt/bin/mediasrv" || \
 	elog "You might need to chmod 6111 ${EPREFIX}/opt/bin/mediasrv"
 	einfo "adding root to the audio group."
 	usermod -aG audio root || {
