@@ -140,6 +140,7 @@ src_prepare() {
 		>etc/revdep-rebuild/50-sundtek-tv
 	echo "/${mylibdir}/libmediaclient.so" >etc/ld.so.preload
 	${develop} && die "Developer mode: Dying after unpacking all"
+	cp -- "${FILESDIR}"/_mediaclient .
 	epatch_user
 }
 
@@ -158,6 +159,8 @@ src_install() {
 		dodoc README *.conf
 		! use doc || dodoc "${docdist}"
 	fi
+	insinto /usr/share/zsh/site-functions
+	doins _mediaclient
 	readme.gentoo_create_doc
 }
 
