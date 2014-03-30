@@ -32,8 +32,9 @@ DEPEND="pax_kernel? ( || ( sys-apps/elfix sys-apps/paxctl ) )"
 
 DISABLE_AUTOFORMATTING="true"
 DOC_CONTENTS="To initialize sundtek drivers during booting call
-	rc-update add sundtek default    # for openrc
-	systemctl enable sundtek.service # for systemd
+	rc-update add sundtek default          # for openrc
+	systemctl enable sundtek-local.service # for systemd
+You will probably need to adapt sundtek-local.service to your defaults
 "
 
 QA_PREBUILT="opt/bin/* usr/lib*"
@@ -59,7 +60,12 @@ Download from Sundtek directly or write your own ebuild"
 src_unpack() {
 	mkdir "${S}" && cd "${S}"
 	unpack ${A}
-	cp "${FILESDIR}"/sundtek.initd "${S}"
+	cp -- \
+		"${FILESDIR}"/sundtek.initd \
+		"${FILESDIR}"/sundtek-local.service \
+		"${FILESDIR}"/_mediaclient \
+		"${FILESDIR}"/mediaclient.video \
+		"${S}"
 	! ${develop} || cp "${DISTDIR}/${driverfile}" "${S}/${driverdist}" \
 		|| die "could not copy ${driverfile}"
 	! use doc || cp "${DISTDIR}/${docfile}" "${S}/${docdist}" \
@@ -140,7 +146,8 @@ src_prepare() {
 		>etc/revdep-rebuild/50-sundtek-tv
 	echo "/${mylibdir}/libmediaclient.so" >etc/ld.so.preload
 	${develop} && die "Developer mode: Dying after unpacking all"
-	cp -- "${FILESDIR}"/_mediaclient .
+	ln -sfn mediaclient.video mediaclient.audio
+	ln -sfn mediaclient.video mediaclient.dvb
 	epatch_user
 }
 
@@ -159,6 +166,9 @@ src_install() {
 		dodoc README *.conf
 		! use doc || dodoc "${docdist}"
 	fi
+	dobin mediaclient.video
+	insinto /usr/bin
+	doins mediaclient.dvb mediaclient.audio
 	insinto /usr/share/zsh/site-functions
 	doins _mediaclient
 	readme.gentoo_create_doc

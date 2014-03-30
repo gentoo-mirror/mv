@@ -2,7 +2,13 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*sundtek-tv (17 Feb 2014)
+*sundtek-tv-20140321-r1 (17 Feb 2014)
+
+  30 Mar 2014; Martin Väth <martin@mvath.de>:
+  Support mediaclient.{video,audio,dvb} wrapper scripts;
+  provide local systemd service for default settings
+
+*sundtek-tv-20140321 (17 Feb 2014)
 
   29 Mar 2014; Martin Väth <martin@mvath.de>:
   Add zsh completion support. Version bump
