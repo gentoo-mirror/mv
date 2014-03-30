@@ -8,7 +8,7 @@ inherit eutils vcs-snapshot
 
 DESCRIPTION="Start ssh-agent/ssh-add only if you really use ssh or friends"
 HOMEPAGE="https://github.com/vaeth/sshstart/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

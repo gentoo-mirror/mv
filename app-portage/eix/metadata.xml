@@ -15,7 +15,7 @@
 			<email>martin@mvath.de</email>
 			<name>Martin Väth</name>
 		</maintainer>
-		<bugs-to>http://github.com/vaeth/eix/issues/</bugs-to>
+		<bugs-to>https://github.com/vaeth/eix/issues/</bugs-to>
 		<remote-id type="github">vaeth/eix</remote-id>
 	</upstream>
 	<use>

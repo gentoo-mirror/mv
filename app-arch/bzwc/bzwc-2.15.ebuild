@@ -8,7 +8,7 @@ inherit eutils vcs-snapshot
 
 DESCRIPTION="A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)"
 HOMEPAGE="https://github.com/vaeth/bzwc/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

@@ -16,7 +16,7 @@ case ${PV} in
 *)
 	RESTRICT="mirror"
 	inherit vcs-snapshot
-	SRC_URI="http://github.com/zsh-users/${PNn}/archive/0.10.0.tar.gz -> ${PN}-${PV}.tar.gz"
+	SRC_URI="https://github.com/zsh-users/${PNn}/archive/0.10.0.tar.gz -> ${PN}-${PV}.tar.gz"
 	KEYWORDS="~amd64 ~x86";;
 esac
 

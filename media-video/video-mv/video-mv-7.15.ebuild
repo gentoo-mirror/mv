@@ -8,7 +8,7 @@ inherit eutils readme.gentoo vcs-snapshot
 
 DESCRIPTION="Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder"
 HOMEPAGE="https://github.com/vaeth/video-mv/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

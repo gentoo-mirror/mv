@@ -8,7 +8,7 @@ inherit eutils vcs-snapshot
 
 DESCRIPTION="A frontend, beautifier, and path-fixer for diff -u"
 HOMEPAGE="https://github.com/vaeth/diffhelp/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

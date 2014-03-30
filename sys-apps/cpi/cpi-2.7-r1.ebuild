@@ -8,7 +8,7 @@ inherit eutils vcs-snapshot
 
 DESCRIPTION="A wrapper for cp -i -a, making use of diff"
 HOMEPAGE="https://github.com/vaeth/cpi/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

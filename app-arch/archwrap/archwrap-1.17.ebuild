@@ -8,7 +8,7 @@ inherit eutils vcs-snapshot
 
 DESCRIPTION="A collection of POSIX shell scripts to invoke archiver programs"
 HOMEPAGE="https://github.com/vaeth/archwrap/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

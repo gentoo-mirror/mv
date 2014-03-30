@@ -7,8 +7,8 @@ RESTRICT="mirror"
 inherit eutils systemd vcs-snapshot
 
 DESCRIPTION="Use openrc init scripts with systemd or other init systems"
-HOMEPAGE="http://github.com/vaeth/openrc-wrapper"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/vaeth/openrc-wrapper"
+SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

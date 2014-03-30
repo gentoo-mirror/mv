@@ -8,7 +8,7 @@ inherit cmake-utils eutils flag-o-matic multilib vcs-snapshot
 
 DESCRIPTION="If a command is not found (bash/zsh), search ARCH database for packages with similar commands"
 HOMEPAGE="https://github.com/metti/command-not-found/"
-SRC_URI="http://github.com/metti/${PN}/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/metti/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

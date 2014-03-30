@@ -10,7 +10,7 @@ PLOCALES="de ru"
 inherit autotools bash-completion-r1 eutils git-r3 l10n multilib
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
-HOMEPAGE="http://github.com/vaeth/eix/"
+HOMEPAGE="https://github.com/vaeth/eix/"
 SRC_URI=""
 PROPERTIES="live"
 

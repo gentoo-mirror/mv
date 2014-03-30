@@ -8,7 +8,7 @@ inherit eutils vcs-snapshot
 
 DESCRIPTION="Keep only (compressed) logs of installed packages and cleanup emerge.log"
 HOMEPAGE="https://github.com/vaeth/logclean/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

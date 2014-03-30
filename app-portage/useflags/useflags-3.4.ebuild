@@ -8,7 +8,7 @@ inherit eutils vcs-snapshot
 
 DESCRIPTION="Print or save the current USE-flag state and compare with older versions"
 HOMEPAGE="https://github.com/vaeth/useflags/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

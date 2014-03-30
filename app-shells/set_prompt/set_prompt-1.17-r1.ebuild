@@ -8,7 +8,7 @@ inherit eutils vcs-snapshot
 
 DESCRIPTION="An intelligent prompt for zsh or bash with status line (window title) support"
 HOMEPAGE="https://github.com/vaeth/set_prompt/"
-SRC_URI="http://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

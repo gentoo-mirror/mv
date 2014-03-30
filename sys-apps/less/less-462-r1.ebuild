@@ -15,7 +15,7 @@ PATCHVER="460"
 PATCHBALL="${PATCHN}-${PATCHV}.tar.gz"
 HOMEPAGE="http://www.greenwoodsoftware.com/less/ https://github.com/vaeth/${PATCHN}"
 SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz
-	less-select? ( http://github.com/vaeth/${PATCHN}/tarball/${PATCHV} -> ${PATCHBALL} )
+	less-select? ( https://github.com/vaeth/${PATCHN}/tarball/${PATCHV} -> ${PATCHBALL} )
 	http://www-zeuthen.desy.de/~friebel/unix/less/code2color -> ${CODE2COLOR_P}"
 
 LICENSE="|| ( GPL-3 BSD-2 )"

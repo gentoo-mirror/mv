@@ -2,19 +2,24 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*sshstart-2.11 (30 Mar 2014)
+
+  30 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
 *sshstart-2.10-r1 (17 Dec 2013)
 
-  17 Dec 2012; Martin Väth <martin@mvath.de>:
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
   Fix sh path
 
 *sshstart-2.10 (21 Nov 2013)
 
-  21 Nov 2012; Martin Väth <martin@mvath.de>:
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
 *sshstart-2.9 (02 Nov 2013)
 
-  02 Nov 2012; Martin Väth <martin@mvath.de>:
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Shebang care
 
 *sshstart-2.8 (07 May 2012)

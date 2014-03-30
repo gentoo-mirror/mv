@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*video-mv-7.15 (30 Mar 2014)
+
+  30 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
 *video-mv-7.14 (26 Mar 2014)
 
   26 Mar 2014; Martin Väth <martin@mvath.de>:
