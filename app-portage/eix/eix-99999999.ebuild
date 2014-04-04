@@ -51,7 +51,7 @@ src_configure() {
 		$(use_with prefix always-accept-keywords) \
 		$(use_with dep dep-default) \
 		--with-zsh-completion \
-		--with-ebuild-sh-default="/usr/$(get_libdir)/portage/bin/ebuild.sh" \
+		--with-ebuild-sh-default="/usr/lib/portage/bin/ebuild.sh" \
 		--with-portage-rootpath="${ROOTPATH}" \
 		--with-eprefix-default="${EPREFIX}" \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
