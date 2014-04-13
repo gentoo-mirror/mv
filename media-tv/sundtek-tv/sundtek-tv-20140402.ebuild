@@ -13,20 +13,18 @@ tar_x86="${PN}-x86-${PV}.tar.gz"
 drivertar="installer.tar.gz"
 driverfile="${PN}-20140223.sh"
 driverdist="sundtek_netinst.sh"
-docfile="${PN}-20090913.pdf"
 docdist="sundtek_smart_facts_de.pdf"
 DESCRIPTION="Sundtek MediaTV Pro III Drivers"
 HOMEPAGE="http://support.sundtek.com/index.php/topic,2.0.html"
 SRC_URI="amd64? ( http://www.sundtek.de/media/netinst/64bit/installer.tar.gz -> ${tar_amd64} )
-x86? ( http://www.sundtek.de/media/netinst/32bit/installer.tar.gz -> ${tar_x86} )
-doc? ( http://www.sundtek.com/docs/${docdist} -> ${docfile} )"
+x86? ( http://www.sundtek.de/media/netinst/32bit/installer.tar.gz -> ${tar_x86} )"
 ${develop} && SRC_URI="${SRC_URI} http://www.sundtek.de/media/${driverdist} -> ${driverfile}"
 
 RESTRICT="mirror"
 LICENSE="sundtek"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="doc pax_kernel"
+IUSE="pax_kernel"
 RDEPEND=""
 DEPEND="pax_kernel? ( || ( sys-apps/elfix sys-apps/paxctl ) )"
 
@@ -68,8 +66,6 @@ src_unpack() {
 		"${S}"
 	! ${develop} || cp "${DISTDIR}/${driverfile}" "${S}/${driverdist}" \
 		|| die "could not copy ${driverfile}"
-	! use doc || cp "${DISTDIR}/${docfile}" "${S}/${docdist}" \
-		|| die "could not copy ${docfile}"
 }
 
 extract_driver() {
@@ -164,7 +160,6 @@ src_install() {
 	then	newinitd sundtek.initd sundtek
 		systemd_dounit *.service
 		dodoc README *.conf
-		! use doc || dodoc "${docdist}"
 	fi
 	dobin mediaclient.video
 	insinto /usr/bin
