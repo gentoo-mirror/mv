@@ -151,7 +151,7 @@ src_install() {
 	insinto /
 	local i
 	for i in etc lib64 lib32 lib usr opt
-	do	test -d "${i}" && doins -r "${i}"
+	do	test -d "${i}" && mv -- "${i}" "${ED}"
 	done
 	for i in "${ED}"/usr/bin "${ED}"/usr/lib* "${ED}"/opt
 	do	test -d "${i}" && chmod -R 755 "${i}"
