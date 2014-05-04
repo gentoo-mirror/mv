@@ -7,7 +7,8 @@
 		<name>Martin Väth</name>
 	</maintainer>
 	<use>
-		<flag name="progress-redirect">Redirect printing of progress bar to stderr. This gives a nicer output if used from scripts like sys-fs/squash_dir</flag>
 		<flag name="xz">Enable support for XZ ("LZMA2") compression using <pkg>app-arch/xz-utils</pkg></flag>
+		<flag name="lz4">Enable support for LZ4 compression using <pkg>app-arch/lz4</pkg></flag>
+		<flag name="progress-redirect">Redirect printing of progress bar to stderr. This gives a nicer output if used from scripts like sys-fs/squash_dir</flag>
 	</use>
 </pkgmetadata>
