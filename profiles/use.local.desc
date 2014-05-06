@@ -37,6 +37,7 @@ app-shells/zsh-completion:completion_database - Install zsh completions for data
 app-shells/zsh-completion:completion_dev - Install zsh completions for development (build systems, editors, web)
 app-shells/zsh-completion:completion_disk - Install zsh completions for disk tools
 app-shells/zsh-completion:completion_distribute - Install zsh completions for tools for distributing tasks to machines
+app-shells/zsh-completion:completion_filesystem - Install zsh completions for filesystem tools
 app-shells/zsh-completion:completion_git - Install zsh completions for special git tools
 app-shells/zsh-completion:completion_hardware - Install zsh completions for low-level hardware tools
 app-shells/zsh-completion:completion_haskell - Install zsh completions for Haskell tools
@@ -44,7 +45,9 @@ app-shells/zsh-completion:completion_managers - Install zsh completions for pack
 app-shells/zsh-completion:completion_multimedia - Install zsh completions for multimedia programs
 app-shells/zsh-completion:completion_net - Install zsh completions for net-related tools
 app-shells/zsh-completion:completion_nfs - Install zsh completions for network filesystem tools
+app-shells/zsh-completion:completion_pass - Install zsh completion for app-admin/pass (instead of completion of app-admin/pass project)
 app-shells/zsh-completion:completion_perl - Install zsh completion for perl-related tools
+app-shells/zsh-completion:completion_pip - Install zsh completion for dev-python/pip (instead of completion of dev-python/pip project)
 app-shells/zsh-completion:completion_python - Install zsh completion for python development tools
 app-shells/zsh-completion:completion_ruby - Install zsh completion for ruby tools and tools in ruby
 app-shells/zsh-completion:completion_search - Install zsh completion for search tools like sys-apps/ack and sys-apps/the_silver_searcher
