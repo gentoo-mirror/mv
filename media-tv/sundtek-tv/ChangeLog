@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*sundtek-tv-20140510.143826 (11 May 2014)
+
+  11 May 2014; Martin Väth <martin@mvath.de>:
+  Move to versioned tarball support. Thanks to the Sundtek support!
+
 *sundtek-tv-20140510 (11 May 2014)
 
   11 May 2014; Martin Väth <martin@mvath.de>:

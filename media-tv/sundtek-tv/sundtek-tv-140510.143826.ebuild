@@ -3,22 +3,14 @@
 # $Header: $
 
 EAPI=5
-inherit eutils pax-utils readme.gentoo systemd
+inherit eutils pax-utils readme.gentoo systemd unpacker
 
-develop=false
+# The following variable is only for testing purposes. Leave it to "false"
 keep_original=false
 
-tar_amd64="${PN}-amd64-${PV}.tar.gz"
-tar_x86="${PN}-x86-${PV}.tar.gz"
-drivertar="installer.tar.gz"
-driverfile="${PN}-20140223.sh"
-driverdist="sundtek_netinst.sh"
-docdist="sundtek_smart_facts_de.pdf"
 DESCRIPTION="Sundtek MediaTV Pro III Drivers"
 HOMEPAGE="http://support.sundtek.com/index.php/topic,2.0.html"
-SRC_URI="amd64? ( http://www.sundtek.de/media/netinst/64bit/installer.tar.gz -> ${tar_amd64} )
-x86? ( http://www.sundtek.de/media/netinst/32bit/installer.tar.gz -> ${tar_x86} )"
-${develop} && SRC_URI="${SRC_URI} http://www.sundtek.de/media/${driverdist} -> ${driverfile}"
+SRC_URI="http://www.sundtek.de/media/sundtek_installer_${PV}.sh"
 
 RESTRICT="mirror"
 LICENSE="sundtek"
@@ -35,47 +27,31 @@ DOC_CONTENTS="To initialize sundtek drivers during booting call
 You will probably need to adapt sundtek-local.service to your defaults
 "
 
-QA_PREBUILT="opt/bin/* usr/lib*"
-
-pkg_setup() {
-	if use amd64
-	then	sourcetar="${tar_amd64}"
-	elif use x86
-	then	sourcetar="${tar_x86}"
-	else	die "This ebuild does not support the architecture.
-Download from Sundtek directly or write your own ebuild"
-	fi
-	elog "sundtek provides regular updates to the driver."
-	elog "I do not have time to bump this ebuild regularly."
-	elog "In case of checksum mismatches, copy to your local overlay,"
-	elog "rename the ebuild version to the current date and call"
-	elog "ebuild [name to the new ebuild] manifest"
-	elog "Although the ebuild tries to be generic, there is no guarantee that"
-	elog "the most current driver will work in this case, of course."
-	elog "If you cannot get this ebuild to work, use sundtek's installer."
-}
+QA_PREBUILT="opt/bin/* opt/bin/*/* usr/$(get_libdir)/*"
 
 src_unpack() {
-	mkdir "${S}" && cd "${S}"
-	unpack ${A}
+	local subdir a
+	a="${S}/archives"
+	mkdir -- "${S}" # "|| die" no necessary: test happens in cd
+	mkdir -- "${a}"
+	cd -- "${a}" || die "cannot cd to ${a}"
+	bash -- "${DISTDIR}/${A}" -e || die "extracting failed"
+	cd -- "${S}" || die
+	if use amd64
+	then	subdir=64bit
+	elif use x86
+	then	subdir=32bit
+	else	die "This ebuild does not support the architecture.
+Download from Sundtek directly, write your own ebuild, or send me patches."
+	fi
+	unpacker "${a}/${subdir}/installer.tar.gz" || die
+	rm -rf -- "${a}" || die "cannot remove ${a}"
 	cp -- \
 		"${FILESDIR}"/sundtek.initd \
 		"${FILESDIR}"/sundtek-local.service \
 		"${FILESDIR}"/_mediaclient \
 		"${FILESDIR}"/mediaclient.video \
-		"${S}"
-	! ${develop} || cp "${DISTDIR}/${driverfile}" "${S}/${driverdist}" \
-		|| die "could not copy ${driverfile}"
-}
-
-extract_driver() {
-	local size
-	size=`sed -n -e  's/^_SIZE=//p' -- "${S}/${driverdist}"` \
-		&& [ -n "${size}" ] || die "cannot determine size"
-	dd "if=${S}/${driverdist}" of="${S}/installer.tar.gz" skip=1 "bs=${size}" \
-		|| die "failed to extract driver tarball"
-	dd "if=${S}/${driverdist}" of="${S}/installer.sh" count=1 "bs=${size}" \
-		|| die "failed to extract installer script"
+		"${S}" || die
 }
 
 my_movlibdir() {
@@ -104,7 +80,6 @@ src_prepare() {
 	myudev="lib/udev"
 	mylirc="etc/lirc"
 	umask 022
-	${develop} && extract_driver
 	if use pax_kernel
 	then	pax-mark em opt/bin/mediasrv
 		pax-mark e opt/bin/mediaclient
@@ -116,11 +91,6 @@ src_prepare() {
 	${keep_original} || mv 1/lib/pm 1/lib/pm-utils/sleep.d || die
 	mv 1/lib "${mylibdir}" || die
 	mv 1/include "${myinclude}" || die
-	# The systemd unit need only be patched if PAX flags are not properly set
-	: sed -i -e 's/^\(\(Exec\(Start\|Stop\)\|Type\)=\)/#\1/' \
-		-e '/^#ExecStart=/iExecStart=/opt/bin/mediasrv --pluginpath /opt/bin' \
-		-e '/^#ExecStop=/i#ExecStop=/bin/kill $MAINPID' \
-		1/doc/sundtek.service || die
 	sed -e "s#/opt/lib#${EPREFIX}/${mylibdir}#" \
 		-e "s#/opt/include#${EPREFIX}/${myinclsundtek}#" \
 		-e "s#prefix=/opt#prefix=${EPREFIX}/${mybinprefix}#" \
@@ -141,7 +111,6 @@ src_prepare() {
 	echo "SEARCH_DIRS_MASK=\"${EPREFIX}/${mybinprefix}/bin/audio/libpulse.so\"" \
 		>etc/revdep-rebuild/50-sundtek-tv
 	echo "/${mylibdir}/libmediaclient.so" >etc/ld.so.preload
-	${develop} && die "Developer mode: Dying after unpacking all"
 	ln -sfn mediaclient.video mediaclient.audio
 	ln -sfn mediaclient.video mediaclient.dvb
 	epatch_user
@@ -153,7 +122,7 @@ src_install() {
 	for i in etc lib64 lib32 lib usr opt
 	do	test -d "${i}" && mv -- "${i}" "${ED}"
 	done
-	for i in "${ED}"/usr/bin "${ED}"/usr/lib* "${ED}"/opt
+	for i in "${ED}"/usr/bin "${ED}"/usr/$(get_libdir) "${ED}"/opt
 	do	test -d "${i}" && chmod -R 755 "${i}"
 	done
 	if ! ${keep_original}
@@ -170,11 +139,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	false chmod 6111 "${EPREFIX}/opt/bin/mediasrv" || \
-	elog "You might need to chmod 6111 ${EPREFIX}/opt/bin/mediasrv"
-	einfo "adding root to the audio group."
+	einfo "Adding root to the audio group"
 	usermod -aG audio root || {
 		ewarn "Could not add root to the audio group."
 		ewarn "You should do this manually if you have problems with sound"
 	}
+	false chmod 6111 "${EPREFIX}/opt/bin/mediasrv" || \
+	elog "You might need to chmod 6111 ${EPREFIX}/opt/bin/mediasrv"
 }
