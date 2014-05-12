@@ -3,16 +3,17 @@
 # $Header: $
 
 EAPI=5
-inherit eutils pax-utils readme.gentoo systemd unpacker
+inherit eutils linux-info pax-utils readme.gentoo systemd unpacker
 
 # The following variable is only for testing purposes. Leave it to "false"
 keep_original=false
 
 DESCRIPTION="Sundtek MediaTV Pro III Drivers"
 HOMEPAGE="http://support.sundtek.com/index.php/topic,2.0.html"
+# Current version number can be found in http://sundtek.de/media/latest.phtml
 SRC_URI="http://www.sundtek.de/media/sundtek_installer_${PV}.sh"
 
-RESTRICT="mirror"
+RESTRICT="mirror strip"
 LICENSE="sundtek"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
@@ -136,6 +137,11 @@ src_install() {
 	insinto /usr/share/zsh/site-functions
 	doins _mediaclient
 	readme.gentoo_create_doc
+}
+
+pkg_pretend() {
+	local CONFIG_CHECK="~INPUT_UINPUT"
+	check_extra_config
 }
 
 pkg_postinst() {
