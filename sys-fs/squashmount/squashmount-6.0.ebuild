@@ -40,7 +40,7 @@ src_prepare() {
 
 src_install() {
 	dobin bin/*
-	dodoc README ChangeLog
+	dodoc README ChangeLog compress.txt
 	doinitd openrc/init.d/*
 	systemd_dounit systemd/system/*
 	insinto /etc
