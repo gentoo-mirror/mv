@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squashmount-6.0a (21 May 2014)
+
+  21 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump to revert to COMPRESSION=xz default. Mask old by keyword.
+
 *squashmount-6.0 (17 May 2014)
 
   17 May 2014; Martin Väth <martin@mvath.de>:
