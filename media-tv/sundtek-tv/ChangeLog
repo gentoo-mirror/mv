@@ -2,17 +2,23 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*sundtek-tv-20140517.123345 (24 May 2014)
+*sundtek-tv-140528.222950 (29 May 2014)
+
+  29 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. openat() fixed on 32 bit: tar-1.27.1 works.
+  Thanks again to the Sundtek support!
+
+*sundtek-tv-140517.123345 (24 May 2014)
 
   24 May 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 
-*sundtek-tv-20140510.143826-r1 (12 May 2014)
+*sundtek-tv-140510.143826-r1 (12 May 2014)
 
   12 May 2014; Martin Väth <martin@mvath.de>:
   Add check for INPUT_UINPUT ball. Thanks again to the Sundtek support!
 
-*sundtek-tv-20140510.143826 (11 May 2014)
+*sundtek-tv-140510.143826 (11 May 2014)
 
   11 May 2014; Martin Väth <martin@mvath.de>:
   Move to versioned tarball support. Thanks to the Sundtek support!
