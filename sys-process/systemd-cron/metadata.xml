@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>martin@mvath.de</email>
+		<name>Martin Väth</name>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<email>dbb@dbb.io</email>
+			<name>Dwayne Bent</name>
+		</maintainer>
+		<bugs-to>https://github.com/dbent/systemd-cron/issues</bugs-to>
+		<remote-id type="github">dbent/systemd-cron</remote-id>
+	</upstream>
+	<use>
+		<flag name="cron-boot">Enable systemd boot cron target</flag>
+		<flag name="yearly">Enable systemd yearly cron target</flag>
+	</use>
+</pkgmetadata>
