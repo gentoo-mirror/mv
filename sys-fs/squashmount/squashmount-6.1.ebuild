@@ -12,7 +12,7 @@ SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=app-shells/runtitle-2.3
@@ -28,6 +28,7 @@ DEPEND=""
 
 DISABLE_AUTOFORMATTING="true"
 DOC_CONTENTS="Please adapt /etc/squashmount.pl to your needs.
+For improved output use squasfs-tools from the mv overlay.
 It is recommended to put into your zshrc the line:
 alias squashmount='noglob squashmount'"
 
@@ -53,7 +54,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	optfeature "improved output" 'sys-fs/squashfs-tools[progress-redirect]'
 	optfeature "status bar support" 'app-shells/runtitle'
 	optfeature "improved compatibility and security" 'dev-perl/File-Which'
 	optfeature "colored output" '>=dev-lang/perl-5.14' 'perl-core/Term-ANSIColor'

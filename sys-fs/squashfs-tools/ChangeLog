@@ -2,6 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Jun 2014; Martin Väth <martin@mvath.de>:
+  Bump 4.3. Use patch for quiet, unconditionally, instead of progress-stderr.
+  Remove older ebuilds
+
   04 May 2014; Martin Väth <martin@mvath.de>:
   Bump 4.2_p20140119 from tree; update patch; filter -fno-common
 

@@ -5,14 +5,14 @@
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="Tool for creating compressed filesystem type squashfs"
+DESCRIPTION="Tool for creating compressed filesystem type squashfs. Patched to support -quiet"
 HOMEPAGE="http://squashfs.sourceforge.net"
-SRC_URI="http://dev.gentoo.org/~jer/${P}.tar.xz"
+SRC_URI="mirror://sourceforge/squashfs/squashfs${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~x86"
-IUSE="+xz lzma lz4 lzo xattr +progress-redirect"
+IUSE="+xz lzma lz4 lzo xattr"
 
 RDEPEND="
 	sys-libs/zlib
@@ -25,11 +25,10 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${P}/squashfs-tools"
+S="${WORKDIR}/squashfs${PV}/${PN}"
 
 src_prepare() {
-	use progress-redirect && \
-		epatch "${FILESDIR}/${P}-progress-stderr.patch"
+	epatch "${FILESDIR}/${P}-quiet.patch"
 	epatch_user
 }
 
@@ -53,6 +52,7 @@ src_compile() {
 
 src_install() {
 	dobin mksquashfs unsquashfs
+	dodoc ../README
 }
 
 pkg_postinst() {
