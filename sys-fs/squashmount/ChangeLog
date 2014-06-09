@@ -2,11 +2,16 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squashmount-6.2 (09 Jun 2014)
+
+  09 Jun 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. New $mksquash_verbose/--mksquash-verbose
+  replaces now obsolete $squash_verbose/--mksquash-verbose
+
 *squashmount-6.1 (08 Jun 2014)
 
   08 Jun 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild. Note that $squash_verbose meaning changed!
-  It is recommended to use squashmount with -quiet patch from mv overlay
+  Version bump, remove old ebuild.
 
 *squashmount-6.0a (21 May 2014)
 
