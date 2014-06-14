@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=5
+
 # NOTE: Even though the *.dict.dz are the same as dictd/freedict's files,
 #       their indexes seem to be in a different format. So we'll keep them
 #       seperate for now.
 
 # NOTE: Festival plugin crashes, bug 188684. Disable for now.
-
-EAPI=5
 
 GNOME2_LA_PUNT=yes
 GCONF_DEBUG=no
@@ -25,6 +25,8 @@ LICENSE="CPL-1.0 GPL-3 LGPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="espeak gnome gucharmap qqwry pronounce spell tools"
+
+RESTRICT="test"
 
 COMMON_DEPEND=">=dev-libs/glib-2.16
 	dev-libs/libsigc++:2
@@ -53,34 +55,14 @@ DEPEND="${COMMON_DEPEND}
 		dev-libs/libxslt
 	)
 	dev-util/intltool
-	virtual/pkgconfig
-	sys-devel/gettext"
-
-RESTRICT="test"
-
-pkg_setup() {
-	G2CONF="$(use_enable tools)
-		--disable-scrollkeeper
-		$(use_enable spell)
-		$(use_enable gucharmap)
-		--disable-festival
-		$(use_enable espeak)
-		$(use_enable qqwry)
-		--disable-updateinfo
-		$(use_enable gnome gnome-support)
-		--disable-gpe-support
-		--disable-schemas-install"
-}
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-correct-glib-include.patch \
-		"${FILESDIR}"/${P}-entry.patch \
-		"${FILESDIR}"/${P}-gcc46.patch \
-		"${FILESDIR}"/${P}-compositelookup_cpp.patch \
-		"${FILESDIR}"/${P}-overflow.patch \
-		"${FILESDIR}"/${P}-zlib-1.2.5.2.patch
-	epatch_user
+	# These 2 fixes have been upstreamized for upcoming 3.0.5 differently, so drop 'em:
+	epatch "${FILESDIR}"/${PN}-3.0.3-zlib-1.2.5.2.patch
+	sed -i -e '/DEP_MODULES/s:glib-2.0:gmodule-2.0 &:' dict/configure || die
+
 	if ! use gnome
 	then	sed -i \
 				-e 's/GNOME_DOC_INIT/GNOME_DOC_INIT([0.32],[:],[:])/' \
@@ -95,7 +77,23 @@ src_prepare() {
 				dict/src/lib/Makefile.am
 			eautoreconf
 	fi
+
 	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		$(use_enable tools) \
+		--disable-scrollkeeper \
+		$(use_enable spell) \
+		$(use_enable gucharmap) \
+		--disable-festival \
+		$(use_enable espeak) \
+		$(use_enable qqwry) \
+		--disable-updateinfo \
+		$(use_enable gnome gnome-support) \
+		--disable-gpe-support \
+		--disable-schemas-install
 }
 
 src_install() {
@@ -104,7 +102,7 @@ src_install() {
 	dodoc dict/doc/{Documentation,FAQ,HACKING,HowToCreateDictionary,Skins,StarDictFileFormat,Translation}
 
 	if use qqwry; then
-		insinto /usr/share/stardict/data
+		insinto /usr/share/${PN}/data
 		doins ../QQWry.Dat
 	fi
 
@@ -116,19 +114,19 @@ src_install() {
 		doins -r ../WyabdcRealPeopleTTS
 	fi
 
-	# noinst_PROGRAMS with stardict_ prefix from tools/src/Makefile.am wrt #292773
+	# noinst_PROGRAMS with ${PN}_ prefix from tools/src/Makefile.am wrt #292773
 	if use tools; then
 		local app
-		local apps="pydict2dic olddic2newdic oxford2dic directory2dic dictd2dic
-			wquick2dic ec50 directory2treedic treedict2dir jdictionary mova
+		local apps="${PN}-editor pydict2dic olddic2newdic oxford2dic directory2dic
+			dictd2dic wquick2dic ec50 directory2treedic treedict2dir jdictionary mova
 			xmlinout soothill kanjidic2 powerword kdic 21tech 21shiji buddhist
-			tabfile cedict edict duden stardict-dict-update degb2utf frgb2utf
+			tabfile cedict edict duden ${PN}-dict-update degb2utf frgb2utf
 			jpgb2utf gmx2utf rucn kingsoft wikipedia wikipediaImage babylon
-			stardict2txt stardict-verify fest2dict i2e2dict downloadwiki
+			${PN}2txt ${PN}-verify fest2dict i2e2dict downloadwiki
 			ooo2dict myspell2dic exc2i2e dictbuilder tabfile2sql KangXi Unihan
 			xiaoxuetang-ja wubi ydp2dict wordnet lingvosound2resdb
-			resdatabase2dir dir2resdatabase stardict-index stardict-text2bin
-			stardict-bin2text stardict-repair"
+			resdatabase2dir dir2resdatabase ${PN}-index ${PN}-text2bin
+			${PN}-bin2text ${PN}-repair"
 
 		for app in ${apps}; do
 			newbin tools/src/${app} ${PN}_${app}
@@ -142,10 +140,10 @@ pkg_postinst() {
 	elog '"Preferences -> Dictionary -> Sound" and fill in "Commandline" with:'
 	elog '"echo %s | festival --tts"'
 	elog
-	elog "You will now need to install stardict dictionary files. If"
+	elog "You will now need to install ${PN} dictionary files. If"
 	elog "you have not, execute the below to get a list of dictionaries:"
 	elog
-	elog "  emerge -s stardict-"
+	elog "  emerge -s ${PN}-"
 
 	gnome2_pkg_postinst
 }
