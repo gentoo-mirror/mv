@@ -104,7 +104,10 @@ src_prepare() {
 	mv etc/udev "${myudev}" || die
 	mv 1/doc/hardware.conf 1/doc/sundtek.conf "${mylirc}" || die
 	rm 1/doc/lirc_install.sh 1/doc/libmedia.pc || die
-	mv 1/doc/README 1/doc/*.service 1/doc/*.conf "${S}" || die
+	mv 1/doc/*.service "${S}" || die
+	mkdir "${S}/doc" && mkdir "${S}/doc/bin" || die
+	mv 1/doc/README 1/doc/*.conf "${S}/doc" || die
+	mv 1/doc/*.cgi "${S}/doc/bin" || die
 	rmdir 1/doc || die "${S}/1/doc contains files not known to the ebuild"
 	rmdir 1 || die "${S}/1 contains files not known to the ebuild"
 	my_movlibdir "${mylibdir}"
@@ -129,7 +132,9 @@ src_install() {
 	if ! ${keep_original}
 	then	newinitd sundtek.initd sundtek
 		systemd_dounit *.service
-		dodoc README *.conf
+		dodoc doc/README doc/*.conf
+		mv -- doc/bin "${ED}/usr/share/doc/${PF}" || die
+		docompress -x "/usr/share/doc/${PF}/bin"
 	fi
 	dobin mediaclient.video
 	insinto /usr/bin
