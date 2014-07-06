@@ -12,10 +12,12 @@ DESCRIPTION="Excellent text file viewer, optionally with additional selection fe
 PATCHN="less-select"
 PATCHV="2.5"
 PATCHVER="460"
-PATCHBALL="${PATCHN}-${PATCHV}.tar.gz"
+PATCHRUMP="${PATCHN}-${PATCHV}"
+PATCHBALL="${PATCHRUMP}.tar.gz"
+SELECTDIR="${WORKDIR}/${PATCHRUMP}"
 HOMEPAGE="http://www.greenwoodsoftware.com/less/ https://github.com/vaeth/${PATCHN}"
 SRC_URI="http://www.greenwoodsoftware.com/less/${P}.tar.gz
-	less-select? ( https://github.com/vaeth/${PATCHN}/tarball/${PATCHV} -> ${PATCHBALL} )
+	less-select? ( https://github.com/vaeth/${PATCHN}/archive/${PATCHV}.tar.gz -> ${PATCHBALL} )
 	http://www-zeuthen.desy.de/~friebel/unix/less/code2color -> ${CODE2COLOR_P}"
 
 LICENSE="|| ( GPL-3 BSD-2 )"
@@ -41,8 +43,6 @@ src_unpack() {
 	cp "${DISTDIR}/${CODE2COLOR_P}" "${S}"/code2color || die
 	if use less-select
 	then	unpack ${PATCHBALL}
-		cd *"${PATCHN}"-*
-		SELECTDIR=${PWD}
 	fi
 }
 

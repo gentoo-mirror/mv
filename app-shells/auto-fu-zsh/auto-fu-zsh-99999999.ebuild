@@ -19,8 +19,8 @@ case ${PV} in
 *)
 	LIVE=false
 	RESTRICT="mirror"
-	inherit vcs-snapshot
-	SRC_URI="https://github.com/hchbaw/${mPN}/tarball/v${PV} -> ${P}.tar.gz"
+	SRC_URI="https://github.com/hchbaw/${mPN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	S="${WORKDIR}/${mPN}-${PV}"
 	KEYWORDS="~amd64 ~x86";;
 esac
 

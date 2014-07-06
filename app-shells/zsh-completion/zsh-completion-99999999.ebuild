@@ -12,24 +12,25 @@ case ${PV} in
 	EGIT_REPO_URI="git://github.com/zsh-users/${PNn}.git"
 	inherit git-r3
 	PROPERTIES="live"
-	SRC_URI=""
-	KEYWORDS="";;
+	KEYWORDS=""
+	SRC_URI="";;
 *)
 	LIVE=false
 	RESTRICT="mirror"
-	inherit vcs-snapshot
-	SRC_URI="https://github.com/zsh-users/${PNn}/archive/0.10.0.tar.gz -> ${PN}-${PV}.tar.gz"
-	KEYWORDS="~amd64 ~x86";;
+	TARBALL_VERSION='0.10.0'
+	SRC_URI="https://github.com/zsh-users/${PNn}/archive/${TARBALL_VERSION}.tar.gz -> ${PN}-${PV}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+	S="${WORKDIR}/${PNn}-${TARBALL_VERSION}"
 esac
 
 DESCRIPTION="Programmable Completion for zsh (includes emerge and ebuild commands)"
 HOMEPAGE="http://gentoo.org/zsh-users/zsh-completions/"
 LICENSE="ZSH"
 SLOT="0"
-DEPEND="completion_pass? ( !!app-admin/pass[zsh-completion] )
-completion_pip? ( !!dev-python/pip[zsh-completion] )"
+DEPEND="completion_pass? ( !app-admin/pass[zsh-completion] )
+completion_pip? ( !dev-python/pip[zsh-completion] )"
 
-IUSE=""
+IUSE="completion_pass completion_pip"
 declare -a COMPLETIONS FILES
 COMPLETIONS=()
 FILES=()

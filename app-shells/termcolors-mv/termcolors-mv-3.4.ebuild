@@ -4,11 +4,11 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils readme.gentoo vcs-snapshot
+inherit eutils readme.gentoo
 
 DESCRIPTION="256colors sample script and dircolors configuration for standard or 256 colors"
 HOMEPAGE="https://github.com/vaeth/termcolors-mv/"
-SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

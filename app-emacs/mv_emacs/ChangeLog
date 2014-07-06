@@ -4,6 +4,9 @@
 
 *mv_emacs-1.1 (21 Nov 2013)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   21 Nov 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

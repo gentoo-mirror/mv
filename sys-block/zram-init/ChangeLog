@@ -4,6 +4,9 @@
 
 *zram-init-2.8.ebuild (29 Jun 2014)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   29 Jun 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

@@ -4,6 +4,9 @@
 
 *logclean-9.8-r1 (17 Dec 2013)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   15 Mar 2014; Martin Väth <martin@mvath.de>:
   Use optfeature
 

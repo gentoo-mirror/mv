@@ -4,11 +4,11 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils vcs-snapshot
+inherit eutils
 
 DESCRIPTION="A POSIX shell script to compile the kernel with user permissions"
 HOMEPAGE="https://github.com/vaeth/kernel/"
-SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

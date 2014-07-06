@@ -4,11 +4,11 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils vcs-snapshot
+inherit eutils
 
 DESCRIPTION="An intelligent prompt for zsh or bash with status line (window title) support"
 HOMEPAGE="https://github.com/vaeth/set_prompt/"
-SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

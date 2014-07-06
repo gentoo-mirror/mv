@@ -4,11 +4,11 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils vcs-snapshot
+inherit eutils
 
 DESCRIPTION="Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags"
 HOMEPAGE="https://github.com/vaeth/portage-bashrc-mv/"
-SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

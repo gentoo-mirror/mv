@@ -4,6 +4,9 @@
 
 *cpi-2.7-r1 (14 Dec 2013)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   14 Dec 2013; Martin Väth <martin@mvath.de>:
   Fix sh path
 

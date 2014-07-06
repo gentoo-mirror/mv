@@ -4,6 +4,9 @@
 
 *firewall-mv-8.5 (15 Jun 2014)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   15 Jun 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

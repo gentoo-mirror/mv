@@ -4,11 +4,11 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit elisp-common eutils vcs-snapshot
+inherit elisp-common eutils
 
 DESCRIPTION="(X)Emacs extensions: block support, macrorecorder, verify change"
 HOMEPAGE="https://github.com/vaeth/mv_emacs/"
-SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +19,7 @@ DEPEND="virtual/emacs"
 RDEPEND=${DEPEND}
 
 src_unpack() {
-	vcs-snapshot_src_unpack
+	default
 	cd "${S}"
 	mkdir sitefile
 	cat >"sitefile/50${PN}-gentoo.el" <<EOF

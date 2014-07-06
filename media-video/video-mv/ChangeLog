@@ -4,6 +4,9 @@
 
 *video-mv-7.16 (31 May 2014)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   31 May 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

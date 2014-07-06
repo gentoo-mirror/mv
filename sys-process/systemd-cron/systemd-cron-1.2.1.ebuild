@@ -4,11 +4,11 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils systemd vcs-snapshot
+inherit eutils systemd
 
 DESCRIPTION="systemd units to provide minimal cron daemon functionality by running scripts in cron directories"
 HOMEPAGE="https://github.com/dbent/systemd-cron/"
-SRC_URI="https://github.com/dbent/${PN}/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/dbent/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="HPND"
 SLOT="0"

@@ -4,6 +4,9 @@
 
 *auto-fu-zsh-99999999 (14 Sep 2013)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   14 Sep 2013; Martin Väth <martin@mvath.de>:
   Rename live-version back. Bump to git-r3
 

@@ -5,12 +5,12 @@
 EAPI=5
 # Do *not* inherit latex-package: It DEPENDS unconditionally on texinfo.
 # Moreover, it would attempt to compile the *.tex example with texinfo to dvi.
-inherit eutils vcs-snapshot
+inherit eutils
 RESTRICT="mirror"
 
 DESCRIPTION="LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)"
 HOMEPAGE="https://github.com/vaeth/m5figur-mv/"
-SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LPPL-1.2"
 SLOT="0"

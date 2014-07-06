@@ -4,6 +4,9 @@
 
 *less-462-r1.ebuild (24 Dec 2013)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   24 Dec 2013; Martin Väth <martin@mvath.de>:
   Bump gentoo-builtin lesspipe
 

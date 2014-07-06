@@ -4,12 +4,13 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils vcs-snapshot
+inherit eutils
 
 mPN="${PN%-*}"
 DESCRIPTION="Organize your world file and find installed packages or differences to @world"
 HOMEPAGE="https://github.com/vaeth/world/"
-SRC_URI="https://github.com/vaeth/${mPN}/tarball/${PV} -> ${mPN}-${PV}.tar.gz"
+SRC_URI="https://github.com/vaeth/${mPN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${mPN}-${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -3,5 +3,9 @@
 # $Header: $
 
 *systemd-cron-1.2.1 (05 Jun 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   05 Jun 2014; Martin Väth <martin@mvath.de>:
   New ebuild from scratch

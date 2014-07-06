@@ -4,6 +4,9 @@
 
 *diffhelp-1.7 (17 Dec 2013)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   17 Dec 2013; Martin Väth <martin@mvath.de>:
   Fix sh path
 

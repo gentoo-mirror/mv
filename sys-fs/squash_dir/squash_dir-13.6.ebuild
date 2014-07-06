@@ -6,11 +6,11 @@ EAPI=5
 RESTRICT="mirror"
 WANT_LIBTOOL=none
 AUTOTOOLS_IN_SOURCE_BUILD=true
-inherit autotools autotools-utils eutils linux-info readme.gentoo systemd vcs-snapshot
+inherit autotools autotools-utils eutils linux-info readme.gentoo systemd
 
 DESCRIPTION="Keep directories compressed with squashfs. Useful for portage tree, texmf-dist"
 HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367.html"
-SRC_URI="https://github.com/vaeth/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

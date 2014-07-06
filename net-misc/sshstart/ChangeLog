@@ -4,6 +4,9 @@
 
 *sshstart-2.11 (30 Mar 2014)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   30 Mar 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild.
 

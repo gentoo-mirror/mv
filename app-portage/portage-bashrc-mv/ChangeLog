@@ -4,6 +4,9 @@
 
 *portage-bashrc-mv-12.5 (21 Nov 2013)
 
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
   15 Mar 2014; Martin Väth <martin@mvath.de>:
   Use optfeature
 
