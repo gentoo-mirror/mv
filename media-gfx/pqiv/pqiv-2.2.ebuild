@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk2 kernel_linux"
 
-RDEPEND="dev-libs/glib:2
-	x11-libs/cairo
+RDEPEND=">=dev-libs/glib-2.8:2
+	>=x11-libs/cairo-1.6
 	gtk2? ( x11-libs/gtk+:2 )
 	!gtk2? ( x11-libs/gtk+:3 )"
 DEPEND="${RDEPEND}
