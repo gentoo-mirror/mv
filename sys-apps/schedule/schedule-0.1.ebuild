@@ -6,7 +6,7 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils systemd
 
-DESCRIPTION="POSIX shell script and function to schedule commands"
+DESCRIPTION="script to schedule jobs in a multiuser multitasking environment"
 HOMEPAGE="https://github.com/vaeth/starter/"
 SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
