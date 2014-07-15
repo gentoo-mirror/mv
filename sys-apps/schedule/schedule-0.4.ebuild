@@ -26,7 +26,7 @@ src_prepare() {
 
 src_install() {
 	dobin bin/*
-	dodoc README
+	dodoc README ChangeLog
 	doinitd openrc/init.d/*
 	systemd_dounit systemd/system/*
 	insinto /usr/share/zsh/site-functions
