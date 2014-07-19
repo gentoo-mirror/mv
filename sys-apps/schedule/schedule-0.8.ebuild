@@ -20,6 +20,8 @@ DEPEND=""
 src_prepare() {
 	use prefix || sed -i \
 		-e '1s"^#!/usr/bin/env perl$"#!'"${EPREFIX}/usr/bin/perl"'"' \
+		-e 's"^/usr/share/schedule"${EPREFIX}/usr/share/${PN}"' \
+		-e '/^use FindBin;/,/^\}$/d' \
 		-- bin/* || die
 	epatch_user
 }
@@ -27,6 +29,8 @@ src_prepare() {
 src_install() {
 	dobin bin/*
 	dodoc README ChangeLog
+	insinto "/usr/share/${PN}"
+	doins -r lib/*
 	doinitd openrc/init.d/*
 	systemd_dounit systemd/system/*
 	insinto /usr/share/zsh/site-functions
