@@ -14,7 +14,12 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND="dev-lang/perl"
+RDEPEND="dev-lang/perl
+	virtual/perl-File-Path
+	virtual/perl-File-Spec
+	virtual/perl-Getopt-Long
+	>=virtual/perl-IO-1.280.0"
+# Smaller versions of perl-IO are untested and therefore not recommended
 DEPEND=""
 
 src_prepare() {

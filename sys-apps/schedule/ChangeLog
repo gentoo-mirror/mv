@@ -4,35 +4,38 @@
 
 *starter-0.8 (19 Jul 2014)
 
+  20 Jul 2014; Martin Väth <martin@mvath.de>:
+  List all dependencies
+
   19 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-0.7 (18 Jul 2014)
 
   18 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-0.6 (17 Jul 2014)
 
   17 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-0.5 (16 Jul 2014)
 
   16 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-0.4 (15 Jul 2014)
 
   15 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-0.3 (14 Jul 2014)
 
   14 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-0.1 (13 Jul 2014)
 
   13 Jul 2014; Martin Väth <martin@mvath.de>:
-  New ebuild from scratch.
+  New ebuild from scratch
