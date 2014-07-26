@@ -41,3 +41,7 @@ src_install() {
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
 }
+
+pkg_postinst() {
+	optfeature "colored output" '>=dev-lang/perl-5.14' 'perl-core/Term-ANSIColor'
+}
