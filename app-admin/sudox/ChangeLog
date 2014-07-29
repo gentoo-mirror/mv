@@ -2,7 +2,7 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*sudox-3.16 (29 Jul 2014)
+*sudox-3.17 (29 Jul 2014)
 
   29 Jul 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
