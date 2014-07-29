@@ -2,30 +2,35 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*sundtek-tv-140727.221230 (29 Jul 2014)
+
+  29 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *sundtek-tv-140715.054711 (16 Jul 2014)
 
   16 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sundtek-tv-140711.143644 (13 Jul 2014)
 
   13 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sundtek-tv-140701.143639 (07 Jul 2014)
 
   07 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sundtek-tv-140629.115654 (29 Jun 2014)
 
   29 Jun 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sundtek-tv-140601.005015 (03 Jun 2014)
 
   03 Jun 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sundtek-tv-140528.222950 (29 May 2014)
 
@@ -36,7 +41,7 @@
 *sundtek-tv-140517.123345 (24 May 2014)
 
   24 May 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sundtek-tv-140510.143826-r1 (12 May 2014)
 
@@ -51,7 +56,7 @@
 *sundtek-tv-20140510 (11 May 2014)
 
   11 May 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sundtek-tv-20140428 (04 May 2014)
 
@@ -61,7 +66,7 @@
 *sundtek-tv-20140414 (14 Apr 2014)
 
   14 Apr 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sundtek-tv-20140402 (13 Apr 2014)
 

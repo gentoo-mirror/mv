@@ -2,13 +2,18 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*starter-2.13 (29 Jul 2014)
+
+  29 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *starter-2.12 (30 Mar 2014)
 
   06 Jul 2014; Martin Väth <martin@mvath.de>:
   New style github tarball
 
   30 Mar 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-2.11-r1 (17 Dec 2013)
 
@@ -18,12 +23,12 @@
 *starter-2.11 (21 Nov 2013)
 
   21 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-2.10 (02 Nov 2013)
 
   02 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild. Shebang care
+  Version bump, remove old ebuild Shebang care
 
 *starter-2.9 (17 Nov 2012)
 
@@ -42,7 +47,7 @@
   Bump to EAPI=5
 
   11 Sep 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-2.6 (07 May 2012)
 
@@ -50,12 +55,12 @@
   base->eutils
 
   07 May 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-2.5 (04 May 2012)
 
   04 May 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-2.4 (08 Apr 2012)
 
@@ -63,7 +68,7 @@
   Inherit base
 
   08 Apr 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-2.3 (28 Feb 2012)
 
@@ -71,7 +76,7 @@
   Use vcs-snapshot.eclass
 
   28 Feb 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *starter-2.2 (31 Jan 2012)
 
@@ -81,4 +86,4 @@
 *starter-2.0 (30 Jan 2012)
 
   30 Jan 2012; Martin Väth <martin@mvath.de>:
-  New ebuild from scratch.
+  New ebuild from scratch

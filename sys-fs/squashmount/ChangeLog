@@ -2,30 +2,35 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squashmount-7.9 (29 Jul 2014)
+
+  29 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *squashmount-7.8 (28 Jul 2014)
 
   28 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-7.7 (18 Jul 2014)
 
   18 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-7.6 (17 Jul 2014)
 
   17 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-7.5 (16 Jul 2014)
 
   16 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-7.4 (09 Jul 2014)
 
   09 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-7.3 (06 Jul 2014)
 
@@ -35,7 +40,7 @@
 *squashmount-7.1 (05 Jul 2014)
 
   05 Jul 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-7.0 (04 Jul 2014)
 
@@ -52,7 +57,7 @@
 *squashmount-6.1 (08 Jun 2014)
 
   08 Jun 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-6.0a (21 May 2014)
 
@@ -62,17 +67,17 @@
 *squashmount-6.0 (17 May 2014)
 
   17 May 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-5.0 (05 May 2014)
 
   05 May 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-4.5 (30 Mar 2014)
 
   30 Mar 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-4.4 (22 Mar 2014)
 
@@ -85,7 +90,7 @@
   Use optfeature
 
   09 Mar 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-4.2 (21 Jan 2014)
 
@@ -93,7 +98,7 @@
   Avoid duplicate installation
 
   21 Jan 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-4.1 (03 Dec 2013)
 
@@ -108,12 +113,12 @@
 *squashmount-4.0 (24 Nov 2013)
 
   24 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-3.8 (21 Nov 2013)
 
   21 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-3.7-r1 (02 Nov 2013)
 
@@ -123,7 +128,7 @@
 *squashmount-3.7 (22 Oct 2013)
 
   22 Oct 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-3.6 (19 Oct 2013)
 
@@ -136,17 +141,17 @@
   Use readme.gentoo.eclass
 
   09 Oct 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-3.4 (03 Oct 2013)
 
   03 Oct 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-3.3 (22 Sep 2013)
 
   22 Sep 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-3.1 (21 Sep 2013)
 
@@ -161,7 +166,7 @@
   Install zsh-completion unconditionally according to gentoo policy
 
   09 Sep 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-2.9 (04 Sep 2013)
 
@@ -176,12 +181,12 @@
 *squashmount-2.8 (31 Aug 2013)
 
   31 Aug 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-2.6 (24 Aug 2013)
 
   24 Aug 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-2.5 (22 Aug 2013)
 
@@ -202,7 +207,7 @@
 *squashmount-2.1 (19 Aug 2013)
 
   19 Aug 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *squashmount-1.1 (18 Aug 2013)
 
