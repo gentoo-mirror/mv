@@ -2,15 +2,20 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*zram-init-2.8.ebuild (29 Jun 2014)
+*zram-init-3.0 (05 Aug 2014)
+
+  05 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support parallel streams, algorithm
+
+*zram-init-2.8 (29 Jun 2014)
 
   06 Jul 2014; Martin Väth <martin@mvath.de>:
   New style github tarball
 
   29 Jun 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
-*zram-init-2.7.ebuild (17 Dec 2013)
+*zram-init-2.7 (17 Dec 2013)
 
   24 Jan 2014; Martin Väth <martin@mvath.de>:
   Avoid duplicate installation
@@ -18,17 +23,17 @@
   17 Dec 2013; Martin Väth <martin@mvath.de>:
   Fix sh path
 
-*zram-init-2.7.ebuild (21 Nov 2013)
+*zram-init-2.7 (21 Nov 2013)
 
   21 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
-*zram-init-2.6-r1.ebuild (02 Nov 2013)
+*zram-init-2.6-r1 (02 Nov 2013)
 
   02 Nov 2013; Martin Väth <martin@mvath.de>:
   Shebang care
 
-*zram-init-2.6.ebuild (11 Oct 2013)
+*zram-init-2.6 (11 Oct 2013)
 
   12 Oct 2013; Martin Väth <martin@mvath.de>:
   Use readme.gentoo.eclass
@@ -36,27 +41,27 @@
   11 Oct 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Fixes umounting
 
-*zram-init-2.5.ebuild (07 Oct 2013)
+*zram-init-2.5 (07 Oct 2013)
 
   07 Oct 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
-*zram-init-2.4.ebuild (06 Oct 2013)
+*zram-init-2.4 (06 Oct 2013)
 
   06 Oct 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
-*zram-init-2.3.ebuild (05 Oct 2013)
+*zram-init-2.3 (05 Oct 2013)
 
   05 Oct 2013; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Support further configs and systemd
 
-*zram-init-2.2.ebuild (03 Jan 2013)
+*zram-init-2.2 (03 Jan 2013)
 
   10 Sep 2013; Martin Väth <martin@mvath.de>:
   Install zsh-completion unconditionally according to gentoo policy
 
-*zram-init-2.1.ebuild (02 Mar 2012)
+*zram-init-2.1 (02 Mar 2012)
 
   28 Sep 2012; Martin Väth <martin@mvath.de>:
   Bump to EAPI=5
@@ -71,9 +76,9 @@
   Use vcs-snapshot.eclass
 
   02 Mar 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild. Changes to github repository.
+  Version bump, remove old ebuild. Changes to github repository
 
-*zram-init-2.0.ebuild (08 Feb 2010)
+*zram-init-2.0 (08 Feb 2010)
 
   08 Feb 2010; Martin Väth <martin@mvath.de>:
-  Complete rewrite. Remove old ChangeLog.
+  Complete rewrite. Remove old ChangeLog
