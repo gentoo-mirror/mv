@@ -1,21 +1,26 @@
-# ChangeLog for dev-cpp/cpplint
+  ChangeLog for dev-cpp/cpplint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*cpplint-135 (05 Aug 2014)
+
+  05 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
 
 *cpplint-134 (09 Jun 2014)
 
   09 Jun 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *cpplint-120 (29 Dec 2013)
 
   29 Dec 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *cpplint-118 (09 Nov 2013)
 
   09 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *cpplint-116 (03 Nov 2013)
 
@@ -25,23 +30,23 @@
 *cpplint-3.260_p114 (26 Oct 2013)
 
   26 Oct 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *cpplint-3.260_p112 (26 Sep 2013)
 
   26 Sep 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *cpplint-3.231_p104 (12 Jun 2013)
 
   12 Jun 2013; Martin Väth <martin@mvath.de>:
   Download with static svn version for consistent download: Finally, the
-  ebuild works even when it is out of date.
+  ebuild works even when it is out of date
 
 *cpplint-3.231 (08 Feb 2013)
 
   08 Feb 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild. Follow license renaming.
+  Version bump, remove old ebuild. Follow license renaming
 
 *cpplint-3.199 (25 Jul 2012)
 
@@ -49,4 +54,4 @@
   Bump to EAPI=5
 
   25 Jul 2012; Martin Väth <martin@mvath.de>:
-  New ebuild from scratch.
+  New ebuild from scratch
