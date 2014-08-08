@@ -4,6 +4,9 @@
 
 *squashmount-7.10 (30 Jul 2014)
 
+  08 Aug 2014; Martin Väth <martin@mvath.de>:
+  Be more strict with optfeature
+
   30 Jul 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
 

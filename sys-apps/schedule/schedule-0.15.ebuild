@@ -4,7 +4,7 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils systemd
+inherit eutils readme.gentoo systemd
 
 DESCRIPTION="script to schedule jobs in a multiuser multitasking environment"
 HOMEPAGE="https://github.com/vaeth/starter/"
@@ -22,6 +22,15 @@ RDEPEND="dev-lang/perl
 # Smaller versions of perl-IO are untested and therefore not recommended
 DEPEND=""
 
+DISABLE_AUTOFORMATTING="true"
+DOC_CONTENTS="It is recommended to put a lengthy passphrase into the first line
+of /etc/schedule.password and to change permission so that only users allowed
+to access the system schedule-server can read it.
+
+You might want to adapt /etc/conf.d/schedule to your needs.
+If you use systemd, you might want to override schedule.service locally in
+/etc/systemd/system to adapt it to your needs."
+
 src_prepare() {
 	use prefix || sed -i \
 		-e '1s"^#!/usr/bin/env perl$"#!'"${EPREFIX}/usr/bin/perl"'"' \
@@ -37,11 +46,14 @@ src_install() {
 	insinto "/usr/share/${PN}"
 	doins -r lib/*
 	doinitd openrc/init.d/*
+	doconfd openrc/conf.d/*
 	systemd_dounit systemd/system/*
+	doenvd env.d/*
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
 }
 
 pkg_postinst() {
-	optfeature "colored output" '>=dev-lang/perl-5.14' 'perl-core/Term-ANSIColor'
+	optfeature "colored output" 'virtual/perl-Term-ANSIColor'
+	optfeature "encryption support" 'dev-perl/Crypt-Rijndael virtual/perl-Digest-SHA'
 }

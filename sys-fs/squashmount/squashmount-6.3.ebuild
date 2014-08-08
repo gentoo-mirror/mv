@@ -56,7 +56,7 @@ src_install() {
 pkg_postinst() {
 	optfeature "status bar support" 'app-shells/runtitle'
 	optfeature "improved compatibility and security" 'dev-perl/File-Which'
-	optfeature "colored output" '>=dev-lang/perl-5.14' 'perl-core/Term-ANSIColor'
+	optfeature "colored output" 'virtual/perl-Term-ANSIColor'
 	optfeature "using ? or ?? attributes" '>=dev-lang/perl-5.12' 'virtual/perl-IO-Compress'
 	case " ${REPLACING_VERSIONS}" in
 	' '[0-9][0-9]*|' '[3-9]*|' '2.[0-9][0-9]*|' '2.[7-9]*)
