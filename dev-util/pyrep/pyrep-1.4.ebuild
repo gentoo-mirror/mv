@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Search and/or replace regular expressions within many files interactively"
 HOMEPAGE="https://github.com/vaeth/pyrep/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -26,4 +26,5 @@ src_prepare() {
 
 src_install() {
 	dobin "${PN}"
+	dodoc AUTHORS README
 }
