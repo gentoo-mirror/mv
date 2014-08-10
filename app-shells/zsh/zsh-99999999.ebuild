@@ -56,7 +56,7 @@ case ${PV} in
 *)
 	SRC_URI="${ZSH_URI}
 		doc? ( ${ZSH_DOC_URI} )"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 	DEPEND=""
 	LIVE=false;;
 esac
@@ -184,10 +184,10 @@ src_configure() {
 		--bindir="${EPREFIX}"/bin \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--enable-etcdir="${EPREFIX}"/etc/zsh \
+		--enable-runhelpdir="${EPREFIX}"/usr/share/zsh/${PVPATH}/help \
 		--enable-fndir="${EPREFIX}"/usr/share/zsh/${PVPATH}/functions \
 		--enable-site-fndir="${EPREFIX}"/usr/share/zsh/site-functions \
 		--enable-function-subdirs \
-		--with-term-lib="ncursesw ncurses" \
 		--with-tcsetpgrp \
 		$(use_enable maildir maildir-support) \
 		$(use_enable pcre) \
@@ -217,9 +217,9 @@ src_compile() {
 }
 
 src_test() {
-	local i
 	addpredict /dev/ptmx
-	for i in C02cond.ztst Y01completion.ztst Y02compmatch.ztst Y03arguments.ztst ; do
+	local i
+	for i in C02cond.ztst V08zpty.ztst X02zlevi.ztst Y01completion.ztst Y02compmatch.ztst Y03arguments.ztst ; do
 		rm "${S}"/Test/${i} || die
 	done
 	emake check

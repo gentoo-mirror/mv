@@ -4,16 +4,19 @@
 
 *zsh-5.0.5 (09 Jan 2014)
 
+  10 Oct 2014; Martin Väth <martin@mvath.de>:
+  Update KEYWORDS and some trivial changes from main tree
+
   24 Jan 2014; Martin Väth <martin@mvath.de>:
   Avoid duplicate installation
 
   09 Jan 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *zsh-5.0.4 (20 Dec 2013)
 
   20 Dec 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *zsh-5.0.3 (15 Dec 2013)
 
@@ -25,12 +28,12 @@
 *zsh-99999999 (29 May 2013)
 
   16 Nov 2013; Martin Väth <martin@mvath.de>:
-  Remove necessity for USE=custom-ctype.
+  Remove necessity for USE=custom-ctype
 
   13 Nov 2013; Martin Väth <martin@mvath.de>:
   Fix HELPDIR path. Revision bump to force change. Do not use-enable compile.
   I submitted help installation upstream; this is used unconditionally if
-  available (currently only in the live ebuild).
+  available (currently only in the live ebuild)
 
   12 Nov 2013; Martin Väth <martin@mvath.de>:
   Live version: Fix paths, remove IUSE=doc.
@@ -56,15 +59,15 @@
 
   29 May 2013; Martin Väth <martin@mvath.de>:
   Use upstream patches for texinfo-5 and fix-parameter-modifier crash,
-  as in the main gentoo tree. Print messages conditionally as far as possible.
+  as in the main gentoo tree. Print messages conditionally as far as possible
 
 *zsh-5.0.2-r2 (15 Apr 2013)
 
   29 Apr 2013; Martin Väth <martin@mvath.de>:
-  Honour EPREFIX. Remove redundant link of binary before installing.
+  Honour EPREFIX. Remove redundant link of binary before installing
 
   15 Apr 2013; Martin Väth <martin@mvath.de>:
-  Override LC_CTYPE, using some heuristics, unless USE=custom-ctype is chosen.
+  Override LC_CTYPE, using some heuristics, unless USE=custom-ctype is chosen
 
 *zsh-5.0.2-r2 (03 Apr 2013)
 
@@ -74,12 +77,12 @@
 *zsh-5.0.2-r1 (13 Jan 2013)
 
   13 Jan 2013; Martin Väth <martin@mvath.de>:
-  Fix run-help generation by forcing width 80. Install run-help completion.
+  Fix run-help generation by forcing width 80. Install run-help completion
 
 *zsh-5.0.2 (25 Dec 2012)
 
   25 Dec 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *zsh-5.0.0 (13 Aug 2012)
 
@@ -92,4 +95,4 @@
   13 Aug 2012; Martin Väth <martin@mvath.de>:
   Copy from the portage tree to add support for run-help and for removal of
   unrequested completion functions (in particular, do not put them in $fpath).
-  Clear previous ChangeLog.
+  Clear previous ChangeLog
