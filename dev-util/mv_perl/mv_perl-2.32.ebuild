@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="A collection of perl scripts (replacement in files, syncing dirs etc)"
 HOMEPAGE="https://github.com/vaeth/mv_perl/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
