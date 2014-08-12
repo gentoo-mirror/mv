@@ -2,9 +2,14 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*starter-2.2 (12 Aug 2014)
+
+  12 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support nonpositive numbers in job ranges
+
 *starter-2.1 (11 Aug 2014)
 
-  10 Aug 2014; Martin Väth <martin@mvath.de>:
+  11 Aug 2014; Martin Väth <martin@mvath.de>:
   Version bump. Support static job numbers, race-free parallel
 
 *starter-1.1 (10 Aug 2014)
