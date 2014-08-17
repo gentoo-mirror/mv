@@ -7,12 +7,16 @@ inherit elisp-common eutils
 RESTRICT="mirror"
 
 SUBVERSION_REVISION="r=${PV}"
+XML_VERSION="20130925"
+PY_VERSION="${PV}"
+TXT_VERSION="20090627"
+EL_VERSION="20130412"
 DESCRIPTION="The google styleguide for C++ together with a verifyer and an emacs file"
 HOMEPAGE="http://code.google.com/p/google-styleguide/"
-SRC_URI="http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml?${SUBVERSION_REVISION} -> cpplint-${PV}.xml
-	http://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py?${SUBVERSION_REVISION} -> cpplint-${PV}.py
-	http://google-styleguide.googlecode.com/svn/trunk/cpplint/README?${SUBVERSION_REVISION} -> cpplint-${PV}.txt
-	emacs? ( http://google-styleguide.googlecode.com/svn/trunk/google-c-style.el?${SUBVERSION_REVISION} -> cpplint-${PV}.el )"
+SRC_URI="http://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py?${SUBVERSION_REVISION} -> cpplint-${PY_VERSION}.py
+	http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml?${SUBVERSION_REVISION} -> cpplint-${XML_VERSION}.xml
+	http://google-styleguide.googlecode.com/svn/trunk/cpplint/README?${SUBVERSION_REVISION} -> cpplint-${TXT_VERSION}.txt
+	emacs? ( http://google-styleguide.googlecode.com/svn/trunk/google-c-style.el?${SUBVERSION_REVISION} -> cpplint-${EL_VERSION}.el )"
 LICENSE="CC-BY-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -27,11 +31,11 @@ RDEPEND="dev-lang/python
 S="${WORKDIR}"
 
 src_unpack() {
-	cp -- "${DISTDIR}/cpplint-${PV}.xml" cppguide.xml || die
-	cp -- "${DISTDIR}/cpplint-${PV}.py" cpplint.py || die
-	cp -- "${DISTDIR}/cpplint-${PV}.txt" README || die
+	cp -- "${DISTDIR}/cpplint-${PY_VERSION}.py" cpplint.py || die
+	cp -- "${DISTDIR}/cpplint-${XML_VERSION}.xml" cppguide.xml || die
+	cp -- "${DISTDIR}/cpplint-${TXT_VERSION}.txt" README || die
 	if use emacs
-	then	cp -- "${DISTDIR}/cpplint-${PV}.el" "${EMACSNAME}.el" || die
+	then	cp -- "${DISTDIR}/cpplint-${EL_VERSION}.el" "${EMACSNAME}.el" || die
 		mkdir sitefile
 		cat >"sitefile/50${EMACSNAME}-gentoo.el" <<EOF
 (add-to-list 'load-path "@SITELISP@")
