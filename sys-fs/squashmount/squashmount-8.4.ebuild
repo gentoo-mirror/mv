@@ -14,7 +14,7 @@ SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="examples"
 
 RDEPEND=">=app-shells/runtitle-2.3
 	dev-lang/perl
@@ -43,6 +43,7 @@ src_prepare() {
 src_install() {
 	dobin bin/*
 	dodoc README ChangeLog compress.txt
+	! use examples || dodoc etc/*
 	doinitd openrc/init.d/*
 	systemd_dounit systemd/system/*
 	insinto /etc
