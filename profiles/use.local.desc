@@ -115,6 +115,6 @@ sys-fs/squash_dir:overlayfs - Prefer overlayfs
 sys-fs/squash_dir:unionfs-fuse - Prefer unionfs-fuse
 sys-fs/squashfs-tools:lz4 - Enable support for LZ4 compression using app-arch/lz4
 sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
-sys-fs/squashmount:examples - Install sample config additionally into doc directory
+sys-fs/squashmount:examples - Install sample config as /etc/squashmount-example.pl instead of /etc/squashmount.pl
 sys-process/systemd-cron:cron-boot - Enable systemd boot cron target
 sys-process/systemd-cron:yearly - Enable systemd yearly cron target

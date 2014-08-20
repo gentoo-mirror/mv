@@ -43,11 +43,13 @@ src_prepare() {
 src_install() {
 	dobin bin/*
 	dodoc README ChangeLog compress.txt
-	! use examples || dodoc etc/*
 	doinitd openrc/init.d/*
 	systemd_dounit systemd/system/*
 	insinto /etc
-	doins etc/*
+	if use examples
+	then	newins etc/squashmount.pl /squashmount-example.pl
+	else	doins etc/squashmount.pl
+	fi
 	insinto /usr/lib/tmpfiles.d
 	doins tmpfiles.d/*
 	insinto /usr/share/zsh/site-functions

@@ -14,6 +14,6 @@
 		<remote-id type="github">vaeth/squashmount</remote-id>
 	</upstream>
 	<use>
-		<flag name="examples">Install sample config additionally into doc directory</flag>
+		<flag name="examples">Install sample config as /etc/squashmount-example.pl instead of /etc/squashmount.pl</flag>
 	</use>
 </pkgmetadata>
