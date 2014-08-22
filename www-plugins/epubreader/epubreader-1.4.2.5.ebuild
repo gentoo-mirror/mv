@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="Firefox plugin for ebook (.epub) files"
 HOMEPAGE="http://addons.mozilla.org/de/firefox/addon/epubreader/"
-SRC_URI="http://static.addons.mozilla.net/storage/public-staging/45281//${P}-sm+fx.xpi"
+SRC_URI="https://addons.cdn.mozilla.net/user-media/addons/45281/${P}-sm+fx.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"
