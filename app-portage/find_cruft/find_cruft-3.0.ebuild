@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="find cruft files not managed by portage"
 HOMEPAGE="https://github.com/vaeth/find_cruft/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
+	virtual/perl-File-Spec
 	virtual/perl-Getopt-Long"
 
 src_prepare() {
@@ -29,8 +30,7 @@ src_install() {
 	dobin bin/*
 	dodoc README
 	insinto /etc
-	doins etc/*
-	dodir /etc/find_cruft.d
+	doins -r etc/*
 	insinto /usr/share/zsh/site-functions
 	doins zsh/_*
 }

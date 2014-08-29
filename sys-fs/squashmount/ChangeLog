@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squashmount-8.7 (29 Aug 2014)
+
+  20 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuilds. Remove IUSE=examples.d. Add find_cruft.d
+
 *squashmount-8.6 (23 Aug 2014)
 
   23 Aug 2014; Martin Väth <martin@mvath.de>:

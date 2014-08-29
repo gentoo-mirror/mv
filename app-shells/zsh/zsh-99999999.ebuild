@@ -46,17 +46,16 @@ case ${PV} in
 # Please let me know if you have an arch where "colcrt" (or at least "col")
 # is provided by a different package.
 	DEPEND="app-text/yodl
-		run-help? (
-			dev-lang/perl
-			sys-apps/man
-			sys-apps/util-linux
-		)"
+		dev-lang/perl
+		sys-apps/man
+		sys-apps/util-linux"
 	PROPERTIES="live"
 	LIVE=:;;
 *)
 	SRC_URI="${ZSH_URI}
 		doc? ( ${ZSH_DOC_URI} )"
-	KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	#KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 	DEPEND=""
 	LIVE=false;;
 esac
@@ -73,9 +72,7 @@ do	case ${curr} in
 	esac
 	IUSE+=" completion_${curr}"
 done
-IUSE+=" debug doc examples gdbm maildir pcre"
-${LIVE} && IUSE+=" +run-help"
-IUSE+=" static unicode"
+IUSE+=" debug doc examples gdbm maildir pcre static unicode"
 
 RDEPEND="
 	>=sys-libs/ncurses-5.1
@@ -122,9 +119,9 @@ zshenv example in ${EROOT}/usr/share/doc/${PF}/StartupFiles/."
 
 src_prepare() {
 	# fix zshall problem with soelim
-	ln -s Doc man1
-	mv Doc/zshall.1 Doc/zshall.1.soelim
-	soelim Doc/zshall.1.soelim > Doc/zshall.1
+	ln -s Doc man1 || die
+	mv Doc/zshall.1 Doc/zshall.1.soelim || die
+	soelim Doc/zshall.1.soelim > Doc/zshall.1 || die
 
 	epatch "${FILESDIR}"/${PN}-init.d-gentoo-r1.diff
 
@@ -168,11 +165,6 @@ src_configure() {
 			--enable-zsh-mem-warning \
 			--enable-zsh-secure-free \
 			--enable-zsh-hash-debug"
-	fi
-	if ! ${LIVE} || use run-help ; then
-		myconf+=" --enable-runhelpdir=\"${EPREFIX}/usr/share/zsh/${PVPATH}/help\""
-	else
-		myconf+=" --disable-runhelpdir"
 	fi
 
 	if [[ ${CHOST} == *-darwin* ]]; then
@@ -284,8 +276,7 @@ src_install() {
 	if use doc ; then
 		pushd "${WORKDIR}/${PN}-${PV%_*}" >/dev/null
 		dohtml -r Doc/*
-		insinto /usr/share/doc/${PF}
-		doins Doc/zsh.{dvi,pdf}
+		dodoc Doc/zsh.{dvi,pdf}
 		popd >/dev/null
 	fi
 

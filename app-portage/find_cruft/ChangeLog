@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*find_cruft-3.0 (29 Aug 2014)
+
+  29 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *find_cruft-2.4 (10 Feb 2014)
 
   06 Jul 2014; Martin Väth <martin@mvath.de>:
@@ -11,7 +16,7 @@
   Use optfeature
 
   01 Feb 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *find_cruft-2.3-r1 (17 Dec 2013)
 
@@ -21,7 +26,7 @@
 *find_cruft-2.3 (21 Nov 2013)
 
   21 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *find_cruft-2.2 (02 Nov 2013)
 
@@ -34,12 +39,12 @@
   Install zsh-completion unconditionally according to gentoo policy
 
   21 Aug 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *find_cruft-2.0 (18 May 2013)
 
   18 May 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild. Create /etc. Warn if eix is not installed.
+  Version bump, remove old ebuild. Create /etc. Warn if eix is not installed
 
   10 Jun 2013; Martin Väth <martin@mvath.de>:
   Improve eix message
@@ -47,4 +52,4 @@
 *find_cruft-1.0 (16 May 2013)
 
   16 May 2013; Martin Väth <martin@mvath.de>:
-  New ebuild from scratch.
+  New ebuild from scratch

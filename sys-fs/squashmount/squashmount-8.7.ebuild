@@ -7,8 +7,9 @@ RESTRICT="mirror"
 inherit eutils readme.gentoo systemd
 
 DESCRIPTION="Keep directories compressed with squashfs. Useful for portage tree, texmf-dist"
-HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367.html"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367.html
+https://github.com/vaeth/squashmount/"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -41,11 +42,11 @@ src_prepare() {
 
 src_install() {
 	dobin bin/*
-	dodoc README ChangeLog compress.txt
+	dodoc README ChangeLog compress.txt etc/squashmount.pl
 	doinitd openrc/init.d/*
 	systemd_dounit systemd/system/*
 	insinto /etc
-	doins etc/*
+	doins -r etc/*
 	insinto /usr/lib/tmpfiles.d
 	doins tmpfiles.d/*
 	insinto /usr/share/zsh/site-functions
@@ -57,7 +58,7 @@ pkg_postinst() {
 	optfeature "status bar support" 'app-shells/runtitle'
 	optfeature "improved compatibility and security" 'dev-perl/File-Which'
 	optfeature "colored output" 'virtual/perl-Term-ANSIColor'
-	optfeature "using ? or ?? attributes" '>=dev-lang/perl-5.12' 'virtual/perl-IO-Compress'
+	optfeature "using ? or ?? attributes" 'virtual/perl-IO-Compress'
 	case " ${REPLACING_VERSIONS}" in
 	' '[0-9][0-9]*|' '[3-9]*|' '2.[0-9][0-9]*|' '2.[7-9]*)
 		:;;
