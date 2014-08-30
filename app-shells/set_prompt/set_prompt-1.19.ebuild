@@ -17,7 +17,8 @@ IUSE=""
 
 src_prepare() {
 	use prefix || sed -i \
-		-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
+		-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}"'/bin/sh"' \
+		-e '1s"^#!/usr/bin/env zsh$"#!'"${EPREFIX}"'/bin/zsh"' \
 		-- * || die
 	epatch_user
 }
