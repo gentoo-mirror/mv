@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="An intelligent prompt for zsh or bash with status line (window title) support"
 HOMEPAGE="https://github.com/vaeth/set_prompt/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -27,6 +27,6 @@ src_install() {
 	doins set_prompt.config
 	insinto /usr/bin
 	doins set_prompt.sh git_prompt.zsh
-	dobin set_prompt
+	dobin set_prompt git_update
 	dodoc README
 }

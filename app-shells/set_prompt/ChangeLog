@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*set_prompt-1.18 (30 Aug 2014)
+
+  30 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *set_prompt-1.17-r1 (17 Dec 2013)
 
   06 Jul 2014; Martin Väth <martin@mvath.de>:
@@ -13,12 +18,12 @@
 *set_prompt-1.17 (21 Nov 2013)
 
   21 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *set_prompt-1.16 (03 Nov 2013)
 
   03 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *set_prompt-1.15 (02 Nov 2013)
 
@@ -28,7 +33,7 @@
 *set_prompt-1.14 (07 Jun 2013)
 
   07 Jun 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *set_prompt-1.13 (02 Jun 2012)
 
@@ -39,12 +44,12 @@
   Fix description
 
   02 Jun 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *set_prompt-1.12 (14 May 2012)
 
   14 May 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *set_prompt-1.11 (07 May 2012)
 
@@ -52,7 +57,7 @@
   base->eutils
 
   07 May 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *set_prompt-1.10 (12 Apr 2012)
 
@@ -69,12 +74,12 @@
 *set_prompt-1.8 (10 Apr 2012)
 
   10 Apr 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *set_prompt-1.7 (08 Apr 2012)
 
   08 Apr 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *set_prompt-1.6 (10 Mar 2012)
 
@@ -82,22 +87,22 @@
   Use vcs-snapshot.eclass
 
   10 Mar 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild. Security Update. See the new README.
+  Version bump, remove old ebuild. Security Update. See the new README
 
 *set_prompt-1.5 (08 Mar 2012)
 
   08 Mar 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild. Security Update. See the new README.
+  Version bump, remove old ebuild. Security Update. See the new README
 
 *set_prompt-1.4 (28 Feb 2012)
 
   28 Feb 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *set_prompt-1.3 (19 Feb 2012)
 
   19 Feb 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *set_prompt-1.2 (18 Feb 2012)
 
@@ -107,9 +112,9 @@
 *set_prompt-1.1 (18 Feb 2012)
 
   18 Feb 2012; Martin Väth <martin@mvath.de>:
-  Version bump. Customizable maxlen, leftmin. Readable (-r) output.
+  Version bump. Customizable maxlen, leftmin. Readable (-r) output
 
 *set_prompt-1.0 (17 Feb 2012)
 
   17 Feb 2012; Martin Väth <martin@mvath.de>:
-  New ebuild from scratch.
+  New ebuild from scratch
