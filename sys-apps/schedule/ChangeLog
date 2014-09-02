@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*starter-5.0 (02 Sep 2014)
+
+  02 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Add schedule-tmux
+
 *starter-4.2 (29 Aug 2014)
 
   29 Aug 2014; Martin Väth <martin@mvath.de>:
