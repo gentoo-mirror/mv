@@ -4,13 +4,14 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils systemd
+PYTHON_COMPAT=( pypy python{2_7,3_2,3_3,3_4} )
+inherit eutils python-single-r1 systemd
 
 DESCRIPTION="systemd units to provide minimal cron daemon functionality by running scripts in cron directories"
 HOMEPAGE="https://github.com/dbent/systemd-cron/"
 SRC_URI="https://github.com/dbent/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="HPND"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cron-boot yearly"
@@ -20,6 +21,11 @@ RDEPEND=">=sys-apps/systemd-212
 DEPEND=""
 
 src_prepare() {
+	python_setup
+	python_fix_shebang "${S}/src/bin"
+	sed -i \
+		-e 's/^crontab/crontab-systemd/' \
+		"${S}/src/man/crontab.1.in"
 	epatch_user
 }
 
@@ -44,4 +50,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${ED}" install
 	dodoc LICENSE
+	mv "${ED}"/bin/crontab{,-systemd} || die
+	mv "${ED}"/usr/share/man/man1/crontab{,-systemd}.1 || die
+	mv "${ED}"/usr/share/man/man5/crontab{,-systemd}.5 || die
 }
