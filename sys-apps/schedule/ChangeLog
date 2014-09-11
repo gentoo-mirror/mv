@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*starter-6.0 (11 Sep 2014)
+
+  11 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *starter-5.3 (11 Sep 2014)
 
   11 Sep 2014; Martin Väth <martin@mvath.de>:
