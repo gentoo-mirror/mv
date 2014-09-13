@@ -8,16 +8,16 @@ inherit eutils
 
 DESCRIPTION="find cruft files not managed by portage"
 HOMEPAGE="https://github.com/vaeth/find_cruft/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${PN}-v${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-lang/perl
-	|| ( >=dev-lang/perl-5.9.4 >=virtual/perl-File-Spec-3.0 )
-	|| ( >=dev-lang/perl-5.6.1 >=virtual/perl-Getopt-Long-2.24 )"
+RDEPEND=">=dev-lang/perl-5.12"
+#	|| ( >=dev-lang/perl-5.9.4 >=virtual/perl-File-Spec-3.0 )
+#	|| ( >=dev-lang/perl-5.6.1 >=virtual/perl-Getopt-Long-2.24 )
 
 src_prepare() {
 	use prefix || sed -i \
