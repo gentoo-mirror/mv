@@ -8,18 +8,19 @@ inherit eutils readme.gentoo systemd
 
 DESCRIPTION="script to schedule jobs in a multiuser multitasking environment"
 HOMEPAGE="https://github.com/vaeth/starter/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${PN}-v${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND="dev-lang/perl
-	virtual/perl-File-Path
-	virtual/perl-File-Spec
-	virtual/perl-Getopt-Long
-	>=virtual/perl-IO-1.280.0"
-# Smaller versions of perl-IO are untested and therefore not recommended
+RDEPEND=">=dev-lang/perl-5.12"
+#	|| ( >=dev-lang/perl-5.10.1 >=virtual/perl-version-0.77 )
+#	|| ( >=dev-lang/perl-5.1 virtual/perl-File-Path )
+#	|| ( >=dev-lang/perl-5.9.4 virtual/perl-File-Spec-3.0 )
+#	|| ( >=dev-lang/perl-5.6.1 >=virtual/perl-Getopt-Long-2.24 )
+#	|| ( >=dev-lang/perl-5.6.0 >=virtual/perl-IO-1.190.0 )
+#	|| ( >=dev-lang/perl-5.9.4 virtual/perl-Digest-SHA) # for encryption
 DEPEND=""
 
 DISABLE_AUTOFORMATTING="true"
@@ -55,6 +56,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	optfeature "colored output" 'virtual/perl-Term-ANSIColor'
-	optfeature "encryption support" 'dev-perl/Crypt-Rijndael virtual/perl-Digest-SHA'
+	optfeature "colored output" '>=dev-lang/perl-5.14' 'virtual/perl-Term-ANSIColor'
+	optfeature "encryption support" 'dev-perl/Crypt-Rijndael'
 }

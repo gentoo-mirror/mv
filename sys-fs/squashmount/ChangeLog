@@ -4,6 +4,9 @@
 
 *squashmount-8.7 (29 Aug 2014)
 
+  13 Sep 2014; Martin Väth <martin@mvath.de>:
+  More precise perl deps
+
   20 Aug 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuilds. Remove IUSE=examples.d. Add find_cruft.d
 

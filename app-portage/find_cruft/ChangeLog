@@ -4,6 +4,9 @@
 
 *find_cruft-3.0 (29 Aug 2014)
 
+  13 Sep 2014; Martin Väth <martin@mvath.de>:
+  More precise perl deps
+
   29 Aug 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
 

@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="dev-lang/perl
 	sys-fs/cryptsetup
-	virtual/perl-Getopt-Long"
+	|| ( >=dev-lang/perl-5.6.1 >=virtual/perl-Getopt-Long-2.24 )"
 
 src_prepare() {
 	epatch_user

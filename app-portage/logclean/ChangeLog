@@ -4,6 +4,9 @@
 
 *logclean-9.8-r1 (17 Dec 2013)
 
+  13 Sep 2014; Martin Väth <martin@mvath.de>:
+  More precise perl deps
+
   06 Jul 2014; Martin Väth <martin@mvath.de>:
   New style github tarball
 

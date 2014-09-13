@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
-	virtual/perl-File-Spec
-	virtual/perl-Getopt-Long"
+	|| ( >=dev-lang/perl-5.9.4 >=virtual/perl-File-Spec-3.0 )
+	|| ( >=dev-lang/perl-5.6.1 >=virtual/perl-Getopt-Long-2.24 )"
 
 src_prepare() {
 	use prefix || sed -i \

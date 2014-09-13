@@ -9,7 +9,7 @@ inherit eutils readme.gentoo systemd
 DESCRIPTION="Keep directories compressed with squashfs. Useful for portage tree, texmf-dist"
 HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367.html
 https://github.com/vaeth/squashmount/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${PN}-v${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -17,14 +17,15 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=app-shells/runtitle-2.3
-	dev-lang/perl
+	>=dev-lang/perl-5.12
 	|| ( dev-perl/File-Which sys-apps/which )
-	virtual/perl-File-Path
-	virtual/perl-File-Spec
-	virtual/perl-File-Temp
-	virtual/perl-Getopt-Long
 	sys-fs/squashfs-tools
 	!<sys-fs/unionfs-fuse-0.25"
+#	|| ( >=dev-lang/perl-5.10.1 >=virtual/perl-File-Path-2.6.5 )
+#	|| ( >=dev-lang/perl-5.4.5 virtual/perl-File-Spec )
+#	|| ( >=dev-lang/perl-5.10.1 >=virtual/perl-File-Temp-0.19 )
+#	|| ( >=dev-lang/perl-5.6.1 >=virtual/perl-Getopt-Long-2.24 )
+#	|| ( >=dev-lang/perl-5.9.3 virtual/perl-IO-Compress )
 DEPEND=""
 
 DISABLE_AUTOFORMATTING="true"
@@ -57,8 +58,7 @@ src_install() {
 pkg_postinst() {
 	optfeature "status bar support" 'app-shells/runtitle'
 	optfeature "improved compatibility and security" 'dev-perl/File-Which'
-	optfeature "colored output" 'virtual/perl-Term-ANSIColor'
-	optfeature "using ? or ?? attributes" 'virtual/perl-IO-Compress'
+	optfeature "colored output" '>=dev-lang/perl-5.14' 'virtual/perl-Term-ANSIColor'
 	case " ${REPLACING_VERSIONS}" in
 	' '[0-9][0-9]*|' '[3-9]*|' '2.[0-9][0-9]*|' '2.[7-9]*)
 		:;;

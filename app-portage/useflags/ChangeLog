@@ -4,6 +4,9 @@
 
 *useflags-3.4 (01 Feb 2014)
 
+  13 Sep 2014; Martin Väth <martin@mvath.de>:
+  More precise perl deps
+
   06 Jul 2014; Martin Väth <martin@mvath.de>:
   New style github tarball
 
