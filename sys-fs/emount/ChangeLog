@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*emount-2.8.1 (20 Sep 2014)
+
+  20 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *emount-2.8 (21 Nov 2013)
 
   13 Sep 2014; Martin Väth <martin@mvath.de>:
@@ -11,12 +16,12 @@
   New style github tarball
 
   21 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *emount-2.7 (02 Nov 2013)
 
   02 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *emount-2.6 (18 Aug 2013)
 
@@ -24,12 +29,12 @@
   Install zsh-completion unconditionally according to gentoo policy
 
   18 Aug 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *emount-2.4 (27 Nov 2012)
 
   27 Nov 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *emount-2.3 (13 Jul 2012)
 
@@ -37,7 +42,7 @@
   Bump to EAPI=5
 
   13 Jul 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *emount-2.2 (03 Jul 2012)
 
@@ -61,4 +66,4 @@
 *emount-2.1 (31 Jan 2012)
 
   31 Jan 2012; Martin Väth <martin@mvath.de>:
-  New ebuild from scratch.
+  New ebuild from scratch
