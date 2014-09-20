@@ -2,9 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*mv_perl-2.38 (13 Sep 2014)
+*mv_perl-2.38 (20 Sep 2014)
 
-  13 Sep 2014; Martin Väth <martin@mvath.de>:
+  20 Sep 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
 
 *mv_perl-2.37 (13 Sep 2014)

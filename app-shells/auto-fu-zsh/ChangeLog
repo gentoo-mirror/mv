@@ -4,6 +4,9 @@
 
 *auto-fu-zsh-99999999 (14 Sep 2013)
 
+  20 Sep 2014; Martin Väth <martin@mvath.de>:
+  Fix compilation in some corner cases
+
   06 Jul 2014; Martin Väth <martin@mvath.de>:
   New style github tarball
 

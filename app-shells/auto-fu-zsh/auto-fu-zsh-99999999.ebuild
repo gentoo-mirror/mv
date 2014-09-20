@@ -116,7 +116,9 @@ src_prepare() {
 
 src_compile() {
 	! use compile || mPN="${mPN}" \
-		zsh -c 'source ${mPN} && auto-fu-zcompile ${PWD}/${mPN} ${PWD}' || die
+		zsh -c 'setopt extendedglob no_shwordsplit
+source ${mPN}
+auto-fu-zcompile ${PWD}/${mPN} ${PWD}' || die
 }
 
 src_install() {
