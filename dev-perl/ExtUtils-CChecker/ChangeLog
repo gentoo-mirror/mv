@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/ExtUtils-CChecker
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ExtUtils-CChecker-0.90.0 (21 Sep 2014)
+
+  21 Sep 2014; Martin Väth <martin@mvath.de>:
+  Copy from perl-experimental overlay to satisfy dev-perl/File-lchown.
+  Remove previous ChangeLog
+

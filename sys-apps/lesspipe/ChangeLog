@@ -4,8 +4,11 @@
 
 *lsespipe-1.82 (24 Dec 2013)
 
+  21 Sep 2014; Martin Väth <martin@mvath.de>:
+  Add RESTRICT=mirror
+
   24 Dec 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *lesspipe-1.72 (11 Nov 2012)
 

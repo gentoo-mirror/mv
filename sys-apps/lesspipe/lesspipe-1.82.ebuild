@@ -3,6 +3,7 @@
 # $Header: $
 
 EAPI=5
+RESTRICT="mirror"
 
 inherit eutils
 

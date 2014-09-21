@@ -31,3 +31,7 @@ src_install() {
 	insinto /usr/share/zsh/site-functions
 	doins zsh/_*
 }
+
+pkg_postinst() {
+	optfeature "support to set timestamps of symlinks" 'dev-perl/File-lchown'
+}
