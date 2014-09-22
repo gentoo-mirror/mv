@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*less-468.ebuild (22 Sep 2014)
+
+  22 Sep 2014; Martin Väth <martin@mvath.de>:
+  Bump less version
+
 *less-462-r1.ebuild (24 Dec 2013)
 
   13 Sep 2014; Martin Väth <martin@mvath.de>:
@@ -39,25 +44,25 @@
 *less-459.ebuild (28 May 2013)
 
   28 May 2013; Martin Väth <martin@mvath.de>:
-  Bump less version.
+  Bump less version
 
 *less-458.ebuild (05 Apr 2013)
 
   05 Apr 2013; Martin Väth <martin@mvath.de>:
-  Bump less version.
+  Bump less version
 
 *less-457.ebuild (10 Dec 2012)
 
   20 Feb 2013; Martin Väth <martin@mvath.de>:
-  Update code2color handling from main tree.
+  Update code2color handling from main tree
 
   10 Dec 2012; Martin Väth <martin@mvath.de>:
-  Bump less version.
+  Bump less version
 
 *less-456.ebuild (09 Nov 2012)
 
   09 Nov 2012; Martin Väth <martin@mvath.de>:
-  Bump less version.
+  Bump less version
 
 *less-452.ebuild (23 Oct 2012)
 
@@ -70,17 +75,17 @@
   Bump to EAPI=5
 
   23 Jul 2012; Martin Väth <martin@mvath.de>:
-  Bump less version. Simplify doc install and pcre passing as in main tree.
+  Bump less version. Simplify doc install and pcre passing as in main tree
 
 *less-450.ebuild (16 Jul 2012)
 
   16 Jul 2012; Martin Väth <martin@mvath.de>:
-  Bump less version.
+  Bump less version
 
 *less-449.ebuild (28 Jun 2012)
 
   28 Jun 2012; Martin Väth <martin@mvath.de>:
-  Bump less version.
+  Bump less version
 
 *less-445-r1.ebuild (10 Nov 2011)
 
@@ -91,7 +96,7 @@
   Inherit base
 
   02 Mar 2012; Martin Väth <martin@mvath.de>:
-  Change to github repository.
+  Change to github repository
 
   31 Jan 2012; Martin Väth <martin@mvath.de>:
   Bump lesspipe.sh from tree
@@ -106,7 +111,7 @@
 *less-445.ebuild (28 Oct 2011)
 
   28 Oct 2011; Martin Väth <martin@mvath.de>:
-  Bump less version.
+  Bump less version
 
 *less-444.ebuild (09 Jun 2011)
 
@@ -119,39 +124,38 @@
   -less-select-443.ebuild +less-443.ebuild
   Rename into less to avoid problems with portage hard-depending on less.
   In fact, less-select is just less with additional options which therefore
-  should be provided by a useflag.
+  should be provided by a useflag
 
 *less-select-443.ebuild (11 Apr 2011)
 
   11 Apr 2011; Martin Väth <martin@mvath.de>:
-  Bump less version. Remove old ebuild.
+  Bump less version. Remove old ebuild
 
 *less-select-441.ebuild (28 Feb 2011)
 
   29 Feb 2011; Martin Väth <martin@mvath.de>:
-  Bump less version. Remove old ebuild.
+  Bump less version. Remove old ebuild
 
 *less-select-440.ebuild (06 Jan 2011)
 
   04 Jan 2011; Martin Väth <martin@mvath.de>:
-  Bump less version. Remove old ebuild.
+  Bump less version. Remove old ebuild
 
 *less-select-438.ebuild (01 Jan 2011)
 
   04 Jan 2011; Martin Väth <martin@mvath.de>:
-  Bump to EAPI=4.
+  Bump to EAPI=4
 
   01 Jan 2011; Martin Väth <martin@mvath.de>: :
-  Bump less version. Remove old ebuild.
+  Bump less version. Remove old ebuild
 
 *less-select-436-r1.ebuild (30 Mar 2010)
 
   12 Jun 2010; Martin Väth <martin@mvath.de>: :
-  Remove unneeded files/less.envd. Remove arches which I never tested.
+  Remove unneeded files/less.envd. Remove arches which I never tested
 
   30 Mar 2010; Martin Väth <martin@mvath.de>: :
-  -less-select-436.ebuild +less-select-436-r1.ebuild files/lesspipe.sh:
-  Update lesspipe.sh and related changes of sys-apps/less in portage tree.
+  Update lesspipe.sh and related changes of sys-apps/less in portage tree
 
   22 Jul 2009; Martin Väth <martin@mvath.de>: :
   Version bump to less-select-436
