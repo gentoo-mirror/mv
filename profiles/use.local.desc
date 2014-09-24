@@ -28,7 +28,6 @@ app-shells/zsh:completion_Solaris - Install zsh completions for Solaris
 app-shells/zsh:completion_Unix - Install zsh completions for Unix
 app-shells/zsh:completion_X - Install zsh completions for X
 app-shells/zsh:completion_openSUSE - Install zsh completions for openSUSE
-app-shells/zsh:run-help - Create run-help data for live version of zsh; requires dev-lang/perl sys-apps/man sys-apps/util-linux
 app-shells/zsh-completion:completion_Android - Install zsh completions for Android-related programs
 app-shells/zsh-completion:completion_Gentoo - Install zsh completions for Gentoo and portage
 app-shells/zsh-completion:completion_Google - Install zsh completions for googlecl
@@ -53,9 +52,10 @@ app-shells/zsh-completion:completion_ruby - Install zsh completion for ruby tool
 app-shells/zsh-completion:completion_search - Install zsh completion for search tools like sys-apps/ack and sys-apps/the_silver_searcher
 app-shells/zsh-completion:completion_session - Install zsh completion for session-handling frontends
 app-shells/zsh-completion:completion_subtitles - Install zsh completion for subtitle tools
-app-shells/zsh-completion:completion_virtualbox - Install zsh completion for virtualbox
+app-shells/zsh-completion:completion_virtualization - Install zsh completion for virtualbox
 app-shells/zsh-completion:completion_web - Install zsh completion for web-related tools incl. java/javascript/scala
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
+app-text/stardict:gnome2 - Enable deprecated gnome2 support
 app-text/stardict:gucharmap - Enable gucharmap dictionary plugin
 app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
 app-text/stardict:qqwry - Enable QQWry plugin, which provides information (in Chinese language) about geographical positions, owner, etc. for IP addresses
@@ -68,6 +68,7 @@ games-rpg/magus:pngcrush - Use pngcrush for opimizing png before installation
 games-rpg/magus:postgres - Use postgresql instead of sqlite
 games-rpg/magus:seamonkey - Depend on seamonkey browser instead of firefox
 media-gfx/pqiv:gtk2 - Use gtk:2 instead of gtk:3
+media-tv/sundtek-tv:pax_kernel - Mark package which is necessary if you use a PAX kernel
 net-misc/sshstart:keychain - Pull in keychain as dependency. Not required, but recommended for smoother operation.
 sys-apps/less:less-select - Add the less-select feature (additional options and a binary helper).
 sys-apps/less:lesspipe - Use sys-apps/lesspipe instead of Gentoo's default lesspipe.sh.

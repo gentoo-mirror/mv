@@ -4,6 +4,9 @@
 
 *less-468.ebuild (22 Sep 2014)
 
+  24 Sep 2014; Martin Väth <martin@mvath.de>:
+  Remove some arches to make repoman happy
+
   22 Sep 2014; Martin Väth <martin@mvath.de>:
   Bump less version
 

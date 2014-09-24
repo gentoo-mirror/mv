@@ -36,6 +36,5 @@
   <flag name='completion_Solaris'>Install zsh completions for Solaris</flag>
   <flag name='completion_Unix'>Install zsh completions for Unix</flag>
   <flag name='completion_X'>Install zsh completions for X</flag>
-  <flag name='run-help'>Create run-help data for live version of zsh; requires dev-lang/perl sys-apps/man sys-apps/util-linux</flag>
 </use>
 </pkgmetadata>

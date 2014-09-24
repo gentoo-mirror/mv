@@ -49,7 +49,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${ED}" install
-	dodoc LICENSE
 	mv "${ED}"/bin/crontab{,-systemd} || die
 	mv "${ED}"/usr/share/man/man1/crontab{,-systemd}.1 || die
 	mv "${ED}"/usr/share/man/man5/crontab{,-systemd}.5 || die

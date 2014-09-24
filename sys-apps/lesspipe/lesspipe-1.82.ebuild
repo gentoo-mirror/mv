@@ -13,7 +13,7 @@ SRC_URI="http://www-zeuthen.desy.de/~friebel/unix/less/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~m68k ~mips ~ppc ~s390 ~sh ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="antiword cabextract catdoc +cpio +djvu dpkg +dvi2tty +elinks fastjar +ghostscript gpg +groff +html2text id3v2 image isoinfo libplist +links +lynx lzip mp3info mp3info2 ooffice p7zip pdf pstotext rar rpm +rpm2targz unrar unrtf +unzip +w3m xlhtml"
 
 htmlmode="( || ( html2text links lynx elinks w3m ) )"
@@ -77,7 +77,7 @@ RDEPEND="sys-apps/file
 		)
 	)
 	image? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) )
-	isoinfo? ( || ( app-cdr/cdrtools app-cdr/dvdrtools app-cdr/cdrkit ) )
+	isoinfo? ( || ( app-cdr/cdrtools app-cdr/dvd+rw-tools app-cdr/cdrkit ) )
 	libplist? ( app-pda/libplist )
 	dpkg? ( app-arch/dpkg )"
 DEPEND="${RDEPEND}"

@@ -4,6 +4,9 @@
 
 *fvwm-crystal-3.3.2-r1 (08 Mar 2014)
 
+  24 Sep 2014; Martin Väth <martin@mvath.de>:
+  Cosmetical changes to make repoman happy
+
   08 Mar 2014; Martin Väth <martin@mvath.de>:
   Fix some path handling; thanks for feedback from upstream developer
   Dominique Michel. Do not install LICENSE file (is globally in gentoo).

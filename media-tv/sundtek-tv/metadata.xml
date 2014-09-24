@@ -13,4 +13,7 @@
 		<bugs-to>mailto:martin@mvath.de</bugs-to>
 		<remote-id type="github">vaeth/video-mv</remote-id>
 	</upstream>
+	<use>
+		<flag name="pax_kernel">Mark package which is necessary if you use a PAX kernel</flag>
+	</use>
 </pkgmetadata>

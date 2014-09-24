@@ -30,20 +30,20 @@ RDEPEND="${PYTHON_DEPS}
 
 DISABLE_AUTOFORMATTING="true"
 DOC_CONTENTS="After installation, execute the following commands:
- $ cp -r ${EROOT}usr/share/doc/${PF}/addons/Xresources ~/.Xresources
- $ cp -r ${EROOT}usr/share/doc/${PF}/addons/Xsession ~/.xinitrc
+\ \$ cp -r "${EROOT}"usr/share/doc/"${PF}"/addons/Xresources ~/.Xresources
+\ \$ cp -r "${EROOT}"usr/share/doc/"${PF}"/addons/Xsession ~/.xinitrc
 
 Many applications can extend functionality of fvwm-crystal.
-They are listed in ${EROOT}usr/share/doc/${PF}/INSTALL.*
+They are listed in "${EROOT}"usr/share/doc/"${PF}"/INSTALL.*
 
 Some icons fixes were committed recently.
 To achieve the same fixes on your private icon files,
-please read ${EROOT}usr/share/doc/${PF}/INSTALL.*
+please read "${EROOT}"usr/share/doc/"${PF}"/INSTALL.*
 This will fix the libpng warnings at stderr.
 
 The color themes was updated to Fvwm InfoStore.
 To know how to update your custom color themes, please run
-	${EROOT}usr/share/${PN}/addons/convert_colorsets"
+	"${EROOT}"usr/share/"${PN}"/addons/convert_colorsets"
 
 src_prepare() {
 	epatch_user
@@ -54,8 +54,8 @@ src_install() {
 		docdir="${EPREFIX%/}/usr/share/doc/${PF}" \
 		prefix="${EPREFIX%/}/usr" \
 		install
-   # GNU License is globally in the portage tree
-   rm -vf "${ED}/usr/share/doc/${PF}"/LICENSE
+	# GNU License is globally in the portage tree
+	rm -vf "${ED}/usr/share/doc/${PF}"/LICENSE
 
 	python_replicate_script \
 		"${ED}/usr/bin/${PN}".{apps,wallpaper} \

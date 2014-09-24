@@ -2,7 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*lsespipe-1.82 (24 Dec 2013)
+*lesspipe-1.82 (24 Dec 2013)
+
+  24 Sep 2014; Martin Väth <martin@mvath.de>:
+  Fix dependencies. Remove some arches to make repoman happy
 
   21 Sep 2014; Martin Väth <martin@mvath.de>:
   Add RESTRICT=mirror

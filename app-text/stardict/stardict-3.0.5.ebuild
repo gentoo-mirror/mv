@@ -16,23 +16,23 @@ GCONF_DEBUG=no
 inherit autotools eutils gnome2
 
 DESCRIPTION="A international dictionary supporting fuzzy and glob style matching"
-HOMEPAGE="http://code.google.com/p/stardict-3/"
-SRC_URI="http://${PN}-3.googlecode.com/files/${P}.tar.bz2
+HOMEPAGE="http://stardict-4.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}-4/${P}.tar.bz2
 	pronounce? ( http://${PN}-3.googlecode.com/files/WyabdcRealPeopleTTS.tar.bz2 )
 	qqwry? ( mirror://gentoo/QQWry.Dat.bz2 )"
 
 LICENSE="CPL-1.0 GPL-3 LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
-IUSE="espeak gnome gucharmap qqwry pronounce spell tools"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="espeak gnome gnome2 gucharmap qqwry pronounce spell tools"
 
 RESTRICT="test"
 
-COMMON_DEPEND=">=dev-libs/glib-2.16
-	dev-libs/libsigc++:2
-	sys-libs/zlib
-	>=x11-libs/gtk+-2.20:2
-	gnome? (
+COMMON_DEPEND=">=dev-libs/glib-2.16:2=
+	dev-libs/libsigc++:2=
+	sys-libs/zlib:=
+	>=x11-libs/gtk+-2.20:2=
+	gnome2? (
 		>=gnome-base/libbonobo-2
 		>=gnome-base/libgnome-2
 		>=gnome-base/libgnomeui-2
@@ -42,8 +42,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.16
 	gucharmap? ( >=gnome-extra/gucharmap-2.22.1:0 )
 	spell? ( >=app-text/enchant-1.2 )
 	tools? (
-		dev-libs/libpcre
-		dev-libs/libxml2
+		dev-libs/libpcre:=
+		dev-libs/libxml2:=
 		virtual/mysql
 		)"
 RDEPEND="${COMMON_DEPEND}
@@ -59,10 +59,6 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	# These 2 fixes have been upstreamized for upcoming 3.0.5 differently, so drop 'em:
-	epatch "${FILESDIR}"/${PN}-3.0.3-zlib-1.2.5.2.patch
-	sed -i -e '/DEP_MODULES/s:glib-2.0:gmodule-2.0 &:' dict/configure || die
-
 	if ! use gnome
 	then	sed -i \
 				-e 's/GNOME_DOC_INIT/GNOME_DOC_INIT([0.32],[:],[:])/' \
@@ -77,7 +73,6 @@ src_prepare() {
 				dict/src/lib/Makefile.am
 			eautoreconf
 	fi
-
 	gnome2_src_prepare
 }
 
@@ -91,7 +86,7 @@ src_configure() {
 		$(use_enable espeak) \
 		$(use_enable qqwry) \
 		--disable-updateinfo \
-		$(use_enable gnome gnome-support) \
+		$(use_enable gnome2 gnome-support) \
 		--disable-gpe-support \
 		--disable-schemas-install
 }
@@ -125,7 +120,7 @@ src_install() {
 			${PN}2txt ${PN}-verify fest2dict i2e2dict downloadwiki
 			ooo2dict myspell2dic exc2i2e dictbuilder tabfile2sql KangXi Unihan
 			xiaoxuetang-ja wubi ydp2dict wordnet lingvosound2resdb
-			resdatabase2dir dir2resdatabase ${PN}-index ${PN}-text2bin
+			resdatabase2dir dir2resdatabase ${PN}-index sd2foldoc ${PN}-text2bin
 			${PN}-bin2text ${PN}-repair"
 
 		for app in ${apps}; do

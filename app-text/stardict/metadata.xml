@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>app-dicts</herd>
+<maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
 	 <longdescription>
 	 StarDict is an international dictionary Software. It has powerful features
 	 such as "Glob-style pattern matching", "Scan selection word," "Fuzzy
@@ -11,6 +11,7 @@
 	 <use>
 		 <flag name='espeak'>Enable text to speech synthesizer using espeak
 			 engine</flag>
+		 <flag name='gnome2'>Enable deprecated gnome2 support</flag>
 		 <flag name='gucharmap'>Enable gucharmap dictionary plugin</flag>
 		 <flag name='pronounce'>Install WyabdcRealPeopleTTS package (it is just
 			 many .wav files) to make StarDict pronounce English words</flag>

@@ -25,7 +25,6 @@ src_prepare() {
 	# make sure we always use system zlib
 	rm -rf zlib
 	epatch "${FILESDIR}"/${PN}-3.1.7-no-perl.patch #421609
-	# epatch "${FILESDIR}"/${PN}-3.1.9-test-gcc-4.8.patch #461966 Fixed in git
 	sed \
 		-e "/^LIBDIR=/s:lib:$(get_libdir):" \
 		-e "/^EPREFIX=/s:'':'${EPREFIX}':" \
@@ -42,7 +41,7 @@ src_install() {
 
 	DOC_CONTENTS="
 To use ccache with **non-Portage** C compiling, add
-${EPREFIX}/usr/$(get_libdir)/ccache/bin to the beginning of your path, before ${EPREFIX}usr/bin.
+"${EPREFIX}/usr/$(get_libdir)/ccache/bin" to the beginning of your path, before "${EPREFIX}usr/bin".
 Portage 2.0.46-r11+ will automatically take advantage of ccache with
 no additional steps.  If this is your first install of ccache, type
 something like this to set a maximum cache size of 2GB:\\n

@@ -37,7 +37,7 @@
 		<flag name="completion_search">Install zsh completion for search tools like sys-apps/ack and sys-apps/the_silver_searcher</flag>
 		<flag name="completion_session">Install zsh completion for session-handling frontends</flag>
 		<flag name="completion_subtitles">Install zsh completion for subtitle tools</flag>
-		<flag name="completion_virtualbox">Install zsh completion for virtualbox</flag>
+		<flag name="completion_virtualization">Install zsh completion for virtualization programs</flag>
 		<flag name="completion_web">Install zsh completion for web-related tools incl. java/javascript/scala</flag>
 	</use>
 </pkgmetadata>

@@ -4,5 +4,8 @@
 
 *File-lchown-0.2 (21 Sep 2014)
 
+  24 Sep 2014; Martin Väth <martin@mvaeth.de>:
+  Add ~ARCH which probably work, even if untested
+
   21 Sep 2014; Martin Väth <martin@mvaeth.de>:
   New ebuild from scratch
