@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*zsh-syntax-highlighting-0.2.1 (25 Sep 2014)
+
+  25 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump. Remove old ebuild
+
 *zsh-syntax-highlighting-0.2.0, -99999999 (14 Sep 2013)
 
   24 Jan 2014; Martin Väth <martin@mvath.de>:
