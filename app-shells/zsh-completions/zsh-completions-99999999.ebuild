@@ -22,8 +22,8 @@ case ${PV} in
 	S="${WORKDIR}/${PN}-${TARBALL_VERSION}"
 esac
 
-DESCRIPTION="Programmable Completion for zsh (includes emerge and ebuild commands)"
-HOMEPAGE="http://gentoo.org/zsh-users/zsh-completions/"
+DESCRIPTION="Additional completion definitions for Zsh"
+HOMEPAGE="https://gentoo.org/zsh-users/zsh-completions/"
 LICENSE="ZSH"
 SLOT="0"
 DEPEND="completion_pip? ( !dev-python/pip[zsh-completion] )"
