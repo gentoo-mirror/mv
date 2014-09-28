@@ -43,7 +43,6 @@ app-shells/zsh-completions:completion_managers - Install zsh completions for pac
 app-shells/zsh-completions:completion_multimedia - Install zsh completions for multimedia programs
 app-shells/zsh-completions:completion_net - Install zsh completions for net-related tools
 app-shells/zsh-completions:completion_nfs - Install zsh completions for network filesystem tools
-app-shells/zsh-completions:completion_pass - Install zsh completion for app-admin/pass (instead of completion of app-admin/pass project)
 app-shells/zsh-completions:completion_perl - Install zsh completion for perl-related tools
 app-shells/zsh-completions:completion_pip - Install zsh completion for dev-python/pip (instead of completion of dev-python/pip project)
 app-shells/zsh-completions:completion_python - Install zsh completion for python development tools
