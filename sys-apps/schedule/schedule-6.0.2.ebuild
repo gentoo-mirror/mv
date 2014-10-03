@@ -7,7 +7,7 @@ RESTRICT="mirror"
 inherit eutils readme.gentoo systemd
 
 DESCRIPTION="script to schedule jobs in a multiuser multitasking environment"
-HOMEPAGE="https://github.com/vaeth/starter/"
+HOMEPAGE="https://github.com/vaeth/schedule/"
 SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${PN}-v${PV}.tar.gz"
 
 LICENSE="BSD"
