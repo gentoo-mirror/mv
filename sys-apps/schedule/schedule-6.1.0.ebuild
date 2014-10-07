@@ -4,7 +4,7 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils readme.gentoo systemd
+inherit eutils readme.gentoo user systemd
 
 DESCRIPTION="script to schedule jobs in a multiuser multitasking environment"
 HOMEPAGE="https://github.com/vaeth/schedule/"
@@ -53,9 +53,34 @@ src_install() {
 	doenvd env.d/*
 	insinto /usr/share/zsh/site-functions
 	doins zsh/*
+	insinto /etc
+	(
+		umask 027
+		: >"${ED}/etc/schedule.password"
+	)
 }
+
+generate_password() (
+	umask 027
+	for i in {1..50}
+	do	printf "%s" "${RANDOM}"
+	done >"${EPREFIX}/etc/schedule.password"
+)
 
 pkg_postinst() {
 	optfeature "colored output" '>=dev-lang/perl-5.14' 'virtual/perl-Term-ANSIColor'
 	optfeature "encryption support" 'dev-perl/Crypt-Rijndael'
+	if ! use prefix
+	then	enewgroup schedule
+		enewuser schedule -1 -1 -1 schedule
+	fi
+	if ! test -s "${EPREFIX}/etc/schedule.password"
+	then	if generate_password
+		then	ewarn "You should fill ${EPREFIX}/etc/schedule.password with a random password:"
+			ewarn "the current random value is not necessarily cryptographically strong."
+			chown 'schedule:schedule' -- "${EPREFIX}/etc/schedule.password" || \
+				ewarn "failed to set permissions for ${EPREFIX}/etc/schedule.password"
+		else	ewarn "failed to generate ${EPREFIX}/etc/schedule.password"
+		fi
+	fi
 }
