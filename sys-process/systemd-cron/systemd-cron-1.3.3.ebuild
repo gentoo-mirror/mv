@@ -22,7 +22,7 @@ DEPEND=""
 
 src_prepare() {
 	python_setup
-	python_fix_shebang "${S}/src/bin"
+	python_fix_shebang --force "${S}/src/bin"
 	sed -i \
 		-e 's/^crontab/crontab-systemd/' \
 		"${S}/src/man/crontab.1.in"
@@ -38,7 +38,8 @@ my_use_enable() {
 
 src_configure() {
 	./configure \
-		--prefix="${EPREFIX}" \
+		--prefix="${EPREFIX}/usr" \
+		--confdir="${EPREFIX}/etc" \
 		--runparts="${EPREFIX}/bin/run-parts" \
 		--mandir="${EPREFIX}/usr/share/man" \
 		--unitdir="$(systemd_get_unitdir)" \
@@ -49,7 +50,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${ED}" install
-	mv "${ED}"/bin/crontab{,-systemd} || die
+	mv "${ED}"/usr/bin/crontab{,-systemd} || die
 	mv "${ED}"/usr/share/man/man1/crontab{,-systemd}.1 || die
 	mv "${ED}"/usr/share/man/man5/crontab{,-systemd}.5 || die
 }
