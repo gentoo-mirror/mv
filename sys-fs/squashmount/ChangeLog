@@ -2,7 +2,12 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*squashmount-8.7.3 (12 Oct 2014)
+*squashmount-8.7.5 (31 Oct 2014)
+
+  31 Oct 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix timeout for systemd
+
+*squashmount-8.7.4 (12 Oct 2014)
 
   12 Oct 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild

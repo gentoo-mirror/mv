@@ -29,7 +29,8 @@ RDEPEND=">=app-shells/runtitle-2.3
 DEPEND=""
 
 DISABLE_AUTOFORMATTING="true"
-DOC_CONTENTS="Please adapt /etc/squashmount.pl to your needs.
+DOC_CONTENTS="Please adapt /etc/squashmount.pl as well as
+/etc/systemd/system/squashmount.service.d/timeout.conf to your needs.
 For improved output use squasfs-tools from the mv overlay.
 It is recommended to put into your zshrc the line:
 alias squashmount='noglob squashmount'"
@@ -60,9 +61,7 @@ pkg_postinst() {
 	optfeature "improved compatibility and security" 'dev-perl/File-Which'
 	optfeature "colored output" '>=dev-lang/perl-5.14' 'virtual/perl-Term-ANSIColor'
 	case " ${REPLACING_VERSIONS}" in
-	' '[0-9][0-9]*|' '[3-9]*|' '2.[0-9][0-9]*|' '2.[7-9]*)
-		:;;
-	*)
+	' '[0-7].*|' '8.[0-6]*|' '8.7.[0-4]*)
 		FORCE_PRINT_ELOG="true";;
 	esac
 	readme.gentoo_pkg_postinst
