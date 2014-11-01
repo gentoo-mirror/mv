@@ -14,7 +14,7 @@ SRC_URI="https://github.com/dbent/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cron-boot yearly"
+IUSE="cron-boot +etc-crontab yearly"
 
 RDEPEND=">=sys-apps/systemd-212
 	sys-apps/debianutils"
@@ -25,7 +25,10 @@ src_prepare() {
 	python_fix_shebang --force "${S}/src/bin"
 	sed -i \
 		-e 's/^crontab/crontab-systemd/' \
-		"${S}/src/man/crontab.1.in"
+		"${S}/src/man/crontab.1.in" || die
+	use etc-crontab || sed -i \
+		-e "s!\\[*'/etc/crontab'\\]*[ +	]*!!" \
+		"${S}/src/bin/systemd-crontab-generator" || die
 	epatch_user
 }
 
@@ -53,4 +56,13 @@ src_install() {
 	mv "${ED}"/usr/bin/crontab{,-systemd} || die
 	mv "${ED}"/usr/share/man/man1/crontab{,-systemd}.1 || die
 	mv "${ED}"/usr/share/man/man5/crontab{,-systemd}.5 || die
+}
+
+pkg_postinst() {
+	if use etc-crontab && {
+		has_version sys-process/dcron || ! has_version virtual/cron
+	}
+	then	ewarn "sys-process/systemd-cron[etc-crontab] does not work with the /etc/crontab"
+		ewarn "installed by sys-process/dcron"
+	fi
 }

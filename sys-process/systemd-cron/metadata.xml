@@ -15,6 +15,7 @@
 	</upstream>
 	<use>
 		<flag name="cron-boot">Enable systemd boot cron target</flag>
+		<flag name="etc-crontab">Use /etc/crontab; disable this when you have the sys-process/dcron default file here</flag>
 		<flag name="yearly">Enable systemd yearly cron target</flag>
 	</use>
 </pkgmetadata>
