@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*squashmount-8.7.6 (10 Nov 2014)
+
+  10 Oct 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Add $modprobe_loop (workaround for udev bug)
+
 *squashmount-8.7.5 (31 Oct 2014)
 
   31 Oct 2014; Martin Väth <martin@mvath.de>:
