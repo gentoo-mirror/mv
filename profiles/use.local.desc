@@ -117,3 +117,9 @@ sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app
 sys-process/systemd-cron:cron-boot - Enable systemd boot cron target
 sys-process/systemd-cron:etc-crontab - Use /etc/crontab; disable this when you have the sys-process/dcron default file here
 sys-process/systemd-cron:yearly - Enable systemd yearly cron target
+x11-drivers/nvidia-drivers:X - Install the X.org driver, OpenGL libraries, XvMC libraries, and VDPAU libraries
+x11-drivers/nvidia-drivers:kernel3-13 - Install unofficial patches for linux-3.13 and newer
+x11-drivers/nvidia-drivers:kernel3-14 - Install unofficial patches for linux-3.14 and newer
+x11-drivers/nvidia-drivers:kernel3-17 - Install unofficial patches for linux-3.17 and newer
+x11-drivers/nvidia-drivers:pax_kernel - Patch to compile with hardened-sources/grsecurity
+x11-drivers/nvidia-drivers:tools - Install additional tools such as nvidia-settings
