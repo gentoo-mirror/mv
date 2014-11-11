@@ -14,9 +14,9 @@ SRC_URI="https://github.com/dbent/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cron-boot +etc-crontab yearly"
+IUSE="cron-boot +etc-crontab minutely yearly"
 
-RDEPEND=">=sys-apps/systemd-212
+RDEPEND=">=sys-apps/systemd-217
 	sys-apps/debianutils"
 DEPEND=""
 
@@ -47,7 +47,10 @@ src_configure() {
 		--mandir="${EPREFIX}/usr/share/man" \
 		--unitdir="$(systemd_get_unitdir)" \
 		$(my_use_enable cron-boot boot) \
+		$(my_use_enable minutely) \
 		$(my_use_enable yearly) \
+		$(my_use_enable yearly quarterly) \
+		$(my_use_enable yearly semi_annually) \
 		--enable-persistent=yes
 }
 
