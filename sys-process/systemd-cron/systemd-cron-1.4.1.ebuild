@@ -4,7 +4,7 @@
 
 EAPI=5
 RESTRICT="mirror"
-PYTHON_COMPAT=( pypy python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( pypy python{3_3,3_4} )
 inherit eutils python-single-r1 systemd
 
 DESCRIPTION="systemd units to provide minimal cron daemon functionality by running scripts in cron directories"

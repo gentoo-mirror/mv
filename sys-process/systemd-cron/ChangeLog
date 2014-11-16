@@ -2,10 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*systemd-cron-1.4.0-r1 (15 Nov 2014)
+*systemd-cron-1.4.1 (16 Nov 2014)
 
-  15 Nov 2014; Martin Väth <martin@mvath.de>:
-  Fix USE=-etc-crontab
+  16 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix USE=-etc-crontab.
+  python-2.7 no longer supported
 
 *systemd-cron-1.4.0 (11 Nov 2014)
 
