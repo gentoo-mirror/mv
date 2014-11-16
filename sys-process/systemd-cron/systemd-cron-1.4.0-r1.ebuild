@@ -27,7 +27,7 @@ src_prepare() {
 		-e 's/^crontab/crontab-systemd/' \
 		"${S}/src/man/crontab.1.in" || die
 	use etc-crontab || sed -i \
-		-e "s!\\[*'/etc/crontab'\\]*[ +	]*!!" \
+		-e "s!/etc/crontab!/dev/null!" \
 		"${S}/src/bin/systemd-crontab-generator" || die
 	epatch_user
 }
