@@ -7,14 +7,14 @@ inherit elisp-common eutils
 RESTRICT="mirror"
 
 SUBVERSION_REVISION="r=${PV}"
-XML_VERSION="20130925"
-PY_VERSION="${PV}"
+HTML_VERSION="20140908"
+PY_VERSION="20140822"
 TXT_VERSION="20090627"
-EL_VERSION="20130412"
+EL_VERSION="20140929"
 DESCRIPTION="The google styleguide for C++ together with a verifyer and an emacs file"
 HOMEPAGE="http://code.google.com/p/google-styleguide/"
 SRC_URI="http://google-styleguide.googlecode.com/svn/trunk/cpplint/cpplint.py?${SUBVERSION_REVISION} -> cpplint-${PY_VERSION}.py
-	http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml?${SUBVERSION_REVISION} -> cpplint-${XML_VERSION}.xml
+	http://google-styleguide.googlecode.com/svn/trunk/cppguide.html?${SUBVERSION_REVISION} -> cpplint-${HTML_VERSION}.html
 	http://google-styleguide.googlecode.com/svn/trunk/cpplint/README?${SUBVERSION_REVISION} -> cpplint-${TXT_VERSION}.txt
 	emacs? ( http://google-styleguide.googlecode.com/svn/trunk/google-c-style.el?${SUBVERSION_REVISION} -> cpplint-${EL_VERSION}.el )"
 LICENSE="CC-BY-3.0"
@@ -32,7 +32,7 @@ S="${WORKDIR}"
 
 src_unpack() {
 	cp -- "${DISTDIR}/cpplint-${PY_VERSION}.py" cpplint.py || die
-	cp -- "${DISTDIR}/cpplint-${XML_VERSION}.xml" cppguide.xml || die
+	cp -- "${DISTDIR}/cpplint-${HTML_VERSION}.html" cppguide.html || die
 	cp -- "${DISTDIR}/cpplint-${TXT_VERSION}.txt" README || die
 	if use emacs
 	then	cp -- "${DISTDIR}/cpplint-${EL_VERSION}.el" "${EMACSNAME}.el" || die
@@ -63,7 +63,7 @@ src_compile() {
 
 src_install() {
 	dobin cpplint.py
-	dodoc README cppguide.xml
+	dodoc README cppguide.html
 	if use emacs
 	then	elisp-install "${EMACSNAME}" "${EMACSNAME}".{el,elc} || die
 		elisp-site-file-install "sitefile/50${EMACSNAME}-gentoo.el" "${EMACSNAME}" || die

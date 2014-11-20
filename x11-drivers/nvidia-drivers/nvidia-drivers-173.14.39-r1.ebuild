@@ -30,6 +30,7 @@ COMMON="
 "
 DEPEND="
 	${COMMON}
+	!<dev-util/ccache-3.2
 	kernel_linux? ( virtual/linux-sources )
 "
 RDEPEND="
@@ -205,13 +206,6 @@ pkg_setup() {
 	use userland_BSD && MAKE="$(get_bmake)"
 
 	export _POSIX2_VERSION="199209"
-
-	case " ${FEATURES} " in
-	*" ccache "*)
-		eerror "This ebuild is known to break with ccache."
-		eerror "Retry with FEATURES=-ccache"
-		eerror "Proceeding anyway although building will likely break...";;
-	esac
 
 	if use kernel_linux && kernel_is ge 3 13 ; then
 		ewarn "No official support of nvidia or gentoo is available for >=linux-3.13"

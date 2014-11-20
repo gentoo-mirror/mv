@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="A POSIX shell script to compile the kernel with user permissions"
 HOMEPAGE="https://github.com/vaeth/kernel/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -17,7 +17,8 @@ IUSE=""
 RDEPEND="app-admin/sudo
 	app-admin/sudox
 	app-shells/push
-	>=app-shells/runtitle-2.3"
+	>=app-shells/runtitle-2.3
+	!<dev-util/ccache-3.2"
 DEPEND=""
 
 src_prepare() {

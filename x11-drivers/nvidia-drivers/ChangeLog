@@ -4,5 +4,8 @@
 
 *nvidia-drivers-173.14.39-r1 (10 Nov 2014)
 
-  10 Nov 2013; Martin Väth <martin@mvath.de>:
+  20 Nov 2014; Martin Väth <martin@mvath.de>:
+  Work smoothly with >=ccache-3.2
+
+  10 Nov 2014; Martin Väth <martin@mvath.de>:
   Bump from tree to add support for some newer kernel. Remove previous history
