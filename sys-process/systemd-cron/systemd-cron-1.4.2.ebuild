@@ -8,8 +8,8 @@ PYTHON_COMPAT=( pypy python{3_3,3_4} )
 inherit eutils python-single-r1 systemd
 
 DESCRIPTION="systemd units to provide minimal cron daemon functionality by running scripts in cron directories"
-HOMEPAGE="https://github.com/dbent/systemd-cron/"
-SRC_URI="https://github.com/dbent/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/systemd-cron/systemd-cron/"
+SRC_URI="https://github.com/systemd-cron/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
