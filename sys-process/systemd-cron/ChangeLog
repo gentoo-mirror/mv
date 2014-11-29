@@ -5,7 +5,7 @@
 *systemd-cron-1.4.2 (29 Nov 2014)
 
   28 Nov 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild
+  Version bump, remove old ebuild. Fix pypy3 dep
 
 *systemd-cron-1.4.1 (16 Nov 2014)
 
