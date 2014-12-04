@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*portage-bashrc-mv-13.0 (04 Dec 2014)
+
+  04 Dec 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix compatibility with >=portage-2.2.15
+
 *portage-bashrc-mv-12.6 (20 Nov 2014)
 
   20 Nov 2014; Martin Väth <martin@mvath.de>:
