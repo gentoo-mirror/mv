@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 SUBVERSION_REVISION="r=${PV}"
 HTML_VERSION="20140908"
-PY_VERSION="20140822"
+PY_VERSION="20141204"
 TXT_VERSION="20090627"
 EL_VERSION="20140929"
 DESCRIPTION="The google styleguide for C++ together with a verifyer and an emacs file"
