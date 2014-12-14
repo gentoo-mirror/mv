@@ -2,10 +2,10 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*systemd-cron-1.5.0 (12 Dec 2014)
+*systemd-cron-1.5.1 (14 Dec 2014)
 
   12 Dec 2014; Martin Väth <martin@mvath.de>:
-  Version bump. Mask since Makefile is too buggy to fix
+  Version bump, remove old ebuild. Support USE=setgid
 
 *systemd-cron-1.4.2 (29 Nov 2014)
 
