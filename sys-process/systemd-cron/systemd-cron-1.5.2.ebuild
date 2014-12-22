@@ -25,16 +25,13 @@ DEPEND="${COMMON_DEPEND}"
 src_prepare() {
 	python_setup
 	python_fix_shebang --force "${S}/src/bin"
-	mv "${S}/src/man/crontab"{,-systemd}".1.in" || die
-	mv "${S}/src/man/crontab"{,-systemd}".5.in" || die
 	sed -i \
 		-e 's/^crontab/crontab-systemd/' \
 		-e 's/^CRONTAB/CRONTAB-SYSTEMD/' \
-		"${S}/src/man/crontab-systemd."{1,5}".in" || die
+		"${S}/src/man/crontab."{1,5}".in" || die
 	sed -i \
 		-e 's!/crontab$!/crontab-systemd!' \
-		-e 's!/crontab\(\.[15]\)!/crontab-systemd\1!' \
-		-e 's/\([: ]\)crontab/\1cron/' \
+		-e 's!/crontab\(\.[15]\)$!/crontab-systemd\1!' \
 		"${S}/Makefile.in" || die
 	use etc-crontab || sed -i \
 		-e "s!/etc/crontab!/dev/null!" \
@@ -63,11 +60,6 @@ src_configure() {
 		$(my_use_enable yearly semi_annually) \
 		$(my_use_enable setgid) \
 		--enable-persistent=yes
-}
-
-src_install() {
-	dodir "$(systemd_get_unitdir)" /usr/share/man/man{1,5,7,8}
-	default
 }
 
 pkg_postinst() {
