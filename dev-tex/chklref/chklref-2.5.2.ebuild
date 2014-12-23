@@ -20,6 +20,9 @@ RDEPEND="virtual/latex-base
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	use prefix || sed -i \
+		-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
+		-- "${S}"/src/chklref.in || die
 	epatch_user
 }
 
