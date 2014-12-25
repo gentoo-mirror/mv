@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*firewall-mv-8.6 (25 Dec 2014)
+
+  25 Dec 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
 *firewall-mv-8.5 (15 Jun 2014)
 
   06 Jul 2014; Martin Väth <martin@mvath.de>:
