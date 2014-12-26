@@ -1,4 +1,4 @@
-#!/sbin/runscript
+#!/sbin/openrc-run
 
 description="sundtek TV mediaclient"
 #command=/opt/bin/mediasrv

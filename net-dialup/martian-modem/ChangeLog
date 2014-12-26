@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Dec 2014; Martin Väth <martin@mvath.de>:
+  Use openrc-run instead of deprecated runscript in initfile
+
   15 Mar 2014; Martin Väth <martin@mvath.de>:
   Use readme.gentoo.eclass
 

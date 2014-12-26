@@ -2,7 +2,12 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*sundtek-tv-141111.122431 (12 Dec 2014)
+*sundtek-tv-141222.213801 (25 Dec 2014)
+
+  25 Dec 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-141209.042745 (12 Dec 2014)
 
   12 Dec 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
