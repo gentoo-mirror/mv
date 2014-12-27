@@ -14,7 +14,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND=">=dev-lang/perl-5.12"
+RDEPEND="!<sys-apps/openrc-0.13
+	>=dev-lang/perl-5.12"
 #	|| ( >=dev-lang/perl-5.10.1 >=virtual/perl-version-0.77 )
 #	|| ( >=dev-lang/perl-5.1 virtual/perl-File-Path )
 #	|| ( >=dev-lang/perl-5.9.4 virtual/perl-File-Spec-3.0 )

@@ -4,6 +4,9 @@
 
 *starter-7.0.1 (25 Dec 2014)
 
+  27 Dec 2014; Martin Väth <martin@mvath.de>:
+  Add blocker to <openrc-0.13
+
   25 Dec 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
 

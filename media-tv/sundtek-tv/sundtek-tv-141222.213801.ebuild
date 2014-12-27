@@ -18,7 +18,7 @@ LICENSE="sundtek"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="pax_kernel"
-RDEPEND=""
+RDEPEND="!<sys-apps/openrc-0.13"
 DEPEND="pax_kernel? ( || ( sys-apps/elfix sys-apps/paxctl ) )"
 
 DISABLE_AUTOFORMATTING="true"

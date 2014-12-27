@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=app-shells/runtitle-2.3
+RDEPEND="!<sys-apps/openrc-0.13
+	>=app-shells/runtitle-2.3
 	>=dev-lang/perl-5.12
 	|| ( dev-perl/File-Which sys-apps/which )
 	sys-fs/squashfs-tools

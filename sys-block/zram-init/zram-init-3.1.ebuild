@@ -15,6 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+RDEPEND="!<sys-apps/openrc-0.13"
+
 DISABLE_AUTOFORMATTING="true"
 DOC_CONTENTS="To use zram, activate it in your kernel and add it to default runlevel:
 	rc-config add zram default

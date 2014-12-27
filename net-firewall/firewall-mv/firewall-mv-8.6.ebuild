@@ -14,7 +14,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND="app-shells/push"
+RDEPEND="!<sys-apps/openrc-0.13
+	app-shells/push"
 DEPEND=""
 
 src_prepare() {

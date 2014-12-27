@@ -18,7 +18,8 @@ IUSE=""
 SLOT=0
 
 DEPEND="!net-dialup/ltmodem"
-RDEPEND="${DEPEND}"
+RDEPEND="!<sys-apps/openrc-0.13
+	${DEPEND}"
 
 # Do NOT remove this. Stripping results in broken communication
 # with core state communication channel (also see QA_* stuff below)
