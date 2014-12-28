@@ -6,23 +6,31 @@ EAPI=5
 inherit autotools eutils flag-o-matic multiprocessing
 RESTRICT="mirror"
 
+FETCH_RESTRICT=false
+LIVE_VERSION=false
 case ${PV} in
 9999*)
 	LIVE_VERSION=:;;
-*)
-	LIVE_VERSION=false;;
+1.3.3*)
+	FETCH_RESTRICT=:;;
 esac
 
 ${LIVE_VERSION} && inherit monotone
 
 DESCRIPTION="A character generator for the popular German role playing game Midgard"
-HOMEPAGE="http://midgard.berlios.de"
-SRC_URI="ftp://ftp.berlios.de/pub/midgard/Source/${P}.tar.bz2"
+HOMEPAGE="http://sourceforge.net/projects/midgard.berlios/"
+SRC_URI="mirror://sourceforge/midgard.berlios/${P}.tar.bz2"
 KEYWORDS="~amd64 ~x86"
 if ${LIVE_VERSION}
 then	PROPERTIES="live"
 	SRC_URI=""
 	EMTN_REPO_URI="petig-baender.dyndns.org"
+	KEYWORDS=""
+elif ${FETCH_RESTRICT}
+then	SRC_URI="ftp://ftp.berlios.de/pub/midgard/Source/${P}.tar.bz2"
+# Unfortunately, the URL is down forever:
+# You can only use it, if you already downloaded the tarball earlier
+	RESTRICT="${RESTRICT} fetch"
 	KEYWORDS=""
 fi
 LICENSE="GPL-2"
@@ -157,6 +165,9 @@ src_patch() {
 	multijob_child_init src_sed midgard/src/table_lernschema.cc \
 		-e '/case .*:$/{n;s/^[[:space:]]*\}/break;}/}'
 	multijob_finish || die "basic patching failed"
+	find . -name configure.in -exec sh -c 'for i
+	do	mv -- "${i}" "${i%in}ac"
+	done' sh '{}' +
 }
 
 my_cd() {
@@ -219,6 +230,8 @@ my_confmake() {
 
 src_configure() {
 	filter-flags \
+		-pie \
+		-fPIE \
 		-flto \
 		-fwhole-program \
 		-fuse-linker-plugin \
