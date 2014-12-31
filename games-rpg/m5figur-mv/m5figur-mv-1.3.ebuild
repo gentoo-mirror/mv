@@ -10,7 +10,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)"
 HOMEPAGE="https://github.com/vaeth/m5figur-mv/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LPPL-1.2"
 SLOT="0"
