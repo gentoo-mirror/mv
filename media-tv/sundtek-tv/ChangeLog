@@ -1,5 +1,5 @@
 # ChangeLog for media-video/sundtek-tv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
 *sundtek-tv-141222.213801 (25 Dec 2014)
@@ -81,33 +81,33 @@
   11 May 2014; Martin Väth <martin@mvath.de>:
   Move to versioned tarball support. Thanks to the Sundtek support!
 
-*sundtek-tv-20140510 (11 May 2014)
+*sundtek-tv-20150510 (11 May 2014)
 
   11 May 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
 
-*sundtek-tv-20140428 (04 May 2014)
+*sundtek-tv-20150428 (04 May 2014)
 
   04 May 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Avoid install -r
 
-*sundtek-tv-20140414 (14 Apr 2014)
+*sundtek-tv-20150414 (14 Apr 2014)
 
   14 Apr 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
 
-*sundtek-tv-20140402 (13 Apr 2014)
+*sundtek-tv-20150402 (13 Apr 2014)
 
   13 Apr 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild. Remove IUSE=doc
 
-*sundtek-tv-20140321-r1 (17 Feb 2014)
+*sundtek-tv-20150321-r1 (17 Feb 2014)
 
   30 Mar 2014; Martin Väth <martin@mvath.de>:
   Support mediaclient.{video,audio,dvb} wrapper scripts;
   provide local systemd service for default settings
 
-*sundtek-tv-20140321 (17 Feb 2014)
+*sundtek-tv-20150321 (17 Feb 2014)
 
   29 Mar 2014; Martin Väth <martin@mvath.de>:
   Add zsh completion support. Version bump

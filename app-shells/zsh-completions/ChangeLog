@@ -1,5 +1,5 @@
 # ChangeLog for app-shells/zsh-completions
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
 *zsh-completions-0.12.0 (26 Sep 2014)
@@ -7,7 +7,7 @@
   26 Sep 2014; Martin Väth <martin@mvath.de>:
   Rename package. Update ebuild logic. Version bump, remove old ebuild
 
-*zsh-completion-20140716 (06 Aug 2014)
+*zsh-completion-20150716 (06 Aug 2014)
 
   06 Aug 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
