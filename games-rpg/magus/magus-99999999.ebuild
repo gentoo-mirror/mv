@@ -40,7 +40,7 @@ IUSE="+acroread imagemagick konqueror postgres pngcrush seamonkey"
 DEPENDCOMMON="dev-libs/libsigc++:2
 	dev-cpp/gtkmm:2.4
 	virtual/latex-base
-	postgres? ( dev-db/postgresql-server )
+	postgres? ( dev-db/postgresql )
 	!postgres? ( dev-db/sqlite:3 )
 	|| ( media-libs/netpbm media-gfx/graphicsmagick media-gfx/imagemagick )"
 
