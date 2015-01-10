@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*epubreader-1.5.0.1 (10 Jan 2015)
+
+  10 Jan 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *epubreader-1.4.2.6 (05 Dec 2014)
 
   05 Dec 2014; Martin Väth <martin@mvath.de>:
