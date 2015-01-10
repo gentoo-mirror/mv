@@ -10,11 +10,12 @@ inherit autotools autotools-utils eutils linux-info readme.gentoo systemd
 
 DESCRIPTION="Keep directories compressed with squashfs. Useful for portage tree, texmf-dist"
 HOMEPAGE="http://forums.gentoo.org/viewtopic-t-465367.html"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+#KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS=""
 IUSE="aufs overlayfs bundled-openrc-wrapper unionfs-fuse"
 
 BOTHDEPEND="bundled-openrc-wrapper? ( !!sys-apps/openrc-wrapper )"

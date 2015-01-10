@@ -1,8 +1,4 @@
-# Martin Väth <martin@mvath.de> (04 Sep 2013)
-# There is nothing wrong with sys-fs/squash_dir: It will stay in this overlay,
-# although upstream maintenance is decreased and might eventually be dropped.
-# For the moment, it is completely safe to unmask sys-fs/squash_dir.
-# However, this mask is here to call to your attention that it is recommended
-# to use the successor sys-fs/squashmount instead (or sys-apps/openrc-wrapper
-# if you wanted squash_dir only because of the openrc-wrapper script)
+# Martin Väth <martin@mvath.de> (10 Jan 2015)
+# sys-fs/squash_dir is no longer maintained. Use instead the successor project
+# sys-fs/squashmount (or sys-apps/openrc-wrapper for the openrc-wrapper script)
 sys-fs/squash_dir
