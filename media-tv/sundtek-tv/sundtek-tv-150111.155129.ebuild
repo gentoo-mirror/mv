@@ -28,7 +28,7 @@ DOC_CONTENTS="To initialize sundtek drivers during booting call
 You will probably need to adapt sundtek-local.service to your defaults
 "
 
-QA_PREBUILT="opt/bin/* opt/bin/*/* usr/$(get_libdir)/*"
+QA_PREBUILT="opt/bin/* opt/bin/*/* usr/$(get_libdir)/* usr/share/doc/*/*/*"
 
 src_unpack() {
 	local subdir a
