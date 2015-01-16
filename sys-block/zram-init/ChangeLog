@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*zram-init-3.2 (16 Jan 2015)
+
+  16 Jan 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *zram-init-3.1 (25 Dec 2014)
 
   27 Dec 2014; Martin Väth <martin@mvath.de>:
