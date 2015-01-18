@@ -3,7 +3,8 @@
 # $Header: $
 
 EAPI=5
-inherit elisp-common eutils
+PYTHON_COMPAT=( jython2_{5,7} pypy{,3} python{2_7,3_{3,4}} )
+inherit elisp-common eutils python-r1
 RESTRICT="mirror"
 
 SUBVERSION_REVISION="r=${PV}"
@@ -23,9 +24,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="emacs"
 
 EMACSNAME="google-c-style"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 COMMON="emacs? ( virtual/emacs )"
 DEPEND="${COMMON}"
 RDEPEND="dev-lang/python
+	${PYTHON_DEPS}
 	${COMMON}"
 
 S="${WORKDIR}"
@@ -52,6 +56,9 @@ EOF
 }
 
 src_prepare() {
+	use prefix || sed -i \
+		-e '1s"^#!/usr/bin/env python$"#!'"${EPREFIX}/usr/bin/python"'"' \
+		-- "${PN}.py" || die
 	epatch_user
 }
 

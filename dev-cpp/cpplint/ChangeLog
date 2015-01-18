@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*cpplint-141-r1 (18 Jan 2015)
+
+  18 Jan 2014; Martin Väth <martin@mvath.de>:
+  Use new-style python dependency. Fix shebang
+
 *cpplint-141 (05 Dec 2014)
 
   05 Dec 2014; Martin Väth <martin@mvath.de>:

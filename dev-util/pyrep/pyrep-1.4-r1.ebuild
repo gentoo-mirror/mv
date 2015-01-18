@@ -4,7 +4,8 @@
 
 EAPI=5
 RESTRICT="mirror"
-inherit eutils
+PYTHON_COMPAT=( jython2_{5,7} pypy{,3} python{2_7,3_{3,4}} )
+inherit eutils python-r1
 
 DESCRIPTION="Search and/or replace regular expressions within many files interactively"
 HOMEPAGE="https://github.com/vaeth/pyrep/"
@@ -15,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-lang/python"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+RDEPEND="${PYTHON_DEPS}"
 
 src_prepare() {
 	use prefix || sed -i \

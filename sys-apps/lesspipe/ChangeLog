@@ -4,6 +4,9 @@
 
 *lesspipe-1.82 (24 Dec 2013)
 
+  18 Jam 2015; Martin Väth <martin@mvath.de>:
+  Re-add arches and fix dependencies properly
+
   24 Sep 2014; Martin Väth <martin@mvath.de>:
   Fix dependencies. Remove some arches to make repoman happy
 

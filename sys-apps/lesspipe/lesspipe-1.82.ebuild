@@ -13,13 +13,25 @@ SRC_URI="http://www-zeuthen.desy.de/~friebel/unix/less/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~m68k ~mips ~ppc ~s390 ~sh ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="antiword cabextract catdoc +cpio +djvu dpkg +dvi2tty +elinks fastjar +ghostscript gpg +groff +html2text id3v2 image isoinfo libplist +links +lynx lzip mp3info mp3info2 ooffice p7zip pdf pstotext rar rpm +rpm2targz unrar unrtf +unzip +w3m xlhtml"
 
 htmlmode="( || ( html2text links lynx elinks w3m ) )"
 REQUIRED_USE="!rpm2targz? ( rpm? ( cpio ) )
 	ooffice? ${htmlmode}
-	xlhtml? ${htmlmode}"
+	xlhtml? ${htmlmode}
+	amd64-fbsd? ( !antiword !catdoc !dpkg !elinks !fastjar !html2text
+		!id3v2 !lzip !mp3info !mp3info2 !ooffice !p7zip !pstotext
+		!rar !rpm !unrtf !w3m !xlhtml )
+	alpha? ( !catdoc !fastjar !id3v2 !libplist !mp3info !mp3info2
+		!ooffice !pstotext !rar )
+	arm? ( !antiword !catdoc !fastjar !html2text !id3v2 !mp3info
+		!ooffice !pstotext !rar !xlhtml )
+	hppa? ( !catdoc !fastjar !libplist !mp3info2 !ooffice !rar !w3m !xlhtml )
+	ia64? ( !antiword !catdoc !fastjar !id3v2 !libplist !mp3info !mp3info2
+		!ooffice !pstotext !rar !xlhtml )
+	ppc64? ( !catdoc !fastjar !ooffice !xlhtml )
+	sparc? ( !catdoc !fastjar !id3v2 !libplist !mp3info2 !ooffice !pstotext )"
 
 RDEPEND="sys-apps/file
 	app-arch/xz-utils
@@ -27,24 +39,26 @@ RDEPEND="sys-apps/file
 	dev-lang/perl
 	sys-apps/less[lesspipe]
 	unzip? ( app-arch/unzip )
-	fastjar? ( app-arch/fastjar )
+	fastjar? ( !amd64-fbsd? ( !alpha? ( !arm? ( !hppa? ( !ia64? ( !ppc64?
+		( !sparc? ( app-arch/fastjar ) ) ) ) ) ) ) )
 	unrar? ( app-arch/unrar )
 	!unrar? (
-		rar? ( app-arch/rar )
+		rar? ( !amd64-fbsd? ( !alpha? ( !arm? ( !hppa? ( !ia64?
+			( app-text/o3read ) ) ) ) ) )
 	)
-	lzip? ( app-arch/lzip )
-	p7zip? ( app-arch/p7zip )
+	lzip? ( !amd64-fbsd? ( app-arch/lzip ) )
+	p7zip? ( !amd64-fbsd? ( app-arch/p7zip ) )
 	cpio? ( app-arch/cpio )
 	cabextract? ( app-arch/cabextract )
-	html2text? ( app-text/html2text )
+	html2text? ( !amd64-fbsd? ( !arm? ( app-text/html2text ) ) )
 	!html2text? (
 		links? ( www-client/links )
 		!links? (
 			lynx? ( www-client/lynx )
 			!lynx? (
-				elinks? ( www-client/elinks )
+				elinks? ( !amd64-fbsd? ( www-client/elinks ) )
 				!elinks? (
-					w3m? ( www-client/w3m )
+					w3m? ( !amd64-fbsd? ( !hppa? ( www-client/w3m ) ) )
 				)
 			)
 		)
@@ -52,34 +66,41 @@ RDEPEND="sys-apps/file
 	groff? ( sys-apps/groff )
 	rpm2targz? ( app-arch/rpm2targz )
 	!rpm2targz? (
-		rpm? ( || ( app-arch/rpm app-arch/rpm5 ) )
+		rpm? ( !amd64-fbsd? ( || ( app-arch/rpm app-arch/rpm5 ) ) )
 	)
-	antiword? ( app-text/antiword )
+	antiword? ( !amd64-fbsd? ( !arm? ( !ia64? ( app-text/antiword ) ) ) )
 	!antiword? (
-		catdoc? ( app-text/catdoc )
+		catdoc? ( !amd64-fbsd? ( !alpha? ( !arm? ( !hppa? ( !ia64? ( !ppc64?
+			( !sparc? ( app-text/catdoc ) ) ) ) ) ) ) )
 	)
-	xlhtml? ( app-text/xlhtml )
-	unrtf? ( app-text/unrtf )
-	ooffice? ( app-text/o3read )
+	xlhtml? ( !amd64-fbsd? ( !arm? ( !hppa? ( !ia64? ( !ppc64?
+		( app-text/xlhtml ) ) ) ) ) )
+	unrtf? ( !amd64-fbsd? ( app-text/unrtf ) )
+	ooffice? ( !amd64-fbsd? ( !alpha? ( !arm? ( !hppa? ( !ia64? ( !ppc64?
+		( !sparc? ( app-text/o3read ) ) ) ) ) ) ) )
 	djvu? ( app-text/djvu )
 	dvi2tty? ( dev-tex/dvi2tty )
-	pstotext? ( app-text/pstotext )
+	pstotext? ( !amd64-fbsd? ( !alpha? ( !arm? ( !ia64? ( !sparc?
+		( app-text/pstotext ) ) ) ) ) )
 	!pstotext? (
 		ghostscript? ( app-text/ghostscript-gpl )
 	)
 	gpg? ( app-crypt/gnupg )
 	pdf? ( app-text/poppler )
-	id3v2? ( media-sound/id3v2 )
+	id3v2? ( !amd64-fbsd? ( !alpha? ( !arm? ( !ia64? ( !sparc?
+		( media-sound/id3v2 ) ) ) ) ) )
 	!id3v2? (
-		mp3info2? ( dev-perl/MP3-Tag )
+		mp3info2? ( !amd64-fbsd? ( !alpha? ( !hppa? ( !ia64? ( !sparc?
+			( dev-perl/MP3-Tag ) ) ) ) ) )
 		!mp3info2? (
-			mp3info? ( media-sound/mp3info )
+			mp3info? ( !amd64-fbsd? ( !alpha? ( !arm? ( !ia64?
+				( media-sound/mp3info ) ) ) ) )
 		)
 	)
 	image? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) )
 	isoinfo? ( || ( app-cdr/cdrtools app-cdr/dvd+rw-tools app-cdr/cdrkit ) )
-	libplist? ( app-pda/libplist )
-	dpkg? ( app-arch/dpkg )"
+	libplist? ( !alpha? ( !hppa? ( !ia64? ( !sparc? ( app-pda/libplist ) ) ) ) )
+	dpkg? ( !amd64-fbsd? ( app-arch/dpkg ) ) "
 DEPEND="${RDEPEND}"
 
 ModifyStart() {

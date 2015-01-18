@@ -119,7 +119,6 @@ sys-process/systemd-cron:etc-crontab - Use /etc/crontab; disable this when you h
 sys-process/systemd-cron:minutely - Enable systemd minutely cron target
 sys-process/systemd-cron:setgid - Install a cron setgid helper to allow users editing crontabs
 sys-process/systemd-cron:yearly - Enable systemd yearly/semi-annually/quarterly cron target
-x11-drivers/nvidia-drivers:X - Install the X.org driver, OpenGL libraries, XvMC libraries, and VDPAU libraries
 x11-drivers/nvidia-drivers:kernel3-13 - Install unofficial patches for linux-3.13 and newer
 x11-drivers/nvidia-drivers:kernel3-14 - Install unofficial patches for linux-3.14 and newer
 x11-drivers/nvidia-drivers:kernel3-17 - Install unofficial patches for linux-3.17 and newer
