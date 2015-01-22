@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kernel-1.34 (22 Jan 2015)
+
+  22 Jan 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Make bash compatible
+
 *kernel-1.33 (20 Nov 2014)
 
   20 Nov 2014; Martin Väth <martin@mvath.de>:
