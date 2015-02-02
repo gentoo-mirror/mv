@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*firewall-mv-8.7 (02 Feb 2015)
+
+  02 Feb 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *firewall-mv-8.6 (25 Dec 2014)
 
   27 Dec 2014; Martin Väth <martin@mvath.de>:
@@ -16,12 +21,12 @@
   New style github tarball
 
   15 Jun 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *firewall-mv-8.4 (30 Mar 2014)
 
   30 Mar 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *firewall-mv-8.3 (16 Mar 2014)
 
@@ -46,7 +51,7 @@
 *firewall-mv-7.3 (21 Nov 2013)
 
   21 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *firewall-mv-7.2-r1 (02 Nov 2013)
 
@@ -56,12 +61,12 @@
 *firewall-mv-7.2 (13 Oct 2013)
 
   13 Oct 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *firewall-mv-7.1 (11 Oct 2013)
 
   11 Oct 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *firewall-mv-6.11 (09 Sep 2013)
 
@@ -100,17 +105,17 @@
   base->eutils
 
   07 May 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *firewall-mv-6.5 (04 May 2012)
 
   04 May 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *firewall-mv-6.4 (22 Apr 2012)
 
   22 Apr 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *firewall-mv-6.3 (08 Apr 2012)
 
@@ -118,7 +123,7 @@
   Inherit base
 
   08 Apr 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *firewall-mv-6.2 (28 Feb 2012)
 
@@ -126,14 +131,14 @@
   Use vcs-snapshot.eclass
 
   28 Feb 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *firewall-mv-6.1 (04 Feb 2012)
 
   04 Feb 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild. Separate SYSCTL parameters. Add init files.
+  Version bump, remove old ebuild. Separate SYSCTL parameters. Add init files
 
 *firewall-mv-6.0 (02 Feb 2012)
 
   02 Feb 2012; Martin Väth <martin@mvath.de>:
-  New ebuild from scratch.
+  New ebuild from scratch
