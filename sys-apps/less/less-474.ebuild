@@ -56,6 +56,7 @@ src_prepare() {
 			"${SELECTDIR}/bin/less-select" || die
 	fi
 	epatch "${FILESDIR}/${CODE2COLOR_P}.patch"
+	chmod a+x configure || die
 	epatch_user
 }
 
