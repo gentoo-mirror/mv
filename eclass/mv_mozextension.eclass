@@ -30,27 +30,25 @@ case ${EAPI:-0} in
 	die "EAPI ${EAPI} no longer supported by ${ECLASS}";;
 esac
 
-IUSE=
+MV_MOZ_IUSE=
 RDEPEND='|| ('
-REQUIRED_USE='|| ('
 case ${MV_MOZ_MOZILLAS} in
 *fire*)
-	IUSE="${IUSE}${IUSE:+ }firefox firefox-bin"
+	MV_MOZ_IUSE="${MV_MOZ_IUSE}${MV_MOZ_IUSE:+ }firefox firefox-bin"
 	RDEPEND="${RDEPEND}
 	firefox? ( >=www-client/firefox-21 )
 	firefox-bin? ( >=www-client/firefox-bin-21 )"
-	REQUIRED_USE="${REQUIRED_USE} firefox firefox-bin";;
 esac
 case ${MV_MOZ_MOZILLAS} in
 *sea*)
-	IUSE="${IUSE}${IUSE:+ }seamonkey seamonkey-bin"
+	MV_MOZ_IUSE="${MV_MOZ_IUSE}${MV_MOZ_IUSE:+ }seamonkey seamonkey-bin"
 	RDEPEND="${RDEPEND}
 	seamonkey? ( www-client/seamonkey )
 	seamonkey-bin? ( www-client/seamonkey-bin )"
-	REQUIRED_USE="${REQUIRED_USE} seamonkey seamonkey-bin";;
 esac
 RDEPEND="${RDEPEND} )"
-REQUIRED_USE="${REQUIRED_USE} )"
+IUSE=${MV_MOZ_IUSE}
+REQUIRED_USE="|| ( ${MV_MOZ_IUSE} )"
 
 DEPEND='app-arch/unzip'
 
@@ -98,7 +96,7 @@ xpi_unpack() {
 
 		case ${xpi} in
 		./*|/*)
-			srcdir='';;
+			srcdir=;;
 		*)
 			srcdir="${DISTDIR}/";;
 		esac
@@ -150,7 +148,7 @@ xpi_install_dirs() {
 
 mv_mozextension_install() {
 	local MOZILLA_EXTENSIONS_DIRECTORY
-	use_if_iuse "${1}" || return 0
+	has "${1}" ${MV_MOZ_IUSE} && use "${1}" || return 0
 	MOZILLA_EXTENSIONS_DIRECTORY=${2}
 	xpi_install_dirs
 }
