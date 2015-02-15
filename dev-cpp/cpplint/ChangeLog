@@ -4,6 +4,9 @@
 
 *cpplint-141-r1 (18 Jan 2015)
 
+  15 Feb 2015; Martin Väth <martin@mvath.de>:
+  Fix python-single-r1 usage. Remove non-working python versions
+
   18 Jan 2014; Martin Väth <martin@mvath.de>:
   Use new-style python dependency. Fix shebang
 

@@ -3,8 +3,8 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( jython2_{5,7} pypy{,3} python{2_7,3_{3,4}} )
-inherit elisp-common eutils python-r1
+PYTHON_COMPAT=( jython2_7 pypy python2_7 )
+inherit elisp-common eutils python-single-r1
 RESTRICT="mirror"
 
 SUBVERSION_REVISION="r=${PV}"
@@ -59,6 +59,7 @@ src_prepare() {
 	use prefix || sed -i \
 		-e '1s"^#!/usr/bin/env python$"#!'"${EPREFIX}/usr/bin/python"'"' \
 		-- "${PN}.py" || die
+	python_fix_shebang "${S}"
 	epatch_user
 }
 

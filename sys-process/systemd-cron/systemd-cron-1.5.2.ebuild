@@ -14,28 +14,33 @@ SRC_URI="https://github.com/systemd-cron/${PN}/archive/v${PV}.tar.gz -> ${P}.tar
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cron-boot +etc-crontab minutely setgid yearly"
+IUSE="cron-boot etc-crontab-systemd minutely setgid yearly"
 
 COMMON_DEPEND="sys-process/cronbase"
 RDEPEND=">=sys-apps/systemd-217
 	sys-apps/debianutils
+	!etc-crontab-systemd? ( !sys-process/dcron )
+	${PYTHON_DEPS}
 	${COMMON_DEPEND}"
 DEPEND="${COMMON_DEPEND}"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
-	python_setup
 	python_fix_shebang --force "${S}/src/bin"
 	sed -i \
 		-e 's/^crontab/crontab-systemd/' \
 		-e 's/^CRONTAB/CRONTAB-SYSTEMD/' \
-		"${S}/src/man/crontab."{1,5}".in" || die
+		-- "${S}/src/man/crontab."{1,5}".in" || die
 	sed -i \
 		-e 's!/crontab$!/crontab-systemd!' \
 		-e 's!/crontab\(\.[15]\)$!/crontab-systemd\1!' \
-		"${S}/Makefile.in" || die
-	use etc-crontab || sed -i \
-		-e "s!/etc/crontab!/dev/null!" \
-		"${S}/src/bin/systemd-crontab-generator.py" || die
+		-- "${S}/Makefile.in" || die
+	if use etc-crontab-systemd
+	then	sed -i \
+			-e "s!/etc/crontab!/etc/crontab-systemd!" \
+			-- "${S}/src/man/crontab."{1,5}".in" \
+			"${S}/src/bin/systemd-crontab-generator.py" || die
+	fi
 	epatch_user
 }
 
@@ -60,13 +65,4 @@ src_configure() {
 		$(my_use_enable yearly semi_annually) \
 		$(my_use_enable setgid) \
 		--enable-persistent=yes
-}
-
-pkg_postinst() {
-	if use etc-crontab && {
-		has_version sys-process/dcron || ! has_version virtual/cron
-	}
-	then	ewarn "sys-process/systemd-cron[etc-crontab] does not work with the /etc/crontab"
-		ewarn "installed by sys-process/dcron"
-	fi
 }

@@ -4,6 +4,9 @@
 
 *pyrep-1.4-r1 (18 Jan 2015)
 
+  15 Feb 2015; Martin Väth <martin@mvath.de>:
+  Fix python-single-r1 usage
+
   18 Jan 2015; Martin Väth <martin@mvath.de>:
   Use new-style python dependency
 

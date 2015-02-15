@@ -4,6 +4,10 @@
 
 *systemd-cron-1.5.2 (22 Dec 2014)
 
+  15 Feb 2015; Martin Väth <martin@mvath.de>:
+  Remove etc-crontab; instead, introduce etc-crontab-systemd and a dcron block.
+  Fix python-single-r1 usage
+
   12 Dec 2014; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
 

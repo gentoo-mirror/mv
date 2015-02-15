@@ -4,8 +4,8 @@
 
 EAPI=5
 RESTRICT="mirror"
-PYTHON_COMPAT=( jython2_{5,7} pypy{,3} python{2_7,3_{3,4}} )
-inherit eutils python-r1
+PYTHON_COMPAT=( jython2_7 pypy{,3} python{2_7,3_{3,4}} )
+inherit eutils python-single-r1
 
 DESCRIPTION="Search and/or replace regular expressions within many files interactively"
 HOMEPAGE="https://github.com/vaeth/pyrep/"
@@ -20,6 +20,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RDEPEND="${PYTHON_DEPS}"
 
 src_prepare() {
+	python_fix_shebang "${S}"
 	use prefix || sed -i \
 		-e '1s"^#!/usr/bin/env python$"#!'"${EPREFIX}/usr/bin/python"'"' \
 		-- "${PN}" || die
