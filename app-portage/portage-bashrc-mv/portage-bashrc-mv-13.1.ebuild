@@ -38,6 +38,8 @@ pkg_postinst() {
 		ewarn "See NEWS for details";;
 	esac
 	optfeature "improved mask handling" app-portage/eix
+	optfeature "output of expected emerge time" app-portage/portage-utils
+	optfeature "detailed information output in title bar" app-shells/runtitle
 	! test -d /var/cache/gpo || \
 		ewarn "Obsolete /var/cache/gpo found. Please remove"
 }
