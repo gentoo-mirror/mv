@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*video-mv-7.17-r1 (15 Mar 2015)
+
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Remove *mplayer2, since its support is deprecated in gentoo
+
 *video-mv-7.17 (18 Aug 2014)
 
   18 Aug 2014; Martin Väth <martin@mvath.de>:
