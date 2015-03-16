@@ -34,7 +34,6 @@ src_prepare() {
 			-e 's"^\. _videoscript\.sh$". '"${EPREFIX}/usr/share/video-mv/_videoscript.sh"'"' \
 			-- "${i}" || die
 	done
-	rm bin/*mplayer2*
 	epatch_user
 }
 

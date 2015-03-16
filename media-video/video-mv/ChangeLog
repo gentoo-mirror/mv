@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*video-mv-8.0 (16 Mar 2015)
+
+  16 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump: Support mpv instead of mplayer2
+
 *video-mv-7.17-r1 (15 Mar 2015)
 
   15 Mar 2014; Martin Väth <martin@mvath.de>:
