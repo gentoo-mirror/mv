@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*starter-7.0.4 (21 Mar 2015)
+
+  21 Mar 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix openrc init
+
 *starter-7.0.3 (17 Mar 2015)
 
   17 Mar 2015; Martin Väth <martin@mvath.de>:
