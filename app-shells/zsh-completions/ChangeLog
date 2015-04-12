@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*zsh-completions-99999999 (12 Apr 2015)
+
+  12 Apr 2015; Martin Väth <martin@mvath.de>:
+  Update to new/removed completion files. Simplify separation of life version
+
 *zsh-completions-0.12.0 (26 Sep 2014)
 
   26 Sep 2014; Martin Väth <martin@mvath.de>:
