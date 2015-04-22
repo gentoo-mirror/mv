@@ -2,7 +2,10 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  24 Seo 2014; Martin Väth <martin@mvath.de>:
+  17 Apr 2015; Martin Väth <martin@mvath.de>:
+  Version bump. Remove old ebuild
+
+  24 Sep 2014; Martin Väth <martin@mvath.de>:
   Version bump. Remove old ebuild
 
   14 Jun 2014; Martin Väth <martin@mvath.de>:
