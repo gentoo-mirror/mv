@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*shumway-0.11.116 (30 Apr 2015)
+
+  30 Apr 2015; Martin Väth <martin@mvath.de>:
+  Version bump. Remove old ebuild
+
 *shumway-0.10.337 (01 Apr 2015)
 
   01 Apr 2015; Martin Väth <martin@mvath.de>:

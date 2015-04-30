@@ -1,0 +1,11 @@
+--- a/Src/zsh.mdd
++++ b/Src/zsh.mdd
+@@ -24,7 +24,7 @@ hdrdeps="zshcurses.h zshterm.h"
+ 
+ signames.c: signames1.awk signames2.awk ../config.h @SIGNAL_H@
+ 	$(AWK) -f $(sdir)/signames1.awk @SIGNAL_H@ >sigtmp.c
+-	$(CPP) sigtmp.c >sigtmp.out
++	$(CPP) -P sigtmp.c >sigtmp.out
+ 	$(AWK) -f $(sdir)/signames2.awk sigtmp.out > $@
+ 	rm -f sigtmp.c sigtmp.out
+ 

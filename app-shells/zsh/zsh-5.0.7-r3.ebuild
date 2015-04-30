@@ -126,6 +126,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-init.d-gentoo-r1.diff
 	epatch "${FILESDIR}"/${P}-fix-cvs-completion.patch
 	epatch "${FILESDIR}"/${P}-pid-ns.patch
+	epatch "${FILESDIR}"/${P}-gcc-5.patch
 
 	cp "${FILESDIR}"/zprofile-1 "${T}"/zprofile || die
 	eprefixify "${T}"/zprofile || die
