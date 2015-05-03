@@ -2,9 +2,9 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*firewall-mv-8.11 (03 Apr 2015)
+*firewall-mv-8.11 (03 May 2015)
 
-  03 Apr 2015; Martin Väth <martin@mvath.de>:
+  03 May 2015; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
 
 *firewall-mv-8.9 (08 Feb 2015)
