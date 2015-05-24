@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*cpplint-99999999 (24 May 2015)
+
+  24 May 2015; Martin Väth <martin@mvath.de>:
+  Update to github repository, since anything else is no longer available
+
 *cpplint-141-r1 (18 Jan 2015)
 
   15 Feb 2015; Martin Väth <martin@mvath.de>:

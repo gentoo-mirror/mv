@@ -32,7 +32,11 @@ DEPEND=""
 DISABLE_AUTOFORMATTING="true"
 DOC_CONTENTS="Please adapt /etc/squashmount.pl as well as
 /etc/systemd/system/squashmount.service.d/timeout.conf to your needs.
+
+Configure the mount point 'gentoo' only if you use sync-type = squashdelta.
+
 For improved output use squasfs-tools from the mv overlay.
+
 It is recommended to put into your zshrc the line:
 alias squashmount='noglob squashmount'"
 
