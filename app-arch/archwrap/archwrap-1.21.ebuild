@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="A collection of POSIX shell scripts to invoke archiver programs"
 HOMEPAGE="https://github.com/vaeth/archwrap/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
