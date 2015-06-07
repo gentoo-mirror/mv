@@ -17,7 +17,7 @@ RESTRICT="mirror strip"
 LICENSE="sundtek"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="pax_kernel"
+IUSE="ld-preload-env +ld-preload-file pax_kernel"
 RDEPEND="!<sys-apps/openrc-0.13"
 DEPEND="pax_kernel? ( || ( sys-apps/elfix sys-apps/paxctl ) )"
 
@@ -114,7 +114,29 @@ src_prepare() {
 	mkdir etc/revdep-rebuild || die
 	echo "SEARCH_DIRS_MASK=\"${EPREFIX}/${mybinprefix}/bin/audio/libpulse.so\"" \
 		>etc/revdep-rebuild/50-sundtek-tv
-	echo "/${mylibdir}/libmediaclient.so" >etc/ld.so.preload
+	if use ld-preload-file
+	then	echo "/${mylibdir}/libmediaclient.so" >etc/ld.so.preload
+	fi
+	if use ld-preload-env
+	then	mkdir etc/env.d
+		echo "LD_PRELOAD=\"/${mylibdir}/libmediaclient.so\"" >etc/env.d/50sundtek-tv
+	fi
+	DOC_CONTENTS="${DOC_CONTENTS}
+You have to put /${mylibdir}/libmediaclient.so into /etc/ld.so.preload
+or to export LD_PRELOAD=\"/${mylibdir}/libmediaclient.so\"
+before you start a multimedia applications like mplayer or mpv which should
+be able to access the sundtek device.
+
+This happens with USE=ld-preload-file or with ld-preload-env (in the global
+environment), respectively.
+
+However, such a global setting in some cases this gives warnings when
+32-bit applications are used.
+
+Thus, it might be a good idea to do it only locally by writing
+corresponding wrapper scripts for those multimedia applications you
+want to use with sundtek-tv.
+"
 	ln -sfn mediaclient.video mediaclient.audio
 	ln -sfn mediaclient.video mediaclient.dvb
 	epatch_user
@@ -157,4 +179,10 @@ pkg_postinst() {
 	}
 	false chmod 6111 "${EPREFIX}/opt/bin/mediasrv" || \
 	elog "You might need to chmod 6111 ${EPREFIX}/opt/bin/mediasrv"
+	if ! use ld-preload-file
+	then	if use ld-preload-env
+		then	elog "You might have to call env-update and source /etc/profile"
+		else	elog "You need to set LD_PRELOAD locally, see /usr/share/doc/${PF}/README.gentoo*"
+		fi
+	fi
 }
