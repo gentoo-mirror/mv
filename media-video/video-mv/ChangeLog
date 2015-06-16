@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*video-mv-8.1 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *video-mv-8.0 (16 Mar 2015)
 
   16 Mar 2014; Martin Väth <martin@mvath.de>:

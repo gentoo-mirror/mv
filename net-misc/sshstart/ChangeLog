@@ -2,13 +2,18 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*sshstart-2.12 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *sshstart-2.11 (30 Mar 2014)
 
   06 Jul 2014; Martin Väth <martin@mvath.de>:
   New style github tarball
 
   30 Mar 2014; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sshstart-2.10-r1 (17 Dec 2013)
 
@@ -18,7 +23,7 @@
 *sshstart-2.10 (21 Nov 2013)
 
   21 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sshstart-2.9 (02 Nov 2013)
 
@@ -34,12 +39,12 @@
   base->eutils
 
   07 May 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sshstart-2.7 (04 May 2012)
 
   04 May 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sshstart-2.6 (08 Apr 2012)
 
@@ -47,7 +52,7 @@
   Inherit base
 
   08 Apr 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sshstart-2.5 (28 Feb 2012)
 
@@ -55,9 +60,9 @@
   Use vcs-snapshot.eclass
 
   28 Feb 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *sshstart-2.4 (13 Feb 2012)
 
   13 Feb 2012; Martin Väth <martin@mvath.de>:
-  New ebuild from scratch.
+  New ebuild from scratch

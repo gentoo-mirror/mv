@@ -8,7 +8,7 @@ inherit eutils systemd
 
 DESCRIPTION="Use openrc init scripts with systemd or other init systems"
 HOMEPAGE="https://github.com/vaeth/openrc-wrapper"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -8,7 +8,7 @@ inherit eutils readme.gentoo user systemd
 
 DESCRIPTION="script to schedule jobs in a multiuser multitasking environment"
 HOMEPAGE="https://github.com/vaeth/schedule/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${PN}-v${PV}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

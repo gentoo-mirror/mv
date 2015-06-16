@@ -4,6 +4,9 @@
 
 *find_cruft-3.0.7 (17 Mar 2015)
 
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Simplify tarball name
+
   17 Mar 2015; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
 

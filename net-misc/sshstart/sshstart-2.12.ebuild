@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Start ssh-agent/ssh-add only if you really use ssh or friends"
 HOMEPAGE="https://github.com/vaeth/sshstart/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

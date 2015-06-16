@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR"
 HOMEPAGE="https://github.com/vaeth/trickyfetch/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*world-mv-3.13 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *world-mv-3.12-r1 (17 Nov 2013)
 
   06 Jul 2014; Martin Väth <martin@mvath.de>:
@@ -13,7 +18,7 @@
 *world-mv-3.12 (21 Nov 2013)
 
   21 Nov 2013; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *world-mv-3.11 (02 Nov 2013)
 
@@ -26,7 +31,7 @@
   Install zsh-completion unconditionally according to gentoo policy
 
   11 Nov 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *world-mv-3.9 (06 Sep 2012)
 
@@ -34,29 +39,29 @@
   Bump to EAPI=5
 
   06 Sep 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *world-mv-3.8 (07 May 2012)
 
   16 Jul 2012; Martin Väth <martin@mvath.de>:
-  Fix for changed vcs-snapshot.eclass behavior.
-  Thanks to Chris Slycord <cslycord at gmail.com> for reporting.
+  Fix for changed vcs-snapshot.eclass behavior
+  Thanks to Chris Slycord <cslycord at gmail.com> for reporting
 
   12 May 2012; Martin Väth <martin@mvath.de>:
   base->eutils
 
   07 May 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild. Fix EPREFIX substitution.
+  Version bump, remove old ebuild. Fix EPREFIX substitution
 
 *world-mv-3.7 (20 Apr 2012)
 
   20 Apr 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild. Fix EPREFIX substitution.
+  Version bump, remove old ebuild. Fix EPREFIX substitution
 
 *world-mv-3.6 (08 Apr 2012)
 
   08 Apr 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *world-mv-3.5 (28 Feb 2012)
 
@@ -64,12 +69,12 @@
   Use vcs-snapshot.eclass
 
   28 Feb 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *world-mv-3.4 (05 Feb 2012)
 
   05 Feb 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *world-mv-3.3 (03 Feb 2012)
 
@@ -79,14 +84,14 @@
 *world-mv-3.2 (15 Jan 2012)
 
   15 Jan 2012; Martin Väth <martin@mvath.de>:
-  Version bump to provide grep/sgrep.
+  Version bump to provide grep/sgrep
 
 *world-mv-3.1 (08 Jan 2012)
 
   08 Jan 2012; Martin Väth <martin@mvath.de>:
-  Version bump to improve output for copying/skipping.
+  Version bump to improve output for copying/skipping
 
 *world-mv-3.0 (07 Jan 2012)
 
   07 Jan 2012; Martin Väth <martin@mvath.de>:
-  New ebuild from scratch.
+  New ebuild from scratch

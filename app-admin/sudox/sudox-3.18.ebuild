@@ -6,19 +6,19 @@ EAPI=5
 RESTRICT="mirror"
 inherit eutils
 
-DESCRIPTION="A frontend, beautifier, and path-fixer for diff -u"
-HOMEPAGE="https://github.com/vaeth/diffhelp/"
-SRC_URI="https://github.com/vaeth/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+DESCRIPTION="sudox is a wrapper for sudo which can pass X authority data and deal with screen and tmux"
+HOMEPAGE="https://github.com/vaeth/sudox/"
+SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+RDEPEND="app-admin/sudo
+	app-shells/push"
+DEPEND=""
 
 src_prepare() {
-	use prefix || sed -i \
-		-e '1s"^#!/usr/bin/env sh$"#!'"${EPREFIX}/bin/sh"'"' \
-		-- "${PN}" || die
 	epatch_user
 }
 
