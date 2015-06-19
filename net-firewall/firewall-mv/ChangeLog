@@ -1,0 +1,164 @@
+# ChangeLog for net-firewall/firewall-mv
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*firewall-mv-8.12 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-8.11 (03 May 2015)
+
+  03 May 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-8.9 (08 Feb 2015)
+
+  08 Feb 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-8.8 (03 Feb 2015)
+
+  03 Feb 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-8.7 (02 Feb 2015)
+
+  02 Feb 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-8.6 (25 Dec 2014)
+
+  27 Dec 2014; Martin Väth <martin@mvath.de>:
+  Add blocker to <openrc-0.13
+
+  25 Dec 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+*firewall-mv-8.5 (15 Jun 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  15 Jun 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-8.4 (30 Mar 2014)
+
+  30 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-8.3 (16 Mar 2014)
+
+  16 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Do not fail if modules cannot be read
+
+*firewall-mv-8.2 (30 Dec 2013)
+
+  30 Dec 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. New DROP_NOT_REJECT_OK for windows machines
+
+*firewall-mv-8.1 (29 Dec 2013)
+
+  29 Dec 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support DHCP server, fix ALLOWUDP multiport
+
+*firewall-mv-7.3-r1 (17 Dec 2013)
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  Fix sh path
+
+*firewall-mv-7.3 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-7.2-r1 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Shebang care
+
+*firewall-mv-7.2 (13 Oct 2013)
+
+  13 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-7.1 (11 Oct 2013)
+
+  11 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-6.11 (09 Sep 2013)
+
+  09 Sep 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support loading of modules
+
+*firewall-mv-6.10 (10 Aug 2013)
+
+  14 Aug 2013; Martin Väth <martin@mvath.de>:
+  Simplify EPREFIX (without revision bump)
+
+  10 Aug 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support systemd
+
+*firewall-mv-6.9 (09 May 2013)
+
+  09 May 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support old and new names (eth* lan* net*)
+
+*firewall-mv-6.8 (01 Apr 2013)
+
+  01 Apr 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Rename eth* -> net* in defaults
+
+*firewall-mv-6.7 (13 Feb 2013)
+
+  13 Feb 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Default to -m conntrack instead of -m state
+
+*firewall-mv-6.6 (07 May 2012)
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  07 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-6.5 (04 May 2012)
+
+  04 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-6.4 (22 Apr 2012)
+
+  22 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-6.3 (08 Apr 2012)
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-6.2 (28 Feb 2012)
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*firewall-mv-6.1 (04 Feb 2012)
+
+  04 Feb 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Separate SYSCTL parameters. Add init files
+
+*firewall-mv-6.0 (02 Feb 2012)
+
+  02 Feb 2012; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

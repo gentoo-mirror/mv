@@ -1,0 +1,36 @@
+# ChangeLog for games-rpg/m5figur-mv
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*m5figur-mv-2.3 (08 Jan 2015)
+
+  08 Jan 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*m5figur-mv-2.2 (04 Jan 2015)
+
+  04 Jan 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*m5figur-mv-2.1 (02 Jan 2015)
+
+  02 Jan 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*m5figur-mv-2.0 (01 Jan 2015)
+
+  01 Jan 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*m5figur-mv-1.3 (31 Dec 2014)
+
+  31 Dec 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*m5figur-mv-1.1 (24 Jan 2013)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  24 Jan 2013; Martin Väth <martin@mvath.de>:
+  Initial version from scratch

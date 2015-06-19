@@ -1,0 +1,241 @@
+# ChangeLog for media-video/video-mv
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*video-mv-8.1 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-8.0 (16 Mar 2015)
+
+  16 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump: Support mpv instead of mplayer2
+
+*video-mv-7.17-r1 (15 Mar 2015)
+
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Remove *mplayer2, since its support is deprecated in gentoo
+
+*video-mv-7.17 (18 Aug 2014)
+
+  18 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.16 (31 May 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  31 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.15 (30 Mar 2014)
+
+  30 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.14 (26 Mar 2014)
+
+  26 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support adevice, immediatemode, audiorate
+
+*video-mv-7.13-r1 (17 Dec 2013)
+
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Use optfeature
+
+  24 Jan 2014; Martin Väth <martin@mvath.de>:
+  Avoid duplicate installation
+
+*video-mv-7.13-r1 (17 Dec 2013)
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  _videoscript.sh -> /usr/share/video-mv: not meant to be called by the user
+  Fix sh path
+
+*video-mv-7.13 (09 Dec 2013)
+
+  09 Dec 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.12 (24 Nov 2013)
+
+  24 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.11 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.10-r1 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Shebang care
+
+*video-mv-7.10 (20 Oct 2013)
+
+  20 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.9 (18 Aug 2013)
+
+  12 Oct 2013; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
+  18 Aug 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.8 (11 Jul 2013)
+
+  11 Jul 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.7 (09 Jul 2013)
+
+  09 Jul 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.5 (17 Jun 2013)
+
+  17 Jun 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.4 (16 Jun 2013)
+
+  16 Jun 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.3 (12 Jun 2013)
+
+  12 Jun 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.2 (11 Jun 2013)
+
+  11 Jun 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-7.1 (10 Jun 2013)
+
+  10 Jun 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-6.1 (09 Jun 2013)
+
+  09 Jun 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+  10 Jun 2013; Martin Väth <martin@mvath.de>:
+  Make runtitle mandatory for USE=zsh-completion, recommend otherwise
+
+*video-mv-5.19 (04 Jun 2013)
+
+  04 Jun 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.18 (02 Jun 2013)
+
+  02 Jun 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.17 (01 Jun 2013)
+
+  01 Jun 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.15 (27 May 2013)
+
+  27 May 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Remove misleading USE=libav
+
+*video-mv-5.14 (28 Jan 2013)
+
+  28 Jan 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.13 (18 Nov 2012)
+
+  18 Nov 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.12 (17 Nov 2012)
+
+  17 Nov 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support for zsh completion
+
+*video-mv-5.11 (04 Oct 2012)
+
+  04 Oct 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.10 (06 Sep 2012)
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  06 Sep 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.9 (04 Sep 2012)
+
+  04 Sep 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.8 (14 Jul 2012)
+
+  14 Jul 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.7 (14 Jun 2012)
+
+  14 Jun 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.6 (20 May 2012)
+
+  20 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Very experimental support for libav
+
+*video-mv-5.5 (07 May 2012)
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  07 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.4 (04 May 2012)
+
+  04 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.3 (08 Apr 2012)
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.2 (28 Feb 2012)
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*video-mv-5.1-r1 (13 Feb 2012)
+
+  13 Feb 2012; Martin Väth <martin@mvath.de>:
+  Install also README
+
+*video-mv-5.1 (12 Feb 2012)
+
+  12 Feb 2012; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

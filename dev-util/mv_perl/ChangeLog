@@ -1,0 +1,129 @@
+# ChangeLog for dev-util/mv_perl
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*mv_perl-2.46 (17 Mar 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Simplify tarball name
+
+  17 Mar 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.45 (14 Nov 2014)
+
+  14 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.44 (11 Nov 2014)
+
+  11 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.43 (01 Oct 2014)
+
+  01 Oct 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.42 (30 Sep 2014)
+
+  30 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.41 (21 Sep 2014)
+
+  21 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support File-lchown for lutimes
+
+*mv_perl-2.40 (20 Sep 2014)
+
+  20 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.37 (13 Sep 2014)
+
+  13 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. More precise perl deps
+
+*mv_perl-2.35 (03 Sep 2014)
+
+  03 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.34 (30 Aug 2014)
+
+  30 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix touchdirs -r, finally
+
+*mv_perl-2.33 (25 Aug 2014)
+
+  25 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix sshconfig regressions
+
+*mv_perl-2.32 (10 Aug 2014)
+
+  10 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.31 (17 Jul 2014)
+
+  17 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.29 (16 Jul 2014)
+
+  16 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.28 (15 Jul 2014)
+
+  15 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.27 (14 Jun 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  14 Jun 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.26 (05 Jun 2014)
+
+  05 Jun 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.25 (25 May 2014)
+
+  25 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.24 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.23 (11 Nov 2013)
+
+  11 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.22 (24 Oct 2013)
+
+  24 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.20 (22 Oct 2013)
+
+  22 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.19 (20 Oct 2013)
+
+  20 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*mv_perl-2.18 (19 Oct 2013)
+
+  19 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Remove previous history

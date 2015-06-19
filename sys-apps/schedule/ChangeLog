@@ -1,0 +1,215 @@
+# ChangeLog for sys-apps/schedule
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*starter-7.0.5 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-7.0.4 (21 Mar 2015)
+
+  21 Mar 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix openrc init
+
+*starter-7.0.3 (17 Mar 2015)
+
+  17 Mar 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-7.0.2 (11 Jan 2015)
+
+  11 Jan 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-7.0.1 (25 Dec 2014)
+
+  27 Dec 2014; Martin Väth <martin@mvath.de>:
+  Add blocker to <openrc-0.13
+
+  25 Dec 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-7.0.0 (14 Nov 2014)
+
+  14 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-6.3.1 (11 Nov 2014)
+
+  11 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-6.3.0 (07 Nov 2014)
+
+  07 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Record/display time
+
+*starter-6.2.1 (23 Oct 2014)
+
+  23 Oct 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-6.2.0 (21 Oct 2014)
+
+  21 Oct 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. schedule.socket works now
+
+*starter-6.1.0 (07 Oct 2014)
+
+  07 Oct 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+  New user/group schedule, /etc/schedule.password
+
+*starter-6.0.2 (20 Sep 2014)
+
+  20 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-6.0.1 (13 Sep 2014)
+
+  13 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. More precise perl deps
+
+*starter-6.0 (11 Sep 2014)
+
+  11 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-5.3 (11 Sep 2014)
+
+  11 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-5.2 (04 Sep 2014)
+
+  04 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-5.1 (04 Sep 2014)
+
+  04 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump
+
+*starter-5.0 (02 Sep 2014)
+
+  02 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Add schedule-tmux
+
+*starter-4.2 (29 Aug 2014)
+
+  29 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix manpage handling
+
+*starter-4.1 (23 Aug 2014)
+
+  23 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-4.0 (20 Aug 2014)
+
+  20 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuilds
+
+*starter-3.1 (15 Aug 2014)
+
+  15 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-3.0 (14 Aug 2014)
+
+  14 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support job address, job address ranges
+
+*starter-2.2 (12 Aug 2014)
+
+  12 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support nonpositive numbers in job ranges
+
+*starter-2.1 (11 Aug 2014)
+
+  11 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump. Support static job numbers, race-free parallel
+
+*starter-1.1 (10 Aug 2014)
+
+  10 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support --bg --daemon. Essential bugfixes
+
+*starter-1.0 (09 Aug 2014)
+
+  09 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Strengthen encryption
+
+*starter-0.15 (08 Aug 2014)
+
+  08 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Add recommendations for encryption
+
+*starter-0.14 (02 Aug 2014)
+
+  02 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.13 (29 Jul 2014)
+
+  29 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.12 (27 Jul 2014)
+
+  27 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.11 (26 Jul 2014)
+
+  26 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.10 (25 Jul 2014)
+
+  25 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.9 (24 Jul 2014)
+
+  24 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.8 (19 Jul 2014)
+
+  20 Jul 2014; Martin Väth <martin@mvath.de>:
+  List all dependencies
+
+  19 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.7 (18 Jul 2014)
+
+  18 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.6 (17 Jul 2014)
+
+  17 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.5 (16 Jul 2014)
+
+  16 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.4 (15 Jul 2014)
+
+  15 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.3 (14 Jul 2014)
+
+  14 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*starter-0.1 (13 Jul 2014)
+
+  13 Jul 2014; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

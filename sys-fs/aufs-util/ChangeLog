@@ -1,0 +1,36 @@
+# ChangeLog for sys-fs/aufs-util
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  14 Sep 2013; Martin Väth <martin@mvath.de>:
+  Bump to git-r3.eclass. Remove support for aufs2
+
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5. Bump revision to force correct subslot.
+  include linux/compiler.h to fix compilation issues.
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  06 Nov 2011; Martin Väth <martin@mvath.de>:
+  Use default EGIT_PROJECT name. Call EGIT_REPACK unless offline.
+
+  09 Sep 2011; Martin Väth <martin@mvath.de>:
+  Port to git-2. Remove support for ESCM_OFLINE/EGIT_OFFLINE:
+  This is named EVCS_OFFLINE in git-2.
+
+  26 Aug 2011; Martin Väth <martin@mvath.de>:
+  Rename aufs2-util-99999999->aufs-util-99999999.2
+  Add aufs-util-99999999.3 for linux3.0/aufs3
+
+  20 Jun 2011; Martin Väth <martin@mvath.de>:
+  Improve/fix git handling
+
+  03 Jan 2011; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=4.
+
+  24 Nov 2010; Martin Väth <martin@mvath.de>:
+  aufs2-util-99999999.ebuild: Initial ebuild.

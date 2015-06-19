@@ -1,0 +1,30 @@
+# ChangeLog for app-shells/oh-my-zsh
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  24 Jan 2014; Martin Väth <martin@mvath.de>:
+  Avoid duplicate installation
+
+  12 Oct 2013; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
+  14 Sep 2013; Martin Väth <martin@mvath.de>:
+  Bump to git-r3.eclass
+
+  14 Aug 2013; Martin Väth <martin@mvath.de>:
+  Simplify EPREFIX (without revision bump)
+
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  03 Feb 2012; Martin Väth <martin@mvath.de>:
+  Fix description
+
+  06 Nov 2011; Martin Väth <martin@mvath.de>:
+  Write ebuild from scratch.

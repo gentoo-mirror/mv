@@ -1,0 +1,53 @@
+# ChangeLog for sys-fs/openrc-wrapper
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*openrc-wrapper-1.7 (16 Jun 2015)
+
+  16 Jun 2015  Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*openrc-wrapper-1.6 (01 Jun 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  01 Jun 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*openrc-wrapper-1.5 (12 Mar 2014)
+
+  14 Mar 2014; Martin Väth <martin@mvath.de>:
+  Add dependency on gentoo-functions to guarantee a nice output
+
+  12 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support /lib/gentoo/functions.sh
+
+*openrc-wrapper-1.4 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*openrc-wrapper-1.3 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Shebang care
+
+*openrc-wrapper-1.2 (14 Sep 2013)
+
+  14 Sep 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*openrc-wrapper-1.1-r1 (24 Aug 2013)
+
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
+  24 Aug 2013; Martin Väth <martin@mvath.de>:
+  Fix blockers
+
+*openrc-wrapper-1.1 (22 Aug 2013)
+
+  22 Aug 2013; Martin Väth <martin@mvath.de>:
+  Split script from squash_dir project as it is of independent interest,
+  and the former has squashmount as a successor

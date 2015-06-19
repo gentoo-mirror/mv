@@ -1,0 +1,46 @@
+# ChangeLog for app-shells/zsh-completions
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*zsh-completions-99999999 (12 Apr 2015)
+
+  12 Apr 2015; Martin Väth <martin@mvath.de>:
+  Update to new/removed completion files. Simplify separation of life version
+
+*zsh-completions-0.12.0 (26 Sep 2014)
+
+  26 Sep 2014; Martin Väth <martin@mvath.de>:
+  Rename package. Update ebuild logic. Version bump, remove old ebuild
+
+*zsh-completion-20150716 (06 Aug 2014)
+
+  06 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zsh-completion-20130808 (09 Aug 2013)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball. Fix IUSE
+
+  01 Dec 2013; Martin Väth <martin@mvath.de>:
+  Update to new completion files. Auto-enable and restructure COMPLETION=...
+
+  06 Nov 2013; Martin Väth <martin@mvath.de>:
+  Update to new completion files
+
+  03 Oct 2013; Martin Väth <martin@mvath.de>:
+  Update to new completion files
+
+  14 Sep 2013; Martin Väth <martin@mvath.de>:
+  Bump to git-r3.eclass
+
+  09 Aug 2013; Martin Väth <martin@mvath.de>:
+  Bump version. Remove old ebuild. Add new completion files to USE
+
+*zsh-completion-0.8.0, zsh-completion-99999999 (28 Jan 2013)
+
+  07 Jun 2013; Martin Väth <martin@mvath.de>:
+  Update live ebuild to new upstream completions
+
+  28 Jan 2013; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

@@ -1,0 +1,41 @@
+# ChangeLog for app-emacs/mv_emacs
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*mv_emacs-1.1 (21 Nov 2013)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
+*mv_emacs-1.1-r1 (24 Jul 2012)
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  15 Sep 2012; Martin Väth <martin@mvath.de>:
+  Fix description
+
+  24 Jul 2012; Martin Väth <martin@mvath.de>:
+  Add site file
+
+*mv_emacs-1.1 (29 Jun 2012)
+
+  29 Jun 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fixes compatibility issues with emacs-24.
+
+*mv_emacs-1.0 (01 Mar 2012)
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  01 Mar 2012; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch.

@@ -1,0 +1,55 @@
+# ChangeLog for sys-fs/squashfs-tools
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  08 Jun 2014; Martin Väth <martin@mvath.de>:
+  Bump 4.3. Use patch for quiet, unconditionally, instead of progress-stderr.
+  Remove older ebuilds
+
+  04 May 2014; Martin Väth <martin@mvath.de>:
+  Bump 4.2_p20140119 from tree; update patch; filter -fno-common
+
+  31 Mar 2013; Martin Väth <martin@mvath.de>:
+  Bump 4.2_p20121216 from tree; update patch
+
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  17 May 2012; Martin Väth <martin@mvath.de>:
+  Remove REQUIRED_USE; make gzip support mandatory (as it actually is)
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Add old LZMA support back (and revbump) as in the main tree.
+  Downgrade revision numbers to match with main tree.
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  11 Feb 2012; Martin Väth <martin@mvath.de>:
+  Rename USE lzma->xz and drop SQUASH_FS_DEFAULT_COMP as in main tree.
+  Use REQUIRED_USE.
+
+  29 Jan 2012; Martin Väth <martin@mvath.de>:
+  Remove old.
+
+  31 Mar 2011; Martin Väth <martin@mvath.de>:
+  Bump 4.2 from tree.
+
+  03 Jan 2011; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=4.
+
+  25 Sep 2010; Martin Väth <martin@mvath.de>:
+  Bump 4.1 from tree with new patch.
+
+  23 Aug 2010; Martin Väth <martin@mvath.de>:
+  Bump EAPI.
+
+  03 Jul 2010; Martin Väth <martin@mvath.de>:
+  Bump all versions to force upgrade.
+
+  27 Apr 2010; Martin Väth <martin@mvath.de>:
+  Copy from the portage tree to add USE=progress-redirect
+  Clear previous ChangeLog.

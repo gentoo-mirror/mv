@@ -1,0 +1,89 @@
+# ChangeLog for app-admin/useflags
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*useflags-3.4 (01 Feb 2014)
+
+  13 Sep 2014; Martin Väth <martin@mvath.de>:
+  More precise perl deps
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Use optfeature
+
+  01 Feb 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
+*useflags-3.3-r1 (17 Dec 2013)
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  Fix perl path
+
+*useflags-3.3 (21 Nov 2013)
+
+  21 Jan 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
+*useflags-3.2 (02 Nov 2013)
+
+  02 Jan 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Shebang care
+
+*useflags-3.1 (28 Jan 2013)
+
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
+  28 Jan 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
+*useflags-3.0 (28 Dec 2012)
+
+  28 Dev 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Recommend >=app-portage/eix-0.27.7
+
+*useflags-2.8 (11 Nov 2012)
+
+  01 Dev 2012; Martin Väth <martin@mvath.de>:
+  Remove USE=eix; only log recommendation if appropriate
+
+  11 Nov 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
+*useflags-2.7 (15 Oct 2012)
+
+  15 Oct 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
+*useflags-2.6 (08 Jan 2012)
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  09 Jan 2012; Martin Väth <martin@mvath.de>:
+  Depend of virtual/perl-Getopt-Long
+
+  08 Jan 2012; Martin Väth <martin@mvath.de>:
+  Version bump: Make help handling more consistent.
+
+*useflags-2.5 (21 Dec 2011)
+
+  07 Jan 2012; Martin Väth <martin@mvath.de>:
+  Fix dependencies
+
+  21 Nov 2011; Martin Väth <martin@mvath.de>:
+  Suppose IUSE=eix
+
+  21 Nov 2011; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch.

@@ -1,0 +1,45 @@
+# ChangeLog for net-dialup/martian-modem
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  27 Dec 2014; Martin Väth <martin@mvath.de>:
+  Add blocker to <openrc-0.13
+
+  25 Dec 2014; Martin Väth <martin@mvath.de>:
+  Use openrc-run instead of deprecated runscript in initfile
+
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
+  25 Feb 2012; Martin Väth <martin@mvath.de>:
+  Fix compilation with kernel 3.8. Call epatch_user.
+
+  19 Dec 2012; Martin Väth <martin@mvath.de>:
+  Add SLOT information
+
+  16 Dec 2012; Martin Väth <martin@mvath.de>:
+  Use from main Gentoo tree but keep grsecurity patch.
+
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  27 Aug 2011; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
+  26 Aug 2011; Martin Väth <martin@mvath.de>:
+  Force sublevel to fix broken version number test for >=linux-3.0
+  Fix breakage of grsecurity
+
+  03 Jan 2011; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=4.
+
+  28 Mar 2010; Martin Väth <martin@mvath.de>:
+  martian-20080625.ebuild:
+  import with minor changes from a personal overlay.
+  See bug 285016

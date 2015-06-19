@@ -1,0 +1,30 @@
+# ChangeLog for app-text/stardict
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  17 Apr 2015; Martin Väth <martin@mvath.de>:
+  Version bump. Remove old ebuild
+
+  24 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump. Remove old ebuild
+
+  14 Jun 2014; Martin Väth <martin@mvath.de>:
+  Bump from main tree. Remove old ebuild
+
+  31 May 2013; Martin Väth <martin@mvath.de>:
+  Fix linking without gnome-doc-util. Pull stability from main tree.
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  05 May 2012; Martin Väth <martin@mvath.de>:
+  Update pkgconfig dependency change from main tree.
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base. Add zlib compatibility patch from main tree.
+
+  24 Jan 2012; Martin Väth <martin@mvath.de>:
+  Copy from tree to make gnome-doc-utils optional. Clean old ChangeLog.

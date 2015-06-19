@@ -1,0 +1,125 @@
+# ChangeLog for app-shells/set_prompt
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*set_prompt-1.20 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.19 (30 Aug 2014)
+
+  30 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.17-r1 (17 Dec 2013)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  Fix sh path
+
+*set_prompt-1.17 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.16 (03 Nov 2013)
+
+  03 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.15 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Shebang care
+
+*set_prompt-1.14 (07 Jun 2013)
+
+  07 Jun 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.13 (02 Jun 2012)
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  04 Jun 2012; Martin Väth <martin@mvath.de>:
+  Fix description
+
+  02 Jun 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.12 (14 May 2012)
+
+  14 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.11 (07 May 2012)
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  07 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.10 (12 Apr 2012)
+
+  04 May 2012; Martin Väth <martin@mvath.de>:
+  Fix permissions
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  12 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Make -r really not rely on external
+  variables and more readable. Improve parsing of git output
+
+*set_prompt-1.8 (10 Apr 2012)
+
+  10 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.7 (08 Apr 2012)
+
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.6 (10 Mar 2012)
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  10 Mar 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Security Update. See the new README
+
+*set_prompt-1.5 (08 Mar 2012)
+
+  08 Mar 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Security Update. See the new README
+
+*set_prompt-1.4 (28 Feb 2012)
+
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.3 (19 Feb 2012)
+
+  19 Feb 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*set_prompt-1.2 (18 Feb 2012)
+
+  18 Feb 2012; Martin Väth <martin@mvath.de>:
+  Version bump. Code cleanup. Improved docu/help. Require $backslash
+
+*set_prompt-1.1 (18 Feb 2012)
+
+  18 Feb 2012; Martin Väth <martin@mvath.de>:
+  Version bump. Customizable maxlen, leftmin. Readable (-r) output
+
+*set_prompt-1.0 (17 Feb 2012)
+
+  17 Feb 2012; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

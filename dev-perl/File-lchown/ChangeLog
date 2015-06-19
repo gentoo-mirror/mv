@@ -1,0 +1,14 @@
+# ChangeLog for dev-perl/File-lchown
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*File-lchown-0.2 (21 Sep 2014)
+
+  14 Jun 2015; Martin Väth <martin@mvaeth.de>:
+  Version bump to fix renaming of Module-Build
+
+  24 Sep 2014; Martin Väth <martin@mvaeth.de>:
+  Add ~ARCH which probably work, even if untested
+
+  21 Sep 2014; Martin Väth <martin@mvaeth.de>:
+  New ebuild from scratch

@@ -1,0 +1,24 @@
+# ChangeLog for dev-util/ccache
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  23 Dec 2014; Martin Väth <martin@mvath.de>:
+  Bump ebuild from tree
+
+  20 Nov 2014; Martin Väth <martin@mvath.de>:
+  Update ebuild from tree
+
+  03 Nov 2013; Martin Väth <martin@mvath.de>:
+  Update ebuild from tree. Do not produce broken icc, clang links
+
+  07 Oct 2013; Martin Väth <martin@mvath.de>:
+  Add latest changes from the Gentoo tree (support also icc, fix tests)
+
+  14 Sep 2013; Martin Väth <martin@mvath.de>:
+  Bump to git-r3.eclass
+
+  24 Aug 2013; Martin Väth <martin@mvath.de>:
+  Bump to git-2.eclass
+
+  13 Jul 2013; Martin Väth <martin@mvath.de>:
+  Add live ebuild. Remove previous history

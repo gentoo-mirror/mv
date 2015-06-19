@@ -1,0 +1,89 @@
+# ChangeLog for app-admin/sudox
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*sudox-3.18 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.17 (29 Jul 2014)
+
+  29 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.15 (30 Mar 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  30 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.14 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.13 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.12 (14 Sep 2012)
+
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  14 Sep 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.11 (14 Aug 2012)
+
+  14 Aug 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.10 (07 May 2012)
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  07 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.8 (04 May 2012)
+
+  04 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.7 (10 Apr 2012)
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  10 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.6 (08 Apr 2012)
+
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.5 (28 Feb 2012)
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sudox-3.4 (26 Dec 2011)
+
+  26 Dec 2011; Martin Väth <martin@mvath.de>:
+  Add app-admin/sudo to RDEPEND
+
+  19 Dec 2011; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch.

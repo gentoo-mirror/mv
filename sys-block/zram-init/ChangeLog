@@ -1,0 +1,102 @@
+# ChangeLog for sys-block/zram-init
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*zram-init-3.3 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zram-init-3.2 (16 Jan 2015)
+
+  16 Jan 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zram-init-3.1 (25 Dec 2014)
+
+  27 Dec 2014; Martin Väth <martin@mvath.de>:
+  Add blocker to <openrc-0.13
+
+  25 Dec 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zram-init-3.0 (05 Aug 2014)
+
+  05 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support parallel streams, algorithm
+
+*zram-init-2.8 (29 Jun 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  29 Jun 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zram-init-2.7 (17 Dec 2013)
+
+  24 Jan 2014; Martin Väth <martin@mvath.de>:
+  Avoid duplicate installation
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  Fix sh path
+
+*zram-init-2.7 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zram-init-2.6-r1 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Shebang care
+
+*zram-init-2.6 (11 Oct 2013)
+
+  12 Oct 2013; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
+  11 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fixes umounting
+
+*zram-init-2.5 (07 Oct 2013)
+
+  07 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zram-init-2.4 (06 Oct 2013)
+
+  06 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zram-init-2.3 (05 Oct 2013)
+
+  05 Oct 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support further configs and systemd
+
+*zram-init-2.2 (03 Jan 2013)
+
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
+*zram-init-2.1 (02 Mar 2012)
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  02 Mar 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Changes to github repository
+
+*zram-init-2.0 (08 Feb 2010)
+
+  08 Feb 2010; Martin Väth <martin@mvath.de>:
+  Complete rewrite. Remove old ChangeLog

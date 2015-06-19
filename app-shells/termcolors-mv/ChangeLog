@@ -1,0 +1,69 @@
+# ChangeLog for app-shells/termcolors-mv
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*termcolors-3.7 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*termcolors-3.6 (29 May 2015)
+
+  29 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*termcolors-3.5 (03 May 2015)
+
+  03 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*termcolors-3.4 (04 Jul 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  04 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*termcolors-3.3 (16 Mar 2014)
+
+  16 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Add ebooks
+
+*termcolors-3.2-r1 (17 Dec 2013)
+
+  24 Jan 2014; Martin Väth <martin@mvath.de>:
+  Avoid duplicate installation
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  Fix sh and perl paths
+
+*termcolors-3.2 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*termcolors-3.1 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Shebang care
+
+*termcolors-3.0 (07 Aug 2013)
+
+  12 Oct 2013; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
+  07 Aug 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*termcolors-2.0 (23 Mar 2013)
+
+  23 Mar 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+  Support solarized if SOLARIZED is set for the new dircolors wrapper
+  No file collisions anymore. Make 256colors perl script optional
+
+*termcolors-1.1 (06 Jan 2013)
+
+  06 Jan 2013; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

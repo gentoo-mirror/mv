@@ -1,0 +1,10 @@
+# ChangeLog for sci-mathematics/reduce
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*reduce-20141130.ebuild (24 Jan 2015)
+
+  24 Jan 2015; Martin Väth <martin@mvath.de>:
+  Copy from gentoo tree to version bump to a snapshot which at least compiles.
+  Adapt URL and $S to snapshot version numbering. Bump EAPI, add epatch_user.
+  Clear previous ChangeLog

@@ -1,0 +1,79 @@
+# ChangeLog for sys-fs/emount
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*emount-2.8.3 (16 Jun 2015)
+
+  16 Jun 2016; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*emount-2.8.2 (11 Nov 2014)
+
+  11 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*emount-2.8.1 (20 Sep 2014)
+
+  20 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*emount-2.8 (21 Nov 2013)
+
+  13 Sep 2014; Martin Väth <martin@mvath.de>:
+  More precise perl deps
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*emount-2.7 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*emount-2.6 (18 Aug 2013)
+
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
+  18 Aug 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*emount-2.4 (27 Nov 2012)
+
+  27 Nov 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*emount-2.3 (13 Jul 2012)
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  13 Jul 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*emount-2.2 (03 Jul 2012)
+
+  03 Jul 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Repeat umount to deal with slave mounts
+
+*emount-2.1-r1 (03 Feb 2012)
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  30 Feb 2012; Martin Väth <martin@mvath.de>:
+  Do not install README
+
+*emount-2.1 (31 Jan 2012)
+
+  31 Jan 2012; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

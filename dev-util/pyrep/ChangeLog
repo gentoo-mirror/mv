@@ -1,0 +1,51 @@
+# ChangeLog for dev-util/pyrep
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*pyrep-1.4-r1 (18 Jan 2015)
+
+  15 Feb 2015; Martin Väth <martin@mvath.de>:
+  Fix python-single-r1 usage
+
+  18 Jan 2015; Martin Väth <martin@mvath.de>:
+  Use new-style python dependency
+
+*pyrep-1.4 (10 Aug 2014)
+
+  10 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*pyrep-1.3-r1 (17 Dec 2013)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  Fix python path
+
+*pyrep-1.3 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*pyrep-1.2 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Shebang care
+
+*pyrep-1.1 (02 Mar 2012)
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  02 Mar 2012; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

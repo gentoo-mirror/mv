@@ -1,0 +1,147 @@
+# ChangeLog for media-video/sundtek-tv
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*sundtek-tv-150411.190910 (07 Jun 2015)
+
+  07 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Make /etc/ld.so.preload optional:
+  Introduce USE=ld-preload-file and USE=ld-preload-env and output usage details
+
+*sundtek-tv-150411.190910 (15 Apr 2015)
+
+  15 Apr 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-150310.134458 (10 Mar 2015)
+
+  10 Mar 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-150219.053827 (20 Feb 2015)
+
+  20 Feb 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-150125.105350 (26 Jan 2015)
+
+  26 Jan 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-150111.155129 (16 Jan 2015)
+
+  16 Jan 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix QA message
+
+*sundtek-tv-141222.213801 (25 Dec 2014)
+
+  27 Dec 2014; Martin Väth <martin@mvath.de>:
+  Add blocker to <openrc-0.13
+
+  25 Dec 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-141209.042745 (12 Dec 2014)
+
+  12 Dec 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-141111.122431 (11 Nov 2014)
+
+  11 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-141016.181612 (19 Oct 2014)
+
+  19 Oct 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-140918.104249 (20 Sep 2014)
+
+  20 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-140727.221230 (29 Jul 2014)
+
+  29 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-140715.054711 (16 Jul 2014)
+
+  16 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-140711.143644 (13 Jul 2014)
+
+  13 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-140701.143639 (07 Jul 2014)
+
+  07 Jul 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-140629.115654 (29 Jun 2014)
+
+  29 Jun 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-140601.005015 (03 Jun 2014)
+
+  03 Jun 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-140528.222950 (29 May 2014)
+
+  29 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. openat() fixed on 32 bit: tar-1.27.1 works.
+  Thanks again to the Sundtek support!
+
+*sundtek-tv-140517.123345 (24 May 2014)
+
+  24 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-140510.143826-r1 (12 May 2014)
+
+  12 May 2014; Martin Väth <martin@mvath.de>:
+  Add check for INPUT_UINPUT ball. Thanks again to the Sundtek support!
+
+*sundtek-tv-140510.143826 (11 May 2014)
+
+  11 May 2014; Martin Väth <martin@mvath.de>:
+  Move to versioned tarball support. Thanks to the Sundtek support!
+
+*sundtek-tv-20150510 (11 May 2014)
+
+  11 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-20150428 (04 May 2014)
+
+  04 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Avoid install -r
+
+*sundtek-tv-20150414 (14 Apr 2014)
+
+  14 Apr 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*sundtek-tv-20150402 (13 Apr 2014)
+
+  13 Apr 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Remove IUSE=doc
+
+*sundtek-tv-20150321-r1 (17 Feb 2014)
+
+  30 Mar 2014; Martin Väth <martin@mvath.de>:
+  Support mediaclient.{video,audio,dvb} wrapper scripts;
+  provide local systemd service for default settings
+
+*sundtek-tv-20150321 (17 Feb 2014)
+
+  29 Mar 2014; Martin Väth <martin@mvath.de>:
+  Add zsh completion support. Version bump
+
+  17 Feb 2014; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch.

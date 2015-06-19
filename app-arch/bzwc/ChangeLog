@@ -1,0 +1,81 @@
+# ChangeLog for app-arch/bzwc
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*bzwc-2.16 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*bzwc-2.15 (30 Mar 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  30 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*bzwc-2.14-r1 (17 Dec 2013)
+
+  17 Nov 2013; Martin Väth <martin@mvath.de>:
+  Fix sh path
+
+*bzwc-2.14 (21 Nov 2013)
+
+  12 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*bzwc-2.13 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Shebang care
+
+*bzwc-2.12 (07 May 2012)
+
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  07 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*bzwc-2.11 (04 May 2012)
+
+  04 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*bzwc-2.10 (21 Apr 2012)
+
+  21 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*bzwc-2.9 (08 Apr 2012)
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*bzwc-2.8 (28 Feb 2012)
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*bzwc-2.7-r1 (03 Feb 2012)
+
+  03 Feb 2012; Martin Väth <martin@mvath.de>:
+  Do not install README
+
+*bzwc-2.7 (29 Jan 2012)
+
+  29 Jan 2012; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

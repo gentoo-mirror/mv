@@ -1,0 +1,121 @@
+# ChangeLog for app-shells/zsh
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*zsh-5.0.7-r3 (30 Apr 2015)
+
+  30 Apr 2015; Martin Väth <martin@mvath.de>:
+  Add patch to fix compilation with gcc-5. Remove old ebuilds
+
+*zsh-5.0.7-r2 (02 Jan 2015)
+
+  02 Jan 2015; Martin Väth <martin@mvath.de>:
+  Add zsh-5.0.7-pid-ns.patch from gentoo main tree
+
+*zsh-5.0.7-r1 (09 Oct 2014)
+
+  09 Oct 2014; Martin Väth <martin@mvath.de>:
+  Add fix-cvs-completion.patch from gentoo main tree
+
+*zsh-5.0.7 (08 Oct 2014)
+
+  08 Oct 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zsh-5.0.6 (29 Aug 2014)
+
+  29 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+  Update KEYWORDS and some trivial changes from main tree
+
+*zsh-5.0.5 (09 Jan 2014)
+
+  24 Jan 2014; Martin Väth <martin@mvath.de>:
+  Avoid duplicate installation
+
+  09 Jan 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zsh-5.0.4 (20 Dec 2013)
+
+  20 Dec 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zsh-5.0.3 (15 Dec 2013)
+
+  15 Dec 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Remove now unnecessary support for
+  generating helpfiles. Keep USE-flags in the live version to keep deps
+  optional. Support IUSE=doc properly also for live version
+
+*zsh-99999999 (29 May 2013)
+
+  16 Nov 2013; Martin Väth <martin@mvath.de>:
+  Remove necessity for USE=custom-ctype
+
+  13 Nov 2013; Martin Väth <martin@mvath.de>:
+  Fix HELPDIR path. Revision bump to force change. Do not use-enable compile.
+  I submitted help installation upstream; this is used unconditionally if
+  available (currently only in the live ebuild)
+
+  12 Nov 2013; Martin Väth <martin@mvath.de>:
+  Live version: Fix paths, remove IUSE=doc.
+  Do not install _run-help without USE=run-help
+
+  08 Nov 2013; Martin Väth <martin@mvath.de>:
+  add IUSE=compile (suggestion of bug 362812)
+
+  12 Oct 2013; Martin Väth <martin@mvath.de>:
+  Use readme.gentoo.eclass
+
+  14 Sep 2013; Martin Väth <martin@mvath.de>:
+  Bump to git-r3.eclass
+
+  11 Aug 2013; Martin Väth <martin@mvath.de>:
+  app-doc/yodl -> app-text/yodl which is in gentoo tree meanwhile
+
+  29 May 2013; Martin Väth <martin@mvath.de>:
+  Add live ebuild. Requires app-doc/yodl which is not in the gentoo tree;
+  get it e.g. from the betagarden or roslin overlay
+
+*zsh-5.0.2-r3 (29 May 2013)
+
+  29 May 2013; Martin Väth <martin@mvath.de>:
+  Use upstream patches for texinfo-5 and fix-parameter-modifier crash,
+  as in the main gentoo tree. Print messages conditionally as far as possible
+
+*zsh-5.0.2-r2 (15 Apr 2013)
+
+  29 Apr 2013; Martin Väth <martin@mvath.de>:
+  Honour EPREFIX. Remove redundant link of binary before installing
+
+  15 Apr 2013; Martin Väth <martin@mvath.de>:
+  Override LC_CTYPE, using some heuristics, unless USE=custom-ctype is chosen
+
+*zsh-5.0.2-r2 (03 Apr 2013)
+
+  03 Apr 2013; Martin Väth <martin@mvath.de>:
+  Fix compilation with texinfo-5
+
+*zsh-5.0.2-r1 (13 Jan 2013)
+
+  13 Jan 2013; Martin Väth <martin@mvath.de>:
+  Fix run-help generation by forcing width 80. Install run-help completion
+
+*zsh-5.0.2 (25 Dec 2012)
+
+  25 Dec 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*zsh-5.0.0 (13 Aug 2012)
+
+  21 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  14 Aug 2012; Martin Väth <martin@mvath.de>:
+  Add comments about the paranoid pipe testing
+
+  13 Aug 2012; Martin Väth <martin@mvath.de>:
+  Copy from the portage tree to add support for run-help and for removal of
+  unrequested completion functions (in particular, do not put them in $fpath).
+  Clear previous ChangeLog

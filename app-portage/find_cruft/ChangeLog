@@ -1,0 +1,88 @@
+# ChangeLog for app-portage/find_cruft
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*find_cruft-3.0.7 (17 Mar 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Simplify tarball name
+
+  17 Mar 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*find_cruft-3.0.6 (13 Nov 2014)
+
+  13 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*find_cruft-3.0.5 (11 Nov 2014)
+
+  11 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*find_cruft-3.0.4 (10 Nov 2014)
+
+  10 Nov 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fixes severe regression of 3.0.1
+
+*find_cruft-3.0.3 (20 Sep 2014)
+
+  20 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*find_cruft-3.0.1 (13 Sep 2014)
+
+  13 Sep 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. More precise perl deps
+
+*find_cruft-3.0 (29 Aug 2014)
+
+  29 Aug 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*find_cruft-2.4 (10 Feb 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  15 Mar 2014; Martin Väth <martin@mvath.de>:
+  Use optfeature
+
+  01 Feb 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*find_cruft-2.3-r1 (17 Dec 2013)
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  Fix perl path
+
+*find_cruft-2.3 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*find_cruft-2.2 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Shebang care
+
+*find_cruft-2.1 (21 Aug 2013)
+
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
+  21 Aug 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*find_cruft-2.0 (18 May 2013)
+
+  18 May 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Create /etc. Warn if eix is not installed
+
+  10 Jun 2013; Martin Väth <martin@mvath.de>:
+  Improve eix message
+
+*find_cruft-1.0 (16 May 2013)
+
+  16 May 2013; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

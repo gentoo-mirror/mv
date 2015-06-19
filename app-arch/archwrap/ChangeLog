@@ -1,0 +1,142 @@
+# ChangeLog for app-arch/archwrap
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*archwrap-1.22 (16 Jun 2015)
+
+  16 Jun 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.21 (29 May 2015)
+
+  29 May 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.20 (10 May 2015)
+
+  10 May 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.19 (29 May 2014)
+
+  06 Jul 2014; Martin Väth <martin@mvath.de>:
+  New style github tarball
+
+  29 May 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.18 (14 Apr 2014)
+
+  14 Apr 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.17 (30 Mar 2014)
+
+  30 Mar 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.16 (20 Feb 2014)
+
+  20 Feb 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.15 (13 Jan 2014)
+
+  13 Jan 2014; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.14 (27 Dec 2013)
+
+  27 Dec 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.13 (25 Dec 2013)
+
+  25 Dec 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Support xattr
+
+*archwrap-1.12-r3 (18 Dec 2013)
+
+  18 Dec 2013; Martin Väth <martin@mvath.de>:
+  sed with correct path
+
+*archwrap-1.12-r2 (17 Dec 2013)
+
+  17 Dec 2013; Martin Väth <martin@mvath.de>:
+  archwrap.sh -> /usr/share/archwrap: it is not meant to be called by the user
+  Fix sh path
+
+*archwrap-1.12-r1 (21 Nov 2013)
+
+  21 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix symlink handling
+
+*archwrap-1.11 (02 Nov 2013)
+
+  02 Nov 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Shebang care
+
+*archwrap-1.10 (31 May 2013)
+
+  10 Sep 2013; Martin Väth <martin@mvath.de>:
+  Install zsh-completion unconditionally according to gentoo policy
+
+  31 Sep 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild. Fix preserve defaults
+
+*archwrap-1.9 (08 May 2012)
+
+  28 Sep 2012; Martin Väth <martin@mvath.de>:
+  Bump to EAPI=5
+
+  12 May 2012; Martin Väth <martin@mvath.de>:
+  base->eutils
+
+  08 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.8 (07 May 2012)
+
+  07 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.7 (04 May 2012)
+
+  04 May 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.6 (13 Apr 2012)
+
+  15 Apr 2012; Martin Väth <martin@mvath.de>:
+  Inherit base
+
+  13 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.5 (08 Apr 2012)
+
+  08 Apr 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.4 (23 Mar 2012)
+
+  23 Mar 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.3 (28 Feb 2012)
+
+  19 Mar 2012; Martin Väth <martin@mvath.de>:
+  Use vcs-snapshot.eclass
+
+  28 Feb 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.2 (31 Jan 2012)
+
+  31 Jan 2012; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
+*archwrap-1.1 (29 Jan 2012)
+
+  29 Jan 2012; Martin Väth <martin@mvath.de>:
+  New ebuild from scratch

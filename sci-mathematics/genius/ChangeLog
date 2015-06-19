@@ -1,0 +1,9 @@
+# ChangeLog for sci-mathematics/genius
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  14 Sep 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild.
+
+  31 May 2013; Martin Väth <martin@mvath.de>:
+  Copy from tree to make gnome-doc-utils optional. Clean old ChangeLog.
