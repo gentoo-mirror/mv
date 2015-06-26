@@ -8,7 +8,7 @@ inherit autotools eutils gnome2
 DESCRIPTION="Genius Mathematics Tool and the GEL Language"
 HOMEPAGE="http://www.jirka.org/genius.html"
 SRC_URI="
-	http://ftp.gnome.org/pub/GNOME/sources/${PN}/1.0/${P}.tar.xz
+	mirror://gnome/sources/${PN}/1.0/${P}.tar.xz
 	doc? ( http://www.jirka.org/${PN}-reference.pdf )"
 
 LICENSE="GPL-3"
@@ -34,8 +34,7 @@ RDEPEND="
 		x11-libs/vte:0 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	|| ( sys-devel/bison
-		dev-util/yacc )
+	|| ( sys-devel/bison dev-util/yacc )
 	sys-devel/flex
 	nls? ( sys-devel/gettext )"
 
