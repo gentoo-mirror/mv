@@ -115,7 +115,10 @@ system zprofile.
 If PATH must be set in ~/.zshenv to affect things like non-login ssh shells,
 one method is to use a separate path-setting file that is conditionally sourced
 in ~/.zshenv and also sourced from ~/.zprofile. For more information, see the
-zshenv example in ${EROOT}/usr/share/doc/${PF}/StartupFiles/."
+zshenv example in ${EROOT}/usr/share/doc/${PF}/StartupFiles/.
+
+See https://wiki.gentoo.org/wiki/Zsh/HOWTO for more introduction documentation.
+"
 
 src_prepare() {
 	# fix zshall problem with soelim
@@ -124,9 +127,6 @@ src_prepare() {
 	soelim Doc/zshall.1.soelim > Doc/zshall.1 || die
 
 	epatch "${FILESDIR}"/${PN}-init.d-gentoo-r1.diff
-	epatch "${FILESDIR}"/${P}-fix-cvs-completion.patch
-	epatch "${FILESDIR}"/${P}-pid-ns.patch
-	epatch "${FILESDIR}"/${P}-gcc-5.patch
 
 	cp "${FILESDIR}"/zprofile-1 "${T}"/zprofile || die
 	eprefixify "${T}"/zprofile || die
@@ -155,23 +155,25 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=
+	local myconf
+	myconf=()
 
 	if use static ; then
-		myconf+=" --disable-dynamic"
+		myconf+=( --disable-dynamic )
 		append-ldflags -static
 	fi
 	if use debug ; then
-		myconf+=" \
-			--enable-zsh-debug \
-			--enable-zsh-mem-debug \
-			--enable-zsh-mem-warning \
-			--enable-zsh-secure-free \
-			--enable-zsh-hash-debug"
+		myconf+=(
+			--enable-zsh-debug
+			--enable-zsh-mem-debug
+			--enable-zsh-mem-warning
+			--enable-zsh-secure-free
+			--enable-zsh-hash-debug
+		)
 	fi
 
 	if [[ ${CHOST} == *-darwin* ]]; then
-		myconf+=" --enable-libs=-liconv"
+		myconf+=( --enable-libs=-liconv )
 		append-ldflags -Wl,-x
 	fi
 
@@ -189,16 +191,15 @@ src_configure() {
 		$(use_enable caps cap) \
 		$(use_enable unicode multibyte) \
 		$(use_enable gdbm ) \
-		${myconf}
+		"${myconf[@]}"
 
 	if use static ; then
 		# compile all modules statically, see Bug #27392
 		# removed cap and curses because linking failes
-		sed -i \
-			-e "s,link=no,link=static,g" \
+		sed -e "s,link=no,link=static,g" \
 			-e "/^name=zsh\/cap/s,link=static,link=no," \
 			-e "/^name=zsh\/curses/s,link=static,link=no," \
-			"${S}"/config.modules || die
+			-i "${S}"/config.modules || die
 		if ! use gdbm ; then
 			sed -i '/^name=zsh\/db\/gdbm/s,link=static,link=no,' \
 				"${S}"/config.modules || die
@@ -208,7 +209,7 @@ src_configure() {
 
 src_compile() {
 	default
-	! ${LIVE} || ! use doc || emake dvi pdf html
+	! ${LIVE} || ! use doc || emake -C Doc everything
 }
 
 src_test() {
@@ -264,13 +265,25 @@ src_install() {
 	insinto /usr/share/zsh/"${PVPATH}"/functions/Prompts
 	newins "${FILESDIR}"/prompt_gentoo_setup-1 prompt_gentoo_setup
 
-	# install miscellaneous scripts; bug #54520
 	local i
-	sed -i -e "s:/usr/local/bin/perl:${EPREFIX}/usr/bin/perl:g" \
-		-e "s:/usr/local/bin/zsh:${EPREFIX}/bin/zsh:g" "${S}"/{Util,Misc}/* || die
+
+	# install miscellaneous scripts (bug #54520)
+	sed -e "s:/usr/local/bin/perl:${EPREFIX}/usr/bin/perl:g" \
+		-e "s:/usr/local/bin/zsh:${EPREFIX}/bin/zsh:g" \
+		-i "${S}"/{Util,Misc}/* || die
 	for i in Util Misc ; do
 		insinto /usr/share/zsh/"${PVPATH}"/${i}
 		doins ${i}/*
+	done
+
+	# install header files (bug #538684)
+	insinto /usr/include/zsh
+	doins config.h Src/*.epro
+	for i in Src/{zsh.mdh,*.h} ; do
+		sed -e 's@\.\./config\.h@config.h@' \
+			-e 's@#\(\s*\)include "\([^"]\+\)"@#\1include <zsh/\2>@' \
+			-i "${i}"
+		doins "${i}"
 	done
 
 	dodoc ChangeLog* META-FAQ NEWS README config.modules
