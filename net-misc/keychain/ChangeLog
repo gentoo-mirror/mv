@@ -1,8 +1,0 @@
-# ChangeLog for net-misc/keychain
-# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-*keychain-2.7.1-r2 (21 Mar 2015)
-
-  21 Mar 2013; Martin Väth <martin@mvath.de>:
-  Bump from tree to make code POSIX compatible. Remove previous history.
