@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="Mozilla plugin: Increases privacy and security by giving you control over cross-site requests"
 HOMEPAGE="https://www.requestpolicy.com/"
-SRC_URI="https://addons.cdn.mozilla.net/storage/public-staging/9727/${P}-sm+fx.xpi"
+SRC_URI="https://addons.cdn.mozilla.net/user-media/addons/9727/${P}-sm+fx.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"

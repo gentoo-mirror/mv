@@ -4,6 +4,9 @@
 
 *epubreader-1.5.0.6 (22 Apr 2015)
 
+  17 Jul 2015; Martin Väth <martin@mvath.de>:
+  Use signed tarball
+
   22 Apr 2015; Martin Väth <martin@mvath.de>:
   Version bump, remove old ebuild
 

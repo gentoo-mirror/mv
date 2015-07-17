@@ -10,7 +10,7 @@ MY_P="${P/-/_}"
 NAME="${MY_P}-fx.xpi"
 DESCRIPTION="Firefox plugin: button to switch GUI locale"
 HOMEPAGE="http://addons.mozilla.org/firefox/addon/locale-switcher/"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/addons/356/${NAME}"
+SRC_URI="https://addons.cdn.mozilla.net/user-media/addons/356/${NAME}"
 
 LICENSE="GPL-2"
 SLOT="0"
