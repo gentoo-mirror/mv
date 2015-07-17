@@ -4,6 +4,9 @@
 
 *form-history-control-1.4.0.4 (15 May 2015)
 
+  17 Jul 2015; Martin Väth <martin@mvath.de>:
+  Use signed tarball
+
   15 May 2015; Martin Väth <martin@mvath.de>:
   Bump version. Remove old ebuild
 

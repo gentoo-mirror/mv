@@ -4,10 +4,13 @@
 
 *locale-switcher-3-r1 (21 Sep 2012)
 
+  17 Jul 2015; Martin Väth <martin@mvath.de>:
+  Use signed tarball
+
   21 Sep 2012; Martin Väth <martin@mvath.de>:
-  Bump to EAPI=5. Revision bump to force slot dependency.
+  Bump to EAPI=5. Revision bump to force slot dependency
 
 *locale-switcher-3 (02 Apr 2012)
 
   02 Apr 2012; Martin Väth <martin@mvath.de>:
-  New ebuild.
+  New ebuild

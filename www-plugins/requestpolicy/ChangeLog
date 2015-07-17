@@ -4,23 +4,26 @@
 
 *requestpolicy-0.5.28 (31 Jul 2013)
 
-  31 Jul 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  17 Jul 2015; Martin Väth <martin@mvath.de>:
+  Use signed tarball
+
+  31 Jul 2013; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
 
 *requestpolicy-0.5.27-r1 (21 Sep 2012)
 
   21 Sep 2012; Martin Väth <martin@mvath.de>:
-  Bump to EAPI=5. Revision bump to force slot dependency.
+  Bump to EAPI=5. Revision bump to force slot dependency
 
 *requestpolicy-0.5.27 (20 Jul 2012)
 
   20 Jul 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *requestpolicy-0.5.26 (06 Jul 2012)
 
   06 Jul 2012; Martin Väth <martin@mvath.de>:
-  Version bump, remove old ebuild.
+  Version bump, remove old ebuild
 
 *requestpolicy-0.5.25 (13 Apr 2012)
 
