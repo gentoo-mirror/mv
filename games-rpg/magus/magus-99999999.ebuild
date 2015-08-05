@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-inherit autotools eutils flag-o-matic multiprocessing
+inherit autotools eutils flag-o-matic
 RESTRICT="mirror"
 
 FETCH_RESTRICT=false
@@ -140,12 +140,10 @@ set_browser() {
 	else	einfo "USE=${browser} overrides default browser firefox:"
 	fi
 	einfo
-	multijob_init
-	multijob_child_init src_sed midgard/docs/BMod_Op.html -e "s#mozilla#${browser}#"
-	multijob_child_init src_sed midgard/libmagus/Magus_Optionen.cc -e "s#mozilla#${browser}#"
-	multijob_child_init src_sed midgard/midgard.glade -e "s#mozilla#${browser}#"
-	multijob_child_init src_sed midgard/src/table_optionen_glade.cc -e "s#mozilla#${browser}#"
-	multijob_finish || die "patching of browser failed"
+	src_sed midgard/docs/BMod_Op.html -e "s#mozilla#${browser}#"
+	src_sed midgard/libmagus/Magus_Optionen.cc -e "s#mozilla#${browser}#"
+	src_sed midgard/midgard.glade -e "s#mozilla#${browser}#"
+	src_sed midgard/src/table_optionen_glade.cc -e "s#mozilla#${browser}#"
 }
 
 src_patch() {
@@ -154,17 +152,15 @@ src_patch() {
 	einfo
 	grep "saebel.png" midgard/src/Makefile.am && \
 		ewarn "Unneeded patching of midgard/src/Makefile.am"
-	multijob_init
-	multijob_child_init src_sed midgard/src/Makefile.am \
+	src_sed midgard/src/Makefile.am \
 		-e 's/drache.png/Money-gray.png saebel.png drache.png/'
-	multijob_child_init src_sed ManuProC_Widgets/configure.in \
+	src_sed ManuProC_Widgets/configure.in \
 		-e 's/^[[:space:]]*AM_GNU_GETTEXT_VERSION/AM_GNU_GETTEXT_VERSION/'
-	multijob_child_init src_sed -g 'AM_GNU_GETTEXT_VERSION' ManuProC_Base/configure.in \
+	src_sed -g 'AM_GNU_GETTEXT_VERSION' ManuProC_Base/configure.in \
 		-e '/AC_SUBST(GETTEXT_PACKAGE)/iAM_GNU_GETTEXT_VERSION([0.17])'
-#	multijob_child_init src_cp ManuProC_Base/macros/petig.m4 ManuProC_Widgets/macros/petig.m4
-	multijob_child_init src_sed midgard/src/table_lernschema.cc \
+#	src_cp ManuProC_Base/macros/petig.m4 ManuProC_Widgets/macros/petig.m4
+	src_sed midgard/src/table_lernschema.cc \
 		-e '/case .*:$/{n;s/^[[:space:]]*\}/break;}/}'
-	multijob_finish || die "basic patching failed"
 	find . -name configure.in -exec sh -c 'for i
 	do	mv -- "${i}" "${i%in}ac"
 	done' sh '{}' +
@@ -189,11 +185,9 @@ src_prepare() {
 	einfo
 	einfo "Calling eautoreconf for all subprojects:"
 	einfo
-	multijob_init
 	for i in "${S}"/*
-	do	multijob_child_init my_autoreconf "${i##*/}"
+	do	my_autoreconf "${i##*/}"
 	done
-	multijob_finish || die "some eautoreconf failed"
 }
 
 my_conf() {
