@@ -1,0 +1,14 @@
+_eclasses_=toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	eutils	351a78113be5b393c09a2c948701ad36
+_md5_=558dd11df173db3d51482d29fd596376
+SLOT=0
+DEFINED_PHASES=compile configure install postinst prepare setup unpack
+EAPI=5
+DEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2 pcre? ( dev-libs/libpcre )
+DESCRIPTION=Excellent text file viewer, optionally with additional selection feature
+LICENSE=|| ( GPL-3 BSD-2 )
+IUSE=+lesspipe +less-select pcre original-gentoo source unicode
+PDEPEND=lesspipe? ( sys-apps/lesspipe )
+SRC_URI=http://www.greenwoodsoftware.com/less/less-479.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.6.tar.gz -> less-select-2.6.tar.gz ) http://www-zeuthen.desy.de/~friebel/unix/less/code2color -> code2color-0.2
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+HOMEPAGE=http://www.greenwoodsoftware.com/less/ https://github.com/vaeth/less-select
+RDEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2 pcre? ( dev-libs/libpcre ) less-select? ( dev-lang/perl || ( >=dev-lang/perl-5.10.1 >=virtual/perl-File-Temp-0.19 ) )

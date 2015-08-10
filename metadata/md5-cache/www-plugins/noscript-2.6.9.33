@@ -1,0 +1,15 @@
+_eclasses_=toolchain-funcs	42408102d713fbad60ca21349865edb4	multilib	62927b3db3a589b0806255f3a002d5d3	mv_mozextension	5e22f9d1ffa52fa06f03419459995c1b	eutils	9fb270e417e0e83d64ca52586c4a79de
+_md5_=f6843fbd2580dec3320792c3a67c6a71
+SLOT=0
+DEFINED_PHASES=install prepare unpack
+EAPI=5
+DEPEND=app-arch/unzip
+DESCRIPTION=Mozilla plugin: Restrict active contents like java/javascript/flash
+LICENSE=GPL-2
+IUSE=firefox firefox-bin seamonkey seamonkey-bin
+REQUIRED_USE=|| ( firefox firefox-bin seamonkey seamonkey-bin )
+RESTRICT=mirror
+SRC_URI=https://secure.informaction.com/download/releases/noscript-2.6.9.33.xpi https://addons.cdn.mozilla.net/user-media/addons/722/noscript_security_suite-2.6.9.33-sm+fx+fn.xpi -> noscript-2.6.9.33.xpi
+KEYWORDS=~amd64 ~x86
+HOMEPAGE=http://noscript.net/
+RDEPEND=|| ( firefox? ( >=www-client/firefox-21 ) firefox-bin? ( >=www-client/firefox-bin-21 ) seamonkey? ( www-client/seamonkey ) seamonkey-bin? ( www-client/seamonkey-bin ) )

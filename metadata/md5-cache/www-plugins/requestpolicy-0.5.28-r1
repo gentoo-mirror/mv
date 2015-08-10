@@ -1,0 +1,15 @@
+_eclasses_=toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	mv_mozextension	5e22f9d1ffa52fa06f03419459995c1b	eutils	351a78113be5b393c09a2c948701ad36
+_md5_=f47b364b796985eefc3dc935225feef2
+SLOT=0
+DEFINED_PHASES=install prepare unpack
+EAPI=5
+DEPEND=app-arch/unzip
+DESCRIPTION=Mozilla plugin: Increases privacy and security by giving you control over cross-site requests
+LICENSE=GPL-2
+IUSE=firefox firefox-bin seamonkey seamonkey-bin
+REQUIRED_USE=|| ( firefox firefox-bin seamonkey seamonkey-bin )
+RESTRICT=mirror
+SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/9727/requestpolicy-0.5.28-sm+fx.xpi
+KEYWORDS=~amd64 ~x86
+HOMEPAGE=https://www.requestpolicy.com/
+RDEPEND=|| ( firefox? ( >=www-client/firefox-21 ) firefox-bin? ( >=www-client/firefox-bin-21 ) seamonkey? ( www-client/seamonkey ) seamonkey-bin? ( www-client/seamonkey-bin ) )

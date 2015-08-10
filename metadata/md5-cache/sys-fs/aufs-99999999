@@ -1,0 +1,12 @@
+_eclasses_=toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	git-r3	1502b9838d043db47700b8120083e637	versionator	99ae9d758cbe7cfed19170e7d48f5a9c	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	linux-info	8f92e5ac1a1da684c5450b1b21a1f56a	eutils	351a78113be5b393c09a2c948701ad36
+_md5_=6d35853d2852b4c23e16d33e38ef15c5
+SLOT=0/3
+DEFINED_PHASES=compile configure install postinst prepare setup unpack
+EAPI=5
+DEPEND=dev-vcs/git[curl] >=dev-vcs/git-1.8.2.1
+DESCRIPTION=An entirely re-designed and re-implemented Unionfs
+LICENSE=GPL-2
+IUSE=kernel-patch all-patches
+HOMEPAGE=http://aufs.sourceforge.net/
+PROPERTIES=live
+RDEPEND=!sys-fs/aufs2 !sys-fs/aufs3
