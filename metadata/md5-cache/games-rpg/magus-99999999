@@ -1,13 +1,13 @@
-_eclasses_=toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	flag-o-matic	2090c5a622458303e6bf68837ac6b96	monotone	da0772d114c67c0fe70fcfa45c6efde1	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	libtool	7f78cd7d403808a350c9ae23f5821fb4	autotools	8056957fdccf2b3cd6e282a4b4551d1a	eutils	351a78113be5b393c09a2c948701ad36
-_md5_=9eff08b3c919216d90c1c9504412bf90
-SLOT=0
 DEFINED_PHASES=compile configure install prepare unpack
-EAPI=5
 DEPEND=dev-libs/libsigc++:2 dev-cpp/gtkmm:2.4 virtual/latex-base postgres? ( dev-db/postgresql ) !postgres? ( dev-db/sqlite:3 ) || ( media-libs/netpbm media-gfx/graphicsmagick media-gfx/imagemagick ) sys-devel/gettext pngcrush? ( media-gfx/pngcrush ) imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/monotone
 DESCRIPTION=A character generator for the popular German role playing game Midgard
-LICENSE=GPL-2
-IUSE=+acroread imagemagick konqueror postgres pngcrush seamonkey
-RESTRICT=mirror
+EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/midgard.berlios/
+IUSE=+acroread imagemagick konqueror postgres pngcrush seamonkey
+LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=dev-libs/libsigc++:2 dev-cpp/gtkmm:2.4 virtual/latex-base postgres? ( dev-db/postgresql ) !postgres? ( dev-db/sqlite:3 ) || ( media-libs/netpbm media-gfx/graphicsmagick media-gfx/imagemagick ) seamonkey? ( www-client/seamonkey ) !seamonkey? ( konqueror? ( kde-base/konqueror ) !konqueror? ( || ( www-client/firefox www-client/firefox-bin ) ) ) acroread? ( app-text/acroread ) virtual/libintl
+RESTRICT=mirror
+SLOT=0
+_eclasses_=autotools	8056957fdccf2b3cd6e282a4b4551d1a	eutils	351a78113be5b393c09a2c948701ad36	flag-o-matic	02090c5a622458303e6bf68837ac6b96	libtool	7f78cd7d403808a350c9ae23f5821fb4	monotone	da0772d114c67c0fe70fcfa45c6efde1	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=9eff08b3c919216d90c1c9504412bf90

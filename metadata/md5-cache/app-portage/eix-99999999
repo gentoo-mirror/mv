@@ -1,12 +1,12 @@
-_eclasses_=toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	l10n	714aaf78929eade946da5eaff7d2001a	git-r3	1502b9838d043db47700b8120083e637	bash-completion-r1	b1fc4d30333bb528c8abb4332bb70ea6	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	libtool	7f78cd7d403808a350c9ae23f5821fb4	autotools	8056957fdccf2b3cd6e282a4b4551d1a	eutils	351a78113be5b393c09a2c948701ad36
-_md5_=e7cb8c9a8f20c0c9c1fef8845b20ea7f
-SLOT=0
 DEFINED_PHASES=configure install postinst postrm prepare setup unpack
-EAPI=5
 DEPEND=sqlite? ( >=dev-db/sqlite-3 ) nls? ( virtual/libintl ) >=sys-devel/gettext-0.19.3 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more
-LICENSE=GPL-2
-IUSE=debug +dep doc nls optimization security strong-optimization strong-security sqlite swap-remote tools linguas_de linguas_ru
+EAPI=5
 HOMEPAGE=https://github.com/vaeth/eix/
+IUSE=debug +dep doc nls optimization security strong-optimization strong-security sqlite swap-remote tools linguas_de linguas_ru
+LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=sqlite? ( >=dev-db/sqlite-3 ) nls? ( virtual/libintl ) app-shells/push
+SLOT=0
+_eclasses_=autotools	8056957fdccf2b3cd6e282a4b4551d1a	bash-completion-r1	b1fc4d30333bb528c8abb4332bb70ea6	eutils	351a78113be5b393c09a2c948701ad36	git-r3	1502b9838d043db47700b8120083e637	l10n	714aaf78929eade946da5eaff7d2001a	libtool	7f78cd7d403808a350c9ae23f5821fb4	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=e7cb8c9a8f20c0c9c1fef8845b20ea7f
