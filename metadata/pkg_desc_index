@@ -50,7 +50,7 @@ net-firewall/firewall-mv 8.13: Initialize iptables and net-related sysctl variab
 net-misc/sshstart 2.13: Start ssh-agent/ssh-add only if you really use ssh or friends
 net-print/foo2zjs 20081129-r1: Support for printing to ZjStream-based printers. Fixes bug 271079
 sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
-sci-mathematics/reduce 20141130: A general-purpose computer algebra system
+sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
 sys-apps/cpi 2.10: A wrapper for cp -i -a, making use of diff
 sys-apps/less 479: Excellent text file viewer, optionally with additional selection feature
 sys-apps/lesspipe 1.82: Wolfgang Friebel's preprocessor for sys-apps/less. Append colon to filename to disable

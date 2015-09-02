@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( firefox firefox-bin seamonkey seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://addons.cdn.mozilla.net/user-media/addons/2108/stylish-2.0.2-fx+an+sm+tb.xpi
-_eclasses_=eutils	351a78113be5b393c09a2c948701ad36	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	mv_mozextension	5e22f9d1ffa52fa06f03419459995c1b	readme.gentoo	e37aea783a61ae55fab947df247eebea	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
-_md5_=83afe9a06c02ff5368facb23885a1f59
+_eclasses_=eutils	351a78113be5b393c09a2c948701ad36	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	mv_mozextension	da10eb7a5b5c9df4ee6c0f691396650d	readme.gentoo	e37aea783a61ae55fab947df247eebea	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=baf873a0dadc73e186205ce37cde18b4
