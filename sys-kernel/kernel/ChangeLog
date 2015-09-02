@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kernel-1.39 (02 Sep 2015)
+
+  02 Sep 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *kernel-1.38 (14 Jul 2015)
 
   14 Jul 2015; Martin Väth <martin@mvath.de>:
