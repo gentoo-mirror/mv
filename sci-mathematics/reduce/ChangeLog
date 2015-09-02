@@ -4,6 +4,9 @@
 
 *reduce-20141130.ebuild (24 Jan 2015)
 
+  02 Sep 2015; Martin Väth <martin@mvath.de>:
+  Hackish fix of broken scripts/findos.sh
+
   24 Jan 2015; Martin Väth <martin@mvath.de>:
   Copy from gentoo tree to version bump to a snapshot which at least compiles.
   Adapt URL and $S to snapshot version numbering. Bump EAPI, add epatch_user.
