@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 RESTRICT="mirror"
@@ -30,6 +30,8 @@ RDEPEND="X? ( x11-libs/libXrandr
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	sed -i -e '2iecho gentoo; exit' -- "${S}"/scripts/findos.sh
+	# sed -i -e 's/\${l}/"\${l}"/g' -- "${S}"/scripts/make.sh
 	epatch_user
 }
 
