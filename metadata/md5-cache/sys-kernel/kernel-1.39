@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst prepare
+DESCRIPTION=A POSIX shell script to compile the kernel with user permissions
+EAPI=5
+HOMEPAGE=https://github.com/vaeth/kernel/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=app-admin/sudo app-admin/sudox app-shells/push >=app-shells/runtitle-2.3 !<dev-util/ccache-3.2
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/kernel/archive/v1.39.tar.gz -> kernel-1.39.tar.gz
+_eclasses_=eutils	351a78113be5b393c09a2c948701ad36	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=b09d6f9acbac53903f04c47bf09d0f70
