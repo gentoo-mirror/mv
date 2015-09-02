@@ -52,7 +52,7 @@ net-print/foo2zjs 20081129-r1: Support for printing to ZjStream-based printers. 
 sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
 sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
 sys-apps/cpi 2.10: A wrapper for cp -i -a, making use of diff
-sys-apps/less 479: Excellent text file viewer, optionally with additional selection feature
+sys-apps/less 481: Excellent text file viewer, optionally with additional selection feature
 sys-apps/lesspipe 1.82: Wolfgang Friebel's preprocessor for sys-apps/less. Append colon to filename to disable
 sys-apps/openrc-wrapper 1.7: Use openrc init scripts with systemd or other init systems
 sys-apps/schedule 7.1.1: script to schedule jobs in a multiuser multitasking environment
