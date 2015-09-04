@@ -47,7 +47,7 @@ media-video/video-mv 8.3: Frontends for using mplayer/mencoder, ffmpeg/libav, or
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
 net-firewall/firewall-mv 8.13: Initialize iptables and net-related sysctl variables
-net-misc/sshstart 2.14: Start ssh-agent/ssh-add only if you really use ssh or friends
+net-misc/sshstart 2.15: Start ssh-agent/ssh-add only if you really use ssh or friends
 net-print/foo2zjs 20081129-r1: Support for printing to ZjStream-based printers. Fixes bug 271079
 sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
 sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
