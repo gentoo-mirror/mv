@@ -24,7 +24,7 @@ app-shells/auto-fu-zsh 0.0.1.12-r4 99999999: zsh automatic complete-word and lis
 app-shells/command-not-found 0.4.5: If a command is not found (bash/zsh), search ARCH database for packages with similar commands
 app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/runtitle 2.7: Scripts to run commands and set the hard status line (windows title)
-app-shells/set_prompt 1.21: An intelligent prompt for zsh or bash with status line (window title) support
+app-shells/set_prompt 1.22: An intelligent prompt for zsh or bash with status line (window title) support
 app-shells/termcolors-mv 3.11: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.0.8 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.12.0 99999999: Additional completion definitions for Zsh
