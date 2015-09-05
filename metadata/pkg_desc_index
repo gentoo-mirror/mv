@@ -23,7 +23,7 @@ app-portage/world-mv 3.14: Organize your world file and find installed packages 
 app-shells/auto-fu-zsh 0.0.1.12-r4 99999999: zsh automatic complete-word and list-choices: incremental completion
 app-shells/command-not-found 0.4.5: If a command is not found (bash/zsh), search ARCH database for packages with similar commands
 app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
-app-shells/runtitle 2.6: Scripts to run commands and set the hard status line (windows title)
+app-shells/runtitle 2.7: Scripts to run commands and set the hard status line (windows title)
 app-shells/set_prompt 1.21: An intelligent prompt for zsh or bash with status line (window title) support
 app-shells/termcolors-mv 3.11: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.0.8 99999999: UNIX Shell similar to the Korn shell
@@ -43,7 +43,7 @@ games-rpg/m5figur-mv 2.4: LaTeX2e character sheet layout for the Midgard Role Pl
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
 media-tv/sundtek-tv 150728.175535: Sundtek MediaTV Pro III Drivers
-media-video/video-mv 8.3: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
+media-video/video-mv 8.4: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
 net-firewall/firewall-mv 8.13: Initialize iptables and net-related sysctl variables
