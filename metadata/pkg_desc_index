@@ -25,11 +25,11 @@ app-shells/command-not-found 0.4.5: If a command is not found (bash/zsh), search
 app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/runtitle 2.6: Scripts to run commands and set the hard status line (windows title)
 app-shells/set_prompt 1.21: An intelligent prompt for zsh or bash with status line (window title) support
-app-shells/termcolors-mv 3.10: 256colors sample script and dircolors configuration for standard or 256 colors
+app-shells/termcolors-mv 3.11: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.0.8 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.12.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.2.1 99999999: Fish shell like syntax highlighting for zsh
-app-shells/zshrc-mv 2.21: A zshrc file initializing zsh specific interactive features
+app-shells/zshrc-mv 2.22: A zshrc file initializing zsh specific interactive features
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
 app-text/stardict 3.0.6: A international dictionary supporting fuzzy and glob style matching
 dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
@@ -42,7 +42,7 @@ dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many fil
 games-rpg/m5figur-mv 2.4: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
-media-tv/sundtek-tv 150716.005115: Sundtek MediaTV Pro III Drivers
+media-tv/sundtek-tv 150728.175535: Sundtek MediaTV Pro III Drivers
 media-video/video-mv 8.3: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
@@ -65,7 +65,7 @@ sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for po
 sys-fs/squashfs-tools 4.3: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 12.1.1: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 1.39: A POSIX shell script to compile the kernel with user permissions
-www-plugins/classic-theme-restorer 1.3.5: Firefox plugin: restore partially the functionality of non-broken firefox versions
+www-plugins/classic-theme-restorer 1.3.8: Firefox plugin: restore partially the functionality of non-broken firefox versions
 www-plugins/duckduckgo 0.4.6-r1: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.6-r1: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.4-r1: Edit the saved history of forms in mozilla
