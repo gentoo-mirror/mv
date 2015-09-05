@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*sundtek-tv-150728.175535 (05 Sep 2015)
+
+  05 Sep 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *sundtek-tv-150716.005115 (17 Jul 2015)
 
   07 Jun 2015; Martin Väth <martin@mvath.de>:
