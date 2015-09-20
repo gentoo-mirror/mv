@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*zsh-5.1.1 (20 Sep 2015)
+
+  20 Sep 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *zsh-5.0.8 (26 Jun 2015)
 
   26 Jun 2015; Martin Väth <martin@mvath.de>:

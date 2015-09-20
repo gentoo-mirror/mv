@@ -7,7 +7,7 @@ MV_MOZ_MOZILLAS="firefox"
 inherit mv_mozextension
 RESTRICT="mirror"
 
-mPN="${PN//-/_}_customize_ui-${PV}"
+mPN="${PN//-/_}-${PV}"
 DESCRIPTION="Firefox plugin: restore partially the functionality of non-broken firefox versions"
 HOMEPAGE="https://addons.mozilla.org/de/firefox/addon/classicthemerestorer/"
 SRC_URI="https://addons.cdn.mozilla.net/user-media/addons/472577/${mPN}-fx.xpi"
