@@ -4,12 +4,6 @@
 
 EAPI=5
 
-# doc package for -dev version exists?
-doc_available=true
-
-# sourceforge mirror for non-git version exists?
-sourceforge_mirror=false
-
 inherit eutils flag-o-matic multilib prefix readme.gentoo
 
 MY_PV=${PV/_p/-dev-}
@@ -17,20 +11,8 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 zsh_ftp="http://www.zsh.org/pub"
 
-if [[ ${PV} != "${MY_PV}" ]] ; then
-	ZSH_URI="${zsh_ftp}/development/${PN}-${MY_PV}.tar.bz2"
-	if ${doc_available} ; then
-		ZSH_DOC_URI="${zsh_ftp}/development/${PN}-${MY_PV}-doc.tar.bz2"
-	else
-		ZSH_DOC_URI="${zsh_ftp}/${PN}-${PV%_*}-doc.tar.bz2"
-	fi
-else
-	ZSH_URI=""
-	${sourceforge_mirror} && ZSH_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-	ZSH_URI+="
-		${zsh_ftp}/${P}.tar.bz2"
-	ZSH_DOC_URI="${zsh_ftp}/${PN}-${PV%_*}-doc.tar.bz2"
-fi
+ZSH_URI="${zsh_ftp}/${PN}-${MY_PV}.tar.xz"
+ZSH_DOC_URI="${zsh_ftp}/${PN}-${PV%_*}-doc.tar.xz"
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
@@ -48,7 +30,12 @@ case ${PV} in
 	DEPEND="app-text/yodl
 		dev-lang/perl
 		sys-apps/man
-		sys-apps/util-linux"
+		sys-apps/util-linux
+		doc? (
+			sys-apps/texinfo
+			app-text/texi2html
+			virtual/latex-base
+		)"
 	PROPERTIES="live"
 	LIVE=:;;
 *)
@@ -75,11 +62,13 @@ done
 IUSE+=" debug doc examples gdbm maildir pcre static unicode"
 
 RDEPEND="
-	>=sys-libs/ncurses-5.1
-	static? ( >=sys-libs/ncurses-5.7-r4[static-libs] )
+	>=sys-libs/ncurses-5.1:0
+	static? ( >=sys-libs/ncurses-5.7-r4:0=[static-libs] )
 	caps? ( sys-libs/libcap )
-	pcre? ( >=dev-libs/libpcre-3.9
-		static? ( >=dev-libs/libpcre-3.9[static-libs] ) )
+	pcre? (
+		>=dev-libs/libpcre-3.9
+		static? ( >=dev-libs/libpcre-3.9[static-libs] )
+	)
 	gdbm? ( sys-libs/gdbm )
 "
 DEPEND+="
