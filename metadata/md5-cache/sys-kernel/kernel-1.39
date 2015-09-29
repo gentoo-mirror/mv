@@ -8,5 +8,5 @@ RDEPEND=app-admin/sudo app-admin/sudox app-shells/push >=app-shells/runtitle-2.3
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/kernel/archive/v1.39.tar.gz -> kernel-1.39.tar.gz
-_eclasses_=eutils	95613dd6157fb4a3b225eafdc56bd441	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	1dfcad7b3f439dbc511d76c49f23da0d
+_eclasses_=eutils	43da5163ba106e87d22d2e7d6d67537f	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	1dfcad7b3f439dbc511d76c49f23da0d
 _md5_=b09d6f9acbac53903f04c47bf09d0f70
