@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*zsh-5.1.1-r1 (02 Oct 2015)
+
+  02 Oct 2015; Martin Väth <martin@mvath.de>:
+  Fix some problems with gcc-5, gentoo see bug 547950
+
 *zsh-5.1.1 (20 Sep 2015)
 
   20 Sep 2015; Martin Väth <martin@mvath.de>:
