@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*starter-7.2.0 (02 Oct 2015)
+
+  02 Oct 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *starter-7.1.1 (19 Aug 2015)
 
   19 Aug 2015; Martin Väth <martin@mvath.de>:
