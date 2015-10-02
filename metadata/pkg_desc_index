@@ -26,7 +26,7 @@ app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/runtitle 2.7: Scripts to run commands and set the hard status line (windows title)
 app-shells/set_prompt 1.22: An intelligent prompt for zsh or bash with status line (window title) support
 app-shells/termcolors-mv 3.11: 256colors sample script and dircolors configuration for standard or 256 colors
-app-shells/zsh 5.1.1 99999999: UNIX Shell similar to the Korn shell
+app-shells/zsh 5.1.1-r1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.12.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.2.1 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 2.22: A zshrc file initializing zsh specific interactive features
@@ -42,7 +42,7 @@ dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many fil
 games-rpg/m5figur-mv 2.4: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
-media-tv/sundtek-tv 150907.163414: Sundtek MediaTV Pro III Drivers
+media-tv/sundtek-tv 151002.142741: Sundtek MediaTV Pro III Drivers
 media-video/video-mv 8.6: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
@@ -55,7 +55,7 @@ sys-apps/cpi 2.10: A wrapper for cp -i -a, making use of diff
 sys-apps/less 481: Excellent text file viewer, optionally with additional selection feature
 sys-apps/lesspipe 1.82: Wolfgang Friebel's preprocessor for sys-apps/less. Append colon to filename to disable
 sys-apps/openrc-wrapper 1.7: Use openrc init scripts with systemd or other init systems
-sys-apps/schedule 7.1.1: script to schedule jobs in a multiuser multitasking environment
+sys-apps/schedule 7.2.0: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 2.15: POSIX shell script and function to schedule commands
 sys-block/zram-init 3.4: Scripts to support compressed swap devices or ramdisks with zram
 sys-fs/aufs 99999999: An entirely re-designed and re-implemented Unionfs
@@ -70,7 +70,7 @@ www-plugins/duckduckgo 0.4.6-r1: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.6-r1: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.4-r1: Edit the saved history of forms in mozilla
 www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
-www-plugins/noscript 2.6.9.36: Mozilla plugin: Restrict active contents like java/javascript/flash
+www-plugins/noscript 2.6.9.37: Mozilla plugin: Restrict active contents like java/javascript/flash
 www-plugins/requestpolicy 0.5.28-r1: Mozilla plugin: Increases privacy and security by giving you control over cross-site requests
 www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascript and html5
 www-plugins/stylish 2.0.2-r1: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
