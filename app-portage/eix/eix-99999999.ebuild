@@ -24,7 +24,7 @@ BOTHDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 RDEPEND="${BOTHDEPEND}
 	app-shells/push"
 DEPEND="${BOTHDEPEND}
-	>=sys-devel/gettext-0.19.3"
+	>=sys-devel/gettext-0.19.6"
 
 pkg_setup() {
 	case " ${REPLACING_VERSIONS}" in
