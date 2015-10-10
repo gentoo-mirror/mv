@@ -4,7 +4,7 @@
 
 EAPI=5
 RESTRICT="mirror"
-PYTHON_COMPAT=( jython2_7 pypy{,3} python{2_7,3_{3,4}} )
+PYTHON_COMPAT=( jython2_7 pypy{,3} python{2_7,3_{4,5}} )
 inherit eutils python-single-r1
 
 DESCRIPTION="Search and/or replace regular expressions within many files interactively"

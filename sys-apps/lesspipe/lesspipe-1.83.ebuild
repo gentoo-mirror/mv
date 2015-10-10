@@ -14,7 +14,7 @@ SRC_URI="http://www-zeuthen.desy.de/~friebel/unix/less/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="antiword cabextract catdoc +cpio +djvu dpkg +dvi2tty +elinks fastjar +ghostscript gpg +groff +html2text id3v2 image isoinfo libplist +links +lynx lzip mp3info mp3info2 ooffice p7zip pdf pstotext rar rpm +rpm2targz unrar unrtf +unzip +w3m xlhtml"
+IUSE="antiword cabextract catdoc +cpio +djvu dpkg +dvi2tty +elinks fastjar +ghostscript gpg +groff hdf5 +html2text id3v2 image isoinfo libplist +links +lynx lzip mp3info mp3info2 netcdf ooffice p7zip pdf pstotext rar rpm +rpm2targz unrar unrtf +unzip +w3m xlhtml"
 
 htmlmode="( || ( html2text links lynx elinks w3m ) )"
 REQUIRED_USE="!rpm2targz? ( rpm? ( cpio ) )
@@ -50,6 +50,7 @@ RDEPEND="sys-apps/file
 	p7zip? ( !amd64-fbsd? ( app-arch/p7zip ) )
 	cpio? ( app-arch/cpio )
 	cabextract? ( app-arch/cabextract )
+	hdf5? ( sci-libs/hdf5 )
 	html2text? ( !amd64-fbsd? ( !arm? ( app-text/html2text ) ) )
 	!html2text? (
 		links? ( www-client/links )
@@ -100,7 +101,9 @@ RDEPEND="sys-apps/file
 	image? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) )
 	isoinfo? ( || ( app-cdr/cdrtools app-cdr/dvd+rw-tools app-cdr/cdrkit ) )
 	libplist? ( !alpha? ( !hppa? ( !ia64? ( !sparc? ( app-pda/libplist ) ) ) ) )
-	dpkg? ( !amd64-fbsd? ( app-arch/dpkg ) ) "
+	dpkg? ( !amd64-fbsd? ( app-arch/dpkg ) )
+	hdf5? ( sci-libs/hdf5 )
+	netcdf? ( sci-libs/netcdf )"
 DEPEND="${RDEPEND}"
 
 ModifyStart() {
@@ -157,6 +160,7 @@ Modify1() {
 }
 
 src_prepare() {
+	printf 'h5dump\t\tN\nncdump\t\tN\n' >>"${S}/configure"
 	ModifyStart
 	ModifyY 'HILITE'
 	ModifyY 'LESS_ADVANCED_PREPROCESSOR'
@@ -189,6 +193,8 @@ src_prepare() {
 	ModifyN 'dpkg'
 	ModifyN 'lsbom'
 	use libplist; ModifyX 'plutil'
+	use hdf5; ModifyX 'h5dump'
+	use netcdf; ModifyX 'ncdump'
 	ModifyEnd
 	printf '%s\n' 'LESS_ADVANCED_PREPROCESSOR=1' >70lesspipe
 	epatch_user
