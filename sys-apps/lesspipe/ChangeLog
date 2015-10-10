@@ -2,9 +2,14 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*lesspipe-1.83 (10 Oct 2015)
+
+  10 Oct 2015; Martin Väth <martin@mvath.de>:
+  Version bump, remove old ebuild
+
 *lesspipe-1.82 (24 Dec 2013)
 
-  18 Jam 2015; Martin Väth <martin@mvath.de>:
+  18 Jan 2015; Martin Väth <martin@mvath.de>:
   Re-add arches and fix dependencies properly
 
   24 Sep 2014; Martin Väth <martin@mvath.de>:
