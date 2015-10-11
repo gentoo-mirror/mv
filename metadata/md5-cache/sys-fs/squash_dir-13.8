@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test
+DEPEND=>=sys-devel/autoconf-2.65 bundled-openrc-wrapper? ( !!sys-apps/openrc-wrapper ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 virtual/pkgconfig
+DESCRIPTION=Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
+EAPI=5
+HOMEPAGE=http://forums.gentoo.org/viewtopic-t-465367.html
+IUSE=aufs overlayfs bundled-openrc-wrapper unionfs-fuse
+LICENSE=GPL-2
+RDEPEND=sys-fs/squashfs-tools !bundled-openrc-wrapper? ( sys-apps/openrc-wrapper ) bundled-openrc-wrapper? ( !!sys-apps/openrc-wrapper ) >=app-shells/runtitle-2.3 !<sys-fs/unionfs-fuse-0.25 unionfs-fuse? ( sys-fs/unionfs-fuse )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/squash_dir/archive/v13.8.tar.gz -> squash_dir-13.8.tar.gz
+_eclasses_=autotools	542bf3f83917668f3893f4da1ca238ff	autotools-utils	0bf099a6e3dfeaf20a7a94504d8dd896	eutils	43da5163ba106e87d22d2e7d6d67537f	libtool	7f78cd7d403808a350c9ae23f5821fb4	linux-info	8f92e5ac1a1da684c5450b1b21a1f56a	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	readme.gentoo	e37aea783a61ae55fab947df247eebea	systemd	6b4f0cefa642270eded7e6ca816fd181	toolchain-funcs	1dfcad7b3f439dbc511d76c49f23da0d	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=25e8d9af235e76285a69d823f450474e

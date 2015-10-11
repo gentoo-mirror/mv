@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare unpack
+DEPEND=>=dev-vcs/git-1.8.2.1
+DESCRIPTION=Additional completion definitions for Zsh
+EAPI=5
+HOMEPAGE=https://gentoo.org/zsh-users/zsh-completions/
+IUSE=+completion_Android +completion_Google +completion_Unix +completion_database +completion_dev +completion_disk +completion_distribute +completion_filesystem +completion_git +completion_hardware +completion_haskell +completion_managers +completion_multimedia +completion_net +completion_nfs +completion_perl +completion_python +completion_ruby +completion_search +completion_session +completion_subtitles +completion_virtualization +completion_web
+LICENSE=ZSH
+PROPERTIES=live
+SLOT=0
+_eclasses_=eutils	43da5163ba106e87d22d2e7d6d67537f	git-r3	1502b9838d043db47700b8120083e637	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	1dfcad7b3f439dbc511d76c49f23da0d
+_md5_=8aefb3f67a48572be00ddd9ad4458803
