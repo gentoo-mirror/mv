@@ -1,6 +1,6 @@
 app-admin/checksec 1.5: Check for hardened protections like RELRO, NoExec, Stack protection, ASLR, PIE
 app-admin/sudox 3.20: sudox is a wrapper for sudo which can pass X authority data and deal with screen and tmux
-app-arch/archwrap 1.26: A collection of POSIX shell scripts to invoke archiver programs
+app-arch/archwrap 1.27: A collection of POSIX shell scripts to invoke archiver programs
 app-arch/bzwc 2.18: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
 app-dicts/stardict-dictd-BritannicaConcise 2.4.2: Stardict Dictionary for Dictd.org's The Britannica Concise Encyclopedia
 app-dicts/stardict-dictd-cced 2.4.2: Stardict Dictionary for Dictd.org's Collins Cobuild English Dictionary
