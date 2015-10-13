@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( firefox firefox-bin seamonkey seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/45281/epubreader-1.5.0.6-sm+fx.xpi
-_eclasses_=eutils	43da5163ba106e87d22d2e7d6d67537f	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	mv_mozextension	da10eb7a5b5c9df4ee6c0f691396650d	toolchain-funcs	1dfcad7b3f439dbc511d76c49f23da0d
+_eclasses_=eutils	43da5163ba106e87d22d2e7d6d67537f	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	mv_mozextension	da10eb7a5b5c9df4ee6c0f691396650d	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
 _md5_=77d494fb3e30ff16045f1c644fd84a01
