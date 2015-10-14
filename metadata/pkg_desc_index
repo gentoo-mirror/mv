@@ -1,3 +1,4 @@
+app-accessibility/gespeaker 0.8.6: A GTK+ frontend for espeak
 app-admin/checksec 1.5: Check for hardened protections like RELRO, NoExec, Stack protection, ASLR, PIE
 app-admin/sudox 3.20: sudox is a wrapper for sudo which can pass X authority data and deal with screen and tmux
 app-arch/archwrap 1.27: A collection of POSIX shell scripts to invoke archiver programs
