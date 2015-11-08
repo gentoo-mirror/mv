@@ -65,7 +65,7 @@ sys-fs/emount 2.8.3: mount/unmount (and create/remove) dm-crypt filesystems acco
 sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-fs/squashfs-tools 4.3: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 12.2.0: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
-sys-kernel/kernel 1.40: A POSIX shell script to compile the kernel with user permissions
+sys-kernel/kernel 1.41: A POSIX shell script to compile the kernel with user permissions
 www-plugins/classic-theme-restorer 1.4.2: Firefox plugin: restore partially the functionality of non-broken firefox versions
 www-plugins/duckduckgo 0.4.6-r1: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.6-r1: Firefox plugin for ebook (.epub) files
