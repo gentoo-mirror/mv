@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( firefox firefox-bin seamonkey seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://addons.cdn.mozilla.net/user-media/addons/12021/form_history_control-1.4.0.4-sm+fx.xpi
-_eclasses_=eutils	43da5163ba106e87d22d2e7d6d67537f	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	mv_mozextension	da10eb7a5b5c9df4ee6c0f691396650d	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_eclasses_=eutils	8644194de7be04932084752fb1327080	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	mv_mozextension	da10eb7a5b5c9df4ee6c0f691396650d	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
 _md5_=4bec750fb70c58257b30faf27d5e7c32
