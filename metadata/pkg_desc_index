@@ -30,7 +30,7 @@ app-shells/termcolors-mv 3.11: 256colors sample script and dircolors configurati
 app-shells/zsh 5.1.1-r1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.12.0-r2 99999999: 
 app-shells/zsh-syntax-highlighting 0.3.0-r1 99999999: Fish shell like syntax highlighting for zsh
-app-shells/zshrc-mv 2.23: 
+app-shells/zshrc-mv 2.24: 
 app-text/psjoin 0.3: 
 app-text/stardict 3.0.6: A international dictionary supporting fuzzy and glob style matching
 dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
@@ -38,7 +38,7 @@ dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from 
 dev-tex/chklref 2.6.0: Finds out useless references in latex files or numbered environments that should not be
 dev-util/ccache 99999999-r3: fast compiler cache
 dev-util/diffhelp 1.9: 
-dev-util/mv_perl 2.49: 
+dev-util/mv_perl 2.50: 
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
 games-rpg/m5figur-mv 2.4: 
 games-rpg/magus 1.3.1 1.3.3 99999999: 
