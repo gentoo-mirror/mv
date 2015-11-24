@@ -1,4 +1,4 @@
-app-accessibility/gespeaker 0.8.6: 
+app-accessibility/gespeaker 0.8.6: A GTK+ frontend for espeak
 app-admin/checksec 1.5: Check for hardened protections like RELRO, NoExec, Stack protection, ASLR, PIE
 app-admin/sudox 3.20: sudox is a wrapper for sudo which can pass X authority data and deal with screen and tmux
 app-arch/archwrap 2.0: A collection of POSIX shell scripts to invoke archiver programs
@@ -13,41 +13,41 @@ app-dicts/stardict-freedict-deu-eng 2.4.2: Stardict Dictionary German to English
 app-dicts/stardict-freedict-deu-ita 2.4.2: Stardict Dictionary German to Italian
 app-dicts/stardict-freedict-ita-deu 2.4.2: Stardict Dictionary Italian to German
 app-emacs/mv_emacs 1.2: (X)Emacs extensions: block support, macrorecorder, verify change
-app-portage/eix 99999999: 
+app-portage/eix 99999999: Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more
 app-portage/find_cruft 3.0.7: find cruft files not managed by portage
-app-portage/getdelta 0.7.9-r2: 
+app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 9.8-r1: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/portage-bashrc-mv 13.6: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
 app-portage/trickyfetch 8.7: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 3.4: Print or save the current USE-flag state and compare with older versions
 app-portage/world-mv 3.14: Organize your world file and find installed packages or differences to @world
 app-shells/auto-fu-zsh 0.0.1.12-r4 99999999: zsh automatic complete-word and list-choices: incremental completion
-app-shells/command-not-found 0.4.5: 
-app-shells/oh-my-zsh 99999999: 
+app-shells/command-not-found 0.4.5: If a command is not found (bash/zsh), search ARCH database for packages with similar commands
+app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/runtitle 2.7: Scripts to run commands and set the hard status line (windows title)
 app-shells/set_prompt 1.23: An intelligent prompt for zsh or bash with status line (window title) support
-app-shells/termcolors-mv 3.11: 
-app-shells/zsh 5.1.1-r1 99999999: 
+app-shells/termcolors-mv 3.11: 256colors sample script and dircolors configuration for standard or 256 colors
+app-shells/zsh 5.1.1-r1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.12.0-r2 99999999: Additional completion definitions for Zsh
-app-shells/zsh-syntax-highlighting 0.3.0-r1 99999999: 
+app-shells/zsh-syntax-highlighting 0.3.0-r1 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 2.24: A zshrc file initializing zsh specific interactive features
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
-app-text/stardict 3.0.6: 
-dev-cpp/cpplint 99999999: 
-dev-perl/File-lchown 0.20-r1: 
-dev-tex/chklref 2.6.0: 
-dev-util/ccache 99999999-r3: 
+app-text/stardict 3.0.6: A international dictionary supporting fuzzy and glob style matching
+dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
+dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from Perl
+dev-tex/chklref 2.6.0: Finds out useless references in latex files or numbered environments that should not be
+dev-util/ccache 99999999-r3: fast compiler cache
 dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
 dev-util/mv_perl 2.50: A collection of perl scripts (replacement in files, syncing dirs etc)
-dev-util/pyrep 1.4-r1: 
+dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
 games-rpg/m5figur-mv 2.4: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
-media-tv/sundtek-tv 151010.162411-r1: 
-media-video/video-mv 8.6: 
+media-tv/sundtek-tv 151010.162411-r1: Sundtek MediaTV Pro III Drivers
+media-video/video-mv 8.6: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
-net-dialup/martian-modem 20100123-r2: 
-net-firewall/firewall-mv 8.13: 
+net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
+net-firewall/firewall-mv 8.13: Initialize iptables and net-related sysctl variables
 net-misc/sshstart 2.15: Start ssh-agent/ssh-add only if you really use ssh or friends
 net-print/foo2zjs 20081129-r1: Support for printing to ZjStream-based printers. Fixes bug 271079
 sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
@@ -55,16 +55,16 @@ sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
 sys-apps/cpi 2.10: A wrapper for cp -i -a, making use of diff
 sys-apps/less 481: Excellent text file viewer, optionally with additional selection feature
 sys-apps/lesspipe 1.83: Wolfgang Friebel's preprocessor for sys-apps/less. Append colon to filename to disable
-sys-apps/openrc-wrapper 1.7: 
-sys-apps/schedule 7.2.0: 
+sys-apps/openrc-wrapper 1.7: Use openrc init scripts with systemd or other init systems
+sys-apps/schedule 7.2.0: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 2.15: POSIX shell script and function to schedule commands
-sys-block/zram-init 3.5: 
+sys-block/zram-init 3.5: Scripts to support compressed swap devices or ramdisks with zram
 sys-fs/aufs 99999999: An entirely re-designed and re-implemented Unionfs
 sys-fs/aufs-util 99999999: Userspace tools for aufs
 sys-fs/emount 2.8.3: mount/unmount (and create/remove) dm-crypt filesystems according to your /etc/fstab
-sys-fs/squash_dir 13.8: 
+sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-fs/squashfs-tools 4.3: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
-sys-fs/squashmount 12.2.0: 
+sys-fs/squashmount 12.2.0: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 1.41: A POSIX shell script to compile the kernel with user permissions
 www-plugins/classic-theme-restorer 1.4.2: Firefox plugin: restore partially the functionality of non-broken firefox versions
 www-plugins/duckduckgo 0.4.6-r1: Firefox plugin: enable duckduckgo search engine
@@ -74,7 +74,7 @@ www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
 www-plugins/noscript 2.6.9.38 2.6.9.39: Mozilla plugin: Restrict active contents like java/javascript/flash
 www-plugins/requestpolicy 0.5.28-r1: Mozilla plugin: Increases privacy and security by giving you control over cross-site requests
 www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascript and html5
-www-plugins/stylish 2.0.2-r1: 
+www-plugins/stylish 2.0.2-r1: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
 www-plugins/xclear 1.8-r2: Firefox plugin: button to clear URL
-x11-drivers/nvidia-drivers 173.14.39-r1: 
-x11-themes/fvwm-crystal 3.3.2-r1: 
+x11-drivers/nvidia-drivers 173.14.39-r1: NVIDIA Accelerated Graphics Driver
+x11-themes/fvwm-crystal 3.3.2-r1: Configurable and full featured FVWM theme, with lots of transparency and freedesktop compatible menu
