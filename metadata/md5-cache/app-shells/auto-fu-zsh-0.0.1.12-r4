@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=compile? ( app-shells/zsh )
+DESCRIPTION=zsh automatic complete-word and list-choices: incremental completion
+EAPI=6
+HOMEPAGE=https://github.com/hchbaw/auto-fu.zsh/
+IUSE=+compile
+KEYWORDS=~amd64 ~x86
+LICENSE=HPND
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/hchbaw/auto-fu.zsh/archive/v0.0.1.12.tar.gz -> auto-fu-zsh-0.0.1.12.tar.gz
+_eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
+_md5_=409ffc1baab0698d9a8b53ba7dc1276c

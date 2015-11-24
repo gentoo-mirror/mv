@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/bzwc/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=app-shells/push
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/bzwc/archive/v2.18.tar.gz -> bzwc-2.18.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_md5_=c23f282323bd5ce87b85682cae42d671

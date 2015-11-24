@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=Start ssh-agent/ssh-add only if you really use ssh or friends
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/sshstart/
+IUSE=+keychain
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=app-shells/push keychain? ( net-misc/keychain )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/sshstart/archive/v2.15.tar.gz -> sshstart-2.15.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_md5_=8e07fc2d074fe75808b4c65721f2ef6e

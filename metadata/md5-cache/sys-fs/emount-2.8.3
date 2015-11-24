@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=mount/unmount (and create/remove) dm-crypt filesystems according to your /etc/fstab
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/emount/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=dev-lang/perl-5.12 sys-fs/cryptsetup
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/emount/archive/v2.8.3.tar.gz -> emount-2.8.3.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_md5_=462e6949684572ff0f5fea50978daef0

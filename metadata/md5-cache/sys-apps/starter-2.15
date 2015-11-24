@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=POSIX shell script and function to schedule commands
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/starter/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=app-shells/push >=app-shells/runtitle-2.3
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/starter/archive/v2.15.tar.gz -> starter-2.15.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_md5_=52b432589dc291694fe32f5a7ec66479

@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=A wrapper for cp -i -a, making use of diff
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/cpi/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/cpi/archive/v2.10.tar.gz -> cpi-2.10.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_md5_=36e9ecb8d6478fc05b3295709cf6c5c2

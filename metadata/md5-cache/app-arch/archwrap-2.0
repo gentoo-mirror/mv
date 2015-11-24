@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=A collection of POSIX shell scripts to invoke archiver programs
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/archwrap/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=app-shells/push
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/archwrap/archive/v2.0.tar.gz -> archwrap-2.0.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_md5_=8cb5347cfe72c60e31069ff253145e79
