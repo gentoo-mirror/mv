@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
-inherit eutils linux-info pax-utils readme.gentoo systemd unpacker
+EAPI=6
+inherit linux-info pax-utils readme.gentoo systemd unpacker
 
 # The following variable is only for testing purposes. Leave it to "false"
 keep_original=false
@@ -13,7 +13,7 @@ HOMEPAGE="http://support.sundtek.com/index.php/topic,2.0.html"
 # Current version number can be found in http://sundtek.de/media/latest.phtml
 SRC_URI="http://www.sundtek.de/media/sundtek_installer_${PV}.sh"
 
-RESTRICT="mirror strip"
+RESTRICT="binchecks mirror strip"
 LICENSE="sundtek"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
@@ -27,8 +27,6 @@ DOC_CONTENTS="To initialize sundtek drivers during booting call
 	systemctl enable sundtek-local.service # for systemd
 You will probably need to adapt sundtek-local.service to your defaults
 "
-
-QA_PREBUILT="opt/bin/* opt/bin/*/* usr/$(get_libdir)/* usr/share/doc/*/*/*"
 
 src_unpack() {
 	local subdir a
@@ -141,7 +139,7 @@ want to use with sundtek-tv.
 "
 	ln -sfn mediaclient.video mediaclient.audio
 	ln -sfn mediaclient.video mediaclient.dvb
-	epatch_user
+	eapply_user
 }
 
 src_install() {
@@ -187,4 +185,5 @@ pkg_postinst() {
 		else	elog "You need to set LD_PRELOAD locally, see /usr/share/doc/${PF}/README.gentoo*"
 		fi
 	fi
+	readme.gentoo_print_elog
 }
