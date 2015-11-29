@@ -1,4 +1,4 @@
-DEFINED_PHASES=install prepare unpack
+DEFINED_PHASES=install unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=Firefox plugin for ebook (.epub) files
 EAPI=6
@@ -6,11 +6,11 @@ HOMEPAGE=http://addons.mozilla.org/de/firefox/addon/epubreader/
 IUSE=firefox firefox-bin seamonkey seamonkey-bin
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=|| ( firefox? ( >=www-client/firefox-21 ) firefox-bin? ( >=www-client/firefox-bin-21 ) seamonkey? ( www-client/seamonkey ) seamonkey-bin? ( www-client/seamonkey-bin ) )
+RDEPEND=|| ( firefox? ( www-client/firefox ) firefox-bin? ( www-client/firefox-bin ) seamonkey? ( www-client/seamonkey ) seamonkey-bin? ( www-client/seamonkey-bin ) )
 REQUIRED_USE=|| ( firefox firefox-bin seamonkey seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/45281/epubreader-1.5.0.6-sm+fx.xpi
-_eclass_exported_funcs=src_unpack:mv_mozextension src_prepare:mv_mozextension src_install:mv_mozextension
-_eclasses_=eutils	f20548a2f7b0128068388cd2ec26708a	multilib	3972ca401cf7dbb430df9995f5d8d580	mv_mozextension	da10eb7a5b5c9df4ee6c0f691396650d	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
-_md5_=bce07b56fd354d2845ceb0924af1aa2e
+_eclass_exported_funcs=src_unpack:- src_install:-
+_eclasses_=mv_mozextension-r1	7c6579ee2633669f329f872304b0518a
+_md5_=0778275b63354c18e62430b906a1a730
