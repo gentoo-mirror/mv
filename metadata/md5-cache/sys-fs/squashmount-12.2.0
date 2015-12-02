@@ -10,5 +10,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/squashmount/archive/v12.2.0.tar.gz -> squashmount-12.2.0.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
-_eclasses_=eutils	d9bd2ddd85a58e470b49ca997e255a4c	multilib	3972ca401cf7dbb430df9995f5d8d580	readme.gentoo	6f16f6d346646af0debb2e2890d4a215	systemd	787142263640134d43a838285f18e0d7	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_eclasses_=eutils	d9bd2ddd85a58e470b49ca997e255a4c	multilib	3972ca401cf7dbb430df9995f5d8d580	readme.gentoo	6f16f6d346646af0debb2e2890d4a215	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
 _md5_=f8376daf3dd30fb4718a25e5ba571de6
