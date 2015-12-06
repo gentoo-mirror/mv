@@ -29,7 +29,7 @@ app-shells/set_prompt 1.23: An intelligent prompt for zsh or bash with status li
 app-shells/termcolors-mv 3.11: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.1.1-r1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.12.0-r2 99999999: Additional completion definitions for Zsh
-app-shells/zsh-syntax-highlighting 0.3.0-r1 99999999: Fish shell like syntax highlighting for zsh
+app-shells/zsh-syntax-highlighting 0.4.0 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 2.27: A zshrc file initializing zsh specific interactive features
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
 app-text/stardict 3.0.6: A international dictionary supporting fuzzy and glob style matching
@@ -43,7 +43,7 @@ dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many fil
 games-rpg/m5figur-mv 2.4: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
-media-tv/sundtek-tv 151128.003816: Sundtek MediaTV Pro III Drivers
+media-tv/sundtek-tv 151130.190510: Sundtek MediaTV Pro III Drivers
 media-video/video-mv 8.6: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
@@ -66,7 +66,7 @@ sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for po
 sys-fs/squashfs-tools 4.3: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 12.2.0: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 1.41: A POSIX shell script to compile the kernel with user permissions
-www-plugins/classic-theme-restorer 1.4.3: Firefox plugin: restore partially the functionality of non-broken firefox versions
+www-plugins/classic-theme-restorer 1.4.4: Firefox plugin: restore partially the functionality of non-broken firefox versions
 www-plugins/duckduckgo 0.4.6-r1: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.6-r1: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.4-r1: Edit the saved history of forms in mozilla
@@ -74,7 +74,7 @@ www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
 www-plugins/noscript 2.7: Mozilla plugin: Restrict active contents like java/javascript/flash
 www-plugins/requestpolicy 0.5.28-r1: Mozilla plugin: Increases privacy and security by giving you control over cross-site requests
 www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascript and html5
-www-plugins/stylish 2.0.2-r1: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
+www-plugins/stylish 2.0.2.1: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
 www-plugins/xclear 1.8-r2: Firefox plugin: button to clear URL
 x11-drivers/nvidia-drivers 173.14.39-r1: NVIDIA Accelerated Graphics Driver
 x11-themes/fvwm-crystal 3.3.2-r1: Configurable and full featured FVWM theme, with lots of transparency and freedesktop compatible menu

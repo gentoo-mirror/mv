@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst prepare unpack
+DEFINED_PHASES=compile install postinst prepare test unpack
 DEPEND=>=dev-vcs/git-1.8.2.1
 DESCRIPTION=Fish shell like syntax highlighting for zsh
 EAPI=6
@@ -7,6 +7,6 @@ LICENSE=HPND
 PROPERTIES=live
 RDEPEND=app-shells/zsh
 SLOT=0
-_eclass_exported_funcs=pkg_postinst:- src_unpack:git-r3 src_prepare:- src_install:-
+_eclass_exported_funcs=pkg_postinst:- src_unpack:git-r3 src_prepare:- src_compile:- src_test:- src_install:-
 _eclasses_=eutils	d9bd2ddd85a58e470b49ca997e255a4c	git-r3	e6443022d06c4de81a14e017bdfcc306	multilib	3972ca401cf7dbb430df9995f5d8d580	readme.gentoo	6f16f6d346646af0debb2e2890d4a215	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
-_md5_=16ba3c00108e13f6d304130e3c453c2d
+_md5_=790d6c1443c7a1d18343cf26212d2816
