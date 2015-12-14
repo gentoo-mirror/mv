@@ -11,5 +11,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/termcolors-mv/archive/v3.11.tar.gz -> termcolors-mv-3.11.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_compile:- src_install:-
-_eclasses_=readme.gentoo	6f16f6d346646af0debb2e2890d4a215
-_md5_=6a35fc1291130d06c97145a33b084c6e
+_eclasses_=eutils	d9bd2ddd85a58e470b49ca997e255a4c	multilib	3972ca401cf7dbb430df9995f5d8d580	readme.gentoo-r1	5f512994fd21451257e741eea4fca0b3	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=4a398be4c565cad5c00dab381a506403
