@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit flag-o-matic prefix readme.gentoo
+inherit flag-o-matic prefix readme.gentoo-r1
 
 MY_PV=${PV/_p/-dev-}
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -81,7 +81,7 @@ PDEPEND="
 DISABLE_AUTOFORMATTING="true"
 DOC_CONTENTS="
 If you want to enable Portage completions and Gentoo prompt,
-emerge app-shells/zsh-completion and add
+emerge app-shells/gentoo-zsh-completion and add
 	autoload -U compinit promptinit
 	compinit
 	promptinit; prompt gentoo
