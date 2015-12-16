@@ -74,7 +74,7 @@ www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
 www-plugins/noscript 2.7: Mozilla plugin: Restrict active contents like java/javascript/flash
 www-plugins/requestpolicy 0.5.28-r1: Mozilla plugin: Increases privacy and security by giving you control over cross-site requests
 www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascript and html5
-www-plugins/stylish 2.0.2.1: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
+www-plugins/stylish 2.0.4: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
 www-plugins/xclear 1.8-r2: Firefox plugin: button to clear URL
 x11-drivers/nvidia-drivers 173.14.39-r1: NVIDIA Accelerated Graphics Driver
 x11-themes/fvwm-crystal 3.3.2-r1: Configurable and full featured FVWM theme, with lots of transparency and freedesktop compatible menu
