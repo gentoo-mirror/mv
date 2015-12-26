@@ -32,7 +32,7 @@ app-shells/zsh-completions 0.12.0-r2 99999999: Additional completion definitions
 app-shells/zsh-syntax-highlighting 0.4.0 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 2.29: A zshrc file initializing zsh specific interactive features
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
-app-text/stardict 3.0.6: A international dictionary supporting fuzzy and glob style matching
+app-text/stardict 3.0.6-r2: A international dictionary supporting fuzzy and glob style matching
 dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
 dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from Perl
 dev-tex/chklref 2.6.0: Finds out useless references in latex files or numbered environments that should not be
