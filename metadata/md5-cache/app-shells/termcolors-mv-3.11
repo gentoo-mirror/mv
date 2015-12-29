@@ -12,4 +12,4 @@ SLOT=0
 SRC_URI=https://github.com/vaeth/termcolors-mv/archive/v3.11.tar.gz -> termcolors-mv-3.11.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_compile:- src_install:-
 _eclasses_=readme.gentoo-r1	5aa4a25954645ec5a58dde64a5d65a60
-_md5_=4a398be4c565cad5c00dab381a506403
+_md5_=32d35703863439eaf70bea06c55f9ad1

@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/sshstart/archive/v2.15.tar.gz -> sshstart-2.15.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=8e07fc2d074fe75808b4c65721f2ef6e
+_md5_=fc797f21d25ef82c2f9adc628045ba51

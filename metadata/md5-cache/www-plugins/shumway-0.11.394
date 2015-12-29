@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_
 SLOT=0
 SRC_URI=http://mozilla.github.io/shumway/extension/firefox/shumway.xpi -> shumway-0.11.394.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	7985f88c85e1d158cf2e4b64d28757c6
-_md5_=f89b095f69608a62f3df6d19f59524df
+_eclasses_=mv_mozextension-r1	336c3fe7f76b3be6ca19e60ff462332d
+_md5_=ecde7c0b1ca884119eeec3a01d61a2f2

@@ -10,4 +10,4 @@ SLOT=0
 SRC_URI=https://github.com/zsh-users/zsh-syntax-highlighting/archive/0.4.0.tar.gz -> zsh-syntax-highlighting-0.4.0.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_compile:- src_test:- src_install:-
 _eclasses_=readme.gentoo-r1	5aa4a25954645ec5a58dde64a5d65a60
-_md5_=9d687d5eb6b33cd9978080842212807a
+_md5_=d459b0207f7d0d05e8d8e8d5e0d94e1c

@@ -11,4 +11,4 @@ RDEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2 pcre? ( dev-libs/libp
 SLOT=0
 SRC_URI=http://www.greenwoodsoftware.com/less/less-481.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.6.tar.gz -> less-select-2.6.tar.gz ) http://www-zeuthen.desy.de/~friebel/unix/less/code2color -> code2color-0.2
 _eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_unpack:- src_prepare:- src_configure:- src_compile:- src_install:-
-_md5_=1e1620ca1fc57d54bac1326dd68970f3
+_md5_=227b509f2546b206db3793523e4285d6

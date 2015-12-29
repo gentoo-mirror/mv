@@ -10,4 +10,4 @@ SLOT=0
 SRC_URI=https://github.com/vaeth/logclean/archive/9.8.tar.gz -> logclean-9.8.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=eutils	d9bd2ddd85a58e470b49ca997e255a4c	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
-_md5_=be60172c382d121e04e48d34642deed4
+_md5_=79e6840c8fdbc95d01e5ddb9c27a82e7

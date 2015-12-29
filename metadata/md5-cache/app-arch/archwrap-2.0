@@ -9,4 +9,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/archwrap/archive/v2.0.tar.gz -> archwrap-2.0.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=8cb5347cfe72c60e31069ff253145e79
+_md5_=488138288ce05f6d2a51a3436371168b

@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www-zeuthen.desy.de/~friebel/unix/less/lesspipe-1.83.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
-_md5_=953e53ede36b6c97036119efb86431a6
+_md5_=9ec4247515e7c706e14d82e2d33f4acf
