@@ -1,6 +1,6 @@
 DEFINED_PHASES=install unpack
 DEPEND=app-arch/unzip
-DESCRIPTION=Mozilla plugin: Increases privacy and security by giving you control over cross-site requests
+DESCRIPTION=Mozilla plugin: controll cross-site requests (increases privacy/security)
 EAPI=6
 HOMEPAGE=https://www.requestpolicy.com/
 IUSE=browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
@@ -13,4 +13,4 @@ SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/9727/requestpolicy-0.5.28-sm+fx.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
 _eclasses_=mv_mozextension-r1	336c3fe7f76b3be6ca19e60ff462332d
-_md5_=8055adaadbdf89fd3228b4f598593915
+_md5_=594295522288da1e2079797917193588

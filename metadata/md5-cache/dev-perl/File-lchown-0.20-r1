@@ -3,7 +3,7 @@ DEPEND=dev-perl/ExtUtils-CChecker dev-perl/Module-Build dev-lang/perl:=
 DESCRIPTION=Use the lchown(2) and lutimes(2) system call from Perl
 EAPI=6
 HOMEPAGE=http://search.cpan.org/dist/File-lchown/
-KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-lang/perl:=
 RESTRICT=mirror
@@ -11,4 +11,4 @@ SLOT=0
 SRC_URI=mirror://cpan/authors/id/P/PE/PEVANS/File-lchown-0.02.tar.gz
 _eclass_exported_funcs=src_prepare:perl-module src_configure:perl-module src_compile:perl-module src_test:perl-module src_install:perl-module
 _eclasses_=multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	15aff0b9cba2282790142295ceb6be0c	perl-module	b2108b3c85ac7a6a6a9b035b54f6813c
-_md5_=2dc6666559e6ee1b6446b180c002e52b
+_md5_=ac4b42ded00c0be00eafefb219ca07a9

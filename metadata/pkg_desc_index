@@ -1,6 +1,6 @@
 app-accessibility/gespeaker 0.8.6: A GTK+ frontend for espeak
 app-admin/checksec 1.5: Check for hardened protections like RELRO, NoExec, Stack protection, ASLR, PIE
-app-admin/sudox 3.20: sudox is a wrapper for sudo which can pass X authority data and deal with screen and tmux
+app-admin/sudox 3.20: wrapper for sudo which can pass X authority data and deal with screen and tmux
 app-arch/archwrap 2.0: A collection of POSIX shell scripts to invoke archiver programs
 app-arch/bzwc 2.18: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
 app-dicts/stardict-dictd-BritannicaConcise 2.4.2: Stardict Dictionary for Dictd.org's The Britannica Concise Encyclopedia
@@ -22,7 +22,7 @@ app-portage/trickyfetch 8.7: Plugin for FETCHCOMMAND to help organize and cleanu
 app-portage/useflags 3.4: Print or save the current USE-flag state and compare with older versions
 app-portage/world-mv 3.14: Organize your world file and find installed packages or differences to @world
 app-shells/auto-fu-zsh 0.0.1.12-r4 99999999: zsh automatic complete-word and list-choices: incremental completion
-app-shells/command-not-found 0.4.5: If a command is not found (bash/zsh), search ARCH database for packages with similar commands
+app-shells/command-not-found 0.4.5: search ARCH database for packages with similar commands
 app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/runtitle 2.7: Scripts to run commands and set the hard status line (windows title)
 app-shells/set_prompt 1.24: An intelligent prompt for zsh or bash with status line (window title) support
@@ -35,7 +35,7 @@ app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
 app-text/stardict 3.0.6-r2: A international dictionary supporting fuzzy and glob style matching
 dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
 dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from Perl
-dev-tex/chklref 2.6.0: Finds out useless references in latex files or numbered environments that should not be
+dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
 dev-util/ccache 99999999: fast compiler cache
 dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
 dev-util/mv_perl 2.50: A collection of perl scripts (replacement in files, syncing dirs etc)
@@ -54,27 +54,27 @@ sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
 sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
 sys-apps/cpi 2.10: A wrapper for cp -i -a, making use of diff
 sys-apps/less 481: Excellent text file viewer, optionally with additional selection feature
-sys-apps/lesspipe 1.83: Wolfgang Friebel's preprocessor for sys-apps/less. Append colon to filename to disable
+sys-apps/lesspipe 1.83: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
 sys-apps/openrc-wrapper 1.7: Use openrc init scripts with systemd or other init systems
 sys-apps/schedule 7.2.0: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 2.15: POSIX shell script and function to schedule commands
 sys-block/zram-init 3.6: Scripts to support compressed swap devices or ramdisks with zram
 sys-fs/aufs 99999999: An entirely re-designed and re-implemented Unionfs
 sys-fs/aufs-util 99999999: Userspace tools for aufs
-sys-fs/emount 2.8.3: mount/unmount (and create/remove) dm-crypt filesystems according to your /etc/fstab
+sys-fs/emount 2.8.3: mount/unmount create/remove dm-crypt filesystems according to your /etc/fstab
 sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-fs/squashfs-tools 4.3: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 12.2.0: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 1.41: A POSIX shell script to compile the kernel with user permissions
-www-plugins/classic-theme-restorer 1.4.5: Firefox plugin: restore partially the functionality of non-broken firefox versions
+www-plugins/classic-theme-restorer 1.4.5: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 0.4.6-r1: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.6-r1: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.4-r1: Edit the saved history of forms in mozilla
 www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
 www-plugins/noscript 2.7: Mozilla plugin: Restrict active contents like java/javascript/flash
-www-plugins/requestpolicy 0.5.28-r1: Mozilla plugin: Increases privacy and security by giving you control over cross-site requests
+www-plugins/requestpolicy 0.5.28-r1: Mozilla plugin: controll cross-site requests (increases privacy/security)
 www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascript and html5
 www-plugins/stylish 2.0.4: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
 www-plugins/xclear 1.8-r2: Firefox plugin: button to clear URL
 x11-drivers/nvidia-drivers 173.14.39-r1: NVIDIA Accelerated Graphics Driver
-x11-themes/fvwm-crystal 3.3.2-r1: Configurable and full featured FVWM theme, with lots of transparency and freedesktop compatible menu
+x11-themes/fvwm-crystal 3.3.2-r1: Configurable FVWM theme with transparency and freedesktop compatible menu
