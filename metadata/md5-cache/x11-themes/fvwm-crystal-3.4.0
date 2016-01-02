@@ -8,7 +8,7 @@ LICENSE=GPL-2
 RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] x11-misc/xdg-user-dirs >=x11-wm/fvwm-2.6.5[png] || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) || ( >=x11-misc/stalonetray-0.6.2-r2 x11-misc/trayer ) || ( x11-misc/hsetroot media-gfx/feh ) sys-apps/sed sys-devel/bc virtual/awk x11-apps/xwd
 RESTRICT=mirror
 SLOT=0
-SRC_URI=mirror://sourceforge/fvwm-crystal/fvwm-crystal-3.3.2.tar.gz
+SRC_URI=mirror://sourceforge/fvwm-crystal/fvwm-crystal-3.4.0.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_install:-
 _eclasses_=eutils	d9bd2ddd85a58e470b49ca997e255a4c	multibuild	742139c87a9fa3766f0c2b155e5522bf	multilib	3972ca401cf7dbb430df9995f5d8d580	python-r1	0f6937650a475d673baa5d0c8c0b37b3	python-utils-r1	30887c5e8630bbf27b5cf0fd74564323	readme.gentoo-r1	5aa4a25954645ec5a58dde64a5d65a60	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
 _md5_=f8320e27b469dc9bd7d746ac824c12ec
