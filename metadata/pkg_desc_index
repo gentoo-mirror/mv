@@ -40,7 +40,7 @@ dev-util/ccache 99999999: fast compiler cache
 dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
 dev-util/mv_perl 2.50: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
-games-rpg/m5figur-mv 2.5: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
+games-rpg/m5figur-mv 2.6: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
 media-tv/sundtek-tv 151229.171911: Sundtek MediaTV Pro III Drivers
