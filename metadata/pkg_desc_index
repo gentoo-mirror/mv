@@ -78,4 +78,4 @@ www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascr
 www-plugins/stylish 2.0.4: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
 www-plugins/xclear 1.8-r2: Firefox plugin: button to clear URL
 x11-drivers/nvidia-drivers 173.14.39-r1: NVIDIA Accelerated Graphics Driver
-x11-themes/fvwm-crystal 3.4.0 99999999: Configurable FVWM theme with transparency and freedesktop compatible menu
+x11-themes/fvwm-crystal 3.4.1 99999999: Configurable FVWM theme with transparency and freedesktop compatible menu
