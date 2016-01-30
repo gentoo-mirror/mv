@@ -17,7 +17,7 @@ app-portage/eix 99999999: Search and query ebuilds, portage incl. local settings
 app-portage/find_cruft 3.0.7: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 9.8-r1: Keep only (compressed) logs of installed packages and cleanup emerge.log
-app-portage/portage-bashrc-mv 13.6: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
+app-portage/portage-bashrc-mv 13.7: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
 app-portage/trickyfetch 8.7: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 3.4: Print or save the current USE-flag state and compare with older versions
 app-portage/world-mv 3.14: Organize your world file and find installed packages or differences to @world
@@ -26,7 +26,7 @@ app-shells/command-not-found 0.4.5: search ARCH database for packages with simil
 app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/runtitle 2.7: Scripts to run commands and set the hard status line (windows title)
 app-shells/set_prompt 1.24: An intelligent prompt for zsh or bash with status line (window title) support
-app-shells/termcolors-mv 3.11: 256colors sample script and dircolors configuration for standard or 256 colors
+app-shells/termcolors-mv 3.12: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.2 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.12.0-r2 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.0 99999999: Fish shell like syntax highlighting for zsh
@@ -43,12 +43,12 @@ dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many fil
 games-rpg/m5figur-mv 2.6: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
-media-tv/sundtek-tv 151229.171911: Sundtek MediaTV Pro III Drivers
+media-tv/sundtek-tv 160126.171337: Sundtek MediaTV Pro III Drivers
 media-video/video-mv 9.2: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
 net-dns/noip-updater 2.1.9-r2: no-ip.com dynamic DNS updater
-net-firewall/firewall-mv 9.0: Initialize iptables and net-related sysctl variables
+net-firewall/firewall-mv 9.1: Initialize iptables and net-related sysctl variables
 net-misc/sshstart 2.15: Start ssh-agent/ssh-add only if you really use ssh or friends
 net-print/foo2zjs 20081129-r1: Support for printing to ZjStream-based printers. Fixes bug 271079
 sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
@@ -67,7 +67,7 @@ sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for po
 sys-fs/squashfs-tools 4.3 99999999: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 12.2.0: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 1.41: A POSIX shell script to compile the kernel with user permissions
-www-plugins/classic-theme-restorer 1.4.6: Firefox plugin: restore partially the functionality of non-broken firefox
+www-plugins/classic-theme-restorer 1.4.6.1: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 0.4.6-r1: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.7: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.4-r1: Edit the saved history of forms in mozilla
@@ -75,7 +75,7 @@ www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
 www-plugins/noscript 2.9.0.2: Mozilla plugin: Restrict active contents like java/javascript/flash
 www-plugins/requestpolicy 0.5.28-r1: Mozilla plugin: controll cross-site requests (increases privacy/security)
 www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascript and html5
-www-plugins/stylish 2.0.5: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
+www-plugins/stylish 2.0.6: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
 www-plugins/xclear 1.8-r2: Firefox plugin: button to clear URL
 x11-drivers/nvidia-drivers 173.14.39-r1: NVIDIA Accelerated Graphics Driver
 x11-themes/fvwm-crystal 3.4.1 99999999: Configurable FVWM theme with transparency and freedesktop compatible menu
