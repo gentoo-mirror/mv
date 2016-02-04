@@ -47,7 +47,7 @@ media-tv/sundtek-tv 160126.171337: Sundtek MediaTV Pro III Drivers
 media-video/video-mv 9.2: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
-net-dns/noip-updater 2.1.9-r2: no-ip.com dynamic DNS updater
+net-dns/noip-updater 2.1.9-r3: no-ip.com dynamic DNS updater
 net-firewall/firewall-mv 9.1: Initialize iptables and net-related sysctl variables
 net-misc/sshstart 2.15: Start ssh-agent/ssh-add only if you really use ssh or friends
 net-print/foo2zjs 20081129-r1: Support for printing to ZjStream-based printers. Fixes bug 271079
