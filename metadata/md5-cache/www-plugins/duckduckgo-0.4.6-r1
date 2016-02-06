@@ -12,5 +12,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_plus-0.4.6-fx.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	336c3fe7f76b3be6ca19e60ff462332d
+_eclasses_=mv_mozextension-r1	d1176a8dab0875caebd83489c511bc9f
 _md5_=9654a1bd0440baf75aee228a123e7372
