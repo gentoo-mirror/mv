@@ -12,5 +12,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://addons.cdn.mozilla.net/user-media/addons/12021/form_history_control-1.4.0.4-sm+fx.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	d1176a8dab0875caebd83489c511bc9f
+_eclasses_=mv_mozextension-r1	3a6c798fe4fb3be151edc917fb4db076
 _md5_=33872f8e8a1f112d94cb4e6b811a2049

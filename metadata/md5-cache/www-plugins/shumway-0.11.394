@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_palemoon browser_p
 SLOT=0
 SRC_URI=http://mozilla.github.io/shumway/extension/firefox/shumway.xpi -> shumway-0.11.394.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	d1176a8dab0875caebd83489c511bc9f
+_eclasses_=mv_mozextension-r1	3a6c798fe4fb3be151edc917fb4db076
 _md5_=ecde7c0b1ca884119eeec3a01d61a2f2
