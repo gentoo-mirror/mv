@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare test
+DEPEND=test? ( dev-python/demjson dev-libs/libxml2 )
+DESCRIPTION=Tool to check properties of executables (e.g. ASLR/PIE, RELRO, PaX, Canaries)
+EAPI=6
+HOMEPAGE=https://github.com/slimm609/checksec.sh
+IUSE=test update
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/slimm609/checksec.sh/archive/1.7.4.tar.gz -> checksec-1.7.4.tar.gz
+_eclass_exported_funcs=src_prepare:- src_test:- src_install:-
+_md5_=46e59b71a22d24976fdac8232f31bb93
