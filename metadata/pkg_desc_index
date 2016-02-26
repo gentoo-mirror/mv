@@ -30,7 +30,7 @@ app-shells/termcolors-mv 3.12: 256colors sample script and dircolors configurati
 app-shells/zsh 5.2 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.15.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
-app-shells/zshrc-mv 2.29: A zshrc file initializing zsh specific interactive features
+app-shells/zshrc-mv 2.30: A zshrc file initializing zsh specific interactive features
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
 app-text/stardict 3.0.6-r2: A international dictionary supporting fuzzy and glob style matching
 dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
