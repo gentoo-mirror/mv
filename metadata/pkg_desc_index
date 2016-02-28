@@ -28,7 +28,7 @@ app-shells/runtitle 2.7: Scripts to run commands and set the hard status line (w
 app-shells/set_prompt 1.24: An intelligent prompt for zsh or bash with status line (window title) support
 app-shells/termcolors-mv 3.12: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.2 99999999: UNIX Shell similar to the Korn shell
-app-shells/zsh-completions 0.15.0 99999999: Additional completion definitions for Zsh
+app-shells/zsh-completions 0.16.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 2.30: A zshrc file initializing zsh specific interactive features
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
