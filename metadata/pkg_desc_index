@@ -58,7 +58,7 @@ sys-apps/cpi 2.10: A wrapper for cp -i -a, making use of diff
 sys-apps/less 481: Excellent text file viewer, optionally with additional selection feature
 sys-apps/lesspipe 1.83: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
 sys-apps/openrc-wrapper 1.7: Use openrc init scripts with systemd or other init systems
-sys-apps/schedule 7.2.0: script to schedule jobs in a multiuser multitasking environment
+sys-apps/schedule 7.2.1: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 2.15: POSIX shell script and function to schedule commands
 sys-block/zram-init 3.6: Scripts to support compressed swap devices or ramdisks with zram
 sys-fs/aufs 99999999: An entirely re-designed and re-implemented Unionfs
