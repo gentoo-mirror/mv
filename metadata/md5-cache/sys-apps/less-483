@@ -9,6 +9,6 @@ LICENSE=|| ( GPL-3 BSD-2 )
 PDEPEND=lesspipe? ( sys-apps/lesspipe )
 RDEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2:0= pcre? ( dev-libs/libpcre ) less-select? ( dev-lang/perl )
 SLOT=0
-SRC_URI=http://www.greenwoodsoftware.com/less/less-481.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.6.tar.gz -> less-select-2.6.tar.gz ) http://www-zeuthen.desy.de/~friebel/unix/less/code2color -> code2color-0.2
+SRC_URI=http://www.greenwoodsoftware.com/less/less-483.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.6.tar.gz -> less-select-2.6.tar.gz ) http://www-zeuthen.desy.de/~friebel/unix/less/code2color -> code2color-0.2
 _eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_unpack:- src_prepare:- src_configure:- src_compile:- src_install:-
 _md5_=0229936d34152633001b8d9684680b40
