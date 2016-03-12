@@ -28,7 +28,7 @@ app-shells/runtitle 2.7: Scripts to run commands and set the hard status line (w
 app-shells/set_prompt 1.24: An intelligent prompt for zsh or bash with status line (window title) support
 app-shells/termcolors-mv 3.12: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.2 99999999: UNIX Shell similar to the Korn shell
-app-shells/zsh-completions 0.16.0 99999999: Additional completion definitions for Zsh
+app-shells/zsh-completions 0.17.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 2.30: A zshrc file initializing zsh specific interactive features
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
@@ -72,7 +72,7 @@ sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for po
 sys-fs/squashfs-tools 4.3 99999999: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 12.2.2: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 1.42: A POSIX shell script to compile the kernel with user permissions
-www-plugins/classic-theme-restorer 1.4.8: Firefox plugin: restore partially the functionality of non-broken firefox
+www-plugins/classic-theme-restorer 1.4.9: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 0.5.1: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.8: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.4-r1: Edit the saved history of forms in mozilla
