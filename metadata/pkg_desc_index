@@ -31,6 +31,7 @@ app-shells/zsh 5.2 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.17.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 2.30: A zshrc file initializing zsh specific interactive features
+app-text/lesspipe 1.83: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
 app-text/stardict 3.0.6-r2: A international dictionary supporting fuzzy and glob style matching
 dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
@@ -59,8 +60,7 @@ net-print/foo2zjs 20081129-r1: Support for printing to ZjStream-based printers. 
 sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
 sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
 sys-apps/cpi 2.10: A wrapper for cp -i -a, making use of diff
-sys-apps/less 483: Excellent text file viewer, optionally with additional selection feature
-sys-apps/lesspipe 1.83: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
+sys-apps/less 483-r1: Excellent text file viewer, optionally with additional selection feature
 sys-apps/openrc-wrapper 1.7: Use openrc init scripts with systemd or other init systems
 sys-apps/schedule 7.2.1: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 2.15: POSIX shell script and function to schedule commands
