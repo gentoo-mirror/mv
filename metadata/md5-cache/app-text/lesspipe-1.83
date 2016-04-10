@@ -11,4 +11,4 @@ REQUIRED_USE=!rpm2targz? ( rpm? ( cpio ) ) ooffice? ( || ( html2text links lynx 
 SLOT=0
 SRC_URI=https://www-zeuthen.desy.de/~friebel/unix/less/lesspipe-1.83.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_install:-
-_md5_=e9d647a8b7bf462b7bf2fb83782f7cc0
+_md5_=bf16eaa62a3a5c90f8184694f24328b2
