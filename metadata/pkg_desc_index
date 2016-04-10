@@ -31,7 +31,7 @@ app-shells/zsh 5.2 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.17.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 2.30: A zshrc file initializing zsh specific interactive features
-app-text/lesspipe 1.83: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
+app-text/lesspipe 1.83 99999999: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
 app-text/stardict 3.0.6-r2: A international dictionary supporting fuzzy and glob style matching
 dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
@@ -39,7 +39,7 @@ dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from 
 dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
 dev-util/ccache 99999999: fast compiler cache
 dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
-dev-util/mv_perl 2.53: A collection of perl scripts (replacement in files, syncing dirs etc)
+dev-util/mv_perl 2.55: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r1: Multiple Arcade Machine Emulator for X11
