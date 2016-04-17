@@ -16,7 +16,7 @@ app-emacs/mv_emacs 1.2: (X)Emacs extensions: block support, macrorecorder, verif
 app-portage/eix 99999999: Search and query ebuilds, portage incl. local settings, ext. overlays and more
 app-portage/find_cruft 3.0.8: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
-app-portage/logclean 10.0.1: Keep only (compressed) logs of installed packages and cleanup emerge.log
+app-portage/logclean 10.0.2: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/portage-bashrc-mv 13.9: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
 app-portage/trickyfetch 8.8: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 3.4: Print or save the current USE-flag state and compare with older versions
