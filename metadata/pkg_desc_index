@@ -16,7 +16,7 @@ app-emacs/mv_emacs 1.2: (X)Emacs extensions: block support, macrorecorder, verif
 app-portage/eix 99999999: Search and query ebuilds, portage incl. local settings, ext. overlays and more
 app-portage/find_cruft 3.0.8: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
-app-portage/logclean 10.0.2: Keep only (compressed) logs of installed packages and cleanup emerge.log
+app-portage/logclean 11.0.1: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/portage-bashrc-mv 13.9: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
 app-portage/trickyfetch 8.8: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 3.4: Print or save the current USE-flag state and compare with older versions
@@ -39,7 +39,7 @@ dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from 
 dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
 dev-util/ccache 99999999: fast compiler cache
 dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
-dev-util/mv_perl 2.57: A collection of perl scripts (replacement in files, syncing dirs etc)
+dev-util/mv_perl 2.58: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r1: Multiple Arcade Machine Emulator for X11
