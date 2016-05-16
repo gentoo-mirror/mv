@@ -38,7 +38,7 @@ dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an ema
 dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from Perl
 dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
 dev-util/ccache 99999999: fast compiler cache
-dev-util/comp 4.0.0-r1: compare files or directories, including metadata
+dev-util/comp 4.1.0: compare files or directories, including metadata
 dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
 dev-util/mv_perl 3.0-r1: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
