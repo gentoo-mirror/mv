@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=system-libschily? ( app-cdr/cdrtools ) !system-libschily? ( !app-cdr/cdrtools ) schilytools_match? ( system-star? ( app-arch/star ) !system-star? ( !app-arch/star ) ) schilytools_calc? ( !renameschily_calc? ( !sci-mathematics/calc ) ) schilytools_compare? ( !renameschily_compare? ( !media-gfx/imagemagick !media-gfx/graphicsmagick[imagemagick] ) ) schilytools_count? ( !renameschily_count? ( !sys-devel/llvm ) ) schilytools_bosh? ( !renameschily_jsh? ( !app-shells/heirloom-sh ) ) schilytools_man2html? ( !renameschily_man2html? ( !sys-apps/man ) ) schilytools_p? ( !renameschily_p? ( !dev-util/wiggle ) ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) xattr? ( sys-apps/attr ) sys-devel/gnuconfig
+DESCRIPTION=A modern enhanced and POSIX compliant Bourne Shell
+EAPI=6
+HOMEPAGE=http://schilytools.sourceforge.net/bosh.htm
+IUSE=acl caps system-libschily system-star xattr +renameschily_calc +renameschily_compare +renameschily_count +renameschily_jsh +renameschily_man2html +renameschily_p +schilytools_bosh +schilytools_calc +schilytools_calltree +schilytools_change +schilytools_compare +schilytools_copy +schilytools_count +schilytools_cstyle +schilytools_cut schilytools_label +schilytools_lndir +schilytools_man2html +schilytools_match +schilytools_mdigest schilytools_mountcd +schilytools_osh +schilytools_p +schilytools_paste +schilytools_patch schilytools_pxupgrade +schilytools_sfind schilytools_termcap +schilytools_translit +schilytools_udiff
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 LGPL-2.1 CDDL-Schily
+RDEPEND=system-libschily? ( app-cdr/cdrtools ) !system-libschily? ( !app-cdr/cdrtools ) schilytools_match? ( system-star? ( app-arch/star ) !system-star? ( !app-arch/star ) ) schilytools_calc? ( !renameschily_calc? ( !sci-mathematics/calc ) ) schilytools_compare? ( !renameschily_compare? ( !media-gfx/imagemagick !media-gfx/graphicsmagick[imagemagick] ) ) schilytools_count? ( !renameschily_count? ( !sys-devel/llvm ) ) schilytools_bosh? ( !renameschily_jsh? ( !app-shells/heirloom-sh ) ) schilytools_man2html? ( !renameschily_man2html? ( !sys-apps/man ) ) schilytools_p? ( !renameschily_p? ( !dev-util/wiggle ) ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) xattr? ( sys-apps/attr )
+SLOT=0
+SRC_URI=mirror://sourceforge/schilytools/schily-2016-05-24.tar.bz2
+_eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_install:-
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	gnuconfig	3920de1188fc7bfee873515453ed1d10	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_md5_=c02a5d2f9ea2b617d3a6ae3a9cb46e43
