@@ -3,7 +3,7 @@ app-admin/checksec 1.7.4 99999999: Tool to check properties of executables (e.g.
 app-admin/sudox 3.20: wrapper for sudo which can pass X authority data and deal with screen and tmux
 app-arch/archwrap 2.0: A collection of POSIX shell scripts to invoke archiver programs
 app-arch/bzwc 2.18: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
-app-cdr/xcdroast 0.98_alpha16-r1: Lightweight cdrtools front-end for CD and DVD writing
+app-cdr/xcdroast 0.98_alpha16-r2: Lightweight cdrtools front-end for CD and DVD writing
 app-dicts/stardict-dictd-BritannicaConcise 2.4.2: Stardict Dictionary for Dictd.org's The Britannica Concise Encyclopedia
 app-dicts/stardict-dictd-cced 2.4.2: Stardict Dictionary for Dictd.org's Collins Cobuild English Dictionary
 app-dicts/stardict-dictd-longman 2.4.2: Stardict Dictionary for Dictd.org's Longman Dictionary of Contemporary English
