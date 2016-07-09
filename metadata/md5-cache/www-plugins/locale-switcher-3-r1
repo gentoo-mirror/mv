@@ -12,5 +12,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/356/locale_switcher-3-fx.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	ce88aa7065fd4ec902683bb43358e3cb
+_eclasses_=mv_mozextension-r1	f8d18e108636392800cab40c5afd8f0f
 _md5_=748ed35eedc6cb37b1a0a8964b5110b8
