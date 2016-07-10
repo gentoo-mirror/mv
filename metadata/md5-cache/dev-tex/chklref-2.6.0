@@ -11,4 +11,4 @@ SLOT=0
 SRC_URI=http://www-ljk.imag.fr/membres/Jerome.Lelong/soft/chklref/chklref-2.6.0.tar.gz
 _eclass_exported_funcs=pkg_postrm:latex-package pkg_postinst:latex-package src_prepare:- src_configure:- src_compile:- src_install:-
 _eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	latex-package	e1ad4a8d21d1038232597822352b9d0e	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
-_md5_=e65dc0a4b1648c754a708eb7a8cadf08
+_md5_=5d5ebc01e85a82a1bf1bfcd4500cc889

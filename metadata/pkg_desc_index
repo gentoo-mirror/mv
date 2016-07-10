@@ -59,7 +59,7 @@ net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing suppo
 net-dns/noip-updater 2.1.9-r4: no-ip.com dynamic DNS updater
 net-firewall/firewall-mv 9.4: Initialize iptables and net-related sysctl variables
 net-misc/sshstart 2.15: Start ssh-agent/ssh-add only if you really use ssh or friends
-net-print/foo2zjs 20081129-r1: Support for printing to ZjStream-based printers. Fixes bug 271079
+net-print/foo2zjs 20160603: Support for printing to ZjStream-based printers
 sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
 sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
 sys-apps/cpi 2.11: A wrapper for cp -i -a, making use of diff

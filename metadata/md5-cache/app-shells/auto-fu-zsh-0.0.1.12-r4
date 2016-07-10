@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/hchbaw/auto-fu.zsh/archive/v0.0.1.12.tar.gz -> auto-fu-zsh-0.0.1.12.tar.gz
 _eclass_exported_funcs=src_prepare:- src_compile:- src_install:-
-_md5_=a5adc7fa74ecb5e2b3f3ce94c6a0d274
+_md5_=898d745b7957a2f8e30011ef948151a8
