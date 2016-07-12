@@ -7,6 +7,6 @@ LICENSE=BSD
 RDEPEND=app-shells/push >=app-shells/runtitle-2.3
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/starter/archive/v2.16.tar.gz -> starter-2.16.tar.gz
+SRC_URI=https://github.com/vaeth/starter/archive/v2.17.tar.gz -> starter-2.17.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
 _md5_=e98f30075825767fa7f11ccbec9dbc99
