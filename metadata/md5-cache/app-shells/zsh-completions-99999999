@@ -2,11 +2,11 @@ DEFINED_PHASES=install postinst prepare unpack
 DEPEND=>=dev-vcs/git-1.8.2.1
 DESCRIPTION=Additional completion definitions for Zsh
 EAPI=6
-HOMEPAGE=https://gentoo.org/zsh-users/zsh-completions/
+HOMEPAGE=https://github.com/zsh-users/zsh-completions/
 IUSE=+completion_Android +completion_Google +completion_Unix +completion_backup +completion_database +completion_dev +completion_disk +completion_distribute +completion_git +completion_go +completion_gtk +completion_hardware +completion_haskell +completion_managers +completion_multimedia +completion_net +completion_nfs +completion_perl +completion_python +completion_ruby +completion_search +completion_session +completion_subtitles +completion_virtualization +completion_web
 LICENSE=ZSH
 PROPERTIES=live
 SLOT=0
 _eclass_exported_funcs=pkg_postinst:- src_unpack:git-r3 src_prepare:- src_install:-
 _eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	git-r3	00f60a84fc7b499c99edfe99caea9f95	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
-_md5_=9807836ffb6bd8ac599359982f4a942d
+_md5_=ba391d6ec92adef1d76975554c2476fb
