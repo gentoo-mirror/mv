@@ -1,6 +1,6 @@
 app-accessibility/gespeaker 0.8.6: A GTK+ frontend for espeak
 app-admin/checksec 1.7.4 99999999: Tool to check properties of executables (e.g. ASLR/PIE, RELRO, PaX, Canaries)
-app-admin/sudox 3.22: wrapper for sudo which can pass X authority data and deal with screen and tmux
+app-admin/sudox 3.23: wrapper for sudo which can pass X authority data and deal with screen and tmux
 app-arch/archwrap 2.2: A collection of POSIX shell scripts to invoke archiver programs
 app-arch/bzwc 2.19: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
 app-dicts/stardict-dictd-BritannicaConcise 2.4.2: Stardict Dictionary for Dictd.org's The Britannica Concise Encyclopedia
@@ -26,7 +26,7 @@ app-shells/command-not-found 0.4.5: search ARCH database for packages with simil
 app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/push 1.9: A POSIX shell function to treat a variable like an array, quoting args
 app-shells/runtitle 2.9: Scripts to run commands and set the hard status line (windows title)
-app-shells/schily-tools 2016.07.25-r1: A modern enhanced and POSIX compliant Bourne Shell
+app-shells/schily-tools 2016.07.25-r2: A modern enhanced and POSIX compliant Bourne Shell
 app-shells/set_prompt 1.25: An intelligent prompt for zsh or bash with status line (window title) support
 app-shells/termcolors-mv 3.13: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.2 99999999: UNIX Shell similar to the Korn shell
