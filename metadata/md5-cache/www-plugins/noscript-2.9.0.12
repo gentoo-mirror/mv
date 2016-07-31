@@ -12,5 +12,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://secure.informaction.com/download/releases/noscript-2.9.0.12.xpi https://addons.cdn.mozilla.net/user-media/addons/722/noscript_security_suite-2.9.0.12-fx+fn+sm.xpi -> noscript-2.9.0.12.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	3b21ea88bcbe1f1112d90968ef319afd
-_md5_=b0fd687316efce222ed532dd90f7e7b9
+_eclasses_=mv_mozextension-r1	991d197382ab9911edc374491d23d37e
+_md5_=795379c6e09d47ef95d1aafddf1e903f

@@ -8,4 +8,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/world/archive/v3.15.tar.gz -> world-mv-3.15.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=a484af51b132b784b7df02bc1fd6ec72
+_md5_=1126a23cb413125e5195a7048bd1dc96

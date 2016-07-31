@@ -9,4 +9,4 @@ SLOT=0
 SRC_URI=http://linux01.gwdg.de/~nlissne/getdelta-0.7.8.tar.bz2
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=readme.gentoo-r1	03878c06495db70bc36bd717383c09f7
-_md5_=c121d7e8e0e1e7c647fb5850b2b69eca
+_md5_=55204aaddf0ab603c9c3a245777fe538

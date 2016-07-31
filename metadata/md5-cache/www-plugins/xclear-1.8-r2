@@ -12,5 +12,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/13078/xclear-1.8-sm+fx.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	3b21ea88bcbe1f1112d90968ef319afd
-_md5_=69c47c128907b694af1dbd8ac57a2a26
+_eclasses_=mv_mozextension-r1	991d197382ab9911edc374491d23d37e
+_md5_=13f1ea5780cfaa86ec8a37805b447189

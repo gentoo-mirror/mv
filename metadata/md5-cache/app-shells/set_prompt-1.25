@@ -8,4 +8,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/set_prompt/archive/v1.25.tar.gz -> set_prompt-1.25.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=ef2f96b0c4b9619ff908b0a7cb1fb3f6
+_md5_=112f02196a6bcfea8d50d52ab25fa1ff

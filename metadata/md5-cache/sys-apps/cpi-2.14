@@ -8,4 +8,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/cpi/archive/v2.14.tar.gz -> cpi-2.14.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=54084275197538a207d096d418d16857
+_md5_=06c055f6cbcf7cb06fdf18a6a298d6a3

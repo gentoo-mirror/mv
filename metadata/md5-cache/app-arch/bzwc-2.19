@@ -9,4 +9,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/bzwc/archive/v2.19.tar.gz -> bzwc-2.19.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=6b9a2eb4a827e47d5b8c185c91365eb3
+_md5_=fe7bfac15f8b2184a8f00e312443844d

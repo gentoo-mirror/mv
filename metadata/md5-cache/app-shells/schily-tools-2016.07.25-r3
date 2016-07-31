@@ -12,4 +12,4 @@ SLOT=0
 SRC_URI=mirror://sourceforge/schilytools/schily-2016-07-25.tar.bz2 mirror://sourceforge/schilytools/schily-2016-07-25.patch mirror://sourceforge/schilytools/schily-2016-07-25-patch2 mirror://sourceforge/schilytools/schily-2016-07-25-patch3
 _eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_install:-
 _eclasses_=gnuconfig	3920de1188fc7bfee873515453ed1d10	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
-_md5_=b64afa3d18a754b8142997f8425239bc
+_md5_=19f3c99c1804dd2dc9263e66fca16ced
