@@ -70,7 +70,7 @@ sys-apps/less 483-r2: Excellent text file viewer, optionally with additional sel
 sys-apps/openrc-wrapper 1.8: Use openrc init scripts with systemd or other init systems
 sys-apps/schedule 7.3.0: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 2.18: POSIX shell script and function to schedule commands
-sys-block/zram-init 3.7: Scripts to support compressed swap devices or ramdisks with zram
+sys-block/zram-init 3.8: Scripts to support compressed swap devices or ramdisks with zram
 sys-fs/aufs 99999999: An entirely re-designed and re-implemented Unionfs
 sys-fs/aufs-util 99999999: Userspace tools for aufs
 sys-fs/emount 3.0.1: mount/unmount create/remove dm-crypt filesystems according to your /etc/fstab
