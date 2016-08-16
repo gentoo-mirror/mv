@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure prepare
+DEFINED_PHASES=configure install prepare
 DEPEND=!static? ( libedit? ( dev-libs/libedit ) ) virtual/pkgconfig libedit? ( static? ( dev-libs/libedit[static-libs] ) )
 DESCRIPTION=Descendant of the NetBSD ash. Vanilla, without the gentoo XSI cripple patches
 EAPI=6
@@ -9,6 +9,6 @@ LICENSE=BSD
 RDEPEND=!static? ( libedit? ( dev-libs/libedit ) )
 SLOT=0
 SRC_URI=http://gondor.apana.org.au/~herbert/dash/files/dash-0.5.9.tar.gz
-_eclass_exported_funcs=src_prepare:- src_configure:-
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
-_md5_=2552c93fa947b06729f4bbdfbf27caed
+_eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	6198c04daba0e1307bd844df7d37f423	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=8c248cf31c305d9221c07ff8fdfa9201
