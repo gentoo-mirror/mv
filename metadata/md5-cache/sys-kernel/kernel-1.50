@@ -7,7 +7,7 @@ LICENSE=BSD
 RDEPEND=app-admin/sudo app-admin/sudox app-shells/push >=app-shells/runtitle-2.3 !<dev-util/ccache-3.2
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/kernel/archive/v1.49.tar.gz -> kernel-1.49.tar.gz
+SRC_URI=https://github.com/vaeth/kernel/archive/v1.50.tar.gz -> kernel-1.50.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
 _md5_=e5ccb3620d4f16c2f8758c30986e5fc2
