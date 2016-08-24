@@ -1,9 +1,9 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=!static? ( libedit? ( dev-libs/libedit ) ) virtual/pkgconfig libedit? ( static? ( dev-libs/libedit[static-libs] ) )
-DESCRIPTION=Descendant of the NetBSD ash. Vanilla, without the gentoo XSI cripple patches
+DESCRIPTION=Descendant of the NetBSD ash. POSIX compliant except for multibyte characters
 EAPI=6
 HOMEPAGE=http://gondor.apana.org.au/~herbert/dash/
-IUSE=libedit static
+IUSE=cripple libedit static
 KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=BSD
 RDEPEND=!static? ( libedit? ( dev-libs/libedit ) )
@@ -11,4 +11,4 @@ SLOT=0
 SRC_URI=http://gondor.apana.org.au/~herbert/dash/files/dash-0.5.9.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:- src_install:-
 _eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	6198c04daba0e1307bd844df7d37f423	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=8c248cf31c305d9221c07ff8fdfa9201
+_md5_=3af3f4886b1f921153cfa47638229cf0
