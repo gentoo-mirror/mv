@@ -19,7 +19,7 @@ app-portage/find_cruft 3.0.9: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 11.2.2: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/portage-bashrc-mv 13.12: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
-app-portage/portage-postsyncd-mv 0.02: postsync hooks for portage to sync from git
+app-portage/portage-postsyncd-mv 1.00: postsync hooks for portage to sync from git
 app-portage/trickyfetch 8.10: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 3.4: Print or save the current USE-flag state and compare with older versions
 app-portage/world-mv 3.15: Organize your world file and find installed packages or differences to @world
@@ -68,7 +68,7 @@ sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
 sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
 sys-apps/cpi 2.14: A wrapper for cp -i -a, making use of diff
 sys-apps/less 483-r2: Excellent text file viewer, optionally with additional selection feature
-sys-apps/openrc-wrapper 1.8: Use openrc init scripts with systemd or other init systems
+sys-apps/openrc-wrapper 2.00: Use openrc init scripts with systemd or other init systems
 sys-apps/schedule 7.3.0: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 2.18: POSIX shell script and function to schedule commands
 sys-block/zram-init 3.8: Scripts to support compressed swap devices or ramdisks with zram
