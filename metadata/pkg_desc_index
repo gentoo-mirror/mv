@@ -1,7 +1,7 @@
 app-accessibility/gespeaker 0.8.6: A GTK+ frontend for espeak
 app-admin/checksec 1.7.4 99999999: Tool to check properties of executables (e.g. ASLR/PIE, RELRO, PaX, Canaries)
 app-admin/sudox 3.23: wrapper for sudo which can pass X authority data and deal with screen and tmux
-app-arch/archwrap 2.2: A collection of POSIX shell scripts to invoke archiver programs
+app-arch/archwrap 2.3: A collection of POSIX shell scripts to invoke archiver programs
 app-arch/bzwc 2.19: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
 app-dicts/stardict-dictd-BritannicaConcise 2.4.2: Stardict Dictionary for Dictd.org's The Britannica Concise Encyclopedia
 app-dicts/stardict-dictd-cced 2.4.2: Stardict Dictionary for Dictd.org's Collins Cobuild English Dictionary
@@ -18,8 +18,8 @@ app-portage/etcat 1.0.1 99999999: Updated version of an old Portage information 
 app-portage/find_cruft 3.0.9: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 11.2.2: Keep only (compressed) logs of installed packages and cleanup emerge.log
-app-portage/portage-bashrc-mv 13.12: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
-app-portage/portage-postsyncd-mv 2.05: postsync hooks for portage to sync from git
+app-portage/portage-bashrc-mv 13.13: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
+app-portage/portage-postsyncd-mv 2.06: postsync hooks for portage to sync from git
 app-portage/trickyfetch 8.10: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 3.4: Print or save the current USE-flag state and compare with older versions
 app-portage/world-mv 3.15: Organize your world file and find installed packages or differences to @world
@@ -31,11 +31,11 @@ app-shells/push 1.9: A POSIX shell function to treat a variable like an array, q
 app-shells/runtitle 2.9: Scripts to run commands and set the hard status line (windows title)
 app-shells/schily-tools 2016.08.19: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
 app-shells/set_prompt 2.01: An intelligent prompt for zsh or bash with status line (window title) support
-app-shells/termcolors-mv 3.13: 256colors sample script and dircolors configuration for standard or 256 colors
+app-shells/termcolors-mv 3.14: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.2 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.19.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
-app-shells/zshrc-mv 2.30: A zshrc file initializing zsh specific interactive features
+app-shells/zshrc-mv 2.31: A zshrc file initializing zsh specific interactive features
 app-text/lesspipe 1.83 99999999: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
 app-text/stardict 3.0.6-r2: A international dictionary supporting fuzzy and glob style matching
@@ -55,8 +55,8 @@ games-rpg/aklabeth 1.0-r1: A remake of Richard C. Garriott's Ultima prequel
 games-rpg/m5figur-mv 2.6: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
-media-libs/avidemux-core 2.6.12: Core libraries for a video editor designed for simple cutting, filtering and encoding tasks
-media-libs/avidemux-plugins 2.6.12: Plugins for avidemux; a video editor designed for simple cutting, filtering and encoding tasks
+media-libs/avidemux-core 2.6.12: Core libraries for media-video/avidemux
+media-libs/avidemux-plugins 2.6.12: Plugins for media-video/avidemux
 media-tv/sundtek-tv 160822.223039: Sundtek MediaTV Pro III Drivers
 media-video/avidemux 2.6.12: Video editor designed for simple cutting, filtering and encoding tasks
 media-video/avinfo 1.0_alpha15_p1: Utility for displaying AVI information
@@ -71,7 +71,7 @@ sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
 sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
 sys-apps/cpi 2.14: A wrapper for cp -i -a, making use of diff
 sys-apps/less 483-r2: Excellent text file viewer, optionally with additional selection feature
-sys-apps/openrc-wrapper 2.00: Use openrc init scripts with systemd or other init systems
+sys-apps/openrc-wrapper 2.01: Use openrc init scripts with systemd or other init systems
 sys-apps/schedule 7.3.0: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 2.18: POSIX shell script and function to schedule commands
 sys-block/zram-init 3.8: Scripts to support compressed swap devices or ramdisks with zram
@@ -80,7 +80,7 @@ sys-fs/aufs-util 99999999: Userspace tools for aufs
 sys-fs/emount 3.0.1: mount/unmount create/remove dm-crypt filesystems according to your /etc/fstab
 sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-fs/squashfs-tools 4.3-r2 99999999: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
-sys-fs/squashmount 15.3.0: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
+sys-fs/squashmount 15.3.2: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 1.50: A POSIX shell script to compile the kernel with user permissions
 www-plugins/classic-theme-restorer 1.5.6: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 0.5.7: Firefox plugin: enable duckduckgo search engine
