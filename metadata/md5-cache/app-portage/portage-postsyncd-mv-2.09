@@ -7,6 +7,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/portage-postsyncd-mv/archive/v2.07.tar.gz -> portage-postsyncd-mv-2.07.tar.gz
+SRC_URI=https://github.com/vaeth/portage-postsyncd-mv/archive/v2.09.tar.gz -> portage-postsyncd-mv-2.09.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _md5_=fb1d1b0cb01890f8ee3f4092bdc2659b
