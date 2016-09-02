@@ -40,11 +40,13 @@ app-text/lesspipe 1.83 99999999: Wolfgang Friebel's preprocessor for sys-apps/le
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
 app-text/stardict 3.0.6-r2: A international dictionary supporting fuzzy and glob style matching
 dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
+dev-libs/glib 2.49.5: The GLib library of C routines
 dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from Perl
 dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
 dev-util/ccache 99999999: fast compiler cache
 dev-util/comp 4.1.0: compare files or directories, including metadata
 dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
+dev-util/gdbus-codegen 2.49.5: GDBus code and documentation generator
 dev-util/mv_perl 3.07: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
@@ -82,6 +84,7 @@ sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for po
 sys-fs/squashfs-tools 4.3-r2 99999999: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 15.3.2: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 1.50: A POSIX shell script to compile the kernel with user permissions
+virtual/freedesktop-icon-theme 0: A virtual to choose between different icon themes
 www-plugins/classic-theme-restorer 1.5.6: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 0.5.7: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.9: Firefox plugin for ebook (.epub) files
@@ -93,4 +96,5 @@ www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascr
 www-plugins/stylish 2.0.7: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
 www-plugins/xclear 1.8.2: Firefox plugin: button to clear URL
 x11-drivers/nvidia-drivers 173.14.39-r1: NVIDIA Accelerated Graphics Driver
+x11-libs/gtk+ 3.21.4: Gimp ToolKit +
 x11-themes/fvwm-crystal 3.4.1 99999999: Configurable FVWM theme with transparency and freedesktop compatible menu
