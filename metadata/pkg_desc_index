@@ -3,6 +3,7 @@ app-admin/checksec 1.7.4 99999999: Tool to check properties of executables (e.g.
 app-admin/sudox 3.23: wrapper for sudo which can pass X authority data and deal with screen and tmux
 app-arch/archwrap 2.3: A collection of POSIX shell scripts to invoke archiver programs
 app-arch/bzwc 2.19: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
+app-arch/paq8l 20070308: Open source file compressor and archiver
 app-dicts/stardict-dictd-BritannicaConcise 2.4.2: Stardict Dictionary for Dictd.org's The Britannica Concise Encyclopedia
 app-dicts/stardict-dictd-cced 2.4.2: Stardict Dictionary for Dictd.org's Collins Cobuild English Dictionary
 app-dicts/stardict-dictd-longman 2.4.2: Stardict Dictionary for Dictd.org's Longman Dictionary of Contemporary English
@@ -51,6 +52,7 @@ dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
 dev-util/gdbus-codegen 2.49.5: GDBus code and documentation generator
 dev-util/mv_perl 3.07: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
+games-action/gltron 0.70-r1: 3d tron, just like the movie
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r1: Multiple Arcade Machine Emulator for X11
 games-emulation/xmess 0.106-r1: Multiple Arcade Machine Emulator for X11
@@ -68,6 +70,7 @@ media-video/avinfo 1.0_alpha15_p1: Utility for displaying AVI information
 media-video/video-mv 9.6: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
+net-dns/host 20070128-r1: A powerful command-line DNS query and test tool
 net-dns/noip-updater 2.1.9-r4: no-ip.com dynamic DNS updater
 net-firewall/firewall-mv 9.7: Initialize iptables and net-related sysctl variables
 net-misc/openrdate 1.2: use TCP or UDP to retrieve the current time of another machine
