@@ -69,7 +69,7 @@ mail-client/alpine 2.00-r6: alpine is an easy to use text-based based mail and n
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
 media-libs/avidemux-core 2.6.12: Core libraries for media-video/avidemux
 media-libs/avidemux-plugins 2.6.12: Plugins for media-video/avidemux
-media-tv/sundtek-tv 160822.223039 160904.171315: Sundtek MediaTV Pro III Drivers
+media-tv/sundtek-tv 160907.223624: Sundtek MediaTV Pro III Drivers
 media-video/avidemux 2.6.12: Video editor designed for simple cutting, filtering and encoding tasks
 media-video/avinfo 1.0_alpha15_p1: Utility for displaying AVI information
 media-video/video-mv 9.6: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
