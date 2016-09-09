@@ -8,6 +8,6 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.6.1
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/portage-postsyncd-mv/archive/v3.06.tar.gz -> portage-postsyncd-mv-3.06.tar.gz
+SRC_URI=https://github.com/vaeth/portage-postsyncd-mv/archive/v4.01.tar.gz -> portage-postsyncd-mv-4.01.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
-_md5_=04a011a0b9ab42a43b0a20bd84ed5717
+_md5_=8d75c808792f2a6e5bc1cf930fa1abf3
