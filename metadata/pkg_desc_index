@@ -87,7 +87,7 @@ sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
 sys-apps/cpi 2.14: A wrapper for cp -i -a, making use of diff
 sys-apps/less 483-r2: Excellent text file viewer, optionally with additional selection feature
 sys-apps/openrc-wrapper 2.02: Use openrc init scripts with systemd or other init systems
-sys-apps/schedule 7.3.0: script to schedule jobs in a multiuser multitasking environment
+sys-apps/schedule 7.4.0: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 2.18: POSIX shell script and function to schedule commands
 sys-block/zram-init 3.8: Scripts to support compressed swap devices or ramdisks with zram
 sys-fs/aufs 99999999: An entirely re-designed and re-implemented Unionfs
