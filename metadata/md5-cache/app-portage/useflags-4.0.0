@@ -4,10 +4,10 @@ EAPI=6
 HOMEPAGE=https://github.com/vaeth/useflags/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=dev-lang/perl || ( >=dev-lang/perl-5.6.1 >=virtual/perl-Getopt-Long-2.24 )
+RDEPEND=>=dev-lang/perl-5.6.1
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/useflags/archive/3.4.tar.gz -> useflags-3.4.tar.gz
+SRC_URI=https://github.com/vaeth/useflags/archive/v4.0.0.tar.gz -> useflags-4.0.0.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
-_md5_=27a50204340c52efa2ccfaea6fd69ea8
+_md5_=2c71762be7aa76d5b0abd77988d5b3a2

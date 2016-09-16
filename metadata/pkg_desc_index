@@ -25,9 +25,9 @@ app-portage/find_cruft 3.0.9: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 11.2.2: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/portage-bashrc-mv 13.13: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
-app-portage/portage-postsyncd-mv 4.2.2: postsync hooks for portage to sync from git
+app-portage/portage-postsyncd-mv 4.2.3: postsync hooks for portage to sync from git
 app-portage/trickyfetch 8.10: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
-app-portage/useflags 3.4: Print or save the current USE-flag state and compare with older versions
+app-portage/useflags 4.0.0: Print or save the current USE-flag state and compare with older versions
 app-portage/world-mv 3.15: Organize your world file and find installed packages or differences to @world
 app-shells/auto-fu-zsh 0.0.1.12-r4 0.0.1.12_p0 99999999: zsh automatic complete-word and list-choices: incremental completion
 app-shells/command-not-found 0.4.5: search ARCH database for packages with similar commands
@@ -53,7 +53,7 @@ dev-libs/libgcrypt 1.7.3: General purpose crypto library based on the code used 
 dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from Perl
 dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
 dev-util/ccache 99999999: fast compiler cache
-dev-util/comp 4.1.0: compare files or directories, including metadata
+dev-util/comp 4.1.1: compare files or directories, including metadata
 dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
 dev-util/gdbus-codegen 2.49.5: GDBus code and documentation generator
 dev-util/mv_perl 3.07: A collection of perl scripts (replacement in files, syncing dirs etc)
@@ -87,7 +87,7 @@ sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
 sys-apps/cpi 2.14: A wrapper for cp -i -a, making use of diff
 sys-apps/less 483-r2: Excellent text file viewer, optionally with additional selection feature
 sys-apps/openrc-wrapper 2.02: Use openrc init scripts with systemd or other init systems
-sys-apps/schedule 7.4.0: script to schedule jobs in a multiuser multitasking environment
+sys-apps/schedule 7.5.0: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 2.18: POSIX shell script and function to schedule commands
 sys-block/zram-init 3.8: Scripts to support compressed swap devices or ramdisks with zram
 sys-fs/aufs 99999999: An entirely re-designed and re-implemented Unionfs
@@ -95,7 +95,7 @@ sys-fs/aufs-util 99999999: Userspace tools for aufs
 sys-fs/emount 3.0.1: mount/unmount create/remove dm-crypt filesystems according to your /etc/fstab
 sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-fs/squashfs-tools 4.3-r2 99999999: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
-sys-fs/squashmount 15.3.2: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
+sys-fs/squashmount 15.3.3: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 1.50: A POSIX shell script to compile the kernel with user permissions
 virtual/freedesktop-icon-theme 0: A virtual to choose between different icon themes
 www-plugins/classic-theme-restorer 1.5.6: Firefox plugin: restore partially the functionality of non-broken firefox
