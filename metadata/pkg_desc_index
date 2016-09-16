@@ -37,7 +37,7 @@ app-shells/push 1.9: A POSIX shell function to treat a variable like an array, q
 app-shells/runtitle 2.9: Scripts to run commands and set the hard status line (windows title)
 app-shells/schily-tools 2016.09.03: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
 app-shells/set_prompt 2.01: An intelligent prompt for zsh or bash with status line (window title) support
-app-shells/termcolors-mv 3.14: 256colors sample script and dircolors configuration for standard or 256 colors
+app-shells/termcolors-mv 3.15: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.2-r1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.20.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
