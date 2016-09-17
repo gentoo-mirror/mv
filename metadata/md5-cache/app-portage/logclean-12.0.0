@@ -4,10 +4,10 @@ EAPI=6
 HOMEPAGE=https://github.com/vaeth/logclean/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=>=dev-lang/perl-5.12 dev-perl/String-ShellQuote || ( >=dev-lang/perl-5.14 virtual/perl-Term-ANSIColor )
+RDEPEND=>=dev-lang/perl-5.8 dev-perl/String-ShellQuote || ( >=dev-lang/perl-5.14 virtual/perl-Term-ANSIColor )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/logclean/archive/v11.2.2.tar.gz -> logclean-11.2.2.tar.gz
+SRC_URI=https://github.com/vaeth/logclean/archive/v12.0.0.tar.gz -> logclean-12.0.0.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
-_md5_=258bd96d76d79269ba9043ff7ecef797
+_md5_=450e2b1f0edcc2196422610a6972eccd
