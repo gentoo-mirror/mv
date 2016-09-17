@@ -4,10 +4,10 @@ EAPI=6
 HOMEPAGE=https://github.com/vaeth/find_cruft/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=>=dev-lang/perl-5.12
+RDEPEND=>=dev-lang/perl-5.8
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/find_cruft/archive/v3.0.9.tar.gz -> find_cruft-3.0.9.tar.gz
+SRC_URI=https://github.com/vaeth/find_cruft/archive/v3.0.10.tar.gz -> find_cruft-3.0.10.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
-_md5_=b64e4d86712079124396b7207389e6d6
+_md5_=10abff1cda5057d7b8366ea7a33a8a06
