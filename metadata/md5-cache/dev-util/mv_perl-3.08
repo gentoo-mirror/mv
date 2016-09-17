@@ -4,10 +4,10 @@ EAPI=6
 HOMEPAGE=https://github.com/vaeth/mv_perl/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=>=dev-lang/perl-5.12
+RDEPEND=>=dev-lang/perl-5.8
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/mv_perl/archive/v3.07.tar.gz -> mv_perl-3.07.tar.gz
+SRC_URI=https://github.com/vaeth/mv_perl/archive/v3.08.tar.gz -> mv_perl-3.08.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
-_md5_=039c6341008327cff99a496084fb03be
+_md5_=89be0d2b87b19147f472bfd68be34d4b
