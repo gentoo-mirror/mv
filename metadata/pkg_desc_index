@@ -58,6 +58,7 @@ dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
 dev-util/gdbus-codegen 2.49.5: GDBus code and documentation generator
 dev-util/mv_perl 3.08: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
+dev-vcs/git-wrappers-mv 1.0: Some personal wrappers for the most important git commands
 games-action/gltron 0.70-r1: 3d tron, just like the movie
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r1: Multiple Arcade Machine Emulator for X11
