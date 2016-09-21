@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=calculate stat probabalities for the role playing game DSA - Das schwarze Auge
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/dsa-stats/
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/dsa-stats/archive/v1.0.tar.gz -> dsa-stats-1.0.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=d064bde3083dd60bcae6ebef22068725
