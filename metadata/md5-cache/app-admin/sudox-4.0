@@ -1,4 +1,4 @@
-DEFINED_PHASES=install
+DEFINED_PHASES=install prepare
 DESCRIPTION=wrapper for sudo which can pass X authority data and deal with screen and tmux
 EAPI=6
 HOMEPAGE=https://github.com/vaeth/sudox/
@@ -7,6 +7,6 @@ LICENSE=BSD
 RDEPEND=app-admin/sudo app-shells/push
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/sudox/archive/v3.23.tar.gz -> sudox-3.23.tar.gz
-_eclass_exported_funcs=src_install:-
-_md5_=bc0662e3d1135c25881b9f75b95019f5
+SRC_URI=https://github.com/vaeth/sudox/archive/v4.0.tar.gz -> sudox-4.0.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_md5_=96db4ffdd42d1433430d02db9450847e
