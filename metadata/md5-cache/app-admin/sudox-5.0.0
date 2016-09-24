@@ -7,6 +7,6 @@ LICENSE=BSD
 RDEPEND=app-admin/sudo app-shells/push
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/sudox/archive/v4.1.0.tar.gz -> sudox-4.1.0.tar.gz
+SRC_URI=https://github.com/vaeth/sudox/archive/v5.0.0.tar.gz -> sudox-5.0.0.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
 _md5_=a29d2f8a92242cce52eb0508d67cc798
