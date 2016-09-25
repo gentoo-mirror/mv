@@ -100,8 +100,8 @@ sys-fs/squashfs-tools 4.3-r2 99999999: Tool for creating compressed filesystem t
 sys-fs/squashmount 15.3.3: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 1.50: A POSIX shell script to compile the kernel with user permissions
 virtual/freedesktop-icon-theme 0: A virtual to choose between different icon themes
-www-plugins/classic-theme-restorer 1.5.6: Firefox plugin: restore partially the functionality of non-broken firefox
-www-plugins/duckduckgo 0.5.8: Firefox plugin: enable duckduckgo search engine
+www-plugins/classic-theme-restorer 1.5.7: Firefox plugin: restore partially the functionality of non-broken firefox
+www-plugins/duckduckgo 0.5.9: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.9: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.6: Edit the saved history of forms in mozilla
 www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
