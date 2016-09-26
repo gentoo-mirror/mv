@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst prepare
+DEFINED_PHASES=install prepare
 DESCRIPTION=wrapper for sudo which can pass X authority data and deal with screen and tmux
 EAPI=6
 HOMEPAGE=https://github.com/vaeth/sudox/
@@ -7,6 +7,6 @@ LICENSE=BSD
 RDEPEND=app-admin/sudo app-shells/push
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/sudox/archive/v7.0.0.tar.gz -> sudox-7.0.0.tar.gz
-_eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
-_md5_=6469a1fa3f8284614e4b6fce34c0dcc7
+SRC_URI=https://github.com/vaeth/sudox/archive/v8.0.0.tar.gz -> sudox-8.0.0.tar.gz
+_eclass_exported_funcs=src_prepare:- src_install:-
+_md5_=7cc78bdfe6ebfcf853073deace26d8dc

@@ -1,8 +1,8 @@
 app-accessibility/gespeaker 0.8.6-r2 0.8.6_p0: A GTK+ frontend for espeak
 app-admin/checksec 1.7.4 99999999: Tool to check properties of executables (e.g. ASLR/PIE, RELRO, PaX, Canaries)
 app-admin/flexlm 9.5-r2: Macrovision FLEXlm license manager and utils
-app-admin/sudox 7.0.0: wrapper for sudo which can pass X authority data and deal with screen and tmux
-app-arch/archwrap 2.3: A collection of POSIX shell scripts to invoke archiver programs
+app-admin/sudox 8.0.0: wrapper for sudo which can pass X authority data and deal with screen and tmux
+app-arch/archwrap 2.4: A collection of POSIX shell scripts to invoke archiver programs
 app-arch/bzwc 2.19: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
 app-arch/paq8l 20070308: Open source file compressor and archiver
 app-dicts/ispell-de 20160407: German and Swiss dictionaries for ispell
@@ -25,19 +25,19 @@ app-portage/find_cruft 3.0.10: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 12.0.3: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/portage-bashrc-mv 13.13: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
-app-portage/portage-postsyncd-mv 4.3.1: postsync hooks for portage to sync from git
-app-portage/trickyfetch 8.10: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
+app-portage/portage-postsyncd-mv 4.3.2: postsync hooks for portage to sync from git
+app-portage/trickyfetch 8.11: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 4.1.0: Print or save the current USE-flag state and compare with older versions
-app-portage/world-mv 3.15: Organize your world file and find installed packages or differences to @world
+app-portage/world-mv 3.16: Organize your world file and find installed packages or differences to @world
 app-shells/auto-fu-zsh 0.0.1.12-r4 0.0.1.12_p0 99999999: zsh automatic complete-word and list-choices: incremental completion
 app-shells/command-not-found 0.4.5: search ARCH database for packages with similar commands
 app-shells/dash 0.5.9-r1 99999999: Descendant of the NetBSD ash. POSIX compliant except for multibyte characters
 app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
-app-shells/push 1.9: A POSIX shell function to treat a variable like an array, quoting args
-app-shells/runtitle 2.9: Scripts to run commands and set the hard status line (windows title)
+app-shells/push 1.10: A POSIX shell function to treat a variable like an array, quoting args
+app-shells/runtitle 2.10: Scripts to run commands and set the hard status line (windows title)
 app-shells/schily-tools 2016.09.18: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
-app-shells/set_prompt 2.01: An intelligent prompt for zsh or bash with status line (window title) support
-app-shells/termcolors-mv 3.15: 256colors sample script and dircolors configuration for standard or 256 colors
+app-shells/set_prompt 2.02: An intelligent prompt for zsh or bash with status line (window title) support
+app-shells/termcolors-mv 3.16: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.2-r1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.20.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
@@ -58,7 +58,7 @@ dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
 dev-util/gdbus-codegen 2.49.5: GDBus code and documentation generator
 dev-util/mv_perl 3.08: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
-dev-vcs/git-wrappers-mv 1.2: Some personal wrappers for the most important git commands
+dev-vcs/git-wrappers-mv 1.3: Some personal wrappers for the most important git commands
 games-action/gltron 0.70-r1: 3d tron, just like the movie
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r1: Multiple Arcade Machine Emulator for X11
@@ -75,30 +75,30 @@ media-libs/avidemux-plugins 2.6.12: Plugins for media-video/avidemux
 media-tv/sundtek-tv 160907.223624: Sundtek MediaTV Pro III Drivers
 media-video/avidemux 2.6.12: Video editor designed for simple cutting, filtering and encoding tasks
 media-video/avinfo 1.0_alpha15_p1: Utility for displaying AVI information
-media-video/video-mv 9.6: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
+media-video/video-mv 9.7: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
 net-dns/host 20070128-r1: A powerful command-line DNS query and test tool
 net-dns/noip-updater 2.1.9-r4: no-ip.com dynamic DNS updater
-net-firewall/firewall-mv 9.8: Initialize iptables and net-related sysctl variables
+net-firewall/firewall-mv 9.9: Initialize iptables and net-related sysctl variables
 net-misc/openrdate 1.2: use TCP or UDP to retrieve the current time of another machine
-net-misc/sshstart 2.15: Start ssh-agent/ssh-add only if you really use ssh or friends
+net-misc/sshstart 2.16: Start ssh-agent/ssh-add only if you really use ssh or friends
 net-print/foo2zjs 20160722: Support for printing to ZjStream-based printers
 sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
 sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
-sys-apps/cpi 2.14: A wrapper for cp -i -a, making use of diff
+sys-apps/cpi 2.15: A wrapper for cp -i -a, making use of diff
 sys-apps/less 483-r2: Excellent text file viewer, optionally with additional selection feature
 sys-apps/openrc-wrapper 2.02: Use openrc init scripts with systemd or other init systems
 sys-apps/schedule 7.5.0: script to schedule jobs in a multiuser multitasking environment
-sys-apps/starter 2.18: POSIX shell script and function to schedule commands
-sys-block/zram-init 3.8: Scripts to support compressed swap devices or ramdisks with zram
+sys-apps/starter 2.19: POSIX shell script and function to schedule commands
+sys-block/zram-init 3.8.1: Scripts to support compressed swap devices or ramdisks with zram
 sys-fs/aufs 99999999: An entirely re-designed and re-implemented Unionfs
 sys-fs/aufs-util 99999999: Userspace tools for aufs
 sys-fs/emount 3.0.2: mount/unmount create/remove dm-crypt filesystems according to your /etc/fstab
-sys-fs/squash_dir 13.8: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
+sys-fs/squash_dir 13.9: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-fs/squashfs-tools 4.3-r2 99999999: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 15.3.3: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
-sys-kernel/kernel 1.50: A POSIX shell script to compile the kernel with user permissions
+sys-kernel/kernel 1.51: A POSIX shell script to compile the kernel with user permissions
 virtual/freedesktop-icon-theme 0: A virtual to choose between different icon themes
 www-plugins/classic-theme-restorer 1.5.7: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 0.5.9: Firefox plugin: enable duckduckgo search engine

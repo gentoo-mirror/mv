@@ -8,6 +8,6 @@ LICENSE=BSD
 RDEPEND=app-shells/push keychain? ( net-misc/keychain )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/sshstart/archive/v2.15.tar.gz -> sshstart-2.15.tar.gz
+SRC_URI=https://github.com/vaeth/sshstart/archive/v2.16.tar.gz -> sshstart-2.16.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
 _md5_=56551e05cd5d0379248a3a71c036121d
