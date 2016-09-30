@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=A wrapper script to set PAX kernel variables to an insecure/safe state
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/paxopen/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/paxopen/archive/v1.0.tar.gz -> paxopen-1.0.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=98dc19739c56ab339a479f030bc63d57
