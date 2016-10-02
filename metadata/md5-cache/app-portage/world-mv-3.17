@@ -6,6 +6,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/world/archive/v3.16.tar.gz -> world-3.16.tar.gz
+SRC_URI=https://github.com/vaeth/world/archive/v3.17.tar.gz -> world-3.17.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
 _md5_=9a14d29d11f5143512d677a6688c80ad

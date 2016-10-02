@@ -2,7 +2,7 @@ app-accessibility/gespeaker 0.8.6-r2 0.8.6_p0: A GTK+ frontend for espeak
 app-admin/checksec 1.7.4 99999999: Tool to check properties of executables (e.g. ASLR/PIE, RELRO, PaX, Canaries)
 app-admin/flexlm 9.5-r2: Macrovision FLEXlm license manager and utils
 app-admin/sudox 8.3.1: wrapper for sudo which can pass X authority data and deal with screen and tmux
-app-arch/archwrap 2.4: A collection of POSIX shell scripts to invoke archiver programs
+app-arch/archwrap 2.5: A collection of POSIX shell scripts to invoke archiver programs
 app-arch/bzwc 2.19: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
 app-arch/paq8l 20070308: Open source file compressor and archiver
 app-dicts/ispell-de 20160407: German and Swiss dictionaries for ispell
@@ -25,10 +25,10 @@ app-portage/find_cruft 3.0.10: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 12.0.3: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/portage-bashrc-mv 13.13: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
-app-portage/portage-postsyncd-mv 4.3.3: postsync hooks for portage to sync from git
+app-portage/portage-postsyncd-mv 4.3.4: postsync hooks for portage to sync from git
 app-portage/trickyfetch 8.11: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 4.1.0: Print or save the current USE-flag state and compare with older versions
-app-portage/world-mv 3.16: Organize your world file and find installed packages or differences to @world
+app-portage/world-mv 3.17: Organize your world file and find installed packages or differences to @world
 app-shells/auto-fu-zsh 0.0.1.12-r4 0.0.1.12_p0 99999999: zsh automatic complete-word and list-choices: incremental completion
 app-shells/command-not-found 0.4.5: search ARCH database for packages with similar commands
 app-shells/dash 0.5.9-r1 99999999: Descendant of the NetBSD ash. POSIX compliant except for multibyte characters
@@ -41,7 +41,7 @@ app-shells/termcolors-mv 3.17: 256colors sample script and dircolors configurati
 app-shells/zsh 5.2-r1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.20.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
-app-shells/zshrc-mv 2.31: A zshrc file initializing zsh specific interactive features
+app-shells/zshrc-mv 2.32: A zshrc file initializing zsh specific interactive features
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/lesspipe 1.83 99999999: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
@@ -54,11 +54,11 @@ dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from 
 dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
 dev-util/ccache 99999999: fast compiler cache
 dev-util/comp 4.1.2: compare files or directories, including metadata
-dev-util/diffhelp 1.9: A frontend, beautifier, and path-fixer for diff -u
+dev-util/diffhelp 1.10: A frontend, beautifier, and path-fixer for diff -u
 dev-util/gdbus-codegen 2.49.5: GDBus code and documentation generator
 dev-util/mv_perl 3.08: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
-dev-vcs/git-wrappers-mv 1.4: Some personal wrappers for the most important git commands
+dev-vcs/git-wrappers-mv 1.5: Some personal wrappers for the most important git commands
 games-action/gltron 0.70-r1: 3d tron, just like the movie
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r1: Multiple Arcade Machine Emulator for X11
@@ -80,7 +80,7 @@ net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Ori
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
 net-dns/host 20070128-r1: A powerful command-line DNS query and test tool
 net-dns/noip-updater 2.1.9-r4: no-ip.com dynamic DNS updater
-net-firewall/firewall-mv 9.9: Initialize iptables and net-related sysctl variables
+net-firewall/firewall-mv 9.10: Initialize iptables and net-related sysctl variables
 net-misc/openrdate 1.2: use TCP or UDP to retrieve the current time of another machine
 net-misc/sshstart 2.16: Start ssh-agent/ssh-add only if you really use ssh or friends
 net-print/foo2zjs 20160722: Support for printing to ZjStream-based printers
