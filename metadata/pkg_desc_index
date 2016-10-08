@@ -41,7 +41,7 @@ app-shells/termcolors-mv 3.17: 256colors sample script and dircolors configurati
 app-shells/zsh 5.2-r1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.20.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
-app-shells/zshrc-mv 3.0: A zshrc file initializing zsh specific interactive features
+app-shells/zshrc-mv 3.1: A zshrc file initializing zsh specific interactive features
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/lesspipe 1.83 99999999: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
