@@ -75,7 +75,7 @@ media-libs/avidemux-plugins 2.6.12: Plugins for media-video/avidemux
 media-tv/sundtek-tv 160907.223624-r1: Sundtek MediaTV Pro III Drivers
 media-video/avidemux 2.6.12: Video editor designed for simple cutting, filtering and encoding tasks
 media-video/avinfo 1.0_alpha15_p1: Utility for displaying AVI information
-media-video/video-mv 9.8: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
+media-video/video-mv 9.10: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
 net-dns/host 20070128-r1: A powerful command-line DNS query and test tool

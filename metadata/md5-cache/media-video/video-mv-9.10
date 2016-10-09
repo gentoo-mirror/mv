@@ -7,7 +7,7 @@ LICENSE=BSD
 RDEPEND=app-shells/push >=app-shells/runtitle-2.3 || ( ( media-sound/alsa-utils || ( media-video/mplayer[encode] virtual/ffmpeg ) ) media-tv/linuxtv-dvb-apps )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/video-mv/archive/v9.8.tar.gz -> video-mv-9.8.tar.gz
+SRC_URI=https://github.com/vaeth/video-mv/archive/v9.10.tar.gz -> video-mv-9.10.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	readme.gentoo-r1	03878c06495db70bc36bd717383c09f7	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
 _md5_=f5f9371a5b144f622d6c98a8a3b95607
