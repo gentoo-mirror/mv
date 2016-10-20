@@ -48,14 +48,12 @@ app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
 app-text/recode 3.6_p20-r1: Convert files between various character sets
 app-text/stardict 3.0.6-r2: A international dictionary supporting fuzzy and glob style matching
 dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
-dev-libs/glib 2.49.5: The GLib library of C routines
 dev-libs/libgcrypt 1.7.3: General purpose crypto library based on the code used in GnuPG
 dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from Perl
 dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
 dev-util/ccache 99999999: fast compiler cache
 dev-util/comp 4.1.3: compare files or directories, including metadata
 dev-util/diffhelp 1.11: A frontend, beautifier, and path-fixer for diff -u
-dev-util/gdbus-codegen 2.49.5: GDBus code and documentation generator
 dev-util/mv_perl 3.09: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
 dev-vcs/git-wrappers-mv 1.6: Some personal wrappers for the most important git commands
@@ -72,7 +70,7 @@ mail-client/alpine 2.00-r7: alpine is an easy to use text-based based mail and n
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
 media-libs/avidemux-core 2.6.12: Core libraries for media-video/avidemux
 media-libs/avidemux-plugins 2.6.12: Plugins for media-video/avidemux
-media-tv/sundtek-tv 161008.180843: Sundtek MediaTV Pro III Drivers
+media-tv/sundtek-tv 161020.115128: Sundtek MediaTV Pro III Drivers
 media-video/avidemux 2.6.12: Video editor designed for simple cutting, filtering and encoding tasks
 media-video/avinfo 1.0_alpha15_p1: Utility for displaying AVI information
 media-video/video-mv 9.10: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
@@ -103,7 +101,7 @@ sys-fs/squashmount 15.4.0: Keep directories compressed with squashfs. Useful for
 sys-kernel/kernel 2.01: A POSIX shell script to compile the kernel with user permissions
 virtual/freedesktop-icon-theme 0: A virtual to choose between different icon themes
 www-plugins/classic-theme-restorer 1.5.8: Firefox plugin: restore partially the functionality of non-broken firefox
-www-plugins/duckduckgo 0.5.9: Firefox plugin: enable duckduckgo search engine
+www-plugins/duckduckgo 0.5.12: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.9: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.6: Edit the saved history of forms in mozilla
 www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
