@@ -34,6 +34,7 @@ app-shells/command-not-found 0.4.5: search ARCH database for packages with simil
 app-shells/dash 0.5.9-r1 99999999: Descendant of the NetBSD ash. POSIX compliant except for multibyte characters
 app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/push 1.10: A POSIX shell function to treat a variable like an array, quoting args
+app-shells/quoter 1.0: Quote arguments or standard input for usage in POSIX shell by eval
 app-shells/runtitle 2.10: Scripts to run commands and set the hard status line (windows title)
 app-shells/schily-tools 2016.10.11: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
 app-shells/set_prompt 2.1.0: An intelligent prompt for zsh or bash with status line (window title) support
@@ -56,7 +57,7 @@ dev-util/comp 4.2.0: compare files or directories, including metadata
 dev-util/diffhelp 1.11: A frontend, beautifier, and path-fixer for diff -u
 dev-util/mv_perl 3.09: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
-dev-vcs/git-wrappers-mv 1.7: Some personal wrappers for the most important git commands
+dev-vcs/git-wrappers-mv 1.8: Some personal wrappers for the most important git commands
 games-action/gltron 0.70-r1: 3d tron, just like the movie
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r1: Multiple Arcade Machine Emulator for X11
