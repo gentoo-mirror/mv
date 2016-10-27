@@ -8,4 +8,4 @@ LICENSE=ZSH
 SLOT=0
 SRC_URI=https://github.com/zsh-users/zsh-completions/archive/0.12.0.tar.gz -> zsh-completions-0.21.0.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
-_md5_=c06bfff268a232aed4cea317ca6ebb31
+_md5_=8e83974f0d97ddd2319e304d1bec6bd0

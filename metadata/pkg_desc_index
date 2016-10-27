@@ -41,7 +41,7 @@ app-shells/set_prompt 2.1.0: An intelligent prompt for zsh or bash with status l
 app-shells/termcolors-mv 3.17: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.2-r1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.21.0 99999999: Additional completion definitions for Zsh
-app-shells/zsh-syntax-highlighting 0.4.1 99999999: Fish shell like syntax highlighting for zsh
+app-shells/zsh-syntax-highlighting 0.5.0 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 3.3: A zshrc file initializing zsh specific interactive features
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/lesspipe 1.83 99999999: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
@@ -101,8 +101,8 @@ sys-fs/squashfs-tools 4.3-r2 99999999: Tool for creating compressed filesystem t
 sys-fs/squashmount 15.4.0_p1: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 2.01: A POSIX shell script to compile the kernel with user permissions
 virtual/freedesktop-icon-theme 0-r1: A virtual to choose between different icon themes
-www-plugins/classic-theme-restorer 1.5.8: Firefox plugin: restore partially the functionality of non-broken firefox
-www-plugins/duckduckgo 0.5.12: Firefox plugin: enable duckduckgo search engine
+www-plugins/classic-theme-restorer 1.5.8.1: Firefox plugin: restore partially the functionality of non-broken firefox
+www-plugins/duckduckgo 1.0.0: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.9: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.6: Edit the saved history of forms in mozilla
 www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
