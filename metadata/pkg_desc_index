@@ -2,8 +2,8 @@ app-accessibility/gespeaker 0.8.6-r2 0.8.6_p0: A GTK+ frontend for espeak
 app-admin/checksec 1.7.4 99999999: Tool to check properties of executables (e.g. ASLR/PIE, RELRO, PaX, Canaries)
 app-admin/flexlm 9.5-r2: Macrovision FLEXlm license manager and utils
 app-admin/sudox 9.0.0: wrapper for sudo which can pass X authority data and deal with screen and tmux
-app-arch/archwrap 2.5: A collection of POSIX shell scripts to invoke archiver programs
-app-arch/bzwc 2.19: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
+app-arch/archwrap 2.6: A collection of POSIX shell scripts to invoke archiver programs
+app-arch/bzwc 3.00: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
 app-arch/paq8l 20070308: Open source file compressor and archiver
 app-dicts/ispell-de 20160407: German and Swiss dictionaries for ispell
 app-dicts/ispell-de-alt 2-r1: German dictionary (traditional orthography) for ispell
@@ -37,12 +37,12 @@ app-shells/push 2.0: A POSIX shell function to treat a variable like an array, q
 app-shells/quoter 3.0: Quote arguments or standard input for usage in POSIX shell by eval
 app-shells/runtitle 2.10: Scripts to run commands and set the hard status line (windows title)
 app-shells/schily-tools 2016.10.27: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
-app-shells/set_prompt 2.1.0: An intelligent prompt for zsh or bash with status line (window title) support
+app-shells/set_prompt 3.0.0: An intelligent prompt for zsh or bash with status line (window title) support
 app-shells/termcolors-mv 3.17: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.2-r1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.21.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.5.0 99999999: Fish shell like syntax highlighting for zsh
-app-shells/zshrc-mv 3.3: A zshrc file initializing zsh specific interactive features
+app-shells/zshrc-mv 3.4: A zshrc file initializing zsh specific interactive features
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/lesspipe 1.83 99999999: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
@@ -74,14 +74,14 @@ media-libs/avidemux-plugins 2.6.12: Plugins for media-video/avidemux
 media-tv/sundtek-tv 161020.115128: Sundtek MediaTV Pro III Drivers
 media-video/avidemux 2.6.12: Video editor designed for simple cutting, filtering and encoding tasks
 media-video/avinfo 1.0_alpha15_p1: Utility for displaying AVI information
-media-video/video-mv 9.10: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
+media-video/video-mv 10.00: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
 net-dns/host 20070128-r1: A powerful command-line DNS query and test tool
 net-dns/noip-updater 2.1.9-r4: no-ip.com dynamic DNS updater
-net-firewall/firewall-mv 9.10: Initialize iptables and net-related sysctl variables
+net-firewall/firewall-mv 10.0: Initialize iptables and net-related sysctl variables
 net-misc/openrdate 1.2: use TCP or UDP to retrieve the current time of another machine
-net-misc/sshstart 2.16: Start ssh-agent/ssh-add only if you really use ssh or friends
+net-misc/sshstart 3.00: Start ssh-agent/ssh-add only if you really use ssh or friends
 net-print/foo2zjs 20160722: Support for printing to ZjStream-based printers
 sci-mathematics/genius 1.0.19: Genius Mathematics Tool and the GEL Language
 sci-mathematics/reduce 20141130-r1: A general-purpose computer algebra system
@@ -90,7 +90,7 @@ sys-apps/less 487: Excellent text file viewer, optionally with additional select
 sys-apps/openrc-wrapper 2.02: Use openrc init scripts with systemd or other init systems
 sys-apps/paxopen 1.1: A wrapper script to set PAX kernel variables to an insecure/safe state
 sys-apps/schedule 7.5.0: script to schedule jobs in a multiuser multitasking environment
-sys-apps/starter 2.19: POSIX shell script and function to schedule commands
+sys-apps/starter 3.0: POSIX shell script and function to schedule commands
 sys-block/zram-init 5.0.0: Scripts to support compressed swap devices or ramdisks with zram
 sys-boot/grub-cfg-mv 1.0: A grub.cfg library/example for GRUB2
 sys-fs/aufs 99999999: An entirely re-designed and re-implemented Unionfs
@@ -99,7 +99,7 @@ sys-fs/emount 3.0.3: mount/unmount create/remove dm-crypt filesystems according 
 sys-fs/squash_dir 13.9: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-fs/squashfs-tools 4.3-r2 99999999: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 15.4.0_p2: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
-sys-kernel/kernel 2.02: A POSIX shell script to compile the kernel with user permissions
+sys-kernel/kernel 2.03: A POSIX shell script to compile the kernel with user permissions
 virtual/freedesktop-icon-theme 0-r1: A virtual to choose between different icon themes
 www-plugins/classic-theme-restorer 1.5.8.1: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 1.0.0: Firefox plugin: enable duckduckgo search engine

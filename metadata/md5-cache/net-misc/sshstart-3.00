@@ -5,9 +5,9 @@ HOMEPAGE=https://github.com/vaeth/sshstart/
 IUSE=+keychain
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=app-shells/push keychain? ( net-misc/keychain )
+RDEPEND=>=app-shells/push-2.0 keychain? ( net-misc/keychain )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/sshstart/archive/v2.16.tar.gz -> sshstart-2.16.tar.gz
+SRC_URI=https://github.com/vaeth/sshstart/archive/v3.00.tar.gz -> sshstart-3.00.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=56551e05cd5d0379248a3a71c036121d
+_md5_=aaf2bbf4a35155307b8d5696c2d6410e

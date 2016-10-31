@@ -4,9 +4,9 @@ EAPI=6
 HOMEPAGE=https://github.com/vaeth/starter/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=app-shells/push >=app-shells/runtitle-2.3
+RDEPEND=>=app-shells/push-2.0 >=app-shells/runtitle-2.3
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/starter/archive/v2.19.tar.gz -> starter-2.19.tar.gz
+SRC_URI=https://github.com/vaeth/starter/archive/v3.0.tar.gz -> starter-3.0.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=9861f495cf201c3013e42e5b72e6b3fd
+_md5_=f78bae15f275202cc94efebdef64a46d

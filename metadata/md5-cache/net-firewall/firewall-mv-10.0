@@ -6,10 +6,10 @@ HOMEPAGE=https://github.com/vaeth/firewall-mv/
 IUSE=old-openrc
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=!<sys-apps/openrc-0.13 !old-openrc? ( !<sys-apps/openrc-0.21.7 ) old-openrc? ( !>=sys-apps/openrc-0.21.7 ) app-shells/push
+RDEPEND=!<sys-apps/openrc-0.13 !old-openrc? ( !<sys-apps/openrc-0.21.7 ) old-openrc? ( !>=sys-apps/openrc-0.21.7 ) >=app-shells/push-2.0
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/firewall-mv/archive/v9.10.tar.gz -> firewall-mv-9.10.tar.gz
+SRC_URI=https://github.com/vaeth/firewall-mv/archive/v10.0.tar.gz -> firewall-mv-10.0.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
 _eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=574df55bec3d678ec5ea00cc80255c0f
+_md5_=9e4f91afc6fe25b3efc9b671e8e341f7
