@@ -7,7 +7,7 @@ LICENSE=BSD
 RDEPEND=app-admin/sudo app-admin/sudox app-shells/push >=app-shells/runtitle-2.3 !<dev-util/ccache-3.2
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/kernel/archive/v2.01.tar.gz -> kernel-2.01.tar.gz
+SRC_URI=https://github.com/vaeth/kernel/archive/v2.02.tar.gz -> kernel-2.02.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=e8f53f997ba1a8b174dc1d6c5cd7d3ec

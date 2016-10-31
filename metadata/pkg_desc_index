@@ -26,7 +26,7 @@ app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 12.0.4: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/portage-bashrc-mv 13.13: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
 app-portage/portage-postsyncd-mv 5.2.0: postsync hooks for portage to sync from git
-app-portage/trickyfetch 8.11: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
+app-portage/trickyfetch 8.12: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 4.1.1: Print or save the current USE-flag state and compare with older versions
 app-portage/world-mv 3.17: Organize your world file and find installed packages or differences to @world
 app-shells/auto-fu-zsh 0.0.1.12-r4 0.0.1.12_p0 99999999: zsh automatic complete-word and list-choices: incremental completion
@@ -99,7 +99,7 @@ sys-fs/emount 3.0.3: mount/unmount create/remove dm-crypt filesystems according 
 sys-fs/squash_dir 13.9: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-fs/squashfs-tools 4.3-r2 99999999: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 15.4.0_p2: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
-sys-kernel/kernel 2.01: A POSIX shell script to compile the kernel with user permissions
+sys-kernel/kernel 2.02: A POSIX shell script to compile the kernel with user permissions
 virtual/freedesktop-icon-theme 0-r1: A virtual to choose between different icon themes
 www-plugins/classic-theme-restorer 1.5.8.1: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 1.0.0: Firefox plugin: enable duckduckgo search engine
