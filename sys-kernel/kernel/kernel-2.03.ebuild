@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND="app-admin/sudo
 	app-admin/sudox
-	app-shells/push
+	>=app-shells/push-2.0
 	>=app-shells/runtitle-2.3
 	!<dev-util/ccache-3.2"
 DEPEND=""
@@ -34,6 +34,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	optfeature "faster execution" 'app-portage/eix'
+	optfeature "faster execution" '>=app-portage/eix-0.32.2'
 	optfeature "status bar support" 'app-shells/runtitle'
 }
