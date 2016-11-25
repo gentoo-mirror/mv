@@ -1,0 +1,16 @@
+DEFINED_PHASES=install unpack
+DEPEND=app-arch/unzip
+DESCRIPTION=Mozilla plugin: Restrict active contents like java/javascript/flash
+EAPI=6
+HOMEPAGE=http://noscript.net/
+IUSE=+compressed browser_firefox browser_firefox-bin browser_palemoon browser_palemoon-bin browser_seamonkey browser_seamonkey-bin
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-client/firefox-bin ) browser_palemoon? ( www-client/palemoon ) browser_palemoon-bin? ( www-client/palemoon-bin ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
+REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_palemoon browser_palemoon-bin browser_seamonkey browser_seamonkey-bin )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://secure.informaction.com/download/releases/noscript-2.9.0.14.xpi https://addons.cdn.mozilla.net/user-media/addons/722/noscript_security_suite-2.9.0.14-fx+fn+sm.xpi -> noscript-2.9.0.14.xpi
+_eclass_exported_funcs=src_unpack:- src_install:-
+_eclasses_=mv_mozextension-r1	991d197382ab9911edc374491d23d37e
+_md5_=795379c6e09d47ef95d1aafddf1e903f
