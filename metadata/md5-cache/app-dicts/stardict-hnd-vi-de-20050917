@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install
+DEPEND=app-arch/unzip || ( >=app-text/stardict-2.4.2 app-text/sdcv app-text/goldendict ) gzip? ( app-arch/gzip app-text/dictd )
+DESCRIPTION=Stardict Dictionary Vietnamese to German
+EAPI=6
+HOMEPAGE=https://sourceforge.net/projects/ovdp/
+IUSE=gzip
+KEYWORDS=amd64 ~arm64 x86
+LICENSE=GPL-2
+RESTRICT=strip
+SLOT=0
+SRC_URI=mirror://gentoo/VietDuc12K.zip
+_eclass_exported_funcs=src_compile:stardict src_install:stardict
+_eclasses_=stardict	e78e7ccb998fc1b7ec28e512a40a1a1e
+_md5_=c98b05398fa5bc6710c9d75f7a345c46
