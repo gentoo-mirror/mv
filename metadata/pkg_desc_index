@@ -116,3 +116,4 @@ x11-libs/gtk+ 3.22.4: Gimp ToolKit +
 x11-libs/motif 2.3.6: The Motif user interface component toolkit
 x11-misc/redshift 1.8: A screen color temperature adjusting software
 x11-themes/fvwm-crystal 3.4.1 99999999: Configurable FVWM theme with transparency and freedesktop compatible menu
+x11-wm/fvwm 2.6.5-r1 2.6.7: An extremely powerful ICCCM-compliant multiple virtual desktop window manager
