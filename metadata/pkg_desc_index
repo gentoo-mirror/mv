@@ -24,6 +24,7 @@ app-portage/etcat 1.0.1 99999999: Updated version of an old Portage information 
 app-portage/find_cruft 3.1.0: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 12.0.4: Keep only (compressed) logs of installed packages and cleanup emerge.log
+app-portage/mirrorselect 2.2.2-r2: Tool to help select distfiles mirrors for Gentoo
 app-portage/portage-bashrc-mv 13.13: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
 app-portage/portage-postsyncd-mv 5.2.0: postsync hooks for portage to sync from git
 app-portage/trickyfetch 8.13: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
@@ -101,6 +102,7 @@ sys-fs/squash_dir 13.9: Keep directories compressed with squashfs. Useful for po
 sys-fs/squashfs-tools 4.3-r2 99999999: Tool for creating compressed filesystem type squashfs. Patched to support -quiet
 sys-fs/squashmount 15.4.0_p2: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
 sys-kernel/kernel 2.04: A POSIX shell script to compile the kernel with user permissions
+sys-process/systemd-cron 1.5.4: systemd units to create timers for cron directories and crontab
 virtual/freedesktop-icon-theme 0-r1: A virtual to choose between different icon themes
 www-plugins/classic-theme-restorer 1.5.9: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 1.0.0: Firefox plugin: enable duckduckgo search engine
