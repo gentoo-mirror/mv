@@ -7,6 +7,6 @@ KEYWORDS=alpha amd64 hppa mips ppc sparc x86
 LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
-SRC_URI=http://j3e.de/ispell/igerman98/dict/igerman98-20160407.tar.bz2
+SRC_URI=http://j3e.de/ispell/igerman98/dict/igerman98-20161207.tar.bz2
 _eclass_exported_funcs=src_compile:- src_install:-
 _md5_=7cf5c18fa9e3e92652075a33b22ba734

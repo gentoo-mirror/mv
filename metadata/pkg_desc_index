@@ -5,7 +5,7 @@ app-admin/sudox 9.0.0: wrapper for sudo which can pass X authority data and deal
 app-arch/archwrap 2.6: A collection of POSIX shell scripts to invoke archiver programs
 app-arch/bzwc 3.00: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
 app-arch/paq8l 20070308: Open source file compressor and archiver
-app-dicts/ispell-de 20160407: German and Swiss dictionaries for ispell
+app-dicts/ispell-de 20161207: German and Swiss dictionaries for ispell
 app-dicts/ispell-de-alt 2-r1: German dictionary (traditional orthography) for ispell
 app-dicts/stardict-dictd-BritannicaConcise 2.4.2: Stardict Dictionary for Dictd.org's The Britannica Concise Encyclopedia
 app-dicts/stardict-dictd-cced 2.4.2: Stardict Dictionary for Dictd.org's Collins Cobuild English Dictionary
