@@ -10,5 +10,5 @@ RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/pu
 SLOT=0
 SRC_URI=https://github.com/vaeth/eix/releases/download/v0.32.3/eix-0.32.3.tar.xz
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_install:-
-_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	l10n	e26ea0642846685782f1813642e7ff0f	multilib	165fc17c38d1b11dac2008280dab6e80	tmpfiles	587aa682adbe29ca6fcc1221c24c3bdc	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	l10n	e26ea0642846685782f1813642e7ff0f	multilib	165fc17c38d1b11dac2008280dab6e80	tmpfiles	9d24e7afce9e3c183c97103bb8502330	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=194c09b5aa2f606590ff01e77ef9bcd2
