@@ -27,8 +27,8 @@ app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 12.0.4: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/mirrorselect 2.2.2-r2: Tool to help select distfiles mirrors for Gentoo
 app-portage/portage-bashrc-mv 13.13: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
-app-portage/portage-postsyncd-mv 5.3.0: postsync hooks for portage to sync from git
-app-portage/trickyfetch 8.14: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
+app-portage/portage-postsyncd-mv 5.3.1: postsync hooks for portage to sync from git
+app-portage/trickyfetch 8.15: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 4.1.1: Print or save the current USE-flag state and compare with older versions
 app-portage/world-mv 3.17: Organize your world file and find installed packages or differences to @world
 app-shells/auto-fu-zsh 0.0.1.12-r4 0.0.1.12_p0 99999999: zsh automatic complete-word and list-choices: incremental completion
@@ -59,7 +59,7 @@ dev-util/comp 4.2.0: compare files or directories, including metadata
 dev-util/diffhelp 1.11: A frontend, beautifier, and path-fixer for diff -u
 dev-util/mv_perl 3.09: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
-dev-vcs/git-wrappers-mv 1.8: Some personal wrappers for the most important git commands
+dev-vcs/git-wrappers-mv 1.9: Some personal wrappers for the most important git commands
 games-action/gltron 0.70-r1: 3d tron, just like the movie
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r1: Multiple Arcade Machine Emulator for X11
@@ -67,7 +67,7 @@ games-emulation/xmess 0.106-r1: Multiple Arcade Machine Emulator for X11
 games-engines/freesci 0.6.4-r1: Sierra script interpreter for your old Sierra adventures
 games-rpg/aklabeth 1.0-r1: A remake of Richard C. Garriott's Ultima prequel
 games-rpg/dsa-stats 1.0: calculate stat probabalities for the role playing game DSA - Das schwarze Auge
-games-rpg/m5figur-mv 2.6: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
+games-rpg/m5figur-mv 2.7: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 mail-client/alpine 2.00-r7: alpine is an easy to use text-based based mail and news client
 media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
