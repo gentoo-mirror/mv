@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install postinst postrm prepare setup
 DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) app-arch/xz-utils nls? ( sys-devel/gettext )
-DESCRIPTION=Search and query ebuilds, portage incl. local settings, ext. overlays and more
+DESCRIPTION=Search and query ebuilds
 EAPI=6
 HOMEPAGE=https://github.com/vaeth/eix/
 IUSE=debug +dep doc nls optimization +required-use security strong-optimization strong-security sqlite swap-remote tools linguas_de linguas_ru
@@ -11,4 +11,4 @@ SLOT=0
 SRC_URI=https://github.com/vaeth/eix/releases/download/v0.32.4/eix-0.32.4.tar.xz
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_install:-
 _eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	l10n	e26ea0642846685782f1813642e7ff0f	multilib	165fc17c38d1b11dac2008280dab6e80	tmpfiles	9d24e7afce9e3c183c97103bb8502330	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=81347a64067e314ba5bf806a95b60e74
+_md5_=f4b31f655a56e66b353b541b2fca00a2
