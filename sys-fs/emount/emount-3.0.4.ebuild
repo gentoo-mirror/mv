@@ -1,12 +1,12 @@
-# Copyright 2016 Gentoo Foundation
+# Copyright 2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 RESTRICT="mirror"
 inherit eutils
 
-DESCRIPTION="A collection of perl scripts (replacement in files, syncing dirs etc)"
-HOMEPAGE="https://github.com/vaeth/mv_perl/"
+DESCRIPTION="mount/unmount create/remove dm-crypt filesystems according to your /etc/fstab"
+HOMEPAGE="https://github.com/vaeth/emount/"
 SRC_URI="https://github.com/vaeth/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
@@ -14,11 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/perl-5.8"
-#	|| ( >=dev-lang/perl-5.9.4 >=virtual/perl-File-Spec-3.0 )
+RDEPEND=">=dev-lang/perl-5.6.1
+	sys-fs/cryptsetup"
 #	|| ( >=dev-lang/perl-5.6.1 >=virtual/perl-Getopt-Long-2.24 )
-#	|| ( >=dev-lang/perl-5.7.3 virtual/perl-Digest-MD5 )
-#	|| ( >=dev-lang/perl-5.7.3 virtual/perl-Time-HiRes )
+#	|| ( >=dev-lang/perl-5.4.5 virtual/perl-File-Spec )
 
 src_prepare() {
 	use prefix || sed -i \
@@ -28,14 +27,18 @@ src_prepare() {
 }
 
 src_install() {
-	dobin bin/*
-	dodoc README
+	local i
+	insinto /usr/bin
+	for i in bin/*
+	do	if	test -h "${i}" || ! test -x "${i}"
+		then	doins "${i}"
+		else	dobin "${i}"
+		fi
+	done
 	insinto /usr/share/zsh/site-functions
-	doins zsh/_*
+	doins zsh/*
 }
 
 pkg_postinst() {
-	optfeature "support to set timestamps of symlinks" 'dev-perl/File-lchown'
 	optfeature "improved output" 'dev-perl/String-ShellQuote'
-	optfeature "compatible patchdirs output" 'dev-perl/String-Escape'
 }
