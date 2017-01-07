@@ -1,12 +1,13 @@
 DEFINED_PHASES=install postinst prepare
-DESCRIPTION=Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
+DESCRIPTION=Print or save the current USE-flag state and compare with older versions
 EAPI=6
-HOMEPAGE=https://github.com/vaeth/trickyfetch/
+HOMEPAGE=https://github.com/vaeth/useflags/
 KEYWORDS=~amd64 ~x86
-LICENSE=GPL-2
+LICENSE=BSD
+RDEPEND=>=dev-lang/perl-5.6.1
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/trickyfetch/archive/v8.15.tar.gz -> trickyfetch-8.15.tar.gz
+SRC_URI=https://github.com/vaeth/useflags/archive/v4.1.2.tar.gz -> useflags-4.1.2.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=2f790b533cc763753b4e28536892847e
+_md5_=dabd8630edb4142e7dd6929246ad78dd
