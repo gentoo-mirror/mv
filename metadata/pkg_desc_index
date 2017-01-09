@@ -70,7 +70,7 @@ games-rpg/dsa-stats 1.0: calculate stat probabalities for the role playing game 
 games-rpg/m5figur-mv 2.8.1: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 mail-client/alpine 2.00-r7: alpine is an easy to use text-based based mail and news client
-media-gfx/pqiv 2.2: Modern rewrite of Quick Image Viewer
+media-gfx/pqiv 2.2 2.6: Modern rewrite of Quick Image Viewer
 media-libs/avidemux-core 2.6.18: Core libraries for media-video/avidemux
 media-libs/avidemux-plugins 2.6.18: Plugins for media-video/avidemux
 media-tv/nvtv 0.4.7-r3: TV-Out for NVidia cards
@@ -116,8 +116,8 @@ www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascr
 www-plugins/stylish 2.0.7: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
 www-plugins/xclear 1.8.2: Firefox plugin: button to clear URL
 x11-drivers/nvidia-drivers 173.14.39-r1: NVIDIA Accelerated Graphics Driver
-x11-libs/gtk+ 3.22.4: Gimp ToolKit +
-x11-libs/motif 2.3.6: The Motif user interface component toolkit
+x11-libs/gtk+ 3.22.5: Gimp ToolKit +
+x11-libs/motif 2.3.6-r1: The Motif user interface component toolkit
 x11-misc/redshift 1.8: A screen color temperature adjusting software
 x11-themes/fvwm-crystal 3.4.1 99999999: Configurable FVWM theme with transparency and freedesktop compatible menu
 x11-wm/fvwm 2.6.5-r1 2.6.7: An extremely powerful ICCCM-compliant multiple virtual desktop window manager
