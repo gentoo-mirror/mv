@@ -8,7 +8,7 @@ LICENSE=GPL-2
 RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/push-2.0 >=app-shells/quoter-3.0 kernel_linux? ( virtual/tmpfiles )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/eix/archive/33a594e2d735974c8967157b225188597ef7a1f4.tar.gz -> eix-0.32.5_beta6.tar.gz
+SRC_URI=https://github.com/vaeth/eix/archive/3c92ef5bcf21fb7add39855d413a8b88d9a84e36.tar.gz -> eix-0.32.5_beta7.tar.gz
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_install:-
 _eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	l10n	e26ea0642846685782f1813642e7ff0f	libtool	4890219c51da247200223277f993e054	multilib	165fc17c38d1b11dac2008280dab6e80	tmpfiles	9d24e7afce9e3c183c97103bb8502330	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=d23c66323b8a57dae4a48b4d49d555c8
+_md5_=e469d09b85dbea7222ced292078056ae
