@@ -12,5 +12,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/45281/epubreader-1.5.0.11-fx+sm.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	991d197382ab9911edc374491d23d37e
+_eclasses_=mv_mozextension-r1	3024c9faab27ba86cb1daafa9f101e34
 _md5_=f354521d85f357bfdf36b50e63f49539

@@ -6,11 +6,11 @@ HOMEPAGE=http://noscript.net/
 IUSE=+compressed browser_firefox browser_firefox-bin browser_palemoon browser_palemoon-bin browser_seamonkey browser_seamonkey-bin
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-client/firefox-bin ) browser_palemoon? ( www-client/palemoon ) browser_palemoon-bin? ( www-client/palemoon-bin ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
+RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-client/firefox-bin ) browser_palemoon? ( >=www-client/palemoon-27 ) browser_palemoon-bin? ( >=www-client/palemoon-bin-27 ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
 REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_palemoon browser_palemoon-bin browser_seamonkey browser_seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://secure.informaction.com/download/releases/noscript-2.9.5.3.xpi https://addons.cdn.mozilla.net/user-media/addons/722/noscript_security_suite-2.9.5.3-fx+fn+sm.xpi -> noscript-2.9.5.3.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	991d197382ab9911edc374491d23d37e
-_md5_=81a778d1c230c654a8e86fc7b70b7a58
+_eclasses_=mv_mozextension-r1	3024c9faab27ba86cb1daafa9f101e34
+_md5_=f771c901ef4311738be9d52618dd1824
