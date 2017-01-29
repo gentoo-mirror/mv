@@ -20,7 +20,7 @@ app-dicts/steak 1.7.3-r2: EN => DE Dictionary
 app-emacs/mv_emacs 1.2: (X)Emacs extensions: block support, macrorecorder, verify change
 app-emacs/po-mode 0.19.8.1-r1: Major mode for GNU gettext PO files
 app-eselect/eselect-net 0.2: eselect module for managing network open-rc service configurations
-app-portage/eix 0.32.3 0.32.4 0.32.5_beta8 99999999: Search and query ebuilds
+app-portage/eix 0.32.3 0.32.4 0.32.5_beta9 99999999: Search and query ebuilds
 app-portage/etcat 1.0.1 99999999: Updated version of an old Portage information extractor
 app-portage/find_cruft 3.1.0: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
