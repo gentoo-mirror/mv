@@ -4,9 +4,9 @@ EAPI=6
 HOMEPAGE=https://github.com/vaeth/bzwc/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=>=app-shells/push-2.0
+RDEPEND=>=app-shells/push-2.0-r2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/bzwc/archive/v3.00.tar.gz -> bzwc-3.00.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=34d340e6f7ecda5fb3045f8b83f31fac
+_md5_=58c406e69f9155f7ac1acd124f3c4af7

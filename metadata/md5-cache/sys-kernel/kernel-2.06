@@ -4,10 +4,10 @@ EAPI=6
 HOMEPAGE=https://github.com/vaeth/kernel/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=app-admin/sudo app-admin/sudox >=app-shells/push-2.0 >=app-shells/runtitle-2.3 !<dev-util/ccache-3.2
+RDEPEND=app-admin/sudo app-admin/sudox >=app-shells/push-2.0-r2 >=app-shells/runtitle-2.3 !<dev-util/ccache-3.2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/kernel/archive/v2.06.tar.gz -> kernel-2.06.tar.gz
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
 _eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=bfe63a9766f4a57491310b762f2a6593
+_md5_=4b11bb6e6a62d673da4fe90038d2ab73
