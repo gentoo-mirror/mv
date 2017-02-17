@@ -4,10 +4,10 @@ EAPI=6
 HOMEPAGE=https://github.com/vaeth/pyrep/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=|| ( dev-lang/python:3.5 dev-lang/python:3.4 >=dev-lang/python-2.7.5-r2:2.7 virtual/pypy3:0 virtual/pypy:0 )
+RDEPEND=|| ( dev-lang/python:3.5 dev-lang/python:3.4 >=dev-lang/python-2.7.5-r2:2.7 >=virtual/pypy3-5:0 >=virtual/pypy-5:0 )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/pyrep/archive/v1.4.tar.gz -> pyrep-1.4.tar.gz
 _eclass_exported_funcs=pkg_setup:python-any-r1 src_prepare:- src_install:-
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	d275302cd06aedef2ba08f81f3104206	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=bb3374a8fc95eb45742159cbd2d78913
