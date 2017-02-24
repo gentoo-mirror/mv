@@ -12,5 +12,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/9727/requestpolicy-0.5.28-sm+fx.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	3024c9faab27ba86cb1daafa9f101e34
+_eclasses_=mv_mozextension-r1	11e2a902c9d595df02c456dc8f933876
 _md5_=738e1c608df4bda1f25a7a30146bb8eb
