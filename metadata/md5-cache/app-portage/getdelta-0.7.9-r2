@@ -8,5 +8,5 @@ RDEPEND=app-portage/deltup dev-util/bdelta
 SLOT=0
 SRC_URI=http://linux01.gwdg.de/~nlissne/getdelta-0.7.8.tar.bz2
 _eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
-_eclasses_=readme.gentoo-r1	03878c06495db70bc36bd717383c09f7
+_eclasses_=readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
 _md5_=55204aaddf0ab603c9c3a245777fe538
