@@ -108,12 +108,12 @@ sys-fs/squashmount 15.4.1: Keep directories compressed with squashfs. Useful for
 sys-kernel/kernel 3.0: A POSIX shell script to compile the kernel with user permissions
 sys-process/systemd-cron 1.5.4: systemd units to create timers for cron directories and crontab
 virtual/freedesktop-icon-theme 0-r1: A virtual to choose between different icon themes
-www-plugins/classic-theme-restorer 1.6.2.1: Firefox plugin: restore partially the functionality of non-broken firefox
+www-plugins/classic-theme-restorer 1.6.3: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 1.1.1: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.12: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.6: Edit the saved history of forms in mozilla
 www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
-www-plugins/noscript 2.9.0.14 5.0: Mozilla plugin: Restrict active contents like java/javascript/flash
+www-plugins/noscript 2.9.0.14 5.0.1: Mozilla plugin: Restrict active contents like java/javascript/flash
 www-plugins/requestpolicy 0.5.28-r1: Mozilla plugin: controll cross-site requests (increases privacy/security)
 www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascript and html5
 www-plugins/stylish 2.0.7: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
