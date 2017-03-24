@@ -3,7 +3,7 @@ DEPEND=sys-apps/miscfiles sys-libs/ncurses:0=
 DESCRIPTION=fast screen-oriented spelling checker
 EAPI=6
 HOMEPAGE=https://fmg-www.cs.ucla.edu/geoff/ispell.html
-KEYWORDS=alpha amd64 ~arm hppa ~mips ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=alpha amd64 ~arm hppa ~mips ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
 LICENSE=HPND
 RDEPEND=sys-apps/miscfiles sys-libs/ncurses:0=
 RESTRICT=mirror
@@ -11,4 +11,4 @@ SLOT=0/3.3.02
 SRC_URI=https://fmg-www.cs.ucla.edu/geoff/tars/ispell-3.3.02.tar.gz mirror://gentoo/ispell-3.3.02-gentoo-0.3.diff.bz2
 _eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_install:-
 _eclasses_=epatch	122e1264e67c4f59a1482f2095e0b35d	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	1ef31aee2bd63ffbfcae8a1843c9208d	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=95790c3b2d495b5ba6f5b31a353a1158
+_md5_=44bf1ad2bc28aa3155b625dd44f93b15
