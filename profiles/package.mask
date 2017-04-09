@@ -13,14 +13,16 @@ games-rpg/magus
 # Upstream is dead.
 ~games-rpg/magus-1.3.3
 
-# Martin Väth <martin@mvath.de> (09 Jan 2017)
-# media-gfx/pqiv-2.6 currently doesn't recognize jpeg and gives only segfaults.
-=media-gfx/pqiv-2.6
-
 # Martin Väth <martin@mvath.de> (03 Jan 2016)
 # net-dns/noip-updater does not use https for transferring user sensitive data,
-# see bug #261194. So install only if you are aware about the security risk.
+# see e.g. https://bugs.gentoo.org/show_bug.cgi?id=261194
+# So install only if you are aware about the security risk.
 ~net-dns/noip-updater-2.1.9
+
+# Martin Väth <martin@mvath.de> (09 Apr 2017)
+# Versions 488-490 are known to have intentional misfeatures, see e.g.
+# https://bugs.gentoo.org/show_bug.cgi?id=614942
+=sys-apps/less-490
 
 # Martin Väth <martin@mvath.de> (20 Jul 2016)
 # There is nothing wrong with sys-apps/starter, but it is hardly maintained.
