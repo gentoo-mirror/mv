@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst postrm prepare setup
+DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=sys-devel/gettext-0.19.6 >=app-portage/elt-patches-20170317 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69
+DESCRIPTION=Search and query ebuilds
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/eix/
+IUSE=debug +dep doc nls optimization +required-use security strong-optimization strong-security sqlite swap-remote tools linguas_de linguas_ru
+LICENSE=GPL-2
+RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/push-2.0-r2 >=app-shells/quoter-3.0-r2 kernel_linux? ( virtual/tmpfiles )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/eix/archive/c9f99fbef7e0cd16d40bc081ae8d8a82c341be46.tar.gz -> eix-0.32.8_alpha0.tar.gz
+_eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_install:-
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	l10n	8f52d9ce1814aca2ed1a46920084ea66	libtool	e32ea84bf82cf8987965b574672dba93	multilib	0236be304ee52e7f179ed2f337075515	tmpfiles	1e504fdcf4f24aeded1ce42600307f76	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=893276e2cad52bd57ce0c264131c7c38
