@@ -29,7 +29,7 @@ app-portage/logclean 13.1.0: Keep only (compressed) logs of installed packages a
 app-portage/mirrorselect 2.2.2-r2: Tool to help select distfiles mirrors for Gentoo
 app-portage/portage-bashrc-mv 13.14: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
 app-portage/portage-postsyncd-mv 6.0.0: postsync hooks for portage to sync from git
-app-portage/trickyfetch 8.16: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
+app-portage/trickyfetch 8.17: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 4.1.2: Print or save the current USE-flag state and compare with older versions
 app-portage/world-mv 3.18: Organize your world file and find installed packages or differences to @world
 app-shells/auto-fu-zsh 0.0.1.12-r4 0.0.1.12_p0 99999999: zsh automatic complete-word and list-choices: incremental completion
