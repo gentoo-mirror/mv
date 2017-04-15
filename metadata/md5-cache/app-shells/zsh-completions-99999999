@@ -9,4 +9,4 @@ PROPERTIES=live
 SLOT=0
 _eclass_exported_funcs=pkg_postinst:- src_unpack:git-r3 src_prepare:- src_install:-
 _eclasses_=git-r3	cbafa3261c37c7e3af44bb16a34ea390
-_md5_=4fba5389fe567972938bba5086f79b26
+_md5_=a94dc9e28d68adf8bee76574dae93e0e
