@@ -27,7 +27,7 @@ app-portage/find_cruft 3.1.0: find cruft files not managed by portage
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
 app-portage/logclean 13.1.0: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/mirrorselect 2.2.2-r2: Tool to help select distfiles mirrors for Gentoo
-app-portage/portage-bashrc-mv 14.0: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
+app-portage/portage-bashrc-mv 14.1: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
 app-portage/portage-postsyncd-mv 6.0.0: postsync hooks for portage to sync from git
 app-portage/trickyfetch 8.17: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
 app-portage/useflags 4.1.2: Print or save the current USE-flag state and compare with older versions
@@ -45,7 +45,7 @@ app-shells/termcolors-mv 3.18: 256colors sample script and dircolors configurati
 app-shells/zsh 5.3.1 99999999: UNIX Shell similar to the Korn shell
 app-shells/zsh-completions 0.24.0 99999999: Additional completion definitions for Zsh
 app-shells/zsh-syntax-highlighting 0.5.0 99999999: Fish shell like syntax highlighting for zsh
-app-shells/zshrc-mv 3.8: A zshrc file initializing zsh specific interactive features
+app-shells/zshrc-mv 3.9: A zshrc file initializing zsh specific interactive features
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/lesspipe 1.83 99999999: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
