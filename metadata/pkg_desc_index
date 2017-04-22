@@ -95,7 +95,7 @@ sys-apps/cpi 2.15: A wrapper for cp -i -a, making use of diff
 sys-apps/less 487 491: Excellent text file viewer, optionally with additional selection feature
 sys-apps/openrc-wrapper 2.02: Use openrc init scripts with systemd or other init systems
 sys-apps/paxopen 1.2: A wrapper script to set PAX kernel variables to an insecure/safe state
-sys-apps/schedule 7.5.1: script to schedule jobs in a multiuser multitasking environment
+sys-apps/schedule 7.5.2: script to schedule jobs in a multiuser multitasking environment
 sys-apps/starter 3.0: POSIX shell script and function to schedule commands
 sys-block/zram-init 6.1.0: Scripts to support compressed swap devices or ramdisks with zram
 sys-boot/grub-cfg-mv 1.1: A grub.cfg library/example for GRUB2
