@@ -7,6 +7,6 @@ LICENSE=BSD
 RDEPEND=>=app-shells/push-2.0-r2
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/archwrap/archive/v2.6.tar.gz -> archwrap-2.6.tar.gz
+SRC_URI=https://github.com/vaeth/archwrap/archive/v3.0.tar.gz -> archwrap-3.0.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
 _md5_=87badeb197f252601e7ab561eb17d853
