@@ -4,7 +4,7 @@ DESCRIPTION=A GTK+ frontend for espeak
 EAPI=6
 HOMEPAGE=http://www.muflone.com/gespeaker/english/index.html
 IUSE=linguas_ar linguas_bg linguas_de linguas_en linguas_es linguas_fo linguas_fr linguas_it linguas_pl linguas_tr linguas_vi python_targets_python2_7
-KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x64-cygwin ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 LICENSE=GPL-2+
 RDEPEND=app-accessibility/espeak dev-python/dbus-python[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pygtk[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pyxdg[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] gnome-base/librsvg python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 ) || ( python_targets_python2_7 )
@@ -13,4 +13,4 @@ SLOT=0
 SRC_URI=https://github.com/muflone/gespeaker/releases/download/0.8.6/gespeaker-0.8.6.tar.gz http://www.muflone.com/resources/gespeaker/archive/0.8.6/gespeaker-0.8.6.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:distutils-r1 src_compile:distutils-r1 src_test:distutils-r1 src_install:distutils-r1
 _eclasses_=distutils-r1	039ba10839816478cfb070fdeb053906	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	0236be304ee52e7f179ed2f337075515	multiprocessing	284a473719153462f3e974d86c8cb81c	python-r1	0c067f080a047742ffac024b16895b45	python-utils-r1	c11fc374357e6ad9ddfe2e9f931e4d29	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	xdg-utils	b9389dfad0ee8f8e0b2a41b79fcf7120
-_md5_=17aa7e073d6675a9aaaea2937ae6e7ec
+_md5_=91fb64c5527fc0620a45d7c6c7b727d0

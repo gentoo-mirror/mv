@@ -10,4 +10,4 @@ REQUIRED_USE=!rpm2targz? ( rpm? ( cpio ) ) ooffice? ( || ( html2text links lynx 
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-r3 src_prepare:- src_configure:- src_compile:- src_install:-
 _eclasses_=git-r3	cbafa3261c37c7e3af44bb16a34ea390
-_md5_=3280f0f1f3d1fb7c366a77cea2d7fa29
+_md5_=da94f5a79dd75a4e74b12d773efbb570

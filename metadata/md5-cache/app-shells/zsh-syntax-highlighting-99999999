@@ -9,4 +9,4 @@ RDEPEND=app-shells/zsh
 SLOT=0
 _eclass_exported_funcs=pkg_postinst:- src_unpack:git-r3 src_prepare:- src_compile:- src_test:- src_install:-
 _eclasses_=git-r3	cbafa3261c37c7e3af44bb16a34ea390	readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
-_md5_=403a3eb78946c6777e1cbb1cdd46ce15
+_md5_=607fa972274a4d20d9e247572b57c307
