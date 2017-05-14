@@ -62,7 +62,6 @@ dev-util/diffhelp 1.11: A frontend, beautifier, and path-fixer for diff -u
 dev-util/mv_perl 3.10: A collection of perl scripts (replacement in files, syncing dirs etc)
 dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
 dev-vcs/git-wrappers-mv 1.13: Some personal wrappers for the most important git commands
-games-action/gltron 0.70-r1: 3d tron, just like the movie
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-board/chessproblem 1.6 2.7: Find solutions of chess problems (mate, selfmate, and helpmate) with cooks
 games-emulation/xmame 0.106-r1: Multiple Arcade Machine Emulator for X11
@@ -119,8 +118,7 @@ www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascr
 www-plugins/stylish 2.0.7: Mozilla plugin to modify style of certain web pages (e.g. Gentoo forums)
 www-plugins/xclear 1.8.2: Firefox plugin: button to clear URL
 x11-drivers/nvidia-drivers 173.14.39-r2: NVIDIA Accelerated Graphics Driver
-x11-libs/gtk+ 2.24.31-r1 3.22.12: Gimp ToolKit +
+x11-libs/gtk+ 2.24.31-r1 3.22.15: Gimp ToolKit +
 x11-libs/motif 2.3.6-r1: The Motif user interface component toolkit
 x11-misc/redshift 1.8: A screen color temperature adjusting software
-x11-themes/fvwm-crystal 3.4.1 99999999: Configurable FVWM theme with transparency and freedesktop compatible menu
 x11-wm/fvwm 2.6.5-r2 2.6.7-r1: An extremely powerful ICCCM-compliant multiple virtual desktop window manager
