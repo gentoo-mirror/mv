@@ -41,7 +41,7 @@ app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/push 2.0-r2: A POSIX shell function to treat a variable like an array, quoting args
 app-shells/quoter 3.0_p2-r2: Quote arguments or standard input for usage in POSIX shell by eval
 app-shells/runtitle 2.10: Scripts to run commands and set the hard status line (windows title)
-app-shells/schily-tools 2017.05.16: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
+app-shells/schily-tools 2017.05.29: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
 app-shells/set_prompt 3.0.0: An intelligent prompt for zsh or bash with status line (window title) support
 app-shells/termcolors-mv 3.19: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh 5.3.1 99999999: UNIX Shell similar to the Korn shell
@@ -114,7 +114,7 @@ www-plugins/duckduckgo 1.1.4: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.12: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.6: Edit the saved history of forms in mozilla
 www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
-www-plugins/noscript 2.9.0.14 5.0.4: Mozilla plugin: Restrict active contents like java/javascript/flash
+www-plugins/noscript 2.9.0.14 5.0.5: Mozilla plugin: Restrict active contents like java/javascript/flash
 www-plugins/requestpolicy 0.5.28-r1: Mozilla plugin: controll cross-site requests (increases privacy/security)
 www-plugins/shumway 0.11.394: Mozilla plugin: Flashplayer emulation with javascript and html5
 www-plugins/xclear 1.8.2: Firefox plugin: button to clear URL
