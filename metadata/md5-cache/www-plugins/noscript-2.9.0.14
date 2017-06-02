@@ -12,5 +12,5 @@ RESTRICT=mirror
 SLOT=palemoon26
 SRC_URI=https://secure.informaction.com/download/releases/noscript-2.9.0.14.xpi https://addons.cdn.mozilla.net/user-media/addons/722/noscript_security_suite-2.9.0.14-fx+fn+sm.xpi -> noscript-2.9.0.14.xpi
 _eclass_exported_funcs=src_unpack:- src_install:-
-_eclasses_=mv_mozextension-r1	11e2a902c9d595df02c456dc8f933876
+_eclasses_=mv_mozextension-r1	0f77c654d377766c5eb81589161611a4
 _md5_=8a3ea919ce45c9ac81086ad65c0f084b
