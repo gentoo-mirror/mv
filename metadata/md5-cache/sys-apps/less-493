@@ -9,6 +9,6 @@ LICENSE=|| ( GPL-3 BSD-2 )
 PDEPEND=lesspipe? ( app-text/lesspipe )
 RDEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2:0= pcre? ( dev-libs/libpcre ) less-select? ( dev-lang/perl )
 SLOT=0
-SRC_URI=http://www.greenwoodsoftware.com/less/less-492.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.6.tar.gz -> less-select-2.6.tar.gz )
+SRC_URI=http://www.greenwoodsoftware.com/less/less-493.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.6.tar.gz -> less-select-2.6.tar.gz )
 _eclass_exported_funcs=pkg_setup:- src_prepare:- src_configure:- src_compile:- src_install:-
 _md5_=e466c478f419eeee07939e89c9bcd899
