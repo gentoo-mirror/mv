@@ -10,5 +10,5 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/eix/archive/e60733001f901226bb5b8567ed6f0c88fa6c33f1.tar.gz -> eix-0.32.10_alpha1.tar.gz
 _eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_install:-
-_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	l10n	ab1961e9741a8463a7dd6b224d760f0a	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	tmpfiles	1e504fdcf4f24aeded1ce42600307f76	toolchain-funcs	772b26a6baefb4c8c5e0c1fc724508b7
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	l10n	ab1961e9741a8463a7dd6b224d760f0a	libtool	e32ea84bf82cf8987965b574672dba93	multilib	97f470f374f2e94ccab04a2fb21d811e	tmpfiles	1e504fdcf4f24aeded1ce42600307f76	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163
 _md5_=645d49cf8657bf3fe1ab0decdc30e09f
