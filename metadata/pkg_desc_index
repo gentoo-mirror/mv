@@ -74,7 +74,7 @@ games-rpg/m5figur-mv 2.8.2: LaTeX2e character sheet layout for the Midgard Role 
 games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
 mail-client/alpine 2.00-r7: alpine is an easy to use text-based based mail and news client
 media-gfx/pqiv 2.8.5: powerful GTK based command-line image viewer with a minimal UI
-media-libs/avidemux-core 2.6.20: Core libraries for media-video/avidemux
+media-libs/avidemux-core 2.6.20-r1: Core libraries for media-video/avidemux
 media-libs/avidemux-plugins 2.6.20: Plugins for media-video/avidemux
 media-tv/nvtv 0.4.7-r3: TV-Out for NVidia cards
 media-tv/sundtek-tv 170518.210556: Sundtek MediaTV Pro III Drivers
