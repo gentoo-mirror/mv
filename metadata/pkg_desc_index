@@ -26,7 +26,7 @@ app-portage/etcat 1.0.1 99999999: Updated version of an old Portage information 
 app-portage/find_cruft 3.1.0: find cruft files not managed by portage
 app-portage/gentoolkit 0.4.0-r1 9999: Collection of administration scripts for Gentoo
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
-app-portage/logclean 14.2.0: Keep only (compressed) logs of installed packages and cleanup emerge.log
+app-portage/logclean 14.2.0_p1: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/mirrorselect 2.2.2-r2: Tool to help select distfiles mirrors for Gentoo
 app-portage/overlint 0.5.3: Simple tool for static analysis of overlays
 app-portage/portage-bashrc-mv 14.5: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
@@ -108,7 +108,7 @@ sys-fs/squashmount 15.4.3: Keep directories compressed with squashfs. Useful for
 sys-kernel/kernel 4.2: A POSIX shell script to compile the kernel with user permissions
 sys-process/systemd-cron 1.5.4: systemd units to create timers for cron directories and crontab
 virtual/freedesktop-icon-theme 0-r1: A virtual to choose between different icon themes
-www-plugins/classic-theme-restorer 1.6.7: Firefox plugin: restore partially the functionality of non-broken firefox
+www-plugins/classic-theme-restorer 1.6.8.1: Firefox plugin: restore partially the functionality of non-broken firefox
 www-plugins/duckduckgo 1.1.5: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.12 2.0.4: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.6: Edit the saved history of forms in mozilla
