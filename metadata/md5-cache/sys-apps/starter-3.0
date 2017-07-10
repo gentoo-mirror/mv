@@ -9,4 +9,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/starter/archive/v3.0.tar.gz -> starter-3.0.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=24e0b69b3c0c58de988d33ca04302721
+_md5_=4b3a08366b9a8cd3b397d04e59ba5944
