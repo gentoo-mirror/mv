@@ -4,12 +4,12 @@ DESCRIPTION=systemd units to create timers for cron directories and crontab
 EAPI=6
 HOMEPAGE=https://github.com/systemd-cron/systemd-cron/
 IUSE=cron-boot etc-crontab-systemd minutely setgid test yearly python_targets_pypy3 python_targets_python3_4 python_targets_python3_5 python_targets_python3_6 python_single_target_pypy3 python_single_target_python3_4 python_single_target_python3_5 python_single_target_python3_6
-KEYWORDS=amd64 x86
+KEYWORDS=~amd64 ~x86
 LICENSE=MIT
-RDEPEND=>=sys-apps/systemd-217 sys-apps/debianutils !etc-crontab-systemd? ( !sys-process/dcron ) python_single_target_pypy3? ( >=virtual/pypy3-5:0= ) python_single_target_python3_4? ( dev-lang/python:3.4 ) python_single_target_python3_5? ( dev-lang/python:3.5 ) python_single_target_python3_6? ( dev-lang/python:3.6 ) >=dev-lang/python-exec-2:=[python_targets_pypy3(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,python_targets_python3_6(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_python2_7(-),python_single_target_pypy3(+)?,python_single_target_python3_4(+)?,python_single_target_python3_5(+)?,python_single_target_python3_6(+)?] sys-process/cronbase
+RDEPEND=>=sys-apps/systemd-234-r1 sys-apps/debianutils !etc-crontab-systemd? ( !sys-process/dcron ) python_single_target_pypy3? ( >=virtual/pypy3-5:0= ) python_single_target_python3_4? ( dev-lang/python:3.4 ) python_single_target_python3_5? ( dev-lang/python:3.5 ) python_single_target_python3_6? ( dev-lang/python:3.6 ) >=dev-lang/python-exec-2:=[python_targets_pypy3(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,python_targets_python3_6(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_python2_7(-),python_single_target_pypy3(+)?,python_single_target_python3_4(+)?,python_single_target_python3_5(+)?,python_single_target_python3_6(+)?] sys-process/cronbase
 REQUIRED_USE=^^ ( python_single_target_pypy3 python_single_target_python3_4 python_single_target_python3_5 python_single_target_python3_6 ) python_single_target_pypy3? ( python_targets_pypy3 ) python_single_target_python3_4? ( python_targets_python3_4 ) python_single_target_python3_5? ( python_targets_python3_5 ) python_single_target_python3_6? ( python_targets_python3_6 )
 SLOT=0
-SRC_URI=https://github.com/systemd-cron/systemd-cron/archive/v1.5.4.tar.gz -> systemd-cron-1.5.4.tar.gz
+SRC_URI=https://github.com/systemd-cron/systemd-cron/archive/v1.5.10.tar.gz -> systemd-cron-1.5.10.tar.gz
 _eclass_exported_funcs=pkg_setup:python-single-r1 src_prepare:- src_configure:-
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	python-single-r1	317a2557b4d7319a7418225f65accf77	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	systemd	e12dd5e3cf1f359292cea2a70abeba5f	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163
-_md5_=2826e31ab410a6a3bc7b3de684326768
+_md5_=3e918194f308dd69d0922c0c40848919
