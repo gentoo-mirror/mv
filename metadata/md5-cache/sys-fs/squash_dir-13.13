@@ -12,4 +12,4 @@ SLOT=0
 SRC_URI=https://github.com/vaeth/squash_dir/archive/v13.13.tar.gz -> squash_dir-13.13.tar.gz
 _eclass_exported_funcs=pkg_postinst:- pkg_setup:linux-info src_prepare:- src_configure:- src_install:-
 _eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	libtool	e32ea84bf82cf8987965b574672dba93	linux-info	ca370deef9d44125d829f2eb6ebc83e0	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986	systemd	e12dd5e3cf1f359292cea2a70abeba5f	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163	versionator	c80ccf29e90adea7c5cae94b42eb76d0
-_md5_=1c4f2ceb52a791bab3c8b26ce1c99be0
+_md5_=b392ed17c9cb7fb3dd058a3b0ce0b3a9
