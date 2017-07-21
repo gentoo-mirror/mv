@@ -3,10 +3,10 @@ DEPEND=>=dev-vcs/git-1.8.2.1
 DESCRIPTION=Additional completion definitions for Zsh
 EAPI=6
 HOMEPAGE=https://github.com/zsh-users/zsh-completions/
-IUSE=+completion_Android +completion_Arch +completion_Google +completion_Linux +completion_Unix +completion_X +completion_database +completion_dev +completion_disk +completion_distribute +completion_git +completion_go +completion_gtk +completion_hardware +completion_haskell +completion_managers +completion_multimedia +completion_net +completion_nfs +completion_python +completion_ruby +completion_search +completion_session +completion_subtitles +completion_virtualization +completion_web
+IUSE=+completion_Android +completion_Arch +completion_Google +completion_Linux +completion_Unix +completion_X +completion_database +completion_dev +completion_disk +completion_distribute +completion_editor +completion_git +completion_go +completion_gtk +completion_hardware +completion_haskell +completion_managers +completion_multimedia +completion_net +completion_nfs +completion_python +completion_ruby +completion_search +completion_session +completion_subtitles +completion_virtualization +completion_web
 LICENSE=ZSH
 PROPERTIES=live
 SLOT=0
 _eclass_exported_funcs=pkg_postinst:- src_unpack:git-r3 src_prepare:- src_install:-
 _eclasses_=git-r3	cbafa3261c37c7e3af44bb16a34ea390
-_md5_=f3e08e58648e857ac8771c4167ad116d
+_md5_=9ebb64398b8ac024288da1c05b28d421
