@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) meson? ( >=dev-util/meson-0.41.0 ) !meson? ( !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 ) >=sys-devel/gettext-0.19.6 >=app-portage/elt-patches-20170317 >=dev-util/meson-0.40.0 >=dev-util/ninja-1.7.2
+DESCRIPTION=Search and query ebuilds
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/eix/
+IUSE=debug +dep doc +meson nls optimization +required-use security strong-optimization strong-security sqlite swap-remote tools linguas_de linguas_ru
+LICENSE=GPL-2
+RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/push-2.0-r2 >=app-shells/quoter-3.0-r2 kernel_linux? ( virtual/tmpfiles )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/eix/archive/a0ce147d0da7587ba560ed2994abc045faabab77.tar.gz -> eix-0.32.11_alpha2.tar.gz
+_eclass_exported_funcs=pkg_postrm:- pkg_postinst:- pkg_setup:- src_prepare:- src_configure:- src_compile:- src_test:- src_install:-
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	l10n	2c2e15383ba891d642f51896a7f0ecfe	libtool	e32ea84bf82cf8987965b574672dba93	meson	9ec586ad8a687a72b7d58f7e353e83d9	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	284a473719153462f3e974d86c8cb81c	ninja-utils	ebb2eaddc6331c4fa000b8eb8f6fe074	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	tmpfiles	1e504fdcf4f24aeded1ce42600307f76	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163
+_md5_=5459332893b537364b0b8de26a10de2d
