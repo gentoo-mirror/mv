@@ -1,0 +1,16 @@
+DEFINED_PHASES=install postinst unpack
+DEPEND=app-arch/unzip
+DESCRIPTION=Firefox plugin: Install themes and skins for many popular sites
+EAPI=6
+HOMEPAGE=https://addons.mozilla.org/en-US/firefox/addon/styl-us/
+IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-client/firefox-bin ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
+REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/814814/stylus_beta-1.1.0-an+fx.xpi
+_eclass_exported_funcs=pkg_postinst:- src_unpack:- src_install:-
+_eclasses_=mv_mozextension-r1	0f77c654d377766c5eb81589161611a4	readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
+_md5_=35dcb6451fb53d94bd90690a4c54912f
