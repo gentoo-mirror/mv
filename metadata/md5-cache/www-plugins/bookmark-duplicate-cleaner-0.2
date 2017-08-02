@@ -1,0 +1,16 @@
+DEFINED_PHASES=install unpack
+DEPEND=app-arch/unzip
+DESCRIPTION=Firefox plugin: Remove duplicate bookmarks
+EAPI=6
+HOMEPAGE=https://addons.mozilla.org/de/firefox/addon/bookmark-duplicate-cleaner/
+IUSE=+compressed browser_firefox browser_firefox-bin browser_palemoon browser_palemoon-bin
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-client/firefox-bin ) browser_palemoon? ( www-client/palemoon ) browser_palemoon-bin? ( www-client/palemoon-bin ) )
+REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_palemoon browser_palemoon-bin )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/416156/bookmark_duplicate_cleaner-0.2-fx.xpi
+_eclass_exported_funcs=src_unpack:- src_install:-
+_eclasses_=mv_mozextension-r1	0f77c654d377766c5eb81589161611a4
+_md5_=ec9fbf858df8cc63ee4fb23b795fb208
