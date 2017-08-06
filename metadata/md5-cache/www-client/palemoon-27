@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=This is only a dummy ebuild. Use e.g. octopus or palemoon overlay
+EAPI=6
+HOMEPAGE=https://www.palemoon.org/
+KEYWORDS=amd64 x86
+LICENSE=MPL-2.0 GPL-2 LGPL-2.1
+SLOT=0
+_eclass_exported_funcs=-
+_md5_=ad54637d7fd626a02d79f069b0239f85
