@@ -21,7 +21,7 @@ app-emacs/mv_emacs 1.3: (X)Emacs extensions: block support, macrorecorder, verif
 app-emacs/po-mode 0.19.8.1-r1: Major mode for GNU gettext PO files
 app-eselect/eselect-net 0.2: eselect module for managing network open-rc service configurations
 app-misc/knapsack 7.2-r1: A fast solver for the 0/1-knapsack problem with multiple knapsacks
-app-portage/eix 0.32.10 0.33.0_alpha0 99999999: Search and query ebuilds
+app-portage/eix 0.32.10 0.33.0_alpha1 99999999: Search and query ebuilds
 app-portage/etcat 1.0.1 99999999: Updated version of an old Portage information extractor
 app-portage/find_cruft 4.0.0: find cruft files not managed by portage
 app-portage/gentoolkit 0.4.0-r1 9999: Collection of administration scripts for Gentoo
@@ -38,8 +38,8 @@ app-shells/auto-fu-zsh 0.0.1.12-r4 0.0.1.12_p0 99999999: zsh automatic complete-
 app-shells/command-not-found 0.4.5: search ARCH database for packages with similar commands
 app-shells/dash 99999999: Descendant of the NetBSD ash. POSIX compliant except for multibyte characters
 app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
-app-shells/push 2.0-r2: A POSIX shell function to treat a variable like an array, quoting args
-app-shells/quoter 3.0_p2-r2: Quote arguments or standard input for usage in POSIX shell by eval
+app-shells/push 3.0: A POSIX shell function to treat a variable like an array, quoting args
+app-shells/quoter 4.0: Quote arguments or standard input for usage in POSIX shell by eval
 app-shells/runtitle 2.10: Scripts to run commands and set the hard status line (windows title)
 app-shells/schily-tools 2017.08.14: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
 app-shells/set_prompt 3.0.0: An intelligent prompt for zsh or bash with status line (window title) support
@@ -87,7 +87,7 @@ net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing suppo
 net-dialup/wvdial 1.61: Excellent program to automatically configure PPP sessions
 net-dns/host 20070128-r1: A powerful command-line DNS query and test tool
 net-dns/noip-updater 2.1.9-r4: no-ip.com dynamic DNS updater
-net-firewall/firewall-mv 11.0: Initialize iptables and net-related sysctl variables
+net-firewall/firewall-mv 12.0: Initialize iptables and net-related sysctl variables
 net-libs/wvstreams 4.6.1-r3: A network programming library in C++
 net-misc/openrdate 1.2: use TCP or UDP to retrieve the current time of another machine
 net-misc/sshstart 3.00: Start ssh-agent/ssh-add only if you really use ssh or friends
