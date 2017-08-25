@@ -8,5 +8,5 @@ PROPERTIES=live
 RDEPEND=app-shells/zsh
 SLOT=0
 _eclass_exported_funcs=pkg_postinst:- src_unpack:git-r3 src_prepare:- src_compile:- src_test:- src_install:-
-_eclasses_=git-r3	cbafa3261c37c7e3af44bb16a34ea390	readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
+_eclasses_=git-r3	78651c07ca1c1373bf81545d39eb9769	readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
 _md5_=f19898c573cbb400d85fb7e39edbf63d
