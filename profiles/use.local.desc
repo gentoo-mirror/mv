@@ -17,7 +17,7 @@ app-portage/eix:swap-remote - Swap role of remote addresses in eix-remote, makin
 app-portage/eix:tools - Create separate binary for script helper tools; useful if they are called extremely often
 app-portage/portage-postsyncd-mv:portage-utils - Make /etc/portage/repo.postsync.d/q-reinit from app-portage/portage-utils non-executable and install a hack in /etc/portage/env/app-portage/portage-utils so that it stays so
 app-shells/auto-fu-zsh:compile - Byte-compile to speed up. Do not use this if you are cross-compiling
-app-shells/dash:dumb-echo - Disable echo -n and character sequence interpretation for added fun
+app-shells/dash:vanilla - Let echo escapes and -n work as decided by upstream
 app-shells/schily-tools:renameschily_calc - Rename calc to scalc for compatibility with sci-mathematics/calc
 app-shells/schily-tools:renameschily_compare - Rename compare to scompare for compatibility with imagemagick
 app-shells/schily-tools:renameschily_count - Rename count to scount for compatibility with sys-devel/llvm
@@ -58,47 +58,6 @@ app-shells/schily-tools:system-libschily - Rely on app-cdr/cdrtools for providin
 app-shells/schily-tools:system-star - Rely on app-arch/star for the match manpage
 app-shells/termcolors-mv:create - Install DIR_COLORS-create perl script
 app-shells/termcolors-mv:perl - Install 256colors perl script
-app-shells/zsh:compile - Byte-compile. This costs disk space and may make things faster or slower. Do not use this if you are cross-compiling
-app-shells/zsh:completion_AIX - Install zsh completions for AIX
-app-shells/zsh:completion_BSD - Install zsh completions for BSD
-app-shells/zsh:completion_Cygwin - Install zsh completions for Cygwin
-app-shells/zsh:completion_Darwin - Install zsh completions for Darwin
-app-shells/zsh:completion_Debian - Install zsh completions for Debian
-app-shells/zsh:completion_Linux - Install zsh completions for Linux
-app-shells/zsh:completion_Mandriva - Install zsh completions for Mandriva
-app-shells/zsh:completion_Redhat - Install zsh completions for Redhat
-app-shells/zsh:completion_Solaris - Install zsh completions for Solaris
-app-shells/zsh:completion_Unix - Install zsh completions for Unix
-app-shells/zsh:completion_X - Install zsh completions for X
-app-shells/zsh:completion_openSUSE - Install zsh completions for openSUSE
-app-shells/zsh-completions:completion_Android - Install zsh completions for Android-related programs
-app-shells/zsh-completions:completion_Arch - Install zsh completions for Archlinux
-app-shells/zsh-completions:completion_Google - Install zsh completions for Google tools
-app-shells/zsh-completions:completion_Linux - Install zsh completions for Linux
-app-shells/zsh-completions:completion_Unix - Install zsh completions for Unix
-app-shells/zsh-completions:completion_X - Install zsh completions for X
-app-shells/zsh-completions:completion_database - Install zsh completions for database programs
-app-shells/zsh-completions:completion_dev - Install zsh completions for development (build systems, editors, web)
-app-shells/zsh-completions:completion_disk - Install zsh completions for disk tools
-app-shells/zsh-completions:completion_distribute - Install zsh completions for tools for distributing tasks to machines
-app-shells/zsh-completions:completion_editor - Install zsh completions for various editors
-app-shells/zsh-completions:completion_git - Install zsh completions for special git tools
-app-shells/zsh-completions:completion_go - Install zsh completions for go-related tools
-app-shells/zsh-completions:completion_gtk - Install zsh completions for gtk-related tools
-app-shells/zsh-completions:completion_hardware - Install zsh completions for low-level hardware tools
-app-shells/zsh-completions:completion_haskell - Install zsh completions for Haskell tools
-app-shells/zsh-completions:completion_managers - Install zsh completions for package managers (not portage)
-app-shells/zsh-completions:completion_multimedia - Install zsh completions for multimedia programs
-app-shells/zsh-completions:completion_net - Install zsh completions for net-related tools
-app-shells/zsh-completions:completion_nfs - Install zsh completions for network filesystem tools
-app-shells/zsh-completions:completion_perl - Install zsh completion for perl-related tools
-app-shells/zsh-completions:completion_python - Install zsh completion for python development tools
-app-shells/zsh-completions:completion_ruby - Install zsh completion for ruby tools and tools in ruby
-app-shells/zsh-completions:completion_search - Install zsh completion for search tools like sys-apps/ack and sys-apps/the_silver_searcher
-app-shells/zsh-completions:completion_session - Install zsh completion for session-handling frontends
-app-shells/zsh-completions:completion_subtitles - Install zsh completion for subtitle tools
-app-shells/zsh-completions:completion_virtualization - Install zsh completion for virtualization programs
-app-shells/zsh-completions:completion_web - Install zsh completion for web-related tools incl. java/javascript/scala
 app-text/lesspipe:antiword - Support doc files with app-text/antiword; this overrides catdoc
 app-text/lesspipe:cabextract - Support cabextract files
 app-text/lesspipe:catdoc - Support doc files with app-text/catdoc; unused if antiword is set
