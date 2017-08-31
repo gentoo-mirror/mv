@@ -41,10 +41,10 @@ app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/push 3.0: A POSIX shell function to treat a variable like an array, quoting args
 app-shells/quoter 4.0: Quote arguments or standard input for usage in POSIX shell by eval
 app-shells/runtitle 2.10: Scripts to run commands and set the hard status line (windows title)
-app-shells/schily-tools 2017.08.14-r1: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
+app-shells/schily-tools 2017.08.29: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
 app-shells/set_prompt 3.0.0: An intelligent prompt for zsh or bash with status line (window title) support
 app-shells/termcolors-mv 4.2: 256colors sample script and dircolors configuration for standard or 256 colors
-app-shells/zsh-syntax-highlighting 0.6.0_rc1 99999999: Fish shell like syntax highlighting for zsh
+app-shells/zsh-syntax-highlighting 0.6.0 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 3.10: A zshrc file initializing zsh specific interactive features
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/lesspipe 1.83 99999999: Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
@@ -76,7 +76,7 @@ media-gfx/pqiv 2.8.5: powerful GTK based command-line image viewer with a minima
 media-libs/avidemux-core 2.6.20-r1 2.7.0: Core libraries for media-video/avidemux
 media-libs/avidemux-plugins 2.6.20 2.7.0: Plugins for media-video/avidemux
 media-tv/nvtv 0.4.7-r3: TV-Out for NVidia cards
-media-tv/sundtek-tv 170805.015349-r1: Sundtek MediaTV Pro III Drivers
+media-tv/sundtek-tv 170830.143825: Sundtek MediaTV Pro III Drivers
 media-video/avidemux 2.6.20 2.7.0-r1: Video editor designed for simple cutting, filtering and encoding tasks
 media-video/avinfo 1.0_alpha15_p1: Utility for displaying AVI information
 media-video/video-mv 11.1: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
@@ -115,7 +115,7 @@ www-client/palemoon-bin 27: This is only a dummy ebuild. Use e.g. palemoon overl
 www-plugins/bookmark-deduplicator 1.3.1: Firefox plugin: Deduplicate your bookmarks
 www-plugins/bookmark-duplicate-cleaner 0.2: Firefox plugin: Remove duplicate bookmarks
 www-plugins/classic-theme-restorer 1.6.9.1: Firefox plugin: restore partially the functionality of non-broken firefox
-www-plugins/duckduckgo 1.1.18: Firefox plugin: enable duckduckgo search engine
+www-plugins/duckduckgo 1.1.20: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.12 2.0.5: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.6: Edit the saved history of forms in mozilla
 www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
