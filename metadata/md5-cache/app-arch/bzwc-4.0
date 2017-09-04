@@ -7,6 +7,5 @@ LICENSE=BSD
 RDEPEND=>=app-shells/push-2.0-r2
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/bzwc/archive/v3.00.tar.gz -> bzwc-3.00.tar.gz
-_eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=273da396cc414336b64a0c42f8937ac5
+SRC_URI=https://github.com/vaeth/bzwc/archive/v4.0.tar.gz -> bzwc-4.0.tar.gz
+_md5_=8ee576135249b7b4ec889e78e4c0591b
