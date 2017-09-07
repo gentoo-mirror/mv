@@ -7,5 +7,4 @@ LICENSE=BSD
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/runtitle/archive/v2.10.tar.gz -> runtitle-2.10.tar.gz
-_eclass_exported_funcs=src_prepare:- src_install:-
 _md5_=c201118822139c546f7f5dda99b0d6b9

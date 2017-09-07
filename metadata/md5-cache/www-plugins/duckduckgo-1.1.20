@@ -11,6 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_plus-1.1.20-fx.xpi
-_eclass_exported_funcs=src_unpack:- src_install:-
 _eclasses_=mv_mozextension-r1	0f77c654d377766c5eb81589161611a4
 _md5_=b8d7873441f274d049bf3a878f81839a

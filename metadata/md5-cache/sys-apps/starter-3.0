@@ -8,5 +8,4 @@ RDEPEND=>=app-shells/push-2.0-r2 >=app-shells/runtitle-2.3
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/starter/archive/v3.0.tar.gz -> starter-3.0.tar.gz
-_eclass_exported_funcs=src_prepare:- src_install:-
 _md5_=4b3a08366b9a8cd3b397d04e59ba5944

@@ -7,5 +7,4 @@ LICENSE=BSD
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/cpi/archive/v2.15.tar.gz -> cpi-2.15.tar.gz
-_eclass_exported_funcs=src_prepare:- src_install:-
 _md5_=06c055f6cbcf7cb06fdf18a6a298d6a3
