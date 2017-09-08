@@ -33,7 +33,7 @@ htmlmode="( || ( html2text links lynx elinks w3m ) )"
 REQUIRED_USE="!rpm2targz? ( rpm? ( cpio ) )
 	ooffice? ${htmlmode}
 	xlhtml? ${htmlmode}
-	amd64-fbsd? ( !antiword !brotli !catdoc !dpkg !elinks !fastjar !html2text
+	amd64-fbsd? ( !antiword !catdoc !dpkg !elinks !fastjar !html2text
 		!id3v2 !lzip !mp3info !mp3info2 !ooffice !p7zip !pstotext
 		!rar !rpm !unrtf !w3m !xlhtml )
 	alpha? ( !brotli !catdoc !fastjar !id3v2 !libplist !mp3info !mp3info2
