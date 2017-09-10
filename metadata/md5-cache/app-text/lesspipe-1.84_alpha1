@@ -10,5 +10,5 @@ RDEPEND=sys-apps/file app-arch/xz-utils app-arch/bzip2 dev-lang/perl brotli? ( !
 REQUIRED_USE=!rpm2targz? ( rpm? ( cpio ) ) ooffice? ( || ( html2text links lynx elinks w3m ) ) xlhtml? ( || ( html2text links lynx elinks w3m ) ) amd64-fbsd? ( !antiword !catdoc !dpkg !elinks !fastjar !html2text !id3v2 !lzip !mp3info !mp3info2 !ooffice !p7zip !pstotext !rar !rpm !unrtf !w3m !xlhtml ) alpha? ( !brotli !catdoc !fastjar !id3v2 !libplist !mp3info !mp3info2 !netcdf !ooffice !pstotext !rar !zstd ) arm? ( !antiword !brotli !catdoc !fastjar !html2text !id3v2 !mp3info !ooffice !pstotext !rar !xlhtml ) hppa? ( !catdoc !brotli !fastjar !hdf5 !libplist !mp3info2 !netcdf !ooffice !rar !w3m !xlhtml !zstd ) ia64? ( !antiword !brotli !catdoc !fastjar !id3v2 !libplist !mp3info !mp3info2 !netcdf !ooffice !pstotext !rar !xlhtml !zstd ) ppc? ( !brotli ) ppc64? ( !brotli !catdoc !fastjar !ooffice !xlhtml ) sparc? ( !brotli !catdoc !fastjar !id3v2 !libplist !mp3info2 !netcdf !ooffice !pstotext !zstd )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/lesspipe/archive/69383636d5e9aa63983d942887d04d6448cfeea9.tar.gz -> lesspipe-1.84_alpha0.tar.gz
-_md5_=abaa8b283e079bc7f5be6c9559eb4ca4
+SRC_URI=https://github.com/vaeth/lesspipe/archive/3c6b20973bd88e627ada262877bffc2c05763cac.tar.gz -> lesspipe-1.84_alpha1.tar.gz
+_md5_=b20b6243c4486e54b5aad4e9ac559c3b
