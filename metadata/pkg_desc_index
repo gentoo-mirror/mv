@@ -26,7 +26,7 @@ app-portage/etcat 1.0.1 99999999: Updated version of an old Portage information 
 app-portage/find_cruft 4.0.0: find cruft files not managed by portage
 app-portage/gentoolkit 0.4.0-r1 9999: Collection of administration scripts for Gentoo
 app-portage/getdelta 0.7.9-r2: dynamic deltup client
-app-portage/logclean 16.0.0: Keep only (compressed) logs of installed packages and cleanup emerge.log
+app-portage/logclean 17.0.0: Keep only (compressed) logs of installed packages and cleanup emerge.log
 app-portage/portage-bashrc-mv 14.5: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
 app-portage/portage-postsyncd-mv 6.0.1: postsync hooks for portage to sync from git
 app-portage/trickyfetch 8.19: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
@@ -117,7 +117,7 @@ www-plugins/duckduckgo 1.1.22: Firefox plugin: enable duckduckgo search engine
 www-plugins/epubreader 1.5.0.12 2.0.5: Firefox plugin for ebook (.epub) files
 www-plugins/form-history-control 1.4.0.6: Edit the saved history of forms in mozilla
 www-plugins/locale-switcher 3-r1: Firefox plugin: button to switch GUI locale
-www-plugins/noscript 2.9.0.14 5.0.9: Mozilla plugin: Restrict active contents like java/javascript/flash
+www-plugins/noscript 2.9.0.14 5.0.10: Mozilla plugin: Restrict active contents like java/javascript/flash
 www-plugins/requestpolicy 0.5.28-r1: Mozilla plugin: controll cross-site requests (increases privacy/security)
 www-plugins/stylus 1.1.4.1: Firefox plugin: Install themes and skins for many popular sites
 www-plugins/xclear 1.8.2: Firefox plugin: button to clear URL
