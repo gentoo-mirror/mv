@@ -1,0 +1,15 @@
+DEFINED_PHASES=install unpack
+DEPEND=app-arch/unzip
+DESCRIPTION=Firefox webextension: remove colors and background images from the page
+EAPI=6
+HOMEPAGE=https://addons.mozilla.org/en-US/firefox/addon/no-color/
+IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
+KEYWORDS=~amd64 ~x86
+LICENSE=MPL-1.1
+RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-client/firefox-bin ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
+REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/5758/no_color-0.9-an+fx.xpi
+_eclasses_=mv_mozextension-r1	0f77c654d377766c5eb81589161611a4
+_md5_=390a17b60a2e02a02f4612f7881ad167

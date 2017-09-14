@@ -1,0 +1,15 @@
+DEFINED_PHASES=install unpack
+DEPEND=app-arch/unzip
+DESCRIPTION=Firefox webextension: translate the selected text with www.linguee.com
+EAPI=6
+HOMEPAGE=https://addons.mozilla.org/en-US/firefox/addon/traduza-para-mim/
+IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-client/firefox-bin ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
+REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/759684/traduza_para_mim-1.1-an+fx.xpi -> translate_to_me-1.1.xpi
+_eclasses_=mv_mozextension-r1	0f77c654d377766c5eb81589161611a4
+_md5_=598642498f07164eeac3216ec1d077a7
