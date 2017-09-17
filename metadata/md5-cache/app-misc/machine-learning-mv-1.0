@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare unpack
+DESCRIPTION=Some machine learning experiments
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/machine-learning-mv/
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x64-cygwin ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/perl-5.12
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/machine-learning-mv/archive/v1.0.tar.gz -> machine-learning-mv-1.0.tar.gz
+_eclasses_=vcs-snapshot	03289f51c769cf409d200d2d628cdd6e
+_md5_=9c16106b12f27e77495f0f3a8d69070a
