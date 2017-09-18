@@ -7,5 +7,5 @@ LICENSE=HPND
 PROPERTIES=live
 RDEPEND=app-shells/zsh
 SLOT=0
-_eclasses_=git-r3	4f7ddb4119309845d6687213171ab445	readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
+_eclasses_=git-r3	52a888802d25387c2c74cb845d1219bc	readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
 _md5_=24804dbffd8fdbb41ab00f912b98b990
