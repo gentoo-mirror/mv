@@ -19,11 +19,13 @@ RDEPEND=">=dev-lang/perl-5.12"
 src_prepare() {
 	use prefix || sed -i \
 		-e '1s"^#!/usr/bin/env perl$"#!'"${EPREFIX}/usr/bin/perl"'"' \
-		-- [!R]* || die
-	eapply_user
+		-- bin/* || die
+	default
 }
 
 src_install() {
-	dodoc README
-	dobin [!R]*
+	default
+	dobin bin/*
+	insinto /usr/share/zsh/site-functions
+	doins zsh/_*
 }
