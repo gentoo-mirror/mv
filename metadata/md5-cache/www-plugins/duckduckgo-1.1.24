@@ -10,6 +10,6 @@ RDEPEND=|| ( browser_firefox? ( <www-client/firefox-57 ) browser_firefox-bin? ( 
 REQUIRED_USE=|| ( browser_firefox browser_firefox-bin )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_plus-1.1.23-fx.xpi
+SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_plus-1.1.24-fx.xpi
 _eclasses_=mv_mozextension-r1	ea06e60c9556350dbd7a2bd6ae30946b
 _md5_=b765447394f152e0bb9a5ff97dbabdd6
