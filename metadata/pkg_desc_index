@@ -23,7 +23,7 @@ app-emacs/po-mode 0.19.8.1-r1: Major mode for GNU gettext PO files
 app-eselect/eselect-net 0.2: eselect module for managing network open-rc service configurations
 app-misc/knapsack 7.2-r1: A fast solver for the 0/1-knapsack problem with multiple knapsacks
 app-misc/machine-learning-mv 1.1: Some machine learning experiments
-app-portage/eix 0.33.0 0.33.1_alpha7 99999999: Search and query ebuilds
+app-portage/eix 0.33.0 0.33.1_alpha20171003 99999999: Search and query ebuilds
 app-portage/etcat 1.0.1 99999999: Updated version of an old Portage information extractor
 app-portage/find_cruft 4.0.0: find cruft files not managed by portage
 app-portage/gentoolkit 0.4.0-r1 9999: Collection of administration scripts for Gentoo
@@ -43,7 +43,7 @@ app-shells/quoter 4.0: Quote arguments or standard input for usage in POSIX shel
 app-shells/runtitle 2.10: Scripts to run commands and set the hard status line (windows title)
 app-shells/schily-tools 2017.09.07: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
 app-shells/set_prompt 3.0.0: An intelligent prompt for zsh or bash with status line (window title) support
-app-shells/termcolors-mv 4.4: 256colors sample script and dircolors configuration for standard or 256 colors
+app-shells/termcolors-mv 4.5: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh-syntax-highlighting 0.6.0 99999999: Fish shell like syntax highlighting for zsh
 app-shells/zshrc-mv 3.10: A zshrc file initializing zsh specific interactive features
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
@@ -76,10 +76,11 @@ media-gfx/pqiv 2.9: powerful GTK based command-line image viewer with a minimal 
 media-libs/avidemux-core 2.6.20-r1 2.7.0: Core libraries for media-video/avidemux
 media-libs/avidemux-plugins 2.6.20 2.7.0: Plugins for media-video/avidemux
 media-tv/nvtv 0.4.7-r3: TV-Out for NVidia cards
-media-tv/sundtek-tv 170830.143825: Sundtek MediaTV Pro III Drivers
+media-tv/sundtek-tv 171002.031615: Sundtek MediaTV Pro III Drivers
+media-tv/w_scan 20170107: Scan for DVB-C/DVB-T/DVB-S channels without prior knowledge of frequencies and modulations
 media-video/avidemux 2.6.20 2.7.0-r1: Video editor designed for simple cutting, filtering and encoding tasks
 media-video/avinfo 1.0_alpha15_p1: Utility for displaying AVI information
-media-video/video-mv 11.1: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
+media-video/video-mv 12.0: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
 net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
 net-dialup/wvdial 1.61: Excellent program to automatically configure PPP sessions
