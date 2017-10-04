@@ -1,11 +1,11 @@
-DEFINED_PHASES=install
+DEFINED_PHASES=install prepare
 DEPEND=>=virtual/linuxtv-dvb-headers-5.8
 DESCRIPTION=Scan for DVB-C/DVB-T/DVB-S channels without prior knowledge of frequencies and modulations
 EAPI=6
 HOMEPAGE=http://wirbel.htpc-forum.de/w_scan/index2.html
-IUSE=doc examples
+IUSE=doc examples +plp-id-zero
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://wirbel.htpc-forum.de/w_scan/w_scan-20170107.tar.bz2
-_md5_=064ef789cae2b86c10b66f452fc8bd57
+_md5_=18bf42be70e8c886b44fdd06db7c08f8
