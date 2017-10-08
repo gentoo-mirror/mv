@@ -9,6 +9,6 @@ LICENSE=GPL-2 LGPL-2.1 CDDL-Schily
 RDEPEND=system-libschily? ( app-cdr/cdrtools ) !system-libschily? ( !app-cdr/cdrtools ) schilytools_match? ( system-star? ( app-arch/star ) !system-star? ( !app-arch/star ) ) schilytools_calc? ( !renameschily_calc? ( !sci-mathematics/calc ) ) schilytools_compare? ( !renameschily_compare? ( !media-gfx/imagemagick !media-gfx/graphicsmagick[imagemagick] ) ) schilytools_count? ( !renameschily_count? ( !sys-devel/llvm ) ) schilytools_bosh? ( !renameschily_jsh? ( !app-shells/heirloom-sh ) ) schilytools_man2html? ( !renameschily_man2html? ( !sys-apps/man ) ) schilytools_p? ( !renameschily_p? ( !dev-util/wiggle ) ) schilytools_translit? ( !dev-perl/Lingua-Translit ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) xattr? ( sys-apps/attr )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=mirror://sourceforge/schilytools/schily-2017-09-07.tar.bz2
+SRC_URI=mirror://sourceforge/schilytools/schily-2017-09-25.tar.bz2
 _eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	flag-o-matic	2274fcc1e7ef6affaff5bcd636275417	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	185a06792159ca143528e7010368e8af
 _md5_=8c320eb199a88f5e3d0d683afca28f50
