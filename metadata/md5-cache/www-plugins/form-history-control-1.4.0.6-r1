@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_palemoon browser_p
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://addons.cdn.mozilla.net/user-media/addons/12021/form_history_control-1.4.0.6-sm+fx.xpi
-_eclasses_=mv_mozextension-r1	ea06e60c9556350dbd7a2bd6ae30946b
+_eclasses_=mv_mozextension-r1	07e2f369143a91e10ccdb1d2587fc099
 _md5_=aabfccf939949b57383d974b5d4a4434
