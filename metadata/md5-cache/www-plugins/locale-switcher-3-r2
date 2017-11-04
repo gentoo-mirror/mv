@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_palemoon browser_p
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/356/locale_switcher-3-fx.xpi
-_eclasses_=mv_mozextension-r1	07e2f369143a91e10ccdb1d2587fc099
+_eclasses_=mv_mozextension-r1	be2beb082f60bc4ac541e342f2e94b00
 _md5_=1aa15826697b6e5b5ab65d87cb77ca7c

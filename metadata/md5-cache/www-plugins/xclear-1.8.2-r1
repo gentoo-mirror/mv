@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_palemoon browser_p
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/13078/xclear-1.8.2-fx+sm.xpi
-_eclasses_=mv_mozextension-r1	07e2f369143a91e10ccdb1d2587fc099
+_eclasses_=mv_mozextension-r1	be2beb082f60bc4ac541e342f2e94b00
 _md5_=aea7fd4fc66ed81903b4f0fc84e57df2
