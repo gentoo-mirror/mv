@@ -6,10 +6,10 @@ HOMEPAGE=http://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/
 IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
 KEYWORDS=~amd64 ~x86
 LICENSE=Apache-2.0
-RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-client/firefox-bin ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
+RDEPEND=|| ( browser_firefox? ( >=www-client/firefox-57 ) browser_firefox-bin? ( >=www-client/firefox-bin-57 ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
 REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_plus-2017.11.1-an+fx.xpi
 _eclasses_=mv_mozextension-r1	be2beb082f60bc4ac541e342f2e94b00
-_md5_=673c56b1c06c6e8d7a73a197833e21b1
+_md5_=0c8c83623003323e84ef25671fb4cfd7
