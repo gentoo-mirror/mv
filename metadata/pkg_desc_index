@@ -42,7 +42,7 @@ app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/push 3.0-r1: A POSIX shell function to treat a variable like an array, quoting args
 app-shells/quoter 4.0-r1: Quote arguments or standard input for usage in POSIX shell by eval
 app-shells/runtitle 2.10: Scripts to run commands and set the hard status line (windows title)
-app-shells/schily-tools 2017.09.25 2017.10.10: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
+app-shells/schily-tools 2017.09.25 2017.11.07: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
 app-shells/set_prompt 3.0.0: An intelligent prompt for zsh or bash with status line (window title) support
 app-shells/termcolors-mv 4.6: 256colors sample script and dircolors configuration for standard or 256 colors
 app-shells/zsh-syntax-highlighting 0.6.0 99999999: Fish shell like syntax highlighting for zsh
@@ -125,8 +125,8 @@ www-plugins/epubreader 1.5.0.12-r1 2.0.5-r1: Firefox webextension: read ebook (.
 www-plugins/form-history-control 1.4.0.6-r1: <firefox-57 add-on: edit the saved history of forms
 www-plugins/google-translation 2.6: Firefox webextension: translate to your native language a selected text
 www-plugins/locale-switcher 3-r2: <firefox-57 add-on: button to switch GUI locale
-www-plugins/no-color 0.9.1: Firefox webextension: remove colors and background images from the page
-www-plugins/noscript 5.1.4: <firefox-57 add-on: restrict active contents like java/javascript/flash
+www-plugins/no-color 0.9.3: Firefox webextension: remove colors and background images from the page
+www-plugins/noscript 5.1.5: <firefox-57 add-on: restrict active contents like java/javascript/flash
 www-plugins/requestpolicy 0.5.28-r2: <firefox-57 add-on: control cross-site requests (increases privacy/security)
 www-plugins/stylus 1.1.4.2: Firefox webextension: install themes and skins for many popular sites
 www-plugins/translate-to-me 1.1: Firefox webextension: translate the selected text with www.linguee.com
