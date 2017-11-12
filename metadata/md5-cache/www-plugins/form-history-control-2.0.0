@@ -1,0 +1,15 @@
+DEFINED_PHASES=install unpack
+DEPEND=app-arch/unzip
+DESCRIPTION=Firefox webextension: edit the saved history of forms
+EAPI=6
+HOMEPAGE=http://www.formhistory.blogspot.com/
+IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
+KEYWORDS=~amd64 ~x86
+LICENSE=MPL-1.1
+RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-client/firefox-bin ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
+REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://addons.mozilla.org/firefox/downloads/file/769035/form_history_control-2.0.0-an+fx.xpi
+_eclasses_=mv_mozextension-r1	be2beb082f60bc4ac541e342f2e94b00
+_md5_=8338ece2ac53ca6bdf6490a71d75bb28
