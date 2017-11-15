@@ -8,6 +8,6 @@ LICENSE=BSD
 RDEPEND=!<sys-apps/openrc-0.13 >=dev-lang/perl-5.22 || ( dev-perl/File-Which sys-apps/which ) sys-fs/squashfs-tools !<sys-fs/unionfs-fuse-0.25 !<app-portage/find_cruft-4.0.0 app-shells/runtitle dev-perl/File-Which !arm? ( !ia64? ( !sparc? ( dev-perl/String-ShellQuote ) ) ) kernel_linux? ( virtual/tmpfiles )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/squashmount/archive/v16.0.0_p2.tar.gz -> squashmount-16.0.0_p2.tar.gz
+SRC_URI=https://github.com/vaeth/squashmount/archive/v17.0.0.tar.gz -> squashmount-17.0.0.tar.gz
 _eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	227b041a120d309fdefbebb3b8c1dfa9	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986	systemd	34815d3b76e745c5ca33eec9f95074c2	tmpfiles	1e504fdcf4f24aeded1ce42600307f76	toolchain-funcs	185a06792159ca143528e7010368e8af
 _md5_=424fe2a58eb92be566471cbdbf807450
