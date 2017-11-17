@@ -1,6 +1,6 @@
 DEFINED_PHASES=install unpack
 DEPEND=app-arch/unzip
-DESCRIPTION=<firefox-57 add-on: read ebook (.epub) files
+DESCRIPTION=Firefox legacy add-on: read ebook (.epub) files
 EAPI=6
 HOMEPAGE=http://addons.mozilla.org/de/firefox/addon/epubreader/
 IUSE=+compressed browser_palemoon browser_palemoon-bin
@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=palemoon
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/45281/epubreader-1.5.0.12-fx+sm.xpi
 _eclasses_=mv_mozextension-r1	be2beb082f60bc4ac541e342f2e94b00
-_md5_=6c460f5346ccb7f11a7ac36d43e225c0
+_md5_=b18fd30e3aa35ac01b5b2a1a3ae80a34

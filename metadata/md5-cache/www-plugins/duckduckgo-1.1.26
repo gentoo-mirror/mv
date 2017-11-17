@@ -1,6 +1,6 @@
 DEFINED_PHASES=install unpack
 DEPEND=app-arch/unzip
-DESCRIPTION=<firefox-57 add-on: enable duckduckgo search engine
+DESCRIPTION=Firefox legacy add-on: enable duckduckgo search engine
 EAPI=6
 HOMEPAGE=http://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/
 IUSE=+compressed browser_firefox browser_firefox-bin
@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=firefox56
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_plus-1.1.26-fx.xpi
 _eclasses_=mv_mozextension-r1	be2beb082f60bc4ac541e342f2e94b00
-_md5_=4c844b4ed2c1e714a1ab347e247f13fc
+_md5_=ed9cb81eab3e7dadd65a714f9a28de17

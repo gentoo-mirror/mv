@@ -1,6 +1,6 @@
 DEFINED_PHASES=install unpack
 DEPEND=app-arch/unzip
-DESCRIPTION=<firefox-57 add-on: button to switch GUI locale
+DESCRIPTION=Firefox legacy add-on: button to switch GUI locale
 EAPI=6
 HOMEPAGE=http://addons.mozilla.org/firefox/addon/locale-switcher/
 IUSE=+compressed browser_firefox browser_firefox-bin browser_palemoon browser_palemoon-bin browser_seamonkey browser_seamonkey-bin
@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/356/locale_switcher-3-fx.xpi
 _eclasses_=mv_mozextension-r1	be2beb082f60bc4ac541e342f2e94b00
-_md5_=1aa15826697b6e5b5ab65d87cb77ca7c
+_md5_=ecbc7ad5ce5c181594f115af0c705e20
