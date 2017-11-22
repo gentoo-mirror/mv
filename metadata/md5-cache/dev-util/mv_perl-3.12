@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/perl-5.8 dev-perl/File-lchown dev-perl/String-Escape dev-perl/String-ShellQuote
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/mv_perl/archive/v3.11.tar.gz -> mv_perl-3.11.tar.gz
-_md5_=d2c4f0b6f0e46065677d7fa90d74b467
+SRC_URI=https://github.com/vaeth/mv_perl/archive/v3.12.tar.gz -> mv_perl-3.12.tar.gz
+_md5_=580387a09453d207529782209c538066
