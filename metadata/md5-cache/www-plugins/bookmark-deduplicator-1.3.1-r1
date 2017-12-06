@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_palemoon browser_p
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/422748/bookmark_deduplicator-1.3.1-fx.xpi
-_eclasses_=mv_mozextension-r1	be2beb082f60bc4ac541e342f2e94b00
+_eclasses_=mv_mozextension-r1	f5e51649ff720c025c17c4d95612c591
 _md5_=4f2a3d10704a799064004372dd707aaf
