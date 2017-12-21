@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 ) !meson? ( !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 ) >=sys-devel/gettext-0.19.6 >=app-portage/elt-patches-20170422 >=dev-vcs/git-1.8.2.1
+DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) ) !meson? ( !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 ) >=sys-devel/gettext-0.19.6 >=app-portage/elt-patches-20170422 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Search and query ebuilds
 EAPI=6
 HOMEPAGE=https://github.com/vaeth/eix/
@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/push-2.0-r2 >=app-shells/quoter-3.0-r2 kernel_linux? ( virtual/tmpfiles )
 SLOT=0
 _eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	git-r3	fec09a83ae965b041b47f5ff7c8ba29a	l10n	2c2e15383ba891d642f51896a7f0ecfe	libtool	0081a71a261724730ec4c248494f044d	meson_optional	54e664497e59007c4634d0c3a45d9a95	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	6f5991c7101863d0b29df63990ad852e	ninja-utils	ebb2eaddc6331c4fa000b8eb8f6fe074	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	tmpfiles	1e504fdcf4f24aeded1ce42600307f76	toolchain-funcs	185a06792159ca143528e7010368e8af
-_md5_=461edd47428d54b3511b3217380403cf
+_md5_=455294d7548830eb22334c664cf34662
