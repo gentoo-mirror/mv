@@ -10,6 +10,6 @@ RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-
 REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/870263/bookmark_dupes-3.0-fx.xpi
+SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/870263/bookmark_dupes-4.0-fx.xpi
 _eclasses_=mv_mozextension-r1	f5e51649ff720c025c17c4d95612c591
 _md5_=d267b7267d39427764192c9b946e17a7
