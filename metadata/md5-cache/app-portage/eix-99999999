@@ -3,10 +3,10 @@ DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) meson? ( >=dev-u
 DESCRIPTION=Search and query ebuilds
 EAPI=6
 HOMEPAGE=https://github.com/vaeth/eix/
-IUSE=debug +dep doc +meson nls optimization +required-use security strong-optimization strong-security sqlite swap-remote tools linguas_de linguas_ru
+IUSE=debug +dep doc l10n_de l10n_ru +meson nls optimization +required-use security strong-optimization strong-security sqlite swap-remote tools
 LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/push-2.0-r2 >=app-shells/quoter-3.0-r2 kernel_linux? ( virtual/tmpfiles )
 SLOT=0
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	git-r3	fec09a83ae965b041b47f5ff7c8ba29a	l10n	2c2e15383ba891d642f51896a7f0ecfe	libtool	0081a71a261724730ec4c248494f044d	meson	f8e09b2b2ac1e9bb0bd374b6ad77a90d	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	6f5991c7101863d0b29df63990ad852e	ninja-utils	ebb2eaddc6331c4fa000b8eb8f6fe074	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	tmpfiles	1e504fdcf4f24aeded1ce42600307f76	toolchain-funcs	185a06792159ca143528e7010368e8af
-_md5_=f98fb53f07768864d75d69b11b2ec413
+_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	git-r3	fec09a83ae965b041b47f5ff7c8ba29a	libtool	0081a71a261724730ec4c248494f044d	meson	f8e09b2b2ac1e9bb0bd374b6ad77a90d	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	6f5991c7101863d0b29df63990ad852e	ninja-utils	ebb2eaddc6331c4fa000b8eb8f6fe074	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	tmpfiles	1e504fdcf4f24aeded1ce42600307f76	toolchain-funcs	185a06792159ca143528e7010368e8af
+_md5_=ceb388146e720e64d28daa9fb2606d8c
