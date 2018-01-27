@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_palemoon browser_palemoon-bin )
 RESTRICT=mirror
 SLOT=legacy
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/45281/epubreader-1.5.0.12-fx+sm.xpi
-_eclasses_=mv_mozextension-r1	f5e51649ff720c025c17c4d95612c591
+_eclasses_=mv_mozextension-r1	c36a13b87805bdb0a8137fa19840063a
 _md5_=1b51bb14e2bd181bfdafc32bacec79ba

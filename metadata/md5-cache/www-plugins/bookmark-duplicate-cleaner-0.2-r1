@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_palemoon browser_p
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/416156/bookmark_duplicate_cleaner-0.2-fx.xpi
-_eclasses_=mv_mozextension-r1	f5e51649ff720c025c17c4d95612c591
+_eclasses_=mv_mozextension-r1	c36a13b87805bdb0a8137fa19840063a
 _md5_=02294593b9a950c7d2b4a74fbcbbc8b4
