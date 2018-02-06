@@ -9,4 +9,4 @@ RDEPEND=sys-apps/file app-arch/xz-utils app-arch/bzip2 dev-lang/perl brotli? ( !
 REQUIRED_USE=!rpm2targz? ( rpm? ( cpio ) ) ooffice? ( || ( html2text links lynx elinks w3m ) ) xlhtml? ( || ( html2text links lynx elinks w3m ) ) amd64-fbsd? ( !antiword !catdoc !dpkg !elinks !fastjar !html2text !id3v2 !lzip !mp3info !mp3info2 !ooffice !p7zip !pstotext !rar !rpm !unrtf !w3m !xlhtml ) alpha? ( !brotli !catdoc !fastjar !id3v2 !libplist !mp3info !mp3info2 !netcdf !ooffice !pstotext !rar !zstd ) arm? ( !antiword !brotli !catdoc !fastjar !html2text !id3v2 !mp3info !ooffice !pstotext !rar !xlhtml ) hppa? ( !catdoc !brotli !fastjar !hdf5 !libplist !mp3info2 !netcdf !ooffice !rar !w3m !xlhtml !zstd ) ia64? ( !antiword !brotli !catdoc !fastjar !id3v2 !libplist !mp3info !mp3info2 !netcdf !ooffice !pstotext !rar !xlhtml !zstd ) ppc? ( !brotli ) ppc64? ( !brotli !catdoc !fastjar !ooffice !xlhtml ) sparc? ( !brotli !catdoc !fastjar !id3v2 !libplist !mp3info2 !netcdf !ooffice !pstotext !zstd )
 SLOT=0
 _eclasses_=git-r3	fec09a83ae965b041b47f5ff7c8ba29a
-_md5_=a5a3f2fa96c4ca506350c9a343a1ced7
+_md5_=152c042aff487bc761b311dae41a53d9
