@@ -11,43 +11,17 @@ app-dicts/stardict-freedict-deu-ita 2.4.2: Stardict Dictionary German to Italian
 app-dicts/stardict-freedict-ita-deu 2.4.2: Stardict Dictionary Italian to German
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
-app-text/stardict 3.0.6-r4 4.0.0_pre20160518-r2: A international dictionary supporting fuzzy and glob style matching
-dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
-dev-libs/osformat 1.0.5 999999999: C++ library for a typesafe printf/sprintf based on << conversion
-dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from Perl
-dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
-dev-util/ccache 99999999: fast compiler cache
-dev-util/comp 4.3: compare files or directories, including metadata
-dev-util/diffhelp 1.11: A frontend, beautifier, and path-fixer for diff -u
-dev-util/mv_perl 3.14: A collection of perl scripts (replacement in files, syncing dirs etc)
-dev-util/pyrep 1.4-r1: Search and/or replace regular expressions within many files interactively
-dev-vcs/git-wrappers-mv 1.16: Some personal wrappers for the most important git commands
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r1: Multiple Arcade Machine Emulator for X11
 games-emulation/xmess 0.106-r1: Multiple Arcade Machine Emulator for X11
 games-engines/freesci 0.6.4-r1: Sierra script interpreter for your old Sierra adventures
 games-rpg/aklabeth 1.0-r1: A remake of Richard C. Garriott's Ultima prequel
-games-rpg/dsa-stats 1.0: calculate stat probabalities for the role playing game DSA - Das schwarze Auge
-games-rpg/m5figur-mv 2.8.2: LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
-games-rpg/magus 1.3.1 1.3.3 99999999: A character generator for the popular German role playing game Midgard
-mail-client/alpine 2.00-r7 2.21.1: alpine is an easy to use text-based based mail and news client
-media-gfx/pqiv 2.10.2: powerful GTK based command-line image viewer with a minimal UI
-media-tv/nvtv 0.4.7-r3: TV-Out for NVidia cards
-media-tv/sundtek-tv 180205.112233: Sundtek MediaTV Pro III Drivers
-media-tv/w_scan 20170107-r1: Scan for DVB-C/DVB-T/DVB-S channels without prior knowledge of frequencies
-media-video/avinfo 1.0_alpha15_p1: Utility for displaying AVI information
-media-video/video-mv 12.1: Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
-net-dialup/accounting 1.60.45.3.1: Give statistics about dialup connections. Originally part of SuSE's smpppd
-net-dialup/martian-modem 20100123-r2: ltmodem alternative driver providing support for Agere Systems winmodems
+mail-client/alpine 2.00-r7: alpine is an easy to use text-based based mail and news client
 net-dns/host 20070128-r1: A powerful command-line DNS query and test tool
-net-dns/noip-updater 2.1.9-r4: no-ip.com dynamic DNS updater
-net-firewall/firewall-mv 13.0: Initialize iptables and net-related sysctl variables
 net-misc/openrdate 1.2: use TCP or UDP to retrieve the current time of another machine
 virtual/freedesktop-icon-theme 0-r2: A virtual to choose between different icon themes
 www-client/palemoon 27: This is only a dummy ebuild. Use e.g. octopus or palemoon overlay
 www-client/palemoon-bin 26 27: This is only a dummy ebuild. Use e.g. palemoon overlay
 x11-drivers/nvidia-drivers 173.14.39-r2: NVIDIA Accelerated Graphics Driver
-x11-libs/gtk+ 2.24.31-r1 3.22.19 3.22.26: Gimp ToolKit +
-x11-libs/motif 2.3.7 2.3.8: The Motif user interface component toolkit
-x11-misc/redshift 1.8: A screen color temperature adjusting software
-x11-wm/fvwm 2.6.7-r1: An extremely powerful ICCCM-compliant multiple virtual desktop window manager
+x11-libs/gtk+ 2.24.31-r1 3.22.19: Gimp ToolKit +
+x11-libs/motif 2.3.7: The Motif user interface component toolkit
