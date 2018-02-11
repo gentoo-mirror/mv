@@ -1,4 +1,4 @@
-# Copyright 2016 Gentoo Foundation
+# Copyright 2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -9,7 +9,7 @@ TARGET="${PN}"
 
 DESCRIPTION="Multiple Arcade Machine Emulator for X11"
 HOMEPAGE="http://x.mame.net/"
-SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
+SRC_URI="http://gentoo.osuosl.org/distfiles/xmame-${PV}.tar.bz2"
 
 LICENSE="XMAME"
 SLOT="0"
