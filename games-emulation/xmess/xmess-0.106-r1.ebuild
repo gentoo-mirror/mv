@@ -43,6 +43,7 @@ DEPEND="${RDEPEND}
 #	icc? ( dev-lang/icc )
 
 S=${WORKDIR}/xmame-${PV}
+PATCHES=("${FILESDIR}"/${P}-overflow.patch)
 
 toggle_feature() {
 	if use $1 ; then
@@ -141,8 +142,7 @@ EOF
 		-e 's/doinstallsuid/doinstall/' \
 		-e '/^QUIET/s:^:#:' src/unix/unix.mak \
 		|| die "sed src/unix/unix.mak failed"
-	eapply -p0 "${FILESDIR}"/${P}-overflow.patch
-	eapply_user
+	default
 }
 
 src_compile() {
