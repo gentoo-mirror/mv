@@ -19,29 +19,6 @@ games-rpg/aklabeth 1.0-r1: A remake of Richard C. Garriott's Ultima prequel
 mail-client/alpine 2.00-r7: alpine is an easy to use text-based based mail and news client
 net-dns/host 20070128-r1: A powerful command-line DNS query and test tool
 net-misc/openrdate 1.2: use TCP or UDP to retrieve the current time of another machine
-net-misc/sshstart 3.00: Start ssh-agent/ssh-add only if you really use ssh or friends
-net-print/foo2zjs 20160722: Support for printing to ZjStream-based printers
-sci-geosciences/googleearth 7.1.8.3036 7.3.0.3832 7.3.1: A 3D interface to the planet
-sci-mathematics/genius 1.0.21: Genius Mathematics Tool and the GEL Language
-sci-mathematics/reduce 20141130-r2: A general-purpose computer algebra system
-sys-apps/cpi 3.1: A wrapper for cp -i -a, making use of diff
-sys-apps/less 529: Excellent text file viewer, optionally with additional selection feature
-sys-apps/openrc-wrapper 2.3: Use openrc init scripts with systemd or other init systems
-sys-apps/paxopen 1.2: A wrapper script to set PAX kernel variables to an insecure/safe state
-sys-apps/schedule 7.5.4: script to schedule jobs in a multiuser multitasking environment
-sys-apps/starter 3.0: POSIX shell script and function to schedule commands
-sys-block/zram-init 7.0: Scripts to support compressed swap devices or ramdisks with zram
-sys-boot/grub-cfg-mv 1.5: A grub.cfg library/example for GRUB2
-sys-fs/aufs 99999999: An entirely re-designed and re-implemented Unionfs
-sys-fs/aufs-util 99999999: Userspace tools for aufs
-sys-fs/emount 3.0.4: mount/unmount create/remove dm-crypt filesystems according to your /etc/fstab
-sys-fs/squash_dir 13.14: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
-sys-fs/squashfs-tools 4.3.1_alpha20171129 99999999: Tool for creating compressed filesystem type squashfs
-sys-fs/squashfuse 0.1.101: FUSE filesystem to mount squashfs archives
-sys-fs/squashmount 16.1.0 17.1_p2: Keep directories compressed with squashfs. Useful for portage tree, texmf-dist
-sys-kernel/kccmp 0.3-r1: A simple tool for comparing two linux kernel .config files
-sys-kernel/kernel 4.4: A POSIX shell script to compile the kernel with user permissions
-sys-power/nut 2.7.4-r1: Network-UPS Tools
 virtual/freedesktop-icon-theme 0-r2: A virtual to choose between different icon themes
 www-client/palemoon 27: This is only a dummy ebuild. Use e.g. octopus or palemoon overlay
 www-client/palemoon-bin 26 27: This is only a dummy ebuild. Use e.g. palemoon overlay
