@@ -1,0 +1,15 @@
+DEFINED_PHASES=install unpack
+DEPEND=app-arch/unzip
+DESCRIPTION=Firefox webextension: calculate values of mathematical expressions
+EAPI=6
+HOMEPAGE=https://addons.mozilla.org/en-US/firefox/addon/calc-extension/ https://github.com/vaeth/calc-extension/
+IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-client/firefox-bin ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
+REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/937719/rechner-0.1-an+fx.xpi -> calc-extension-0.1-an+fx.xpi
+_eclasses_=mv_mozextension-r1	c36a13b87805bdb0a8137fa19840063a
+_md5_=345c0600415bffee406901bd70a5a996
