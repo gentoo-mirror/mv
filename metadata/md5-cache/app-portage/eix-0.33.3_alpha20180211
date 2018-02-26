@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test
-DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) ) !meson? ( !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 ) >=sys-devel/gettext-0.19.6 >=app-portage/elt-patches-20170422
+DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) ) !meson? ( !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15.1:1.15 >=sys-devel/automake-1.16:1.16 ) >=sys-devel/autoconf-2.69 ) >=sys-devel/gettext-0.19.6 >=app-portage/elt-patches-20170422
 DESCRIPTION=Search and query ebuilds
 EAPI=6
 HOMEPAGE=https://github.com/vaeth/eix/
@@ -9,5 +9,5 @@ RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/pu
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/eix/archive/e15dad4cdecfd791db8b2f45e2f701983b660f1c.tar.gz -> eix-0.33.3_alpha20180211.tar.gz
-_eclasses_=autotools	dc412f38566b91012efd58b9c203e6c3	bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	libtool	0081a71a261724730ec4c248494f044d	meson	f8e09b2b2ac1e9bb0bd374b6ad77a90d	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	ebb2eaddc6331c4fa000b8eb8f6fe074	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	tmpfiles	7bd1d7bf5261430a2d2991cff7958c52	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9
+_eclasses_=autotools	5c7fb6f361f3a238f78e5328771febd0	bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	libtool	0081a71a261724730ec4c248494f044d	meson	f8e09b2b2ac1e9bb0bd374b6ad77a90d	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	ebb2eaddc6331c4fa000b8eb8f6fe074	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	tmpfiles	7bd1d7bf5261430a2d2991cff7958c52	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9
 _md5_=8524472f98dccee2cd8e8c016dd13972
