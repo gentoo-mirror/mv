@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=>=sys-fs/e2fsprogs-1.27 >=sys-libs/ncurses-5.2:0= device-mapper? ( >=sys-fs/lvm2-2.02.45 ) readline? ( >=sys-libs/readline-5.2:0= ) selinux? ( sys-libs/libselinux ) standalone? ( !sys-block/parted:0 ) !standalone? ( sys-block/parted:0 ) nls? ( >=sys-devel/gettext-0.12.1-r2 ) virtual/pkgconfig >=app-portage/elt-patches-20170422 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Create, destroy, resize, check, copy partitions and file systems
+EAPI=6
+HOMEPAGE=https://www.gnu.org/software/parted
+IUSE=+debug device-mapper nls readline selinux standalone static-libs
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+LICENSE=GPL-3
+RDEPEND=>=sys-fs/e2fsprogs-1.27 >=sys-libs/ncurses-5.2:0= device-mapper? ( >=sys-fs/lvm2-2.02.45 ) readline? ( >=sys-libs/readline-5.2:0= ) selinux? ( sys-libs/libselinux ) standalone? ( !sys-block/parted:0 ) !standalone? ( sys-block/parted:0 )
+RESTRICT=test
+SLOT=2
+SRC_URI=mirror://gnu/parted/parted-2.4.tar.xz
+_eclasses_=autotools	4842e626555a9a4344f34cef2e190b67	libtool	0081a71a261724730ec4c248494f044d	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9
+_md5_=23017a7f0ce1d2da3ceeb7a355d22d7c
