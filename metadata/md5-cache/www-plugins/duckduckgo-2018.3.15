@@ -1,15 +1,15 @@
 DEFINED_PHASES=install unpack
 DEPEND=app-arch/unzip
-DESCRIPTION=Firefox webextension: restrict active contents like java/javascript/flash
+DESCRIPTION=Firefox webextension: privacy essentials, including duckduckgo search engine
 EAPI=6
-HOMEPAGE=http://noscript.net/
+HOMEPAGE=http://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/
 IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
 KEYWORDS=~amd64 ~x86
-LICENSE=GPL-2
+LICENSE=Apache-2.0
 RDEPEND=|| ( browser_firefox? ( >=www-client/firefox-57 ) browser_firefox-bin? ( >=www-client/firefox-bin-57 ) browser_seamonkey? ( www-client/seamonkey ) browser_seamonkey-bin? ( www-client/seamonkey-bin ) )
 REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://secure.informaction.com/download/releases/noscript-10.1.6.5.xpi https://addons.cdn.mozilla.net/user-media/addons/722/noscript_security_suite-10.1.6.5-an+fx.xpi -> noscript-10.1.6.5.xpi
+SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_privacy_essentials-2018.3.15-an+fx.xpi
 _eclasses_=mv_mozextension-r1	c36a13b87805bdb0a8137fa19840063a
-_md5_=990a38409b8036e13119e3dfa90eb54c
+_md5_=74dd6da1a3a0ccdea3a3b73999d0958c

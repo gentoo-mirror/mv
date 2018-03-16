@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=legacy
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_plus-1.1.26-fx.xpi
 _eclasses_=mv_mozextension-r1	c36a13b87805bdb0a8137fa19840063a
-_md5_=47c4cc45f096d2e9ba7d9342a519c97f
+_md5_=108c75611e1af08bed6c55f3fa0a526e
