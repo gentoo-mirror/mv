@@ -4,8 +4,8 @@ EAPI=6
 HOMEPAGE=https://github.com/vaeth/archwrap/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=>=app-shells/push-3
+RDEPEND=>=app-shells/push-3 <app-arch/brotli-1.0.4
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/archwrap/archive/v9.4.tar.gz -> archwrap-9.4.tar.gz
-_md5_=3157cce6c54fcd9d9f1e652417cdbdbf
+SRC_URI=https://github.com/vaeth/archwrap/archive/v10.0.tar.gz -> archwrap-10.0.tar.gz
+_md5_=9eba21b6e6dde5d62d0ed3fe02fafe19
