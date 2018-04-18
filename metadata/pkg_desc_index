@@ -11,17 +11,6 @@ app-dicts/stardict-freedict-deu-ita 2.4.2: Stardict Dictionary German to Italian
 app-dicts/stardict-freedict-ita-deu 2.4.2: Stardict Dictionary Italian to German
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
-app-text/stardict 3.0.6-r4 4.0.0_pre20160518-r2: A international dictionary supporting fuzzy and glob style matching
-dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
-dev-libs/osformat 1.0.5 999999999: C++ library for a typesafe printf/sprintf based on << conversion
-dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from Perl
-dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
-dev-util/comp 4.3: compare files or directories, including metadata
-dev-util/diffhelp 1.11: A frontend, beautifier, and path-fixer for diff -u
-dev-util/mv_perl 3.16: A collection of perl scripts (replacement in files, syncing dirs etc)
-dev-util/pyrep 1.5: Search and/or replace regular expressions within many files interactively
-dev-util/replacer 2.2: Search and replace python regular expressions within many files interactively
-dev-vcs/git-wrappers-mv 1.17: Some personal wrappers for the most important git commands
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r2: Multiple Arcade Machine Emulator for X11
 games-emulation/xmess 0.106-r1: Multiple Arcade Machine Emulator for X11
