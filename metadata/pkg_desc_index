@@ -1,10 +1,3 @@
-app-accessibility/gespeaker 0.8.6-r2 0.8.6_p0: A GTK+ frontend for espeak
-app-admin/flexlm 9.5-r2: Macrovision FLEXlm license manager and utils
-app-admin/sudox 9.0.1: wrapper for sudo which can pass X authority data and deal with screen and tmux
-app-arch/archwrap 11.1: A collection of POSIX shell scripts to invoke archiver programs
-app-arch/bzwc 5.0: A POSIX shell wrapper for wc, supporting compressed files (xz, lzma, bz2, gz)
-app-arch/paq8l 20070308: Open source file compressor and archiver
-app-cdr/cdrtools 3.02_alpha09-r1: A set of tools for CD/DVD reading and recording, including cdrecord
 app-dicts/ispell-de 20161207: German and Swiss dictionaries for ispell
 app-dicts/ispell-de-alt 2-r1: German dictionary (traditional orthography) for ispell
 app-dicts/stardict-dictd-BritannicaConcise 2.4.2: Stardict Dictionary for Dictd.org's The Britannica Concise Encyclopedia
@@ -16,46 +9,8 @@ app-dicts/stardict-dictd-thesaurus-ee 2.4.2: Stardict Dictionary for Dictd.org's
 app-dicts/stardict-freedict-deu-eng 2.4.2: Stardict Dictionary German to English
 app-dicts/stardict-freedict-deu-ita 2.4.2: Stardict Dictionary German to Italian
 app-dicts/stardict-freedict-ita-deu 2.4.2: Stardict Dictionary Italian to German
-app-dicts/steak 1.7.3-r3: EN => DE Dictionary
-app-emacs/mv_emacs 1.3: (X)Emacs extensions: block support, macrorecorder, verify change
-app-eselect/eselect-net 0.2: eselect module for managing network open-rc service configurations
-app-misc/knapsack 7.2.1: A fast solver for the 0/1-knapsack problem with multiple knapsacks
-app-misc/machine-learning-mv 1.2: Some machine learning experiments
-app-portage/eix 0.33.2-r1 0.33.3_alpha20180325 99999999: Search and query ebuilds
-app-portage/etcat 1.0.1 99999999: Updated version of an old Portage information extractor
-app-portage/find_cruft 5.1: find cruft files not managed by portage
-app-portage/getdelta 0.7.9-r2: dynamic deltup client
-app-portage/logclean 18.2: Keep only (compressed) logs of installed packages and cleanup emerge.log
-app-portage/portage-bashrc-mv 14.12: Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
-app-portage/portage-postsyncd-mv 6.0.1: postsync hooks for portage to sync from git
-app-portage/trickyfetch 8.20: Plugin for FETCHCOMMAND to help organize and cleanup your DISTDIR
-app-portage/useflags 4.1.3: Print or save the current USE-flag state and compare with older versions
-app-portage/world-mv 3.19: Organize your world file and find installed packages or differences to @world
-app-shells/auto-fu-zsh 0.0.1.12-r4 0.0.1.12_p0 99999999: zsh automatic complete-word and list-choices: incremental completion
-app-shells/command-not-found 0.4.5: search ARCH database for packages with similar commands
-app-shells/dash 99999999: Descendant of the NetBSD ash. POSIX compliant except for multibyte characters
-app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
-app-shells/push 3.1: A POSIX shell function to treat a variable like an array, quoting args
-app-shells/quoter 4.1: Quote arguments or standard input for usage in POSIX shell by eval
-app-shells/runtitle 2.10: Scripts to run commands and set the hard status line (windows title)
-app-shells/schily-tools 2017.09.25 2018.04.17: Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
-app-shells/set_prompt 3.0.0: An intelligent prompt for zsh or bash with status line (window title) support
-app-shells/termcolors-mv 4.7: 256colors sample script and dircolors configuration for standard or 256 colors
-app-shells/zsh-syntax-highlighting 0.6.0 99999999: Fish shell like syntax highlighting for zsh
-app-shells/zshrc-mv 3.11: A zshrc file initializing zsh specific interactive features
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
-app-text/stardict 3.0.6-r4 4.0.0_pre20160518-r2: A international dictionary supporting fuzzy and glob style matching
-dev-cpp/cpplint 99999999: The google styleguide together with cpplint and an emacs file
-dev-libs/osformat 1.0.5 999999999: C++ library for a typesafe printf/sprintf based on << conversion
-dev-perl/File-lchown 0.20-r1: Use the lchown(2) and lutimes(2) system call from Perl
-dev-tex/chklref 2.6.0: Finds useless references in latex files or unnecessarily numbered environments
-dev-util/comp 4.3: compare files or directories, including metadata
-dev-util/diffhelp 1.11: A frontend, beautifier, and path-fixer for diff -u
-dev-util/mv_perl 3.16: A collection of perl scripts (replacement in files, syncing dirs etc)
-dev-util/pyrep 1.5: Search and/or replace regular expressions within many files interactively
-dev-util/replacer 3.0: Search and replace python regular expressions within many files interactively
-dev-vcs/git-wrappers-mv 1.17: Some personal wrappers for the most important git commands
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
 games-emulation/xmame 0.106-r2: Multiple Arcade Machine Emulator for X11
 games-emulation/xmess 0.106-r1: Multiple Arcade Machine Emulator for X11
@@ -65,22 +20,5 @@ mail-client/alpine 2.00-r7: alpine is an easy to use text-based based mail and n
 net-dns/host 20070128-r1: A powerful command-line DNS query and test tool
 net-misc/openrdate 1.2: use TCP or UDP to retrieve the current time of another machine
 virtual/freedesktop-icon-theme 0-r3: A virtual to choose between different icon themes
-www-plugins/bookmark-dupes 5.7: Firefox webextension: remove duplicate bookmarks/empty folders/descriptions
-www-plugins/calc-extension 5.1: Firefox webextension: calculate values of mathematical expressions
-www-plugins/canvasblocker 0.4.4b: Firefox webextension: block canvas API to prevent canvas fingerprinting
-www-plugins/dark-mode 0.2.3: Firefox webextension: a global dark theme for the web
-www-plugins/decentraleyes 2.0.3: Firefox webextension: avoid centralized services
-www-plugins/duckduckgo 2018.4.20: Firefox webextension: privacy essentials, including duckduckgo search engine
-www-plugins/epubreader 2.0.5-r2: Firefox webextension: read ebook (.epub) files
-www-plugins/form-history-control 2.0.3.2: Firefox webextension: edit the saved history of forms
-www-plugins/google-translation 2.6: Firefox webextension: translate to your native language a selected text
-www-plugins/https-everywhere 2018.4.11: Firefox webextension: force https for all websites of a provided list
-www-plugins/no-color 0.9.4: Firefox webextension: remove colors and background images from the page
-www-plugins/noscript 10.1.7.2 10.1.7.5: Firefox webextension: restrict active contents like java/javascript/flash
-www-plugins/open-in-google-translate 0.1.3: Firefox webextension: open selected text or webpage in google translator
-www-plugins/skip-redirect 2.2.1: Firefox webextension: skip intermediary pages before redirecting
-www-plugins/translate-to-me 1.1: Firefox webextension: translate the selected text with www.linguee.com
-www-plugins/ublock-origin 1.16.0: Firefox webextension: An efficient list-based blocker
-x11-libs/gtk+ 2.24.31-r1 3.22.19 3.22.29: Gimp ToolKit +
-x11-libs/motif 2.3.7 2.3.8-r1: The Motif user interface component toolkit
-x11-wm/fvwm 2.6.7-r1: An extremely powerful ICCCM-compliant multiple virtual desktop window manager
+x11-libs/gtk+ 2.24.31-r1 3.22.19: Gimp ToolKit +
+x11-libs/motif 2.3.7: The Motif user interface component toolkit
