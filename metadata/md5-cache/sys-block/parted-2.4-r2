@@ -10,5 +10,5 @@ RDEPEND=>=sys-fs/e2fsprogs-1.27 >=sys-libs/ncurses-5.2:0= device-mapper? ( >=sys
 RESTRICT=test
 SLOT=2
 SRC_URI=mirror://gnu/parted/parted-2.4.tar.xz
-_eclasses_=autotools	4842e626555a9a4344f34cef2e190b67	libtool	0081a71a261724730ec4c248494f044d	ltprune	607e058da37aa6dabfa408b7d61da72e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9
-_md5_=23017a7f0ce1d2da3ceeb7a355d22d7c
+_eclasses_=autotools	4842e626555a9a4344f34cef2e190b67	libtool	0081a71a261724730ec4c248494f044d	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	885c7d8dd70a58825f3d17e35a3cd1e9
+_md5_=5c28d1f31bbc5e68c08989d607b5bd0a
