@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=Search and/or replace regular expressions within many files interactively
+EAPI=6
+HOMEPAGE=https://github.com/vaeth/pyrep/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=dev-lang/python
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/pyrep/archive/v1.5.tar.gz -> pyrep-1.5.tar.gz
+_md5_=e8a0a80c96800eb294b87053e9770362
