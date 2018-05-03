@@ -9,5 +9,5 @@ LICENSE=LPPL-1.2
 RDEPEND=virtual/latex-base dev-texlive/texlive-latexextra
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/m5figur-mv/archive/v2.8.2.tar.gz -> m5figur-mv-2.8.2.tar.gz
-_md5_=a8cab797afe31c52fa9579256aa15376
+SRC_URI=https://github.com/vaeth/m5figur-mv/archive/v3.0.tar.gz -> m5figur-mv-3.0.tar.gz
+_md5_=4b2fed778f9ffa9dcb22756f0db48032
