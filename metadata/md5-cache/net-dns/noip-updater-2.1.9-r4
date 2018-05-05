@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst preinst prepare
+DEFINED_PHASES=compile config install postinst preinst prepare
 DEPEND=sys-devel/gcc virtual/pkgconfig
 DESCRIPTION=no-ip.com dynamic DNS updater
 EAPI=6
