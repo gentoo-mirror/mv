@@ -1,7 +1,8 @@
+BDEPEND=X? ( x11-base/xorg-proto )
 DEFINED_PHASES=configure install prepare
-DEPEND=sys-apps/pciutils[-zlib] gtk? ( x11-libs/gtk+:2 ) X? ( x11-libs/libXi x11-libs/libXmu x11-libs/libXxf86vm ) X? ( x11-proto/xf86vidmodeproto ) >=app-portage/elt-patches-20170422 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=sys-apps/pciutils[-zlib] gtk? ( x11-libs/gtk+:2 ) X? ( x11-libs/libXi x11-libs/libXmu x11-libs/libXxf86vm ) >=app-portage/elt-patches-20170422 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=TV-Out for NVidia cards
-EAPI=6
+EAPI=7
 HOMEPAGE=https://sourceforge.net/projects/nv-tv-out/
 IUSE=X gtk
 KEYWORDS=~x86 ~amd64
@@ -10,4 +11,4 @@ RDEPEND=sys-apps/pciutils[-zlib] gtk? ( x11-libs/gtk+:2 ) X? ( x11-libs/libXi x1
 SLOT=0
 SRC_URI=mirror://sourceforge/nv-tv-out/nvtv-0.4.7.tar.gz
 _eclasses_=autotools	4842e626555a9a4344f34cef2e190b67	libtool	0081a71a261724730ec4c248494f044d	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa02994d0beba88681127d93da4411ec
-_md5_=2cdbce02c1cb7b747a3b1fd64dceb3cd
+_md5_=01601321d60622a35eabccffec1a6ab5

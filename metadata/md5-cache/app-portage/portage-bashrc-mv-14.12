@@ -1,6 +1,6 @@
 DEFINED_PHASES=install postinst
 DESCRIPTION=Provide support for /etc/portage/bashrc.d and /etc/portage/package.cflags
-EAPI=6
+EAPI=7
 HOMEPAGE=https://github.com/vaeth/portage-bashrc-mv/
 IUSE=+ccache +cflags +localepurge +remove-la +title
 KEYWORDS=~amd64 ~x86
@@ -9,4 +9,4 @@ RDEPEND=ccache? ( >=dev-util/ccache-3.2 ) cflags? ( app-portage/eix ) localepurg
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/portage-bashrc-mv/archive/v14.12.tar.gz -> portage-bashrc-mv-14.12.tar.gz
-_md5_=a234d57db8c91fe4f122941263760b91
+_md5_=f1dcad6837c396ce953b2a2fcc88c407

@@ -1,7 +1,7 @@
+BDEPEND=app-arch/unzip
 DEFINED_PHASES=install unpack
-DEPEND=app-arch/unzip
 DESCRIPTION=Firefox webextension: read ebook (.epub) files
-EAPI=6
+EAPI=7
 HOMEPAGE=http://addons.mozilla.org/en-US/firefox/addon/epubreader/
 IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
 KEYWORDS=~amd64 ~x86
@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/45281/epubreader-2.0.5-an+fx.xpi
-_eclasses_=mv_mozextension-r1	af70c0330c17ade648e6e17f619d4d5f
-_md5_=4d6be5d98f5d2493eb55b94b959c8c8e
+_eclasses_=mv_mozextension-r1	44184e6f7a30eea782b16174e1f2b575
+_md5_=b24e1e9916689bc012a6bd5112e6cb46

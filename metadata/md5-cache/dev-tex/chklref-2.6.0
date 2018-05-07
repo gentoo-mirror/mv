@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www-ljk.imag.fr/membres/Jerome.Lelong/soft/chklref/chklref-2.6.0.tar.gz
 _eclasses_=latex-package	79acad19b9efeec616d0ad70cd117b03
-_md5_=49415e9e5abfb2429444af946ab8387e
+_md5_=146eb0623634bc3c8ece073beaf35c21

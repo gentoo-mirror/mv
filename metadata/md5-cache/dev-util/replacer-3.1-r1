@@ -1,7 +1,7 @@
+BDEPEND=nls? ( sys-devel/gettext )
 DEFINED_PHASES=install prepare
-DEPEND=nls? ( sys-devel/gettext )
 DESCRIPTION=Search and replace python regular expressions within many files interactively
-EAPI=6
+EAPI=7
 HOMEPAGE=https://github.com/vaeth/replacer/
 IUSE=nls l10n_de
 KEYWORDS=~amd64 ~x86
@@ -10,4 +10,4 @@ RDEPEND=dev-lang/python nls? ( virtual/libintl )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/replacer/archive/v3.1.tar.gz -> replacer-3.1.tar.gz
-_md5_=f4d02c194301eef9e3aa5a6f7abff3a0
+_md5_=52578fa4448fd505600f6814f8f66c0f

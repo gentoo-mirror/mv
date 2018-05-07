@@ -1,11 +1,11 @@
+BDEPEND=app-text/recode
 DEFINED_PHASES=install prepare
-DEPEND=app-text/recode
 DESCRIPTION=EN => DE Dictionary
-EAPI=6
+EAPI=7
 HOMEPAGE=http://www.tm.informatik.uni-frankfurt.de/~razi/steak
 KEYWORDS=~x86 ~ppc ~amd64
 LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www-stud.rbi.informatik.uni-frankfurt.de/~razi/steak/program/Steak.1.7.3.tar.bz2
-_md5_=1a0ce7185882c4c23c47a3b6cc10441e
+_md5_=6948bf48fa5417c09197c34d03257aaa

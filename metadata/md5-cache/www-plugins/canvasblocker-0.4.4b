@@ -1,7 +1,7 @@
+BDEPEND=app-arch/unzip
 DEFINED_PHASES=install unpack
-DEPEND=app-arch/unzip
 DESCRIPTION=Firefox webextension: block canvas API to prevent canvas fingerprinting
-EAPI=6
+EAPI=7
 HOMEPAGE=https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/ https://github.com/kkapsner/CanvasBlocker
 IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
 KEYWORDS=~amd64 ~x86
@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/534930/canvasblocker-0.4.4b-an+fx.xpi
-_eclasses_=mv_mozextension-r1	af70c0330c17ade648e6e17f619d4d5f
-_md5_=1d08ead7e32857ea4a4ff65aa31745b5
+_eclasses_=mv_mozextension-r1	44184e6f7a30eea782b16174e1f2b575
+_md5_=2b03d25e5c60d2f0e9752446b16f1733

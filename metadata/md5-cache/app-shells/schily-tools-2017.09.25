@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile configure install prepare
 DEPEND=system-libschily? ( app-cdr/cdrtools ) !system-libschily? ( !app-cdr/cdrtools ) schilytools_match? ( system-star? ( app-arch/star ) !system-star? ( !app-arch/star ) ) schilytools_calc? ( !renameschily_calc? ( !sci-mathematics/calc ) ) schilytools_compare? ( !renameschily_compare? ( !media-gfx/imagemagick !media-gfx/graphicsmagick[imagemagick] ) ) schilytools_count? ( !renameschily_count? ( !sys-devel/llvm ) ) schilytools_bosh? ( !renameschily_jsh? ( !app-shells/heirloom-sh ) ) schilytools_man2html? ( !renameschily_man2html? ( !sys-apps/man ) ) schilytools_p? ( !renameschily_p? ( !dev-util/wiggle ) ) schilytools_translit? ( !dev-perl/Lingua-Translit ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) xattr? ( sys-apps/attr ) sys-devel/gnuconfig
 DESCRIPTION=Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
-EAPI=6
+EAPI=7
 HOMEPAGE=https://sourceforge.net/projects/schilytools/
 IUSE=acl caps doc static-libs system-libschily system-star xattr +renameschily_calc +renameschily_compare +renameschily_count +renameschily_jsh +renameschily_man2html +renameschily_p +schilytools_bosh +schilytools_calc +schilytools_calltree +schilytools_change +schilytools_compare +schilytools_copy +schilytools_count +schilytools_cpp +schilytools_cstyle +schilytools_cut +schilytools_hdump schilytools_label +schilytools_lndir +schilytools_man2html schilytools_manmake +schilytools_match +schilytools_mdigest schilytools_mountcd schilytools_osh +schilytools_p +schilytools_paste +schilytools_patch schilytools_pxupgrade +schilytools_sccs +schilytools_sfind +schilytools_smake +schilytools_termcap +schilytools_translit +schilytools_udiff +schilytools_ved
 KEYWORDS=~amd64 ~x86
@@ -10,5 +10,5 @@ RDEPEND=system-libschily? ( app-cdr/cdrtools ) !system-libschily? ( !app-cdr/cdr
 RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/schilytools/schily-2017-09-25.tar.bz2
-_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	epatch	9a5f039771f143195164a15a4faa41a1	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	63392afb034aad67f17fa129019eb4d9	flag-o-matic	5128c4729303400bd8d4b0b966530955	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	ltprune	607e058da37aa6dabfa408b7d61da72e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	fa02994d0beba88681127d93da4411ec	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
-_md5_=411f7985e6059bb857c1e31446f3f2ef
+_eclasses_=eutils	63392afb034aad67f17fa129019eb4d9	flag-o-matic	5128c4729303400bd8d4b0b966530955	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa02994d0beba88681127d93da4411ec
+_md5_=296fab236b21d22af3751936b371a5bb

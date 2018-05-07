@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DESCRIPTION=Utility for displaying AVI information
-EAPI=6
+EAPI=7
 HOMEPAGE=http://shounen.ru/soft/avinfo/english.shtml
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
@@ -8,4 +8,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://shounen.ru/soft/avinfo/avinfo-1.0.a15unix.tar.gz http://shounen.ru/soft/avinfo/avinfo-1.0.a15unix-patch1.tar.gz
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa02994d0beba88681127d93da4411ec
-_md5_=3438df2643237372087115bd25af6a29
+_md5_=7f08bd21079cec0e02ff79de937e8975

@@ -1,7 +1,8 @@
+BDEPEND=examples? ( virtual/latex-base )
 DEFINED_PHASES=compile install postinst postrm
-DEPEND=examples? ( virtual/latex-base dev-texlive/texlive-latexextra )
+DEPEND=virtual/latex-base
 DESCRIPTION=LaTeX2e character sheet layout for the Midgard Role Playing Game (Edition M5)
-EAPI=6
+EAPI=7
 HOMEPAGE=https://github.com/vaeth/m5figur-mv/
 IUSE=+examples
 KEYWORDS=~amd64 ~x86
@@ -10,4 +11,4 @@ RDEPEND=virtual/latex-base dev-texlive/texlive-latexextra
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/m5figur-mv/archive/v3.0.tar.gz -> m5figur-mv-3.0.tar.gz
-_md5_=4b2fed778f9ffa9dcb22756f0db48032
+_md5_=7a078945c2809baa151f9cbdcbc16c89

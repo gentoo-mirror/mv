@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install prepare
 DESCRIPTION=Tool to assemble/merge, extract information from, and update the metadata in PDF
-EAPI=6
+EAPI=7
 HOMEPAGE=http://thierry.schmit.free.fr/dev/mbtPdfAsm/mbtPdfAsm2.html
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris
 LICENSE=GPL-2
@@ -8,4 +8,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://thierry.schmit.free.fr/spip/IMG/gz/mbtPdfAsm-1.0.28.tar.gz http://sbriesen.de/gentoo/distfiles/mbtpdfasm-1.0.28-manual.pdf.bz2
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa02994d0beba88681127d93da4411ec
-_md5_=80faa731b4ec7e13637b6602328dcbe6
+_md5_=fb320591c4cbeb1a5a64bf658035aa18

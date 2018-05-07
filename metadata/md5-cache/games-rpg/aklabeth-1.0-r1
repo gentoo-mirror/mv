@@ -1,11 +1,11 @@
 DEFINED_PHASES=install prepare
 DEPEND=media-libs/libsdl
 DESCRIPTION=A remake of Richard C. Garriott's Ultima prequel
-EAPI=6
+EAPI=7
 HOMEPAGE=http://www.autismuk.freeserve.co.uk/
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www.autismuk.freeserve.co.uk/aklabeth-1.0.tar.gz
-_md5_=7a1b8c5611e6a119ecbb08864108acc1
+_md5_=da89e23e015ed2915e0a4ed97e3fec6e

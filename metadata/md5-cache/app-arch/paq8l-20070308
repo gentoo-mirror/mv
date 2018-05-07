@@ -1,7 +1,7 @@
+BDEPEND=app-arch/unzip
 DEFINED_PHASES=compile install
-DEPEND=app-arch/unzip
 DESCRIPTION=Open source file compressor and archiver
-EAPI=6
+EAPI=7
 HOMEPAGE=http://mattmahoney.net/dc/
 KEYWORDS=~x86 ~amd64
 LICENSE=GPL-3
@@ -9,4 +9,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://mattmahoney.net/dc/paq8l.zip
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa02994d0beba88681127d93da4411ec
-_md5_=ba3ce508b8f0bfc99d328d3ccce67506
+_md5_=3028820b0348d9628d55a1a2974e1c8a

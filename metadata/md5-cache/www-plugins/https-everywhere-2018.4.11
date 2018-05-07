@@ -1,7 +1,7 @@
+BDEPEND=app-arch/unzip
 DEFINED_PHASES=install unpack
-DEPEND=app-arch/unzip
 DESCRIPTION=Firefox webextension: force https for all websites of a provided list
-EAPI=6
+EAPI=7
 HOMEPAGE=https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/
 IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin
 KEYWORDS=~amd64 ~x86
@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/229918/https_everywhere-2018.4.11-an+fx.xpi
-_eclasses_=mv_mozextension-r1	af70c0330c17ade648e6e17f619d4d5f
-_md5_=e5730772106f4f3d8352986e3f6286f6
+_eclasses_=mv_mozextension-r1	44184e6f7a30eea782b16174e1f2b575
+_md5_=70ea07d961163203678fcd7957a5cf6a

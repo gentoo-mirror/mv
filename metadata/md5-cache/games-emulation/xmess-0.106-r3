@@ -1,7 +1,8 @@
+BDEPEND=x86? ( dev-lang/nasm ) x11-base/xorg-proto
 DEFINED_PHASES=compile install postinst prepare
-DEPEND=sys-libs/zlib alsa? ( media-libs/alsa-lib ) dga? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) !bundled-libs? ( dev-libs/expat ) ggi? ( media-libs/libggi ) lirc? ( app-misc/lirc ) opengl? ( virtual/opengl virtual/glu ) sdl? ( >=media-libs/libsdl-1.2.0 ) svga? ( media-libs/svgalib ) xinerama? ( x11-libs/libXinerama ) xv? ( x11-libs/libXv ) X? ( x11-libs/libXext ) dga? ( x11-proto/xf86dgaproto x11-proto/xf86vidmodeproto ) xinerama? ( x11-proto/xineramaproto ) xv? ( x11-proto/videoproto ) x86? ( dev-lang/nasm )
+DEPEND=sys-libs/zlib alsa? ( media-libs/alsa-lib ) dga? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) !bundled-libs? ( dev-libs/expat ) ggi? ( media-libs/libggi ) lirc? ( app-misc/lirc ) opengl? ( virtual/opengl virtual/glu ) sdl? ( >=media-libs/libsdl-1.2.0 ) svga? ( media-libs/svgalib ) xinerama? ( x11-libs/libXinerama ) xv? ( x11-libs/libXv ) X? ( x11-libs/libXext )
 DESCRIPTION=Multiple Arcade Machine Emulator for X11
-EAPI=6
+EAPI=7
 HOMEPAGE=http://x.mame.net/
 IUSE=alsa bundled-libs cpu_flags_x86_mmx dga ggi joystick lirc net opengl sdl svga X xinerama xv
 KEYWORDS=alpha amd64 hppa ia64 ppc sparc x86
@@ -10,5 +11,5 @@ RDEPEND=sys-libs/zlib alsa? ( media-libs/alsa-lib ) dga? ( x11-libs/libXxf86dga 
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://gentoo.osuosl.org/distfiles/xmame-0.106.tar.bz2
-_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	epatch	9a5f039771f143195164a15a4faa41a1	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	63392afb034aad67f17fa129019eb4d9	flag-o-matic	5128c4729303400bd8d4b0b966530955	ltprune	607e058da37aa6dabfa408b7d61da72e	multilib	97f470f374f2e94ccab04a2fb21d811e	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	fa02994d0beba88681127d93da4411ec	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf
-_md5_=246c9d0b74838fa3be9027c9f3aaec69
+_eclasses_=eutils	63392afb034aad67f17fa129019eb4d9	flag-o-matic	5128c4729303400bd8d4b0b966530955	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa02994d0beba88681127d93da4411ec
+_md5_=e195d582f68ba78f0ecb8e056c997c19
