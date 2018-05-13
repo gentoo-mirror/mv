@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test
-DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) nls? ( sys-devel/gettext ) ) !meson? ( !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/gettext-0.19.6 ) >=app-portage/elt-patches-20170422
+DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) nls? ( sys-devel/gettext ) ) !meson? ( !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/gettext-0.19.6 ) >=app-portage/elt-patches-20170422
 DESCRIPTION=Search and query ebuilds
 EAPI=6
 HOMEPAGE=https://github.com/vaeth/eix/
@@ -10,5 +10,5 @@ RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/pu
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/eix/archive/b2c7840899a83a5a4de8438333bab29f1104b9db.tar.gz -> eix-0.33.3_alpha20180503.tar.gz
-_eclasses_=autotools	4842e626555a9a4344f34cef2e190b67	bash-completion-r1	7e76462890d7d19cad453151876b0ecf	libtool	0081a71a261724730ec4c248494f044d	meson	ecfaf615b512dc4ff2a50a35e6b26c09	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	d2e7e7d290428bb25c56dcf2502badc1	python-utils-r1	3b2e27bcad216823f5a67d01d28b53a4	tmpfiles	7bd1d7bf5261430a2d2991cff7958c52	toolchain-funcs	fa02994d0beba88681127d93da4411ec
+_eclasses_=autotools	02d4d2fc8dba08b060de8f3afd46b409	bash-completion-r1	7e76462890d7d19cad453151876b0ecf	libtool	0081a71a261724730ec4c248494f044d	meson	ecfaf615b512dc4ff2a50a35e6b26c09	multilib	97f470f374f2e94ccab04a2fb21d811e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	d2e7e7d290428bb25c56dcf2502badc1	python-utils-r1	3b2e27bcad216823f5a67d01d28b53a4	tmpfiles	7bd1d7bf5261430a2d2991cff7958c52	toolchain-funcs	fa02994d0beba88681127d93da4411ec
 _md5_=ebb1de476080b5a75eb742994c27eeeb
