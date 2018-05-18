@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/schilytools/schily-2018-05-17.tar.bz2
 _eclasses_=eutils	63392afb034aad67f17fa129019eb4d9	fcaps	9445d60c1eb084a91c38ef4c070b2f16	flag-o-matic	5128c4729303400bd8d4b0b966530955	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	multilib	97f470f374f2e94ccab04a2fb21d811e	required-use-warn	66453552b464073c7819f693e0a2bea6	toolchain-funcs	fa02994d0beba88681127d93da4411ec
-_md5_=fb01365284bc4d03d682ae6df99e7aba
+_md5_=9fabc44e8049749e20718f3e75d3c127
