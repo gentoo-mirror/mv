@@ -393,7 +393,6 @@ src_install() {
 	emake CPPOPTX="${CPPFLAGS}" COPTX="${CFLAGS}" C++OPTX="${CXXFLAGS}" \
 		LDOPTX="${LDFLAGS}" GMAKE_NOWARN="true" install
 	find "${ED}" '(' -name '*.a' '-o' -name '*.so' ')' -delete || die
-	removedirs /usr/include
 	use suid || find "$ED" -perm /4000 -exec chmod -v -- -s '{}' '+' || die
 	if use schilytools_cdrtools; then
 		# These symlinks are for compat with cdrkit.
@@ -408,9 +407,10 @@ src_install() {
 		docinto mkisofs
 		dodoc ChangeLog* TODO
 	fi
+	removedirs /usr/include
 	if use schilytools_star; then
 		removedirs /usr/share/doc/star || die
-		mustremove /usr/bin/gnutar
+		mustremove /usr/bin/{gnu,}tar
 		mv -i "${ED}"/usr/sbin/rmt{,.star} || die
 	fi
 	if use schilytools_sccs; then
