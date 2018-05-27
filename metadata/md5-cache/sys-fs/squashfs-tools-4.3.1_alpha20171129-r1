@@ -10,5 +10,5 @@ RDEPEND=!static? ( sys-libs/zlib:= lz4? ( app-arch/lz4:= ) lzma? ( app-arch/xz-u
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/plougher/squashfs-tools/archive/fb33dfc32b131a1162dcf0e35bd88254ae10e265.tar.gz -> squashfs-tools-4.3.1_alpha20171129.tar.gz mirror://debian/pool/main/s/squashfs-tools/squashfs-tools_4.3-6.debian.tar.xz
-_eclasses_=eutils	63392afb034aad67f17fa129019eb4d9	flag-o-matic	5128c4729303400bd8d4b0b966530955	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa02994d0beba88681127d93da4411ec
+_eclasses_=eutils	63392afb034aad67f17fa129019eb4d9	flag-o-matic	5128c4729303400bd8d4b0b966530955	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607
 _md5_=57ea32a17e01c89448e830e9b37e8ca0

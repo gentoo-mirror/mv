@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://mattmahoney.net/dc/paq8l.zip
-_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	fa02994d0beba88681127d93da4411ec
+_eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607
 _md5_=3028820b0348d9628d55a1a2974e1c8a
