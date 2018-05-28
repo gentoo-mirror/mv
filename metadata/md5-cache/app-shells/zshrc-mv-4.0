@@ -4,8 +4,8 @@ EAPI=7
 HOMEPAGE=https://github.com/vaeth/zshrc-mv/
 KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=public-domain
-RDEPEND=!app-shells/auto-fu-zsh[kill-line(-)] >=app-shells/auto-fu-zsh-0.0.1.12_p0 >=app-shells/set_prompt-3.0.0 app-shells/termcolors-mv app-shells/zsh-syntax-highlighting
+RDEPEND=!app-shells/auto-fu-zsh[kill-line(-)] >=app-shells/auto-fu-zsh-0.0.1.12_p0 >=app-shells/set_prompt-3.0.0 app-shells/termcolors-mv || ( app-shells/fast-syntax-highlighting app-shells/zsh-syntax-highlighting )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/zshrc-mv/archive/v3.11.tar.gz -> zshrc-mv-3.11.tar.gz
-_md5_=c13b60b415ca9894e330b099a7a98504
+SRC_URI=https://github.com/vaeth/zshrc-mv/archive/v4.0.tar.gz -> zshrc-mv-4.0.tar.gz
+_md5_=8f446971903fec46fb1f817bf65e2d86
