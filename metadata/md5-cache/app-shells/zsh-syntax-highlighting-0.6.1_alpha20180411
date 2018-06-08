@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst prepare test
 DESCRIPTION=Fish shell like syntax highlighting for zsh
-EAPI=6
+EAPI=7
 HOMEPAGE=https://github.com/zsh-users/zsh-syntax-highlighting
 KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=HPND
@@ -9,4 +9,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/zsh-users/zsh-syntax-highlighting/archive/02a37dd919dc48e0821186e5f20e78bd0215f86a.tar.gz -> zsh-syntax-highlighting-0.6.1_alpha20180411.tar.gz
 _eclasses_=readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
-_md5_=4b700e7b0a30329dda0fd1eded6f9a56
+_md5_=335be37a676f5a99a01c603c8c5e45fa

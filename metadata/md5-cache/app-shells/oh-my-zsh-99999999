@@ -1,7 +1,7 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1
 DEFINED_PHASES=install postinst prepare unpack
-DEPEND=>=dev-vcs/git-1.8.2.1
 DESCRIPTION=A ready-to-use zsh configuration with plugins
-EAPI=6
+EAPI=7
 HOMEPAGE=https://github.com/robbyrussell/oh-my-zsh
 KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=ZSH
@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=app-shells/zsh
 SLOT=0
 _eclasses_=git-r3	af51ccfceeb403ab80f1bf9209d372c8	readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
-_md5_=46b5b1947237d0c91eb5de6bdb6f2757
+_md5_=911d2ce858e3f1a0b12c75a43d28dc6e
