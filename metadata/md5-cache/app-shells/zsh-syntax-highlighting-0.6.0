@@ -8,5 +8,5 @@ RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/zsh-users/zsh-syntax-highlighting/archive/0.6.0.tar.gz -> zsh-syntax-highlighting-0.6.0.tar.gz
-_eclasses_=readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
+_eclasses_=readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
 _md5_=4b700e7b0a30329dda0fd1eded6f9a56

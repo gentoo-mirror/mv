@@ -8,5 +8,5 @@ RDEPEND=>=app-shells/push-2.0-r2 || ( ( media-sound/alsa-utils || ( media-video/
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/video-mv/archive/v13.0.tar.gz -> video-mv-13.0.tar.gz
-_eclasses_=readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
+_eclasses_=readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
 _md5_=ea736789c3ae30095cf01ecc54028c24

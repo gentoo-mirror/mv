@@ -10,5 +10,5 @@ RDEPEND=create? ( dev-lang/perl ) perl? ( dev-lang/perl )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/termcolors-mv/archive/v4.7.tar.gz -> termcolors-mv-4.7.tar.gz
-_eclasses_=readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
+_eclasses_=readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
 _md5_=432fa8b026bec9b9ce5d802ce1ca7e9a
