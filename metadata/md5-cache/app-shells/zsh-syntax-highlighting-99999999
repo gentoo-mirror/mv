@@ -2,11 +2,11 @@ BDEPEND=>=dev-vcs/git-1.8.2.1
 DEFINED_PHASES=compile install postinst prepare test unpack
 DESCRIPTION=Fish shell like syntax highlighting for zsh
 EAPI=7
-HOMEPAGE=https://github.com/zsh-users/zsh-syntax-highlighting
+HOMEPAGE=https://github.com/zsh-users/zsh-syntax-highlighting/
 LICENSE=HPND
 PROPERTIES=live
 RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
 _eclasses_=git-r3	af51ccfceeb403ab80f1bf9209d372c8	readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
-_md5_=335be37a676f5a99a01c603c8c5e45fa
+_md5_=26b1fcebab9b8f72892f3a3ceb054eca
