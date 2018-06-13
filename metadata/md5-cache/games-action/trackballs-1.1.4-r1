@@ -11,5 +11,5 @@ RDEPEND=virtual/opengl virtual/glu media-libs/libsdl[sound,joystick,video] >=dev
 RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/trackballs/trackballs-1.1.4.tar.gz mirror://sourceforge/trackballs/trackballs-music-1.4.tar.bz2
-_eclasses_=desktop	2ccd1dd1dd7bfb8795eea024a4f91bb6	user	8bc2845510e2109af75e3eeac607ec81
+_eclasses_=desktop	1b286a7e7143d8c4ec89cd0d2743a097	user	8bc2845510e2109af75e3eeac607ec81
 _md5_=1845c9faffdec82ae0ae55d2ddb62616

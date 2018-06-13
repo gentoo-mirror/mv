@@ -1,4 +1,4 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install postinst prepare unpack
 DESCRIPTION=A ready-to-use zsh configuration with plugins
 EAPI=7
@@ -8,5 +8,5 @@ LICENSE=ZSH
 PROPERTIES=live
 RDEPEND=app-shells/zsh
 SLOT=0
-_eclasses_=git-r3	af51ccfceeb403ab80f1bf9209d372c8	readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
+_eclasses_=git-r3	8f6de46b0aa318aea0e8cac62ece098b	readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
 _md5_=911d2ce858e3f1a0b12c75a43d28dc6e

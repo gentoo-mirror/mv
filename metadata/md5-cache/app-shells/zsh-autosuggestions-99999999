@@ -1,4 +1,4 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Fish-like autosuggestions for zsh
 EAPI=7
@@ -8,5 +8,5 @@ PROPERTIES=live
 RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
-_eclasses_=git-r3	af51ccfceeb403ab80f1bf9209d372c8	readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
+_eclasses_=git-r3	8f6de46b0aa318aea0e8cac62ece098b	readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
 _md5_=4b7d12f3f2c924bdd106fb3e95445e02

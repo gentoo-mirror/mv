@@ -1,4 +1,4 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Optimized and extended zsh-syntax-highlighting
 EAPI=7
@@ -8,5 +8,5 @@ PROPERTIES=live
 RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
-_eclasses_=git-r3	af51ccfceeb403ab80f1bf9209d372c8	readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
+_eclasses_=git-r3	8f6de46b0aa318aea0e8cac62ece098b	readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
 _md5_=c150475a97ace5b8d0244d798c7acba4
