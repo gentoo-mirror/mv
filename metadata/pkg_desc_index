@@ -22,3 +22,4 @@ net-misc/openrdate 1.2: use TCP or UDP to retrieve the current time of another m
 virtual/cdrtools 1: Virtual for command-line recorders cdrtools and cdrkit
 virtual/freedesktop-icon-theme 0-r3: A virtual to choose between different icon themes
 x11-libs/motif 2.3.8-r1: The Motif user interface component toolkit
+x11-wm/fvwm 2.6.8: An extremely powerful ICCCM-compliant multiple virtual desktop window manager
