@@ -1,7 +1,7 @@
+BDEPEND=virtual/latex-base dev-lang/perl virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DEFINED_PHASES=compile configure install postinst postrm prepare
-DEPEND=virtual/latex-base dev-lang/perl virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DESCRIPTION=Finds useless references in latex files or unnecessarily numbered environments
-EAPI=6
+EAPI=7
 HOMEPAGE=http://www-ljk.imag.fr/membres/Jerome.Lelong/soft/chklref/index.html
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www-ljk.imag.fr/membres/Jerome.Lelong/soft/chklref/chklref-2.6.0.tar.gz
 _eclasses_=latex-package	773c51c2ef26eaff025998531e7c6731
-_md5_=146eb0623634bc3c8ece073beaf35c21
+_md5_=738fa82b624bd8f9527190cc19cfc997
