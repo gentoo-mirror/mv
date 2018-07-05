@@ -10,6 +10,6 @@ LICENSE=GPL-2 LGPL-2.1 CDDL-Schily
 RDEPEND=!!app-cdr/cdrtools[-schily-tools(-)] !!app-arch/star !renameschily_libschily? ( !sys-apps/man ) schilytools_calc? ( !renameschily_calc? ( !sci-mathematics/calc ) ) schilytools_compare? ( !renameschily_compare? ( !media-gfx/imagemagick !media-gfx/graphicsmagick[imagemagick] ) ) schilytools_count? ( !renameschily_count? ( !sys-devel/llvm ) ) schilytools_bosh? ( !renameschily_jsh? ( !app-shells/heirloom-sh ) ) schilytools_man2html? ( !renameschily_man2html? ( !sys-apps/man ) ) schilytools_p? ( !renameschily_p? ( !dev-util/wiggle ) ) schilytools_translit? ( !dev-perl/Lingua-Translit ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) nls? ( virtual/libintl ) !amd64-fbsd? ( xattr? ( sys-apps/attr ) )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=mirror://sourceforge/schilytools/schily-2018-06-11.tar.bz2
+SRC_URI=mirror://sourceforge/schilytools/schily-2018-07-02.tar.bz2
 _eclasses_=eutils	5b8ce72259e08104b337fe28c6de5dbc	fcaps	9445d60c1eb084a91c38ef4c070b2f16	flag-o-matic	5128c4729303400bd8d4b0b966530955	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	multilib	97f470f374f2e94ccab04a2fb21d811e	required-use-warn	66453552b464073c7819f693e0a2bea6	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607
 _md5_=9fabc44e8049749e20718f3e75d3c127

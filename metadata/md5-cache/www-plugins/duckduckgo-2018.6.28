@@ -10,6 +10,6 @@ RDEPEND=|| ( browser_firefox? ( >=www-client/firefox-57 ) browser_firefox-bin? (
 REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_privacy_essentials-2018.5.24-an+fx.xpi
+SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_privacy_essentials-2018.6.28-an+fx.xpi
 _eclasses_=mv_mozextension-r1	44184e6f7a30eea782b16174e1f2b575
 _md5_=176410f64f304bb2a0803006e925b005
