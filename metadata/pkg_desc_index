@@ -12,6 +12,8 @@ app-dicts/stardict-freedict-ita-deu 2.4.2: Stardict Dictionary Italian to German
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
 games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
+games-board/chessproblem 1.9 2.12: Find solutions of chess problems (mate, selfmate, and helpmate) with cooks
+games-emulation/sdlmame 0.174-r2: Multiple Arcade Machine Emulator + Multi Emulator Super System (MESS)
 games-emulation/xmame 0.106-r4: Multiple Arcade Machine Emulator for X11
 games-emulation/xmess 0.106-r3: Multiple Arcade Machine Emulator for X11
 games-engines/freesci 0.6.4-r1: Sierra script interpreter for your old Sierra adventures
