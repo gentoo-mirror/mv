@@ -9,5 +9,5 @@ RDEPEND=>=dev-lang/perl-5.6.1 dev-perl/File-Which dev-perl/String-ShellQuote
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/portage-postsyncd-mv/archive/v7.0.tar.gz -> portage-postsyncd-mv-7.0.tar.gz
-_eclasses_=eutils	5b8ce72259e08104b337fe28c6de5dbc
+_eclasses_=eutils	b43d08fe0771faf2f5e7be19c2789d33
 _md5_=c8a5f94d776948beab0244df41de6d1e
