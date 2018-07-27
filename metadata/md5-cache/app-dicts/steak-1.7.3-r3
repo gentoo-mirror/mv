@@ -3,9 +3,9 @@ DEFINED_PHASES=install prepare
 DESCRIPTION=EN => DE Dictionary
 EAPI=7
 HOMEPAGE=http://www.tm.informatik.uni-frankfurt.de/~razi/steak
-KEYWORDS=~x86 ~ppc ~amd64
+KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www-stud.rbi.informatik.uni-frankfurt.de/~razi/steak/program/Steak.1.7.3.tar.bz2
-_md5_=6948bf48fa5417c09197c34d03257aaa
+_md5_=0d5d770548c35d0f8840b29d69850457
