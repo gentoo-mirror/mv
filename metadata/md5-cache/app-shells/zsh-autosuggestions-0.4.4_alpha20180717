@@ -1,12 +1,12 @@
 DEFINED_PHASES=install postinst
-DESCRIPTION=Optimized and extended zsh-syntax-highlighting
+DESCRIPTION=Fish-like autosuggestions for zsh
 EAPI=7
-HOMEPAGE=https://github.com/zdharma/fast-syntax-highlighting/
+HOMEPAGE=https://github.com/zsh-users/zsh-autosuggestions/
 KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
-LICENSE=HPND
+LICENSE=MIT
 RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/zdharma/fast-syntax-highlighting/archive/v1.23.tar.gz -> fast-syntax-highlighting-1.23.tar.gz
+SRC_URI=https://github.com/zsh-users/zsh-autosuggestions/archive/fa5d9c0ff5fb202545e12c98dae086d91d70ba50.tar.gz -> zsh-autosuggestions-0.4.4_alpha20180717.tar.gz
 _eclasses_=readme.gentoo-r1	54aecea034d5e90bdb0684b80da5c9f3
-_md5_=94ddd3452fedbbc54d37844c5ca38c43
+_md5_=3c5d46fa6ccdb688082f882487009746
