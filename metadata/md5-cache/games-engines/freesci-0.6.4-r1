@@ -10,5 +10,5 @@ RDEPEND=media-libs/alsa-lib X? ( x11-libs/libX11 x11-libs/libXrender x11-libs/li
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www-plan.cs.colorado.edu/creichen/freesci/freesci-0.6.4.tar.bz2
-_eclasses_=desktop	1b286a7e7143d8c4ec89cd0d2743a097
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d
 _md5_=32360d86ca6a6cede9f76091b12e107b
