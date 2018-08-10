@@ -1,7 +1,7 @@
+BDEPEND=virtual/pkgconfig
 DEFINED_PHASES=compile install prepare
-DEPEND=virtual/pkgconfig
 DESCRIPTION=Initialize iptables and net-related sysctl variables
-EAPI=6
+EAPI=7
 HOMEPAGE=https://github.com/vaeth/firewall-mv/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/firewall-mv/archive/v13.0.tar.gz -> firewall-mv-13.0.tar.gz
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	systemd	b1b1a2f04ac3554b363272ae6fa51f8a	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607
-_md5_=7a969780f4d5b1268f37943840d9470c
+_md5_=5cebd7766eb146553abb10c90c8ea657
