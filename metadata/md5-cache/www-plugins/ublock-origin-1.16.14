@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/607454/ublock_origin-1.16.14-an+fx.xpi
-_eclasses_=mv_mozextension-r1	44184e6f7a30eea782b16174e1f2b575
+_eclasses_=mv_mozextension-r1	5b34ac70ce0a2865becfd3707876d911
 _md5_=7315651479e36467c8d14b7cdeb49e70

@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/534930/canvasblocker-0.5.2b-an+fx.xpi
-_eclasses_=mv_mozextension-r1	44184e6f7a30eea782b16174e1f2b575
+_eclasses_=mv_mozextension-r1	5b34ac70ce0a2865becfd3707876d911
 _md5_=2b03d25e5c60d2f0e9752446b16f1733
