@@ -9,5 +9,5 @@ RDEPEND=>=net-dialup/ppp-2.4.4-r13
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://download.opensuse.org/source/distribution/11.3/repo/oss/suse/src/smpppd-1.60.45-3.1.src.rpm
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	b43d08fe0771faf2f5e7be19c2789d33	multilib	97f470f374f2e94ccab04a2fb21d811e	rpm	f52cfa3a435468d86d3b49c357b9cb35	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	bd6d27ae6a55a305c340ea0846a25d96	multilib	97f470f374f2e94ccab04a2fb21d811e	rpm	f52cfa3a435468d86d3b49c357b9cb35	toolchain-funcs	1e35303c63cd707f6c3422b4493d5607
 _md5_=5d313fe5aa0aad19dc3eded4e8b69343
