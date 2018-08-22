@@ -10,6 +10,6 @@ RDEPEND=|| ( browser_firefox? ( www-client/firefox ) browser_firefox-bin? ( www-
 REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://addons.mozilla.org/firefox/downloads/file/769035/form_history_control-2.0.3.2-an+fx.xpi
+SRC_URI=https://addons.mozilla.org/firefox/downloads/file/769035/form_history_control-2.1.0.0-an+fx.xpi
 _eclasses_=mv_mozextension-r1	5b34ac70ce0a2865becfd3707876d911
 _md5_=1f8dfc881651970305848d220a1c1291
