@@ -8,6 +8,6 @@ LICENSE=GPL-3
 RDEPEND=virtual/latex-base dev-lang/perl virtual/latex-base
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/jlelong/chklref/archive/v2.6.0.tar.gz -> chklref-2.6.0.tar.gz
+SRC_URI=https://github.com/jlelong/chklref/archive/23028ecbeff38429d1e91a7e142d2bdc623298d8.tar.gz -> chklref-2.6.1_alpha20170913.tar.gz
 _eclasses_=latex-package	17f13abe0de88340745e52e6b627aee7
 _md5_=c6efc8b90c7489212980981957b61bcf
