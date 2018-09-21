@@ -7,6 +7,6 @@ LICENSE=HPND
 RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/zdharma/fast-syntax-highlighting/archive/v1.26.tar.gz -> fast-syntax-highlighting-1.26.tar.gz
+SRC_URI=https://github.com/zdharma/fast-syntax-highlighting/archive/v1.27.tar.gz -> fast-syntax-highlighting-1.27.tar.gz
 _eclasses_=readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190
 _md5_=94ddd3452fedbbc54d37844c5ca38c43
