@@ -9,4 +9,4 @@ RESTRICT=fetch
 SLOT=0
 SRC_URI=doc? ( http://www.ni.com/pdf/manuals/flexusr.pdf ) x86? ( mirror://gentoo/lmgrd-x86.Z mirror://gentoo/lmutil-x86.Z ) amd64? ( mirror://gentoo/lmgrd-amd64.Z mirror://gentoo/lmutil-amd64.Z )
 _eclasses_=user	8bc2845510e2109af75e3eeac607ec81
-_md5_=141a8716cfb39992c5839e129ff90040
+_md5_=26224acdc596772470b98051682501ca

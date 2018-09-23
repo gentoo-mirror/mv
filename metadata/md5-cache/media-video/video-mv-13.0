@@ -9,4 +9,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/video-mv/archive/v13.0.tar.gz -> video-mv-13.0.tar.gz
 _eclasses_=readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190
-_md5_=7eb36bbea8ad4edec125db39ef759314
+_md5_=76f980e545ded983eaf2f4c35f40838e

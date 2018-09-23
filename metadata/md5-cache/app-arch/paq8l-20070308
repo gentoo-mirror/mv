@@ -9,4 +9,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://mattmahoney.net/dc/paq8l.zip
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	e4a9360924c5ce9f52e61342cde58512
-_md5_=55eee40a72c1244a3207ee801da944f9
+_md5_=7b048775efc7aea99998c1011a708557

@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://gentoo.osuosl.org/distfiles/xmame-0.106.tar.bz2
 _eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	55aaa148741116aa54ad0d80e361818e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	e4a9360924c5ce9f52e61342cde58512
-_md5_=85ee8a0f9df846c13edd7ba9f428df45
+_md5_=53dc17d0454cb223077ab46ec6a03482

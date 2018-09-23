@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0/3.4.00
 SRC_URI=http://fmg-www.cs.ucla.edu/geoff/tars/ispell-3.4.00.tar.gz
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	e4a9360924c5ce9f52e61342cde58512
-_md5_=52c0cee062395b7c81b87e2cb11b7dfe
+_md5_=8e5a16ddbdfa323ba6054fa43dbc17c2

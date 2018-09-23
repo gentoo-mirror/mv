@@ -11,5 +11,5 @@ REQUIRED_USE=!rpm2targz? ( rpm? ( cpio ) ) ooffice? ( || ( html2text links lynx 
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/lesspipe/archive/87ac1d025ba3417d7703b3ca57d52da055b5b21e.tar.gz -> lesspipe-1.84_alpha20180414.tar.gz
-_eclasses_=required-use-warn	e0028d8c59503ee1f5b38cb9aed3e404
-_md5_=79b384457cbb93243f629bbfd758abda
+_eclasses_=required-use-warn	36de7ccc3dbb2cb29c7258e48cc7cd56
+_md5_=84bb7b2d6bb9e9b10b082ec4b7ecc0ef

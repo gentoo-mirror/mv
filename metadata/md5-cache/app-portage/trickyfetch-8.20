@@ -8,4 +8,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/trickyfetch/archive/v8.20.tar.gz -> trickyfetch-8.20.tar.gz
 _eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8
-_md5_=82293cb70aac4c97f775b1c7d69c236b
+_md5_=6542d37b5305ccd369a7c7dc103ac607

@@ -8,4 +8,4 @@ LICENSE=GPL-2 LGPL-2.1 CDDL-Schily
 RDEPEND=app-shells/schily-tools[schilytools_cdrtools]
 REQUIRED_USE=schily-tools
 SLOT=0
-_md5_=38e8cf498b99b5d4d01a774859539b12
+_md5_=61fdfad0b22bc49e566c5784e68dd417

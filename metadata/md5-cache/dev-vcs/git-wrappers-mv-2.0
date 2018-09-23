@@ -7,4 +7,4 @@ LICENSE=BSD
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/git-wrappers-mv/archive/v2.0.tar.gz -> git-wrappers-mv-2.0.tar.gz
-_md5_=53808be5a7d19118d61fb672affa43a6
+_md5_=7e5ed191b3b3ec660e6a1b534b0841ee

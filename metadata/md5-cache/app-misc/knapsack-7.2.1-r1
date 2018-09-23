@@ -9,4 +9,4 @@ RDEPEND=dev-libs/boost:=
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/knapsack/archive/v7.2.1.tar.gz -> knapsack-7.2.1.tar.gz
-_md5_=833192adc05808f48f2cd3b7cd2f6d87
+_md5_=80130c8fd99a83f7f3b6639fdaee3198

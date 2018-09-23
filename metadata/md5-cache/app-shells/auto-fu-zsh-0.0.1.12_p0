@@ -9,4 +9,4 @@ LICENSE=HPND
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/hchbaw/auto-fu.zsh/archive/42dbef5da89360f132cce010004d4c674a13c951.tar.gz -> auto-fu-zsh-0.0.1.12_p0.tar.gz
-_md5_=06a5d890ece4bd31e23b29f8ae0867d1
+_md5_=8b04f34fcecd4753e2367809f797eb28

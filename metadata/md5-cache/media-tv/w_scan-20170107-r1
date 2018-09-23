@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://wirbel.htpc-forum.de/w_scan/w_scan-20170107.tar.bz2
-_md5_=dcbccd7e4f7dc92da6360ad3b0dcbb5a
+_md5_=02b96c700eaebe33f4ca8446525b25f6

@@ -10,4 +10,4 @@ RDEPEND=dev-lang/python nls? ( virtual/libintl )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/replacer/archive/v3.1.tar.gz -> replacer-3.1.tar.gz
-_md5_=52578fa4448fd505600f6814f8f66c0f
+_md5_=fa5976f3534f0bf0acfca9a96c7fb5af

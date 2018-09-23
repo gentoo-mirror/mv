@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/firewall-mv/archive/v13.0.tar.gz -> firewall-mv-13.0.tar.gz
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	systemd	47c677ae1d7b69031f11f630ac09f0d1	toolchain-funcs	e4a9360924c5ce9f52e61342cde58512
-_md5_=5cebd7766eb146553abb10c90c8ea657
+_md5_=923f2d986239d9fb9d4f455d7b00d66b

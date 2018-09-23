@@ -7,4 +7,4 @@ LICENSE=MIT
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/dsa-stats/archive/v1.0.tar.gz -> dsa-stats-1.0.tar.gz
-_md5_=ab5645b4141967a4f536525fea99173f
+_md5_=28081a31d0b6223548ffd57527427082

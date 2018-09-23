@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/world/archive/v3.19.tar.gz -> world-3.19.tar.gz
-_md5_=c53f73775d5bfe26f28ae72072272e4d
+_md5_=fbaca8432e08c08d0c00ef5a18087845

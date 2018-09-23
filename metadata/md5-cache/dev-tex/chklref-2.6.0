@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/jlelong/chklref/archive/v2.6.0.tar.gz -> chklref-2.6.0.tar.gz
 _eclasses_=latex-package	17f13abe0de88340745e52e6b627aee7
-_md5_=c6efc8b90c7489212980981957b61bcf
+_md5_=70a2d4e44e87fa9521c42f0052c70aeb

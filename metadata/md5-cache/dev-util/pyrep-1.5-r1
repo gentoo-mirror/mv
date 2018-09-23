@@ -8,4 +8,4 @@ RDEPEND=dev-lang/python
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/pyrep/archive/v1.5.tar.gz -> pyrep-1.5.tar.gz
-_md5_=6f80b2e1b9ad59ad34df1815d394320a
+_md5_=2873df115d914727128fe723b1da6567

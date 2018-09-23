@@ -11,4 +11,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/reduce-algebra/Snapshot_2014-11-30/reduce-src-2014-11-30.tar.bz2
 _eclasses_=elisp-common	23f47b2e1de7abf387105eddd1318738
-_md5_=c9710257577f370c7ea01007f1f6d829
+_md5_=5c412c2ce351cbfe20823642141289da

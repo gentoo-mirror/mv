@@ -8,4 +8,4 @@ RDEPEND=>=dev-lang/perl-5.8 || ( >=dev-lang/perl-5.9.4 >=virtual/perl-File-Spec-
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/mv_perl/archive/v3.16.tar.gz -> mv_perl-3.16.tar.gz
-_md5_=b1dba7f41cb703ca08548b23949693ca
+_md5_=1c93fce725dc36e250299104897b635f

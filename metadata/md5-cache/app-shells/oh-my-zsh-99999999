@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=app-shells/zsh
 SLOT=0
 _eclasses_=git-r3	0d4635eeb5a96cd5315597a47eba25c9	readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190
-_md5_=911d2ce858e3f1a0b12c75a43d28dc6e
+_md5_=205837040ac03869328678d806fc382a

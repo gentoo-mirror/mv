@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www-stud.rbi.informatik.uni-frankfurt.de/~razi/steak/program/Steak.1.7.3.tar.bz2
-_md5_=0d5d770548c35d0f8840b29d69850457
+_md5_=405e34e628b34181ed36faab30556ddb
