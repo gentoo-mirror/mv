@@ -10,5 +10,5 @@ RDEPEND=sys-apps/file app-arch/xz-utils app-arch/bzip2 dev-lang/perl unzip? ( ap
 REQUIRED_USE=!rpm2targz? ( rpm? ( cpio ) ) ooffice? ( || ( html2text links lynx elinks w3m ) ) xlhtml? ( || ( html2text links lynx elinks w3m ) )
 SLOT=0
 SRC_URI=https://www-zeuthen.desy.de/~friebel/unix/less/lesspipe-1.83.tar.gz
-_eclasses_=required-use-warn	36de7ccc3dbb2cb29c7258e48cc7cd56
+_eclasses_=required-use-warn	56ed34ee9a569101ffa7de21e82eaab0
 _md5_=ac33757b01b2fd2c7d669095de3d03b4

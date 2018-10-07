@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://addons.cdn.mozilla.net/user-media/addons/385621/duckduckgo_privacy_essentials-2018.9.14-an+fx.xpi
-_eclasses_=mv_mozextension-r1	3abd107316a7c3825739206dc591a216
+_eclasses_=mv_mozextension-r1	160466f4feaeb8ed0b902aaa6f286a26
 _md5_=b37c3c9d86240a50a259ca4ad53554c8
