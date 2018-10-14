@@ -2,11 +2,11 @@ DEFINED_PHASES=install postinst prepare
 DESCRIPTION=Frontends for using mplayer/mencoder, ffmpeg/libav, or tzap as video recorder
 EAPI=7
 HOMEPAGE=https://github.com/vaeth/video-mv/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=BSD
 RDEPEND=>=app-shells/push-2.0-r2 || ( ( media-sound/alsa-utils || ( media-video/mplayer[encode] virtual/ffmpeg ) ) media-tv/linuxtv-dvb-apps ) >=app-shells/runtitle-2.3
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/video-mv/archive/v13.0.tar.gz -> video-mv-13.0.tar.gz
 _eclasses_=readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190
-_md5_=76f980e545ded983eaf2f4c35f40838e
+_md5_=904cc95e77621e967565b042b9d4434c
