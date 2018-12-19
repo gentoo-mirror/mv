@@ -10,6 +10,6 @@ RDEPEND=|| ( browser_firefox? ( >=www-client/firefox-59 ) browser_firefox-bin? (
 REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey browser_seamonkey-bin )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://secure.informaction.com/download/releases/noscript-10.1.9.9.xpi https://addons.cdn.mozilla.net/user-media/addons/722/noscript_security_suite-10.1.9.9-an+fx.xpi -> noscript-10.1.9.9.xpi
+SRC_URI=https://secure.informaction.com/download/releases/noscript-10.2.0.xpi https://addons.cdn.mozilla.net/user-media/addons/722/noscript_security_suite-10.2.0-an+fx.xpi -> noscript-10.2.0.xpi
 _eclasses_=mv_mozextension-r1	160466f4feaeb8ed0b902aaa6f286a26
 _md5_=09bc9ff35330f2a8f4432ffa5b94eb91
