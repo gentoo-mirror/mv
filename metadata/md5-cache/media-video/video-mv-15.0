@@ -7,6 +7,6 @@ LICENSE=BSD
 RDEPEND=>=app-shells/push-2.0-r2 || ( ( media-sound/alsa-utils || ( media-video/mplayer[encode] virtual/ffmpeg ) ) media-tv/linuxtv-dvb-apps ) >=app-shells/runtitle-2.3
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/video-mv/archive/v14.0.tar.gz -> video-mv-14.0.tar.gz
+SRC_URI=https://github.com/vaeth/video-mv/archive/v15.0.tar.gz -> video-mv-15.0.tar.gz
 _eclasses_=readme.gentoo-r1	22ae82e140bdd95d17a34fd5fd733190
 _md5_=904cc95e77621e967565b042b9d4434c
