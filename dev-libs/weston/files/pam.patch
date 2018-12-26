@@ -123,7 +123,7 @@ Signed-off-by: Jussi Kukkonen <jussi.kukkonen@intel.com>
 +#ifdef HAVE_PAM
  	fprintf(stderr, "  -u, --user      Start session as specified username,\n"
  			"                  e.g. -u joe, requires root.\n");
-+-#endif
++#endif
  	fprintf(stderr, "  -t, --tty       Start session on alternative tty,\n"
  			"                  e.g. -t /dev/tty4, requires -u option.\n");
  	fprintf(stderr, "  -v, --verbose   Be verbose\n");
