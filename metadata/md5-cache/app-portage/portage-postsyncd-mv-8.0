@@ -8,6 +8,6 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.6.1 dev-perl/File-Which dev-perl/String-ShellQuote
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/portage-postsyncd-mv/archive/v7.1.tar.gz -> portage-postsyncd-mv-7.1.tar.gz
+SRC_URI=https://github.com/vaeth/portage-postsyncd-mv/archive/v8.0.tar.gz -> portage-postsyncd-mv-8.0.tar.gz
 _eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8
-_md5_=033fcd970bade599a5b38e65cc42f014
+_md5_=ee240bb1fe5e792bbbd853de80f99ba8
