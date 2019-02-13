@@ -11,5 +11,5 @@ RDEPEND=ssl? ( >=dev-libs/openssl-1.1:0= ) sys-libs/readline:0= zlib? ( sys-libs
 RESTRICT=test
 SLOT=0/5pre
 SRC_URI=https://github.com/apenwarr/wvstreams/archive/dac7d0f784845a8b43d45f64fdf43fd5f4833a34.tar.gz -> wvstreams-4.6.2_alpha20181025.tar.gz
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	55aaa148741116aa54ad0d80e361818e	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	b2f01ad412baf81650c23fcf0975fa33	toolchain-funcs	f164325a2cdb5b3ea39311d483988861
+_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	b2f01ad412baf81650c23fcf0975fa33	toolchain-funcs	f164325a2cdb5b3ea39311d483988861
 _md5_=bffc90b79d2f8f0d2debc6a12c2f7098
