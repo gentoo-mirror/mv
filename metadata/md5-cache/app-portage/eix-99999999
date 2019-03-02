@@ -1,7 +1,8 @@
+BDEPEND=meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) nls? ( sys-devel/gettext ) ) !meson? ( !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/gettext-0.19.6 ) >=app-portage/elt-patches-20170815 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) nls? ( sys-devel/gettext ) ) !meson? ( !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/gettext-0.19.6 ) >=app-portage/elt-patches-20170815 >=dev-vcs/git-1.8.2.1[curl]
+DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= )
 DESCRIPTION=Search and query ebuilds
-EAPI=6
+EAPI=7
 HOMEPAGE=https://github.com/vaeth/eix/
 IUSE=debug +dep doc +jumbo-build l10n_de l10n_ru +meson nls optimization +required-use security +src-uri strong-optimization strong-security sqlite swap-remote tools
 LICENSE=GPL-2
@@ -9,4 +10,4 @@ PROPERTIES=live
 RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/push-3.1 >=app-shells/quoter-4.1 virtual/tmpfiles
 SLOT=0
 _eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	bash-completion-r1	47a7402d95930413ce25ba8d857339bb	git-r3	0d4635eeb5a96cd5315597a47eba25c9	libtool	f143db5a74ccd9ca28c1234deffede96	meson	2780db7405ab6249571d07667ab97ba1	multilib	b2f01ad412baf81650c23fcf0975fa33	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	12114a2a9aab35b93efc037a196b3234	tmpfiles	a6dd0427ea9c68067a0a7fe2236b457f	toolchain-funcs	f164325a2cdb5b3ea39311d483988861
-_md5_=97936fb08a089873ddfe9846fd6e1ad7
+_md5_=80e888bdbaef9366b50d25c503c87f7b

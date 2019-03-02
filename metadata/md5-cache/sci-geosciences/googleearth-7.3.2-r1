@@ -1,7 +1,7 @@
+BDEPEND=dev-util/patchelf
 DEFINED_PHASES=install postinst postrm preinst prepare unpack
-DEPEND=dev-util/patchelf
 DESCRIPTION=A 3D interface to the planet
-EAPI=6
+EAPI=7
 HOMEPAGE=https://www.google.com/earth/desktop/
 IUSE=+bundled-qt
 KEYWORDS=~amd64
@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2 dev-libs/nspr media-libs/fontconfig media-libs/freetype 
 RESTRICT=mirror splitdebug
 SLOT=0
 SRC_URI=https://dl.google.com/dl/linux/direct/google-earth-pro-stable_7.3.2_amd64.deb
-_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	epatch	a1bf4756dba418a7238f3be0cb010c54	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	ltprune	2729691420b6deeda2a90b1f1183fb55	multilib	b2f01ad412baf81650c23fcf0975fa33	pax-utils	e85f015e815dd463b0c206d781ef45a5	preserve-libs	ef207dc62baddfddfd39a164d9797648	toolchain-funcs	f164325a2cdb5b3ea39311d483988861	unpacker	3cd8bad0d31e525cd26be1bfa4e61631	vcs-clean	2a0f74a496fa2b1552c4f3398258b7bf	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=4365857db4dd45f15e6566f0de627084
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	gnome2-utils	532371cfcba45b2ab0d2950547c97d95	pax-utils	e85f015e815dd463b0c206d781ef45a5	unpacker	3cd8bad0d31e525cd26be1bfa4e61631	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=6e01c080a8f6ded6321079443b0ebb16

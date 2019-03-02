@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/P/PE/PEVANS/File-lchown-0.02.tar.gz
 _eclasses_=multiprocessing	cac3169468f893670dac3e7cb940e045	perl-functions	f2e3420aed32cf1abe33b4129b842636	perl-module	71c828c354a4cddced2641dda2695de5
-_md5_=c8fb5fa41d0f0ee1b6d405bfe1b91c7e
+_md5_=50cb1739f221c032b1b96491e38ddda6
