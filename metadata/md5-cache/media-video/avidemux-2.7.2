@@ -1,15 +1,16 @@
 BDEPEND=qt5? ( dev-qt/linguist-tools:5 ) dev-util/ninja >=dev-util/cmake-3.9.6
 DEFINED_PHASES=compile configure install postinst postrm prepare test
-DEPEND=~media-libs/avidemux-core-2.7.1:2.7[nls?,sdl?,vaapi?,vdpau?,xv?,nvenc?] nvenc? ( amd64? ( media-video/nvidia_video_sdk:0 ) ) opengl? ( virtual/opengl:0 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) vaapi? ( x11-libs/libva:0= )
+DEPEND=~media-libs/avidemux-core-2.7.2:2.7[nls?,sdl?,vaapi?,vdpau?,xv?,nvenc?] nvenc? ( amd64? ( media-video/nvidia_video_sdk:0 ) ) opengl? ( virtual/opengl:0 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) vaapi? ( x11-libs/libva:0= )
 DESCRIPTION=Video editor designed for simple cutting, filtering and encoding tasks
 EAPI=7
 HOMEPAGE=http://fixounet.free.fr/avidemux
 IUSE=debug nls nvenc opengl qt5 sdl vaapi vdpau xv
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-1 GPL-2 MIT PSF-2 public-domain
-PDEPEND=~media-libs/avidemux-plugins-2.7.1:2.7[opengl?,qt5?]
-RDEPEND=~media-libs/avidemux-core-2.7.1:2.7[nls?,sdl?,vaapi?,vdpau?,xv?,nvenc?] nvenc? ( amd64? ( media-video/nvidia_video_sdk:0 ) ) opengl? ( virtual/opengl:0 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) vaapi? ( x11-libs/libva:0= ) nls? ( virtual/libintl:0 ) !<media-video/avidemux-2.7.1
+PDEPEND=~media-libs/avidemux-plugins-2.7.2:2.7[opengl?,qt5?]
+RDEPEND=~media-libs/avidemux-core-2.7.2:2.7[nls?,sdl?,vaapi?,vdpau?,xv?,nvenc?] nvenc? ( amd64? ( media-video/nvidia_video_sdk:0 ) ) opengl? ( virtual/opengl:0 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtopengl:5 dev-qt/qtwidgets:5 ) vaapi? ( x11-libs/libva:0= ) nls? ( virtual/libintl:0 ) !<media-video/avidemux-2.7.2
+RESTRICT=mirror
 SLOT=2.7
-SRC_URI=mirror://sourceforge/avidemux/avidemux/2.7.1/avidemux_2.7.1.tar.gz
+SRC_URI=mirror://sourceforge/avidemux/avidemux/2.7.2/avidemux_2.7.2.tar.gz
 _eclasses_=cmake-utils	ab10bd85e5d38e2a32077bcd91faa1b6	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	flag-o-matic	a09389deba2c0a7108b581e02c7cecbf	multilib	b2f01ad412baf81650c23fcf0975fa33	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	qmake-utils	bdf97e69a34b864d6d545f4ec3143ff7	toolchain-funcs	f164325a2cdb5b3ea39311d483988861	xdg-utils	14d00d009167652b1fa363e55effe213
-_md5_=97a27f7ebcccb7b9ce98efef07cc8b26
+_md5_=a2eeba9c304b9fef16d8d1073679ec07
