@@ -10,4 +10,4 @@ RDEPEND=sys-apps/file app-arch/xz-utils app-arch/bzip2 dev-lang/perl brotli? ( !
 REQUIRED_USE=!rpm2targz? ( rpm? ( cpio ) ) ooffice? ( || ( html2text links lynx elinks w3m ) ) xlhtml? ( || ( html2text links lynx elinks w3m ) )
 SLOT=0
 _eclasses_=git-r3	0d4635eeb5a96cd5315597a47eba25c9	required-use-warn	56ed34ee9a569101ffa7de21e82eaab0
-_md5_=b40def6a2af0d51ced343a2ea6ec1945
+_md5_=a27b014ce5d672d632ca60daa26ffb76
