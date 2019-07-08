@@ -11,9 +11,6 @@ app-dicts/stardict-freedict-deu-ita 2.4.2: Stardict Dictionary German to Italian
 app-dicts/stardict-freedict-ita-deu 2.4.2: Stardict Dictionary Italian to German
 app-text/ispell 3.3.02-r1 3.4.00: fast screen-oriented spelling checker
 app-text/psjoin 0.3: concatenate postscript files. From new PostScript Utilities
-games-action/trackballs 1.1.4-r1: simple game similar to the classical game Marble Madness
-games-emulation/xmame 0.106-r4: Multiple Arcade Machine Emulator for X11
-games-emulation/xmess 0.106-r3: Multiple Arcade Machine Emulator for X11
 games-engines/freesci 0.6.4-r1: Sierra script interpreter for your old Sierra adventures
 games-rpg/aklabeth 1.0-r1: A remake of Richard C. Garriott's Ultima prequel
 mail-client/alpine 2.00-r7: alpine is an easy to use text-based based mail and news client
