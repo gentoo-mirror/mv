@@ -8,5 +8,5 @@ IUSE=+compile
 LICENSE=HPND
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	0d4635eeb5a96cd5315597a47eba25c9
+_eclasses_=git-r3	562b380fc59ae6a8622171d0acb777d1
 _md5_=8b04f34fcecd4753e2367809f797eb28
