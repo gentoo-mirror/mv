@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2 dev-libs/nspr media-libs/fontconfig media-libs/freetype 
 RESTRICT=mirror splitdebug
 SLOT=0
 SRC_URI=https://dl.google.com/dl/linux/direct/google-earth-pro-stable_7.3.2_amd64.deb
-_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	pax-utils	db85a3c508cf82c45f24b2723791cc93	unpacker	3cd8bad0d31e525cd26be1bfa4e61631	xdg-utils	14d00d009167652b1fa363e55effe213
+_eclasses_=desktop	b1d22ac8bdd4679ab79c71aca235009d	eutils	6e6c2737b59a4b982de6fb3ecefd87f8	pax-utils	db85a3c508cf82c45f24b2723791cc93	unpacker	3cd8bad0d31e525cd26be1bfa4e61631	xdg-utils	92c60e3d7f481da372979bdcd33e5109
 _md5_=9ce97c0d0e82a47557705a036895d2c7
