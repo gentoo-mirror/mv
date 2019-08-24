@@ -23,7 +23,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~spa
 
 # Upstream wants us to do their job:
 # https://bugzilla.gnome.org/show_bug.cgi?id=768662#c1
-RESTRICT="test mirror"
+RESTRICT="test"
 
 # FIXME: introspection data is built against system installation of gtk+:3,
 # bug #????
