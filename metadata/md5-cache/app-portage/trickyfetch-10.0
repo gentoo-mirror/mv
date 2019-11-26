@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/trickyfetch/archive/v10.0.tar.gz -> trickyfetch-10.0.tar.gz
-_eclasses_=eutils	6e6c2737b59a4b982de6fb3ecefd87f8
+_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5
 _md5_=6a7b6f5bc92bc7e121c61004b73b726a
