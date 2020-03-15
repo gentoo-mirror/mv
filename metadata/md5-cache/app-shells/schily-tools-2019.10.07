@@ -1,6 +1,6 @@
-BDEPEND=nls? ( >=sys-devel/gettext-0.18.1.1 )
+BDEPEND=nls? ( >=sys-devel/gettext-0.18.1.1 ) filecaps? ( sys-libs/libcap )
 DEFINED_PHASES=compile configure install postinst prepare pretend
-DEPEND=!!app-cdr/cdrtools[-schily-tools(-)] !!app-arch/star !renameschily_libschily? ( !sys-apps/man ) !renameschily_getopt? ( !sys-apps/man ) schilytools_calc? ( !renameschily_calc? ( !sci-mathematics/calc ) ) schilytools_compare? ( !renameschily_compare? ( !media-gfx/imagemagick !media-gfx/graphicsmagick[imagemagick] ) ) schilytools_count? ( !renameschily_count? ( !sys-devel/llvm ) ) schilytools_bosh? ( !renameschily_jsh? ( !app-shells/heirloom-sh ) ) schilytools_man2html? ( !renameschily_man2html? ( !sys-apps/man ) ) schilytools_p? ( !renameschily_p? ( !dev-util/wiggle ) ) schilytools_translit? ( !dev-perl/Lingua-Translit ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) nls? ( virtual/libintl ) !amd64-fbsd? ( xattr? ( sys-apps/attr ) ) filecaps? ( sys-libs/libcap ) sys-devel/gnuconfig
+DEPEND=!!app-cdr/cdrtools[-schily-tools(-)] !!app-arch/star !renameschily_libschily? ( !sys-apps/man ) !renameschily_getopt? ( !sys-apps/man ) schilytools_calc? ( !renameschily_calc? ( !sci-mathematics/calc ) ) schilytools_compare? ( !renameschily_compare? ( !media-gfx/imagemagick !media-gfx/graphicsmagick[imagemagick] ) ) schilytools_count? ( !renameschily_count? ( !sys-devel/llvm ) ) schilytools_bosh? ( !renameschily_jsh? ( !app-shells/heirloom-sh ) ) schilytools_man2html? ( !renameschily_man2html? ( !sys-apps/man ) ) schilytools_p? ( !renameschily_p? ( !dev-util/wiggle ) ) schilytools_translit? ( !dev-perl/Lingua-Translit ) acl? ( virtual/acl ) caps? ( sys-libs/libcap ) nls? ( virtual/libintl ) !amd64-fbsd? ( xattr? ( sys-apps/attr ) ) sys-devel/gnuconfig
 DESCRIPTION=Many tools from Joerg Schilling, including a POSIX compliant Bourne Shell
 EAPI=7
 HOMEPAGE=https://sourceforge.net/projects/schilytools/
@@ -11,5 +11,5 @@ RDEPEND=!!app-cdr/cdrtools[-schily-tools(-)] !!app-arch/star !renameschily_libsc
 RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/schilytools/schily-2019-10-07.tar.bz2
-_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	fcaps	9445d60c1eb084a91c38ef4c070b2f16	flag-o-matic	53d57b0f8b8c19ff72cb341a42b891ed	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	multilib	1d91b03d42ab6308b5f4f6b598ed110e	required-use-warn	56ed34ee9a569101ffa7de21e82eaab0	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_eclasses_=eutils	fcb2aa98e1948b835b5ae66ca52868c5	fcaps	f52b3d580830bf1132beb1e4e843b84d	flag-o-matic	53d57b0f8b8c19ff72cb341a42b891ed	gnuconfig	b8ec1c34be4ff9dac7ad4034d277936b	multilib	1d91b03d42ab6308b5f4f6b598ed110e	required-use-warn	56ed34ee9a569101ffa7de21e82eaab0	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
 _md5_=ada23e72445f7de36c97b5677426c813
