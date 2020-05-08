@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-3 BSD-2 )
 PDEPEND=lesspipe? ( app-text/lesspipe )
 RDEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2:0= pcre? ( dev-libs/libpcre2 ) less-select? ( dev-lang/perl )
 SLOT=0
-SRC_URI=http://www.greenwoodsoftware.com/less/less-556.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.9.tar.gz -> less-select-2.9.tar.gz )
-_md5_=0458edcc9dc2324d624e636b23c81ff6
+SRC_URI=http://www.greenwoodsoftware.com/less/less-560.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.10.tar.gz -> less-select-2.10.tar.gz )
+_md5_=a76fffac6bc43ebf7774a4b49d899c86
