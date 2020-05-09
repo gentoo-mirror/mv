@@ -1,13 +1,13 @@
-BDEPEND=meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) nls? ( sys-devel/gettext ) ) !meson? ( || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/gettext-0.19.6 ) >=app-portage/elt-patches-20170815 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) nls? ( sys-devel/gettext ) ) !meson? ( || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/gettext-0.19.6 ) protobuf? ( dev-libs/protobuf ) >=app-portage/elt-patches-20170815 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= )
 DESCRIPTION=Search and query ebuilds
 EAPI=7
 HOMEPAGE=https://github.com/vaeth/eix/
-IUSE=debug +dep doc +jumbo-build l10n_de l10n_ru +meson nls optimization +required-use security +src-uri strong-optimization strong-security sqlite swap-remote tools usr-portage
+IUSE=debug +dep doc +jumbo-build l10n_de l10n_ru +meson nls optimization protobuf +required-use security +src-uri strong-optimization strong-security sqlite swap-remote tools usr-portage
 LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/push-3.1 >=app-shells/quoter-4.1 virtual/tmpfiles
 SLOT=0
 _eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	bash-completion-r1	e5f9c3faab3ab3d1e7e007daa8c736ef	git-r3	86a0188f2ad9eb3d65e4d031ab8a0422	libtool	f143db5a74ccd9ca28c1234deffede96	meson	de95db6526e8df99f8bfc2321dcab528	multilib	318e8ae683e57fd3ccd0d31a769d8ee8	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	dd532a387632f19bfc5523fc2289a9a0	tmpfiles	6170dc7770585fb3f16efdee789a3218	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
-_md5_=da7f4185f1674a9693a443b68c9f6c6d
+_md5_=95c2e602845699ddbf2bf3b6517aa44e
