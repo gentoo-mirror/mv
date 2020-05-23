@@ -11,5 +11,5 @@ RDEPEND=!!<sys-fs/squash_dir-3.2 || ( sys-apps/gentoo-functions sys-apps/openrc 
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/openrc-wrapper/archive/v2.3.tar.gz -> openrc-wrapper-2.3.tar.gz
-_eclasses_=multilib	318e8ae683e57fd3ccd0d31a769d8ee8	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_eclasses_=multilib	797cda3549becfe50afdfa35192ca137	systemd	71fd8d2065d102753fb9e4d20eaf3e9f	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
 _md5_=fa55aeb1c48b028b9e503ec7affec589
