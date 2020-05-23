@@ -8,4 +8,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://shounen.ru/soft/avinfo/avinfo-1.0.a15unix.tar.gz http://shounen.ru/soft/avinfo/avinfo-1.0.a15unix-patch1.tar.gz
 _eclasses_=multilib	797cda3549becfe50afdfa35192ca137	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
-_md5_=a99d49cdd8df21afaea16bc48333384d
+_md5_=14ee4486f7c9bc7703af297c9e148576
