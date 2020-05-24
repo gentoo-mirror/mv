@@ -9,5 +9,5 @@ RDEPEND=sys-apps/miscfiles sys-libs/ncurses:0=
 RESTRICT=mirror
 SLOT=0/3.3.02
 SRC_URI=https://fmg-www.cs.ucla.edu/geoff/tars/ispell-3.3.02.tar.gz mirror://gentoo/ispell-3.3.02-gentoo-0.3.diff.bz2
-_eclasses_=multilib	797cda3549becfe50afdfa35192ca137	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_eclasses_=multilib	ac7989ababbeabdef6fdc6e465b21644	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
 _md5_=391ca1290568a6633a741161010dc84c
