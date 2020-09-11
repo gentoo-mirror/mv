@@ -4,10 +4,10 @@ DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= )
 DESCRIPTION=Search and query ebuilds
 EAPI=7
 HOMEPAGE=https://github.com/vaeth/eix/
-IUSE=debug +dep doc +jumbo-build l10n_de l10n_ru +meson nls optimization +protobuf +required-use security +src-uri strong-optimization strong-security sqlite swap-remote tools usr-portage
+IUSE=cpu_flags_x86_sse2 debug +dep doc +jumbo-build l10n_de l10n_ru +meson nls optimization +protobuf +required-use security +src-uri strong-optimization strong-security sqlite swap-remote tools usr-portage
 LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/push-3.1 >=app-shells/quoter-4.1 virtual/tmpfiles
 SLOT=0
 _eclasses_=autotools	7d999b62b8749fad43fff00620cedf47	bash-completion-r1	e5f9c3faab3ab3d1e7e007daa8c736ef	git-r3	3e7ec3d6619213460c85e2aa48398441	libtool	f143db5a74ccd9ca28c1234deffede96	meson	de95db6526e8df99f8bfc2321dcab528	multilib	2477ebe553d3e4d2c606191fe6c33602	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	bae936266b68e0c374a74f2b0d0aaa44	tmpfiles	6170dc7770585fb3f16efdee789a3218	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
-_md5_=e3ad090c41f126f3d4bdc832b43fddd8
+_md5_=be586f748a3496ca881cb9bb641847eb
