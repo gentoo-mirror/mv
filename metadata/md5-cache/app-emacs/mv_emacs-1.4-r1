@@ -1,4 +1,4 @@
-BDEPEND=virtual/emacs
+BDEPEND=app-editors/emacs
 DEFINED_PHASES=compile install postinst postrm unpack
 DESCRIPTION=(X)Emacs extensions: block support, macrorecorder, verify change
 EAPI=7
@@ -9,4 +9,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/mv_emacs/archive/v1.4.tar.gz -> mv_emacs-1.4.tar.gz
 _eclasses_=elisp-common	848a95b01913ff6374bcb5eae09c52ba
-_md5_=c935414103eb8da1c137e4e2c43597b6
+_md5_=610f0b2d5463f8f6fec0aee2587bdee0

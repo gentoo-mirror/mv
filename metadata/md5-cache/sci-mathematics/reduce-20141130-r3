@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=X? ( x11-libs/libXrandr x11-libs/libXcursor x11-libs/libXft ) gnuplot? ( sci-visualization/gnuplot ) emacs? ( virtual/emacs )
+DEPEND=X? ( x11-libs/libXrandr x11-libs/libXcursor x11-libs/libXft ) gnuplot? ( sci-visualization/gnuplot ) emacs? ( app-editors/emacs )
 DESCRIPTION=A general-purpose computer algebra system
 EAPI=7
 HOMEPAGE=http://reduce-algebra.sourceforge.net/ http://reduce-algebra.com/
 IUSE=doc emacs gnuplot X
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD-2 X? ( LGPL-2.1 )
-RDEPEND=X? ( x11-libs/libXrandr x11-libs/libXcursor x11-libs/libXft ) gnuplot? ( sci-visualization/gnuplot ) emacs? ( virtual/emacs )
+RDEPEND=X? ( x11-libs/libXrandr x11-libs/libXcursor x11-libs/libXft ) gnuplot? ( sci-visualization/gnuplot ) emacs? ( app-editors/emacs )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/reduce-algebra/Snapshot_2014-11-30/reduce-src-2014-11-30.tar.bz2
 _eclasses_=elisp-common	848a95b01913ff6374bcb5eae09c52ba
-_md5_=5c412c2ce351cbfe20823642141289da
+_md5_=bf43b5069ebfa15789bb6910fe0a021d
