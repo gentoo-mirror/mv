@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/mv_emacs/archive/v1.4.tar.gz -> mv_emacs-1.4.tar.gz
-_eclasses_=elisp-common	34cc2b6f6d8914019a353fe39cff43ce
+_eclasses_=elisp-common	b9df8d576b8e3d10e3da1c292b027912
 _md5_=610f0b2d5463f8f6fec0aee2587bdee0
