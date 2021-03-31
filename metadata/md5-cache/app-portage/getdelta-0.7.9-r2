@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst prepare
 DESCRIPTION=dynamic deltup client
 EAPI=7
 HOMEPAGE=http://linux01.gwdg.de/~nlissne/
+INHERIT=readme.gentoo-r1
 KEYWORDS=~alpha ~amd64 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=app-portage/deltup dev-util/bdelta

@@ -3,6 +3,7 @@ DEPEND=media-libs/alsa-lib X? ( x11-libs/libX11 x11-libs/libXrender x11-libs/lib
 DESCRIPTION=Sierra script interpreter for your old Sierra adventures
 EAPI=7
 HOMEPAGE=http://freesci.linuxgames.com/
+INHERIT=desktop
 IUSE=X ggi sdl
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

@@ -3,6 +3,7 @@ DEPEND=sys-apps/file app-arch/xz-utils app-arch/bzip2 dev-lang/perl brotli? ( !a
 DESCRIPTION=Wolfgang Friebel's preprocessor for sys-apps/less. Disable by appending colon
 EAPI=7
 HOMEPAGE=https://github.com/wofr06/lesspipe
+INHERIT=required-use-warn
 IUSE=antiword brotli cabextract catdoc +cpio +djvu dpkg +dvi2tty +elinks exiftool fastjar +ghostscript gpg +groff hdf5 +html2text id3v2 image isoinfo libplist libreoffice +links +lynx lz4 lzip mediainfo mp3info mp3info2 netcdf ooffice p7zip pandoc pdf pstotext rar rpm +rpm2targz unrar unrtf +unzip +w3m wv xlhtml zstd
 KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~ppc-aix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=GPL-2
