@@ -3,10 +3,11 @@ DEPEND=virtual/pkgconfig sys-apps/systemd
 DESCRIPTION=Profile based network connection tool from Arch Linux
 EAPI=7
 HOMEPAGE=https://wiki.archlinux.org/index.php/Netctl https://www.archlinux.org/packages/core/any/netctl/ https://projects.archlinux.org/netctl.git/
+INHERIT=bash-completion-r1 optfeature
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-3
 RDEPEND=>=app-shells/bash-4.0 >=net-dns/openresolv-3.5.4-r1 sys-apps/iproute2 sys-apps/systemd !<net-misc/dhcpcd-6.4.0
 SLOT=0
 SRC_URI=https://sources.archlinux.org/other/packages/netctl/netctl-1.11.tar.xz
-_eclasses_=bash-completion-r1	be99724bde4274de21e581204e9d164a	multilib	d410501a125f99ffb560b0c523cd3d1e	optfeature	6a2add34e06e5a05d88471a33ccdd73e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	bash-completion-r1	8e7c071081c68c2c398b77fe3a1d6908	optfeature	6a2add34e06e5a05d88471a33ccdd73e
 _md5_=b8e74181c8f54197e144eda6b1118024
