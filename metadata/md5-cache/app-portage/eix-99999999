@@ -10,5 +10,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) >=app-shells/push-3.1 >=app-shells/quoter-4.1 virtual/tmpfiles
 SLOT=0
-_eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	libtool	f143db5a74ccd9ca28c1234deffede96	autotools	6ff8412ccf96444868b310b0a28973ba	bash-completion-r1	8e7c071081c68c2c398b77fe3a1d6908	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	543b53e4d003ebd889082f4673e52af5	meson	de95db6526e8df99f8bfc2321dcab528	tmpfiles	5cd6e8cf3288d5b19ff8b5c78c7e3e31	git-r3	b8e8c92aa5fe8df7187e466138eb4e52
+_eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	libtool	f143db5a74ccd9ca28c1234deffede96	autotools	6ff8412ccf96444868b310b0a28973ba	bash-completion-r1	8e7c071081c68c2c398b77fe3a1d6908	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	2a0da9eb3f3fd923a42d92127685aa37	meson	de95db6526e8df99f8bfc2321dcab528	tmpfiles	5cd6e8cf3288d5b19ff8b5c78c7e3e31	git-r3	b8e8c92aa5fe8df7187e466138eb4e52
 _md5_=de84c14bc7f9587e09443f86d2919af7
