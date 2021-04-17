@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=app-admin/sudo >=app-shells/push-2.0-r2
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://github.com/vaeth/sudox/archive/v9.1.1.tar.gz -> sudox-9.1.1.tar.gz
-_md5_=da05c5fd782a394ea1a83910e6a6b717
+SRC_URI=https://github.com/vaeth/sudox/archive/v10.0.tar.gz -> sudox-10.0.tar.gz
+_md5_=90d393a6fb8c0717c0ea07f52acca439
