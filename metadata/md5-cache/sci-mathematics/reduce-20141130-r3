@@ -11,5 +11,5 @@ RDEPEND=X? ( x11-libs/libXrandr x11-libs/libXcursor x11-libs/libXft ) gnuplot? (
 RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/reduce-algebra/Snapshot_2014-11-30/reduce-src-2014-11-30.tar.bz2
-_eclasses_=elisp-common	36f97076abd90f943a34f8bcd58b5bcc
+_eclasses_=elisp-common	6bfea130fc0f2cbd4cbc23dc12992349
 _md5_=bf43b5069ebfa15789bb6910fe0a021d
