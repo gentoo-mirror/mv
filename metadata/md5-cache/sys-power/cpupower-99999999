@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile configure install setup unpack
+DEPEND=sys-apps/pciutils virtual/os-headers nls? ( sys-devel/gettext )
+DESCRIPTION=Shows and sets processor power related values
+EAPI=7
+HOMEPAGE=https://www.kernel.org/
+INHERIT=systemd toolchain-funcs linux-info
+IUSE=nls kernel_linux
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND=sys-apps/pciutils
+SLOT=0/0
+_eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	fdf0d765c3f11f91fe54f8def9a8c0e6	linux-info	30ded7f9adbdd03d3e848cdd74f6c395
+_md5_=dd5d13f789e324d1cc345744b1a34339
