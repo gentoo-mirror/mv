@@ -1,0 +1,14 @@
+DEFINED_PHASES=install setup
+DESCRIPTION=Synchronize files between a PC and an Android device using ADB
+EAPI=7
+HOMEPAGE=https://github.com/google/adb-sync
+INHERIT=python-single-r1
+IUSE=+channel python_single_target_python3_7 python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=python_single_target_python3_7? ( dev-lang/python:3.7 >=dev-lang/python-exec-2:=[python_targets_python3_7] ) python_single_target_python3_8? ( dev-lang/python:3.8 >=dev-lang/python-exec-2:=[python_targets_python3_8] ) python_single_target_python3_9? ( dev-lang/python:3.9 >=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_10? ( dev-lang/python:3.10 >=dev-lang/python-exec-2:=[python_targets_python3_10] ) dev-util/android-tools channel? ( net-misc/socat )
+REQUIRED_USE=^^ ( python_single_target_python3_7 python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 )
+SLOT=0
+SRC_URI=https://github.com/google/adb-sync/archive/fb7c549753de7a5579ed3400dd9f8ac71f7bf1b1.tar.gz -> adb-sync-0_p20190101.tar.gz
+_eclasses_=toolchain-funcs	24921b57d6561d87cbef4916a296ada4	multilib	d410501a125f99ffb560b0c523cd3d1e	python-utils-r1	20c4a380a6193a089c8c432f3e5f8402	python-single-r1	d25ac9d5d91fe9d44fda6ec192aca11a
+_md5_=c05164cc2cec585712a1553f6be23108
