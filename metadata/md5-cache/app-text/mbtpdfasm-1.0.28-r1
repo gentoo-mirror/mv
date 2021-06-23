@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://thierry.schmit.free.fr/spip/IMG/gz/mbtPdfAsm-1.0.28.tar.gz http://sbriesen.de/gentoo/distfiles/mbtpdfasm-1.0.28-manual.pdf.bz2
-_eclasses_=toolchain-funcs	e867df3870e8ff04a5b94f925be8b06a	multilib	f8d35c2432bb32c4f1e779c4287b31ec
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352
 _md5_=7506b656a3b4ffda3d2f23c62370fe83
