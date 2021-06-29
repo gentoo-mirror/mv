@@ -12,5 +12,5 @@ RDEPEND=!games-emulation/sdlmametools !games-emulation/sdlmess dev-db/sqlite:3 d
 REQUIRED_USE=|| ( arcade mess )
 SLOT=0
 SRC_URI=https://github.com/mamedev/mame/releases/download/mame0174/mame0174s.zip -> mame-0.174.zip
-_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	python-utils-r1	977ed3240c7c676eb18a277e65663c1c	python-any-r1	901d9e22c7a848a1196502edf060f330	qmake-utils	dc74fe3891abc25e80dad5cd3d7c6e47
+_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	python-utils-r1	969dff6876159a10dfdad9e01d265d1c	python-any-r1	901d9e22c7a848a1196502edf060f330	qmake-utils	dc74fe3891abc25e80dad5cd3d7c6e47
 _md5_=92aad2e504b365cd5b03b06947072240
