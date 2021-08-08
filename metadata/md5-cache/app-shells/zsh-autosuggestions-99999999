@@ -1,13 +1,13 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Fish-like autosuggestions for zsh
-EAPI=7
+EAPI=8
 HOMEPAGE=https://github.com/zsh-users/zsh-autosuggestions/
 INHERIT=readme.gentoo-r1 git-r3
 LICENSE=MIT
-PROPERTIES=live
+PROPERTIES=live live
 RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
 _eclasses_=readme.gentoo-r1	e51390d48521eb3d400db57d557b7530	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=9d490733443b5d05d8c9fe48eaf43322
+_md5_=420cbceaee80aef617f3868d445cec0b
