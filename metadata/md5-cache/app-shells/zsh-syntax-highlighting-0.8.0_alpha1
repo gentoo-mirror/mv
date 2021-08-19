@@ -9,5 +9,5 @@ RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/zsh-users/zsh-syntax-highlighting/archive/0.8.0-alpha1-pre-redrawhook.tar.gz -> zsh-syntax-highlighting-0.8.0_alpha1.tar.gz
-_eclasses_=readme.gentoo-r1	e51390d48521eb3d400db57d557b7530
+_eclasses_=readme.gentoo-r1	c9646d622541c023f5159b86a14e930c
 _md5_=bf284f8f956a4c593e802e2bc9198f33
