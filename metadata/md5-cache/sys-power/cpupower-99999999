@@ -10,5 +10,5 @@ KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
 RDEPEND=sys-apps/pciutils
 SLOT=0/0
-_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	systemd	c846b9e02ac8293bfc9ca38a195c2a18	linux-info	bd055a2488f3388795977677aaa9e714
+_eclasses_=toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	multilib	97566c1a256d07b00848aa767e38a352	systemd	c846b9e02ac8293bfc9ca38a195c2a18	linux-info	c3a16f0980b27d1eb843991a9e5f7237
 _md5_=dd5d13f789e324d1cc345744b1a34339
