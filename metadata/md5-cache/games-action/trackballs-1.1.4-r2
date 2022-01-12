@@ -1,10 +1,10 @@
 BDEPEND=nls? ( sys-devel/gettext )
-DEFINED_PHASES=configure install prepare setup
-DEPEND=virtual/opengl virtual/glu media-libs/libsdl[sound,joystick,video] >=dev-scheme/guile-1.8:12[deprecated] media-libs/sdl-mixer media-libs/sdl-image media-libs/sdl-ttf nls? ( virtual/libintl )
+DEFINED_PHASES=configure install prepare
+DEPEND=virtual/opengl virtual/glu media-libs/libsdl[sound,joystick,video] >=dev-scheme/guile-1.8:12[deprecated] media-libs/sdl-mixer media-libs/sdl-image media-libs/sdl-ttf nls? ( virtual/libintl ) acct-group/gamestat
 DESCRIPTION=simple game similar to the classical game Marble Madness
-EAPI=7
+EAPI=8
 HOMEPAGE=http://trackballs.sourceforge.net/
-INHERIT=desktop user
+INHERIT=desktop
 IUSE=nls
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2 FML-1
@@ -12,5 +12,5 @@ RDEPEND=virtual/opengl virtual/glu media-libs/libsdl[sound,joystick,video] >=dev
 RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/trackballs/trackballs-1.1.4.tar.gz mirror://sourceforge/trackballs/trackballs-music-1.4.tar.bz2
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	user-info	2e75eaea3582b052ec16d9d5aa74ced3	user	1033b6bed7cf367c4507ea9a3ff503d0
-_md5_=7a28d45eb787787c0b735927c1fc0fe1
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28
+_md5_=01e527d4c65feedc7a18e9366bb810ad
