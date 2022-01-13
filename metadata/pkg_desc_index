@@ -10,15 +10,6 @@ app-arch/paq8l 20070308: Open source file compressor and archiver
 app-cdr/cdrtools 99999999: A set of tools for CD/DVD reading and recording, including cdrecord
 app-dicts/ispell-de 20161207: German and Swiss dictionaries for ispell
 app-dicts/ispell-de-alt 2-r1: German dictionary (traditional orthography) for ispell
-app-dicts/stardict-dictd-BritannicaConcise 2.4.2: Stardict Dictionary for Dictd.org's The Britannica Concise Encyclopedia
-app-dicts/stardict-dictd-cced 2.4.2: Stardict Dictionary for Dictd.org's Collins Cobuild English Dictionary
-app-dicts/stardict-dictd-longman 2.4.2: Stardict Dictionary for Dictd.org's Longman Dictionary of Contemporary English
-app-dicts/stardict-dictd-merrianwebster 2.4.2: Stardict Dictionary for Dictd.org's Merrian Webster 10th dictionary
-app-dicts/stardict-dictd-oald 2.4.2: Stardict Dictionary for Dictd.org's Oxford Advanced Learner's Dictionary
-app-dicts/stardict-dictd-thesaurus-ee 2.4.2: Stardict Dictionary for Dictd.org's English Thesaurus
-app-dicts/stardict-freedict-deu-eng 2.4.2: Stardict Dictionary German to English
-app-dicts/stardict-freedict-deu-ita 2.4.2: Stardict Dictionary German to Italian
-app-dicts/stardict-freedict-ita-deu 2.4.2: Stardict Dictionary Italian to German
 app-dicts/steak 1.7.3-r3: EN => DE Dictionary
 app-emacs/mv_emacs 1.4-r1: (X)Emacs extensions: block support, macrorecorder, verify change
 app-eselect/eselect-net 0.2-r1: eselect module for managing network open-rc service configurations
