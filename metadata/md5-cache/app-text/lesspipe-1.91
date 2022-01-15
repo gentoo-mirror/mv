@@ -12,4 +12,4 @@ REQUIRED_USE=!rpm2targz? ( rpm? ( cpio ) ) ooffice? ( || ( html2text links lynx 
 SLOT=0
 SRC_URI=https://www-zeuthen.desy.de/~friebel/unix/less/lesspipe-1.91.tar.gz https://github.com/wofr06/lesspipe/archive/1.91.tar.gz -> lesspipe-1.91.tar.gz
 _eclasses_=required-use-warn	56ed34ee9a569101ffa7de21e82eaab0
-_md5_=ac16f443d6d391db82e4a1df185f340c
+_md5_=b24a350440587b5c95252c7c9dd55016

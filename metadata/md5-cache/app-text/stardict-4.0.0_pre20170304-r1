@@ -1,9 +1,10 @@
 BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 app-arch/xz-utils
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare
-DEPEND=>=dev-libs/glib-2.32:2 dev-libs/libsigc++:2= canberra? ( media-libs/libcanberra[gtk3] ) sys-libs/zlib:= x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/pango espeak? ( >=app-accessibility/espeak-1.29 ) flite? ( app-accessibility/flite ) gucharmap? ( gnome-extra/gucharmap:2.90= ) spell? ( >=app-text/enchant-1.2:0= ) tools? ( dev-db/mysql-connector-c dev-libs/expat dev-libs/libpcre:= dev-libs/libxml2:= ) gnome? ( app-text/docbook-xml-dtd:4.3 app-text/gnome-doc-utils dev-libs/libxslt ) dev-util/intltool sys-devel/gettext virtual/pkgconfig dev-util/desktop-file-utils x11-misc/shared-mime-info
+DEPEND=>=dev-libs/glib-2.32:2 dev-libs/libsigc++:2= canberra? ( media-libs/libcanberra[gtk3] ) sys-libs/zlib:= x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/pango espeak? ( >=app-accessibility/espeak-1.29 ) flite? ( app-accessibility/flite ) gucharmap? ( gnome-extra/gucharmap:2.90= ) spell? ( >=app-text/enchant-1.2:0= ) tools? ( dev-db/mysql-connector-c dev-libs/expat dev-libs/libpcre:= dev-libs/libxml2:= ) gnome? ( app-text/docbook-xml-dtd:4.3 app-text/gnome-doc-utils dev-libs/libxslt ) dev-util/intltool sys-devel/gettext virtual/pkgconfig
 DESCRIPTION=A international dictionary supporting fuzzy and glob style matching
-EAPI=7
+EAPI=8
 HOMEPAGE=http://stardict-4.sourceforge.net/ https://github.com/huzheng001/stardict-3
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools flag-o-matic gnome2
 IUSE=advertisement cal canberra debug dictdotcn espeak examples flite fortune gnome gucharmap +htmlparse info man perl +powerwordparse pronounce qqwry spell tools updateinfo +wikiparse +wordnet +xdxfparse youdaodict
 KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc ~x86
@@ -12,5 +13,5 @@ RDEPEND=>=dev-libs/glib-2.32:2 dev-libs/libsigc++:2= canberra? ( media-libs/libc
 RESTRICT=test
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~bircoph/distfiles/stardict-4.0.0_pre20170304.tar.xz pronounce? ( https://stardict-3.googlecode.com/files/WyabdcRealPeopleTTS.tar.bz2 ) qqwry? ( mirror://gentoo/QQWry.Dat.bz2 )
-_eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	libtool	241a8f577b9781a42a7421e53448a44e	autotools	c9df06c186913b43eb211100ef5fe2cf	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4251d4c84c25f59094fd557e0063a974	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	d5e1306543bc457213f68bb18f830d14	gnome.org	b5c48cddff1da36a205d924d722b28c9	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	gnome2-utils	239e7afa214b50012f83b8bb61de7555	xdg	6024fbc93167fad782e2032933654857	gnome2	397207e07bdf58b07ce295d0bc1049fe
-_md5_=92dfea9b46390fbed0e56413e1980e66
+_eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	libtool	241a8f577b9781a42a7421e53448a44e	autotools	c9df06c186913b43eb211100ef5fe2cf	flag-o-matic	d5e1306543bc457213f68bb18f830d14	gnome.org	b5c48cddff1da36a205d924d722b28c9	xdg-utils	4f29a8b760a594a212abe9c2ba957c31	gnome2-utils	239e7afa214b50012f83b8bb61de7555	xdg	6024fbc93167fad782e2032933654857	gnome2	397207e07bdf58b07ce295d0bc1049fe
+_md5_=a936662f77d893861460da494eb0acfe

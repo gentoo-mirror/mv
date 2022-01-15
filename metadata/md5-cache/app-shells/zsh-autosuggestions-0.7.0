@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/zsh-users/zsh-autosuggestions/archive/v0.7.0.tar.gz -> zsh-autosuggestions-0.7.0.tar.gz
 _eclasses_=readme.gentoo-r1	eebd0164fe61f4f7b64a683e83fdceb1
-_md5_=32f2bb01d4e86a40efe38914c91b215c
+_md5_=3a9b76c1b9b32abd63ac598161694830

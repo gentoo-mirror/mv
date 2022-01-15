@@ -1,7 +1,7 @@
 BDEPEND=app-text/ispell:=
 DEFINED_PHASES=compile install
 DESCRIPTION=German and Swiss dictionaries for ispell
-EAPI=7
+EAPI=8
 HOMEPAGE=http://j3e.de/ispell/igerman98/
 KEYWORDS=alpha amd64 hppa mips ppc sparc x86
 LICENSE=GPL-2
@@ -9,4 +9,4 @@ RDEPEND=app-text/ispell:=
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://j3e.de/ispell/igerman98/dict/igerman98-20161207.tar.bz2
-_md5_=61e993c4f62ee6f810a58463d1efc428
+_md5_=6499b5bfaf9c16e900dd40179decc916

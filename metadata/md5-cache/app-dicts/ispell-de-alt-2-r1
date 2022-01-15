@@ -1,7 +1,7 @@
 BDEPEND=app-text/ispell:=
 DEFINED_PHASES=install
 DESCRIPTION=German dictionary (traditional orthography) for ispell
-EAPI=7
+EAPI=8
 HOMEPAGE=http://www.lasr.cs.ucla.edu/geoff/ispell-dictionaries.html
 KEYWORDS=alpha amd64 hppa ~mips ppc sparc x86
 LICENSE=GPL-2
@@ -9,4 +9,4 @@ RDEPEND=app-text/ispell:=
 RESTRICT=mirror
 SLOT=0
 SRC_URI=ftp://ftp.informatik.uni-kiel.de/pub/kiel/dicts/hk2-deutsch.tar.gz http://www.j3e.de/ispell/hk2/hkgerman_2-patch-bj1.diff.gz
-_md5_=3aafa007ad2d2f80db6527f0a00e7a17
+_md5_=1acaf0a32184eaed94c834dd080ac201

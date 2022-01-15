@@ -1,10 +1,10 @@
 DEFINED_PHASES=install prepare
 DESCRIPTION=Scripts to run commands and set the hard status line (windows title)
-EAPI=7
+EAPI=8
 HOMEPAGE=https://github.com/vaeth/runtitle/
 KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=BSD
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/runtitle/archive/v2.11.tar.gz -> runtitle-2.11.tar.gz
-_md5_=557af1775e45a507635094431bcc738c
+_md5_=8ef9779627a4f14c33ed9bcde5572e03

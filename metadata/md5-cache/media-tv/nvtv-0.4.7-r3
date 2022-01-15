@@ -2,7 +2,7 @@ BDEPEND=X? ( x11-base/xorg-proto ) sys-devel/gnuconfig >=app-portage/elt-patches
 DEFINED_PHASES=configure install prepare
 DEPEND=sys-apps/pciutils[-zlib] gtk? ( x11-libs/gtk+:2 ) X? ( x11-libs/libXi x11-libs/libXmu x11-libs/libXxf86vm )
 DESCRIPTION=TV-Out for NVidia cards
-EAPI=7
+EAPI=8
 HOMEPAGE=https://sourceforge.net/projects/nv-tv-out/
 INHERIT=autotools
 IUSE=X gtk
@@ -12,4 +12,4 @@ RDEPEND=sys-apps/pciutils[-zlib] gtk? ( x11-libs/gtk+:2 ) X? ( x11-libs/libXi x1
 SLOT=0
 SRC_URI=mirror://sourceforge/nv-tv-out/nvtv-0.4.7.tar.gz
 _eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	libtool	241a8f577b9781a42a7421e53448a44e	autotools	c9df06c186913b43eb211100ef5fe2cf
-_md5_=b2914336486afcae25818684ff4a46b5
+_md5_=566000b0417efd92f5e0697158341249

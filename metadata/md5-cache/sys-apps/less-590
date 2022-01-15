@@ -11,4 +11,4 @@ RDEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2:0= pcre? ( dev-libs/l
 RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror+http://www.greenwoodsoftware.com/less/less-590.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.13.tar.gz -> less-select-2.13.tar.gz )
-_md5_=9369120f5797e68911b7df0f7768146e
+_md5_=be111a4115b23247489939975a5bbb49
