@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install
+DEPEND=|| ( >=app-text/stardict-2.4.2 app-text/sdcv app-text/goldendict ) zlib? ( app-arch/gzip app-text/dictd )
+DESCRIPTION=Stardict Dictionary for Dictd.org's Oxford Advanced Learner's Dictionary
+EAPI=8
+HOMEPAGE=http://stardict.sourceforge.net/Dictionaries_dictd-www.dict.org.php
+INHERIT=stardict
+IUSE=+zlib
+KEYWORDS=amd64 ~arm64 x86
+LICENSE=GPL-2
+RESTRICT=fetch strip
+SLOT=0
+SRC_URI=mirror://sourceforge/stardict/stardict-oald-2.4.2.tar.bz2
+_eclasses_=stardict	20836adb47f92afcedd202b4dc7d8037
+_md5_=0ca4b5135da75ff9f7bcf27b8908d617
