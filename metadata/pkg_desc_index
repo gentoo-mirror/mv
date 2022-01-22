@@ -130,4 +130,3 @@ www-plugins/noscript 11.2.14: Firefox webextension: restrict active contents lik
 www-plugins/translate-to-me 1.1: Firefox webextension: translate the selected text with www.linguee.com
 x11-libs/gtk+ 2.24.33 3.24.31: Gimp ToolKit +
 x11-libs/motif 2.3.8-r2: The Motif user interface component toolkit
-x11-themes/fvwm-crystal 3.6.5: Configurable FVWM theme with transparency and freedesktop compatible menu
