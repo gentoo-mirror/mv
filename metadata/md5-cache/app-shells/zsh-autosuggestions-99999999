@@ -10,4 +10,4 @@ RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
 _eclasses_=readme.gentoo-r1	eebd0164fe61f4f7b64a683e83fdceb1	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
-_md5_=8cdd8bf990661f182cab1910cb098d0d
+_md5_=93366c4cc871983d912caa6214c438dc
