@@ -11,5 +11,5 @@ RDEPEND=app-shells/push:0/1 !<sys-apps/openrc-0.13 nls? ( virtual/libintl )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/zram-init/archive/v11.1.tar.gz -> zram-init-11.1.tar.gz
-_eclasses_=readme.gentoo-r1	eebd0164fe61f4f7b64a683e83fdceb1
+_eclasses_=readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
 _md5_=8fdb161eba50cb052d7b5debe0b84617
