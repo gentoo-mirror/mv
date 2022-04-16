@@ -1,4 +1,4 @@
-BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.4:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 app-arch/xz-utils
+BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 app-arch/xz-utils
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare
 DEPEND=>=dev-libs/glib-2.32:2 dev-libs/libsigc++:2= canberra? ( media-libs/libcanberra[gtk3] ) sys-libs/zlib:= x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/libX11 x11-libs/pango espeak? ( >=app-accessibility/espeak-1.29 ) flite? ( app-accessibility/flite ) gucharmap? ( gnome-extra/gucharmap:2.90= ) spell? ( >=app-text/enchant-1.2:0= ) tools? ( dev-db/mysql-connector-c dev-libs/expat dev-libs/libpcre:= dev-libs/libxml2:= ) gnome? ( app-text/docbook-xml-dtd:4.3 app-text/gnome-doc-utils dev-libs/libxslt ) dev-util/intltool sys-devel/gettext virtual/pkgconfig
 DESCRIPTION=A international dictionary supporting fuzzy and glob style matching
@@ -13,5 +13,5 @@ RDEPEND=>=dev-libs/glib-2.32:2 dev-libs/libsigc++:2= canberra? ( media-libs/libc
 RESTRICT=test
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~bircoph/distfiles/stardict-4.0.0_pre20170304.tar.xz pronounce? ( https://stardict-3.googlecode.com/files/WyabdcRealPeopleTTS.tar.bz2 ) qqwry? ( mirror://gentoo/QQWry.Dat.bz2 )
-_eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	libtool	241a8f577b9781a42a7421e53448a44e	autotools	a7813cfab8862ac10bcf3e01efb3f5c4	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	gnome.org	429073e99d7067d3462e875bf5c6e14a	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857	gnome2	4f729d9211b2e3c00a285d6301a557e1
+_eclasses_=gnuconfig	262062cef0ba4f22b397193da514a350	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	libtool	241a8f577b9781a42a7421e53448a44e	autotools	9724194ab651ce63fd9bc06e4e1410b4	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	gnome.org	429073e99d7067d3462e875bf5c6e14a	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857	gnome2	4f729d9211b2e3c00a285d6301a557e1
 _md5_=f664061caad9fca1a22c95463a47131d
