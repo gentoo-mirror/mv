@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=acct-group/man acct-user/man >=sys-apps/groff-1.19.2-r1 !sys-apps/man-db lzma? ( app-arch/xz-utils ) selinux? ( sec-policy/selinux-makewhatis )
 SLOT=0
 SRC_URI=http://primates.ximian.com/~flucifredi/man/man-1.6g.tar.gz
-_eclasses_=prefix	eab3c99d77fe00506c109c8a736186f7	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b
+_eclasses_=prefix	eab3c99d77fe00506c109c8a736186f7	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4a33c9008e5ee30cb8840a3fdc24df2b
 _md5_=9c4b9017788c7ea54b994b8ccae80f7a
