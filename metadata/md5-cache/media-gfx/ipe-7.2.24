@@ -13,5 +13,5 @@ REQUIRED_USE=^^ ( lua_single_target_lua5-3 lua_single_target_lua5-4 )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/otfried/ipe/releases/download/v7.2.24/ipe-7.2.24-src.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	lua-utils	e69ff116248d78546ae1a234c086fe80	lua-single	f2c2fb82c912dd65d53bdae3613a331f
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	toolchain-funcs	fd9cde67030b26e479eeadaced488253	multilib	4fbbbc98f236f1b43acd99476bc3cd85	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	lua-utils	e69ff116248d78546ae1a234c086fe80	lua-single	f2c2fb82c912dd65d53bdae3613a331f
 _md5_=e21d0ff681aa1545eda96c8e8cbbbee2
