@@ -37,7 +37,7 @@ app-portage/useflags 4.2: Print or save the current USE-flag state and compare w
 app-portage/world-mv 3.20: Organize your world file and find installed packages or differences to @world
 app-shells/auto-fu-zsh 0.0.1.12-r4 0.0.1.12_p0 99999999: zsh automatic complete-word and list-choices: incremental completion
 app-shells/dash 99999999: Descendant of the NetBSD ash. POSIX compliant except for multibyte characters
-app-shells/fast-syntax-highlighting 1.6.6 99999999: Optimized and extended zsh-syntax-highlighting
+app-shells/fast-syntax-highlighting 1.6.6-r1 99999999: Optimized and extended zsh-syntax-highlighting
 app-shells/oh-my-zsh 99999999: A ready-to-use zsh configuration with plugins
 app-shells/push 3.4-r1: A POSIX shell function to treat a variable like an array, quoting args
 app-shells/quoter 4.2-r1: Quote arguments or standard input for usage in POSIX shell by eval

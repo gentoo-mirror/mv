@@ -1,5 +1,5 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=install postinst unpack
+DEFINED_PHASES=install postinst prepare unpack
 DESCRIPTION=Optimized and extended zsh-syntax-highlighting
 EAPI=8
 HOMEPAGE=https://github.com/zdharma/fast-syntax-highlighting/
@@ -10,4 +10,4 @@ RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
 _eclasses_=readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=d70e745f226339a2650417cadb2632b0
+_md5_=abd1a633fb6e548b83b5b9d731ad9488
