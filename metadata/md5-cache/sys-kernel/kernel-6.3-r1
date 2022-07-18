@@ -9,5 +9,5 @@ RDEPEND=app-admin/sudo app-admin/sudox app-shells/push:0/1 !<dev-util/ccache-3.2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/kernel/archive/v6.3.tar.gz -> kernel-6.3.tar.gz
-_eclasses_=optfeature	d524f291c80f9d21ad80fe978e3ca760
+_eclasses_=optfeature	1a2157392a869265b2afcb63a26c12ac
 _md5_=e8e9d500547ecb2e51b04ec4e371f775
