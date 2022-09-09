@@ -10,5 +10,5 @@ PDEPEND=lesspipe? ( app-text/lesspipe )
 RDEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2:0= pcre? ( dev-libs/libpcre2 ) less-select? ( dev-lang/perl )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=mirror+http://www.greenwoodsoftware.com/less/less-590.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.13.tar.gz -> less-select-2.13.tar.gz )
-_md5_=98af696f70fc1ce1564055ca91687948
+SRC_URI=mirror+http://www.greenwoodsoftware.com/less/less-608.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.14.tar.gz -> less-select-2.14.tar.gz )
+_md5_=a11880edf23176badafc788bc60d76f7
