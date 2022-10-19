@@ -1,12 +1,13 @@
 DEFINED_PHASES=install postinst prepare
-DEPEND=acct-group/flexlm acct-user/flexlm
 DESCRIPTION=Macrovision FLEXlm license manager and utils
 EAPI=8
 HOMEPAGE=http://www.macrovision.com/services/support/flexlm/lmgrd.shtml
+IDEPEND=acct-group/flexlm acct-user/flexlm
 IUSE=doc
 KEYWORDS=~amd64 ~x86
 LICENSE=all-rights-reserved GPL-2
+RDEPEND=acct-group/flexlm acct-user/flexlm
 RESTRICT=fetch
 SLOT=0
 SRC_URI=doc? ( http://www.ni.com/pdf/manuals/flexusr.pdf ) x86? ( mirror://gentoo/lmgrd-x86.Z mirror://gentoo/lmutil-x86.Z ) amd64? ( mirror://gentoo/lmgrd-amd64.Z mirror://gentoo/lmutil-amd64.Z )
-_md5_=e9085f6e207f5b2204b398974146fb0c
+_md5_=acd6c62dc9b95a996e0b304b968d3291
