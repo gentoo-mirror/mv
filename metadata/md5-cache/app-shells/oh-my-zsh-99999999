@@ -9,5 +9,5 @@ LICENSE=ZSH
 PROPERTIES=live live
 RDEPEND=app-shells/zsh
 SLOT=0
-_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
 _md5_=52b18ceaef88115cfadfeea3563a8a58
