@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=A tool for the fast searching of text allowing for errors in the search pattern
+EAPI=8
+HOMEPAGE=ftp://ftp.cs.arizona.edu/agrep/README
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 arm ~arm64 ~mips ppc ppc64 sparc x86 ~ppc-macos ~sparc-solaris
+LICENSE=AGREP
+RDEPEND=!dev-libs/tre !dev-ruby/amatch !app-misc/glimpse
+SLOT=0
+SRC_URI=ftp://ftp.cs.arizona.edu/agrep/agrep-2.04.tar.Z
+_eclasses_=toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157
+_md5_=e36b885181fb2e3c00c34e0239d6e7df
