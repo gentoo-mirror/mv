@@ -12,5 +12,5 @@ RDEPEND=alsa? ( media-libs/alsa-lib ) dga? ( x11-libs/libXxf86dga x11-libs/libXx
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://gentoo.osuosl.org/distfiles/xmame-0.106.tar.bz2
-_eclasses_=toolchain-funcs	959e1d99122907eb98a3a660297a967e	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395
+_eclasses_=toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	69394e25812406faa1f90edaf4969395
 _md5_=fc82eb46ca5878c5a6e23cd65261873e
