@@ -5,6 +5,7 @@ EAPI=8
 HOMEPAGE=https://github.com/vaeth/schedule/
 IDEPEND=acct-group/schedule acct-user/schedule
 INHERIT=readme.gentoo-r1 systemd
+IUSE=split-usr
 KEYWORDS=~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86
 LICENSE=BSD
 RDEPEND=>=dev-lang/perl-5.12 !<sys-apps/openrc-0.13 acct-group/schedule acct-user/schedule || ( >=dev-lang/perl-5.14 virtual/perl-Term-ANSIColor ) dev-perl/Crypt-Rijndael
@@ -12,4 +13,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/schedule/archive/v8.0.1.tar.gz -> schedule-8.0.1.tar.gz
 _eclasses_=readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	multilib	5ca4e49abed8e3a2f7b56920eadee157	systemd	5f4bb0758df2e483babf68cd517078ca
-_md5_=a5d2ff86812e0478143cdea680209b0c
+_md5_=1eafe692121bc30b285c7df297543fde
