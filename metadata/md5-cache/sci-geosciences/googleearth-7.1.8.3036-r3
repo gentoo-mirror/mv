@@ -11,5 +11,5 @@ RDEPEND=dev-libs/glib:2 dev-libs/nspr media-libs/fontconfig media-libs/freetype 
 RESTRICT=mirror splitdebug
 SLOT=0
 SRC_URI=x86? ( https://dl.google.com/dl/earth/client/GE7/release_7_1_8/google-earth-pro-stable_7.1.8.3036-r0_i386.deb ) amd64? ( https://dl.google.com/dl/earth/client/GE7/release_7_1_8/google-earth-pro-stable_7.1.8.3036-r0_amd64.deb )
-_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	pax-utils	91d47e5d20627c717aa878b9167c62a8	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	fdd15d854bf5e84f82d35524ab8ca6ba	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg-utils	ac0e315a3688929e34ac75b139e7349a
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	pax-utils	91d47e5d20627c717aa878b9167c62a8	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	65735fed9c1c30cb461c90db600ac990	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg-utils	ac0e315a3688929e34ac75b139e7349a
 _md5_=2e7c897c66aa2e1033a20d19d4647f4b
