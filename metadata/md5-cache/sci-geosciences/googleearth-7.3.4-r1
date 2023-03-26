@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2 dev-libs/nspr media-libs/fontconfig media-libs/freetype 
 RESTRICT=mirror splitdebug
 SLOT=0
 SRC_URI=https://dl.google.com/dl/linux/direct/google-earth-pro-stable_7.3.4_amd64.deb -> google-earth-pro-stable_7.3.4-r1_amd64.deb
-_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	pax-utils	91d47e5d20627c717aa878b9167c62a8	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	unpacker	65735fed9c1c30cb461c90db600ac990	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg-utils	ac0e315a3688929e34ac75b139e7349a
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	pax-utils	91d47e5d20627c717aa878b9167c62a8	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	unpacker	79b8360df7fa828892dd5c4dfc23242d	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg-utils	baea6080dd821f5562d715887954c9d3
 _md5_=40f10324c3694b22c8eae9863f3dd2db
