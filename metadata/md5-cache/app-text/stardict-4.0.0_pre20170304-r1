@@ -13,5 +13,5 @@ RDEPEND=>=dev-libs/glib-2.32:2 dev-libs/libsigc++:2= canberra? ( media-libs/libc
 RESTRICT=test
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~bircoph/distfiles/stardict-4.0.0_pre20170304.tar.xz pronounce? ( https://stardict-3.googlecode.com/files/WyabdcRealPeopleTTS.tar.bz2 ) qqwry? ( mirror://gentoo/QQWry.Dat.bz2 )
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	f0d3196128225dee3220e65f3371bc7a	flag-o-matic	514815b1cc0dd4aeac177c2e812b3b1a	gnome.org	6b39404f1491c60a2d32e3c693a683fe	xdg-utils	baea6080dd821f5562d715887954c9d3	gnome2-utils	b0183db3b2e07b18f3b77bffec72e116	xdg	4a14c5c24f121e7da66e5aab4a168c6e	gnome2	9bd787a54d31405e742ae7537eed650b
+_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	d1408425c7c4a7669b9b17735404b693	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	f0d3196128225dee3220e65f3371bc7a	flag-o-matic	604ea013fd816ba1a6f226aa80716b50	gnome.org	6b39404f1491c60a2d32e3c693a683fe	xdg-utils	baea6080dd821f5562d715887954c9d3	gnome2-utils	b0183db3b2e07b18f3b77bffec72e116	xdg	4a14c5c24f121e7da66e5aab4a168c6e	gnome2	9bd787a54d31405e742ae7537eed650b
 _md5_=ca575c9ac101d3e4918f1876bf617201
