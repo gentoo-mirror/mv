@@ -7,4 +7,4 @@ LICENSE=GPL-3+
 RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/project/cfcfg/cfcfg.tgz -> cfcfg-0.tar.gz
-_md5_=954f3e1767142a8e563ebdc55221e38d
+_md5_=c7a08336d295e695b145365ca16df46f
