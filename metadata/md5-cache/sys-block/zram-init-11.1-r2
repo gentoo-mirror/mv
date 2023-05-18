@@ -1,0 +1,15 @@
+BDEPEND=nls? ( sys-devel/gettext ) virtual/pkgconfig
+DEFINED_PHASES=compile install postinst
+DESCRIPTION=Scripts to support compressed swap devices or ramdisks with zRAM
+EAPI=8
+HOMEPAGE=https://github.com/vaeth/zram-init/
+INHERIT=readme.gentoo-r1 systemd
+IUSE=l10n_fr l10n_de nls split-usr
+KEYWORDS=amd64 arm64 ppc ppc64 x86
+LICENSE=GPL-2
+RDEPEND=app-shells/push:0/1 nls? ( virtual/libintl ) || ( sys-apps/openrc sys-apps/systemd )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/vaeth/zram-init/archive/v11.1.tar.gz -> zram-init-11.1.tar.gz
+_eclasses_=readme.gentoo-r1	204091a2cde6179cd9d3db26d09412d3	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	systemd	5f4bb0758df2e483babf68cd517078ca
+_md5_=28ac44289db91923146a44ce2f9fe97c
