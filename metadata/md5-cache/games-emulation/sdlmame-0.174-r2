@@ -1,4 +1,4 @@
-BDEPEND=|| ( >=dev-lang/python-3.12.0_beta1:3.12 >=dev-lang/python-3.11.3:3.11 >=dev-lang/python-3.10.11:3.10 ) app-arch/unzip virtual/pkgconfig x11-base/xorg-proto
+BDEPEND=|| ( >=dev-lang/python-3.12.0_beta3:3.12 >=dev-lang/python-3.11.4:3.11 >=dev-lang/python-3.10.12:3.10 ) app-arch/unzip virtual/pkgconfig x11-base/xorg-proto
 DEFINED_PHASES=compile install postinst prepare setup unpack
 DEPEND=dev-db/sqlite:3 dev-libs/expat media-libs/fontconfig media-libs/flac media-libs/libjpeg-turbo media-libs/libsdl2[joystick,opengl?,sound,video,X] media-libs/portaudio media-libs/sdl2-ttf sys-libs/zlib virtual/opengl alsa? ( media-libs/alsa-lib media-libs/portmidi ) debug? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) x11-libs/libX11 x11-libs/libXinerama
 DESCRIPTION=Multiple Arcade Machine Emulator + Multi Emulator Super System (MESS)
@@ -12,5 +12,5 @@ RDEPEND=dev-db/sqlite:3 dev-libs/expat media-libs/fontconfig media-libs/flac med
 REQUIRED_USE=|| ( arcade mess )
 SLOT=0
 SRC_URI=https://github.com/mamedev/mame/releases/download/mame0174/mame0174s.zip -> mame-0.174.zip
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	a34d5f83235297b76d71eaf8deb53768	python-any-r1	d2955aaac8daaaa69fcc6dc93ed19f29	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	a013e16d5d896b3d8be68dd2a0e846ea	python-any-r1	d2955aaac8daaaa69fcc6dc93ed19f29	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81
 _md5_=c7356899333f965c8c7b43ef5acae2c8
