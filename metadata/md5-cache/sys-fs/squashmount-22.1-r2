@@ -6,9 +6,9 @@ HOMEPAGE=http://forums.gentoo.org/viewtopic-t-465367.html https://github.com/vae
 INHERIT=optfeature readme.gentoo-r1 systemd tmpfiles
 KEYWORDS=~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sparc x86
 LICENSE=BSD
-RDEPEND=!<sys-apps/openrc-0.13 >=dev-lang/perl-5.22 || ( dev-perl/File-Which sys-apps/which ) || ( sys-fs/squashfs-tools sys-fs/squashfs-tools-ng ) || ( sys-apps/systemd-tmpfiles-openrc sys-apps/opentmpfiles sys-apps/systemd-tmpfiles ) app-shells/runtitle dev-perl/File-Which !arm? ( !ia64? ( !sparc? ( dev-perl/String-ShellQuote ) ) ) virtual/tmpfiles
+RDEPEND=!<sys-apps/openrc-0.13 >=dev-lang/perl-5.22 || ( dev-perl/File-Which sys-apps/which ) || ( sys-fs/squashfs-tools sys-fs/squashfs-tools-ng ) || ( sys-apps/systemd sys-apps/systemd-tmpfiles-openrc sys-apps/systemd-utils[tmpfiles] sys-apps/opentmpfiles ) app-shells/runtitle dev-perl/File-Which !arm? ( !ia64? ( !sparc? ( dev-perl/String-ShellQuote ) ) ) virtual/tmpfiles
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/squashmount/archive/v22.1.tar.gz -> squashmount-22.1.tar.gz
 _eclasses_=optfeature	222cb475c5a4f7ae7cfb0bf510a6fe54	readme.gentoo-r1	204091a2cde6179cd9d3db26d09412d3	toolchain-funcs	0c8a0b0d318eb5d5180d114bd3f6592b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f
-_md5_=d9765bef0f86546b60b23b12d5dc4623
+_md5_=a7b9195da04b9ecb8e99b512e1d4d22e
