@@ -12,5 +12,5 @@ RDEPEND=dev-db/sqlite:3 dev-libs/expat media-libs/fontconfig media-libs/flac med
 REQUIRED_USE=|| ( arcade mess )
 SLOT=0
 SRC_URI=https://github.com/mamedev/mame/releases/download/mame0174/mame0174s.zip -> mame-0.174.zip
-_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	1f435bc389faf790af695df46b8dcb73	python-any-r1	845fed6b6dfc35679a4fea289272ddc0	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	59e60e9c5cbd3f214d7f1002e798b387	python-any-r1	f5169813d1619761b459800587005fd2	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81
 _md5_=c7356899333f965c8c7b43ef5acae2c8
