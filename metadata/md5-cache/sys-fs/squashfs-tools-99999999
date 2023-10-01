@@ -11,5 +11,5 @@ PROPERTIES=live live
 RDEPEND=!static? ( sys-libs/zlib:= lz4? ( app-arch/lz4:= ) lzma? ( app-arch/xz-utils:= ) lzo? ( dev-libs/lzo:= ) xattr? ( sys-apps/attr:= ) xz? ( app-arch/xz-utils:= ) zstd? ( >=app-arch/zstd-1.0:= ) )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/s/squashfs-tools/squashfs-tools_4.3-12.debian.tar.xz
-_eclasses_=toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	be27a904c614cb93ae037762dc69bcc2	git-r3	2358a7b20091609e24bd3a83b3ac5991
+_eclasses_=toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	be27a904c614cb93ae037762dc69bcc2	git-r3	2358a7b20091609e24bd3a83b3ac5991
 _md5_=a0f4bf47a6e93d0a2fb04dd1093eb0fc
