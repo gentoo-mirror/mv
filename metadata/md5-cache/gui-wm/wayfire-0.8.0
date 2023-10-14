@@ -1,0 +1,16 @@
+BDEPEND=dev-libs/wayland-protocols virtual/pkgconfig >=dev-util/meson-0.59.4 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+DEFINED_PHASES=compile configure install postinst test
+DEPEND=dev-cpp/nlohmann_json dev-libs/libinput:= dev-libs/wayland gui-libs/gtk-layer-shell media-libs/glm media-libs/mesa:=[gles2,wayland,X?] media-libs/libglvnd[X?] media-libs/libjpeg-turbo:= media-libs/libpng:= media-libs/freetype:=[X?] x11-libs/libdrm x11-libs/gtk+:3=[wayland,X?] x11-libs/cairo[X?,svg(+)] x11-libs/libxkbcommon[X?] x11-libs/pango x11-libs/pixman X? ( x11-base/xwayland x11-libs/libxcb ) system-wfconfig? ( >=gui-libs/wf-config-0.8.0 ) !system-wfconfig? ( !gui-libs/wf-config ) system-wlroots? ( gui-libs/wlroots:0/16[X?] ) !system-wlroots? ( !gui-libs/wlroots )
+DESCRIPTION=compiz like 3D wayland compositor
+EAPI=8
+HOMEPAGE=https://github.com/WayfireWM/wayfire
+INHERIT=meson toolchain-funcs
+IUSE=debug +gles +system-wfconfig +system-wlroots X
+KEYWORDS=amd64 ~arm64 ~riscv ~x86
+LICENSE=MIT
+RDEPEND=dev-cpp/nlohmann_json dev-libs/libinput:= dev-libs/wayland gui-libs/gtk-layer-shell media-libs/glm media-libs/mesa:=[gles2,wayland,X?] media-libs/libglvnd[X?] media-libs/libjpeg-turbo:= media-libs/libpng:= media-libs/freetype:=[X?] x11-libs/libdrm x11-libs/gtk+:3=[wayland,X?] x11-libs/cairo[X?,svg(+)] x11-libs/libxkbcommon[X?] x11-libs/pango x11-libs/pixman X? ( x11-base/xwayland x11-libs/libxcb ) system-wfconfig? ( >=gui-libs/wf-config-0.8.0 ) !system-wfconfig? ( !gui-libs/wf-config ) system-wlroots? ( gui-libs/wlroots:0/16[X?] ) !system-wlroots? ( !gui-libs/wlroots ) x11-misc/xkeyboard-config
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/WayfireWM/wayfire/releases/download/v0.8.0/wayfire-0.8.0.tar.xz
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	12aa0037eb004139215ff04894d52b28	meson	64259d177952959924602a78d1763dfc
+_md5_=0b32f06727221fe7536668ede1beb1ae
