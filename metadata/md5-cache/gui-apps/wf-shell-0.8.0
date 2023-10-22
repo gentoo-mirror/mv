@@ -12,5 +12,5 @@ RDEPEND=dev-cpp/gtkmm:3.0=[wayland] dev-libs/libdbusmenu[gtk3] dev-libs/gobject-
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/WayfireWM/wf-shell/releases/download/v0.8.0/wf-shell-0.8.0.tar.xz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	12aa0037eb004139215ff04894d52b28	meson	64259d177952959924602a78d1763dfc
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	f6221c2f55e5e832be9919fe1711f33b	meson	64259d177952959924602a78d1763dfc
 _md5_=0abd6f181b5869d6e0f7df0798a94551
