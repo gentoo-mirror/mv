@@ -12,5 +12,5 @@ RDEPEND=dev-libs/libevdev dev-libs/libxml2 media-libs/glm
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/WayfireWM/wf-config/releases/download/v0.8.0/wf-config-0.8.0.tar.xz
-_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	f6221c2f55e5e832be9919fe1711f33b	meson	64259d177952959924602a78d1763dfc
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	edeef89edaf21d30225d31702ab117ac	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	30999b80ec1fe0b4af340ae819375346	meson	64259d177952959924602a78d1763dfc
 _md5_=41de71447645da993ee73fc3ffd1ffe9
