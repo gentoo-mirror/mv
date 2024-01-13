@@ -1,4 +1,4 @@
-BDEPEND=meson? ( >=dev-util/meson-0.41.0 >=dev-util/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) ) protobuf? ( dev-libs/protobuf:= ) app-arch/xz-utils nls? ( sys-devel/gettext ) virtual/pkgconfig
+BDEPEND=meson? ( >=dev-util/meson-0.41.0 >=dev-build/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) ) protobuf? ( dev-libs/protobuf:= ) app-arch/xz-utils nls? ( sys-devel/gettext ) virtual/pkgconfig
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test
 DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= )
 DESCRIPTION=Search and query ebuilds
@@ -13,4 +13,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/eix/releases/download/v0.36.7/eix-0.36.7.tar.xz
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	042f4cc53680245bf99a84669b94155a	meson	64259d177952959924602a78d1763dfc	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f
-_md5_=6d8be7b6ad5f00b3d02970af0ffe234b
+_md5_=cfb38830642ac22c4b04ff5bfe5a7d8c
