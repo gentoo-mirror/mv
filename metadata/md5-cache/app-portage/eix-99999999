@@ -1,4 +1,4 @@
-BDEPEND=meson? ( >=dev-util/meson-0.41.0 >=dev-build/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) nls? ( sys-devel/gettext ) ) !meson? ( || ( >=sys-devel/automake-1.16.5:1.16 ) || ( >=sys-devel/autoconf-2.72-r1:2.72 >=sys-devel/autoconf-2.71-r6:2.71 ) >=sys-devel/gettext-0.19.6 ) protobuf? ( dev-libs/protobuf:= ) virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=meson? ( >=dev-util/meson-0.41.0 >=dev-build/ninja-1.7.2 strong-optimization? ( >=sys-devel/gcc-config-1.9.1 ) nls? ( sys-devel/gettext ) ) !meson? ( || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=sys-devel/gettext-0.19.6 ) protobuf? ( dev-libs/protobuf:= ) virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= )
 DESCRIPTION=Search and query ebuilds
@@ -10,5 +10,5 @@ LICENSE=GPL-2
 PROPERTIES=live live
 RDEPEND=nls? ( virtual/libintl ) sqlite? ( >=dev-db/sqlite-3:= ) app-shells/push:0/1 app-shells/quoter:0/1 virtual/tmpfiles
 SLOT=0
-_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	5f729b9cb10d5eda573cd604c93c6dc5	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	042f4cc53680245bf99a84669b94155a	meson	64259d177952959924602a78d1763dfc	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=gnuconfig	b6b3e92f8b8c996400074b5f61a59256	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	e4cf390b19033d5ca443765bc8537b81	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	042f4cc53680245bf99a84669b94155a	meson	64259d177952959924602a78d1763dfc	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
 _md5_=b7595dcb6333d2b64a3bf03e6cd4bc37
