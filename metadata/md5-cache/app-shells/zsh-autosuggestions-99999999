@@ -9,5 +9,5 @@ PROPERTIES=live live
 RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	readme.gentoo-r1	204091a2cde6179cd9d3db26d09412d3
+_eclasses_=readme.gentoo-r1	204091a2cde6179cd9d3db26d09412d3	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
 _md5_=93366c4cc871983d912caa6214c438dc
