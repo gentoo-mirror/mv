@@ -2,7 +2,7 @@ BDEPEND=app-arch/unzip
 DEFINED_PHASES=install unpack
 DESCRIPTION=Firefox webextension: restrict active contents like java/javascript/flash
 EAPI=8
-HOMEPAGE=http://noscript.net/
+HOMEPAGE=https://addons.mozilla.org/de/firefox/addon/noscript/ http://noscript.net/
 INHERIT=mv_mozextension-r1
 IUSE=+compressed browser_firefox browser_firefox-bin browser_seamonkey
 KEYWORDS=amd64 arm64 ~ppc64 x86
@@ -11,6 +11,6 @@ RDEPEND=|| ( browser_firefox? ( >=www-client/firefox-59 ) browser_firefox-bin? (
 REQUIRED_USE=|| ( browser_firefox browser_firefox-bin browser_seamonkey )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=https://secure.informaction.com/download/releases/noscript-11.4.8.xpi https://addons.cdn.mozilla.net/user-media/addons/722/noscript_security_suite-11.4.8-an+fx.xpi -> noscript-11.4.8.xpi
+SRC_URI=https://secure.informaction.com/download/releases/noscript-11.4.29.xpi https://addons.mozilla.org/firefox/downloads/file/4206186/noscript-11.4.29.xpi
 _eclasses_=mv_mozextension-r1	31cf7e5d3c5959b65729117932db6b37
-_md5_=ea41b5b13a1336356bbd374e856adc5f
+_md5_=059e8ef0eccee29319d1c8de82455824
