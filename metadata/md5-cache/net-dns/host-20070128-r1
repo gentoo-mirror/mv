@@ -10,5 +10,5 @@ LICENSE=BSD
 RESTRICT=mirror test
 SLOT=0
 SRC_URI=ftp://ftp.weird.com/pub/Planix/host-20070128.tar.gz
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0
+_eclasses_=toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0
 _md5_=de9843ca50b98766ec566cf3fd5ebdcf
