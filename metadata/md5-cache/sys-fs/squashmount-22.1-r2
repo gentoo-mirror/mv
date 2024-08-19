@@ -10,5 +10,5 @@ RDEPEND=!<sys-apps/openrc-0.13 >=dev-lang/perl-5.22 || ( dev-perl/File-Which sys
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/squashmount/archive/v22.1.tar.gz -> squashmount-22.1.tar.gz
-_eclasses_=optfeature	222cb475c5a4f7ae7cfb0bf510a6fe54	readme.gentoo-r1	b8c7a61664027641d79dcfc04bd366f4	toolchain-funcs	5f8f1dc0c94e007fa08af4e98a19d0e5	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	c8b03e8df84486aa991d4396686e8942	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f
+_eclasses_=optfeature	222cb475c5a4f7ae7cfb0bf510a6fe54	readme.gentoo-r1	b8c7a61664027641d79dcfc04bd366f4	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	c8b03e8df84486aa991d4396686e8942	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f
 _md5_=a7b9195da04b9ecb8e99b512e1d4d22e

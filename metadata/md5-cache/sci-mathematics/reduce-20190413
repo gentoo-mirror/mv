@@ -10,5 +10,5 @@ RDEPEND=X? ( x11-libs/libXrandr x11-libs/libXcursor x11-libs/libXft ) sys-libs/n
 RESTRICT=mirror
 SLOT=0
 SRC_URI=mirror://sourceforge/reduce-algebra/snapshot_2019-04-13/Reduce-svn4961-src.tar.gz
-_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	toolchain-funcs	5f8f1dc0c94e007fa08af4e98a19d0e5	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d
+_eclasses_=elisp-common	abb2dda42f680fce87602c8273f832c7	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d
 _md5_=be23c76afdb76ec69e9d08ce41a2ce4c
