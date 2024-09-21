@@ -4,11 +4,11 @@ DESCRIPTION=Keep directories compressed with squashfs. Useful for portage tree, 
 EAPI=8
 HOMEPAGE=http://forums.gentoo.org/viewtopic-t-465367.html https://github.com/vaeth/squashmount/
 INHERIT=optfeature readme.gentoo-r1 systemd tmpfiles
-KEYWORDS=~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sparc x86
+KEYWORDS=~alpha amd64 ~arm ~arm64 ~hppa ~m68k ~mips ~ppc ~ppc64 ~s390 ~sparc x86
 LICENSE=BSD
-RDEPEND=!<sys-apps/openrc-0.13 >=dev-lang/perl-5.22 || ( dev-perl/File-Which sys-apps/which ) || ( sys-fs/squashfs-tools sys-fs/squashfs-tools-ng ) || ( sys-apps/systemd sys-apps/systemd-tmpfiles-openrc sys-apps/systemd-utils[tmpfiles] sys-apps/opentmpfiles ) app-shells/runtitle dev-perl/File-Which !arm? ( !ia64? ( !sparc? ( dev-perl/String-ShellQuote ) ) ) virtual/tmpfiles
+RDEPEND=!<sys-apps/openrc-0.13 >=dev-lang/perl-5.22 || ( dev-perl/File-Which sys-apps/which ) || ( sys-fs/squashfs-tools sys-fs/squashfs-tools-ng ) || ( sys-apps/systemd sys-apps/systemd-tmpfiles-openrc sys-apps/systemd-utils[tmpfiles] sys-apps/opentmpfiles ) app-shells/runtitle dev-perl/File-Which !arm? ( !sparc? ( dev-perl/String-ShellQuote ) ) virtual/tmpfiles
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/vaeth/squashmount/archive/v22.2.tar.gz -> squashmount-22.2.tar.gz
 _eclasses_=optfeature	222cb475c5a4f7ae7cfb0bf510a6fe54	readme.gentoo-r1	32b48460d813533d85f082897cec1b80	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	systemd	0f241b5c9f3758c3d3423df59a7f655a	tmpfiles	abdfd90f8841c1cb4b94575d5d109952
-_md5_=b0ef2c7e7fdccffe269f04cf05eefe7b
+_md5_=393fa917ae757a203a8b95aedee57bdf
