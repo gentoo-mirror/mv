@@ -9,5 +9,5 @@ RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/zsh-users/zsh-autosuggestions/archive/v0.7.0.tar.gz -> zsh-autosuggestions-0.7.0.tar.gz
-_eclasses_=readme.gentoo-r1	32b48460d813533d85f082897cec1b80
+_eclasses_=readme.gentoo-r1	b045f3acf546393ab6b3170781875358
 _md5_=93366c4cc871983d912caa6214c438dc

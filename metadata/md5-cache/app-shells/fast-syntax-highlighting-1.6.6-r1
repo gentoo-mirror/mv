@@ -9,5 +9,5 @@ RDEPEND=app-shells/zsh
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/zdharma/fast-syntax-highlighting/archive/v1.66.tar.gz -> fast-syntax-highlighting-1.6.6.tar.gz
-_eclasses_=readme.gentoo-r1	32b48460d813533d85f082897cec1b80
+_eclasses_=readme.gentoo-r1	b045f3acf546393ab6b3170781875358
 _md5_=12516cc14c0f5e1baaabfdad2aeb2ba4
