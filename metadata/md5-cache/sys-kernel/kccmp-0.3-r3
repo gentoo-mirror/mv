@@ -10,5 +10,5 @@ RDEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/jeff-dagenais/kccmp/archive/ce42ebaf3fb09c4cff009e6ed7ff8afa683b2eec.tar.gz -> kccmp-0.3.tar.gz
-_eclasses_=toolchain-funcs	fa554cc3cff825d21dfe3f24841e29cf	multilib	b2a329026f2e404e9e371097dda47f96	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81
+_eclasses_=toolchain-funcs	14648d8795f7779e11e1bc7cf08b7536	multilib	b2a329026f2e404e9e371097dda47f96	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81
 _md5_=fe4ea4960f892cb230bd27faeba6534b
