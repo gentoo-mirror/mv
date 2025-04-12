@@ -11,5 +11,5 @@ RDEPEND=sys-apps/miscfiles sys-libs/ncurses:0=[tinfo=]
 RESTRICT=mirror
 SLOT=0/3.4.00
 SRC_URI=http://fmg-www.cs.ucla.edu/geoff/tars/ispell-3.4.00.tar.gz
-_eclasses_=toolchain-funcs	6afdb6107430c1832ca7e16aacbf8fa1	multilib	b2a329026f2e404e9e371097dda47f96
+_eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169
 _md5_=0544c62bc1b0fba11b0e1aaba5375c72
