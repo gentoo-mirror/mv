@@ -11,5 +11,5 @@ RDEPEND=!<sys-apps/openrc-0.13 pulseaudio? ( media-sound/pulseaudio )
 RESTRICT=binchecks mirror strip
 SLOT=0
 SRC_URI=http://www.sundtek.de/media/sundtek_installer_221030.153539.sh
-_eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	pax-utils	5555f2e75744739fe100ee62c22d28fe	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	systemd	54bd206bb5c4efac6ae28b6b006713b0	multiprocessing	1e32df7deee68372153dca65f4a7c21f	unpacker	3b4ee72d1e2e0374fd8cd3eddfa00627
+_eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	linux-info	ea4122ba1d8791a12b78e53f9510a2e3	pax-utils	5555f2e75744739fe100ee62c22d28fe	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	systemd	a964c0cbe818b5729da1dbfcee5be861	multiprocessing	1e32df7deee68372153dca65f4a7c21f	unpacker	3b4ee72d1e2e0374fd8cd3eddfa00627
 _md5_=5e2e434d2d490210ac03a1c8171575c7
