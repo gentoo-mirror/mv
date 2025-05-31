@@ -9,6 +9,6 @@ LICENSE=BSD-2 X? ( LGPL-2.1 )
 RDEPEND=X? ( x11-libs/libXrandr x11-libs/libXcursor x11-libs/libXft ) sys-libs/ncurses[tinfo=] gnuplot? ( sci-visualization/gnuplot ) emacs? ( app-editors/emacs )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=mirror://sourceforge/reduce-algebra/snapshot_2019-04-13/Reduce-svn4961-src.tar.gz
+SRC_URI=https://sourceforge.net/projects/reduce-algebra/files/snapshot_2024-08-12/Reduce-svn6860-src.tar.gz
 _eclasses_=elisp-common	fe05085d051330f15cf7201109b5cd23	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	flag-o-matic	b892042b2667b8ac69ec8a2571dc290a
-_md5_=be23c76afdb76ec69e9d08ce41a2ce4c
+_md5_=556ec4fbb9a8e227cb96907986f92638

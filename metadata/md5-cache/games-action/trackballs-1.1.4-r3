@@ -11,6 +11,6 @@ LICENSE=GPL-2 FML-1
 RDEPEND=virtual/opengl virtual/glu media-libs/libsdl[sound,joystick,video] >=dev-scheme/guile-1.8:12[deprecated] media-libs/sdl-mixer media-libs/sdl-image media-libs/sdl-ttf nls? ( virtual/libintl )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=mirror://sourceforge/trackballs/trackballs-1.1.4.tar.gz mirror://sourceforge/trackballs/trackballs-music-1.4.tar.bz2
+SRC_URI=https://sourceforge.net/projects/trackballs/files/trackballs-1.1.4.tar.gz https://sourceforge.net/projects/trackballs/files/trackballs-music-1.4.tar.bz2
 _eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed
-_md5_=01e527d4c65feedc7a18e9366bb810ad
+_md5_=b282e92842f03187fcf97768daaa5cf7
