@@ -13,4 +13,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://ftp.funet.fi/pub/unix/mail/metamail/mm2.7.tar.Z mirror://debian/pool/main/m/metamail/metamail_2.7-54.diff.gz
 _eclasses_=gnuconfig	ddeb9f8caff1b5f71a09c75b7534df79	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	libtool	c81bd096be5f4c82f4e8f156ef112402	autotools	955b29ccd82c1df4755e5f37748d2fa6	flag-o-matic	b892042b2667b8ac69ec8a2571dc290a
-_md5_=bac844fc9900455ecbefd8b062bb79b4
+_md5_=e56bb5ba18dae0849d0b56ef2bb2c56c
