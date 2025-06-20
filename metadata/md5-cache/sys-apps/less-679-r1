@@ -12,6 +12,6 @@ PDEPEND=lesspipe? ( app-text/lesspipe )
 RDEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2:= pcre? ( dev-libs/libpcre2 ) less-select? ( dev-lang/perl )
 RESTRICT=test !test? ( test )
 SLOT=0
-SRC_URI=mirror+http://www.greenwoodsoftware.com/less/less-678.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.17.tar.gz -> less-select-2.17.tar.gz )
+SRC_URI=mirror+http://www.greenwoodsoftware.com/less/less-679.tar.gz less-select? ( https://github.com/vaeth/less-select/archive/v2.17.tar.gz -> less-select-2.17.tar.gz )
 _eclasses_=gnuconfig	ddeb9f8caff1b5f71a09c75b7534df79	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	libtool	c81bd096be5f4c82f4e8f156ef112402	autotools	955b29ccd82c1df4755e5f37748d2fa6	flag-o-matic	b892042b2667b8ac69ec8a2571dc290a	optfeature	538bce96e5589935b57e178e8635f301
 _md5_=ae1469fe553ca59fd42c286dc5787bdd
