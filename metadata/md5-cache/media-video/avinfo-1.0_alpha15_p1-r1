@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://shounen.ru/soft/avinfo/avinfo-1.0.a15unix.tar.gz http://shounen.ru/soft/avinfo/avinfo-1.0.a15unix-patch1.tar.gz
-_eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169
+_eclasses_=toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772
 _md5_=bcd5ad42ddd84b941139a940a686dd0c
