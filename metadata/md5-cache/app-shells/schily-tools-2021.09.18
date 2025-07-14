@@ -13,5 +13,5 @@ RDEPEND=!!app-cdr/cdrtools[-schily-tools(-)] !renameschily_libschily? ( !sys-app
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://sourceforge.net/projects/schilytools/files/schily-2021-09-18.tar.bz2
-_eclasses_=fcaps	27152c9e4da035accb14a2d7879744ef	toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	gnuconfig	ddeb9f8caff1b5f71a09c75b7534df79	required-use-warn	ccb360d99628653e570cb85f975a839f
+_eclasses_=fcaps	27152c9e4da035accb14a2d7879744ef	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	gnuconfig	ddeb9f8caff1b5f71a09c75b7534df79	required-use-warn	ccb360d99628653e570cb85f975a839f
 _md5_=2e50bdaaeb9a61139cf9f66aabe4cee0
