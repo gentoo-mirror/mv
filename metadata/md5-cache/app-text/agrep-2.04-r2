@@ -8,5 +8,5 @@ LICENSE=AGREP
 RDEPEND=!dev-libs/tre !dev-ruby/amatch !app-misc/glimpse
 SLOT=0
 SRC_URI=ftp://ftp.cs.arizona.edu/agrep/agrep-2.04.tar.Z
-_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0
+_eclasses_=toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db
 _md5_=e36b885181fb2e3c00c34e0239d6e7df
